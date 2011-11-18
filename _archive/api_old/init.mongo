@@ -1,0 +1,48 @@
+#
+# Configuration...
+#
+
+from pymongo import Connection
+
+# 
+# Program...
+#
+connection = Connection()
+
+# clear current database...
+connection.drop_database("djcorner")
+
+# create new db...
+db = connection["djcorner"]
+
+# create initial users collection...
+users = db.users
+users.insert( {'fn':'George', 'mn':'', 'ln':'Williams', \
+	'em':'george.williams@gmail.com'} )
+users.insert( {'fn':'Rocco', 'mn':'', 'ln':'', \
+	'em':'rocco@rocco.com'} )
+
+# create initial videos collection...
+videos = db.videos
+videos.insert( {'n':'Oceans1', 'p':'http://video-js.zencoder.com/oceans-clip.mp4' } )
+videos.insert( {'n':'Oceans2', 'p':'http://video-js.zencoder.com/oceans-clip.mp4' } )
+
+#
+# Print various things...
+#
+print "INFO: Collection Names->", db.collection_names()
+
+# Print users...
+cs = users.find()
+print "INFO: Users: There are %d users." % cs.count()
+for user in cs:
+	print "INFO: User->", user
+ff = users.find_one( {'em':'george.williams@gmail.com'} )
+print "INFO: Finding User->", ff
+
+# Print videos...
+cs = videos.find()
+print "INFO: Videos: There are %d videos." % cs.count()
+for video in cs:
+	print "INFO: Video->", video
+
