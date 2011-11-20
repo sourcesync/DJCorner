@@ -56,8 +56,13 @@ class API(jsonrpc.JSONRPC):
         def jsonrpc_get_events(self,location,paging):
 		print "INFO: api: get_events->", location, paging
 		events = event.get_events_details( None, location, paging )
-		#print "INFO: api: got event details->", events
 		dct = { "results":events, "status":1 }
+		return dct
+        
+	def jsonrpc_get_event(self,location,eoid):
+		print "INFO: api: get_events->", location, eoid
+		events = event.get_event_details( None, location, paging, True )
+		dct = { "results":event, "status":1 }
 		return dct
 
 #a = api.API()

@@ -38,7 +38,7 @@ def pop_from_str(str):
 		# Get description element, used for the event description...
 		d = el.getElementsByTagName("description")
 		edescription = None
-		if False and len(d)>0:
+		if len(d)>0:
 			cdatanode = d[0].childNodes[0]
 			edescription = cdatanode.wholeText
 			#print "INFO: Parsed event description->", edescription
@@ -100,7 +100,7 @@ def pop_from_str(str):
 			sys.exit(1)
 
 		# Make sure it saved...
-		evt = event.get_event_details( None, None, eoid )
+		evt = event.get_event_details( None, None, eoid, True)
 		print "INFO: event details from db->", evt
 
 
