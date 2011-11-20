@@ -83,36 +83,41 @@ def get_event( connection, oid ):
 #
 # func to get all event info...
 #
-def get_event_details( connection, location, oid ):
+def get_event_details( connection, location, oid, verbose ):
 
 	event = get_event( connection, oid )
 
+	# fixup venue related fields...
 	if event.has_key("venueid"):
 
 		# get the linked venue...
 		venueid = event["venueid"]
 		vn = venue.get_venue( connection, venueid )
 
-		# insert the linked venue info...
+                # flatten venue information, like venue name, lat, long...
 		event["venueid"] = str(venueid)
-		vn["_id"] = str(venueid)
-		event["venue"] = vn
+                event["venuename"] = vn["ds"]
+                event["latitude"] = vn["latitude"]
+                event["longitude"] = vn["longitude"]
 
-		# fix up name, description...
-		ds = event["name"]
-		ds = ds.replace("&amp;","&")
-		event["name"]=ds
-	
-		# Is there lat/long for this venue ?
-		print location
+		# compute dist for this event...	
 		if location and vn.has_key("latitude") and vn.has_key("longitude"):
 			latitude = vn["latitude"]
 			longitude = vn["longitude"]
 			dist = 	common.get_distance( latitude, longitude, location["lat"], location["lng"] )
-			print dist
+			#print dist
 			event["dist"] = dist
 		else:
 			event["dist"] = 0
+
+	# fix up description...
+	if (not verbose) and event.has_key("description"):
+		del event["description"]
+
+	# fix up event name...
+	ds = event["name"]
+	ds = ds.replace("&amp;","&")
+	event["name"]=ds
 
 	event["_id"] = str(oid)
 	return event
@@ -151,13 +156,8 @@ def get_events_details( connection, location, paging ):
 
 	for evt in events:
 
-		event_details = get_event_details( connection, location, evt["_id"] )	
+		event_details = get_event_details( connection, location, evt["_id"], False )
 
-		# reformat venue information...	
-		vn = event_details["venue"]
-		del event_details["venue"]
-		event_details["venuename"] = vn["ds"]
-	
 		events_details.append( event_details )
 
 	# sort it by dist...
