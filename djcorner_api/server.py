@@ -43,8 +43,8 @@ parent = resource.Resource()
 #parent.putChild("upload", upload )
 
 # Create static resources part of site...
-#staticfiles = File("../html/datasets")
-#parent.putChild("static", staticfiles )
+staticfiles = File("static")
+parent.putChild("static", staticfiles )
 
 #class API(jsonrpc.JSONRPC):
 #        def jsonrpc_echo(self,a):

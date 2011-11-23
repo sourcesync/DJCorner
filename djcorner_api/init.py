@@ -3,8 +3,8 @@
 #
 
 VENUE_LOCATIONS = { \
-        "pier-94": [[ 40.785221,-73.998413 ], "Pier 94"], \
-        "pacha-london": [[51.497389,-0.144024], "Pacha London"], \
+        "pier-94": [ [ 40.785221,-73.998413 ], "Pier 94"], \
+        "pacha-london": [ [51.497389,-0.144024], "Pacha London"], \
         "kensington-close-hotel-and-spa": [[ 51.499193,-0.191832 ], "Kensington Close Hotel"], \
         "lo-profile":[[51.523538,-0.11879], "Club Lo-Profile" ], \
         "brabanthallen": [[51.715118,5.290947], "Club Brabanthallen"], \
@@ -12,7 +12,13 @@ VENUE_LOCATIONS = { \
         "egg":[[51.543986,-0.124798], "Club Egg" ],\
         "audio":[[50.836083,-0.134583], "Club Audio"],\
 	"fire":[[51.49111,-0.12291],"Club Fire"], \
-	"pacha-nyc":[[40.763966,-73.996911],"Pacha NYC"] }
+	"pacha-nyc":[[40.763966,-73.996911],"Pacha NYC"], \
+	"Pacha NYC":[[40.763966,-73.996911],"Pacha NYC"], \
+	"Lavo NYC":[[40.766372,-73.971462],"Lavo NightClub"], \
+	"Sullivan Room":[[40.73243,-74.00013],"Sullivan Room"] \
+	}
+
+SYN_GROUPS = [ [ "pacha-nyc", "Pacha NYC" ] ]
 
 INIT_USERS = [ \
 	[ "george.williams@gmail.com", "George","","Williams", 40.731519,-73.997555  ] ]
@@ -71,6 +77,8 @@ for v in venues:
 	void = v["_id"]
 	# get venue name...
 	vname = v["name"]
+
+	print "INFO: venue object-", v
 
         # see if venue has loc info in dbase...
         if not v.has_key("latitude"):
