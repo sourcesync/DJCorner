@@ -163,7 +163,17 @@ def get_events_details( connection, location, paging ):
 	# sort it by dist...
 	events_details.sort( _sort_dist )
 
-	return events_details
+	# possibly deal with paging...
+	if (paging):
+		total = len( events_details )
+		start = paging["start"]
+		end = paging["end"]
+		arr = paging[start:end]
+		count = len(arr)
+		info = { "total":total, "count":count, "start":start, "end":end }
+		return [ events_details, info ]
+	else:		
+		return [ events_details, {} ]
 
 #
 # func to update event basic info...
