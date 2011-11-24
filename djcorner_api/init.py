@@ -37,16 +37,15 @@ import clubtickets
 #
 # Clear all events...
 #
-print "INFO: Clearing all events..."
-status = event.clear_all( None )
-if not status:
-	print "ERROR: Could not clear events"
-	sys.exit(1)
+#print "INFO: Clearing all events..."
+#status = event.clear_all( None )
+#if not status:
+#print "ERROR: Could not clear events"
+#sys.exit(1)
 
 #
 # Populate from clubtickets...
 #
-clubtickets.test_init()
 
 #
 # Make sure we have the init users...

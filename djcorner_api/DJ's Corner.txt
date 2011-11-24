@@ -1,4 +1,4 @@
 Event Name,Event Venue,Event Web Site,Performers,Event Date,Start Time,Promoters,Event Purchase URL,Event Pic
-Thanksgiving Eve,Pacha NYC,http://pachanyc.com/events.aspx?event=1,Erick Morillo;Danny Tenaglia,11/23/2011,10pm,Clubtickets,http://pacha-nyc.clubtickets.com/us/2011-11/23/erick-morillo-danny-tenaglia-thanksgiving-eve-pacha-nyc,static/clubgeneric_small.jpg
-Tiesto,Lavo NYC,http://lavony.com/Events.aspx?EventID=154,Tiesto,12/1/2011,11pm,Lavo Group,http://lavony.com/Reservations.aspx,static/clubgeneric_small.jpg
-Two Nations ft. Kenny Dope,Sullivan Room,http://www.sullivanroom.com/sullivanroom/index.html,Kenny Dope,12/9/2011,10pm,Two Nations,http://www.sullivanroom.com/sullivanroom/index.html,static/clubgeneric_small.jpg
+Thanksgiving Eve,Pacha NYC,http://pachanyc.com/events.aspx?event=1,Erick Morillo;Danny Tenaglia,11/23/2011,10pm,Clubtickets,http://pacha-nyc.clubtickets.com/us/2011-11/23/erick-morillo-danny-tenaglia-thanksgiving-eve-pacha-nyc,http://128.122.47.38:7777/static/clubgeneric_small.jpg
+Tiesto,Lavo NYC,http://lavony.com/Events.aspx?EventID=154,Tiesto,12/1/2011,11pm,Lavo Group,http://lavony.com/Reservations.aspx,http://128.122.47.38:7777/static/clubgeneric_small.jpg
+Two Nations ft. Kenny Dope,Sullivan Room,http://www.sullivanroom.com/sullivanroom/index.html,Kenny Dope,12/9/2011,10pm,Two Nations,http://www.sullivanroom.com/sullivanroom/index.html,http://128.122.47.38:7777/static/clubgeneric_small.jpg

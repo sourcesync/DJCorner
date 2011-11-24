@@ -110,8 +110,17 @@ def pop_from_str(str):
 			lineup = lineup.replace("</ul>","")	
 			lineup = lineup.replace("<li>","")	
 			lineup = lineup.replace("</li>","")	
-			lineup = lineup[0:50].strip()
-			performers = lineup
+			lineup = lineup.replace("&quot;","")
+			lineup = lineup.replace("<div class=\"event-lineup\">","")
+			lineup = lineup.replace("<pre wrap=\"\">","")
+			lineup = lineup.replace("</pre>","")
+			lineup = lineup.replace("</div>","")
+			lineup = lineup.replace("<div>","")
+			lineup = lineup.replace("<strong>","")
+			lineup = lineup.replace("</strong>","")
+			lineup = lineup.replace("\t","")
+			lineup = lineup.replace("\n","")
+			performers = lineup.strip()
 			print "INFO: parsed lineup->", lineup
 		if not performers:
 			print "ERROR: performers required!"

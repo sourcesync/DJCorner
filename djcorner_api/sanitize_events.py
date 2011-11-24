@@ -11,6 +11,8 @@ loc = {"lat":40.731519, \
 #
 from dateutil import parser
 
+print
+print
 [events,pageinfo] = event.get_events_details(None,loc,None)
 print "INFO: total events->", len(events)
 

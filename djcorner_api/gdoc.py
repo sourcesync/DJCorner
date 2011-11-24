@@ -121,10 +121,12 @@ def sync_to_db( docs ):
                         	print "WARNING: Add event returned false - probably already have this event..."
 
                        	# Get the event buy url...
-                        buyurl = "http://www.google.com"
+                        #buyurl = "http://www.google.com"
+			buyurl = dct["Event Purchase URL"]
 
 			# Get the event image...
-			imgpath = DEFAULT_EVT_IMG
+			#imgpath = DEFAULT_EVT_IMG
+			imgpath = dct["Event Pic"]
 
 			# Get the event description...
 			edescription = "A Cool Event"
@@ -144,9 +146,6 @@ def sync_to_db( docs ):
                 	[ status, void ] = venue.add_venue( None, vname, "djc-"+vname )
                 	if status == False:
                         	print "WARNING: Add venue returned false - probably already have this venue..."
-
-                	# Get the buy url...
-                	buyurl = "http://www.google.com"
 
                 	# Update event attributes, link venue to event...
                 	status = event.update_event( None, eoid, None, void, edescription, \
