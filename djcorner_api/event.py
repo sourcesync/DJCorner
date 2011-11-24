@@ -8,6 +8,7 @@ DBNAME = "djcorner"
 # Program...
 #
 import sys
+from dateutil import parser
 
 from pymongo import Connection
 
@@ -87,6 +88,8 @@ def get_event_details( connection, location, oid, verbose ):
 
 	event = get_event( connection, oid )
 
+	print "INFO: event: get_event->", event
+
 	# fixup venue related fields...
 	if event.has_key("venueid"):
 
@@ -109,6 +112,13 @@ def get_event_details( connection, location, oid, verbose ):
 			event["dist"] = dist
 		else:
 			event["dist"] = 0
+
+	# fix up the event date...
+	if event.has_key("eventdate"):
+		dt = parser.parse( event["eventdate" ] )
+        	# convert to the format we want
+        	cdt = dt.strftime("%a %m/%d")
+		event["eventdate"] = cdt
 
 	# fix up description...
 	if (not verbose) and event.has_key("description"):
@@ -178,7 +188,7 @@ def get_events_details( connection, location, paging ):
 #
 # func to update event basic info...
 #
-def update_event( connection, oid, name, venueid, description, promotor, imgpath, startDate, endDate, buyurl):
+def update_event( connection, oid, name, venueid, description, promotor, imgpath, eventDate, startDate, endDate, buyurl, performers):
 	
         events = _get_event_col( connection )
 
@@ -189,12 +199,14 @@ def update_event( connection, oid, name, venueid, description, promotor, imgpath
 	fields = {}
 	if name: fields["name"] = name
 	if venueid: fields["venueid"] = venueid
-	if description: fields["description"] = description
+	if description!=None: fields["description"] = description
 	if promotor: fields["promotor"] = promotor
 	if imgpath: fields["imgpath"] = imgpath
+	if eventDate: fields["eventdate"] = eventDate
 	if startDate: fields["startdate"] = startDate
 	if endDate: fields["enddate"] = endDate
 	if buyurl: fields["buyurl" ]=buyurl
+	if performers: fields["pf"] = performers
 
 	# update...
 	uid = events.update( event, { '$set':fields } , True )

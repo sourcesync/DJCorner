@@ -130,8 +130,12 @@ def sync_to_db( docs ):
 			edescription = "A Cool Event"
 
 			# Get event dates...
+			eventdate = dct["Event Date"]
 			startdate = dct["Event Date"]
 			enddate = dct["Event Date"]
+
+			# Performers...
+			performers = dct["Performers"]
 
                 	# Get venue name...
                 	vname = dct["Event Venue"]
@@ -145,9 +149,8 @@ def sync_to_db( docs ):
                 	buyurl = "http://www.google.com"
 
                 	# Update event attributes, link venue to event...
-			#venueid, description, promotor, imgpath, startDate, endDate, buyurl):
                 	status = event.update_event( None, eoid, None, void, edescription, \
-				None, imgpath, startdate, enddate, buyurl )
+				None, imgpath, eventdate, startdate, enddate, buyurl, performers )
                 	if not status:
                         	print "ERROR: could not update event"
                         	sys.exit(1)

@@ -15,7 +15,8 @@ VENUE_LOCATIONS = { \
 	"pacha-nyc":[[40.763966,-73.996911],"Pacha NYC"], \
 	"Pacha NYC":[[40.763966,-73.996911],"Pacha NYC"], \
 	"Lavo NYC":[[40.766372,-73.971462],"Lavo NightClub"], \
-	"Sullivan Room":[[40.73243,-74.00013],"Sullivan Room"] \
+	"Sullivan Room":[[40.73243,-74.00013],"Sullivan Room"], \
+	"link":[[44.517317,11.413937],"Club Link"] \
 	}
 
 SYN_GROUPS = [ [ "pacha-nyc", "Pacha NYC" ] ]
