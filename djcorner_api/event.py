@@ -168,10 +168,10 @@ def get_events_details( connection, location, paging ):
 		total = len( events_details )
 		start = paging["start"]
 		end = paging["end"]
-		arr = paging[start:end]
+		arr = events_details[start:end]
 		count = len(arr)
 		info = { "total":total, "count":count, "start":start, "end":end }
-		return [ events_details, info ]
+		return [ arr, info ]
 	else:		
 		return [ events_details, {} ]
 
