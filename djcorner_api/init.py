@@ -19,7 +19,9 @@ VENUE_LOCATIONS = { \
 	"link":[[44.517317,11.413937],"Club Link", "Bologna"], \
 	"zoom":[[54.281224,-0.404263],"Club Zoom", "Toronto"], \
 	"hidden":[[51.490469,-0.121515],"Club Hidden", "London"], \
-	"4sixty6":[[40.791638,-74.254189], "Club 4Sixty6","New Jersey"] 
+	"4sixty6":[[40.791638,-74.254189], "Club 4Sixty6","New Jersey"], \
+	"revolution":[[40.791638,-74.254189], "Club Revolution", "New York City" ], \
+	"bond":[[51.523538,-0.11879],"Club Bond","London"]
 	}
 
 SYN_GROUPS = [ [ "pacha-nyc", "Pacha NYC" ] ]

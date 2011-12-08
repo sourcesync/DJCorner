@@ -8,7 +8,7 @@
 
 
 
-<ticketlogic version="2.0" session="9702B92F188C06E85B12FA56C2E8430A.COMP3" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+<ticketlogic version="2.0" session="8D16F48634E02B55FC99EF622FBE5C59.COMP1" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
     <events title="EventsList">
         
         
@@ -249,7 +249,7 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-29T08:08:27+00:00</date>
+                    <date type="updated">2011-12-08T13:53:48+00:00</date>
                     <date type="publish">2011-11-19T17:58:00+00:00</date>
                     <date type="expires">2011-12-31T21:00:00+00:00</date>
                     <date type="starts">2011-12-31T22:59:00+00:00</date>
@@ -279,8 +279,8 @@ New York]]></address>
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/link-capodanno2011.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/link-capodanno2011.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/link-31dicembre2011.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/link-31dicembre2011.jpg</large>
                 </images>
             
             
@@ -721,6 +721,161 @@ London]]></address>
         </event>
         
         
+        <event id="00014224">
+            <title><![CDATA[ Empire State of Mind, New Years Eve 2011 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/empire-state-of-mind-new-years-eve-2011</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/empire-state-of-mind-new-years-eve-2011</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-08T13:16:37+00:00</date>
+                    <date type="publish">2011-12-08T12:44:00+00:00</date>
+                    <date type="expires">2011-12-31T20:00:00+00:00</date>
+                    <date type="starts">2011-12-31T21:00:00+00:00</date>
+                    <date type="ends">2012-01-01T04:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><strong>Dj Suave </strong>(Xclusive Touch)</p>
+<p><strong>Dj 2 </strong>(Xclusive Touch)</p>
+<p>Mixing a cool blend of Funky House, RnB &amp; Hip-hop (room 1) and House, ol&#39; skool and club classics (room 2)</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>A cool and trendy party full of fun, style &amp; charisma, this is the New Year event guaranteed to deliver. New York is the theme for the evening, a city known for its food, fashion and most importantly incredible parties!</p>
+<p class="p1">
+ On 31st December 2011 Revolution, America Square will transform into a New York paradise with famous landmarks and themed props throughout the venue. Staff will dress as local residents including NYPD officers, NY Yankee pitchers and a host of other costumes. There is a fantastic cheerleading display arranged with pom pom&#39;s and beautiful performers to toast the New Year.</p>
+<p class="p1">
+ Be sure to attend early to enjoy our elegant champagne reception between 2100-2145 and for those with the stamina to party late complimentary NY pizza slices will be served at 3am!</p>
+<p class="p1">
+ Situated in the iconic America Square building, this stunning vodka cocktail bar can hold over 700 guests across its two rooms! Set beneath the arches of Fenchurch Street Station, Revolution mixes opulent Manhattan design with a twist of Soviet spirit. Each of the two arches has its own unique feeling, from the intimate speakeasy arch that harks back to the days of Prohibition and Moonshine to the imposing entrance arch mixing contemporary design and comfort.</p>
+<p class="p1"></p>
+<p class="p1">
+ <strong>- New York Citys Themed Party</strong></p>
+<p class="p1">
+ <strong>- 800 capacity</strong></p>
+<p class="p1">
+ <strong>- Costumed staff</strong></p>
+<p class="p1">
+ <strong>- Cheerleaders</strong></p>
+<p class="p1">
+ <strong>- Champagne reception 2100-2145</strong></p>
+<p class="p1">
+ <strong>- Complimentary New York Pizza 3AM</strong></p>
+<p class="p2">
+ <strong>- 2 separate rooms of music</strong></p>]]></description>
+                
+                <venue name="revolution" title="Revolution">
+                    <address><![CDATA[1 America Square]]></address>
+                    <postcode><![CDATA[ EC3N 2LS]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="xclusive-touch"><![CDATA[Xclusive Touch]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/empirestateofmind-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/empirestateofmind-400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034900" 
+                           min="1" 
+                           max="10" 
+                           priceFace="30.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014227">
+            <title><![CDATA[ Pink Panther Party NYE 2011 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/pink-panther-party-nye-2011</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/pink-panther-party-nye-2011</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-08T14:43:38+00:00</date>
+                    <date type="publish">2011-12-08T14:08:00+00:00</date>
+                    <date type="expires">2011-12-31T20:00:00+00:00</date>
+                    <date type="starts">2011-12-31T21:00:00+00:00</date>
+                    <date type="ends">2012-01-01T04:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><strong>On the decksWest End favourite and Bond resident DJ Simba will feature playing a special New Years set of House, Funky, RnB and Club Classics.</strong></p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Join us NYE 2012 @ Bond Nightclub for the most original and entertaining party in the City!</p>
+<p class="p1">
+ This year Bond has emerged as one of London&rsquo;s hottest clubs and itsNYE showcase will certainly be a spectacular event. The theme is &lsquo;Pink Panther&rsquo;, a night of style and seduction in line with the usual Bond class. The evening will be packed full of attractions including a professional saxophonist, pink panther cupcakes, costume dancers and a fantastic bubble machine to welcome the New Year. Expect plenty of surprises with Giant Panther hand prints welcoming you in the lobby and futuristic projections surrounding the tables throughout the venue.</p>
+<p class="p1">
+ The party begins in style with a complimentary champagne reception between 2100-2200 so guests are advised to arrive early. On the decksWest End favourite and Bond resident DJ Simba will feature playing a special New Years set of House, Funky, RnB and Club Classics.</p>
+<p class="p1">
+ Fancy a VIP table? Each booking comes with queue jump, waitress service, and a discounted ticket price.</p>
+<p>Bond is a remarkable venue with a futuristic interior design on par with its beautiful clientele. The club is surrounded by computer controlled visual projections and can be tailored to project entire landscapes throughout the club or to personalise each VIP booth with individual themes. By dancing, moving or even putting your hands up in the air, the visuals interact and move with you. It is this attention to detail that makes Bond the perfect destination to welcome the New Year.</p>
+<p><em>-</em><strong> Full Pink Panther Decorations</strong></p>
+<p class="p1">
+ <strong>- Live Saxophonist</strong></p>
+<p class="p1">
+ <strong>- Pink Panther Cupcakes</strong></p>
+<p class="p1">
+ <strong>- Bubble Machine</strong></p>
+<p class="p1">
+ <strong>- Dancers</strong></p>
+<p class="p1">
+ <strong>- Champagne reception 2100-2200</strong></p>
+<p><strong>-</strong><em><strong> </strong></em><strong>VIP</strong><strong> tables with </strong><em><strong>State of the Art Computer Technology and</strong></em><strong>waitress service</strong></p>]]></description>
+                
+                <venue name="bond" title="Club Bond">
+                    <address><![CDATA[24 Kingly Street
+London]]></address>
+                    <postcode><![CDATA[W1B 5QB]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="xclusive-touch"><![CDATA[Xclusive Touch]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/bondnye-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/bondnye-400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034905" 
+                           min="1" 
+                           max="10" 
+                           priceFace="40.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
         <event id="00013663">
             <title><![CDATA[ Bodymove presents NYe Rio Revellion 2011  ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/bodymove-presents-nye-eves-white-gold-rio-carnival-2011</url>
@@ -729,7 +884,7 @@ London]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-06T14:34:21+00:00</date>
+                    <date type="updated">2011-12-08T17:57:59+00:00</date>
                     <date type="publish">2011-09-22T23:00:00+00:00</date>
                     <date type="expires">2011-12-31T18:00:00+00:00</date>
                     <date type="starts">2011-12-31T20:00:00+00:00</date>
@@ -817,62 +972,62 @@ London]]></address>
                 <description contentType="text/html"><![CDATA[<div>
  <strong>BODYMOVE presents the WHITE &amp; GOLD NYE BALL</strong></div>
 <div>
-  </div>
+ </div>
 <div>
  featuring a BRAZILIAN BIG TOP with CLUB POPOZUDA and Live Bands,</div>
 <div>
  Rhythms Of The City and Minibloco</div>
 <div>
-  </div>
+ </div>
 <div>
  + SPECIAL GUESTS: KARIZMA, ANDERSON NOIZE, AUDIOWHORES</div>
 <div>
-  </div>
+ </div>
 <div>
  Saturday December 31st</div>
 <div>
-  </div>
+ </div>
 <div>
  Pulling out all the stops production and decor wise, Egg will be transformed into a scene from Rio&rsquo;s exuberant NYE, bathed in white and gold, as Bodymove creates its second magical New Year&rsquo;s Eve party in London.</div>
 <div>
-  </div>
+ </div>
 <div>
  Using Rio as inspiration, Bodymove set up a Brazilian Big Top in Egg&rsquo;s heated Garden, hosted by Club Popozuda joined just after midnight by Live bands, Rhythms Of The City and Minibloco plus a troupe of percussionists and latin fusion dancers, central to the whole NYE party.</div>
 <div>
-  </div>
+ </div>
 <div>
-  </div>
+ </div>
 <p><iframe allowfullscreen="" frameborder="0" height="246" src="http://www.youtube.com/embed/3VGseaNkSmo" width="425"></iframe></p>
 <div>
-  </div>
+ </div>
 <div>
  Rio de Janeiro is known the world over as one of the most breathtaking and thrilling places you could possibly imagine celebrating a New Year&#39;s Eve. Everyone dresses to impress in fabulous whites, and the whole city crackles in the infectious electric carnival atmosphere.</div>
 <div>
-  </div>
+ </div>
 <div>
  The Big Top fires up to Club Popozuda&rsquo;s bold bootyshaking blend of the finest, freshest music from around the world courtesy of resident DJ The Bumps and special guest, RdJ&rsquo;s DJ Carioca, includes hip hop, reggaeton and dancehall. With live samba, percussionists and dancers, feel the heat as 2012 starts in jumping Brazilian style. Global bootyshaking beats.</div>
 <div>
-  </div>
+ </div>
 <div>
  Exclusive mixtapes from Club Popozuda:</div>
 <div>
-  </div>
+ </div>
 <div>
  <object height="81" width="100%"><param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" /><param name="allowscriptaccess" value="always" /><embed allowscriptaccess="always" height="81" src="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" type="application/x-shockwave-flash" width="100%"></embed></object><a href="http://soundcloud.com/clubpopozuda/mixtape-20-flore">Club Popozuda Mixtape #20 (Flore)</a> by <a href="http://soundcloud.com/clubpopozuda">Club Popozuda</a>
  <div>
-  </div>
+ </div>
  <div>
-  </div>
+ </div>
  <div>
  As well as the Rio-themed Brazilian Big Top, Bodymove lines up some leading musical talents, leaders in their own different fields, including Karizma, Anderson Noize, Audiowhores and resident decksmith, Femi B.</div>
  <div>
-  </div>
+ </div>
  <div>
  Chris &ldquo;Karizma&rdquo; Clayton is self diagnosed as &ldquo;a.d.d. with music,&rdquo; and has always aspired to be a producer who &ldquo;keeps changing and moving on to different things for the hallenge.&rdquo; He released his debut full-length, &lsquo;A Mind of Its Own&rsquo;, for the R2 label, as well as mix CDs for notable house labels. NRK and Soul Heaven. Karizma Remixes have appeared on a brilliant spectrum of labels, including Defected, Yoruba, Sonar Kollektiv, Compost, and Raw Fusion. Karizma is joined by Defected&rsquo;s hot UK duo, Audiowhores, also favourites at Bodymove events and known for their explosive house quaking sounds and ability to</div>
  <div>
  raise the roof. Bodymove resident and Strictly Rhythm producer, Femi B rounds off the Bodymove All Stars in the Main Room.</div>
  <div>
-  </div>
+ </div>
  <div>
  Heading up Room 2 is Anderson Noize, who has pioneered the electronic music scence in Brazil, inspired by the explosion of Acid House on the club scene. From running clubs, dj-ing to making amazing CD mixes, Anderson continues to break all the rules and inspire with his emotive electronic sounds that continually top the Beatport charts and dancefloors around the world. Lining up on the decks alongside Anderson Noize is Tomasuchy aka Tomas Tesla, Darren Gregory &amp; Justin Time, Digital Mike, Boletz, Zero C and Dani C. In Egg&rsquo; club within a club The Apothecary, Candy Bass Records and Nightlife London takeover with their own brand of end of year sounds and surprises as Egg and Bodymove celebrate another gripping year of forward thinking clubbing and dance music.</div>
 </div>]]></description>
@@ -1131,149 +1286,6 @@ London]]></address>
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
                            currency="1"><![CDATA[E-Ticket (Members)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014219">
-            <title><![CDATA[ FIRE - 'WELCOME HOME' - PYRO PARTY ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/17/fire-welcome-home-pyro-party</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/17/fire-welcome-home-pyro-party</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-07T18:47:17+00:00</date>
-                    <date type="publish">2011-12-07T00:00:00+00:00</date>
-                    <date type="expires">2011-12-17T22:00:00+00:00</date>
-                    <date type="starts">2011-12-17T23:00:00+00:00</date>
-                    <date type="ends">2011-12-18T07:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>	Amanda Wilson (Live PA)</p><p>	Steve Pitron, D&#39;Johnny, Fat Tony, Sharp Boys, Tuomo Fox, Lady Lloyd</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>	&nbsp;</p><p>	<strong>FIRE &ndash; WELCOME HOME &ndash; THE PYRO PARTY!</strong><br />	<br />	Saturday 17th December<br />	11pm-7am<br />	@ Fire<br />	<br />	&ldquo;We&rsquo;ve missed you!&rdquo;<br />	<br />	Six weeks on from the temporary closure, London&rsquo;s hottest nightclub is ready to rock the capital once again. The cutting edge Fire complex, boasting multiple rooms and the most state of the art lighting and sound around, hosts the biggest gay parties in the city, and on 17th December we&rsquo;re throwing a special &lsquo;Welcome home&rsquo; free party!<br />	<br />	DJs Steve Pitron, Sharp Boys, D&rsquo;Johnny and The Oli spin trademark pumping house in the main room, with added glamour from Chrissy Darling, Elektra Paris, JJ &amp; Minty. Over in the Lounge room DJs Lady Lloyd &amp; Tuomo Fox spin commercial dance and pop anthems.<br />	<br />	Plus the Fire special effects crew have some great surprises up their sleeves to make this an explosive night to remember! Expect massive pyros, indoor rockets, confetti bursts and so much more.<br />	<br />	Gogo boys supplied by the Fire team show off the best talent London has to offer, taking to the stage with very special guest PA Amanda Wilson performing hits including &lsquo;Seek Bromance&rsquo;, &lsquo;Watchin&rsquo; and &lsquo;Love on my Mind&rsquo;.<br />	<br />	Followed by Beyond vs Deviate at Area, with DJ PAGANO.<br />	<br />	Admission:<br />	FREE ENTRY BEFORE 1AM WITH FLYER, AD OR ONLINE GUESTLIST!&nbsp;<a href="http://tinyurl.com/firewelcomehomeparty" target="_blank">http://tinyurl.com/<wbr />firewelcomehomeparty</a><br />	Otherwise &pound;8/&pound;12<br />	More info @&nbsp;<a href="http://www.fireclub.co.uk/" target="_blank">www.fireclub.co.uk</a></p>]]></description>
-                
-                <venue name="fire" title="Fire">
-                    <address><![CDATA[South Lambeth Road, Vauxhall ]]></address>
-                    <postcode><![CDATA[SW8 1RT]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-                <promoter name="orange"><![CDATA[Orange]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/fire400x400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/fire400x400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    
-                    
-                    <price id="00034892" 
-                           min="1" 
-                           max="10" 
-                           priceFace="10.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket Advance]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014215">
-            <title><![CDATA[ Bear Necessity London Presents HO! HO! HO! ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/17/bear-necessity-london-presents-ho-ho-h</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/17/bear-necessity-london-presents-ho-ho-h</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-07T14:06:38+00:00</date>
-                    <date type="publish">2011-12-07T12:56:00+00:00</date>
-                    <date type="expires">2011-12-17T21:00:00+00:00</date>
-                    <date type="starts">2011-12-17T22:00:00+00:00</date>
-                    <date type="ends">2011-12-18T06:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p><strong>Main Room:</strong></p>
-<ul>
- <li>
- DJ Hifi Sean</li>
- <li>
- DJ Louis</li>
- <li>
- Lewis Lennon</li>
-</ul>
-<p class="western"></p>
-<p class="western">
- <strong>Room 2:</strong></p>
-<ul>
- <li class="western">
- DJ Dave &#39;Macho City&#39;</li>
-</ul>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>It&rsquo;s Christmas &ndash; well almost, and London&rsquo;s top monthly bear night is back and promises to deliver plenty of Christmas cheer and Festive Spirit as it presents its Yuletide Special &ndash; Ho! Ho! Ho!</p>
-<br />
-<p>Whilst we can&rsquo;t promise that Santa will be there to empty his sack, there&rsquo;ll still be a bevy of London&rsquo;s finest furriest specimens to snuggle up to and keep out the cold as Bear Necessity heralds the birth of the Baby Jesus with an action-packed night of festive fun.</p>
-<br />
-<p>There&rsquo;ll be two rooms of music and an area to explore in the dark where you can have some fun feeling your way around.</p>
-<br />
-<p>The main room will feature DJ HIFI SEAN. Not only has he been pushing the boundaries of music all his adult life but was voted one of the top 3 best DJs in the Boyz Reader Awards 2010/11. He&rsquo;s appeared at Kinky Trade, Barcode and Hustlaball so expect a night of top sounds. DJ LOUIS LENNON provides a warm-up set &ndash; AUDIO ORGY guaranteed.</p>
-<br />
-<p>Room 2 features DJ DAVE &lsquo;MACHO CITY&rsquo; aka former Hacienda DJ Dave Kendrick, who will be bringing his blend of Disco, Chicago house and strange pop that has made his Thursday residency at The Joiners the stuff of legend.</p>
-<br />
-<p>Don&rsquo;t forget that Hidden nightclub has recently been refurbished and provides the perfect backdrop for this sensational evening of furry exploits.</p>
-<br />
-<p>So start this year&rsquo;s Christmas celebrations in the company of the hottest, hairiest guys that London has to offer at Bear Necessity&rsquo;s Ho! Ho! Ho! this Saturday.</p>]]></description>
-                
-                <venue name="hidden" title="Hidden">
-                    <address><![CDATA[100 Tinworth St.
-Vauxhall
-London]]></address>
-                    <postcode><![CDATA[SE11 5EQ ]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-                <promoter name="alex-erfan-"><![CDATA[Alex Erfan ]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/bnxmasparty-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/bnxmasparty-400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034885" 
-                           min="1" 
-                           max="10" 
-                           priceFace="10.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
                     
                     
                 </prices>
