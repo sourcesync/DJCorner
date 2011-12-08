@@ -94,7 +94,7 @@ def get_venues( connection, paging ):
 #
 # func to update venue basic info...
 #
-def update_venue( connection, void, name, latitude, longitude, display_name ):
+def update_venue( connection, void, name, latitude, longitude, display_name, city ):
 	
         venues = _get_venue_col( connection )
 
@@ -107,6 +107,7 @@ def update_venue( connection, void, name, latitude, longitude, display_name ):
 	if latitude: fields["latitude"] = latitude
 	if longitude: fields["longitude"] = longitude
 	if display_name: fields["ds"] = display_name
+	if city: fields["city"] = city
 
 	# update...
 	uid = venues.update( venue, { '$set':fields } , True )
@@ -163,7 +164,7 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	# update basic props...
-	status = update_venue( conxn, origid, "new venue name"  )	
+	status = update_venue( conxn, origid, "new venue name", "city")
 	print "INFO: venue: update_venue: result->", status
 	if status==False:
 		print "ERROR: Update failed!"

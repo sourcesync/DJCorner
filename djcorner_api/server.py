@@ -53,9 +53,9 @@ parent.putChild("static", staticfiles )
 # API top level resource...
 class API(jsonrpc.JSONRPC):
 
-        def jsonrpc_get_events(self,location,paging):
-		print "INFO: api: get_events->", location, paging
-		[ events, info ] = event.get_events_details( None, location, paging )
+        def jsonrpc_get_events(self,location,paging,city):
+		print "INFO: api: get_events->", location, paging, city
+		[ events, info ] = event.get_events_details( None, location, paging, city )
 		dct = { "results":events, "status":1, "paging":info }
 		return dct
         

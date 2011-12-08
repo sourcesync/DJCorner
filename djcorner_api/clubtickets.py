@@ -12,6 +12,10 @@ SEARCH = \
 EVENT_BUY_URL = \
         "http://m.clubtickets.com/us/2011-11/19/boris-the-jungle-party-pacha-nyc"
 
+
+MAX_COUNT = 3
+THIS_COUNT = 0
+
 #
 # Program...
 #
@@ -59,6 +63,9 @@ def search( fname, searchterm ):
 # Func to populate database from a clubtickets api query string...
 #
 def pop_from_str(str):
+
+	global MAX_COUNT
+	global THIS_COUNT
 
 	# Parse the xml...
 	a = xml.dom.minidom.parseString(str)
@@ -173,7 +180,8 @@ def pop_from_str(str):
 		buyurl = EVENT_BUY_URL
 
 		# Link venue to event...
-		status = event.update_event( None, eoid, ename, void, edescription, epromotor, imgpath, eventDate, startDate, endDate , buyurl, performers )
+		status = event.update_event( None, eoid, ename, void, edescription, epromotor, imgpath, eventDate, startDate, endDate , buyurl, \
+			performers, None )
 		if not status:
 			print "ERROR: could not update event"
 			sys.exit(1)
@@ -222,9 +230,11 @@ if __name__ == "__main__":
 				print "ERROR: error in search"
 				sys.exit(1)
 
-		FILES.append( localfile )
+			FILES.append( localfile )
 	else:
 		FILES = [ "%s.txt" % a for a in SEARCH.keys() ]
+
+	print "INFO: localfiles->", FILES
 
 	# iterate local files...
 	for file in FILES:

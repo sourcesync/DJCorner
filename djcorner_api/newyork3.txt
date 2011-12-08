@@ -8,19 +8,19 @@
 
 
 
-<ticketlogic version="2.0" session="A56A1C828BEC20BD2BC25A1E36EEE80C.COMP1" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+<ticketlogic version="2.0" session="B8E0BB482F647212E2E61BAF486179A4.COMP1" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
     <events title="EventsList">
         
         
         <event id="00013981">
-            <title><![CDATA[ Shit Party Reunion ]]></title>
+            <title><![CDATA[ Ibiza Shit Party Reunion ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2012-02/04/shit-party-reunion</url>
             <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2012-02/04/shit-party-reunion</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-19T05:56:49+00:00</date>
+                    <date type="updated">2011-12-07T11:56:25+00:00</date>
                     <date type="publish">2011-10-27T10:09:00+00:00</date>
                     <date type="expires">2012-02-04T21:00:00+00:00</date>
                     <date type="starts">2012-02-04T22:00:00+00:00</date>
@@ -35,7 +35,7 @@
  <li>
  Slipmatt (SL2)</li>
  <li>
- Sam Divine ( Defected/Pacha)</li>
+ Miss Divine ( Defected/Pacha)</li>
  <li>
  Vicky Devine (Judgement Sundays)</li>
  <li>
@@ -54,6 +54,8 @@
  Dan Jolly (Sh*t Party)</li>
  <li>
  Nathan Viva</li>
+ <li>
+ Matt Carter</li>
 </ul>
 <br />
 <p><strong>Room 2 </strong></p>
@@ -104,6 +106,7 @@
  <br />
  Attractions: Each of the rooms at Club Fire has independent state of the art sound and lighting systems and a linked Plasma screen system throughout the club. Each room has its own bar and toilets along with a newly revamped Chill Out Area, Smoking Area and an atmosphere that will make you feel like you&#39;re already back in the biggest clubs in Ibiza!<br />
  <br />
+<img alt="" src="https://images.clubtickets.com/image/467x665/c/shitpartyflyerback-467.jpg" />
  <br />
  <strong>DIRECTIONS</strong><br />
  <br />
@@ -132,8 +135,8 @@
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/shit-party-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/shit-party-400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/shitpartyflyerfront-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/shitpartyflyerfront-400.jpg</large>
                 </images>
             
             
@@ -174,7 +177,7 @@
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-21T15:43:18+00:00</date>
+                    <date type="updated">2011-12-02T16:29:40+00:00</date>
                     <date type="publish">2011-11-21T00:00:00+00:00</date>
                     <date type="expires">2012-01-07T21:00:00+00:00</date>
                     <date type="starts">2012-01-07T22:00:00+00:00</date>
@@ -212,8 +215,8 @@
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/km-logo_2011.gif</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/km-logo_2011.gif</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/km_11.12.02_pacha_jan2012_400x400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/km_11.12.02_pacha_jan2012_400x400.jpg</large>
                 </images>
             
             
@@ -235,6 +238,72 @@
         </event>
         
         
+        <event id="00014200">
+            <title><![CDATA[ Benny Benassi with Congorock @ Pacha NYC ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/02/benny-benassi-with-congorock-pacha-nyc</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/02/benny-benassi-with-congorock-pacha-nyc</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-02T21:11:54+00:00</date>
+                    <date type="publish">2011-12-02T20:32:00+00:00</date>
+                    <date type="expires">2012-01-02T12:00:00+00:00</date>
+                    <date type="starts">2012-01-02T03:00:00+00:00</date>
+                    <date type="ends">2012-01-02T12:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">19</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>Benny Benassi &amp; friends, Congorock</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Sunday January 1<br />
+ Pacha NYC presents<br />
+ <br />
+ BENNY BENASSI<br />
+ + FRIENDS<br />
+ along with<br />
+ Congorock<br />
+ <br />
+ Doors 10pm<br />
+ VIP Tables: 212.209.7500</p>]]></description>
+                
+                <venue name="pacha-nyc" title="Pacha NYC">
+                    <address><![CDATA[618 W.46th Street
+New York]]></address>
+                    <postcode><![CDATA[NY 10036]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400_bennynyc_nyd.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400_bennynyc_nyd.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034860" 
+                           min="1" 
+                           max="10" 
+                           priceFace="20.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket ]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
         <event id="00013960">
             <title><![CDATA[ Apocalypse 2012: New Years Day with Boris &amp; Victor Calderone @ Pier 94  ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/apocalypse-2012-new-years-day-with-boris-victor-calderone-pier-94</url>
@@ -243,7 +312,7 @@
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-22T18:37:04+00:00</date>
+                    <date type="updated">2011-12-08T00:00:07+00:00</date>
                     <date type="publish">2011-10-25T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T08:00:00+00:00</date>
                     <date type="starts">2012-01-01T10:00:00+00:00</date>
@@ -265,7 +334,13 @@
  <br />
  Doors open 5am @ Pier 94 NYC<br />
  <br />
- <strong>Limited pre-sale tickets available now</strong></p>]]></description>
+ <strong>Standard Pre-Sale and Limited VIP tickets on sale now. </strong></p>
+<p>VIP Tickets includes:</p>
+<p><em>&bull; Exclusive Access to VIP areas overlooking all the action</em><br />
+ <em><em>&bull; Express entry and dedicated event concierge</em><br />
+ <em>&bull; Private waitress service </em><br />
+ <em>&bull; VIP Restroom Access</em><br />
+ <em>&bull; Complimentary Snacks &amp; Refreshments</em></em></p>]]></description>
                 
                 <venue name="pier-94" title="Pier 94">
                     <address><![CDATA[711 12th Ave
@@ -289,6 +364,17 @@ New York]]></address>
                 <prices>
                     
                     
+                    <price id="00034855" 
+                           min="1" 
+                           max="10" 
+                           priceFace="150.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (Inc VIP entry, access and waitress service)]]></price>
+                    
+                    
+                    
                     
                     
                     <price id="00034400" 
@@ -303,20 +389,22 @@ New York]]></address>
                     
                     
                     
+                    
+                    
                 </prices>
             
         </event>
         
         
         <event id="00013660">
-            <title><![CDATA[ Avicii New Years Eve 2012 @ Pier 94 NYc  ]]></title>
+            <title><![CDATA[ Avicii New Years Eve 2012 @ Pier 94 NYC ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/avicii-new-years-eve-2012-pier-94-nyc</url>
             <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/avicii-new-years-eve-2012-pier-94-nyc</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-24T00:21:42+00:00</date>
+                    <date type="updated">2011-12-07T14:41:20+00:00</date>
                     <date type="publish">2011-09-22T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -325,7 +413,11 @@ New York]]></address>
             
             
                 <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>Avicii</p>]]></lineup>
+                <lineup contentType="text/html"><![CDATA[<p>9:00 pm Glenn Morrison<br />
+ 10:30 pm Cazzette<br />
+ 12:00 am Arty<br />
+ 1:30 am Avicii<br />
+ 4:30 am Swanky Tunes</p>]]></lineup>
                 <description contentType="text/html"><![CDATA[<p><strong>New Years Eve 2012</strong><br />
  At Night, RPM and Pacha NYC present...<br />
  <br />
@@ -335,7 +427,9 @@ New York]]></address>
  <br />
  More info at <strong><a href="http://www.aviciinye.com">www.aviciinye.com</a></strong><br />
  <br />
- <em>A limited supply of General Admission tickets will go on sale in November</em></p>
+ <em>A limited supply of General Admission tickets are on sale now.....</em></p>
+<p><strong>NB: Ticket Name should match that of Attendee and tickets purchased as a group must all attend together with photo ID as proof of identity.</strong></p>
+<p><strong>Resold tickets are invalid and will not be admitted. Beware Ticket Touts and buy only direct from this site for guarrenteed entry. </strong></p>
 <hr />
 <p><strong>VIP package details below:</strong></p>
 <p><u><strong>Open Bar Ticket</strong></u><br />
@@ -415,14 +509,16 @@ New York]]></address>
                     
                     
                     
-                    <price id="00034663" 
+                    
+                    
+                    <price id="00034875" 
                            min="1" 
-                           max="10" 
-                           priceFace="3266.25" 
+                           max="6" 
+                           priceFace="165.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 6: See description for details - includes NY State Sales Tax]]></price>
+                           currency="3"><![CDATA[E-Ticket General Admission]]></price>
                     
                     
                     
@@ -440,14 +536,7 @@ New York]]></address>
                     
                     
                     
-                    <price id="00034664" 
-                           min="1" 
-                           max="10" 
-                           priceFace="2177.50" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
+                    
                     
                     
                     
@@ -460,7 +549,7 @@ New York]]></address>
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Open Bar Ticket - See description for details - includes NY State Sales Tax]]></price>
+                           currency="3"><![CDATA[VIP - Open Bar Ticket - See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -475,14 +564,14 @@ New York]]></address>
         
         
         <event id="00013809">
-            <title><![CDATA[ Super You&amp;Me: New Years Eve w/ Laidback Luke @ Pacha NYc  ]]></title>
+            <title><![CDATA[ Super You&amp;Me: New Years Eve w/ Laidback Luke @ Pacha NYC ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc</url>
             <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-18T23:44:37+00:00</date>
+                    <date type="updated">2011-12-07T22:02:08+00:00</date>
                     <date type="publish">2011-10-07T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -501,12 +590,13 @@ New York]]></address>
  <strong>Laidback Luke</strong><br />
  along with<br />
  <strong>Sunnery James &amp; Ryan Marciano<br />
- Sandro Silva </strong><br />
- <br />
+ Sandro Silva </strong></p>
+<p>For VIP tables options please follow this link</p>
+<p><a href="http://www.clubtickets.com/us/2011-12/31/super-you-me-nye-w-laidback-luke-pacha-nyc-vip-options">http://www.clubtickets.com/us/2011-12/31/super-you-me-nye-w-laidback-luke-pacha-nyc-vip-options</a><br />
  Suggested Dresscode: <strong>Superheroes!</strong><br />
  <br />
  <em>Champage toast &amp; countdown with Luke at midnight! </em></p>
-<p><strong>VIP Open Bar Package </strong>(Customer must be 21+ to consume alcohol)</p>
+<p><strong>Open Bar Package </strong>(Customer must be 21+ to consume alcohol)</p>
 <ul>
  <li>
  Includes admission all night/day</li>
@@ -578,297 +668,227 @@ New York]]></address>
         </event>
         
         
-        <event id="00014072">
-            <title><![CDATA[ Super You&amp;Me: New Years Eve w/ Laidback Luke @ Pacha NYc | VIp Mezzanine Tables  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-vip-mezzanine-tables</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-vip-mezzanine-tables</url>
+        <event id="00014151">
+            <title><![CDATA[ Super You&amp;Me NYE w/ Laidback Luke @ Pacha NYC VIP Options ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/super-you-me-nye-w-laidback-luke-pacha-nyc-vip-options</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/super-you-me-nye-w-laidback-luke-pacha-nyc-vip-options</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-04T21:37:59+00:00</date>
-                    <date type="publish">2011-11-04T04:00:00+00:00</date>
-                    <date type="expires">2012-01-01T00:00:00+00:00</date>
+                    <date type="updated">2011-12-07T22:05:13+00:00</date>
+                    <date type="publish">2011-11-18T23:05:00+00:00</date>
+                    <date type="expires">2012-01-01T11:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
                     <date type="ends">2012-01-01T11:00:00+00:00</date>
                 </meta>
             
             
-                <ageLimit type="over">19</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<div class="event-lineup">	<p>		Laidback Luke, Sunnery James &amp; Ryan Marciano, Sandro Silva</p></div><p>	&nbsp;</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>	<strong>Pacha NYC New Years Eve 2012</strong><br />	<strong>Mezzanine VIP Seating</strong><br />	Stationed with direct views of dance floor overlooking all the action.<br />	<br />	<em>Package Includes all the General Admission Benefits plus:</em><br />	<strong>&bull; Party size up to 4</strong> ($1400) - 1 Premium Liquor &amp; 1 Champagne + 8 waters &amp; 8 energy drinks<br />	<strong>&bull; Party size of 5-6 </strong>($2100) - 2 Premium Liquor &amp; 2 Champagne + 12 waters &amp; 12 energy drinks<br />	<strong>&bull; Party size of 7-8</strong> ($2800) - 3 Premium Liquor &amp; 2 Champagne + 16 waters &amp; 16 energy drinks<br />	<strong>&bull; Party size of 9-10</strong> ($3500) - 3 Premium Liquor &amp; 3 Champagne + 20 waters &amp; 20 energy drinks<br />	<br />	* Price does not include $75 per person gratuity.<br />	(Customers must be 21+ to consume alcohol)<br />	&nbsp;</p><hr /><p>	<strong>New Years Eve 2012<br />	December 31</strong><br />	Pacha NYC &amp; Laidback Luke present...<br />	<br />	<strong>Super You&amp;Me New Years Eve!</strong><br />	featuring music by<br />	<strong>Laidback Luke<br />	along with<br />	Sunnery James &amp; Ryan Marciano<br />	Sandro Silva</strong><br />	<br />	Suggested Dresscode: Superheroes!<br />	<br />	<em>Champage toast &amp; countdown with Luke at midnight!</em></p>]]></description>
-                
-                <venue name="pacha-nyc" title="Pacha NYC">
-                    <address><![CDATA[618 W.46th Street
-New York]]></address>
-                    <postcode><![CDATA[NY 10036]]></postcode>
-                    <country><![CDATA[US]]></country>
-                </venue>
-                
-                
-                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/ll400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/ll400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034614" 
-                           min="1" 
-                           max="10" 
-                           priceFace="1400.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 4 (See decription for details)]]></price>
-                    
-                    
-                    
-                    <price id="00034616" 
-                           min="1" 
-                           max="10" 
-                           priceFace="2800.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 8 (See decription for details)]]></price>
-                    
-                    
-                    
-                    <price id="00034615" 
-                           min="1" 
-                           max="10" 
-                           priceFace="2100.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 6 (See decription for details)]]></price>
-                    
-                    
-                    
-                    <price id="00034617" 
-                           min="1" 
-                           max="10" 
-                           priceFace="3500.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 10 (See decription for details)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014074">
-            <title><![CDATA[ Super You&amp;Me: New Years Eve w/ Laidback Luke @ Pacha NYc | VIp Shower Lounge Tables  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-vip-shower-lounge-tables</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-vip-shower-lounge-tables</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-11-04T21:45:37+00:00</date>
-                    <date type="publish">2011-11-04T04:00:00+00:00</date>
-                    <date type="expires">2012-01-01T00:00:00+00:00</date>
-                    <date type="starts">2012-01-01T02:00:00+00:00</date>
-                    <date type="ends">2012-01-01T11:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">19</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>	Laidback Luke, Sunnery James &amp; Ryan Marciano, Sandro Silva</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<div class="event-description">	<p>		<strong>Pacha NYC New Years Eve 2012</strong><br />		<strong>Shower Lounge VIP Seating</strong><br />		Seated in the infamous Pacha Shower Lounge featuring the one and only Pacha Shower Dancers all night.<br />		<br />		<em>Package Includes all the General Admission Benefits plus:</em><br />		<strong>&bull; Party size up to 4</strong> ($1200) - 1 Premium Liquor &amp; 1 Champagne + 8 waters &amp; 8 energy drinks<br />		<strong>&bull; Party size of 5-6 </strong>($1800) - 2 Premium Liquor &amp; 2 Champagne + 12 waters &amp; 12 energy drinks<br />		<strong>&bull; Party size of 7-8</strong> ($2400) - 3 Premium Liquor &amp; 2 Champagne + 16 waters &amp; 16 energy drinks<br />		<strong>&bull; Party size of 9-10</strong> ($3000) - 3 Premium Liquor &amp; 3 Champagne + 20 waters &amp; 20 energy drinks<br />		<br />		* Price does not include $75 per person gratuity.<br />		(Customers must be 21+ to consume alcohol)<br />		&nbsp;</p>	<hr />	<p>		<strong>New Years Eve 2012<br />		December 31</strong><br />		Pacha NYC &amp; Laidback Luke present...<br />		<br />		<strong>Super You&amp;Me New Years Eve!</strong><br />		featuring music by<br />		<strong>Laidback Luke<br />		along with<br />		Sunnery James &amp; Ryan Marciano<br />		Sandro Silva</strong><br />		<br />		Suggested Dresscode: Superheroes!<br />		<br />		<em>Champage toast &amp; countdown with Luke at midnight!</em></p></div><p>	&nbsp;</p>]]></description>
-                
-                <venue name="pacha-nyc" title="Pacha NYC">
-                    <address><![CDATA[618 W.46th Street
-New York]]></address>
-                    <postcode><![CDATA[NY 10036]]></postcode>
-                    <country><![CDATA[US]]></country>
-                </venue>
-                
-                
-                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/ll400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/ll400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034622" 
-                           min="1" 
-                           max="10" 
-                           priceFace="3000.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 10 (See decription for details)]]></price>
-                    
-                    
-                    
-                    <price id="00034620" 
-                           min="1" 
-                           max="10" 
-                           priceFace="1800.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 6 (See decription for details)]]></price>
-                    
-                    
-                    
-                    <price id="00034621" 
-                           min="1" 
-                           max="10" 
-                           priceFace="2400.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 8 (See decription for details)]]></price>
-                    
-                    
-                    
-                    <price id="00034619" 
-                           min="1" 
-                           max="10" 
-                           priceFace="1200.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 4 (See decription for details)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014075">
-            <title><![CDATA[ Super You&amp;Me: New Years Eve w/ Laidback Luke @ Pacha NYc | VIp Mirror Lounge Tables  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-vip-mirror-lounge-tables</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-vip-mirror-lounge-tables</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-11-04T22:02:17+00:00</date>
-                    <date type="publish">2011-11-04T04:00:00+00:00</date>
-                    <date type="expires">2012-01-01T00:00:00+00:00</date>
-                    <date type="starts">2012-01-01T02:00:00+00:00</date>
-                    <date type="ends">2012-01-01T11:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">19</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>Laidback Luke, Sunnery James &amp; Ryan Marciano, Sandro Silva</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<div class="event-description">
- <p><strong>Pacha NYC New Years Eve 2012</strong><br />
- <strong>Mirror Lounge VIP Seating</strong><br />
- One of our unique second floor lounge areas.<br />
- <br />
- <em>Package Includes all the General Admission Benefits plus:</em><br />
- <strong>&bull; Party size up to 4</strong> ($1000) - 1 Premium Liquor &amp; 1 Champagne + 8 waters &amp; 8 energy drinks<br />
- <strong>&bull; Party size of 5-6 </strong>($1500) - 1 Premium Liquor &amp; 2 Champagne + 12 waters &amp; 12 energy drinks<br />
- <strong>&bull; Party size of 7-8</strong> ($2000) - 2 Premium Liquor &amp; 2 Champagne + 16 waters &amp; 16 energy drinks<br />
- <strong>&bull; Party size of 9-10</strong> ($2500) - 3 Premium Liquor &amp; 2 Champagne + 20 waters &amp; 20 energy drinks<br />
- <br />
- * Price does not include $50 per person gratuity.<br />
- (Customers must be 21+ to consume alcohol)</p>
- <hr />
- <p><strong>New Years Eve 2012<br />
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<div>
+ <p>Laidback Luke, Sunnery James &amp; Ryan Marciano, Sandro Silva</p>
+</div>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p><strong>New Years Eve 2012<br />
  December 31</strong><br />
  Pacha NYC &amp; Laidback Luke present...<br />
  <br />
  <strong>Super You&amp;Me New Years Eve!</strong><br />
+ <br />
+ See the New Year in with style with your own VIP table at Pacha NYC.</p>
+<p>Tickets are valid for 2 people, and due to the high demand require a minimum of 4 people per table. Prices include dedicated VIP fast track entry, 1 bottle of champange or premium spirits with mixers per 2 people,</p>
+<p>If you&#39;re looking for standard and Open Bar tickets follow this link</p>
+<p><a href="http://www.clubtickets.com/us/2011-12/31/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc">http://www.clubtickets.com/us/2011-12/31/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc</a></p>]]></description>
+                
+                <venue name="pacha-nyc" title="Pacha NYC">
+                    <address><![CDATA[618 W.46th Street
+New York]]></address>
+                    <postcode><![CDATA[NY 10036]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/ll400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/ll400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034769" 
+                           min="1" 
+                           max="5" 
+                           priceFace="600.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (Shower Lounge table. Inc entry, bottles & waitress - see event for full description)]]></price>
+                    
+                    
+                    
+                    <price id="00034771" 
+                           min="1" 
+                           max="5" 
+                           priceFace="350.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (Pachita table. Inc entry, bottles & waitress - see event for full description)]]></price>
+                    
+                    
+                    
+                    <price id="00034768" 
+                           min="2" 
+                           max="5" 
+                           priceFace="700.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (Mezzanine table. Inc entry, bottles & waitress - see event for full description)]]></price>
+                    
+                    
+                    
+                    <price id="00034770" 
+                           min="1" 
+                           max="5" 
+                           priceFace="500.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (Mirror/Gold Lounge table. Inc entry, bottles & waitress - see event for full description)]]></price>
+                    
+                    
+                    
+                    <price id="00034772" 
+                           min="1" 
+                           max="5" 
+                           priceFace="350.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (Basement/Standing tables. Inc entry, bottles & waitress - see event for full description)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014189">
+            <title><![CDATA[ Chus &amp; Ceballos: New Years Eve @ 4Sixty6 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/chus-ceballos-new-years-eve-4sixty6</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/chus-ceballos-new-years-eve-4sixty6</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-01T21:07:02+00:00</date>
+                    <date type="publish">2011-11-29T05:00:00+00:00</date>
+                    <date type="expires">2011-12-31T23:00:00+00:00</date>
+                    <date type="starts">2012-01-01T02:00:00+00:00</date>
+                    <date type="ends">2012-01-01T12:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">21</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><strong>Chus &amp; Ceballos</strong>, Palz &amp; Garcia, Sevag, Mike Zaccariello</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p><strong>Saturday December 31</strong><br />
+ Pacha NYC presents a special New Years Eve event...<br />
+ <br />
+ <strong>New Years Eve 2012</strong><br />
  featuring music by<br />
- <strong>Laidback Luke<br />
+ <strong>Chus &amp; Ceballos</strong><br />
  along with<br />
- Sunnery James &amp; Ryan Marciano<br />
- Sandro Silva</strong><br />
+ Palz &amp; Garcia, Sevag<br />
+ opening set by Mike Zaccariello</p>
+<hr />
+<p><u><strong>Tickets &amp; Packages:</strong></u><br />
  <br />
- Suggested Dresscode: Superheroes!<br />
+ <strong>General Admission ($40)</strong><br />
+ - Champagne Toast at Midnight<br />
  <br />
- <em>Champage toast &amp; countdown with Luke at midnight!</em></p>
-</div>]]></description>
+ <strong>VIP Open Bar Package ($99)</strong><br />
+ - Includes admission all night/day<br />
+ - 3-hour open bar (9pm-12am)<br />
+ - Champagne Toast at Midnight</p>
+<div>
+ <strong>Dinner &amp; Open Bar ($150)</strong><br />
+ - Includes admission all night/day</div>
+<div>
+ - Includes Surf &amp; Turf Dinner</div>
+<div>
+ - 3 hour open bar (9pm-12am) in the Exclusive Oak Room</div>
+<div>
+ - Champagne toast at Midnight</div>
+<hr />
+<p>Doors 8pm</p>
+<p><strong>4Sixty6</strong><br />
+ 466 Prospect Avenue<br />
+ West Orange, NJ</p>]]></description>
                 
-                <venue name="pacha-nyc" title="Pacha NYC">
-                    <address><![CDATA[618 W.46th Street
-New York]]></address>
-                    <postcode><![CDATA[NY 10036]]></postcode>
+                <venue name="4sixty6" title="4Sixty6">
+                    <address><![CDATA[466 Prospect Avenue, West Orange , NJ]]></address>
+                    <postcode><![CDATA[0705]]></postcode>
                     <country><![CDATA[US]]></country>
                 </venue>
                 
                 
-                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
+                <promoter name="pacha-nyc-rpm"><![CDATA[Pacha NYC RPM]]></promoter>
                 
             
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/ll400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/ll400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400nyccc_nye-front.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400nyccc_nye-front.jpg</large>
                 </images>
             
             
                 <prices>
                     
                     
-                    <price id="00034624" 
+                    <price id="00034835" 
                            min="1" 
                            max="10" 
-                           priceFace="1500.00" 
+                           priceFace="40.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 6 (See decription for details)]]></price>
+                           currency="3"><![CDATA[E-Ticket General Admission]]></price>
                     
                     
                     
-                    <price id="00034626" 
+                    
+                    
+                    
+                    
+                    <price id="00034836" 
                            min="1" 
                            max="10" 
-                           priceFace="2500.00" 
+                           priceFace="99.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 10 (See decription for details)]]></price>
+                           currency="3"><![CDATA[VIP Open Bar Package]]></price>
                     
                     
                     
-                    <price id="00034625" 
+                    <price id="00034837" 
                            min="1" 
                            max="10" 
-                           priceFace="2000.00" 
+                           priceFace="150.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 8 (See decription for details)]]></price>
+                           currency="3"><![CDATA[VIP Dinner & Open Bar Package]]></price>
                     
                     
-                    
-                    <price id="00034623" 
-                           min="1" 
-                           max="10" 
-                           priceFace="1000.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 4 (See decription for details)]]></price>
                     
                     
                 </prices>
@@ -876,56 +896,72 @@ New York]]></address>
         </event>
         
         
-        <event id="00014076">
-            <title><![CDATA[ Super You&amp;Me: New Years Eve w/ Laidback Luke @ Pacha NYc | VIp Pachita Tables  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-vip-pachita-tables</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-vip-pachita-tables</url>
+        <event id="00013686">
+            <title><![CDATA[ Space presents...... The Vegas Hotel NYe 2011  ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/space-presents-the-vegas-hotel-nye-2011</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/space-presents-the-vegas-hotel-nye-2011</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-04T22:01:53+00:00</date>
-                    <date type="publish">2011-11-04T04:00:00+00:00</date>
-                    <date type="expires">2012-01-01T00:00:00+00:00</date>
-                    <date type="starts">2012-01-01T02:00:00+00:00</date>
-                    <date type="ends">2012-01-01T11:00:00+00:00</date>
+                    <date type="updated">2011-12-05T16:04:25+00:00</date>
+                    <date type="publish">2011-09-26T23:00:00+00:00</date>
+                    <date type="expires">2011-12-31T21:00:00+00:00</date>
+                    <date type="starts">2011-12-31T22:00:00+00:00</date>
+                    <date type="ends">2012-01-01T06:00:00+00:00</date>
                 </meta>
             
             
-                <ageLimit type="over">19</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>	Laidback Luke, Sunnery James &amp; Ryan Marciano, Sandro Silva</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<div class="event-description">	<p>		<strong>Pacha NYC New Years Eve 2012</strong><br />		<strong>Pachita VIP Seating</strong><br />		Located in our exclusive upstairs VIP room, Pachita.<br />		<br />		<em>Package Includes all the General Admission Benefits plus:</em><br />		<strong>&bull; Party size up to 4</strong> ($1000) - 1 Premium Liquor &amp; 1 Champagne + 8 waters &amp; 8 energy drinks<br />		<strong>&bull; Party size of 5-6 </strong>($1500) - 1 Premium Liquor &amp; 2 Champagne + 12 waters &amp; 12 energy drinks<br />		<strong>&bull; Party size of 7-8</strong> ($2000) - 2 Premium Liquor &amp; 2 Champagne + 16 waters &amp; 16 energy drinks<br />		<strong>&bull; Party size of 9-10</strong> ($2500) - 3 Premium Liquor &amp; 2 Champagne + 20 waters &amp; 20 energy drinks<br />		<br />		* Price does not include 20% gratuity.<br />		(Customers must be 21+ to consume alcohol)<br />		&nbsp;</p>	<hr />	<p>		<strong>New Years Eve 2012<br />		December 31</strong><br />		Pacha NYC &amp; Laidback Luke present...<br />		<br />		<strong>Super You&amp;Me New Years Eve!</strong><br />		featuring music by<br />		<strong>Laidback Luke<br />		along with<br />		Sunnery James &amp; Ryan Marciano<br />		Sandro Silva</strong><br />		<br />		Suggested Dresscode: Superheroes!<br />		<br />		<em>Champage toast &amp; countdown with Luke at midnight!</em></p></div><p>	&nbsp;</p>]]></description>
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>DJs for the night will include all your Space favourites....</p>
+<p>More info to follow shortly</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<h2>
+ The Vegas Hotel &ndash; The Ultimate New Years Eve party.</h2>
+<p>Hosted by Space @ Pacha London</p>
+<p>Short of chartering a Lear jet and celebrating in Tokyo and New York as well, The Vegas Hotel offers the most up market clubbing experience in the capital. For a mere &pound;45 party goers can expect to enjoy their best NYE yet! This New Year&rsquo;s Eve we blast off at London&#39;s most exclusive, spectacular and beautiful venue Pacha with a stellar DJ line up and a clubbing experience that will become a legend... &quot;The Vegas Hotel&quot;.</p>
+<p>Let us transport you to the bright lights of Vegas, Nevada. A place where the rich and beautiful rub shoulders with the outrageous and the bizarre, and perhaps even Elvis will make an appearance! The Vegas Hotel has it all, Casinos, PA&rsquo;s and Show girls, and is set in a venue that puts Vegas to shame - with two rooms of music and set to be the party of the year.</p>
+<p>For Space virgins you can expect a glamorous crowd that love to get wild, get sociable and get seriously cheeky. You can expect the wild party atmosphere you can only experience with Space people - a slightly older more sophisticated crowd who love Music, who love one off events and love getting together in big groups of friends and making any venue their playground for one night. You can expect the finest DJ&#39;s, a show to take your breath away and the best PA&#39;s around.</p>
+<p>In its 13th year, Space has grown to become one of London&rsquo;s most talked about club events. It is a night for the discerning clubber who knows how to have a good night out, who gets dressed up to get down and has come to expect quality and a great party atmosphere from their night out.</p>
+<p>This will be the most dazzling and sensational NYE party you can hope for so head to Pacha this NYE with your group of friends for an unforgettable NYE experience.</p>]]></description>
                 
-                <venue name="pacha-nyc" title="Pacha NYC">
-                    <address><![CDATA[618 W.46th Street
-New York]]></address>
-                    <postcode><![CDATA[NY 10036]]></postcode>
-                    <country><![CDATA[US]]></country>
+                <venue name="pacha-london" title="Pacha London">
+                    <address><![CDATA[Terminus Place, Victoria, London]]></address>
+                    <postcode><![CDATA[SW1V 1JR]]></postcode>
+                    <country><![CDATA[GB]]></country>
                 </venue>
                 
-                
-                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
                 
             
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/ll400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/ll400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/pacha-nye-400-1.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/pacha-nye-400-1.jpg</large>
                 </images>
             
             
                 <prices>
                     
                     
-                    <price id="00034627" 
+                    <price id="00033934" 
                            min="1" 
                            max="10" 
-                           priceFace="1500.00" 
+                           priceFace="45.00" 
                            priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 6 (See decription for details)]]></price>
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Standard)]]></price>
+                    
+                    
+                    
+                    <price id="00033933" 
+                           min="1" 
+                           max="10" 
+                           priceFace="35.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Early Bird)]]></price>
                     
                     
                 </prices>
@@ -933,25 +969,25 @@ New York]]></address>
         </event>
         
         
-        <event id="00014077">
-            <title><![CDATA[ Super You&amp;Me: New Years Eve w/ Laidback Luke @ Pacha NYc | Basement/Standing Tables  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-basement-standing-tables</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc-basement-standing-tables</url>
+        <event id="00014122">
+            <title><![CDATA[ Alesso @ Pacha NYC ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2011-12/31/alesso-pacha-nyc</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2011-12/31/alesso-pacha-nyc</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-04T22:04:20+00:00</date>
-                    <date type="publish">2011-11-04T04:00:00+00:00</date>
-                    <date type="expires">2012-01-01T00:00:00+00:00</date>
-                    <date type="starts">2012-01-01T02:00:00+00:00</date>
-                    <date type="ends">2012-01-01T11:00:00+00:00</date>
+                    <date type="updated">2011-12-07T23:40:19+00:00</date>
+                    <date type="publish">2011-11-15T05:00:00+00:00</date>
+                    <date type="expires">2011-12-31T01:00:00+00:00</date>
+                    <date type="starts">2011-12-31T03:00:00+00:00</date>
+                    <date type="ends">2011-12-31T11:00:00+00:00</date>
                 </meta>
             
             
                 <ageLimit type="over">19</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>	Laidback Luke, Sunnery James &amp; Ryan Marciano, Sandro Silva</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<div class="event-description">	<p>		<strong>Pacha NYC New Years Eve 2012</strong><br />		<strong>Basement/Standing VIP Seating</strong><br />		<br />		<em>Package Includes all the General Admission Benefits plus:</em><br />		<strong>&bull; Party size up to 4</strong> ($800) - 1 Premium Liquor &amp; 1 Champagne + 8 waters &amp; 8 energy drinks<br />		<strong>&bull; Party size of 5-6 </strong>($1200) - 1 Premium Liquor &amp; 2 Champagne + 12 waters &amp; 12 energy drinks<br />		<strong>&bull; Party size of 7-8</strong> ($1600) - 2 Premium Liquor &amp; 2 Champagne + 16 waters &amp; 16 energy drinks<br />		<strong>&bull; Party size of 9-10</strong> ($2000) - 3 Premium Liquor &amp; 2 Champagne + 20 waters &amp; 20 energy drinks<br />		<br />		* Price does not include 20% gratuity.<br />		(Customers must be 21+ to consume alcohol)<br />		&nbsp;</p>	<hr />	<p>		<strong>New Years Eve 2012<br />		December 31</strong><br />		Pacha NYC &amp; Laidback Luke present...<br />		<br />		<strong>Super You&amp;Me New Years Eve!</strong><br />		featuring music by<br />		<strong>Laidback Luke<br />		along with<br />		Sunnery James &amp; Ryan Marciano<br />		Sandro Silva</strong><br />		<br />		Suggested Dresscode: Superheroes!<br />		<br />		<em>Champage toast &amp; countdown with Luke at midnight!</em></p></div><p>	&nbsp;</p>]]></description>
+                <lineup contentType="text/html"><![CDATA[<p>Alesso</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p><strong>Friday December 30</strong><br /> Pacha NYC presents...<br /> <br /> <strong>Alesso</strong><br /> <br /> Doors 10pm<br /> Table Reservations 212.209.7500</p>]]></description>
                 
                 <venue name="pacha-nyc" title="Pacha NYC">
                     <address><![CDATA[618 W.46th Street
@@ -967,22 +1003,26 @@ New York]]></address>
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/ll400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/ll400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400pachanyc_123011.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400pachanyc_123011.jpg</large>
                 </images>
             
             
                 <prices>
                     
                     
-                    <price id="00034628" 
+                    <price id="00034868" 
                            min="1" 
                            max="10" 
-                           priceFace="800.00" 
+                           priceFace="32.66" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[VIP VIP Table for 4 (See decription for details)]]></price>
+                           currency="3"><![CDATA[E-Ticket ($30 plus $2.66 NY State tax)]]></price>
+                    
+                    
+                    
+                    
                     
                     
                 </prices>

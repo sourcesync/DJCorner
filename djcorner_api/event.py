@@ -1,4 +1,4 @@
-#
+#T
 # Configuration...
 #
 
@@ -88,7 +88,7 @@ def get_event_details( connection, location, oid, verbose ):
 
 	event = get_event( connection, oid )
 
-	print "INFO: event: get_event->", event
+	#print "INFO: event: get_event->", event
 
 	# fixup venue related fields...
 	if event.has_key("venueid"):
@@ -158,17 +158,24 @@ def _sort_dist( a, b ):
 #
 # func to get events details...
 #
-def get_events_details( connection, location, paging ):
+def get_events_details( connection, location, paging, city ):
 	
 	events = get_events( connection, paging )
-
 	events_details = []
 
+	#print "EVENTS->", events
 	for evt in events:
 
 		event_details = get_event_details( connection, location, evt["_id"], False )
-
-		events_details.append( event_details )
+		
+		#print "EVDET->", event_details
+		if city and (city!=""):
+			ecity = event_details["city"]
+			#print "CITY->", evt["name"], city, ecity
+			if (ecity == city):
+				events_details.append( event_details )
+		else:
+			events_details.append( event_details )
 
 	# sort it by dist...
 	events_details.sort( _sort_dist )
@@ -188,7 +195,7 @@ def get_events_details( connection, location, paging ):
 #
 # func to update event basic info...
 #
-def update_event( connection, oid, name, venueid, description, promotor, imgpath, eventDate, startDate, endDate, buyurl, performers):
+def update_event( connection, oid, name, venueid, description, promotor, imgpath, eventDate, startDate, endDate, buyurl, performers,city):
 	
         events = _get_event_col( connection )
 
@@ -207,8 +214,10 @@ def update_event( connection, oid, name, venueid, description, promotor, imgpath
 	if endDate: fields["enddate"] = endDate
 	if buyurl: fields["buyurl" ]=buyurl
 	if performers: fields["pf"] = performers
+	if city: fields["city"] = city
 
 	# update...
+	print "SET FIELDS->", fields
 	uid = events.update( event, { '$set':fields } , True )
 
 	if ( uid ):

@@ -3,20 +3,23 @@
 #
 
 VENUE_LOCATIONS = { \
-        "pier-94": [ [ 40.785221,-73.998413 ], "Pier 94"], \
-        "pacha-london": [ [51.497389,-0.144024], "Pacha London"], \
-        "kensington-close-hotel-and-spa": [[ 51.499193,-0.191832 ], "Kensington Close Hotel"], \
-        "lo-profile":[[51.523538,-0.11879], "Club Lo-Profile" ], \
-        "brabanthallen": [[51.715118,5.290947], "Club Brabanthallen"], \
-        "the-coronet-theatre":[[51.495252,-0.09892], "Coronet Theatre"], \
-        "egg":[[51.543986,-0.124798], "Club Egg" ],\
-        "audio":[[50.836083,-0.134583], "Club Audio"],\
-	"fire":[[51.49111,-0.12291],"Club Fire"], \
-	"pacha-nyc":[[40.763966,-73.996911],"Pacha NYC"], \
-	"Pacha NYC":[[40.763966,-73.996911],"Pacha NYC"], \
-	"Lavo NYC":[[40.766372,-73.971462],"Lavo NightClub"], \
-	"Sullivan Room":[[40.73243,-74.00013],"Sullivan Room"], \
-	"link":[[44.517317,11.413937],"Club Link"] \
+        "pier-94": [ [ 40.785221,-73.998413 ], "Pier 94", "New York City"], \
+        "pacha-london": [ [51.497389,-0.144024], "Pacha London", "London"], \
+        "kensington-close-hotel-and-spa": [[ 51.499193,-0.191832 ], "Kensington Close Hotel", "London"], \
+        "lo-profile":[[51.523538,-0.11879], "Club Lo-Profile", "London" ], \
+        "brabanthallen": [[51.715118,5.290947], "Club Brabanthallen", "London"], \
+        "the-coronet-theatre":[[51.495252,-0.09892], "Coronet Theatre", "London"], \
+        "egg":[[51.543986,-0.124798], "Club Egg", "London"],\
+        "audio":[[50.836083,-0.134583], "Club Audio", "London"],\
+	"fire":[[51.49111,-0.12291],"Club Fire", "London"], \
+	"pacha-nyc":[[40.763966,-73.996911],"Pacha NYC", "New York City"], \
+	"Pacha NYC":[[40.763966,-73.996911],"Pacha NYC", "New York City"], \
+	"Lavo NYC":[[40.766372,-73.971462],"Lavo NightClub", "New York City"], \
+	"Sullivan Room":[[40.73243,-74.00013],"Sullivan Room", "New York City"], \
+	"link":[[44.517317,11.413937],"Club Link", "Bologna"], \
+	"zoom":[[54.281224,-0.404263],"Club Zoom", "Toronto"], \
+	"hidden":[[51.490469,-0.121515],"Club Hidden", "London"], \
+	"4sixty6":[[40.791638,-74.254189], "Club 4Sixty6","New Jersey"] 
 	}
 
 SYN_GROUPS = [ [ "pacha-nyc", "Pacha NYC" ] ]
@@ -33,15 +36,20 @@ import venue
 import user
 import event
 import clubtickets
+from dateutil import parser
+from datetime import datetime
+from pymongo.objectid import ObjectId 
 
 #
 # Clear all events...
 #
-#print "INFO: Clearing all events..."
-#status = event.clear_all( None )
-#if not status:
-#print "ERROR: Could not clear events"
-#sys.exit(1)
+CLEAR_EVENTS = False
+if CLEAR_EVENTS:
+	print "INFO: Clearing all events..."
+	status = event.clear_all( None )
+	if not status:
+		print "ERROR: Could not clear events"
+	sys.exit(1)
 
 #
 # Populate from clubtickets...
@@ -92,7 +100,7 @@ for v in venues:
 
                 # update in dbase...
                 print "INFO: updating venue loc->", vname, loc
-		status = venue.update_venue( None, void, None, loc[0], loc[1], None )
+		status = venue.update_venue( None, void, None, loc[0], loc[1], None, None )
                 if not status:
                         print "ERROR: Cannot update location for venue"
                         sys.exit(1)
@@ -106,9 +114,70 @@ for v in venues:
                 ds = VENUE_LOCATIONS[vname][1]
 
                 print "WARNING: Venue in dbase is missing display name information", v
-		status = venue.update_venue( None, void, None, None, None, ds )
+		status = venue.update_venue( None, void, None, None, None, ds, None )
                 if not status:
                         print "ERROR: Cannot update display name for venue"
                         sys.exit(1)
 
+	# see if venue has city..
+	update_city = False
+	if not v.has_key("city"):
+		update_city = True
+	elif v["city"].strip() == "":
+		update_city = True
+	if (update_city):
+		city = VENUE_LOCATIONS[vname][2]
+                print "WARNING: Venue in dbase is missing city information", v, city
+                status = venue.update_venue( None, void, None, None, None, None, city )
+                if not status:
+                        print "ERROR: Cannot update city for venue"
+                        sys.exit(1)
+
 	print "INFO: Venue is ok->", v["name"]
+
+#
+# Make sure events have proper date format...
+#
+events_info = event.get_events_details( None, None, None, None )
+
+#print events
+#sys.exit(1)
+
+events = events_info[0]
+print len(events)
+
+for evt in events:
+	print "INFO: evt type->", type(evt), evt.keys()
+
+	# check start date...	
+	print "INFO: start event date->", evt["startdate"]
+	stdt = evt["startdate"]
+	dt = parser.parse( stdt )
+	dt = datetime.strptime( stdt, "%Y-%m-%dT%H:%M:%S+00:00" )
+	print dt
+
+	# check end date...	
+	print "INFO: end event date->", evt["enddate"]
+	stdt = evt["enddate"]
+	dt = parser.parse( stdt )
+	dt = datetime.strptime( stdt, "%Y-%m-%dT%H:%M:%S+00:00" )
+
+	# check city...
+	update_city = True
+		
+	if (update_city):
+                venueid = evt["venueid"]
+		oid = ObjectId(venueid)
+                vn = venue.get_venue( None, oid )
+                city = vn["city"]
+		print
+		print
+		eoid = ObjectId( evt["_id"] )
+		print "WARNING: Event in dbase is getting city information", city, oid, eoid, type(evt["_id"])
+		status = event.update_event( None, eoid, None, None, None, None, None, None, None, None, None, None, city)
+		if not status:
+			print "ERROR: Cannot update city for venue"
+			sys.exit(1)
+		# check it...
+		revt = event.get_event_details( None, None, eoid,  None )
+		print "REPEATING->", revt

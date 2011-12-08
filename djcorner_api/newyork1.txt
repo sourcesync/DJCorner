@@ -8,7 +8,7 @@
 
 
 
-<ticketlogic version="2.0" session="A280CD017E2672B1CCCA7525088EBE19.COMP2" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+<ticketlogic version="2.0" session="9702B92F188C06E85B12FA56C2E8430A.COMP3" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
     <events title="EventsList">
         
         
@@ -20,7 +20,7 @@
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-23T17:27:08+00:00</date>
+                    <date type="updated">2011-12-05T16:19:49+00:00</date>
                     <date type="publish">2011-11-15T00:00:00+00:00</date>
                     <date type="expires">2012-01-01T02:30:00+00:00</date>
                     <date type="starts">2012-01-01T03:30:00+00:00</date>
@@ -66,7 +66,7 @@ Brighton]]></address>
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket Early Advance]]></price>
+                           currency="1"><![CDATA[E-Ticket (Early Advance)]]></price>
                     
                     
                 </prices>
@@ -75,14 +75,14 @@ Brighton]]></address>
         
         
         <event id="00013660">
-            <title><![CDATA[ Avicii New Years Eve 2012 @ Pier 94 NYc  ]]></title>
+            <title><![CDATA[ Avicii New Years Eve 2012 @ Pier 94 NYC ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/avicii-new-years-eve-2012-pier-94-nyc</url>
             <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/avicii-new-years-eve-2012-pier-94-nyc</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-24T00:21:42+00:00</date>
+                    <date type="updated">2011-12-07T14:41:20+00:00</date>
                     <date type="publish">2011-09-22T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -91,7 +91,11 @@ Brighton]]></address>
             
             
                 <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>Avicii</p>]]></lineup>
+                <lineup contentType="text/html"><![CDATA[<p>9:00 pm Glenn Morrison<br />
+ 10:30 pm Cazzette<br />
+ 12:00 am Arty<br />
+ 1:30 am Avicii<br />
+ 4:30 am Swanky Tunes</p>]]></lineup>
                 <description contentType="text/html"><![CDATA[<p><strong>New Years Eve 2012</strong><br />
  At Night, RPM and Pacha NYC present...<br />
  <br />
@@ -101,7 +105,9 @@ Brighton]]></address>
  <br />
  More info at <strong><a href="http://www.aviciinye.com">www.aviciinye.com</a></strong><br />
  <br />
- <em>A limited supply of General Admission tickets will go on sale in November</em></p>
+ <em>A limited supply of General Admission tickets are on sale now.....</em></p>
+<p><strong>NB: Ticket Name should match that of Attendee and tickets purchased as a group must all attend together with photo ID as proof of identity.</strong></p>
+<p><strong>Resold tickets are invalid and will not be admitted. Beware Ticket Touts and buy only direct from this site for guarrenteed entry. </strong></p>
 <hr />
 <p><strong>VIP package details below:</strong></p>
 <p><u><strong>Open Bar Ticket</strong></u><br />
@@ -181,14 +187,16 @@ New York]]></address>
                     
                     
                     
-                    <price id="00034663" 
+                    
+                    
+                    <price id="00034875" 
                            min="1" 
-                           max="10" 
-                           priceFace="3266.25" 
+                           max="6" 
+                           priceFace="165.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 6: See description for details - includes NY State Sales Tax]]></price>
+                           currency="3"><![CDATA[E-Ticket General Admission]]></price>
                     
                     
                     
@@ -206,14 +214,7 @@ New York]]></address>
                     
                     
                     
-                    <price id="00034664" 
-                           min="1" 
-                           max="10" 
-                           priceFace="2177.50" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
+                    
                     
                     
                     
@@ -226,7 +227,7 @@ New York]]></address>
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Open Bar Ticket - See description for details - includes NY State Sales Tax]]></price>
+                           currency="3"><![CDATA[VIP - Open Bar Ticket - See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -248,7 +249,7 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-19T18:13:36+00:00</date>
+                    <date type="updated">2011-11-29T08:08:27+00:00</date>
                     <date type="publish">2011-11-19T17:58:00+00:00</date>
                     <date type="expires">2011-12-31T21:00:00+00:00</date>
                     <date type="starts">2011-12-31T22:59:00+00:00</date>
@@ -309,7 +310,7 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-10-14T19:45:39+00:00</date>
+                    <date type="updated">2011-12-05T16:04:25+00:00</date>
                     <date type="publish">2011-09-26T23:00:00+00:00</date>
                     <date type="expires">2011-12-31T21:00:00+00:00</date>
                     <date type="starts">2011-12-31T22:00:00+00:00</date>
@@ -355,7 +356,7 @@ New York]]></address>
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket Standard]]></price>
+                           currency="1"><![CDATA[E-Ticket (Standard)]]></price>
                     
                     
                     
@@ -366,7 +367,7 @@ New York]]></address>
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket Early Bird]]></price>
+                           currency="1"><![CDATA[E-Ticket (Early Bird)]]></price>
                     
                     
                 </prices>
@@ -382,7 +383,7 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-10-14T19:28:13+00:00</date>
+                    <date type="updated">2011-12-05T16:00:10+00:00</date>
                     <date type="publish">2011-09-26T23:00:00+00:00</date>
                     <date type="expires">2011-12-31T20:00:00+00:00</date>
                     <date type="starts">2011-12-31T21:00:00+00:00</date>
@@ -420,24 +421,21 @@ New York]]></address>
  Victor Simonelli (USA), Nicky Holloway, Brandon Block, Alex P &amp; Colin Dale</div>
  <div>
  @ The Kensington Close Hotel &amp; Spa, NYE, 8pm-4am</div>
+<br />
  <div>
   </div>
  <div>
   </div>
  <div>
- After a year&rsquo;s rest, the legendary showstopper that has provided endless entertainment for New Year&rsquo;s Eve revellers since its glamorous inauguration in 1997 is returning to Kensington. The Secret Agents Ball is a stunning production with an unsurpassed</div>
+ After a year&rsquo;s rest, the legendary showstopper that has provided endless entertainment for New Year&rsquo;s Eve revellers since its glamorous inauguration in 1997 is returning to Kensington. The Secret Agents Ball is a stunning production with an unsurpassed DJ line up and a renowned atmosphere which always puts emphasis on allure, decadence and music to die for. Best of all, the Kensington Close Hotel and Spa, home of the party for the past 14 years has undergone a &pound;40 million pound refurbishment making it one of the premiere venues in London and the destination to see in 2012.</div>
  <div>
-  </div>
- <div>
-  </div>
- <div>
- DJ line up and a renowned atmosphere which always puts emphasis on allure, decadence and music to die for. Best of all, the Kensington Close Hotel and Spa, home of the party for the past 14 years has undergone a &pound;40 million pound refurbishment making it one of the premiere venues in London and the destination to see in 2012.</div>
- <div>
+<br />
   </div>
  <div>
   </div>
  <div>
  &ldquo;The Secret Agents Ball&quot;... The Ultimate New Year&rsquo;s Eve Party... Your mission for NYE, should you choose to accept is to party in an exclusive Hotel and enjoy the following:</div>
+<br />
  <div>
   </div>
  <div>
@@ -461,18 +459,21 @@ New York]]></address>
  <div>
   </div>
  <div>
+<br />
  There&#39;s only one way to come prepared for The Secrets Agents Ball 2012, think to the spy movies of the past, presents and future, your favourite secret agents or baddies...xXx, Bloefelds, Austin Powers, Nick Furys, Ethan Hunts, T.R Devlins, Jason Bourne&rsquo;s and of course don&rsquo;t forget Mr Kiss Kiss Bang Bang himself. Be as daring or as subtle as you please with the theme, but remember - those in outrageous costume...Always have much more fun!</div>
  <div>
   </div>
  <div>
   </div>
  <div>
+<br />
  As the evening sets off, delight in our complimentary champagne and canap&eacute; reception prepared specially by our Michelin chefs and enjoy as the entertainment begins. Make your way to one of our four dance floors where you can dance the night away to music both old and new from House to Funky Vocal Electro and Disco to Club Classics. Flying in from Brooklyn, New York, USA will be the Legendary DJ/Producer Victor Simonelli, with support from original Ibiza Founder Nicky Holloway, London favourites Brandon Block, Alex P &amp; Colin Dale.</div>
  <div>
   </div>
  <div>
   </div>
  <div>
+<br />
  In true secret agent style, try your luck at a hand of Black Jack or a Game of Roulette in our very own Casino Royal, where you can bluff your way into the New Year, swap glances with impeccably groomed enemy agents at the table and sip champagne. All this glitz and glamour is likely to go to your head and if previous years are anything to go by, the night will have become part of a New Year&rsquo;s legend by the time the Midnight PA counts in to 2012!</div>
  <div>
  &emsp;</div>
@@ -492,8 +493,8 @@ London]]></address>
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/bondball-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/bondball-400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/secretagentball-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/secretagentball-400.jpg</large>
                 </images>
             
             
@@ -507,7 +508,212 @@ London]]></address>
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket ]]></price>
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014209">
+            <title><![CDATA[ F R E A K A D E L I K ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/it/2011-12/31/-9733-f-9679-r-9679-e-9679-a-9679-k-9679-a-9679-d-9679-e-9679-l-9679-i-9679-k-973</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/it/2011-12/31/-9733-f-9679-r-9679-e-9679-a-9679-k-9679-a-9679-d-9679-e-9679-l-9679-i-9679-k-973</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-07T13:14:49+00:00</date>
+                    <date type="publish">2011-12-06T17:05:00+00:00</date>
+                    <date type="expires">2011-12-31T13:00:00+00:00</date>
+                    <date type="starts">2011-12-31T21:00:00+00:00</date>
+                    <date type="ends">2012-01-01T11:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><u><strong>FULL ON STAGE</strong></u></p>
+<p>&#9658; TRISTAN - UK - SPECIAL 4 HOURS LIVE SET (Nano Records)</p>
+<p>&#9658; ANIMATRONICA - IT (Mk Rec)</p>
+<p>&#9658; MARIO BROSS - IT (Mk Rec.)</p>
+<p>&#9658; PULSAR - IT (Otturbatoidi tribe)</p>
+<p>&#9658; METHAPHASE - UK (Veleno Lab.)</p>
+<p><u><strong>PROGRESSIVE STAGE</strong></u></p>
+<p>&#9658; TIME IN MOTION - DK - FIRST TIME IN ITALY - (Iono Music)</p>
+<p>&#9658; SHYISMA - IT (Iono Music)</p>
+<p>&#9658; METROYD - IT (Mk Rec.)</p>
+<p>&#9658; SUBLIMINAL POTION - IT (Mk Rec.)</p>
+<p>&#9658; ERRO - IT (Psy Fly Proj)</p>
+<p>&#9658; DIGITAL IMPULSE - IT (AudioLoad Music)</p>
+<p>&#9658; ALION - IT (Digital Nature Rec.)</p>
+<p>&#9658; SOLARIS PHASE - IT (Mk Rec.)</p>
+<p>&#9658; TRIP - IT (Solarsive Rec.)</p>
+<p>&#9658; FRASCKY - IT (Earthbreaker)</p>
+<p><strong><u>DARK STAGE</u></strong></p>
+<p>&#9658; TRIPPYHIPPIES - H - FIRST TIME IN ITALY - (Psybaba Records)</p>
+<p>&#9658; PEACE-KA - IT (Mind Funk Music)</p>
+<p>&#9658; VIRTUANOISE - IT (Noise Poison)</p>
+<p>&#9658; ASSAULT JUNKIES - IT</p>
+<p>&#9658; INSTINCT WAVE - IT (Indipendent)</p>
+<p><strong><u>FULLON STAGE</u></strong></p>
+<p>&#9658; MARKAYN (Mk Rec.)</p>
+<p>&#9658; IL PREZ (Otturbatoidi tribe)</p>
+<p>&#9658; PULSAR (Otturbatoidi tribe)</p>
+<p>&#9658; MICHEL (Otturbatoidi tribe)</p>
+<p>&#9658; OMEGADELTA (Mk Rec.)</p>
+<p>&#9658; JIMMY 9 (Veleno Lab.)</p>
+<p>&#9658; PSY BOY (Vee Prod.)</p>
+<p>&#9658; CANSAS CITY (Psy Fly Project)</p>
+<p>&#9658; ELECTRICITY (Otturbatoidi Tribe)</p>
+<p>&#9658; OKTOPUSS (Illegal Noise)</p>
+<p>&#9658; ZIGHY (Crush In Goa)</p>
+<p>&#9658; KARMALOGIC (Happy Family)</p>
+<p>&#9658; MAIKY (Mk Rec.)</p>
+<p>&#9658; CISCO (O.W.T. Family)</p>
+<p>&#9658; JOYL (ArTrance Crew)</p>
+<p><strong><u>PROGRESSIVE STAGE:</u></strong></p>
+<p>&#9658; CYRILLO (Psy Fly Project)</p>
+<p>&#9658; TK (Mk Rec.)</p>
+<p>&#9658; JUKAS (Psy Fly Project)</p>
+<p>&#9658; EKTOR (K-Tribe)</p>
+<p>&#9658; FLOYD (Psy Fly Project)</p>
+<p>&#9658; KAOS (Otturbatoidi)</p>
+<p>&#9658; NEMO (Otturbatoidi tribe)</p>
+<p>&#9658; RONNY (Psy Fly Project)</p>
+<p>&#9658; DALLO (Psy Fly Project)</p>
+<p>&#9658; RAVEHEART (Evil Corp)</p>
+<p>&#9658; RUDY (Evil Corp)</p>
+<p>&#9658; MARINO (Electronicexperience)</p>
+<p>&#9658; JAMY (Electronicexperience)</p>
+<p>&#9658; MAHORY (ArTrance Crew)</p>
+<p><strong><u>DARK STAGE:</u></strong></p>
+<p>&#9658; LOVA</p>
+<p>&#9658; PSYLO</p>
+<p>&#9658; KRISTIAN (Freakadelik Crew)</p>
+<p>&#9658; KRIMINALCODE (Freakadelik Crew, O.W.T.)</p>
+<p>&#9658; SHAMANIK PROJECT</p>
+<p>&#9658; POSITRON (Electricmoon Records UK / Solteri Crew)</p>
+<p>&#9658; GROUGE GUITAR MIND</p>
+<p><strong><u>TRANCE STAGE:</u></strong></p>
+<p>&#9658; MANUEL LE SAUX</p>
+<p>&#9658; WILLIAM P (Fraction Records)</p>
+<p>&#9658; IMPOSSIBLE</p>
+<p>&#9658; RIGEL (From MTM)</p>
+<p>&#9658; MICHEL LA VIE feat. SILVIE LANOIR - LIVE - (Queen Of Clubs Records)</p>
+<p>&#9658; B&amp;P</p>
+<p>&#9658; ALEX JOHNSON</p>
+<p>&#9658; NAMBO (From OT - Piramid Power)</p>
+<p>&#9658; WORKINTRANCE</p>
+<p><strong><u>DECO&amp;VISUAL:</u></strong></p>
+<p>&#9658; SHOOM - LT</p>
+<p>&#9658; PSYCHO</p>
+<p>&#9658; PSY FLY PROJECT</p>
+<p>&#9658; OTTURBATOIDI TRIBE</p>
+<p>- - - - -</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<div>
+ MK RECORDS, ZOOM CLUB, PSY FLY PROJECT, OTTURBATOIDI TRIBE and ART OF TRANCE presents:</div>
+<div>
+  </div>
+<p>&#9733; F &#9679; R &#9679; E &#9679; A &#9679; K &#9679; A &#9679; D &#9679; E &#9679; L &#9679; I &#9679; K &#9733;</p>
+<br />
+<div>
+ ___ 4 STAGE ___</div>
+<div>
+ <br />
+ 1) &#9556;&#9658; FULL ON<br />
+ <br />
+ 2) &#9556;&#9658; PROGRESSIVE MINIMAL<br />
+ <br />
+ 3) &#9556;&#9658; DARK<br />
+ <br />
+ 4) &#9556;&#9658; TRANCE</div>
+<div>
+  </div>
+<div>
+ Saranno 24 ore dedicate al Popolo della Trance Music, 4 stage dove si alterneranno oltre 40 dj della scena Trance internazionale e 20 esibizioni live.</div>
+<div>
+  </div>
+<div>
+ Un Capodanno di assoluto interesse internazionale.</div>
+<div>
+  </div>
+<div>
+ &#9658;4 STAGE</div>
+<div>
+ &#9658;22 LIVE ACTS</div>
+<div>
+ &#9658;40 DJ&#39;S SET</div>
+<div>
+ &#9658;MARTIN W 8 SOUND SYSTEM 20.000 WATT</div>
+<div>
+ &#9658;CLEAR SOUND SOUND SYSTEM 25.000 WATT</div>
+<div>
+ &#9658;POSEIDON SOUND SYSTEM 10.000 WATT</div>
+<div>
+ &#9658;MEGA FLUO DECORATIONS</div>
+<div>
+ &#9658;NEW DECORATIONS AND NEW BACKDROPS</div>
+<div>
+ &#9658;LASER SHOW</div>
+<div>
+ &#9658;20 MOVING HEAD</div>
+<div>
+ &#9658;MEGA SCREEN</div>
+<div>
+ &#9658;PSYVIDEO</div>
+<div>
+ &#9658;ROBOT LIGHT SHOW</div>
+<div>
+ &#9658;NEW LIGHTS</div>
+<div>
+ &#9658;SMOKE MACHINE</div>
+<div>
+ &#9658;PSY BAR</div>
+<div>
+ &#9658;CD SHOP</div>
+<div>
+ &#9658;MEDICAL SERVICE</div>
+<div>
+ &#9658;FOOD AREA</div>
+<div>
+ &#9658;FREE PARKING</div>
+<div>
+  </div>
+<div>
+ NAVETTA GRATUITA DALLA STAZIONE DEI TRENI !!!!!!!</div>
+<div>
+  </div>
+<div>
+ - - - - -</div>]]></description>
+                
+                <venue name="zoom" title="Zoom">
+                    <address><![CDATA[Via Enrico Mattei, 50]]></address>
+                    <postcode><![CDATA[]]></postcode>
+                    <country><![CDATA[IT]]></country>
+                </venue>
+                
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/freakadelik-31dicembre11.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/freakadelik-31dicembre11.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034877" 
+                           min="1" 
+                           max="10" 
+                           priceFace="3.00" 
+                           priceToPay="20.00" 
+                           currencyChar="&amp;#8364;" 
+                           currencyCode="EUR" 
+                           currency="2"><![CDATA[E-Ticket con ingresso + 2 drinks]]></price>
                     
                     
                 </prices>
@@ -523,7 +729,7 @@ London]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-23T16:28:57+00:00</date>
+                    <date type="updated">2011-12-06T14:34:21+00:00</date>
                     <date type="publish">2011-09-22T23:00:00+00:00</date>
                     <date type="expires">2011-12-31T18:00:00+00:00</date>
                     <date type="starts">2011-12-31T20:00:00+00:00</date>
@@ -541,13 +747,9 @@ London]]></address>
  Karizma,</li>
  <li>
  Audiowhores and</li>
- <li>
- Femi B</li>
 </ul>
 <div>
-  </div>
-<div>
- <strong>Room 2: </strong></div>
+ <strong>Room 2:</strong></div>
 <ul>
  <li>
  Anderson Noize</li>
@@ -564,22 +766,54 @@ London]]></address>
  <li>
  Zero C</li>
  <li>
- Dani C</li>
+ Dani D</li>
+</ul>
+<br />
+<div>
+ <strong>Brazilian Big Top in the Garden hosted by Club Popozuda and</strong></div>
+<div>
+ <strong>featuring after midnight Live: </strong></div>
+<ul>
+ <li>
+ The Bumps (Popozuda)</li>
+ <li>
+ DJ Carioca (Rio de Janeiro)</li>
+ <li>
+ Rhythms Of The City</li>
+ <li>
+ Minibloco</li>
+ <li>
+ plus Percussionist, and Latin Fusion Dancers</li>
+</ul>
+<p><strong>Deep Down:</strong></p>
+<ul>
+ <li>
+ Rodrgo Sampa</li>
+ <li>
+ M.A.N.K</li>
+ <li>
+ JD Sasha</li>
+ <li>
+ Andre Di Napoli</li>
+ <li>
+ Jay Tempest</li>
+ <li>
+ Jonathan Shettart</li>
+ <li>
+ Jon Stevens</li>
+ <li>
+ Alysson Costa</li>
+ <li>
+ D&#39;Vinci</li>
 </ul>
 <div>
-  </div>
-<div>
- <strong>Apothecary: </strong></div>
+ <strong>Apothecary:</strong></div>
 <ul>
  <li>
  Candy Bass Records</li>
  <li>
  Nightlife London</li>
-</ul>
-<pre wrap="">
-Brazilian Big Top in the Garden hosted by Club Popozuda and
-featuring after midnight Live: Rhythms Of The City and Minibloco plus
-percussionist, and latin fusion dancers</pre>]]></lineup>
+</ul>]]></lineup>
                 <description contentType="text/html"><![CDATA[<div>
  <strong>BODYMOVE presents the WHITE &amp; GOLD NYE BALL</strong></div>
 <div>
@@ -591,7 +825,7 @@ percussionist, and latin fusion dancers</pre>]]></lineup>
 <div>
   </div>
 <div>
- + SPECIAL GUESTS: KARIZMA, ANDERSON NOIZE, AUDIOWHORES, FEMI B</div>
+ + SPECIAL GUESTS: KARIZMA, ANDERSON NOIZE, AUDIOWHORES</div>
 <div>
   </div>
 <div>
@@ -604,6 +838,11 @@ percussionist, and latin fusion dancers</pre>]]></lineup>
   </div>
 <div>
  Using Rio as inspiration, Bodymove set up a Brazilian Big Top in Egg&rsquo;s heated Garden, hosted by Club Popozuda joined just after midnight by Live bands, Rhythms Of The City and Minibloco plus a troupe of percussionists and latin fusion dancers, central to the whole NYE party.</div>
+<div>
+  </div>
+<div>
+  </div>
+<p><iframe allowfullscreen="" frameborder="0" height="246" src="http://www.youtube.com/embed/3VGseaNkSmo" width="425"></iframe></p>
 <div>
   </div>
 <div>
@@ -651,8 +890,8 @@ percussionist, and latin fusion dancers</pre>]]></lineup>
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/bodymovenyehighres-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/bodymovenyehighres-400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/bodymove-nye-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/bodymove-nye-400.jpg</large>
                 </images>
             
             
@@ -677,7 +916,7 @@ percussionist, and latin fusion dancers</pre>]]></lineup>
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (earlybird release)]]></price>
+                           currency="1"><![CDATA[E-Ticket (Earlybird release)]]></price>
                     
                     
                     
@@ -688,7 +927,7 @@ percussionist, and latin fusion dancers</pre>]]></lineup>
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[VIP Fast track dedicated entrance, Champagne reception & canapes, Exclusive area until 1am + Entry to After Party]]></price>
+                           currency="1"><![CDATA[VIP (Fast track dedicated entrance, Champagne reception & canapes, Exclusive area until 1am + Entry to After Party)]]></price>
                     
                     
                     
@@ -699,7 +938,7 @@ percussionist, and latin fusion dancers</pre>]]></lineup>
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (early early bird release)]]></price>
+                           currency="1"><![CDATA[E-Ticket (Early early bird release)]]></price>
                     
                     
                 </prices>
@@ -707,56 +946,191 @@ percussionist, and latin fusion dancers</pre>]]></lineup>
         </event>
         
         
-        <event id="00013797">
-            <title><![CDATA[ Society ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/15/society</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/15/society</url>
+        <event id="00014217">
+            <title><![CDATA[ Bodymove presents NYe Rio Revellion 2011 - Members ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/bodymove-presents-nye-rio-revellion-2011-members</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/bodymove-presents-nye-rio-revellion-2011-members</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-10-12T12:22:35+00:00</date>
-                    <date type="publish">2011-10-06T15:58:00+00:00</date>
-                    <date type="expires">2011-12-15T18:00:00+00:00</date>
-                    <date type="starts">2011-12-15T22:00:00+00:00</date>
-                    <date type="ends">2011-12-16T03:00:00+00:00</date>
+                    <date type="updated">2011-12-07T17:28:56+00:00</date>
+                    <date type="publish">2011-12-07T15:49:00+00:00</date>
+                    <date type="expires">2011-12-31T19:00:00+00:00</date>
+                    <date type="starts">2011-12-31T20:00:00+00:00</date>
+                    <date type="ends">2012-01-01T14:00:00+00:00</date>
                 </meta>
             
             
                 <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>Various guest DJs</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>is for everyone that love&#39;s the energy of Soho and love&#39;s to start the weekend off with surrounded by hot men. It&#39;s a place for super slick city boys who hit the bars straight from work, the pumped and bronzed fresh from the gym and everyone else who loves great dance music, hot boys and a sexy atmosphere</p>]]></description>
+                <lineup contentType="text/html"><![CDATA[<div>
+ <div>
+ <strong>Main Room:</strong></div>
+ <ul>
+ <li>
+ Karizma,</li>
+ <li>
+ Audiowhores and</li>
+ </ul>
+ <div>
+ <strong>Room 2:</strong></div>
+ <ul>
+ <li>
+ Anderson Noize</li>
+ <li>
+ Tomasuchy aka Tomas Tesla</li>
+ <li>
+ Darren Gregory</li>
+ <li>
+ Justin Time</li>
+ <li>
+ Digital Mike</li>
+ <li>
+ Boletz</li>
+ <li>
+ Zero C</li>
+ <li>
+ Dani D</li>
+ </ul>
+ <br />
+ <div>
+ <strong>Brazilian Big Top in the Garden hosted by Club Popozuda and</strong></div>
+ <div>
+ <strong>featuring after midnight Live:</strong></div>
+ <ul>
+ <li>
+ The Bumps (Popozuda)</li>
+ <li>
+ DJ Carioca (Rio de Janeiro)</li>
+ <li>
+ Rhythms Of The City</li>
+ <li>
+ Minibloco</li>
+ <li>
+ plus Percussionist, and Latin Fusion Dancers</li>
+ </ul>
+ <p><strong>Deep Down:</strong></p>
+ <ul>
+ <li>
+ Rodrgo Sampa</li>
+ <li>
+ M.A.N.K</li>
+ <li>
+ JD Sasha</li>
+ <li>
+ Andre Di Napoli</li>
+ <li>
+ Jay Tempest</li>
+ <li>
+ Jonathan Shettart</li>
+ <li>
+ Jon Stevens</li>
+ <li>
+ Alysson Costa</li>
+ <li>
+ D&#39;Vinci</li>
+ </ul>
+ <div>
+ <strong>Apothecary:</strong></div>
+ <ul>
+ <li>
+ Candy Bass Records</li>
+ <li>
+ Nightlife London</li>
+ </ul>
+</div>]]></lineup>
+                <description contentType="text/html"><![CDATA[<div>
+ <strong>BODYMOVE presents the WHITE &amp; GOLD NYE BALL</strong></div>
+<div>
+ </div>
+<div>
+ featuring a BRAZILIAN BIG TOP with CLUB POPOZUDA and Live Bands,</div>
+<div>
+ Rhythms Of The City and Minibloco</div>
+<div>
+ </div>
+<div>
+ + SPECIAL GUESTS: KARIZMA, ANDERSON NOIZE, AUDIOWHORES</div>
+<div>
+ </div>
+<div>
+ Saturday December 31st</div>
+<div>
+ </div>
+<div>
+ Pulling out all the stops production and decor wise, Egg will be transformed into a scene from Rio&rsquo;s exuberant NYE, bathed in white and gold, as Bodymove creates its second magical New Year&rsquo;s Eve party in London.</div>
+<div>
+ </div>
+<div>
+ Using Rio as inspiration, Bodymove set up a Brazilian Big Top in Egg&rsquo;s heated Garden, hosted by Club Popozuda joined just after midnight by Live bands, Rhythms Of The City and Minibloco plus a troupe of percussionists and latin fusion dancers, central to the whole NYE party.</div>
+<div>
+ </div>
+<div>
+ </div>
+<p><iframe allowfullscreen="" frameborder="0" height="246" src="http://www.youtube.com/embed/3VGseaNkSmo" width="425"></iframe></p>
+<div>
+ </div>
+<div>
+ Rio de Janeiro is known the world over as one of the most breathtaking and thrilling places you could possibly imagine celebrating a New Year&#39;s Eve. Everyone dresses to impress in fabulous whites, and the whole city crackles in the infectious electric carnival atmosphere.</div>
+<div>
+ </div>
+<div>
+ The Big Top fires up to Club Popozuda&rsquo;s bold bootyshaking blend of the finest, freshest music from around the world courtesy of resident DJ The Bumps and special guest, RdJ&rsquo;s DJ Carioca, includes hip hop, reggaeton and dancehall. With live samba, percussionists and dancers, feel the heat as 2012 starts in jumping Brazilian style. Global bootyshaking beats.</div>
+<div>
+ </div>
+<div>
+ Exclusive mixtapes from Club Popozuda:</div>
+<div>
+ </div>
+<div>
+ <object height="81" width="100%"><param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" /><param name="allowscriptaccess" value="always" /><embed allowscriptaccess="always" height="81" src="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" type="application/x-shockwave-flash" width="100%"></embed></object><a href="http://soundcloud.com/clubpopozuda/mixtape-20-flore">Club Popozuda Mixtape #20 (Flore)</a> by <a href="http://soundcloud.com/clubpopozuda">Club Popozuda</a>
+ <div>
+ </div>
+ <div>
+ </div>
+ <div>
+ As well as the Rio-themed Brazilian Big Top, Bodymove lines up some leading musical talents, leaders in their own different fields, including Karizma, Anderson Noize, Audiowhores and resident decksmith, Femi B.</div>
+ <div>
+ </div>
+ <div>
+ Chris &ldquo;Karizma&rdquo; Clayton is self diagnosed as &ldquo;a.d.d. with music,&rdquo; and has always aspired to be a producer who &ldquo;keeps changing and moving on to different things for the hallenge.&rdquo; He released his debut full-length, &lsquo;A Mind of Its Own&rsquo;, for the R2 label, as well as mix CDs for notable house labels. NRK and Soul Heaven. Karizma Remixes have appeared on a brilliant spectrum of labels, including Defected, Yoruba, Sonar Kollektiv, Compost, and Raw Fusion. Karizma is joined by Defected&rsquo;s hot UK duo, Audiowhores, also favourites at Bodymove events and known for their explosive house quaking sounds and ability to</div>
+ <div>
+ raise the roof. Bodymove resident and Strictly Rhythm producer, Femi B rounds off the Bodymove All Stars in the Main Room.</div>
+ <div>
+ </div>
+ <div>
+ Heading up Room 2 is Anderson Noize, who has pioneered the electronic music scence in Brazil, inspired by the explosion of Acid House on the club scene. From running clubs, dj-ing to making amazing CD mixes, Anderson continues to break all the rules and inspire with his emotive electronic sounds that continually top the Beatport charts and dancefloors around the world. Lining up on the decks alongside Anderson Noize is Tomasuchy aka Tomas Tesla, Darren Gregory &amp; Justin Time, Digital Mike, Boletz, Zero C and Dani C. In Egg&rsquo; club within a club The Apothecary, Candy Bass Records and Nightlife London takeover with their own brand of end of year sounds and surprises as Egg and Bodymove celebrate another gripping year of forward thinking clubbing and dance music.</div>
+</div>]]></description>
                 
-                <venue name="lo-profile" title="Lo-Profile">
-                    <address><![CDATA[84 - 86 Wardour Street
-London]]></address>
-                    <postcode><![CDATA[W1F 0TQ]]></postcode>
+                <venue name="egg" title="Egg">
+                    <address><![CDATA[200 York Way, Kings Cross, London]]></address>
+                    <postcode><![CDATA[N7 9AP]]></postcode>
                     <country><![CDATA[GB]]></country>
                 </venue>
                 
                 
-                <promoter name="gaydar-radio"><![CDATA[Gaydar Radio]]></promoter>
+                <promoter name="bodymove"><![CDATA[Bodymove]]></promoter>
                 
             
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/society-new-gen-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/society-new-gen-400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/bodymove-nye-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/bodymove-nye-400.jpg</large>
                 </images>
             
             
                 <prices>
                     
                     
-                    <price id="00034114" 
+                    <price id="00034890" 
                            min="1" 
                            max="10" 
-                           priceFace="4.00" 
+                           priceFace="25.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket ]]></price>
+                           currency="1"><![CDATA[E-Ticket (Members)]]></price>
                     
                     
                 </prices>
@@ -764,295 +1138,142 @@ London]]></address>
         </event>
         
         
-        <event id="00013648">
-            <title><![CDATA[ Techno Tourism presents Holland Discovery Weekend  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/nl/2011-12/10/techno-tourism-presents-holland-discovery-weekend</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/nl/2011-12/10/techno-tourism-presents-holland-discovery-weekend</url>
+        <event id="00014219">
+            <title><![CDATA[ FIRE - 'WELCOME HOME' - PYRO PARTY ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/17/fire-welcome-home-pyro-party</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/17/fire-welcome-home-pyro-party</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-11-08T13:48:59+00:00</date>
-                    <date type="publish">2011-09-19T23:00:00+00:00</date>
-                    <date type="expires">2011-11-08T13:45:00+00:00</date>
-                    <date type="starts">2011-12-10T19:00:00+00:00</date>
-                    <date type="ends">2011-12-11T06:00:00+00:00</date>
+                    <date type="updated">2011-12-07T18:47:17+00:00</date>
+                    <date type="publish">2011-12-07T00:00:00+00:00</date>
+                    <date type="expires">2011-12-17T22:00:00+00:00</date>
+                    <date type="starts">2011-12-17T23:00:00+00:00</date>
+                    <date type="ends">2011-12-18T07:00:00+00:00</date>
                 </meta>
             
             
                 <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>Sven V&auml;th, Richie Hawtin, Loco Dice, Marco Carola, Chris Liebing, Luke Slater, Monika Kruse, Karotte, Marcel Dettmann, Ben Klock, Matthias Tanzmann, Steve Rachmad, Michel De Hey, Miss Djax, Remy, Secret Cinema, Benny Rodrigues, Boris Werner, Lauhaus, Darko Esser, Prins Thomas, Todd Terje, Round Table Knights, Joey Daniel, Mike Drama, Seebase, Warren Fellow</p>
-<div>
- LIVE: Underworld, Extrawelt, Henrik Schwarz, Paul Ritch, Tensnake</div>]]></lineup>
-                <description contentType="text/html"><![CDATA[<div>
- <strong>TECHNO TOURISM PRESENTS: &ldquo;HOLLAND DISCOVERY WEEKEND&rdquo;</strong></div>
-<p>In 2011 Time Warp Holland is moving close to Den Bosch. The Brabanthallen in &#39;S-Hertogenbosch is the new home base for the German techno festival and offers everything Techno-Fans could imagine. The size gives the opportunity to welcome all the fans from all over the world without being worried about missing space, the technical environment is perfect and allows to setup the well-known Time Warp Stage- and Lightshow.</p>
-<p>Den Bosch is well known as the small version of Amsterdam, it&rsquo;s famous for the great amount of bars, cafes and coffee shops.</p>
-<p>As Time Warp Holland is a mandatory date for all the Techno Fans, join the &ldquo;Techno Tourism&rdquo; as we travel across Europe for a special long weekend in Holland for another intense adventure taking you away for the &ldquo;Holland Discovery Weekend&rdquo;.</p>
-<p>We are organizing coach packages, accommodation and tickets from all over UK.</p>
-<p>Our package will ensure that all has been taking care before, during and after your trip, delivering to you the best experience ever alleviating the planning stress for this special weekend.</p>
-<p>Our aim is to provide you a safety journey and freedom from life routine.</p>
-<p>Now, it is again your turn to make a final decision and take part on this crazy adventure and start with us our 6th &ldquo;Marathon to Time Warp&rdquo;.</p>
-<p><strong>BUS PACKAGE<br />
- The Festival Bus departs from the major UK cities:</strong></p>
-<p><strong>NEWCASTLE<br />
- LEEDS<br />
- MANCHESTER<br />
- LIVERPOOL<br />
- NOTTHINGHAM<br />
- BIRMINGHAM<br />
- LONDON</strong></p>
-<p>You will be able to jump on board from a different city if needed, as we arrange special pick-up points in order to satisfy all your needs.</p>
-<p>Our bus trip is an event guest talked about for long time but also a major experience to remember in life for its unique adventures, atmosphere and international attendance.</p>
-<p>ITINERARY</p>
+                <lineup contentType="text/html"><![CDATA[<p>	Amanda Wilson (Live PA)</p><p>	Steve Pitron, D&#39;Johnny, Fat Tony, Sharp Boys, Tuomo Fox, Lady Lloyd</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>	&nbsp;</p><p>	<strong>FIRE &ndash; WELCOME HOME &ndash; THE PYRO PARTY!</strong><br />	<br />	Saturday 17th December<br />	11pm-7am<br />	@ Fire<br />	<br />	&ldquo;We&rsquo;ve missed you!&rdquo;<br />	<br />	Six weeks on from the temporary closure, London&rsquo;s hottest nightclub is ready to rock the capital once again. The cutting edge Fire complex, boasting multiple rooms and the most state of the art lighting and sound around, hosts the biggest gay parties in the city, and on 17th December we&rsquo;re throwing a special &lsquo;Welcome home&rsquo; free party!<br />	<br />	DJs Steve Pitron, Sharp Boys, D&rsquo;Johnny and The Oli spin trademark pumping house in the main room, with added glamour from Chrissy Darling, Elektra Paris, JJ &amp; Minty. Over in the Lounge room DJs Lady Lloyd &amp; Tuomo Fox spin commercial dance and pop anthems.<br />	<br />	Plus the Fire special effects crew have some great surprises up their sleeves to make this an explosive night to remember! Expect massive pyros, indoor rockets, confetti bursts and so much more.<br />	<br />	Gogo boys supplied by the Fire team show off the best talent London has to offer, taking to the stage with very special guest PA Amanda Wilson performing hits including &lsquo;Seek Bromance&rsquo;, &lsquo;Watchin&rsquo; and &lsquo;Love on my Mind&rsquo;.<br />	<br />	Followed by Beyond vs Deviate at Area, with DJ PAGANO.<br />	<br />	Admission:<br />	FREE ENTRY BEFORE 1AM WITH FLYER, AD OR ONLINE GUESTLIST!&nbsp;<a href="http://tinyurl.com/firewelcomehomeparty" target="_blank">http://tinyurl.com/<wbr />firewelcomehomeparty</a><br />	Otherwise &pound;8/&pound;12<br />	More info @&nbsp;<a href="http://www.fireclub.co.uk/" target="_blank">www.fireclub.co.uk</a></p>]]></description>
+                
+                <venue name="fire" title="Fire">
+                    <address><![CDATA[South Lambeth Road, Vauxhall ]]></address>
+                    <postcode><![CDATA[SW8 1RT]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="orange"><![CDATA[Orange]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/fire400x400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/fire400x400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    
+                    
+                    <price id="00034892" 
+                           min="1" 
+                           max="10" 
+                           priceFace="10.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket Advance]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014215">
+            <title><![CDATA[ Bear Necessity London Presents HO! HO! HO! ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/17/bear-necessity-london-presents-ho-ho-h</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/17/bear-necessity-london-presents-ho-ho-h</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-07T14:06:38+00:00</date>
+                    <date type="publish">2011-12-07T12:56:00+00:00</date>
+                    <date type="expires">2011-12-17T21:00:00+00:00</date>
+                    <date type="starts">2011-12-17T22:00:00+00:00</date>
+                    <date type="ends">2011-12-18T06:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><strong>Main Room:</strong></p>
 <ul>
  <li>
- <p>Depart from UK in the night of Thursday 8th December.</p>
- </li>
+ DJ Hifi Sean</li>
  <li>
- <p>Arrival in Den Bosh on Friday 9th December.</p>
- </li>
+ DJ Louis</li>
  <li>
- <p>Time Warp starts on Saturday 10th December at 20:00hrs.</p>
- </li>
- <li>
- <p>Sunday 11th December you can return to your hotel and refresh before to embark on the journey back to England.</p>
- </li>
+ Lewis Lennon</li>
 </ul>
-<p>Fully schedule, itinerary and departing points will be announced very soon.</p>
-<p><strong>PACKAGE PRICES</strong></p>
-<p>We are proud to announce in the name of fairness a united price for United Kingdom. A unique price for all our travellers.</p>
-<p>**Discounts available for Birthday celebrations and large group.**</p>
-<p>Just get in touch directly with us on +34 618 975 295</p>
-<p><strong>The package includes the following:</strong></p>
-<p>Travel UK &ndash; Holland (return)<br />
- Two nights&rsquo; accommodation in a 4* hotel next to the venue<br />
- &ldquo;Techno Tourism Welcome Pack&rdquo;<br />
- Festival Ticket</p>
-<p><strong>Option 1(Coach Package all UK-</strong> <strong>NEWCASTLE, LEEDS, MANCHESTER, LIVERPOOL, NOTTHINGHAM, BIRMINGHAM, LONDON) : </strong></p>
-<p>Cost: &pound;230<br />
- Now: &pound;40<br />
- After: 1 Payment in full or 2 instalments.</p>
-<p><strong>Option 2 (Only Festival Ticket):</strong></p>
-<p>Cost: &pound;57<br />
- Now: &pound;10<br />
- After: 1 Payment in full or 2 instalments.</p>
-<p><strong>Option 3 (Sleep&amp;Dance - incl. 2 nights accomodation + festival ticket</strong><strong>) : </strong></p>
-<p>Cost: &pound;135<br />
- Now: &pound;35<br />
- After: 1 Payment in full or 2 instalments.</p>
-<p>HOW TO BOOK</p>
-<p>The deposit will guarantee only the reservation of your package. Deposits are NOT refundable.<br />
- Once you have reserved your package, an email will be forward to you from Techno Tourism HQ including all the information that you need in order to complete your booking and payment information.<br />
- The outstanding balance can be paid either in full or via instalments directly to Techno Tourism.</p>
-<p>DEADLINES FOR INSTALMENTS ARE:</p>
-<p>1st instalment paid by the 12th November<br />
- 2nd instalment paid by the 20th November</p>
-<p>* They will be sold on a &#39;first come, first served&#39; basis. Your payment secures your seat *</p>
-<p>CONTACT</p>
-<p>Techno Tourism has a large and well experienced team working for this trip in order to make it one you will always remember.</p>
-<p>For more detailed info please call:</p>
-<p>Mobile: +34 618 975 295</p>
-<p>Skype: techno-tourism</p>
-<p>Email: info@techno-tourism.com</p>
-<p>Hurry up and let&rsquo;s do the Time Warp Again!</p>]]></description>
-                
-                <venue name="brabanthallen" title="Brabanthallen">
-                    <address><![CDATA[Diezekade 2,  AK s-Hertogenbosch]]></address>
-                    <postcode><![CDATA[5222]]></postcode>
-                    <country><![CDATA[NL]]></country>
-                </venue>
-                
-                
-                <promoter name="time-warp"><![CDATA[Techno Tourism]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/time-warp-27-03-200.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/time-warp-27-03-200.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00033864" 
-                           min="1" 
-                           max="10" 
-                           priceFace="40.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Earlybird - coach package - all UK - NEWCASTLE, LEEDS, MANCHESTER, LIVERPOOL, NOTTHINGHAM, BIRMINGHAM, LONDON)]]></price>
-                    
-                    
-                    
-                    <price id="00033865" 
-                           min="1" 
-                           max="10" 
-                           priceFace="10.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Earlybird - festival only ticket)]]></price>
-                    
-                    
-                    
-                    <price id="00034590" 
-                           min="1" 
-                           max="10" 
-                           priceFace="35.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Earlybird - Sleep&Dance - incl. 2 nights accomodation + festival ticket)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00013796">
-            <title><![CDATA[ Society ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/08/society</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/08/society</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-10-12T12:22:48+00:00</date>
-                    <date type="publish">2011-10-06T15:58:00+00:00</date>
-                    <date type="expires">2011-12-08T18:00:00+00:00</date>
-                    <date type="starts">2011-12-08T22:00:00+00:00</date>
-                    <date type="ends">2011-12-09T03:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>Various guest DJs</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>is for everyone that love&#39;s the energy of Soho and love&#39;s to start the weekend off with surrounded by hot men. It&#39;s a place for super slick city boys who hit the bars straight from work, the pumped and bronzed fresh from the gym and everyone else who loves great dance music, hot boys and a sexy atmosphere</p>]]></description>
-                
-                <venue name="lo-profile" title="Lo-Profile">
-                    <address><![CDATA[84 - 86 Wardour Street
-London]]></address>
-                    <postcode><![CDATA[W1F 0TQ]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-                <promoter name="gaydar-radio"><![CDATA[Gaydar Radio]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/society-new-gen-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/society-new-gen-400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034113" 
-                           min="1" 
-                           max="10" 
-                           priceFace="4.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket ]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00013817">
-            <title><![CDATA[ We Party London: Disco - The Anniversary  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/03/we-party-london-disco-the-anniversary</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/03/we-party-london-disco-the-anniversary</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-11-15T14:11:01+00:00</date>
-                    <date type="publish">2011-10-09T23:00:00+00:00</date>
-                    <date type="expires">2011-12-03T22:00:00+00:00</date>
-                    <date type="starts">2011-12-03T23:00:00+00:00</date>
-                    <date type="ends">2011-12-04T07:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<ul>
- <li>
- Manuel De Diego,</li>
- <li>
- Paul Heron,</li>
- <li>
- D&#39;Johnny</li>
- <li>
- Gonzalo Rivas</li>
+<p class="western"></p>
+<p class="western">
+ <strong>Room 2:</strong></p>
+<ul>
+ <li class="western">
+ DJ Dave &#39;Macho City&#39;</li>
 </ul>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p><strong>WE Party London: DISCO - The Anniversary</strong></p>
-<p><strong>Saturday 3rd December<br />
- 11pm-7am<br />
- @ Coronet Theatre</strong></p>
-<p>It&#39;s been an incredible year in London for WE Party, as the new brand on the block has risen to become THE destination event for the city&#39;s gay clubbing A-List.</p>
-<p>Expect trademark cutting edge production and lots of amazing surprises, guest DJs, super-hot gogos and live shows.</p>
-<p>Plus one of London&#39;s hottest clubbing brands hosts room 2.</p>
-<p>Check out the video below....not to be missed!</p>
-<p><iframe allowfullscreen="" frameborder="0" height="264" src="http://www.youtube.com/embed/8oyRXQOB-_M?rel=0" width="460"></iframe></p>]]></description>
+                <description contentType="text/html"><![CDATA[<p>It&rsquo;s Christmas &ndash; well almost, and London&rsquo;s top monthly bear night is back and promises to deliver plenty of Christmas cheer and Festive Spirit as it presents its Yuletide Special &ndash; Ho! Ho! Ho!</p>
+<br />
+<p>Whilst we can&rsquo;t promise that Santa will be there to empty his sack, there&rsquo;ll still be a bevy of London&rsquo;s finest furriest specimens to snuggle up to and keep out the cold as Bear Necessity heralds the birth of the Baby Jesus with an action-packed night of festive fun.</p>
+<br />
+<p>There&rsquo;ll be two rooms of music and an area to explore in the dark where you can have some fun feeling your way around.</p>
+<br />
+<p>The main room will feature DJ HIFI SEAN. Not only has he been pushing the boundaries of music all his adult life but was voted one of the top 3 best DJs in the Boyz Reader Awards 2010/11. He&rsquo;s appeared at Kinky Trade, Barcode and Hustlaball so expect a night of top sounds. DJ LOUIS LENNON provides a warm-up set &ndash; AUDIO ORGY guaranteed.</p>
+<br />
+<p>Room 2 features DJ DAVE &lsquo;MACHO CITY&rsquo; aka former Hacienda DJ Dave Kendrick, who will be bringing his blend of Disco, Chicago house and strange pop that has made his Thursday residency at The Joiners the stuff of legend.</p>
+<br />
+<p>Don&rsquo;t forget that Hidden nightclub has recently been refurbished and provides the perfect backdrop for this sensational evening of furry exploits.</p>
+<br />
+<p>So start this year&rsquo;s Christmas celebrations in the company of the hottest, hairiest guys that London has to offer at Bear Necessity&rsquo;s Ho! Ho! Ho! this Saturday.</p>]]></description>
                 
-                <venue name="the-coronet-theatre" title="Coronet Theatre">
-                    <address><![CDATA[The Coronet Theatre
-26-28 New Kent Road
-LONDON 
-
-]]></address>
-                    <postcode><![CDATA[SE1 6TJ]]></postcode>
+                <venue name="hidden" title="Hidden">
+                    <address><![CDATA[100 Tinworth St.
+Vauxhall
+London]]></address>
+                    <postcode><![CDATA[SE11 5EQ ]]></postcode>
                     <country><![CDATA[GB]]></country>
                 </venue>
                 
                 
-                <promoter name="we-party"><![CDATA[We Party]]></promoter>
+                <promoter name="alex-erfan-"><![CDATA[Alex Erfan ]]></promoter>
                 
             
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/we-disco_posterfb400x400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/we-disco_posterfb400x400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/bnxmasparty-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/bnxmasparty-400.jpg</large>
                 </images>
             
             
                 <prices>
                     
                     
-                    <price id="00034252" 
-                           min="1" 
-                           max="10" 
-                           priceFace="15.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket Early Advance]]></price>
-                    
-                    
-                    
-                    <price id="00034145" 
+                    <price id="00034885" 
                            min="1" 
                            max="10" 
                            priceFace="10.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket Strictly Limited Super Advance]]></price>
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
                     
                     
                 </prices>
