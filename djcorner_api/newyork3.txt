@@ -8,8 +8,82 @@
 
 
 
-<ticketlogic version="2.0" session="DB4AD6D31728B603A31A6E8D47785EB7.COMP3" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+<ticketlogic version="2.0" session="438CF9B9C0DF20AE9A38C7564CAF57F4.COMP1" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
     <events title="EventsList">
+        
+        
+        <event id="00014239">
+            <title><![CDATA[ CHUS + CEBALLOS present CRASH Part 2 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-02/19/chus-ceballos-present-crash-part-2</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-02/19/chus-ceballos-present-crash-part-2</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-13T17:14:54+00:00</date>
+                    <date type="publish">2011-12-13T17:11:00+00:00</date>
+                    <date type="expires">2012-02-19T12:00:00+00:00</date>
+                    <date type="starts">2012-02-19T03:00:00+00:00</date>
+                    <date type="ends">2012-02-19T12:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">21</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<div>
+ CHUS + CEBALLOS</div>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Saturday February 18</p>
+<div>
+ Pacha NYC presents ..</div>
+<div>
+ </div>
+<div>
+ <strong>CHUS + CEBALLOS </strong>present</div>
+<div>
+ <strong>CRASH </strong><em>Part 2</em></div>
+<div>
+ </div>
+<div>
+ Doors 10pm</div>
+<div>
+ Table Reservations <a href="tel:212.209.7500" target="_blank" value="+12122097500">212.209.7500</a></div>
+<div>
+ </div>]]></description>
+                
+                <venue name="pacha-nyc" title="Pacha NYC">
+                    <address><![CDATA[618 W.46th Street
+New York]]></address>
+                    <postcode><![CDATA[NY 10036]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/pacha-nyc-1.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/pacha-nyc-1.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034935" 
+                           min="1" 
+                           max="10" 
+                           priceFace="20.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket ]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
         
         
         <event id="00013981">
@@ -169,6 +243,77 @@
         </event>
         
         
+        <event id="00014238">
+            <title><![CDATA[ CHUS &amp; CEBALLOS present CRASH Part 1 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/15/chus-ceballos-present-crash-part-1</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/15/chus-ceballos-present-crash-part-1</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-13T17:09:39+00:00</date>
+                    <date type="publish">2011-12-13T17:05:00+00:00</date>
+                    <date type="expires">2012-01-15T01:00:00+00:00</date>
+                    <date type="starts">2012-01-15T03:00:00+00:00</date>
+                    <date type="ends">2012-01-15T12:04:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">19</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>Chus &amp; Ceballos</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Saturday January 14</p>
+<div>
+ Pacha NYC presents ..</div>
+<div>
+ </div>
+<div>
+ <strong>CHUS + CEBALLOS </strong>present</div>
+<div>
+ <strong>CRASH </strong><em>Part 1</em></div>
+<div>
+ </div>
+<div>
+ Doors 10pm</div>
+<div>
+ Table Reservations <a href="tel:212.209.7500" target="_blank" value="+12122097500">212.209.7500</a></div>]]></description>
+                
+                <venue name="pacha-nyc" title="Pacha NYC">
+                    <address><![CDATA[618 W.46th Street
+New York]]></address>
+                    <postcode><![CDATA[NY 10036]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/pacha-nyc-1.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/pacha-nyc-1.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034934" 
+                           min="1" 
+                           max="10" 
+                           priceFace="20.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket ]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
         <event id="00014158">
             <title><![CDATA[ Kinky Malinki ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2012-01/07/kinky-malinki</url>
@@ -246,9 +391,9 @@
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-02T21:11:54+00:00</date>
+                    <date type="updated">2011-12-13T18:03:20+00:00</date>
                     <date type="publish">2011-12-02T20:32:00+00:00</date>
-                    <date type="expires">2012-01-02T12:00:00+00:00</date>
+                    <date type="expires">2012-01-02T01:00:00+00:00</date>
                     <date type="starts">2012-01-02T03:00:00+00:00</date>
                     <date type="ends">2012-01-02T12:00:00+00:00</date>
                 </meta>
@@ -289,14 +434,16 @@ New York]]></address>
                 <prices>
                     
                     
-                    <price id="00034860" 
+                    <price id="00034938" 
                            min="1" 
                            max="10" 
-                           priceFace="20.00" 
+                           priceFace="27.22" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
-                           currency="3"><![CDATA[E-Ticket ]]></price>
+                           currency="3"><![CDATA[E-Ticket ($25 plus $2.22 NY State tax)]]></price>
+                    
+                    
                     
                     
                 </prices>
@@ -305,14 +452,14 @@ New York]]></address>
         
         
         <event id="00013960">
-            <title><![CDATA[ Apocalypse 2012: New Years Day with Boris &amp; Victor Calderone @ Pier 94  ]]></title>
+            <title><![CDATA[ Apocalypse 2012: New Years Day w/ Boris &amp; Victor Calderone @ Pier 94  ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/apocalypse-2012-new-years-day-with-boris-victor-calderone-pier-94</url>
             <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/apocalypse-2012-new-years-day-with-boris-victor-calderone-pier-94</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-08T18:40:46+00:00</date>
+                    <date type="updated">2011-12-12T06:41:52+00:00</date>
                     <date type="publish">2011-10-25T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T08:00:00+00:00</date>
                     <date type="starts">2012-01-01T10:00:00+00:00</date>
@@ -356,8 +503,8 @@ New York]]></address>
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/400x400nyd.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/400x400nyd.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400nyd.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400nyd.jpg</large>
                 </images>
             
             
@@ -406,7 +553,7 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-07T14:41:20+00:00</date>
+                    <date type="updated">2011-12-12T06:40:11+00:00</date>
                     <date type="publish">2011-09-22T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -441,11 +588,12 @@ New York]]></address>
  &bull; $250 + 10% booking fee per person<br />
  <em>* Customers must be 21+ to consume alcohol. Customers under 21 will be receive non-alcoholic beverages</em></p>
 <div class="im">
- <p><u><strong>VIP Table (4-6 Guests)</strong></u><br />
+ <p><u><strong>VIP Raised Table (4-6 Guests)</strong></u><br />
+ [$350 per person + NY State Sales tax]<br />
  All the benefits of general admission plus:<br />
  &bull; Open bar (9pm-1am)<br />
  &bull; Champagne Toast at Midnight<br />
- &bull; Private seating &amp; area available exclusively to VIPs<br />
+ &bull; Private seating &amp; raised area available exclusively to VIPs<br />
  &bull; Cocktail waitress at your service<br />
  &bull; VIP Express Admission - skip the lines!<br />
  &bull; Complimentary mixers, water &amp; energy drinks</p>
@@ -456,17 +604,21 @@ New York]]></address>
  (Prices do not include $50 per head mandatory gratuity)</div>
 <div class="im">
  <p><em>* Customers must be 21+ to consume alcohol. Customers under 21 will be receive non-alcoholic beverages</em></p>
- <p><u><strong>VIP Table (8-10 Guests)</strong></u><br />
+ <p><u><strong>VIP Deluxe Raised Table (4-10 Guests)</strong></u><br />
+ <strong>Get even closer to the stage with the deluxe raised vip table!</strong><br />
  All the benefits of general admission plus:<br />
  &bull; Open bar (9pm-1am)<br />
  &bull; Champagne Toast at Midnight<br />
- &bull; Private seating &amp; area available exclusively to VIPs<br />
+ &bull; Private seating &amp; raised area available exclusively to VIPs<br />
  &bull; Cocktail waitress at your service<br />
  &bull; VIP Express Admission - skip the lines!<br />
- &bull; Complimentary mixers, water &amp; energy drinks</p>
+ &bull; Complimentary mixers, water &amp; energy drinks<br />
+ <br />
+ <strong>Table of 4 </strong>: 1 bottle of premium vodka + 1 bottle of premium champagne<br />
+ <strong>Table of 6 </strong>: 2 bottles of premium vodka + 1 bottle of premium champagne<br />
+ <strong>Table of 8</strong>: 2 bottles of premium vodka + 2 bottles of premium champagne<br />
+ <strong>Table of 10</strong>: 3 bottles of premium vodka + 2 bottles of premium champagne</p>
 </div>
-<p><strong>Table of 8 </strong>($4000 + 10% booking fee): 2 bottles of premium vodka + 2 bottles of premium champagne<br />
- <strong>Table of 10 </strong>($5000 + 10% booking fee): 3 bottles of premium vodka + 2 bottles of premium champagne</p>
 <div class="im">
  <div class="im">
  (Prices do not include $50 per head mandatory gratuity)</div>
@@ -524,6 +676,29 @@ New York]]></address>
                     
                     
                     
+                    <price id="00034915" 
+                           min="1" 
+                           max="2" 
+                           priceFace="1524.25" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Raised VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <price id="00034918" 
+                           min="1" 
+                           max="2" 
+                           priceFace="3266.25" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 6: See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -539,8 +714,25 @@ New York]]></address>
                     
                     
                     
+                    <price id="00034916" 
+                           min="1" 
+                           max="2" 
+                           priceFace="2286.38" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Raised VIP Table for 6: See description for details - includes NY State Sales Tax]]></price>
                     
                     
+                    
+                    <price id="00034919" 
+                           min="1" 
+                           max="2" 
+                           priceFace="4355.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 8: See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -554,6 +746,15 @@ New York]]></address>
                            currency="3"><![CDATA[VIP - Open Bar Ticket - See description for details - includes NY State Sales Tax]]></price>
                     
                     
+                    
+                    <price id="00034917" 
+                           min="1" 
+                           max="2" 
+                           priceFace="2177.50" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -573,7 +774,7 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-07T22:02:08+00:00</date>
+                    <date type="updated">2011-12-11T18:46:21+00:00</date>
                     <date type="publish">2011-10-07T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -678,9 +879,9 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-07T22:05:13+00:00</date>
+                    <date type="updated">2011-12-11T18:46:21+00:00</date>
                     <date type="publish">2011-11-18T23:05:00+00:00</date>
-                    <date type="expires">2012-01-01T11:00:00+00:00</date>
+                    <date type="expires">2012-01-02T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
                     <date type="ends">2012-01-01T11:00:00+00:00</date>
                 </meta>
@@ -790,7 +991,7 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-01T21:07:02+00:00</date>
+                    <date type="updated">2011-12-11T18:46:21+00:00</date>
                     <date type="publish">2011-11-29T05:00:00+00:00</date>
                     <date type="expires">2011-12-31T23:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -889,140 +1090,6 @@ New York]]></address>
                            currencyChar="&amp;#36;" 
                            currencyCode="USD" 
                            currency="3"><![CDATA[VIP Dinner & Open Bar Package]]></price>
-                    
-                    
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00013686">
-            <title><![CDATA[ Space presents...... The Vegas Hotel NYe 2011  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/space-presents-the-vegas-hotel-nye-2011</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/space-presents-the-vegas-hotel-nye-2011</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-05T16:04:25+00:00</date>
-                    <date type="publish">2011-09-26T23:00:00+00:00</date>
-                    <date type="expires">2011-12-31T21:00:00+00:00</date>
-                    <date type="starts">2011-12-31T22:00:00+00:00</date>
-                    <date type="ends">2012-01-01T06:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>DJs for the night will include all your Space favourites....</p>
-<p>More info to follow shortly</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<h2>
- The Vegas Hotel &ndash; The Ultimate New Years Eve party.</h2>
-<p>Hosted by Space @ Pacha London</p>
-<p>Short of chartering a Lear jet and celebrating in Tokyo and New York as well, The Vegas Hotel offers the most up market clubbing experience in the capital. For a mere &pound;45 party goers can expect to enjoy their best NYE yet! This New Year&rsquo;s Eve we blast off at London&#39;s most exclusive, spectacular and beautiful venue Pacha with a stellar DJ line up and a clubbing experience that will become a legend... &quot;The Vegas Hotel&quot;.</p>
-<p>Let us transport you to the bright lights of Vegas, Nevada. A place where the rich and beautiful rub shoulders with the outrageous and the bizarre, and perhaps even Elvis will make an appearance! The Vegas Hotel has it all, Casinos, PA&rsquo;s and Show girls, and is set in a venue that puts Vegas to shame - with two rooms of music and set to be the party of the year.</p>
-<p>For Space virgins you can expect a glamorous crowd that love to get wild, get sociable and get seriously cheeky. You can expect the wild party atmosphere you can only experience with Space people - a slightly older more sophisticated crowd who love Music, who love one off events and love getting together in big groups of friends and making any venue their playground for one night. You can expect the finest DJ&#39;s, a show to take your breath away and the best PA&#39;s around.</p>
-<p>In its 13th year, Space has grown to become one of London&rsquo;s most talked about club events. It is a night for the discerning clubber who knows how to have a good night out, who gets dressed up to get down and has come to expect quality and a great party atmosphere from their night out.</p>
-<p>This will be the most dazzling and sensational NYE party you can hope for so head to Pacha this NYE with your group of friends for an unforgettable NYE experience.</p>]]></description>
-                
-                <venue name="pacha-london" title="Pacha London">
-                    <address><![CDATA[Terminus Place, Victoria, London]]></address>
-                    <postcode><![CDATA[SW1V 1JR]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/pacha-nye-400-1.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/pacha-nye-400-1.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00033934" 
-                           min="1" 
-                           max="10" 
-                           priceFace="45.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Standard)]]></price>
-                    
-                    
-                    
-                    <price id="00033933" 
-                           min="1" 
-                           max="10" 
-                           priceFace="35.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Early Bird)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014122">
-            <title><![CDATA[ Alesso @ Pacha NYC ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2011-12/31/alesso-pacha-nyc</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2011-12/31/alesso-pacha-nyc</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-07T23:40:19+00:00</date>
-                    <date type="publish">2011-11-15T05:00:00+00:00</date>
-                    <date type="expires">2011-12-31T01:00:00+00:00</date>
-                    <date type="starts">2011-12-31T03:00:00+00:00</date>
-                    <date type="ends">2011-12-31T11:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">19</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>Alesso</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p><strong>Friday December 30</strong><br /> Pacha NYC presents...<br /> <br /> <strong>Alesso</strong><br /> <br /> Doors 10pm<br /> Table Reservations 212.209.7500</p>]]></description>
-                
-                <venue name="pacha-nyc" title="Pacha NYC">
-                    <address><![CDATA[618 W.46th Street
-New York]]></address>
-                    <postcode><![CDATA[NY 10036]]></postcode>
-                    <country><![CDATA[US]]></country>
-                </venue>
-                
-                
-                <promoter name="pacha-nyc"><![CDATA[Pacha NYC]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/400x400pachanyc_123011.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/400x400pachanyc_123011.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034868" 
-                           min="1" 
-                           max="10" 
-                           priceFace="32.66" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[E-Ticket ($30 plus $2.66 NY State tax)]]></price>
-                    
-                    
                     
                     
                     

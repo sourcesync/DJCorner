@@ -9,6 +9,7 @@ DBNAME = "djcorner"
 #
 import sys
 from dateutil import parser
+import datetime
 
 from pymongo import Connection
 
@@ -75,10 +76,8 @@ def add_event( connection, name, vendorid ):
 def get_event( connection, oid ):
 
         events = _get_event_col( connection )
-
 	_evt = {"_id": oid }
 	event = events.find_one( _evt )
-
 	return event
 
 #
@@ -87,7 +86,6 @@ def get_event( connection, oid ):
 def get_event_details( connection, location, oid, verbose ):
 
 	event = get_event( connection, oid )
-
 	#print "INFO: event: get_event->", event
 
 	# fixup venue related fields...
@@ -119,6 +117,8 @@ def get_event_details( connection, location, oid, verbose ):
         	# convert to the format we want
         	cdt = dt.strftime("%a %m/%d")
 		event["eventdate"] = cdt
+	else:
+		print "WARNING: event: get_event_details:  event has no date->", event["name"]
 
 	# fix up description...
 	if (not verbose) and event.has_key("description"):
@@ -163,12 +163,33 @@ def get_events_details( connection, location, paging, city ):
 	events = get_events( connection, paging )
 	events_details = []
 
-	#print "EVENTS->", events
+	print "INFO: event: get_events_details:  There are %d events." % len(events)
+
 	for evt in events:
 
 		event_details = get_event_details( connection, location, evt["_id"], False )
-		
-		#print "EVDET->", event_details
+	
+		# check date...
+		if ( not event_details.has_key( "eventdate" ) ):
+			print "WARNING: event has no date->", evt["name"]
+			continue
+
+		dtstr = event_details["eventdate" ] 
+                dt = datetime.datetime.strptime(dtstr, "%a %m/%d")
+
+		# HACK: fixup year...
+		if dt.month == 12:
+			dtstr = dtstr + "/11"
+		else:
+			dtstr = dtstr + "/12"
+		# HACK...
+		print dtstr
+
+                dt = datetime.datetime.strptime(dtstr, "%a %m/%d/%y")
+		if (dt < datetime.datetime.now() ):
+			print "WARNING: Event has passed.", dtstr, dt, datetime.datetime.now()
+			continue
+	
 		if city and (city!=""):
 			ecity = event_details["city"]
 			#print "CITY->", evt["name"], city, ecity
@@ -209,6 +230,7 @@ def update_event( connection, oid, name, venueid, description, promotor, imgpath
 	if description!=None: fields["description"] = description
 	if promotor: fields["promotor"] = promotor
 	if imgpath: fields["imgpath"] = imgpath
+
 	if eventDate: fields["eventdate"] = eventDate
 	if startDate: fields["startdate"] = startDate
 	if endDate: fields["enddate"] = endDate
@@ -246,67 +268,12 @@ def delete_event( connection, oid ):
 #
 if __name__ == "__main__":
 
-	print "INFO: event: unit-test..."
-	DBNAME = "djcornertest"
-
 	# get connection...
 	conxn = _get_connection()
 
-	# clear the collection...
-	print "INFO: event: clearing the events collection..."
-	col = _get_event_col( conxn )
-	col.remove()
-	
 	# get all events...
-	events = get_events( conxn, None )
-	print "INFO: event: get_events: result->", events
-	if len(events)!=0:
-		print "ERROR: There should be no events."
-		sys.exit(1)
+	events = get_events_details( conxn, None, None, "New York City" )
+	print "INFO: event: get_events_details: result->", events
 
-	# add event...
-	[ status, origid ] = add_event( conxn, "original event name", "tttt" )
-	print "INFO: event: add_event: result->", origid
-	if status == False:
-		print "ERROR: Could not add event!"
-		sys.exit(1)
-
-	# update basic props...
-	status = update_event( conxn, origid, "new event name", None )	
-	print "INFO: event: update_event: result->", status
-	if status==False:
-		print "ERROR: Update failed!"
-		sys.exit(1)
-
-	# get all events...
-	events = get_events( conxn, None )
-	print "INFO: event: get_events: result->", events
-
-	# add with same vendor id and verify fail...
-	[ status, oid ] = add_event( conxn, "should fail event name", "tttt" )
-	print "INFO: event: add_event: same vendorid, result->", oid
-	if status != False:
-		print "ERROR: add_event: should have failed."
-		sys.exit(1)
-	
-	# get all events...
-	events = get_events( conxn, None )
-	print "INFO: event: get_events: result->", events
-
-	# remove it...
-	status = delete_event( conxn, origid )
-	print "INFO: event: delete_event: result->", status
-	if (status!=True):
-		print "ERROR: delete event failed!"
-		sys.exit(1)
-
-	# get all events...
-	events = get_events( conxn, None )
-	print "INFO: event: get_events: result->", events
-	if len(events)!=0:
-		print "ERROR: There should be no events...", events
-		sys.exit(1)
-
-	print "INFO: event: unit tests passed."
 	print "INFO: Done."
 	

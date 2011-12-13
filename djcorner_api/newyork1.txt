@@ -8,65 +8,179 @@
 
 
 
-<ticketlogic version="2.0" session="7075C0D91394B0A60951B34B36F41E70.COMP1" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+<ticketlogic version="2.0" session="76B8073D69CADADE0A407A076F2D5C15.COMP3" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
     <events title="EventsList">
         
         
-        <event id="00014117">
-            <title><![CDATA[ BEYOND BRIGHTON - THE NYD SPECTACULAR ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2012-01/01/beyond-brighton-the-nyd-spectacular</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2012-01/01/beyond-brighton-the-nyd-spectacular</url>
+        <event id="00014229">
+            <title><![CDATA[ Gasp Feat ItaloBoyz ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2012-01/21/gasp-feat-italoboyz</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2012-01/21/gasp-feat-italoboyz</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-05T16:19:49+00:00</date>
-                    <date type="publish">2011-11-15T00:00:00+00:00</date>
-                    <date type="expires">2012-01-01T02:30:00+00:00</date>
-                    <date type="starts">2012-01-01T03:30:00+00:00</date>
-                    <date type="ends">2012-01-02T12:00:00+00:00</date>
+                    <date type="updated">2011-12-09T02:36:41+00:00</date>
+                    <date type="publish">2011-12-09T00:00:00+00:00</date>
+                    <date type="expires">2012-01-21T17:00:00+00:00</date>
+                    <date type="starts">2012-01-21T21:00:00+00:00</date>
+                    <date type="ends">2012-01-22T03:00:00+00:00</date>
                 </meta>
             
             
                 <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>More info to follow:</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>London&rsquo;s biggest and best afterhours party returns to Brighton for the most spectacular seaside party to date, across both floors at Audio, Marine Parade.</p>
-<p>Celebrating NYD with three simultaneous events in Madrid, London and Brighton, expect the best music, crowd and production in town.</p>
-<p>Following two huge Brighton Pride events over the last two years, the Beyond crew will be back with more Beyond gogos, DJs, d&eacute;cor and production than ever before, transporting the London atmosphere direct to Brighton&rsquo;s seafront.</p>
-<p>With London&rsquo;s headline DJs alongside homegrown Brighton superstars, this party guarantees to get the city moving.</p>
-<p>More info coming soon.</p>
-<p><iframe allowfullscreen="" frameborder="0" height="267" src="http://www.youtube.com/embed/6bEnUhPi9UY" width="467"></iframe></p>]]></description>
+                <lineup contentType="text/html"><![CDATA[<p class="p1">
+ <strong>Basement</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/italoboyz">Italoboyz</a> [MoonHarbour//Trapez]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/johnnyfiore">Johnny Fiore</a> [Carnival// Codekontrol]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/gabrielamaru">Gabriel amaru</a> [Minimal Force//Codekontrol]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/jamma">Jamma</a> [Bread &amp; Butter]</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>Upstair </strong></p>
+<p class="p1">
+ <strong>Mr Venom [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/thomasjames">Thomas James</a> [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/chrisgee">Chris Gee</a> [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong>Franklin [Unwanted Family]</strong></p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p><strong>Codekontrol are back at the excellent venue of Xoyo, but this time with a complete take over of the entire club. </strong></p>
+<p class="p2">
+ <strong>Joining our superb, and ever ready Codekontrol residents will be yet another host of home grown and international DJs and producers who will be gracing us with their presence and of course their pounding beats and driving bass lines.</strong></p>
+<p class="p2">
+ <strong>As you can see we have a special guest in the Basement area in the shape of Jamma, and joining him will be another special guest(s) Italoboyz!!! ;). They will of course be playing along side our Codekontrol favourites of Johnny Fiore and Gabriel Amaru. </strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>With the take over the top floor of Xoyo as well means there is no escape. We promise, as always, to deliver to you yet another top night in the heart of the city.</strong></p>
+<p class="p2">
+ <strong>Basement</strong></p>
+<p class="p1">
+ <strong>Italoboyz [MoonHarbour//Trapez]</strong></p>
+<p class="p1">
+ <strong>Johnny Fiore [Carnival// Codekontrol]</strong></p>
+<p class="p1">
+ <strong>Gabriel amaru [Minimal Force//Codekontrol]</strong></p>
+<p class="p1">
+ <strong>Jamma [Bread &amp; Butter]</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>Upstair </strong></p>
+<p class="p1">
+ <strong>Mr Venom [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong>Thomas James [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong>Chris Gee [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong>Franklin [Unwanted Family]</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>&gt;&gt;&gt;&gt;&gt;&gt;Few More Infos About The Artists&lt;&lt;&lt;&lt;&lt;&lt;&lt;</strong></p>
+<p class="p1"></p>
+<p class="p1">
+ <strong>ITALOBOYZ</strong></p>
+<p class="p1">
+ <strong>Since arriving in London at the beginning of the new millennium, Italoboyz, aka Marco Donato and Federico Marton, have become an essential fixture of the capital&rsquo;s small but passionate house/techno/minimal scene. From their notorious back-to-back DJ sets at FESH (333, London), their reputation has grown to the point where they can now be found playing regularly across the planet. However, it&rsquo;s not just the energy and flair of their DJ sets that has captured the imagination, Italoboyz releases now on some of today&rsquo;s most influential minimal-house / techno labels like Mothership and Get Physical, after starting to work in 2005/2006 with label like Treibstoff, Einmaleins Musik, Gumption and Safari Electronique. &ldquo;When you realize that without moving there won&rsquo;t be any change, you move&hellip;&rdquo; explains Marco, so that&rsquo;s exactly what they did, swapping their native Italy for London (Marco in 2001 and Fede in 2002), urged on by separate desires to go deeper and get more involved in electronic music. It was this fusion of minds, with complementary ways of both absorbing and communicating electronic music that inspired them to team up and form Italoboyz in 2002. Since then they haven&rsquo;t stopped moving forward, obsessively exploring the hybrid sounds of house and techno through their love of minimalism, acid-house and hi-tech funk. Although their sound has always been characterized by organic elements along with large doses of funk and energy, the distinctive flavor of their productions and DJ sets is down to a willingness to embrace and explore the various genres and sub-genres that develop out of this constantly evolving music. One of the reasons Italoboyz productions are so well received is the fact that their musical expression is a fusion of sounds, themes and ideas resulting from over 15 years of music research and DJing experience. Their aim is to deliver the most modern, cutting edge sound possible but it should still resonate through time, both past and future, in order to make the immediate experience all the more seductive. When they were throwing their own parties in 2003/2004 they built up quite a following, often running all day long from Sunday afternoon till early Monday morning. It&rsquo;s an experience that has given them valuable knowledge and insight</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>JAMMA</strong></p>
+<p class="p1">
+ <strong>From day one, Jamma (dj &amp; promoter) was surrounded by music whether it be his Fisher-price Tin Music Box influence at the age of 5&hellip;or in his later years with the drum &amp; bass sound in the mid to later nineties. A love for music in all its forms and diversity, music has always been an integral part of his life. Jamma discovered the world of techno through several parties around London. Having spent the first 6 years with Hertzquake Crew rinsing the drum &amp; bass culture that Italy and Milan had to offer, managing several parties with main guests such as Hype, Dillinja, Pendulum to name few, he connected with the techno sound. He moved to London and created Maximize, a weekly techno-minimal gig. Later hooked up with Julius which in turn led to the crew of Bread&amp;Butter. </strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>GABRIEL AMARU</strong></p>
+<p class="p1">
+ <strong>&ldquo;It&rsquo;s all about the music and it&rsquo;s always been that way...&rdquo; he says as laidback and as playful as he&rsquo;s always been. Born out of a world of contradictions, Gabriel amaru has always found a way to be musical. </strong></p>
+<p class="p1">
+ <strong>Starting from hard house and then sinking into techno, and later into house, Gabriel amaru&rsquo;s sound today is a funky breed of techno and house music, always with a strong bass line.</strong></p>
+<p class="p1">
+ <strong>&ldquo;I can say I&#39;m not gonna get stuck here and I&#39;m already playing with more experimental, sometimes even strange sounds in techno. And again I won&rsquo;t stop there, I don&#39;t feel think I should get stuck in a certain genre, I feel I&rsquo;ll always want to explore and refresh.&rdquo;</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>JOHNNY FIORE</strong></p>
+<p class="p1">
+ <strong>Johnny Fiore, born in Avellino, Italy in &rsquo;84, started playing bass at the age of 13 in local metal bands. His passion for music took him to Turin, North Italy, at the age of 18, known as the cultural centre for the arts; &lsquo;the Italian Detroit&rsquo;.</strong></p>
+<p class="p1">
+ <strong>Turin is where his mind was opened to all different genres and where his DJ career began playing Nu Jazz and Broken Beats, which lead to a love of techno as a clubber and the birth of DJ JP Della Camera.</strong></p>
+<p class="p1">
+ <strong>2010 saw the need for change and London became the place to be. London inspired JP Della Camera to evolve his sound (and name) and so was born house music DJ, Johnny Fiore.</strong></p>
+<p class="p1">
+ <strong>Johnny&rsquo;s sound draws inspiration from his many musical interests including soul, funky, electro beats, which shows in his set, full of new, deep and old school house and techno. </strong></p>
+<p class="p1">
+ <strong>Currently a regular at the Egg, Johnny Fiore is now also Label Manager of Mind Ability Records&rsquo;.</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>THOMAS JAMES</strong></p>
+<p class="p1">
+ <strong>Thomas James&rsquo; musical journey since an early age has taken him through punk, metal, hip-hop, breakbeats, funk, soul and electronica. Analogue cassette tapes, fanzines and the whole DIY aspect of music scenes has always been a strong interest to him. He then started to become inspired by more contemporary electronic styles of music. </strong></p>
+<p class="p1">
+ <strong>He began to buy more vinyl and decided to start DJing from his growing interest in house and techno. Artists and DJ&#39;s such as Steve Bug, Ricardo Villalobos, Andrew Weatherall and Craig Richards all added to his inspiration. Encouragement from friends gave him the drive to quickly gain his mixing skills and form his own style. A vinyl purist, Thomas James&#39; sets currently weave between disco, deep house and techno.</strong></p>
+<p class="p1">
+ <strong>He has played various venues and parties around the southeast as well as co-promoting and designing the &#39;unwanted&#39; brand. Already the &lsquo;unwanted&rsquo; parties have gained a strong following where Thomas James has helped book and play alongside the likes of A.Skillz, Casper C, Mr Cosmo, Tayo, Lone and Jazz-T. He now wants to take the &lsquo;unwanted&rsquo; brand, his DJing and promotion further by introducing it to other cities in the UK and beyond.</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>CHRIS GEE</strong></p>
+<p class="p1">
+ <strong>Dig into Chris Gee&#39;s record box and you will find a collection of Hip Hop, broken dubstep, jazzed out garage and funk fused beats. Being able to drop big rhythm is something he loves. Deep House and Nu-disco is the sound Chris is bringing to the floor much more these days. Deep punchy warm kicks, nothing less he would say. </strong></p>
+<p class="p1">
+ <strong>He runs a night called &#39;unwanted&#39; in Guildford along with a tight family of DJs Thomas James/ +MORE/ Venom/ A.M.T/ Gember.</strong></p>
+<p class="p1">
+ <strong>In his first year of running unwanted he has put on acts such as A.Skillz, Casper C, Mr Cosmo, Tayo, Lone, Jazz-T and Carlotek. 2011 brings a new and bigger venue along with more exciting artists and plans of expansion to neighboring cites. </strong></p>
+<p class="p1">
+ <strong>For the last two years throughout the summer he has been running an all-day-into-the-night Roots &amp; Culture jam, which from this has made him more friends with in reggae and dub. Playing alongside the likes of The Roots brothers, Dub Pistols, Earl Gateshead (Trojan), Subsource, Reggae Roast, Instruments of Jah and Count Skylarkin at One Love festival, Reggae Rooms, Guildfest and The Boileroom.</strong></p>
+<p class="p1">
+ <strong>He loves nothing more then to be playing wax 180gm heavy!</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>CONCESSIONS: &pound;10 Please Send Names To <a href="mailto:glist@codekontrolcrew.org?subject=Gasp%20Feat%20ItaloBoyz%20Glist">glist@codekontrolcrew.org</a></strong></p>
+<p class="p1">
+ <strong>NUS: &pound;7 B4 12 &pound;10 AFTER</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>:::::::::::::::::: Keep In Touch With Us :::::::::::</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <a href="https://forms.sign-up.to/signup.php?fid=631&amp;pid=17490"><strong>Join Our Mailing List</strong></a></p>
+<p class="p1">
+ <strong>or Text &quot;Party&quot; to 61211</strong></p>
+<p class="p2">
+ <strong><a href="https://www.facebook.com/events/272229802819018/">FB Event Page</a></strong></p>]]></description>
                 
-                <venue name="audio" title="Audio">
-                    <address><![CDATA[10 Marine Parade
-Brighton]]></address>
-                    <postcode><![CDATA[BN2 1TL]]></postcode>
+                <venue name="xoyo" title="XOYO">
+                    <address><![CDATA[3237 Cowper Street]]></address>
+                    <postcode><![CDATA[EC2A 4AP]]></postcode>
                     <country><![CDATA[GB]]></country>
                 </venue>
                 
                 
-                <promoter name="orange"><![CDATA[Orange]]></promoter>
+                <promoter name="codekontrol-crew"><![CDATA[Codekontrol Crew]]></promoter>
                 
             
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/b_half400x400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/b_half400x400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/1side--2-cbt.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/1side--2-cbt.jpg</large>
                 </images>
             
             
                 <prices>
                     
                     
-                    <price id="00034701" 
+                    <price id="00034912" 
                            min="1" 
                            max="10" 
                            priceFace="8.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Early Advance)]]></price>
+                           currency="1"><![CDATA[E-Ticket Standard Advance Ticket]]></price>
                     
                     
                 </prices>
@@ -82,7 +196,7 @@ Brighton]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-07T14:41:20+00:00</date>
+                    <date type="updated">2011-12-12T06:40:11+00:00</date>
                     <date type="publish">2011-09-22T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -117,11 +231,12 @@ Brighton]]></address>
  &bull; $250 + 10% booking fee per person<br />
  <em>* Customers must be 21+ to consume alcohol. Customers under 21 will be receive non-alcoholic beverages</em></p>
 <div class="im">
- <p><u><strong>VIP Table (4-6 Guests)</strong></u><br />
+ <p><u><strong>VIP Raised Table (4-6 Guests)</strong></u><br />
+ [$350 per person + NY State Sales tax]<br />
  All the benefits of general admission plus:<br />
  &bull; Open bar (9pm-1am)<br />
  &bull; Champagne Toast at Midnight<br />
- &bull; Private seating &amp; area available exclusively to VIPs<br />
+ &bull; Private seating &amp; raised area available exclusively to VIPs<br />
  &bull; Cocktail waitress at your service<br />
  &bull; VIP Express Admission - skip the lines!<br />
  &bull; Complimentary mixers, water &amp; energy drinks</p>
@@ -132,17 +247,21 @@ Brighton]]></address>
  (Prices do not include $50 per head mandatory gratuity)</div>
 <div class="im">
  <p><em>* Customers must be 21+ to consume alcohol. Customers under 21 will be receive non-alcoholic beverages</em></p>
- <p><u><strong>VIP Table (8-10 Guests)</strong></u><br />
+ <p><u><strong>VIP Deluxe Raised Table (4-10 Guests)</strong></u><br />
+ <strong>Get even closer to the stage with the deluxe raised vip table!</strong><br />
  All the benefits of general admission plus:<br />
  &bull; Open bar (9pm-1am)<br />
  &bull; Champagne Toast at Midnight<br />
- &bull; Private seating &amp; area available exclusively to VIPs<br />
+ &bull; Private seating &amp; raised area available exclusively to VIPs<br />
  &bull; Cocktail waitress at your service<br />
  &bull; VIP Express Admission - skip the lines!<br />
- &bull; Complimentary mixers, water &amp; energy drinks</p>
+ &bull; Complimentary mixers, water &amp; energy drinks<br />
+ <br />
+ <strong>Table of 4 </strong>: 1 bottle of premium vodka + 1 bottle of premium champagne<br />
+ <strong>Table of 6 </strong>: 2 bottles of premium vodka + 1 bottle of premium champagne<br />
+ <strong>Table of 8</strong>: 2 bottles of premium vodka + 2 bottles of premium champagne<br />
+ <strong>Table of 10</strong>: 3 bottles of premium vodka + 2 bottles of premium champagne</p>
 </div>
-<p><strong>Table of 8 </strong>($4000 + 10% booking fee): 2 bottles of premium vodka + 2 bottles of premium champagne<br />
- <strong>Table of 10 </strong>($5000 + 10% booking fee): 3 bottles of premium vodka + 2 bottles of premium champagne</p>
 <div class="im">
  <div class="im">
  (Prices do not include $50 per head mandatory gratuity)</div>
@@ -200,6 +319,29 @@ New York]]></address>
                     
                     
                     
+                    <price id="00034915" 
+                           min="1" 
+                           max="2" 
+                           priceFace="1524.25" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Raised VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <price id="00034918" 
+                           min="1" 
+                           max="2" 
+                           priceFace="3266.25" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 6: See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -215,8 +357,25 @@ New York]]></address>
                     
                     
                     
+                    <price id="00034916" 
+                           min="1" 
+                           max="2" 
+                           priceFace="2286.38" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Raised VIP Table for 6: See description for details - includes NY State Sales Tax]]></price>
                     
                     
+                    
+                    <price id="00034919" 
+                           min="1" 
+                           max="2" 
+                           priceFace="4355.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 8: See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -230,6 +389,15 @@ New York]]></address>
                            currency="3"><![CDATA[VIP - Open Bar Ticket - See description for details - includes NY State Sales Tax]]></price>
                     
                     
+                    
+                    <price id="00034917" 
+                           min="1" 
+                           max="2" 
+                           priceFace="2177.50" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -884,7 +1052,7 @@ London]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-08T17:57:59+00:00</date>
+                    <date type="updated">2011-12-13T15:25:17+00:00</date>
                     <date type="publish">2011-09-22T23:00:00+00:00</date>
                     <date type="expires">2011-12-31T18:00:00+00:00</date>
                     <date type="starts">2011-12-31T20:00:00+00:00</date>
@@ -1101,191 +1269,80 @@ London]]></address>
         </event>
         
         
-        <event id="00014217">
-            <title><![CDATA[ Bodymove presents NYe Rio Revellion 2011 - Members ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/bodymove-presents-nye-rio-revellion-2011-members</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/bodymove-presents-nye-rio-revellion-2011-members</url>
+        <event id="00014240">
+            <title><![CDATA[ Lost/Cosmic NYE Party ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/lost-cosmic-nye-party</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/lost-cosmic-nye-party</url>
             
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-07T17:28:56+00:00</date>
-                    <date type="publish">2011-12-07T15:49:00+00:00</date>
+                    <date type="updated">2011-12-13T18:43:47+00:00</date>
+                    <date type="publish">2011-12-13T18:02:00+00:00</date>
                     <date type="expires">2011-12-31T19:00:00+00:00</date>
                     <date type="starts">2011-12-31T20:00:00+00:00</date>
-                    <date type="ends">2012-01-01T14:00:00+00:00</date>
+                    <date type="ends">2012-01-01T12:00:00+00:00</date>
                 </meta>
             
             
                 <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<div>
- <div>
- <strong>Main Room:</strong></div>
- <ul>
- <li>
- Karizma,</li>
- <li>
- Audiowhores and</li>
- </ul>
- <div>
- <strong>Room 2:</strong></div>
- <ul>
- <li>
- Anderson Noize</li>
- <li>
- Tomasuchy aka Tomas Tesla</li>
- <li>
- Darren Gregory</li>
- <li>
- Justin Time</li>
- <li>
- Digital Mike</li>
- <li>
- Boletz</li>
- <li>
- Zero C</li>
- <li>
- Dani D</li>
- </ul>
- <br />
- <div>
- <strong>Brazilian Big Top in the Garden hosted by Club Popozuda and</strong></div>
- <div>
- <strong>featuring after midnight Live:</strong></div>
- <ul>
- <li>
- The Bumps (Popozuda)</li>
- <li>
- DJ Carioca (Rio de Janeiro)</li>
- <li>
- Rhythms Of The City</li>
- <li>
- Minibloco</li>
- <li>
- plus Percussionist, and Latin Fusion Dancers</li>
- </ul>
- <p><strong>Deep Down:</strong></p>
- <ul>
- <li>
- Rodrgo Sampa</li>
- <li>
- M.A.N.K</li>
- <li>
- JD Sasha</li>
- <li>
- Andre Di Napoli</li>
- <li>
- Jay Tempest</li>
- <li>
- Jonathan Shettart</li>
- <li>
- Jon Stevens</li>
- <li>
- Alysson Costa</li>
- <li>
- D&#39;Vinci</li>
- </ul>
- <div>
- <strong>Apothecary:</strong></div>
- <ul>
- <li>
- Candy Bass Records</li>
- <li>
- Nightlife London</li>
- </ul>
-</div>]]></lineup>
-                <description contentType="text/html"><![CDATA[<div>
- <strong>BODYMOVE presents the WHITE &amp; GOLD NYE BALL</strong></div>
-<div>
- </div>
-<div>
- featuring a BRAZILIAN BIG TOP with CLUB POPOZUDA and Live Bands,</div>
-<div>
- Rhythms Of The City and Minibloco</div>
-<div>
- </div>
-<div>
- + SPECIAL GUESTS: KARIZMA, ANDERSON NOIZE, AUDIOWHORES</div>
-<div>
- </div>
-<div>
- Saturday December 31st</div>
-<div>
- </div>
-<div>
- Pulling out all the stops production and decor wise, Egg will be transformed into a scene from Rio&rsquo;s exuberant NYE, bathed in white and gold, as Bodymove creates its second magical New Year&rsquo;s Eve party in London.</div>
-<div>
- </div>
-<div>
- Using Rio as inspiration, Bodymove set up a Brazilian Big Top in Egg&rsquo;s heated Garden, hosted by Club Popozuda joined just after midnight by Live bands, Rhythms Of The City and Minibloco plus a troupe of percussionists and latin fusion dancers, central to the whole NYE party.</div>
-<div>
- </div>
-<div>
- </div>
-<p><iframe allowfullscreen="" frameborder="0" height="246" src="http://www.youtube.com/embed/3VGseaNkSmo" width="425"></iframe></p>
-<div>
- </div>
-<div>
- Rio de Janeiro is known the world over as one of the most breathtaking and thrilling places you could possibly imagine celebrating a New Year&#39;s Eve. Everyone dresses to impress in fabulous whites, and the whole city crackles in the infectious electric carnival atmosphere.</div>
-<div>
- </div>
-<div>
- The Big Top fires up to Club Popozuda&rsquo;s bold bootyshaking blend of the finest, freshest music from around the world courtesy of resident DJ The Bumps and special guest, RdJ&rsquo;s DJ Carioca, includes hip hop, reggaeton and dancehall. With live samba, percussionists and dancers, feel the heat as 2012 starts in jumping Brazilian style. Global bootyshaking beats.</div>
-<div>
- </div>
-<div>
- Exclusive mixtapes from Club Popozuda:</div>
-<div>
- </div>
-<div>
- <object height="81" width="100%"><param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" /><param name="allowscriptaccess" value="always" /><embed allowscriptaccess="always" height="81" src="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" type="application/x-shockwave-flash" width="100%"></embed></object><a href="http://soundcloud.com/clubpopozuda/mixtape-20-flore">Club Popozuda Mixtape #20 (Flore)</a> by <a href="http://soundcloud.com/clubpopozuda">Club Popozuda</a>
- <div>
- </div>
- <div>
- </div>
- <div>
- As well as the Rio-themed Brazilian Big Top, Bodymove lines up some leading musical talents, leaders in their own different fields, including Karizma, Anderson Noize, Audiowhores and resident decksmith, Femi B.</div>
- <div>
- </div>
- <div>
- Chris &ldquo;Karizma&rdquo; Clayton is self diagnosed as &ldquo;a.d.d. with music,&rdquo; and has always aspired to be a producer who &ldquo;keeps changing and moving on to different things for the hallenge.&rdquo; He released his debut full-length, &lsquo;A Mind of Its Own&rsquo;, for the R2 label, as well as mix CDs for notable house labels. NRK and Soul Heaven. Karizma Remixes have appeared on a brilliant spectrum of labels, including Defected, Yoruba, Sonar Kollektiv, Compost, and Raw Fusion. Karizma is joined by Defected&rsquo;s hot UK duo, Audiowhores, also favourites at Bodymove events and known for their explosive house quaking sounds and ability to</div>
- <div>
- raise the roof. Bodymove resident and Strictly Rhythm producer, Femi B rounds off the Bodymove All Stars in the Main Room.</div>
- <div>
- </div>
- <div>
- Heading up Room 2 is Anderson Noize, who has pioneered the electronic music scence in Brazil, inspired by the explosion of Acid House on the club scene. From running clubs, dj-ing to making amazing CD mixes, Anderson continues to break all the rules and inspire with his emotive electronic sounds that continually top the Beatport charts and dancefloors around the world. Lining up on the decks alongside Anderson Noize is Tomasuchy aka Tomas Tesla, Darren Gregory &amp; Justin Time, Digital Mike, Boletz, Zero C and Dani C. In Egg&rsquo; club within a club The Apothecary, Candy Bass Records and Nightlife London takeover with their own brand of end of year sounds and surprises as Egg and Bodymove celebrate another gripping year of forward thinking clubbing and dance music.</div>
-</div>]]></description>
+                <lineup contentType="text/html"><![CDATA[<p><strong>JUAN ATKINS (exclusive uk date)</strong></p>
+<p><strong>STEVE BICKNELL</strong></p>
+<p><strong>CHRIS CARRIER</strong></p>
+<p><strong>TOMOKI TAMURA</strong></p>
+<p><strong>TORU </strong></p>
+<p><strong>more t.b.c.</strong></p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Headlining is one of the true originators of techno music, a man as Detroit as they come and one of the Belleville Three: Mr Juan Atkins. Releasing music under his own name as well behind the aliases Cybotron, Model 500 and Infiniti, Juan is responsible for producing many of the timeless Detroit classics that we still love today and that have inspired millions. Djing for 30 years he has developed a knowledge of the that few can match. A LOST veteran, we look forward to have Juan throwing it down for us!</p>
+<br />
+<p>Chris Carrier from France. Chris played for Holic as part of their Robsoul Records showcase and more than impressed. With over 100 production credits under his belt, he&rsquo;s been an underground icon for the past decade. Never chasing the limelight, almost darting around it in all manner of guises and musical styles, Carrier is nevertheless revered today as one of the most prolific and gifted producers on the dance scene today. With 2011 being one of his busiest years for DJ gigs it seems we aren&rsquo;t the only one&rsquo;s he has been impressing.</p>
+<br />
+<p>Steve Bicknell is a veteran DJ and producer of the early UK dance music scene and a musical visionary, using his LOST events as a platform to showcase groundbreaking music. Producing under the moniker LOST for Perfecto and Mute Steve went on to establish Cosmic Records and subsidiaries Clubtracks, Lost Recording and ID, giving voice to productions from producers such as Luke Slater, DJ Rush, Tyree Cooper, DJ Funk,Jay Denham and many more. Lost recording being indicative of the seminal LOST sound. Such was Steve&rsquo;s vision that Lost was first to book latterday luminaries such as Jeff Mills, Richie Hawtin, Dan Bell and Robert Hood. As a truly international DJ, Steve has traveled the world with his unique representation of Acid House, Chicago House, Techno and for more experimental spacebase sets a firm grasp of everything from reggae, to italo, to broken beat.</p>
+<br />
+<p>Tomoki Tamura hails from Osaka, Japan, where he built his steadfast reputation as one of the country&rsquo;s most promising electronic DJs. Resident in London since 2004 he has continued to rock the dance floor throughout the capital, hosting Holic in London alongside a residency at Womb, Japan. Tomoki&#39;s successful mix albums &#39;The Groove Cafe Series&#39; led to his own productions released on Satoshi Tomiie&#39;s Saw Recordings, Germany&#39;s Plastic City and New York&#39;s Nite Grooves amongst others. A true, underground music ambassador.</p>
+<br />
+<p>This marathon warehouse event brought together by LOST and HOLIC starts at 8 and finishes mid-day 1st January, more t.b.c. check the website for updates.</p>
+<p>www.lost.co.uk</p>]]></description>
                 
-                <venue name="egg" title="Egg">
-                    <address><![CDATA[200 York Way, Kings Cross, London]]></address>
-                    <postcode><![CDATA[N7 9AP]]></postcode>
+                <venue name="secret-east-london-location" title="Secret East London Location">
+                    <address><![CDATA[Secret]]></address>
+                    <postcode><![CDATA[E1]]></postcode>
                     <country><![CDATA[GB]]></country>
                 </venue>
                 
                 
-                <promoter name="bodymove"><![CDATA[Bodymove]]></promoter>
+                <promoter name="lost"><![CDATA[Lost]]></promoter>
                 
             
             
                 <images>
                     <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/bodymove-nye-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/bodymove-nye-400.jpg</large>
+                    <medium>https://images.clubtickets.com/image/100sq/c/lostnye-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/lostnye-400.jpg</large>
                 </images>
             
             
                 <prices>
                     
                     
-                    <price id="00034890" 
+                    <price id="00034937" 
                            min="1" 
                            max="10" 
-                           priceFace="25.00" 
+                           priceFace="20.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Members)]]></price>
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
+                    
+                    
+                    
+                    <price id="00034936" 
+                           min="1" 
+                           max="10" 
+                           priceFace="15.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Early Bird)]]></price>
                     
                     
                 </prices>
