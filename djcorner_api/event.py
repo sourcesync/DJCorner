@@ -180,6 +180,8 @@ def get_events_details( connection, location, paging, city ):
 		# HACK: fixup year...
 		if dt.month == 12:
 			dtstr = dtstr + "/11"
+		elif dt.month == 11:
+			dtstr = dtstr + "/11"
 		else:
 			dtstr = dtstr + "/12"
 		# HACK...
