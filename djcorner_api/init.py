@@ -54,6 +54,8 @@ import venue
 import user
 import event
 import clubtickets
+import presets
+
 from dateutil import parser
 from datetime import datetime
 from pymongo.objectid import ObjectId 
@@ -85,131 +87,29 @@ for init_user in INIT_USERS:
 	lng = init_user[5]
 	[ status , uiod ] = user.add_user( None, em )
 	if not status:
-		print "WARNING: user already exists..."
+		print "WARNING: User already exists..."
 
 	print "INFO: updating user..."
 	status = user.update_user( None, em, fn, mn, ln, lat, lng )
 	if not status:
-		print "ERROR: could not update user"
+		print "ERROR: Could not update user"
 
 	print "INFO: User is ok->", em
-#
-# Make sure venues have lat long...
-#
-venues = venue.get_venues( None, None )
-for v in venues:
-       
-	# get venue id...         
-	void = v["_id"]
-	# get venue name...
-	vname = v["name"]
-
-	print "INFO: venue object-", v
-
-        # see if venue has loc info in dbase...
-        if not v.has_key("latitude"):
-                print "WARNING: Venue in dbase is missing location information", v
-
-                # get loc info...
-                if not VENUE_LOCATIONS.has_key(vname):
-                        print "ERROR: No location information for venue."
-                        sys.exit(1)
-                loc = VENUE_LOCATIONS[vname][0]
-
-                # update in dbase...
-                print "INFO: updating venue loc->", vname, loc
-		status = venue.update_venue( None, void, None, loc[0], loc[1], None, None )
-                if not status:
-                        print "ERROR: Cannot update location for venue"
-                        sys.exit(1)
-               
-	# see if venue has display name info in dbase... 
-        if not v.has_key("ds"):
-                # get ds info...
-                if not VENUE_LOCATIONS.has_key(vname):
-                        print "ERROR: No ds information for venue."
-                        sys.exit(1)
-                ds = VENUE_LOCATIONS[vname][1]
-
-                print "WARNING: Venue in dbase is missing display name information", v
-		status = venue.update_venue( None, void, None, None, None, ds, None )
-                if not status:
-                        print "ERROR: Cannot update display name for venue"
-                        sys.exit(1)
-
-	# see if venue has city..
-	update_city = False
-	if not v.has_key("city"):
-		update_city = True
-	elif v["city"].strip() == "":
-		update_city = True
-	if (update_city):
-		city = VENUE_LOCATIONS[vname][2]
-                print "WARNING: Venue in dbase is missing city information", v, city
-                status = venue.update_venue( None, void, None, None, None, None, city )
-                if not status:
-                        print "ERROR: Cannot update city for venue"
-                        sys.exit(1)
-
-	print "INFO: Venue is ok->", v["name"]
 
 #
-# Make sure events have proper date format...
+# Validate/fixup venues...
 #
-events_info = event.get_events_details( None, None, None, None )
+if ( not presets.fixup_venues( ) ):
+	print "ERROR: Cannot validate/fixup venues..."
+	sys.exit(1)
 
-#print events
-#sys.exit(1)
 
-events = events_info[0]
-print len(events)
+#
+# Validate/fixup events...
+#
+if ( not presets.fixup_events( ) ):
+	print "ERROR: Cannot validate/fixup events..."
+	sys.exit(1)
 
-for evt in events:
-	print "INFO: evt type->", type(evt), evt.keys()
+sys.exit(0)
 
-	# check start date...	
-	if not evt.has_key("startdate"):
-		evt["startdate"] = "12/31/2011"
-	print "INFO: start event date->", evt["startdate"]
-	stdt = evt["startdate"]
-	dt = parser.parse( stdt )
-	sdstr = None
-	try:
-		dt = datetime.strptime( stdt, "%Y-%m-%dT%H:%M:%S+00:00" )
-	except:
-		print "INVALID START DATE FORMAT"
-		sdstr = dt.strftime( "%Y-%m-%dT%H:%M:%S+00:00" )
-			
-
-	# check end date...	
-	if not evt.has_key("enddate"):
-		evt["enddate"] = "1/1/2012"
-	print "INFO: end event date->", evt["enddate"]
-	etdt = evt["enddate"]
-	dt = parser.parse( stdt )
-	edstr = None
-	try:
-		dt = datetime.strptime( etdt, "%Y-%m-%dT%H:%M:%S+00:00" )
-	except:
-		print "INVALID END DATE FORMAT"
-		edstr = dt.strftime( "%Y-%m-%dT%H:%M:%S+00:00" )
-
-	# check city...
-	update_city = True
-		
-	if (update_city):
-                venueid = evt["venueid"]
-		oid = ObjectId(venueid)
-                vn = venue.get_venue( None, oid )
-                city = vn["city"]
-		print
-		print
-		eoid = ObjectId( evt["_id"] )
-		print "WARNING: Event in dbase is getting city information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
-		status = event.update_event( None, eoid, None, None, None, None, None, None, sdstr, edstr, None, None, city)
-		if not status:
-			print "ERROR: Cannot update city for venue"
-			sys.exit(1)
-		# check it...
-		revt = event.get_event_details( None, None, eoid,  None )
-		print "REPEATING->", revt

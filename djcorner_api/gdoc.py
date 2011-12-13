@@ -22,6 +22,7 @@ import xml.dom.minidom
 
 import event
 import venue
+import presets
 
 #
 # Func to download urls from google doc names...
@@ -147,6 +148,14 @@ def sync_to_db( docs ):
                 	if status == False:
                         	print "WARNING: Add venue returned false - probably already have this venue..."
 
+			# Get the event...
+			ve = venue.get_venue( None, void )
+
+			# Do generic fixup...
+			if ( not presets.fixup_venue( ve ) ):
+                        	print "ERROR: Cannot fixup venue"
+                        	return False
+
                 	# Update event attributes, link venue to event...
                 	status = event.update_event( None, eoid, None, void, edescription, \
 				None, imgpath, eventdate, startdate, enddate, buyurl, performers, None )
@@ -157,6 +166,11 @@ def sync_to_db( docs ):
                 	# Make sure it saved...
                 	evt = event.get_event_details( None, None, eoid, True)
                 	#print "INFO: event details from db->", evt
+
+	                # Do generic event fixup...
+			if ( not presets.fixup_event( evt ) ):
+                        	print "ERROR: cannot fixup event..."
+                        	return False
 
 	return True	
 

@@ -34,12 +34,15 @@ def _get_venue_col( connection ):
 	return venues
 
 #
-# clear venues...
+# func to clear all venues...
 #
 def clear_all( connection ):
 
-	print "ERROR: not impl"
-	sys.exit(1)        
+        venues = _get_venue_col( connection )
+        venues.remove()
+
+        return True
+
 
 # 
 # func to add venue...

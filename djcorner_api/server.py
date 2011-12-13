@@ -19,6 +19,7 @@ import json
 import socket
 
 import event
+import device
 
 class FormPage(resource.Resource):
     def render_GET(self, request):
@@ -63,6 +64,15 @@ class API(jsonrpc.JSONRPC):
 		print "INFO: api: get_events->", location, eoid
 		events = event.get_event_details( None, location, paging, True )
 		dct = { "results":event, "status":1 }
+		return dct
+
+	def jsonrpc_register_device(self,deviceid):
+		print "INFO:api: register_device->", deviceid
+		[ status, oid ] = device.add_device( None, deviceid )
+		if status:
+			dct = { 'status':1 }
+		else:
+			dct = { 'status':0 }
 		return dct
 
 #a = api.API()

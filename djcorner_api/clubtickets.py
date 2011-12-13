@@ -22,6 +22,7 @@ THIS_COUNT = 0
 import sys
 import event
 import venue
+import presets
 
 import xml.dom.minidom
 import urllib2
@@ -175,6 +176,15 @@ def pop_from_str(str):
 		[ status, void ] = venue.add_venue( None, vname, "clubtickets-"+vname )
 		if status == False:
 			print "WARNING: Add venue returned false - probably already have this venue..."
+		print "INFO: ", void, type(void)
+
+		# Get the event...
+		ve = venue.get_venue( None, void )
+
+		# Do generic fixup...
+		if ( not presets.fixup_venue( ve ) ):
+			print "ERROR: Cannot fixup venue"
+			return False
 
 		# Get the buy url...
 		buyurl = EVENT_BUY_URL
@@ -184,12 +194,18 @@ def pop_from_str(str):
 			performers, None )
 		if not status:
 			print "ERROR: could not update event"
-			sys.exit(1)
+			return False
 
 		# Make sure it saved...
 		evt = event.get_event_details( None, None, eoid, True)
 		print "INFO: event details from db->", evt
 
+		# Do generic event fixup...
+		if ( not presets.fixup_event( evt ) ):
+                        print "ERROR: cannot fixup event..."
+                        return False
+
+	return True	
 
 def test_init():
 
@@ -197,16 +213,23 @@ def test_init():
         f = open('../clubtickets/search/resultsPacha.txt','r')
         thepage = f.read()
         f.close()
-        pop_from_str(thepage)
+       
+	# Populate dbase... 
+	if not pop_from_str(thepage):
+		print "ERROR: Problem populating from page"
+		return False
 
         # Open the sample web service call...
         f = open('../clubtickets/search/resultsNewYorkCity.txt','r')
         thepage = f.read()
         f.close()
-        pop_from_str(thepage)
 
-        print "INFO: Done."
+	# Populate dbase...
+        if not pop_from_str(thepage):
+		print "ERROR: Problem populating from page"
+		return False
 
+	return True
 
 if __name__ == "__main__":
 
@@ -242,6 +265,8 @@ if __name__ == "__main__":
 		f = open( file, 'r')
         	thepage = f.read()
         	f.close()
-        	pop_from_str(thepage)
+        	if not pop_from_str(thepage):
+			print "ERROR: Problem populating page..."
+			sys.exit(1)
 
 	print "INFO: Done."
