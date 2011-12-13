@@ -67,7 +67,7 @@ class API(jsonrpc.JSONRPC):
 		return dct
 
 	def jsonrpc_register_device(self,deviceid):
-		print "INFO:api: register_device->", deviceid
+		print "INFO: api: register_device->", deviceid
 		[ status, oid ] = device.add_device( None, deviceid )
 		if status:
 			dct = { 'status':1 }

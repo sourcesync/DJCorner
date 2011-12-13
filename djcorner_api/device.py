@@ -55,13 +55,35 @@ def add_device( connection, deviceid ):
 		return [ False, device["_id"] ]
 
         # create a device...
-        device = { "name": name }
-
-        if deviceid: venue["deviceid"] = deviceid
+        device = { "deviceid": deviceid }
 
         # add to collection...
         oid = devices.insert( device )
 
         return [ True, oid ]
 
+#
+# func to get device details...
+#
+def get_devices_details( connection ):
+	
+	devices = _get_device_col( connection )
+
+	devs = []
+	for dev in devices.find():
+		devs.append( dev )
+
+	return devs
+
+
+#
+# 
+#
+if __name__ == "__main__":
+
+	devs = get_devices_details( None )
+
+	print "INFO: device: unittest: devices->", devs
+
+	print "INFO: Done."
 
