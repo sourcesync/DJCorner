@@ -64,6 +64,7 @@ def send(devtoken,msgcount, pollcount):
 	# delete tmp file...
 	cmd = "rm -f %s" % tfile
 	retv = commands.getstatusoutput(cmd)
+	print "INFO: Running command->", cmd
 	if retv[0]!=0:
 		print "ERROR: apns_send: cannot delete file->", retv
 		ok = False
@@ -73,7 +74,11 @@ def send(devtoken,msgcount, pollcount):
 
 if __name__=="__main__":
 
-	if sys.argv[ len(sys.argv)-1 ] != "subprocess" : # launch self as subprocess...
+	if sys.argv[ len(sys.argv) - 1 ] == "test":
+		token = "3148b619 7df99a3b 9c6a2a50 d2f7c88c 635d756d a32a4863 6cc8d321 ff3df9c5"
+		send( token, 1,1 )	
+
+	elif sys.argv[ len(sys.argv)-1 ] != "subprocess" : # launch self as subprocess...
 		print "INFO: apns_send: subprocess"
 		sys.stdout.flush()
 		newargs = ["python"] + sys.argv + [ "subprocess" ]

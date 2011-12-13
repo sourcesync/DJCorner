@@ -4,7 +4,7 @@ echo "1\n";
 $apnsHost = 'gateway.push.apple.com';
 $apnsPort = 2195;
 //$apnsCert = 'apns-dev-mypush3.pem';
-$apnsCert = 'apns-dev-sprawl8-prod.pem';
+$apnsCert = 'apns-dev.pem';
 echo "2\n";
 
 $streamContext = stream_context_create();
