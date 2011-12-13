@@ -149,7 +149,7 @@ def sync_to_db( docs ):
 
                 	# Update event attributes, link venue to event...
                 	status = event.update_event( None, eoid, None, void, edescription, \
-				None, imgpath, eventdate, startdate, enddate, buyurl, performers )
+				None, imgpath, eventdate, startdate, enddate, buyurl, performers, None )
                 	if not status:
                         	print "ERROR: could not update event"
                         	sys.exit(1)

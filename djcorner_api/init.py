@@ -21,7 +21,23 @@ VENUE_LOCATIONS = { \
 	"hidden":[[51.490469,-0.121515],"Club Hidden", "London"], \
 	"4sixty6":[[40.791638,-74.254189], "Club 4Sixty6","New Jersey"], \
 	"revolution":[[40.791638,-74.254189], "Club Revolution", "New York City" ], \
-	"bond":[[51.523538,-0.11879],"Club Bond","London"]
+	"bond":[[51.523538,-0.11879],"Club Bond","London"], \
+	"Pacha Buenos Aires":[[51.523538,-0.11879],"Pacha","Buenos Aires"], \
+	"Stereo":[[51.523538,-0.11879],"Stereo","Montreal"], \
+	"The Kool Haus":[[51.523538,-0.11879],"The Kool Haus","Toronto"], \
+	"Le Queen":[[51.523538,-0.11879],"Le Queen","Paris"], \
+	"Tresor":[[51.523538,-0.11879],"Tresor","Berlin"], \
+	"Cavo Paradiso":[[51.523538,-0.11879],"Cavo Paradiso","Mykanos"], \
+	"Paradiso":[[51.523538,-0.11879],"Paradiso","Amsterdam"], \
+	"AgeHa":[[51.523538,-0.11879],"AgeHa","Tokyo"], \
+	"Pacha":[[40.763966,-73.996911],"Pacha NYC", "New York City"], \
+	"Fabrik":[[51.523538,-0.11879],"Fabrik","Madrid"], \
+	"Fabric":[[51.523538,-0.11879], "Club Fabric", "London" ], \
+	"LIzard Lounge":[[40.791638,-74.254189], "Lizard Lounge", "Dallas" ], \
+	"Surrender":[ [ 40.785221,-73.998413 ], "Club Surrender", "Las Vegas"], \
+	"Avalon":[ [ 40.785221,-73.998413 ], "Club Avalon", "Los Angeles"], \
+	"Set":[ [ 40.785221,-73.998413 ], "Club Set", "Miami"], \
+	"Pacha Ibiza":[[51.523538,-0.11879],"Pacha Ibiza","Ibiza"]
 	}
 
 SYN_GROUPS = [ [ "pacha-nyc", "Pacha NYC" ] ]
@@ -152,17 +168,31 @@ for evt in events:
 	print "INFO: evt type->", type(evt), evt.keys()
 
 	# check start date...	
+	if not evt.has_key("startdate"):
+		evt["startdate"] = "12/31/2011"
 	print "INFO: start event date->", evt["startdate"]
 	stdt = evt["startdate"]
 	dt = parser.parse( stdt )
-	dt = datetime.strptime( stdt, "%Y-%m-%dT%H:%M:%S+00:00" )
-	print dt
+	sdstr = None
+	try:
+		dt = datetime.strptime( stdt, "%Y-%m-%dT%H:%M:%S+00:00" )
+	except:
+		print "INVALID START DATE FORMAT"
+		sdstr = dt.strftime( "%Y-%m-%dT%H:%M:%S+00:00" )
+			
 
 	# check end date...	
+	if not evt.has_key("enddate"):
+		evt["enddate"] = "1/1/2012"
 	print "INFO: end event date->", evt["enddate"]
-	stdt = evt["enddate"]
+	etdt = evt["enddate"]
 	dt = parser.parse( stdt )
-	dt = datetime.strptime( stdt, "%Y-%m-%dT%H:%M:%S+00:00" )
+	edstr = None
+	try:
+		dt = datetime.strptime( etdt, "%Y-%m-%dT%H:%M:%S+00:00" )
+	except:
+		print "INVALID END DATE FORMAT"
+		edstr = dt.strftime( "%Y-%m-%dT%H:%M:%S+00:00" )
 
 	# check city...
 	update_city = True
@@ -175,8 +205,8 @@ for evt in events:
 		print
 		print
 		eoid = ObjectId( evt["_id"] )
-		print "WARNING: Event in dbase is getting city information", city, oid, eoid, type(evt["_id"])
-		status = event.update_event( None, eoid, None, None, None, None, None, None, None, None, None, None, city)
+		print "WARNING: Event in dbase is getting city information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
+		status = event.update_event( None, eoid, None, None, None, None, None, None, sdstr, edstr, None, None, city)
 		if not status:
 			print "ERROR: Cannot update city for venue"
 			sys.exit(1)
