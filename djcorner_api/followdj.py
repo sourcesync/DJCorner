@@ -45,7 +45,7 @@ def clear_all( connection ):
 
 def _send_notification( deviceid, dj ):
 
-	if (deviceid.startswith("<"):
+	if (deviceid.startswith("<")):
 		deviceid = deviceid[1:-1]
 
         cmd = "python apns_send.py \"%s\" %s" % ( deviceid, dj )
@@ -86,7 +86,7 @@ def get_followdjs_details( connection, deviceid ):
 
 	# sanitize for web service...
 	fdjs = []
-	for fdj in followdjs.find():
+	for fdj in followdjs.find({'deviceid':deviceid}):
 		del fdj["_id"]
 		fdjs.append( fdj )
 

@@ -41,7 +41,6 @@ def clear_all( connection ):
         devices.remove()
         return True
 
-
 #
 # func to add device...
 #

@@ -70,7 +70,9 @@ if __name__=="__main__":
 		token = sys.argv[1]
 		msg = ""
 		for str in sys.argv[2:]:
-			msg += "%s " % str	
+			if msg.find("subprocess")<0:
+				msg += "%s " % str	
+		msg = msg.strip()
 		print "INFO: apns_send: parms->", token, msg
 		send( token, msg )
 

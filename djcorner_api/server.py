@@ -85,6 +85,7 @@ class API(jsonrpc.JSONRPC):
 	def jsonrpc_get_followdjs(self,deviceid):
 		print "INFO: api: get_followdjs->", deviceid
 		djs = followdj.get_followdjs_details( None, deviceid )	
+		print "INFO: api: got djs->", djs
 		dct = {'status':1, 'results':djs }
 		return dct
 
