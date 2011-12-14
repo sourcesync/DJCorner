@@ -44,6 +44,10 @@ def clear_all( connection ):
 
 
 def _send_notification( deviceid, dj ):
+
+	if (deviceid.startswith("<"):
+		deviceid = deviceid[1:-1]
+
         cmd = "python apns_send.py \"%s\" %s" % ( deviceid, dj )
         print "INFO: followdj: add_followdj: send notification via cmd->", cmd
         retv = os.system(cmd)
