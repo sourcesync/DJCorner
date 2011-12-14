@@ -96,6 +96,7 @@ def get_event_details( connection, location, oid, verbose ):
 		vn = venue.get_venue( connection, venueid )
 
                 # flatten venue information, like venue name, lat, long...
+		print "INFO: event: flattening from venue->", vn["name"], vn["city"]
 		event["venueid"] = str(venueid)
                 event["venuename"] = vn["ds"]
                 event["latitude"] = vn["latitude"]

@@ -10,7 +10,8 @@ SEARCH = \
 
 # default event buy url...
 EVENT_BUY_URL = \
-        "http://m.clubtickets.com/us/2011-11/19/boris-the-jungle-party-pacha-nyc"
+	"http://www.clubtickets.com"
+#"http://m.clubtickets.com/us/2011-11/19/boris-the-jungle-party-pacha-nyc"
 
 
 MAX_COUNT = 3
@@ -133,6 +134,9 @@ def pop_from_str(str):
 		if not performers:
 			print "ERROR: performers required!"
 			sys.exit(1)
+
+		# Do special parsing...
+		performers = performers.replace(",",";").replace("and","")
 
 		# Get dates...
 		m = el.getElementsByTagName("meta")

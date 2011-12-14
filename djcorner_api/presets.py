@@ -22,23 +22,30 @@ VENUE_LOCATIONS = { \
         "4sixty6":[[40.791638,-74.254189], "Club 4Sixty6","New Jersey"], \
         "revolution":[[40.791638,-74.254189], "Club Revolution", "New York City" ], \
         "bond":[[51.523538,-0.11879],"Club Bond","London"], \
-        "Pacha Buenos Aires":[[51.523538,-0.11879],"Pacha","Buenos Aires"], \
-        "Stereo":[[51.523538,-0.11879],"Stereo","Montreal"], \
-        "The Kool Haus":[[51.523538,-0.11879],"The Kool Haus","Toronto"], \
-        "Le Queen":[[51.523538,-0.11879],"Le Queen","Paris"], \
-        "Tresor":[[51.523538,-0.11879],"Tresor","Berlin"], \
+        "Pacha Buenos Aires":[[-34.550221,-58.427782],"Pacha","Buenos Aires"], \
+        "Stereo":[[45.51611,-73.558238],"Stereo","Montreal"], \
+        "The Kool Haus":[[43.644261,-79.368383],"The Kool Haus","Toronto"], \
+        "Le Queen":[[48.871705,2.302719],"Le Queen","Paris"], \
+        "Tresor":[[52.510537,13.418716],"Tresor","Berlin"], \
         "Cavo Paradiso":[[51.523538,-0.11879],"Cavo Paradiso","Mykanos"], \
-        "Paradiso":[[51.523538,-0.11879],"Paradiso","Amsterdam"], \
-        "AgeHa":[[51.523538,-0.11879],"AgeHa","Tokyo"], \
+        "Paradiso":[[52.36227,4.883943],"Paradiso","Amsterdam"], \
+        "AgeHa":[[35.64222,139.82531],"AgeHa","Tokyo"], \
         "Pacha":[[40.763966,-73.996911],"Pacha NYC", "New York City"], \
-        "Fabrik":[[51.523538,-0.11879],"Fabrik","Madrid"], \
-        "Fabric":[[51.523538,-0.11879], "Club Fabric", "London" ], \
-        "LIzard Lounge":[[40.791638,-74.254189], "Lizard Lounge", "Dallas" ], \
-        "Surrender":[ [ 40.785221,-73.998413 ], "Club Surrender", "Las Vegas"], \
-        "Avalon":[ [ 40.785221,-73.998413 ], "Club Avalon", "Los Angeles"], \
-        "Set":[ [ 40.785221,-73.998413 ], "Club Set", "Miami"], \
-        "Pacha Ibiza":[[51.523538,-0.11879],"Pacha Ibiza","Ibiza"]
-        }
+        "Fabrik":[[40.26493,-3.840789],"Fabrik","Madrid"], \
+        "Fabric":[[51.519571,-0.102557], "Club Fabric", "London" ], \
+        "LIzard Lounge":[[32.78492,-96.790433], "Lizard Lounge", "Dallas" ], \
+        "Surrender":[ [ 36.130163,-115.165134 ], "Club Surrender", "Las Vegas"], \
+        "Avalon":[ [ 34.102717,-118.327126 ], "Club Avalon", "Los Angeles"], \
+        "Set":[ [ 25.790562,-80.130935 ], "Club Set", "Miami"], \
+        "Pacha Ibiza":[[38.917867,1.444058],"Pacha Ibiza","Ibiza"], \
+        "Voyeur":[[32.71334,-117.160022],"Voyeur","San Diego"], \
+	"Orfeo Superdomo":[[-31.35986,-64.226981],"Orfeo Superdomo","Buenos Aires"], \
+	"Laguna Escondida":[[-34.962532,-54.948957],"Laguna Escondida","Punta del Este"], \
+	"Green Valley":[[-27.037492,-48.625445],"Green Valley","Camboriu" ], \
+	"Amsterdam Rai":[[52.34099,4.889646],"Amsterdam Rai","Amsterdam"], \
+	"xoyo":[[51.525714,-0.085745],"Club XoYo","London"], \
+	"secret-east-london-location":[[51.525714,-0.085745],"Secret East London Location", "London" ]
+	}
 
 #
 # Program...
@@ -71,7 +78,8 @@ def fixup_venue(v):
        	print "INFO: venue object-", v
 
        	# see if venue has loc info in dbase...
-       	if not v.has_key("latitude"):
+       	#if not v.has_key("latitude"):
+	if True:
                	print "WARNING: Venue in dbase is missing location information", v
 
                	# get loc info...
@@ -88,7 +96,8 @@ def fixup_venue(v):
 			return False
 
         # see if venue has display name info in dbase...
-        if not v.has_key("ds"):
+        #if not v.has_key("ds"):
+	if True:
                 # get ds info...
                 if not VENUE_LOCATIONS.has_key(vname):
                         print "ERROR: No ds information for venue."
@@ -102,7 +111,7 @@ def fixup_venue(v):
 			return False
 
         # see if venue has city..
-        update_city = False
+        update_city = True
         if not v.has_key("city"):
                 update_city = True
         elif v["city"].strip() == "":
@@ -166,7 +175,6 @@ def fixup_event(evt):
 
         # check city...
         update_city = True
-
         if (update_city):
                 venueid = evt["venueid"]
                 oid = ObjectId(venueid)
@@ -184,6 +192,7 @@ def fixup_event(evt):
                 # check it...
                 revt = event.get_event_details( None, None, eoid,  None )
                 print "REPEATING->", revt
+
 
 	return True
 

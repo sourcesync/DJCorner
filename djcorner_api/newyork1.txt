@@ -8,7 +8,7 @@
 
 
 
-<ticketlogic version="2.0" session="76B8073D69CADADE0A407A076F2D5C15.COMP3" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+<ticketlogic version="2.0" session="5625FB9CF6BC1AF49A4782DBE7CC1F63.COMP3" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
     <events title="EventsList">
         
         
@@ -196,7 +196,7 @@
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-12T06:40:11+00:00</date>
+                    <date type="updated">2011-12-13T23:56:13+00:00</date>
                     <date type="publish">2011-09-22T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -1277,7 +1277,7 @@ London]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-13T18:43:47+00:00</date>
+                    <date type="updated">2011-12-14T11:29:04+00:00</date>
                     <date type="publish">2011-12-13T18:02:00+00:00</date>
                     <date type="expires">2011-12-31T19:00:00+00:00</date>
                     <date type="starts">2011-12-31T20:00:00+00:00</date>

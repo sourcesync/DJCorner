@@ -76,10 +76,17 @@ class API(jsonrpc.JSONRPC):
 			dct = { 'status':0 }
 		return dct
 
-	def jsonrpc_followdj(self,deviceid,dj):
-		print "INFO: api: followdj->", deviceid, dj
-		[ status, oid ] = followdj.add_followdj( None, deviceid, dj )
-		dct = { 'status':1, 'msg':'You are now following %s!' % dj }
+	def jsonrpc_followdjs(self,deviceid,djs):
+		print "INFO: api: followdj->", deviceid, djs
+		status = followdj.add_followdjs( None, deviceid, djs )
+		if not status:
+			return { 'status':0, 'msg':'Operation failed' }
+		djstr = ""
+		for dj in djs:
+			djstr += "%s, " % dj
+		djstr = djstr.strip()
+		djstr = djstr[:-1]	
+		dct = { 'status':1, 'msg':'You are now following %s!' % djstr }
 		return dct
 
 	def jsonrpc_get_followdjs(self,deviceid):

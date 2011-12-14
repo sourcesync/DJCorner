@@ -77,6 +77,16 @@ def add_followdj( connection, deviceid, dj ):
         return [ True, oid ]
 
 #
+# func to add follow dj object...
+#
+def add_followdjs( connection, deviceid, djs ):
+
+	for dj in djs:
+		add_followdj( connection, deviceid, dj )
+
+	return True
+
+#
 # func to get follow dj details...
 #
 def get_followdjs_details( connection, deviceid ):
