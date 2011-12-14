@@ -79,8 +79,7 @@ class API(jsonrpc.JSONRPC):
 	def jsonrpc_followdj(self,deviceid,dj):
 		print "INFO: api: followdj->", deviceid, dj
 		[ status, oid ] = followdj.add_followdj( None, deviceid, dj )
-		dct = { 'status':1 }
-		#	dct = { 'status':0, 'msg':'Cannot follow dj' }
+		dct = { 'status':1, 'msg':'You are now following %s!' % dj }
 		return dct
 
 	def jsonrpc_get_followdjs(self,deviceid):
