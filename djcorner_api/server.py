@@ -20,6 +20,7 @@ import socket
 
 import event
 import device
+import followdj
 
 class FormPage(resource.Resource):
     def render_GET(self, request):
@@ -74,6 +75,16 @@ class API(jsonrpc.JSONRPC):
 		else:
 			dct = { 'status':0 }
 		return dct
+
+	def jsonrpc_followdj(self,deviceid,dj):
+		print "INFO: api: followdj->", deviceid, dj
+		[ status, oid ] = followdj.add_followdj( None, deviceid, dj )
+		if status:
+			dct = { 'status':1 }
+		else:
+			dct = { 'status':0 }
+		return dct
+
 
 #a = api.API()
 a = API()
