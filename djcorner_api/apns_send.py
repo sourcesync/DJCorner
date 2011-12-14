@@ -13,36 +13,15 @@ import commands
 import os, sys
 import subprocess
 
-def send(devtoken,msgcount, pollcount):
-	totalcount = msgcount + pollcount
-	if (totalcount==0):
-		return
+def send(devtoken,dj):
 
-	# message count phrase...
-	if msgcount==1:
-		mphrase = "1 new message"
-	elif msgcount>1:
-		mphrase  = "%d new messages" % msgcount
-
-	# poll count phrase...	
-	if pollcount==1:
-		pphrase = "1 new poll"
-	elif pollcount>1:
-		pphrase = "%d new polls" % pollcount
-
-	# full message...
-	if (msgcount>0) and (pollcount>0):
-		msg = "You have %s and %s." % (mphrase, pphrase)
-	elif (msgcount>0) and (pollcount==0):
-		msg = "You have %s." % (mphrase)
-	elif (msgcount==0) and (pollcount>0):
-		msg = "You have %s." % (pphrase)
+	# form the message...
+	msg = "Congratulations, you are now following %s on DJs Corner" % dj
 
 	# create a new php script...
 	f = open( TEMPL, 'r')
 	php = f.read()
-	php = php.replace("MESSAGE",msg).replace("BADGE",str(totalcount)).replace("MSGCOUNT",str(msgcount)).replace("POLLCOUNT",str(pollcount)).replace("TOKEN",devtoken )
-	#print php
+	php = php.replace("MESSAGE",msg).replace("BADGE","0").replace("MSGCOUNT","0").replace("POLLCOUNT","0").replace("TOKEN",devtoken )
 	tfile = os.tmpnam()
 	f = open(tfile,'w')
 	f.write(php)
@@ -89,9 +68,10 @@ if __name__=="__main__":
 		sys.stdout.flush()
 		print "INFO: apns_send: actually sending..."
 		token = sys.argv[1]
-		msgcount = int(sys.argv[2])
-		pollcount = int(sys.argv[3])
-		print "INFO: apns_send: parms->", token, msgcount, pollcount
-		send( token, msgcount, pollcount )
+		msg = ""
+		for str in sys.argv[2:]:
+			msg += "%s " % str	
+		print "INFO: apns_send: parms->", token, msg
+		send( token, msg )
 
 

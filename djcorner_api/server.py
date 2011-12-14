@@ -79,12 +79,22 @@ class API(jsonrpc.JSONRPC):
 	def jsonrpc_followdj(self,deviceid,dj):
 		print "INFO: api: followdj->", deviceid, dj
 		[ status, oid ] = followdj.add_followdj( None, deviceid, dj )
-		if status:
-			dct = { 'status':1 }
-		else:
-			dct = { 'status':0 }
+		dct = { 'status':1 }
+		#	dct = { 'status':0, 'msg':'Cannot follow dj' }
 		return dct
 
+	def jsonrpc_get_followdjs(self,deviceid):
+		print "INFO: api: get_followdjs->", deviceid
+		djs = followdj.get_followdjs_details( None, deviceid )	
+		dct = {'status':1, 'results':djs }
+		return dct
+
+	def jsonrpc_stop_followdj(self,deviceid,dj):
+		print "INFO: api: stop_followdj->", deviceid, dj
+		status = followdj.remove_followdj( None, deviceid, dj )
+		if not status:
+			dct = {'status':0,'msg':'Problem with this operation.'}
+		return self.jsonrpc_get_followdjs( deviceid )
 
 #a = api.API()
 a = API()

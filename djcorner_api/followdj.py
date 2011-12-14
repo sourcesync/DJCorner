@@ -9,6 +9,7 @@ DBNAME = "djcorner"
 
 from pymongo import Connection
 
+import os
 import sys
 
 def _get_connection():
@@ -42,6 +43,13 @@ def clear_all( connection ):
         return True
 
 
+def _send_notification( deviceid, dj ):
+        cmd = "python apns_send.py \"%s\" %s" % ( deviceid, dj )
+        print "INFO: followdj: add_followdj: send notification via cmd->", cmd
+        retv = os.system(cmd)
+        print "INFO: followdj: add_followdj: send notification after cmd->", retv
+	
+
 #
 # func to add follow dj object...
 #
@@ -49,15 +57,18 @@ def add_followdj( connection, deviceid, dj ):
 
 	followdjs = _get_followdjs_col( connection )
 
-	followdj = devices.find_one( {'deviceid':deviceid, 'dj':dj } )
+	followdj = followdjs.find_one( {'deviceid':deviceid, 'dj':dj } )
 	if ( followdj != None ):
-		return [ False, device["_id"] ]
+		_send_notification( deviceid, dj )
+		return [ False, followdj["_id"] ]
 
 	# create a follow object...
         followdj = { "deviceid": deviceid , 'dj':dj }
 
         # add to collection...
         oid = followdjs.insert( followdj )
+
+	_send_notification( deviceid, dj )
 
         return [ True, oid ]
 
@@ -73,10 +84,27 @@ def get_followdjs_details( connection, deviceid ):
 	fdjs = []
 	for fdj in followdjs.find():
 		del fdj["_id"]
-		fjds.append( fdj )
+		fdjs.append( fdj )
 
 	return fdjs
 
+#
+# func to remove follow dj...
+#
+def remove_followdj( connection, deviceid, dj ):
+
+	followdjs = _get_followdjs_col( connection )
+
+	follow = followdjs.find_one( {'deviceid':deviceid, 'dj':dj } )
+	if not follow:	
+		return False
+
+        status = followdjs.remove( follow, True )
+        if status["err"]:
+                return False
+        else:
+                return True
+	
 #
 # 
 #
