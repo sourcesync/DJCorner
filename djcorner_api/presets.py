@@ -47,6 +47,51 @@ VENUE_LOCATIONS = { \
 	"secret-east-london-location":[[51.525714,-0.085745],"Secret East London Location", "London" ]
 	}
 
+BUYURL_FIX = { \
+	"4ee891de7289ce1719000000":"http://www.clubtickets.com/gb/2012-01/21/gasp-feat-italoboyz", \
+	"4ee123237289ce1239000001":"http://www.clubtickets.com/us/2011-12/31/avicii-new-years-eve-2012-pier-94-nyc", \
+	"4ee123237289ce1239000002":"http://www.clubtickets.com/it/2011-12/31/rebel-rave-new-year-event-damian-lazarus-clive-henry-art-department", \
+	"4ee123237289ce1239000003":"http://www.clubtickets.com/gb/2011-12/31/space-presents-the-vegas-hotel-nye-2011", \
+	"4ee123237289ce1239000004":"http://www.clubtickets.com/gb/2011-12/31/bond-ball-presents-the-secret-spy-soiree-the-kensington-close-hotel-spa", \
+	"4ee123237289ce1239000005":"http://www.clubtickets.com/it/2011-12/31/-9733-f-9679-r-9679-e-9679-a-9679-k-9679-a-9679-d-9679-e-9679-l-9679-i-9679-k-973",\
+	"4ee123437289ce12ac000000":"http://www.clubtickets.com/gb/2011-12/31/empire-state-of-mind-new-years-eve-2011", \
+	"4ee123a57289ce1332000000":"http://www.clubtickets.com/gb/2011-12/31/pink-panther-party-nye-2011", \
+	"4ee123e97289ce13e9000000":"http://www.clubtickets.com/gb/2011-12/31/bodymove-presents-nye-eves-white-gold-rio-carnival-2011",\
+	"4ee8922d7289ce1746000000":"http://www.clubtickets.com/gb/2011-12/31/lost-cosmic-nye-party",\
+	"4ee8928e7289ce17ce000000":"http://www.clubtickets.com/us/2012-02/18/chus-ceballos-present-crash-part-2", \
+	"4ee123e97289ce13e9000002":"http://www.clubtickets.com/gb/2012-02/04/shit-party-reunion", \
+	"4ee8928e7289ce17ce000001":"http://www.clubtickets.com/us/2012-01/14/chus-ceballos-present-crash-part-1", \
+	"4ee123e97289ce13e9000003":"http://www.clubtickets.com/gb/2012-01/07/kinky-malinki", \
+	"4ee123e97289ce13e9000004":"http://www.clubtickets.com/us/2012-01/01/benny-benassi-with-congorock-pacha-nyc", \
+	"4ee123e97289ce13e9000005":"http://www.clubtickets.com/us/2012-01/01/apocalypse-2012-new-years-day-with-boris-victor-calderone-pier-94", \
+	"4ee123e97289ce13e9000006":"http://www.clubtickets.com/us/2011-12/31/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc", \
+	"4ee123e97289ce13e9000007":"http://www.clubtickets.com/us/2011-12/31/super-you-me-nye-w-laidback-luke-pacha-nyc-vip-options", \
+	"4ee123e97289ce13e9000008":"http://www.clubtickets.com/us/2011-12/31/chus-ceballos-new-years-eve-4sixty6" \
+	}
+
+PF_FIX = { \
+	"4ee891de7289ce1719000000":"'Johnny Fiore;Gabriel amaru;Jamma;Mr Venom;Thomas James;Chris Gee;Franklin", \
+	"4ee123237289ce1239000001":"Glenn Morrison;Cazzette;Arty;Avicii;Swanky Tunes", \
+	"4ee123237289ce1239000002":"Damian Lazarus;Clive Henry;Art Department", \
+	"4ee123237289ce1239000003":"To Be Announced", \
+	"4ee123237289ce1239000004":"Victor Simonelli;Nicky Holloway;Brandon Block;Alex P;DJ Marie;Technical Twins;Danny Julian;Scott More;Pa Nick House;Harry Marks;Purple Gorilias;DJ Sting;Dan Hill;Kev Harper;Colin Dale;James McLaughlin", \
+	"4ee123237289ce1239000005":"TRISTAN;ANIMATRONICA;MARIO BROSS;PULSAR;METHAPHASE;TIME IN MOTION;SHYISMA;METROYD;SUBLIMINAL POTION;ERRO;DIGITAL IMPULSE;ALION;SOLARIS PHASE;TRIP;FRASCKY;TRIPPYHIPPIES;PEACE-KA;VIRTUANOISE;ASSAULT JUNKIES;INSTINCT WAVE;MARKAYN;IL PREZ;PULSAR;MICHEL;OMEGADELTA;JIMMY 9;PSY BOY;CANSAS CITY;ELECTRICITY;OKTOPUSS;ZIGHY;KARMALOGIC;MAIKY;CISCO;JOYL",\
+	"4ee123437289ce12ac000000":"Dj Suave;Dj 2", \
+	"4ee123a57289ce1332000000":"DJ Simba", \
+	"4ee123e97289ce13e9000000":"Karizma;Audiowhores;Anderson Noize;Tomasuchy;Darren Gregory;Justin Time;Digital Mike;Boletz;Zero C;Dani D",\
+	"4ee8922d7289ce1746000000":"JUAN ATKINS;STEVE BICKNELL;CHRIS CARRIER;TOMOKI TAMURA;TORU",\
+	"4ee8928e7289ce17ce000000":"DJ Chus;DJ Ceballos", \
+	"4ee123e97289ce13e9000002":"Brandon Block;Slipmatt;Miss Divine;Vicky Devine;Alex Ellenger;Dermot C;Jay Moore;Lee John", \
+	"4ee8928e7289ce17ce000001":"DJ Chus;DJ Ceballos", \
+	"4ee123e97289ce13e9000003":"Luigi Rocca;Timo Garcia", \
+	"4ee123e97289ce13e9000004":"BENNY BENASSI;Congorock", \
+	"4ee123e97289ce13e9000005":"Boris;Victor Calderone", \
+	"4ee123e97289ce13e9000006":"Laidback Luke", \
+	"4ee123e97289ce13e9000007":"Laidback Luke", \
+	"4ee123e97289ce13e9000008":"DJ Chus;DJ Ceballos" \
+	}
+
+
 #
 # Program...
 #
@@ -186,13 +231,43 @@ def fixup_event(evt):
                 print "WARNING: Event in dbase is getting city information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
                 status = event.update_event( None, eoid, None, None, None, None, None, None, sdstr, edstr, None, None, city)
                 if not status:
-                        print "ERROR: Cannot update city for venue"
+                        print "ERROR: Cannot update city for event"
 			return False
-
                 # check it...
                 revt = event.get_event_details( None, None, eoid,  None )
                 print "REPEATING->", revt
 
+	# check buyurl...
+	fix_buyurl = False
+	buyurl = evt["buyurl"]
+	if buyurl == "http://www.clubtickets.com":
+		fix_buyurl = True
+		if not BUYURL_FIX.has_key( evt["_id"] ):
+			print "ERROR: Fix info is not present for->", evt["_id"], evt["name"]
+			return False
+	if BUYURL_FIX.has_key( evt["_id"] ):
+		fix_buyurl = True
+	if fix_buyurl:	
+		fixurl = BUYURL_FIX[ evt["_id"] ]
+                eoid = ObjectId( evt["_id"] )
+                print "WARNING: Event in dbase is getting buyurl information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
+                status = event.update_event( None, eoid, None, None, None, None, None, None, None, None, fixurl, None, None)
+                if not status:
+                        print "ERROR: Cannot update buyurl for event"
+			return False
+
+	# check performers...
+	fix_performers = False
+	if PF_FIX.has_key( evt["_id"] ):
+		pffix = PF_FIX[ evt["_id"] ]
+		if pffix == "FIXME":
+			print "ERROR: Cannot update performer for event"
+			return False
+                print "WARNING: Event in dbase is getting performer information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
+                status = event.update_event( None, eoid, None, None, None, None, None, None, None, None, None, pffix, None)
+                if not status:
+                        print "ERROR: Cannot update performer for event"
+			return False
 
 	return True
 

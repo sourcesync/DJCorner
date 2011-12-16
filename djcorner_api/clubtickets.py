@@ -11,7 +11,10 @@ SEARCH = \
 # default event buy url...
 EVENT_BUY_URL = \
 	"http://www.clubtickets.com"
-#"http://m.clubtickets.com/us/2011-11/19/boris-the-jungle-party-pacha-nyc"
+	#"http://m.clubtickets.com/us/2011-11/19/boris-the-jungle-party-pacha-nyc"
+
+CLUBTIX_FIX = \
+	{ }
 
 
 MAX_COUNT = 3

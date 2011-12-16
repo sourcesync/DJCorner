@@ -275,8 +275,13 @@ if __name__ == "__main__":
 	conxn = _get_connection()
 
 	# get all events...
-	events = get_events_details( conxn, None, None, "New York City" )
+	events = get_events_details( conxn, None, None, None)
 	print "INFO: event: get_events_details: result->", events
+
+	print "INFO: There are %d events" % len(events[0])
+
+	for evt in events[0]:
+		print "INFO: id and name->", evt["_id"], evt["name"]
 
 	print "INFO: Done."
 	

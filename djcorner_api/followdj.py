@@ -93,6 +93,7 @@ def get_followdjs_details( connection, deviceid ):
 
 	# get djs collection...	
 	followdjs = _get_followdjs_col( connection )
+	print followdjs
 
 	# sanitize for web service...
 	fdjs = []
@@ -127,6 +128,9 @@ if __name__ == "__main__":
 	fdjs = get_followdjs_details( None, None )
 
 	print "INFO: followdj: followjds->", fdjs
+
+	for f in fdjs:
+		print "INFO: followdj: ->", f
 
 	print "INFO: Done."
 

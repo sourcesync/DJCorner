@@ -82,7 +82,9 @@ if __name__ == "__main__":
 
 	devs = get_devices_details( None )
 
-	print "INFO: device: unittest: devices->", devs
+	print "INFO: device: devices->", devs
 
+	for dev in devs:
+		print "INFO: device->", dev
 	print "INFO: Done."
 
