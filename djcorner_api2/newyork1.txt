@@ -1,0 +1,1360 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+
+
+
+
+
+
+
+<ticketlogic version="2.0" session="5625FB9CF6BC1AF49A4782DBE7CC1F63.COMP3" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+    <events title="EventsList">
+        
+        
+        <event id="00014229">
+            <title><![CDATA[ Gasp Feat ItaloBoyz ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2012-01/21/gasp-feat-italoboyz</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2012-01/21/gasp-feat-italoboyz</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-09T02:36:41+00:00</date>
+                    <date type="publish">2011-12-09T00:00:00+00:00</date>
+                    <date type="expires">2012-01-21T17:00:00+00:00</date>
+                    <date type="starts">2012-01-21T21:00:00+00:00</date>
+                    <date type="ends">2012-01-22T03:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p class="p1">
+ <strong>Basement</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/italoboyz">Italoboyz</a> [MoonHarbour//Trapez]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/johnnyfiore">Johnny Fiore</a> [Carnival// Codekontrol]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/gabrielamaru">Gabriel amaru</a> [Minimal Force//Codekontrol]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/jamma">Jamma</a> [Bread &amp; Butter]</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>Upstair </strong></p>
+<p class="p1">
+ <strong>Mr Venom [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/thomasjames">Thomas James</a> [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong><a href="http://www.residentadvisor.net/dj/chrisgee">Chris Gee</a> [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong>Franklin [Unwanted Family]</strong></p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p><strong>Codekontrol are back at the excellent venue of Xoyo, but this time with a complete take over of the entire club. </strong></p>
+<p class="p2">
+ <strong>Joining our superb, and ever ready Codekontrol residents will be yet another host of home grown and international DJs and producers who will be gracing us with their presence and of course their pounding beats and driving bass lines.</strong></p>
+<p class="p2">
+ <strong>As you can see we have a special guest in the Basement area in the shape of Jamma, and joining him will be another special guest(s) Italoboyz!!! ;). They will of course be playing along side our Codekontrol favourites of Johnny Fiore and Gabriel Amaru. </strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>With the take over the top floor of Xoyo as well means there is no escape. We promise, as always, to deliver to you yet another top night in the heart of the city.</strong></p>
+<p class="p2">
+ <strong>Basement</strong></p>
+<p class="p1">
+ <strong>Italoboyz [MoonHarbour//Trapez]</strong></p>
+<p class="p1">
+ <strong>Johnny Fiore [Carnival// Codekontrol]</strong></p>
+<p class="p1">
+ <strong>Gabriel amaru [Minimal Force//Codekontrol]</strong></p>
+<p class="p1">
+ <strong>Jamma [Bread &amp; Butter]</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>Upstair </strong></p>
+<p class="p1">
+ <strong>Mr Venom [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong>Thomas James [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong>Chris Gee [Unwanted Family]</strong></p>
+<p class="p1">
+ <strong>Franklin [Unwanted Family]</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>&gt;&gt;&gt;&gt;&gt;&gt;Few More Infos About The Artists&lt;&lt;&lt;&lt;&lt;&lt;&lt;</strong></p>
+<p class="p1"></p>
+<p class="p1">
+ <strong>ITALOBOYZ</strong></p>
+<p class="p1">
+ <strong>Since arriving in London at the beginning of the new millennium, Italoboyz, aka Marco Donato and Federico Marton, have become an essential fixture of the capital&rsquo;s small but passionate house/techno/minimal scene. From their notorious back-to-back DJ sets at FESH (333, London), their reputation has grown to the point where they can now be found playing regularly across the planet. However, it&rsquo;s not just the energy and flair of their DJ sets that has captured the imagination, Italoboyz releases now on some of today&rsquo;s most influential minimal-house / techno labels like Mothership and Get Physical, after starting to work in 2005/2006 with label like Treibstoff, Einmaleins Musik, Gumption and Safari Electronique. &ldquo;When you realize that without moving there won&rsquo;t be any change, you move&hellip;&rdquo; explains Marco, so that&rsquo;s exactly what they did, swapping their native Italy for London (Marco in 2001 and Fede in 2002), urged on by separate desires to go deeper and get more involved in electronic music. It was this fusion of minds, with complementary ways of both absorbing and communicating electronic music that inspired them to team up and form Italoboyz in 2002. Since then they haven&rsquo;t stopped moving forward, obsessively exploring the hybrid sounds of house and techno through their love of minimalism, acid-house and hi-tech funk. Although their sound has always been characterized by organic elements along with large doses of funk and energy, the distinctive flavor of their productions and DJ sets is down to a willingness to embrace and explore the various genres and sub-genres that develop out of this constantly evolving music. One of the reasons Italoboyz productions are so well received is the fact that their musical expression is a fusion of sounds, themes and ideas resulting from over 15 years of music research and DJing experience. Their aim is to deliver the most modern, cutting edge sound possible but it should still resonate through time, both past and future, in order to make the immediate experience all the more seductive. When they were throwing their own parties in 2003/2004 they built up quite a following, often running all day long from Sunday afternoon till early Monday morning. It&rsquo;s an experience that has given them valuable knowledge and insight</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>JAMMA</strong></p>
+<p class="p1">
+ <strong>From day one, Jamma (dj &amp; promoter) was surrounded by music whether it be his Fisher-price Tin Music Box influence at the age of 5&hellip;or in his later years with the drum &amp; bass sound in the mid to later nineties. A love for music in all its forms and diversity, music has always been an integral part of his life. Jamma discovered the world of techno through several parties around London. Having spent the first 6 years with Hertzquake Crew rinsing the drum &amp; bass culture that Italy and Milan had to offer, managing several parties with main guests such as Hype, Dillinja, Pendulum to name few, he connected with the techno sound. He moved to London and created Maximize, a weekly techno-minimal gig. Later hooked up with Julius which in turn led to the crew of Bread&amp;Butter. </strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>GABRIEL AMARU</strong></p>
+<p class="p1">
+ <strong>&ldquo;It&rsquo;s all about the music and it&rsquo;s always been that way...&rdquo; he says as laidback and as playful as he&rsquo;s always been. Born out of a world of contradictions, Gabriel amaru has always found a way to be musical. </strong></p>
+<p class="p1">
+ <strong>Starting from hard house and then sinking into techno, and later into house, Gabriel amaru&rsquo;s sound today is a funky breed of techno and house music, always with a strong bass line.</strong></p>
+<p class="p1">
+ <strong>&ldquo;I can say I&#39;m not gonna get stuck here and I&#39;m already playing with more experimental, sometimes even strange sounds in techno. And again I won&rsquo;t stop there, I don&#39;t feel think I should get stuck in a certain genre, I feel I&rsquo;ll always want to explore and refresh.&rdquo;</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>JOHNNY FIORE</strong></p>
+<p class="p1">
+ <strong>Johnny Fiore, born in Avellino, Italy in &rsquo;84, started playing bass at the age of 13 in local metal bands. His passion for music took him to Turin, North Italy, at the age of 18, known as the cultural centre for the arts; &lsquo;the Italian Detroit&rsquo;.</strong></p>
+<p class="p1">
+ <strong>Turin is where his mind was opened to all different genres and where his DJ career began playing Nu Jazz and Broken Beats, which lead to a love of techno as a clubber and the birth of DJ JP Della Camera.</strong></p>
+<p class="p1">
+ <strong>2010 saw the need for change and London became the place to be. London inspired JP Della Camera to evolve his sound (and name) and so was born house music DJ, Johnny Fiore.</strong></p>
+<p class="p1">
+ <strong>Johnny&rsquo;s sound draws inspiration from his many musical interests including soul, funky, electro beats, which shows in his set, full of new, deep and old school house and techno. </strong></p>
+<p class="p1">
+ <strong>Currently a regular at the Egg, Johnny Fiore is now also Label Manager of Mind Ability Records&rsquo;.</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>THOMAS JAMES</strong></p>
+<p class="p1">
+ <strong>Thomas James&rsquo; musical journey since an early age has taken him through punk, metal, hip-hop, breakbeats, funk, soul and electronica. Analogue cassette tapes, fanzines and the whole DIY aspect of music scenes has always been a strong interest to him. He then started to become inspired by more contemporary electronic styles of music. </strong></p>
+<p class="p1">
+ <strong>He began to buy more vinyl and decided to start DJing from his growing interest in house and techno. Artists and DJ&#39;s such as Steve Bug, Ricardo Villalobos, Andrew Weatherall and Craig Richards all added to his inspiration. Encouragement from friends gave him the drive to quickly gain his mixing skills and form his own style. A vinyl purist, Thomas James&#39; sets currently weave between disco, deep house and techno.</strong></p>
+<p class="p1">
+ <strong>He has played various venues and parties around the southeast as well as co-promoting and designing the &#39;unwanted&#39; brand. Already the &lsquo;unwanted&rsquo; parties have gained a strong following where Thomas James has helped book and play alongside the likes of A.Skillz, Casper C, Mr Cosmo, Tayo, Lone and Jazz-T. He now wants to take the &lsquo;unwanted&rsquo; brand, his DJing and promotion further by introducing it to other cities in the UK and beyond.</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>CHRIS GEE</strong></p>
+<p class="p1">
+ <strong>Dig into Chris Gee&#39;s record box and you will find a collection of Hip Hop, broken dubstep, jazzed out garage and funk fused beats. Being able to drop big rhythm is something he loves. Deep House and Nu-disco is the sound Chris is bringing to the floor much more these days. Deep punchy warm kicks, nothing less he would say. </strong></p>
+<p class="p1">
+ <strong>He runs a night called &#39;unwanted&#39; in Guildford along with a tight family of DJs Thomas James/ +MORE/ Venom/ A.M.T/ Gember.</strong></p>
+<p class="p1">
+ <strong>In his first year of running unwanted he has put on acts such as A.Skillz, Casper C, Mr Cosmo, Tayo, Lone, Jazz-T and Carlotek. 2011 brings a new and bigger venue along with more exciting artists and plans of expansion to neighboring cites. </strong></p>
+<p class="p1">
+ <strong>For the last two years throughout the summer he has been running an all-day-into-the-night Roots &amp; Culture jam, which from this has made him more friends with in reggae and dub. Playing alongside the likes of The Roots brothers, Dub Pistols, Earl Gateshead (Trojan), Subsource, Reggae Roast, Instruments of Jah and Count Skylarkin at One Love festival, Reggae Rooms, Guildfest and The Boileroom.</strong></p>
+<p class="p1">
+ <strong>He loves nothing more then to be playing wax 180gm heavy!</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>CONCESSIONS: &pound;10 Please Send Names To <a href="mailto:glist@codekontrolcrew.org?subject=Gasp%20Feat%20ItaloBoyz%20Glist">glist@codekontrolcrew.org</a></strong></p>
+<p class="p1">
+ <strong>NUS: &pound;7 B4 12 &pound;10 AFTER</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <strong>:::::::::::::::::: Keep In Touch With Us :::::::::::</strong></p>
+<p class="p2"></p>
+<p class="p1">
+ <a href="https://forms.sign-up.to/signup.php?fid=631&amp;pid=17490"><strong>Join Our Mailing List</strong></a></p>
+<p class="p1">
+ <strong>or Text &quot;Party&quot; to 61211</strong></p>
+<p class="p2">
+ <strong><a href="https://www.facebook.com/events/272229802819018/">FB Event Page</a></strong></p>]]></description>
+                
+                <venue name="xoyo" title="XOYO">
+                    <address><![CDATA[3237 Cowper Street]]></address>
+                    <postcode><![CDATA[EC2A 4AP]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="codekontrol-crew"><![CDATA[Codekontrol Crew]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/1side--2-cbt.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/1side--2-cbt.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034912" 
+                           min="1" 
+                           max="10" 
+                           priceFace="8.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket Standard Advance Ticket]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00013660">
+            <title><![CDATA[ Avicii New Years Eve 2012 @ Pier 94 NYC ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/avicii-new-years-eve-2012-pier-94-nyc</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/avicii-new-years-eve-2012-pier-94-nyc</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-13T23:56:13+00:00</date>
+                    <date type="publish">2011-09-22T04:00:00+00:00</date>
+                    <date type="expires">2012-01-01T00:00:00+00:00</date>
+                    <date type="starts">2012-01-01T02:00:00+00:00</date>
+                    <date type="ends">2012-01-01T11:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>9:00 pm Glenn Morrison<br />
+ 10:30 pm Cazzette<br />
+ 12:00 am Arty<br />
+ 1:30 am Avicii<br />
+ 4:30 am Swanky Tunes</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p><strong>New Years Eve 2012</strong><br />
+ At Night, RPM and Pacha NYC present...<br />
+ <br />
+ <strong>AVICII </strong><br />
+ New Years Eve 2012<br />
+ @ Pier 94 NYC<br />
+ <br />
+ More info at <strong><a href="http://www.aviciinye.com">www.aviciinye.com</a></strong><br />
+ <br />
+ <em>A limited supply of General Admission tickets are on sale now.....</em></p>
+<p><strong>NB: Ticket Name should match that of Attendee and tickets purchased as a group must all attend together with photo ID as proof of identity.</strong></p>
+<p><strong>Resold tickets are invalid and will not be admitted. Beware Ticket Touts and buy only direct from this site for guarrenteed entry. </strong></p>
+<hr />
+<p><strong>VIP package details below:</strong></p>
+<p><u><strong>Open Bar Ticket</strong></u><br />
+ All the benefits of general admission plus:<br />
+ &bull; 4-Hour Open Bar (9pm-1am)<br />
+ &bull; Champagne Toast at Midnight<br />
+ &bull; $250 + 10% booking fee per person<br />
+ <em>* Customers must be 21+ to consume alcohol. Customers under 21 will be receive non-alcoholic beverages</em></p>
+<div class="im">
+ <p><u><strong>VIP Raised Table (4-6 Guests)</strong></u><br />
+ [$350 per person + NY State Sales tax]<br />
+ All the benefits of general admission plus:<br />
+ &bull; Open bar (9pm-1am)<br />
+ &bull; Champagne Toast at Midnight<br />
+ &bull; Private seating &amp; raised area available exclusively to VIPs<br />
+ &bull; Cocktail waitress at your service<br />
+ &bull; VIP Express Admission - skip the lines!<br />
+ &bull; Complimentary mixers, water &amp; energy drinks</p>
+</div>
+<p><strong>Table of 4 </strong>: 1 bottle of premium vodka + 1 bottle of premium champagne<br />
+ <strong>Table of 6 </strong>: 2 bottles of premium vodka + 1 bottle of premium champagne</p>
+<div class="im">
+ (Prices do not include $50 per head mandatory gratuity)</div>
+<div class="im">
+ <p><em>* Customers must be 21+ to consume alcohol. Customers under 21 will be receive non-alcoholic beverages</em></p>
+ <p><u><strong>VIP Deluxe Raised Table (4-10 Guests)</strong></u><br />
+ <strong>Get even closer to the stage with the deluxe raised vip table!</strong><br />
+ All the benefits of general admission plus:<br />
+ &bull; Open bar (9pm-1am)<br />
+ &bull; Champagne Toast at Midnight<br />
+ &bull; Private seating &amp; raised area available exclusively to VIPs<br />
+ &bull; Cocktail waitress at your service<br />
+ &bull; VIP Express Admission - skip the lines!<br />
+ &bull; Complimentary mixers, water &amp; energy drinks<br />
+ <br />
+ <strong>Table of 4 </strong>: 1 bottle of premium vodka + 1 bottle of premium champagne<br />
+ <strong>Table of 6 </strong>: 2 bottles of premium vodka + 1 bottle of premium champagne<br />
+ <strong>Table of 8</strong>: 2 bottles of premium vodka + 2 bottles of premium champagne<br />
+ <strong>Table of 10</strong>: 3 bottles of premium vodka + 2 bottles of premium champagne</p>
+</div>
+<div class="im">
+ <div class="im">
+ (Prices do not include $50 per head mandatory gratuity)</div>
+</div>
+<div class="im">
+ <p><em>* Customers must be 21+ to consume alcohol. Customers under 21 will be receive non-alcoholic beverages</em></p>
+</div>
+<hr />
+<p>Having problems purchasing tickets? Contact helpdesk@clubtickets.com</p>
+<hr />
+<p><em><strong>IT&rsquo;S ON! Avicii&rsquo;s biggest show to date &ndash; New Year&rsquo;s Eve &ndash; New York City</strong><br />
+ <br />
+ Pre-sale has commenced for what will be, hands down, the most sensational farewell to 2011 New York City has to offer. After much hearsay, it can now be revealed that on 31<sup>st</sup> December, Swedish born hit maker AVICII will grace one of the most stunning and exclusive venues in Manhattan &ndash; <strong>PIER 94</strong> &ndash; for a New Year&rsquo;s send off like none other.</em></p>
+<p><em>The insane venue, which until today has been kept a closely guarded secret, is seldom used for such events, so this really is a <strong>ONCE IN A LIFETIME</strong> opportunity! Needless to say that the production, design and surprises going into this one off show &ndash; masterminded by <strong>Ash</strong> (<strong>At Night Management</strong>) and partners <strong>Pacha</strong> &ndash; will be extraordinary. It&rsquo;s got all the ingredients&hellip;why on earth wouldn&rsquo;t you go!</em></p>
+<p><em>The last time Ash teamed up with Pacha NYC, it <strong>COMPLETELY SOLD OUT</strong>. The 4000 people that were quick enough out the blocks witnessed the then 21-year-old set Governor&rsquo;s Island alight in a night to remember. So when the man behind &lsquo;Seek Bromance&rsquo;, &lsquo;Fade into Darkness&rsquo; and of course &lsquo;Levels&rsquo;, returns at the end of December to set the tone for 2012, you can bet your bottom dollar it&rsquo;ll be more elaborate in every way imaginable.</em></p>]]></description>
+                
+                <venue name="pier-94" title="Pier 94">
+                    <address><![CDATA[711 12th Ave
+New York]]></address>
+                    <postcode><![CDATA[NY 10019]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="pacha-nyc-rpm"><![CDATA[Pacha NYC RPM]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/400x400_nye.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/400x400_nye.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <price id="00034875" 
+                           min="1" 
+                           max="6" 
+                           priceFace="165.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket General Admission]]></price>
+                    
+                    
+                    
+                    <price id="00034915" 
+                           min="1" 
+                           max="2" 
+                           priceFace="1524.25" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Raised VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <price id="00034918" 
+                           min="1" 
+                           max="2" 
+                           priceFace="3266.25" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 6: See description for details - includes NY State Sales Tax]]></price>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <price id="00034916" 
+                           min="1" 
+                           max="2" 
+                           priceFace="2286.38" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Raised VIP Table for 6: See description for details - includes NY State Sales Tax]]></price>
+                    
+                    
+                    
+                    <price id="00034919" 
+                           min="1" 
+                           max="2" 
+                           priceFace="4355.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 8: See description for details - includes NY State Sales Tax]]></price>
+                    
+                    
+                    
+                    <price id="00034661" 
+                           min="1" 
+                           max="10" 
+                           priceFace="272.19" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP - Open Bar Ticket - See description for details - includes NY State Sales Tax]]></price>
+                    
+                    
+                    
+                    <price id="00034917" 
+                           min="1" 
+                           max="2" 
+                           priceFace="2177.50" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Deluxe Raised VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
+                    
+                    
+                    
+                    
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014152">
+            <title><![CDATA[ REBEL RAVE ::New Year Event:: Damian Lazarus - Clive Henry - Art Department ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/it/2011-12/31/rebel-rave-new-year-event-damian-lazarus-clive-henry-art-department</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/it/2011-12/31/rebel-rave-new-year-event-damian-lazarus-clive-henry-art-department</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-08T13:53:48+00:00</date>
+                    <date type="publish">2011-11-19T17:58:00+00:00</date>
+                    <date type="expires">2011-12-31T21:00:00+00:00</date>
+                    <date type="starts">2011-12-31T22:59:00+00:00</date>
+                    <date type="ends">2012-01-01T05:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>Damian Lazarus + Clive Henry + Art Department</p>
+<p>Descrivere in poche parole la carriera di <strong>Damian Lazarus</strong>, mostro sacro della scena clubbing mondiale, &egrave; impresa titanica. Editore del magazine Dazed and Confused, a capo dell&rsquo;etichetta City Rockers, la stessa di Tiga e Felix Da Housecat, e infine creatore nel 2004 della label culto &ldquo;Crosstown Rebels&rdquo; (che vede tra gli altri nella propria scuderia Jamie Jones, Phonique, Seth Troxler ecc). La sua missione &egrave; quella di spazzare via la mediocrit&agrave;, l&rsquo;obsoleto per ricercare sempre novit&agrave; ed energia. Il suo ultimo lavoro, l&rsquo;album &ldquo;Smoke the monster out&rdquo;, uscito per Get Physical, ha gi&agrave; lasciato un segno indelebile nel panorama dance mondiale. Con i suoi live ha girato tutto il mondo, approdando al DC10 di Ibiza, al Fabric di Londra, alla WMC di Miami. Tutti i podcast dell&rsquo;artista sono disponibili su lazpod.com.</p>
+<p>Membro del duo Peace Division, <strong>Clive Henry</strong> &egrave; una delle colonne portanti della scena techno/house UK. Entrato nella famiglia Circoloco@DC10 dall&rsquo;alba dei tempi, &egrave; senza dubbio uno dei resident pi&ugrave; rappresentativi della Crosstown Rebels. Cresciuti con sonorit&agrave; hip-hop, electro e 80&rsquo;s synth pop, i Peace Division hanno aiutato la diffusione mondiale dell&rsquo;house music. I tratti tipici del suono, tamburi tribali sfumature dark e un groove dub, sono diventati un importante biglietto da visita per molti remix, tra i quali Moby con &ldquo;Natural Blues&rdquo; e David Byrne con &ldquo;Lazy&rdquo;.</p>
+<p><strong>Art Department</strong> &egrave; il progetto nato dalla collaborazione tra Kenny Glasgow, il celebre producer canadese sulla cresta dell&rsquo;onda sin dalla fine degli anni 80, e Johnny White, nuova stella nascente del circuito underground Nordamericano. Il progetto parte nel 2009, quando Damian Lazarus chiede ai due amici di remixare un suo brano, Riz MC, per CrossTown Rebels; i due si trovano a lavorare insieme per la prima volta nonostante si conoscano gi&agrave; da un decennio. E&rsquo; l&rsquo; inizio di un nuovo sound, la presa di coscienza di aver trovato un filone musicale d&rsquo;oro che porter&agrave; i due dj a fondare Art Department. Da quel momento il sodalizio artistico continua a generare tracce ricercate e deep, in bilico tra sperimentazione di nuovi suoni e contrappunti housy e groovy magnificamente rievocati dalla sublime e inimitabile voce di Kenny. I loro live ai festival al W.M.C di Miami e a Detroit sono entrati nella leggenda lasciando i presenti senza parole. Grazie a collaborazioni in vista con Soulclap, James Jones, Seth Troxler e un album uscito per la Crosstown Rebels di Lazarus, il 2011 pu&ograve; essere definito come l&rsquo;anno della definitiva consacrazione per gli Art department.</p>
+<p>- - - -</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Rebel Rave approda per la prima volta in Italia per festeggiare il capodanno del Link.</p>
+<p>Ideato da Damian Lazarus, questo evento riunisce gli artisti della Crosstown Rebels, etichetta di punta dell&rsquo;elettronica underground.</p>
+<p>Prezzo d&#39;ingresso: 30 &euro; ticket + 3 &euro; diritti di prevendita.</p>
+<p>- - - - -</p>]]></description>
+                
+                <venue name="link" title="Link">
+                    <address><![CDATA[Via Fantoni, 21  -  Bologna]]></address>
+                    <postcode><![CDATA[40128]]></postcode>
+                    <country><![CDATA[IT]]></country>
+                </venue>
+                
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/link-31dicembre2011.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/link-31dicembre2011.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034773" 
+                           min="1" 
+                           max="10" 
+                           priceFace="33.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#8364;" 
+                           currencyCode="EUR" 
+                           currency="2"><![CDATA[E-Ticket con ingresso]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00013686">
+            <title><![CDATA[ Space presents...... The Vegas Hotel NYe 2011  ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/space-presents-the-vegas-hotel-nye-2011</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/space-presents-the-vegas-hotel-nye-2011</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-05T16:04:25+00:00</date>
+                    <date type="publish">2011-09-26T23:00:00+00:00</date>
+                    <date type="expires">2011-12-31T21:00:00+00:00</date>
+                    <date type="starts">2011-12-31T22:00:00+00:00</date>
+                    <date type="ends">2012-01-01T06:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>DJs for the night will include all your Space favourites....</p>
+<p>More info to follow shortly</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<h2>
+ The Vegas Hotel &ndash; The Ultimate New Years Eve party.</h2>
+<p>Hosted by Space @ Pacha London</p>
+<p>Short of chartering a Lear jet and celebrating in Tokyo and New York as well, The Vegas Hotel offers the most up market clubbing experience in the capital. For a mere &pound;45 party goers can expect to enjoy their best NYE yet! This New Year&rsquo;s Eve we blast off at London&#39;s most exclusive, spectacular and beautiful venue Pacha with a stellar DJ line up and a clubbing experience that will become a legend... &quot;The Vegas Hotel&quot;.</p>
+<p>Let us transport you to the bright lights of Vegas, Nevada. A place where the rich and beautiful rub shoulders with the outrageous and the bizarre, and perhaps even Elvis will make an appearance! The Vegas Hotel has it all, Casinos, PA&rsquo;s and Show girls, and is set in a venue that puts Vegas to shame - with two rooms of music and set to be the party of the year.</p>
+<p>For Space virgins you can expect a glamorous crowd that love to get wild, get sociable and get seriously cheeky. You can expect the wild party atmosphere you can only experience with Space people - a slightly older more sophisticated crowd who love Music, who love one off events and love getting together in big groups of friends and making any venue their playground for one night. You can expect the finest DJ&#39;s, a show to take your breath away and the best PA&#39;s around.</p>
+<p>In its 13th year, Space has grown to become one of London&rsquo;s most talked about club events. It is a night for the discerning clubber who knows how to have a good night out, who gets dressed up to get down and has come to expect quality and a great party atmosphere from their night out.</p>
+<p>This will be the most dazzling and sensational NYE party you can hope for so head to Pacha this NYE with your group of friends for an unforgettable NYE experience.</p>]]></description>
+                
+                <venue name="pacha-london" title="Pacha London">
+                    <address><![CDATA[Terminus Place, Victoria, London]]></address>
+                    <postcode><![CDATA[SW1V 1JR]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/pacha-nye-400-1.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/pacha-nye-400-1.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00033934" 
+                           min="1" 
+                           max="10" 
+                           priceFace="45.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Standard)]]></price>
+                    
+                    
+                    
+                    <price id="00033933" 
+                           min="1" 
+                           max="10" 
+                           priceFace="35.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Early Bird)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00013683">
+            <title><![CDATA[ The Secret Agents' Ball  ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/bond-ball-presents-the-secret-spy-soiree-the-kensington-close-hotel-spa</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/bond-ball-presents-the-secret-spy-soiree-the-kensington-close-hotel-spa</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-05T16:00:10+00:00</date>
+                    <date type="publish">2011-09-26T23:00:00+00:00</date>
+                    <date type="expires">2011-12-31T20:00:00+00:00</date>
+                    <date type="starts">2011-12-31T21:00:00+00:00</date>
+                    <date type="ends">2012-01-01T04:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>Ball Room 1 - We welcome the famous &quot;Black &amp; White Ball&quot;</p>
+<p><strong>Victor Simonelli (NY, USA)/</strong><strong>Nicky Holloway/ </strong><strong>Brandon Block/ </strong><strong>Alex P/ DJ Marie</strong></p>
+<p>Ball Room 2 - We welcome &quot;Dirtyfunk&quot;</p>
+<p><strong>Technical Twins / Danny Julian /</strong><strong>Scott More / Pa Nick House / Harry Marks / Purple Gorilias / DJ Sting / Dan Hill / Kev </strong><strong>Harper</strong></p>
+<p>Ball Room 3 - We welcome &quot;Wildlife: AM&quot;</p>
+<div>
+ <p><strong>Colin Dale &amp; Guests</strong></p>
+</div>
+<p>Ball Room 4 - We welcome &quot;I Love New Year&#39;s&quot;</p>
+<p><strong>James McLaughlin &amp; Guests</strong></p>
+<p>The VIP Areas hosted by Alist Fashion</p>
+<div>
+ <strong>Live PA&#39;s include Bongo Pete on Percussion / Mikee Base on Guitar / Miles on Sax + a very special secret surprise midnight guest TBA</strong></div>]]></lineup>
+                <description contentType="text/html"><![CDATA[<pre wrap="">
+</pre>
+<p class="western"></p>
+<div>
+ <div>
+ &ldquo;THE SECRET AGENTS&#39; BALL 2012&quot;</div>
+ <div>
+  </div>
+ <div>
+  </div>
+ <div>
+  </div>
+ <div>
+ Victor Simonelli (USA), Nicky Holloway, Brandon Block, Alex P &amp; Colin Dale</div>
+ <div>
+ @ The Kensington Close Hotel &amp; Spa, NYE, 8pm-4am</div>
+<br />
+ <div>
+  </div>
+ <div>
+  </div>
+ <div>
+ After a year&rsquo;s rest, the legendary showstopper that has provided endless entertainment for New Year&rsquo;s Eve revellers since its glamorous inauguration in 1997 is returning to Kensington. The Secret Agents Ball is a stunning production with an unsurpassed DJ line up and a renowned atmosphere which always puts emphasis on allure, decadence and music to die for. Best of all, the Kensington Close Hotel and Spa, home of the party for the past 14 years has undergone a &pound;40 million pound refurbishment making it one of the premiere venues in London and the destination to see in 2012.</div>
+ <div>
+<br />
+  </div>
+ <div>
+  </div>
+ <div>
+ &ldquo;The Secret Agents Ball&quot;... The Ultimate New Year&rsquo;s Eve Party... Your mission for NYE, should you choose to accept is to party in an exclusive Hotel and enjoy the following:</div>
+<br />
+ <div>
+  </div>
+ <div>
+  </div>
+ <div>
+ &bull; Champagne &amp; canap&eacute; reception</div>
+ <div>
+ &bull; 4 rooms of music for 1500 people in fancy dress</div>
+ <div>
+ &bull; Top DJs, PA&rsquo;s, Casino, Performers and a very special midnight countdown</div>
+ <div>
+ &bull; Amazing new sound &amp; light shows with a Function One Sound System</div>
+ <div>
+ &bull; Extended opening till 4am followed by secret after-party</div>
+ <div>
+ &bull; Fast-track entry / extra bars and table service to avoid waits</div>
+ <div>
+ &bull; 4 star hotel rooms available on site, be hassle free of travel this NYE &amp; enjoy a late check-out at 2pm with a complimentary brunch.</div>
+ <div>
+  </div>
+ <div>
+  </div>
+ <div>
+<br />
+ There&#39;s only one way to come prepared for The Secrets Agents Ball 2012, think to the spy movies of the past, presents and future, your favourite secret agents or baddies...xXx, Bloefelds, Austin Powers, Nick Furys, Ethan Hunts, T.R Devlins, Jason Bourne&rsquo;s and of course don&rsquo;t forget Mr Kiss Kiss Bang Bang himself. Be as daring or as subtle as you please with the theme, but remember - those in outrageous costume...Always have much more fun!</div>
+ <div>
+  </div>
+ <div>
+  </div>
+ <div>
+<br />
+ As the evening sets off, delight in our complimentary champagne and canap&eacute; reception prepared specially by our Michelin chefs and enjoy as the entertainment begins. Make your way to one of our four dance floors where you can dance the night away to music both old and new from House to Funky Vocal Electro and Disco to Club Classics. Flying in from Brooklyn, New York, USA will be the Legendary DJ/Producer Victor Simonelli, with support from original Ibiza Founder Nicky Holloway, London favourites Brandon Block, Alex P &amp; Colin Dale.</div>
+ <div>
+  </div>
+ <div>
+  </div>
+ <div>
+<br />
+ In true secret agent style, try your luck at a hand of Black Jack or a Game of Roulette in our very own Casino Royal, where you can bluff your way into the New Year, swap glances with impeccably groomed enemy agents at the table and sip champagne. All this glitz and glamour is likely to go to your head and if previous years are anything to go by, the night will have become part of a New Year&rsquo;s legend by the time the Midnight PA counts in to 2012!</div>
+ <div>
+ &emsp;</div>
+</div>]]></description>
+                
+                <venue name="kensington-close-hotel-and-spa" title="Kensington Close Hotel and Spa">
+                    <address><![CDATA[The Kensington Close Hotel
+Wrights Lane
+Kensington
+London]]></address>
+                    <postcode><![CDATA[W8 5SP]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/secretagentball-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/secretagentball-400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00033930" 
+                           min="1" 
+                           max="10" 
+                           priceFace="25.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014209">
+            <title><![CDATA[ F R E A K A D E L I K ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/it/2011-12/31/-9733-f-9679-r-9679-e-9679-a-9679-k-9679-a-9679-d-9679-e-9679-l-9679-i-9679-k-973</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/it/2011-12/31/-9733-f-9679-r-9679-e-9679-a-9679-k-9679-a-9679-d-9679-e-9679-l-9679-i-9679-k-973</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-07T13:14:49+00:00</date>
+                    <date type="publish">2011-12-06T17:05:00+00:00</date>
+                    <date type="expires">2011-12-31T13:00:00+00:00</date>
+                    <date type="starts">2011-12-31T21:00:00+00:00</date>
+                    <date type="ends">2012-01-01T11:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><u><strong>FULL ON STAGE</strong></u></p>
+<p>&#9658; TRISTAN - UK - SPECIAL 4 HOURS LIVE SET (Nano Records)</p>
+<p>&#9658; ANIMATRONICA - IT (Mk Rec)</p>
+<p>&#9658; MARIO BROSS - IT (Mk Rec.)</p>
+<p>&#9658; PULSAR - IT (Otturbatoidi tribe)</p>
+<p>&#9658; METHAPHASE - UK (Veleno Lab.)</p>
+<p><u><strong>PROGRESSIVE STAGE</strong></u></p>
+<p>&#9658; TIME IN MOTION - DK - FIRST TIME IN ITALY - (Iono Music)</p>
+<p>&#9658; SHYISMA - IT (Iono Music)</p>
+<p>&#9658; METROYD - IT (Mk Rec.)</p>
+<p>&#9658; SUBLIMINAL POTION - IT (Mk Rec.)</p>
+<p>&#9658; ERRO - IT (Psy Fly Proj)</p>
+<p>&#9658; DIGITAL IMPULSE - IT (AudioLoad Music)</p>
+<p>&#9658; ALION - IT (Digital Nature Rec.)</p>
+<p>&#9658; SOLARIS PHASE - IT (Mk Rec.)</p>
+<p>&#9658; TRIP - IT (Solarsive Rec.)</p>
+<p>&#9658; FRASCKY - IT (Earthbreaker)</p>
+<p><strong><u>DARK STAGE</u></strong></p>
+<p>&#9658; TRIPPYHIPPIES - H - FIRST TIME IN ITALY - (Psybaba Records)</p>
+<p>&#9658; PEACE-KA - IT (Mind Funk Music)</p>
+<p>&#9658; VIRTUANOISE - IT (Noise Poison)</p>
+<p>&#9658; ASSAULT JUNKIES - IT</p>
+<p>&#9658; INSTINCT WAVE - IT (Indipendent)</p>
+<p><strong><u>FULLON STAGE</u></strong></p>
+<p>&#9658; MARKAYN (Mk Rec.)</p>
+<p>&#9658; IL PREZ (Otturbatoidi tribe)</p>
+<p>&#9658; PULSAR (Otturbatoidi tribe)</p>
+<p>&#9658; MICHEL (Otturbatoidi tribe)</p>
+<p>&#9658; OMEGADELTA (Mk Rec.)</p>
+<p>&#9658; JIMMY 9 (Veleno Lab.)</p>
+<p>&#9658; PSY BOY (Vee Prod.)</p>
+<p>&#9658; CANSAS CITY (Psy Fly Project)</p>
+<p>&#9658; ELECTRICITY (Otturbatoidi Tribe)</p>
+<p>&#9658; OKTOPUSS (Illegal Noise)</p>
+<p>&#9658; ZIGHY (Crush In Goa)</p>
+<p>&#9658; KARMALOGIC (Happy Family)</p>
+<p>&#9658; MAIKY (Mk Rec.)</p>
+<p>&#9658; CISCO (O.W.T. Family)</p>
+<p>&#9658; JOYL (ArTrance Crew)</p>
+<p><strong><u>PROGRESSIVE STAGE:</u></strong></p>
+<p>&#9658; CYRILLO (Psy Fly Project)</p>
+<p>&#9658; TK (Mk Rec.)</p>
+<p>&#9658; JUKAS (Psy Fly Project)</p>
+<p>&#9658; EKTOR (K-Tribe)</p>
+<p>&#9658; FLOYD (Psy Fly Project)</p>
+<p>&#9658; KAOS (Otturbatoidi)</p>
+<p>&#9658; NEMO (Otturbatoidi tribe)</p>
+<p>&#9658; RONNY (Psy Fly Project)</p>
+<p>&#9658; DALLO (Psy Fly Project)</p>
+<p>&#9658; RAVEHEART (Evil Corp)</p>
+<p>&#9658; RUDY (Evil Corp)</p>
+<p>&#9658; MARINO (Electronicexperience)</p>
+<p>&#9658; JAMY (Electronicexperience)</p>
+<p>&#9658; MAHORY (ArTrance Crew)</p>
+<p><strong><u>DARK STAGE:</u></strong></p>
+<p>&#9658; LOVA</p>
+<p>&#9658; PSYLO</p>
+<p>&#9658; KRISTIAN (Freakadelik Crew)</p>
+<p>&#9658; KRIMINALCODE (Freakadelik Crew, O.W.T.)</p>
+<p>&#9658; SHAMANIK PROJECT</p>
+<p>&#9658; POSITRON (Electricmoon Records UK / Solteri Crew)</p>
+<p>&#9658; GROUGE GUITAR MIND</p>
+<p><strong><u>TRANCE STAGE:</u></strong></p>
+<p>&#9658; MANUEL LE SAUX</p>
+<p>&#9658; WILLIAM P (Fraction Records)</p>
+<p>&#9658; IMPOSSIBLE</p>
+<p>&#9658; RIGEL (From MTM)</p>
+<p>&#9658; MICHEL LA VIE feat. SILVIE LANOIR - LIVE - (Queen Of Clubs Records)</p>
+<p>&#9658; B&amp;P</p>
+<p>&#9658; ALEX JOHNSON</p>
+<p>&#9658; NAMBO (From OT - Piramid Power)</p>
+<p>&#9658; WORKINTRANCE</p>
+<p><strong><u>DECO&amp;VISUAL:</u></strong></p>
+<p>&#9658; SHOOM - LT</p>
+<p>&#9658; PSYCHO</p>
+<p>&#9658; PSY FLY PROJECT</p>
+<p>&#9658; OTTURBATOIDI TRIBE</p>
+<p>- - - - -</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<div>
+ MK RECORDS, ZOOM CLUB, PSY FLY PROJECT, OTTURBATOIDI TRIBE and ART OF TRANCE presents:</div>
+<div>
+  </div>
+<p>&#9733; F &#9679; R &#9679; E &#9679; A &#9679; K &#9679; A &#9679; D &#9679; E &#9679; L &#9679; I &#9679; K &#9733;</p>
+<br />
+<div>
+ ___ 4 STAGE ___</div>
+<div>
+ <br />
+ 1) &#9556;&#9658; FULL ON<br />
+ <br />
+ 2) &#9556;&#9658; PROGRESSIVE MINIMAL<br />
+ <br />
+ 3) &#9556;&#9658; DARK<br />
+ <br />
+ 4) &#9556;&#9658; TRANCE</div>
+<div>
+  </div>
+<div>
+ Saranno 24 ore dedicate al Popolo della Trance Music, 4 stage dove si alterneranno oltre 40 dj della scena Trance internazionale e 20 esibizioni live.</div>
+<div>
+  </div>
+<div>
+ Un Capodanno di assoluto interesse internazionale.</div>
+<div>
+  </div>
+<div>
+ &#9658;4 STAGE</div>
+<div>
+ &#9658;22 LIVE ACTS</div>
+<div>
+ &#9658;40 DJ&#39;S SET</div>
+<div>
+ &#9658;MARTIN W 8 SOUND SYSTEM 20.000 WATT</div>
+<div>
+ &#9658;CLEAR SOUND SOUND SYSTEM 25.000 WATT</div>
+<div>
+ &#9658;POSEIDON SOUND SYSTEM 10.000 WATT</div>
+<div>
+ &#9658;MEGA FLUO DECORATIONS</div>
+<div>
+ &#9658;NEW DECORATIONS AND NEW BACKDROPS</div>
+<div>
+ &#9658;LASER SHOW</div>
+<div>
+ &#9658;20 MOVING HEAD</div>
+<div>
+ &#9658;MEGA SCREEN</div>
+<div>
+ &#9658;PSYVIDEO</div>
+<div>
+ &#9658;ROBOT LIGHT SHOW</div>
+<div>
+ &#9658;NEW LIGHTS</div>
+<div>
+ &#9658;SMOKE MACHINE</div>
+<div>
+ &#9658;PSY BAR</div>
+<div>
+ &#9658;CD SHOP</div>
+<div>
+ &#9658;MEDICAL SERVICE</div>
+<div>
+ &#9658;FOOD AREA</div>
+<div>
+ &#9658;FREE PARKING</div>
+<div>
+  </div>
+<div>
+ NAVETTA GRATUITA DALLA STAZIONE DEI TRENI !!!!!!!</div>
+<div>
+  </div>
+<div>
+ - - - - -</div>]]></description>
+                
+                <venue name="zoom" title="Zoom">
+                    <address><![CDATA[Via Enrico Mattei, 50]]></address>
+                    <postcode><![CDATA[]]></postcode>
+                    <country><![CDATA[IT]]></country>
+                </venue>
+                
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/freakadelik-31dicembre11.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/freakadelik-31dicembre11.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034877" 
+                           min="1" 
+                           max="10" 
+                           priceFace="3.00" 
+                           priceToPay="20.00" 
+                           currencyChar="&amp;#8364;" 
+                           currencyCode="EUR" 
+                           currency="2"><![CDATA[E-Ticket con ingresso + 2 drinks]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014224">
+            <title><![CDATA[ Empire State of Mind, New Years Eve 2011 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/empire-state-of-mind-new-years-eve-2011</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/empire-state-of-mind-new-years-eve-2011</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-08T13:16:37+00:00</date>
+                    <date type="publish">2011-12-08T12:44:00+00:00</date>
+                    <date type="expires">2011-12-31T20:00:00+00:00</date>
+                    <date type="starts">2011-12-31T21:00:00+00:00</date>
+                    <date type="ends">2012-01-01T04:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><strong>Dj Suave </strong>(Xclusive Touch)</p>
+<p><strong>Dj 2 </strong>(Xclusive Touch)</p>
+<p>Mixing a cool blend of Funky House, RnB &amp; Hip-hop (room 1) and House, ol&#39; skool and club classics (room 2)</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>A cool and trendy party full of fun, style &amp; charisma, this is the New Year event guaranteed to deliver. New York is the theme for the evening, a city known for its food, fashion and most importantly incredible parties!</p>
+<p class="p1">
+ On 31st December 2011 Revolution, America Square will transform into a New York paradise with famous landmarks and themed props throughout the venue. Staff will dress as local residents including NYPD officers, NY Yankee pitchers and a host of other costumes. There is a fantastic cheerleading display arranged with pom pom&#39;s and beautiful performers to toast the New Year.</p>
+<p class="p1">
+ Be sure to attend early to enjoy our elegant champagne reception between 2100-2145 and for those with the stamina to party late complimentary NY pizza slices will be served at 3am!</p>
+<p class="p1">
+ Situated in the iconic America Square building, this stunning vodka cocktail bar can hold over 700 guests across its two rooms! Set beneath the arches of Fenchurch Street Station, Revolution mixes opulent Manhattan design with a twist of Soviet spirit. Each of the two arches has its own unique feeling, from the intimate speakeasy arch that harks back to the days of Prohibition and Moonshine to the imposing entrance arch mixing contemporary design and comfort.</p>
+<p class="p1"></p>
+<p class="p1">
+ <strong>- New York Citys Themed Party</strong></p>
+<p class="p1">
+ <strong>- 800 capacity</strong></p>
+<p class="p1">
+ <strong>- Costumed staff</strong></p>
+<p class="p1">
+ <strong>- Cheerleaders</strong></p>
+<p class="p1">
+ <strong>- Champagne reception 2100-2145</strong></p>
+<p class="p1">
+ <strong>- Complimentary New York Pizza 3AM</strong></p>
+<p class="p2">
+ <strong>- 2 separate rooms of music</strong></p>]]></description>
+                
+                <venue name="revolution" title="Revolution">
+                    <address><![CDATA[1 America Square]]></address>
+                    <postcode><![CDATA[ EC3N 2LS]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="xclusive-touch"><![CDATA[Xclusive Touch]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/empirestateofmind-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/empirestateofmind-400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034900" 
+                           min="1" 
+                           max="10" 
+                           priceFace="30.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014227">
+            <title><![CDATA[ Pink Panther Party NYE 2011 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/pink-panther-party-nye-2011</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/pink-panther-party-nye-2011</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-08T14:43:38+00:00</date>
+                    <date type="publish">2011-12-08T14:08:00+00:00</date>
+                    <date type="expires">2011-12-31T20:00:00+00:00</date>
+                    <date type="starts">2011-12-31T21:00:00+00:00</date>
+                    <date type="ends">2012-01-01T04:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><strong>On the decksWest End favourite and Bond resident DJ Simba will feature playing a special New Years set of House, Funky, RnB and Club Classics.</strong></p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Join us NYE 2012 @ Bond Nightclub for the most original and entertaining party in the City!</p>
+<p class="p1">
+ This year Bond has emerged as one of London&rsquo;s hottest clubs and itsNYE showcase will certainly be a spectacular event. The theme is &lsquo;Pink Panther&rsquo;, a night of style and seduction in line with the usual Bond class. The evening will be packed full of attractions including a professional saxophonist, pink panther cupcakes, costume dancers and a fantastic bubble machine to welcome the New Year. Expect plenty of surprises with Giant Panther hand prints welcoming you in the lobby and futuristic projections surrounding the tables throughout the venue.</p>
+<p class="p1">
+ The party begins in style with a complimentary champagne reception between 2100-2200 so guests are advised to arrive early. On the decksWest End favourite and Bond resident DJ Simba will feature playing a special New Years set of House, Funky, RnB and Club Classics.</p>
+<p class="p1">
+ Fancy a VIP table? Each booking comes with queue jump, waitress service, and a discounted ticket price.</p>
+<p>Bond is a remarkable venue with a futuristic interior design on par with its beautiful clientele. The club is surrounded by computer controlled visual projections and can be tailored to project entire landscapes throughout the club or to personalise each VIP booth with individual themes. By dancing, moving or even putting your hands up in the air, the visuals interact and move with you. It is this attention to detail that makes Bond the perfect destination to welcome the New Year.</p>
+<p><em>-</em><strong> Full Pink Panther Decorations</strong></p>
+<p class="p1">
+ <strong>- Live Saxophonist</strong></p>
+<p class="p1">
+ <strong>- Pink Panther Cupcakes</strong></p>
+<p class="p1">
+ <strong>- Bubble Machine</strong></p>
+<p class="p1">
+ <strong>- Dancers</strong></p>
+<p class="p1">
+ <strong>- Champagne reception 2100-2200</strong></p>
+<p><strong>-</strong><em><strong> </strong></em><strong>VIP</strong><strong> tables with </strong><em><strong>State of the Art Computer Technology and</strong></em><strong>waitress service</strong></p>]]></description>
+                
+                <venue name="bond" title="Club Bond">
+                    <address><![CDATA[24 Kingly Street
+London]]></address>
+                    <postcode><![CDATA[W1B 5QB]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="xclusive-touch"><![CDATA[Xclusive Touch]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/bondnye-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/bondnye-400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034905" 
+                           min="1" 
+                           max="10" 
+                           priceFace="40.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00013663">
+            <title><![CDATA[ Bodymove presents NYe Rio Revellion 2011  ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/bodymove-presents-nye-eves-white-gold-rio-carnival-2011</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/bodymove-presents-nye-eves-white-gold-rio-carnival-2011</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-13T15:25:17+00:00</date>
+                    <date type="publish">2011-09-22T23:00:00+00:00</date>
+                    <date type="expires">2011-12-31T18:00:00+00:00</date>
+                    <date type="starts">2011-12-31T20:00:00+00:00</date>
+                    <date type="ends">2012-01-01T14:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<pre wrap="">
+</pre>
+<div>
+ <strong>Main Room: </strong></div>
+<ul>
+ <li>
+ Karizma,</li>
+ <li>
+ Audiowhores and</li>
+</ul>
+<div>
+ <strong>Room 2:</strong></div>
+<ul>
+ <li>
+ Anderson Noize</li>
+ <li>
+ Tomasuchy aka Tomas Tesla</li>
+ <li>
+ Darren Gregory</li>
+ <li>
+ Justin Time</li>
+ <li>
+ Digital Mike</li>
+ <li>
+ Boletz</li>
+ <li>
+ Zero C</li>
+ <li>
+ Dani D</li>
+</ul>
+<br />
+<div>
+ <strong>Brazilian Big Top in the Garden hosted by Club Popozuda and</strong></div>
+<div>
+ <strong>featuring after midnight Live: </strong></div>
+<ul>
+ <li>
+ The Bumps (Popozuda)</li>
+ <li>
+ DJ Carioca (Rio de Janeiro)</li>
+ <li>
+ Rhythms Of The City</li>
+ <li>
+ Minibloco</li>
+ <li>
+ plus Percussionist, and Latin Fusion Dancers</li>
+</ul>
+<p><strong>Deep Down:</strong></p>
+<ul>
+ <li>
+ Rodrgo Sampa</li>
+ <li>
+ M.A.N.K</li>
+ <li>
+ JD Sasha</li>
+ <li>
+ Andre Di Napoli</li>
+ <li>
+ Jay Tempest</li>
+ <li>
+ Jonathan Shettart</li>
+ <li>
+ Jon Stevens</li>
+ <li>
+ Alysson Costa</li>
+ <li>
+ D&#39;Vinci</li>
+</ul>
+<div>
+ <strong>Apothecary:</strong></div>
+<ul>
+ <li>
+ Candy Bass Records</li>
+ <li>
+ Nightlife London</li>
+</ul>]]></lineup>
+                <description contentType="text/html"><![CDATA[<div>
+ <strong>BODYMOVE presents the WHITE &amp; GOLD NYE BALL</strong></div>
+<div>
+ </div>
+<div>
+ featuring a BRAZILIAN BIG TOP with CLUB POPOZUDA and Live Bands,</div>
+<div>
+ Rhythms Of The City and Minibloco</div>
+<div>
+ </div>
+<div>
+ + SPECIAL GUESTS: KARIZMA, ANDERSON NOIZE, AUDIOWHORES</div>
+<div>
+ </div>
+<div>
+ Saturday December 31st</div>
+<div>
+ </div>
+<div>
+ Pulling out all the stops production and decor wise, Egg will be transformed into a scene from Rio&rsquo;s exuberant NYE, bathed in white and gold, as Bodymove creates its second magical New Year&rsquo;s Eve party in London.</div>
+<div>
+ </div>
+<div>
+ Using Rio as inspiration, Bodymove set up a Brazilian Big Top in Egg&rsquo;s heated Garden, hosted by Club Popozuda joined just after midnight by Live bands, Rhythms Of The City and Minibloco plus a troupe of percussionists and latin fusion dancers, central to the whole NYE party.</div>
+<div>
+ </div>
+<div>
+ </div>
+<p><iframe allowfullscreen="" frameborder="0" height="246" src="http://www.youtube.com/embed/3VGseaNkSmo" width="425"></iframe></p>
+<div>
+ </div>
+<div>
+ Rio de Janeiro is known the world over as one of the most breathtaking and thrilling places you could possibly imagine celebrating a New Year&#39;s Eve. Everyone dresses to impress in fabulous whites, and the whole city crackles in the infectious electric carnival atmosphere.</div>
+<div>
+ </div>
+<div>
+ The Big Top fires up to Club Popozuda&rsquo;s bold bootyshaking blend of the finest, freshest music from around the world courtesy of resident DJ The Bumps and special guest, RdJ&rsquo;s DJ Carioca, includes hip hop, reggaeton and dancehall. With live samba, percussionists and dancers, feel the heat as 2012 starts in jumping Brazilian style. Global bootyshaking beats.</div>
+<div>
+ </div>
+<div>
+ Exclusive mixtapes from Club Popozuda:</div>
+<div>
+ </div>
+<div>
+ <object height="81" width="100%"><param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" /><param name="allowscriptaccess" value="always" /><embed allowscriptaccess="always" height="81" src="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" type="application/x-shockwave-flash" width="100%"></embed></object><a href="http://soundcloud.com/clubpopozuda/mixtape-20-flore">Club Popozuda Mixtape #20 (Flore)</a> by <a href="http://soundcloud.com/clubpopozuda">Club Popozuda</a>
+ <div>
+ </div>
+ <div>
+ </div>
+ <div>
+ As well as the Rio-themed Brazilian Big Top, Bodymove lines up some leading musical talents, leaders in their own different fields, including Karizma, Anderson Noize, Audiowhores and resident decksmith, Femi B.</div>
+ <div>
+ </div>
+ <div>
+ Chris &ldquo;Karizma&rdquo; Clayton is self diagnosed as &ldquo;a.d.d. with music,&rdquo; and has always aspired to be a producer who &ldquo;keeps changing and moving on to different things for the hallenge.&rdquo; He released his debut full-length, &lsquo;A Mind of Its Own&rsquo;, for the R2 label, as well as mix CDs for notable house labels. NRK and Soul Heaven. Karizma Remixes have appeared on a brilliant spectrum of labels, including Defected, Yoruba, Sonar Kollektiv, Compost, and Raw Fusion. Karizma is joined by Defected&rsquo;s hot UK duo, Audiowhores, also favourites at Bodymove events and known for their explosive house quaking sounds and ability to</div>
+ <div>
+ raise the roof. Bodymove resident and Strictly Rhythm producer, Femi B rounds off the Bodymove All Stars in the Main Room.</div>
+ <div>
+ </div>
+ <div>
+ Heading up Room 2 is Anderson Noize, who has pioneered the electronic music scence in Brazil, inspired by the explosion of Acid House on the club scene. From running clubs, dj-ing to making amazing CD mixes, Anderson continues to break all the rules and inspire with his emotive electronic sounds that continually top the Beatport charts and dancefloors around the world. Lining up on the decks alongside Anderson Noize is Tomasuchy aka Tomas Tesla, Darren Gregory &amp; Justin Time, Digital Mike, Boletz, Zero C and Dani C. In Egg&rsquo; club within a club The Apothecary, Candy Bass Records and Nightlife London takeover with their own brand of end of year sounds and surprises as Egg and Bodymove celebrate another gripping year of forward thinking clubbing and dance music.</div>
+</div>]]></description>
+                
+                <venue name="egg" title="Egg">
+                    <address><![CDATA[200 York Way, Kings Cross, London]]></address>
+                    <postcode><![CDATA[N7 9AP]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="bodymove"><![CDATA[Bodymove]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/bodymove-nye-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/bodymove-nye-400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034685" 
+                           min="1" 
+                           max="10" 
+                           priceFace="35.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Standard release)]]></price>
+                    
+                    
+                    
+                    <price id="00033895" 
+                           min="1" 
+                           max="10" 
+                           priceFace="25.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Earlybird release)]]></price>
+                    
+                    
+                    
+                    <price id="00034076" 
+                           min="1" 
+                           max="10" 
+                           priceFace="90.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[VIP (Fast track dedicated entrance, Champagne reception & canapes, Exclusive area until 1am + Entry to After Party)]]></price>
+                    
+                    
+                    
+                    <price id="00033894" 
+                           min="1" 
+                           max="10" 
+                           priceFace="20.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Early early bird release)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014240">
+            <title><![CDATA[ Lost/Cosmic NYE Party ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/lost-cosmic-nye-party</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/lost-cosmic-nye-party</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-14T11:29:04+00:00</date>
+                    <date type="publish">2011-12-13T18:02:00+00:00</date>
+                    <date type="expires">2011-12-31T19:00:00+00:00</date>
+                    <date type="starts">2011-12-31T20:00:00+00:00</date>
+                    <date type="ends">2012-01-01T12:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><strong>JUAN ATKINS (exclusive uk date)</strong></p>
+<p><strong>STEVE BICKNELL</strong></p>
+<p><strong>CHRIS CARRIER</strong></p>
+<p><strong>TOMOKI TAMURA</strong></p>
+<p><strong>TORU </strong></p>
+<p><strong>more t.b.c.</strong></p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Headlining is one of the true originators of techno music, a man as Detroit as they come and one of the Belleville Three: Mr Juan Atkins. Releasing music under his own name as well behind the aliases Cybotron, Model 500 and Infiniti, Juan is responsible for producing many of the timeless Detroit classics that we still love today and that have inspired millions. Djing for 30 years he has developed a knowledge of the that few can match. A LOST veteran, we look forward to have Juan throwing it down for us!</p>
+<br />
+<p>Chris Carrier from France. Chris played for Holic as part of their Robsoul Records showcase and more than impressed. With over 100 production credits under his belt, he&rsquo;s been an underground icon for the past decade. Never chasing the limelight, almost darting around it in all manner of guises and musical styles, Carrier is nevertheless revered today as one of the most prolific and gifted producers on the dance scene today. With 2011 being one of his busiest years for DJ gigs it seems we aren&rsquo;t the only one&rsquo;s he has been impressing.</p>
+<br />
+<p>Steve Bicknell is a veteran DJ and producer of the early UK dance music scene and a musical visionary, using his LOST events as a platform to showcase groundbreaking music. Producing under the moniker LOST for Perfecto and Mute Steve went on to establish Cosmic Records and subsidiaries Clubtracks, Lost Recording and ID, giving voice to productions from producers such as Luke Slater, DJ Rush, Tyree Cooper, DJ Funk,Jay Denham and many more. Lost recording being indicative of the seminal LOST sound. Such was Steve&rsquo;s vision that Lost was first to book latterday luminaries such as Jeff Mills, Richie Hawtin, Dan Bell and Robert Hood. As a truly international DJ, Steve has traveled the world with his unique representation of Acid House, Chicago House, Techno and for more experimental spacebase sets a firm grasp of everything from reggae, to italo, to broken beat.</p>
+<br />
+<p>Tomoki Tamura hails from Osaka, Japan, where he built his steadfast reputation as one of the country&rsquo;s most promising electronic DJs. Resident in London since 2004 he has continued to rock the dance floor throughout the capital, hosting Holic in London alongside a residency at Womb, Japan. Tomoki&#39;s successful mix albums &#39;The Groove Cafe Series&#39; led to his own productions released on Satoshi Tomiie&#39;s Saw Recordings, Germany&#39;s Plastic City and New York&#39;s Nite Grooves amongst others. A true, underground music ambassador.</p>
+<br />
+<p>This marathon warehouse event brought together by LOST and HOLIC starts at 8 and finishes mid-day 1st January, more t.b.c. check the website for updates.</p>
+<p>www.lost.co.uk</p>]]></description>
+                
+                <venue name="secret-east-london-location" title="Secret East London Location">
+                    <address><![CDATA[Secret]]></address>
+                    <postcode><![CDATA[E1]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="lost"><![CDATA[Lost]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/lostnye-400.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/lostnye-400.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034937" 
+                           min="1" 
+                           max="10" 
+                           priceFace="20.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
+                    
+                    
+                    
+                    <price id="00034936" 
+                           min="1" 
+                           max="10" 
+                           priceFace="15.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Early Bird)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+    </events>
+</ticketlogic>
+
+
+
+<!--  
+    Add request parameter 'help=true' for additional search parameter help
+-->
+
