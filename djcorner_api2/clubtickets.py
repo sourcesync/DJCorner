@@ -168,6 +168,7 @@ def pop_from_str(str):
 				print "INFO: parsed event image->", imgpath
 
 		# Add the event...
+		print "INFO: adding event->", ename, vendorid
 		[ status, eoid ] = event.add_event( None, ename, vendorid )
 		if status == False:
 			print "WARNING: Add event returned false - probably already have this event..."
@@ -208,7 +209,7 @@ def pop_from_str(str):
 		print "INFO: event details from db->", evt
 
 		# Do generic event fixup...
-		if ( not presets.fixup_event( evt ) ):
+		if ( not presets.fixup_event( evt, True ) ):
                         print "ERROR: cannot fixup event..."
                         return False
 

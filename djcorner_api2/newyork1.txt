@@ -8,7 +8,7 @@
 
 
 
-<ticketlogic version="2.0" session="5625FB9CF6BC1AF49A4782DBE7CC1F63.COMP3" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+<ticketlogic version="2.0" session="FF80BB682A8ACA5B03B33BCA29F8A683.COMP2" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
     <events title="EventsList">
         
         
@@ -20,7 +20,7 @@
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-09T02:36:41+00:00</date>
+                    <date type="updated">2011-12-21T15:02:02+00:00</date>
                     <date type="publish">2011-12-09T00:00:00+00:00</date>
                     <date type="expires">2012-01-21T17:00:00+00:00</date>
                     <date type="starts">2012-01-21T21:00:00+00:00</date>
@@ -173,6 +173,17 @@
                 <prices>
                     
                     
+                    <price id="00035057" 
+                           min="1" 
+                           max="10" 
+                           priceFace="16.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket Codekontrol Weekend Ticket]]></price>
+                    
+                    
+                    
                     <price id="00034912" 
                            min="1" 
                            max="10" 
@@ -188,6 +199,304 @@
         </event>
         
         
+        <event id="00014259">
+            <title><![CDATA[ Technicolour V ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2012-01/20/technicolour-v</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2012-01/20/technicolour-v</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-21T15:01:25+00:00</date>
+                    <date type="publish">2011-12-17T00:00:00+00:00</date>
+                    <date type="expires">2012-01-20T17:00:00+00:00</date>
+                    <date type="starts">2012-01-20T22:00:00+00:00</date>
+                    <date type="ends">2012-01-21T06:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">18</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p><strong>Basement [Techhouse//House]<br />
+ <br />
+ Namito [Greenhorn//Great Stuff//Kling Klong]<br />
+ Antonio Vinciguerra [House Republic]<br />
+ Deegan (Decksavers)<br />
+ Jack Brazzo (Decksavers)<br />
+ Oli_N [Release Sustain]<br />
+ Soundbyte [Codekontrol]<br />
+ <br />
+ Terrace [DnB//Dubstep//Breakbeat]<br />
+ Hosted by Splash The Cash Promotion <br />
+ <br />
+ Profile &amp; Funsta (bar:rage set)<br />
+ Funky Flirt (kool FM London)<br />
+ Origin (killa bytes)<br />
+ Spice (raveguide)<br />
+ DJ S.O. &amp; Speech (Nu Era Set)<br />
+ Resistence Fammo<br />
+ Dirty Toyz (Dubstep//Breakbeat Set) </strong></p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p><strong>Oh my oh my...<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ Codekontrol are back at Egg once again for another installment of our Technicolour series... this time its number 5 (V).<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ The increase in demand for this now established night has forced our hand to bring you yet more Codekontrol flavour, but this time with a twist!!<br />
+ <br />
+ Tech-house is still the name of the game for all you Codekontrol regulars and you already know what to expect from our superb resident Soundbyte. But have we got a treat in store for you..!!<br />
+ <br />
+ Namito is taking the world by storm at the moment, and we have been lucky enough (or you have been lucky enough) to secure another set from him. We personally cannot wait for this, because, as always, Namito&#39;s sets seem to just get better and better every time he plays for us. Add into the mix Antonio Vinciguerra from House Republic and the Decksavers crew consisting of Deegan and Jack Brazzo, then add Oli_N from Release Sustain... you have a main course fit for any king, let alone a single nightclub on 1 night.<br />
+ <br />
+ However... if you like to fine dine in the terrace, then yet again we have some exquisite flavours for you all to sample. Drum &amp; Bass, Dubstep and Breakbeat is the name of the game here...!! What an incredible line up (if i dont mind saying so myself (JM)). Hailing from across the UK and beyond we have some of the finest DJs that you could possibly shake a pointy stick at!! I believe the line-up speaks for itself and needs no real further input from me on that score ;).<br />
+ <br />
+ So what are you waiting for?? We suggest that you get you tickets early for this one, as we are anticipating a sell-out night. Look out for the ticketing links and promotions on various pages on Facebook, Twitter, Resident Advisor and all the usual online ticket outlets. <br />
+ <br />
+ Basement [Techhouse//House]<br />
+ <br />
+ Namito [Greenhorn//Great Stuff//Kling Klong]<br />
+ Antonio Vinciguerra [House Republic]<br />
+ Deegan (Decksavers)<br />
+ Jack Brazzo (Decksavers)<br />
+ Oli_N [Release Sustain]<br />
+ Soundbyte [Codekontrol]<br />
+ <br />
+ Terrace [DnB//Dubstep//Breakbeat]<br />
+ Hosted by Splash The Cash Promotion <br />
+ <br />
+ Profile &amp; Funsta (bar:rage set)<br />
+ Funky Flirt (kool FM London)<br />
+ Origin (killa bytes)<br />
+ Spice (raveguide)<br />
+ DJ S.O. &amp; Speech (Nu Era Set)<br />
+ Resistence Fammo<br />
+ Dirty Toyz (Dubstep//Breakbeat Set) <br />
+ <br />
+ If you cannot make the night itself you can always stalk us on Livestream: <br />
+ <a href="http://www.livestream.com/codekontrol?t=453614" rel="nofollow nofollow" target="_blank">http://www.livestream.com/<wbr />codekontrol?t=453614</a><br />
+ <br />
+ So there is now no excuse for not joining us at this party. <br />
+ ;)</strong></p>
+<p><strong>           &lt;&lt;&lt;&lt;&lt;&lt; MORE INFO&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;</strong></p>
+<p><strong>GUESTLIST/CONCESSIONS: &#65533;13 b4 1am (Please get there early)</strong></p>
+<p><strong>NUS: &#65533;8 B412 - &#65533;10 After<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ TRANSPORT:<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ The EGG club is situated on 200 York Way, N7 9AX, near King&#65533;s Cross St. Pancras Station<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ The club is easily reachable by bus (#390), cab or ten minutes walk<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ For Table Reservations (4+) please mail:<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <a href="mailto:tables@codekontrolcrew.org?subject=Table%20Reservation">tables@codekontrolcrew.org</a><brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ or call 0754 5286 502<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ (Table Packages Available)<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ For Concession Please Send Names To<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <a href="mailto:glist@codekontrolcrew.org?subject=Technicolour%20V%20Glist">glist@codekontrolcrew.org</a><brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ THE ACCESS OF PEOPLE UNDER THE AGE OF 18 IS STRICTLY FORBIDDEN! NO ID NO ENTRY!<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ Join Our Mailing List:<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <a href="https://forms.sign-up.to/signup.php?fid=631&amp;pid=17490" rel="nofollow nofollow"lucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " target="_blank">https://forms.sign-up.to/<wbr />signup.php?fid=631&amp;pid=1749<wbr />0</a><brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ OR TEXT &quot;Party&quot; to 61211<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ Are You a DJ Join Our Newsletter for all Latest Updates &amp; Releases<brlucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " />
+ <a href="https://forms.sign-up.to/signup.php?fid=713&amp;pid=17490" rel="nofollow nofollow"lucida grande', tahoma, verdana, arial, sans-serif; font-size: 11px; line-height: 14px; text-align: left; " target="_blank">https://forms.sign-up.to/<wbr />signup.php?fid=713&amp;pid=1749<wbr />0</a></strong></p>]]></description>
+                
+                <venue name="egg" title="Egg">
+                    <address><![CDATA[200 York Way, Kings Cross, London]]></address>
+                    <postcode><![CDATA[N7 9AP]]></postcode>
+                    <country><![CDATA[GB]]></country>
+                </venue>
+                
+                
+                <promoter name="codekontrol-crew"><![CDATA[Codekontrol Crew]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c//image/200sq/c/technicolour.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c//image/200sq/c/technicolour.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034990" 
+                           min="1" 
+                           max="10" 
+                           priceFace="8.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket Early Bird]]></price>
+                    
+                    
+                    
+                    <price id="00035056" 
+                           min="1" 
+                           max="10" 
+                           priceFace="16.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket Codekontrol Weekend Ticket]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014242">
+            <title><![CDATA[ Cathouse Las Vegas NYE 3rd Annual Drink Till You Drop Party ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/cathouse-las-vegas-nye-3rd-annual-drink-till-you-drop-party</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/cathouse-las-vegas-nye-3rd-annual-drink-till-you-drop-party</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-14T17:24:41+00:00</date>
+                    <date type="publish">2011-12-14T17:07:00+00:00</date>
+                    <date type="expires">2012-01-01T01:00:00+00:00</date>
+                    <date type="starts">2012-01-01T03:00:00+00:00</date>
+                    <date type="ends">2012-01-01T13:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">21</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>Multiple DJs throughout the night playing hip hop, house, and top 40s</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Las Vegas is known year round as a party city, and on New Years eve the party gets louder and even better then every other day of the year. If you&#39;re looking for a Nightclub in sin city to spend New Years eve in, then look no further than Cathouse LV inside of the Luxor Hotel and Casino. Join us for our 3rd Annual Drink Till You Drop New Year&rsquo;s Eve Party, with the vegas strip&rsquo;s only 5 hour premium open bar at Cathouse Las Vegas.</p>
+<p>The Cathouse is the top choice for those looking to party in Las Vegas this New Years Eve with an unheard of open bar from 8 pm to 1am, as you alternate between Cathouse&rsquo;s LV sizzling Red Room and cool Blue Room with 4 rotating DJs spinning the best in top40, house, hiphop, electro and pop to titillate your senses and keep you partying till dawn. The Cathouse has plenty of packages to please any party goer whether a nightlife veteran or a tourist looking for the best experience on New Years Eve in the Las Vegas Strip.</p>
+<p>Located inside the Luxor Hotel and Casino, the Cathouse is the perfect place where the strip meets the bordello. With women and men from all over the world in attendance, what better way is there to to ring in the New Year? Dance and drinking the night away with some of the most beautiful people but be sure to book early, as this is one Las Vegas party that sell out each and every year.</p>
+<p>Pricing Options:</p>
+<p><strong>Open Bar Package inc:</strong></p>
+<p><open -="" admission="" bar="" drink="" p="" till="" you=""> </open></p>
+<p>(8) Hour New Year&#39;s Eve Extravaganza (8pm-4am)</p>
+<p>(5) Hours of PREMIUM Open Bar (9pm- 2am)</p>
+<p>Champagne Toast at Midnight</p>
+<p>Party Favors</p>
+<p>Multiple DJs throughout the night playing hip hop, house, and top 40s</p>
+<p><strong>Gold Table Package - $500</strong> +b/f</p>
+<p>INCLUDES all Premium Top Shelf Open Bar admission amenities listed above, plus:</p>
+<p>Special hors d&#39;oeuvre platter at your table</p>
+<p>(2) Bottles of Vodka</p>
+<p>(1) Bottle Champagne</p>
+<p>Assorted juices for mixers</p>
+<p>Cocktail waitress service</p>
+<p>Gratuity not included</p>
+<p>**Everyone in the group MUST purchase a General Admission Ticket**</p>
+<p>**There will be a Mandatory $50 Per Bottle Service Charge that will be assessed when you redeem your bottle tickets at the venue**</p>
+<p><strong>Platinum Table Package - $725</strong> +b/f</p>
+<p>INCLUDES all Premium Top Shelf Open Bar admission amenities listed above, plus:</p>
+<p>Special hors d&#39;oeuvre platter at your table</p>
+<p>(3) Bottles of Vodka</p>
+<p>(2) Bottle Champagne</p>
+<p>Assorted juices for mixers</p>
+<p>Cocktail waitress service</p>
+<p>Gratuity not included</p>
+<p>**Everyone in the group MUST purchase a General Admission Ticket**</p>
+<p>**There will be a Mandatory $50 Per Bottle Service Charge that will be assessed when you redeem your bottle tickets at the venue**</p>
+<p><strong>Centurion Table Package - $1650</strong> +b/f</p>
+<p>INCLUDES all Premium Top Shelf Open Bar admission amenities listed above, plus:</p>
+<p>Special hors d&#39;oeuvre platter at your table</p>
+<p>(3) Bottles of Vodka</p>
+<p>(2) Bottle Champagne</p>
+<p>Assorted juices for mixers</p>
+<p>Cocktail waitress service</p>
+<p>Gratuity not included</p>
+<p>**Everyone in the group MUST purchase a General Admission Ticket**</p>
+<p>**There will be a Mandatory $50 Per Bottle Service Charge that will be assessed when you redeem your bottle tickets at the venue**</p>
+<p><strong>Owner&rsquo;s Table Package &ndash; $2500</strong> + b/f</p>
+<p>INCLUDES all Premium Top Shelf Open Bar admission amenities listed above, plus:</p>
+<p>Special hors d&#39;oeuvre platter at your table</p>
+<p>Private roped off section for you and your friends (up to 15 guests) in the most coveted area of the nightclub</p>
+<p>(5) Bottles of Vodka</p>
+<p>(5) Bottle Champagne</p>
+<p>Assorted juices for mixers</p>
+<p>Cocktail waitress service</p>
+<p>Gratuity not included</p>
+<p>**Everyone in the group MUST purchase a General Admission Ticket**</p>
+<p>**There will be a Mandatory $50 Per Bottle Service Charge that will be assessed when you redeem your bottle tickets at the venue**</p>]]></description>
+                
+                <venue name="cathouse-at-the-luxor-hotel" title="Cathouse at the Luxor Hotel">
+                    <address><![CDATA[Cathouse LV ? 3900 Las Vegas Blvd South, Las Vegas Nevada]]></address>
+                    <postcode><![CDATA[89119]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="nycnewyearseve-com"><![CDATA[NYCNewYearsEve.com]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400_nye_cathouseluxor.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400_nye_cathouseluxor.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034948" 
+                           min="1" 
+                           max="10" 
+                           priceFace="2500.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (OWNERS Table Package - see event description for full details)]]></price>
+                    
+                    
+                    
+                    <price id="00034944" 
+                           min="1" 
+                           max="10" 
+                           priceFace="125.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (Open Bar - Drink Until You Drop - Admission)]]></price>
+                    
+                    
+                    
+                    <price id="00034945" 
+                           min="1" 
+                           max="10" 
+                           priceFace="500.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (GOLD Table Package - see event description for full details)]]></price>
+                    
+                    
+                    
+                    <price id="00034946" 
+                           min="1" 
+                           max="10" 
+                           priceFace="725.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (PLATINUM Table Package - see event description for full details)]]></price>
+                    
+                    
+                    
+                    <price id="00034947" 
+                           min="1" 
+                           max="10" 
+                           priceFace="1650.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (CENTURION Table Package - see event description for full details)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
         <event id="00013660">
             <title><![CDATA[ Avicii New Years Eve 2012 @ Pier 94 NYC ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/avicii-new-years-eve-2012-pier-94-nyc</url>
@@ -196,7 +505,7 @@
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-13T23:56:13+00:00</date>
+                    <date type="updated">2011-12-21T15:52:16+00:00</date>
                     <date type="publish">2011-09-22T04:00:00+00:00</date>
                     <date type="expires">2012-01-01T00:00:00+00:00</date>
                     <date type="starts">2012-01-01T02:00:00+00:00</date>
@@ -221,7 +530,7 @@
  <br />
  <em>A limited supply of General Admission tickets are on sale now.....</em></p>
 <p><strong>NB: Ticket Name should match that of Attendee and tickets purchased as a group must all attend together with photo ID as proof of identity.</strong></p>
-<p><strong>Resold tickets are invalid and will not be admitted. Beware Ticket Touts and buy only direct from this site for guarrenteed entry. </strong></p>
+<p><strong>Resold tickets are invalid and will not be admitted. Beware Ticket Touts and buy only direct from this site for guaranteed entry. </strong></p>
 <hr />
 <p><strong>VIP package details below:</strong></p>
 <p><u><strong>Open Bar Ticket</strong></u><br />
@@ -300,11 +609,33 @@ New York]]></address>
                 <prices>
                     
                     
+                    <price id="00034972" 
+                           min="1" 
+                           max="10" 
+                           priceFace="165.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (General Admission)]]></price>
                     
                     
                     
                     
                     
+                    
+                    
+                    
+                    
+                    
+                    
+                    <price id="00034915" 
+                           min="1" 
+                           max="2" 
+                           priceFace="1524.25" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP Raised VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -318,15 +649,6 @@ New York]]></address>
                            currency="3"><![CDATA[E-Ticket General Admission]]></price>
                     
                     
-                    
-                    <price id="00034915" 
-                           min="1" 
-                           max="2" 
-                           priceFace="1524.25" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#36;" 
-                           currencyCode="USD" 
-                           currency="3"><![CDATA[VIP Raised VIP Table for 4: See description for details - includes NY State Sales Tax]]></price>
                     
                     
                     
@@ -409,6 +731,664 @@ New York]]></address>
         </event>
         
         
+        <event id="00014261">
+            <title><![CDATA[ New Year at the Highline Ballroom ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/new-year-at-the-highline-ballroom</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/new-year-at-the-highline-ballroom</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-19T16:43:47+00:00</date>
+                    <date type="publish">2011-12-19T16:27:00+00:00</date>
+                    <date type="expires">2012-01-01T00:00:00+00:00</date>
+                    <date type="starts">2012-01-01T01:00:00+00:00</date>
+                    <date type="ends">2012-01-01T09:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">21</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>World Renowned DJ/ Actor DJ L</p>
+<p>Famed Percussionist Ami-O</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>This legendary dance club music venue which has a 900 plus-person-capacity space distinguishes itself from the rest of New York City&rsquo;s giants with exposed beams, lounge-worthy lighting, and a column-free main floor with a great and unobstructed line of sight whether you are in the upstairs VIP only mezzanine or the main dance floor.</p>
+<p>Celebrate this <strong>New Years Eve</strong> at one of NYC&rsquo;s true hidden gems right in the heart of the city&rsquo;s infamous meatpacking district. Bookings are consciously eclectic, but overall reflect the evolved vibe of the neighborhood with bling- and controversy-free hip-hop acts, mellow song-stresses, and veteran critical darlings, such as 50 cents, Amy Winehouse, Santana, Jay-Z and Stevie Wonder to name a few. In Short, there is no better venue to ring in the new year in new york city than club Highline Ballroom. Whether you are looking to dance the night away or lounge out in the private VIP sections, Highline has it all and we cordially invite you to celebrate this New Years Eve at this intimate space that allows patrons to feel like they&#39;re in the front row, even when they&#39;re stuck in the back. The minimalist, industrial feel of Highline Ballroom certainly adds a taste of the true essence of downtown New York&#39;s famed meatpacking district.</p>
+<p><strong>General Admission</strong><br />
+ 4 Hours of Top-Shelf Open Bar, from 9pm until 1am!<br />
+ Passed hors d&#39;oeuvres and buffet from 9pm - 11:30pm<br />
+ Festive party favors provided<br />
+ Midnight Champagne Toast<br />
+ Live broadcast of the New Year&rsquo;s Eve countdown<br />
+ Famed Percussionist Ami O (<a href="http://www.youtube.com/watch?v=AmCEUPp-1ZI">http://www.youtube.com/watch?v=AmCEUPp-1ZI</a>)<br />
+ Buy Tickets Remember prices go up as we sell out<br />
+ <br />
+ <strong>VIP Standing ticket</strong><br />
+ Includes everything above -<br />
+ Additional Balcony Open Bar access<br />
+ Access to coveted Balcony VIP area of Highline Ballroom<br />
+ Buy Tickets Remember prices go up as we sell out<br />
+ <br />
+ <strong>Diamond VIP ticket</strong><br />
+ All General Admission amenities plus<br />
+ Nightclub seating, with cocktail service<br />
+ Bottle Service and mixers at your table -<br />
+ 1 bottle of premium vodka per 5pp<br />
+ 1 bottle of champagne per table<br />
+ VIP Priority Admission on separate VIP Line<br />
+ Gratuity not included<br />
+ Minimum 5 per table<br />
+ Buy Tickets Remember prices go up as we sell out<br />
+ <br />
+ <strong>Platinum VIP ticket</strong><br />
+ All VIP Standing amenities plus<br />
+ Seating next to stage or in the coveted VIP balcony, with cocktail service<br />
+ Bottle Service and mixers at your table -<br />
+ 1 bottle of premium vodka per 4pp<br />
+ 1 bottle of premium champagne per 4pp<br />
+ VIP Priority Admission on separate VIP Line<br />
+ Minimum 4 per table<br />
+ Gratuity not included<br />
+ Buy Tickets Remember prices go up as we sell out<br />
+ <br />
+ <strong>Emperor Package</strong><br />
+ Personal Concierge for the Night<br />
+ Package is for 20 guests<br />
+ Includes Standing VIP Admission for 20 guests <br />
+ 4 bottles of Grey Goose, 2 Bottles of Patron, 4 bottles of Moet Rose<br />
+ Only 1 package LEFT so act now!<br />
+ Gratuity not included<br />
+ Buy Tickets Remember prices go up as we sell out</p>]]></description>
+                
+                <venue name="highline-ballroom" title="Highline Ballroom">
+                    <address><![CDATA[431 W. 16th st
+New York, NY ]]></address>
+                    <postcode><![CDATA[10011]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="nycnewyearseve-com"><![CDATA[NYCNewYearsEve.com]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400_nyc_nye_highlineballroom.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400_nyc_nye_highlineballroom.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034995" 
+                           min="5" 
+                           max="10" 
+                           priceFace="175.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (DIAMOND VIP table - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00034996" 
+                           min="4" 
+                           max="10" 
+                           priceFace="195.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (PLATINUM VIP TABLE - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00034997" 
+                           min="1" 
+                           max="5" 
+                           priceFace="5000.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (EMPEROR'S VIP TABLE - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00034993" 
+                           min="1" 
+                           max="10" 
+                           priceFace="85.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (General Admission - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00034994" 
+                           min="1" 
+                           max="10" 
+                           priceFace="125.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (VIP Standing Admission - see event description for more info)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014243">
+            <title><![CDATA[ Copacabana New Year's Eve 2012 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/copacabana-new-year-s-eve-2012</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/copacabana-new-year-s-eve-2012</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-14T18:30:06+00:00</date>
+                    <date type="publish">2011-12-14T18:11:00+00:00</date>
+                    <date type="expires">2012-01-01T09:00:00+00:00</date>
+                    <date type="starts">2012-01-01T01:00:00+00:00</date>
+                    <date type="ends">2012-01-01T09:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">21</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>Live Countdown by DJ Brinka, after midnight with DJ Lucio</p>
+<p>VIP Rooftop with DJ Yoshi, Christian Jae &amp; Scottie</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>Its no secret that one of the most popular destinations in the world for the most highly anticipated holiday party of the year takes place in New York City. On New Year&rsquo;s Eve, it&rsquo;s all about the sights, sounds, and unique entertainment the city has to offer. One of the most popular events of this year is undoubtedly the tropical-themed Copacabana and tickets are already selling.</p>
+<p>Featuring top-notch entertainment throughout the night, club anthems served by city&rsquo;s hottest guest DJs, Copacabana is set to lead one of the most exclusive New Year&rsquo;s Eve events of Manhattan. Bring your friends, enjoy specialty cocktails, and stay warm indoors as you welcome 2012 in style!</p>
+<p><strong>Pricing Packages:</strong></p>
+<p><em><strong>General Admission - $85</strong></em></p>
+<p>Party from 8pm to 4am with 4 Hour Premium Open Bar, 9pm - 1am, Buffet stations throughout the venue 9pm - 11pm, Festive party favors provided. Midnight Champagne Toast. Live broadcast of the New Year&rsquo;s Eve countdown</p>
+<p><em><strong>Standing VIP Admission $115 per person</strong></em></p>
+<p>All general admission amenities, plus:</p>
+<p>Access to the Supper Club &amp; Rooftop 760</p>
+<p>Additional bar access in the above rooms</p>
+<p>Special VIP entrance</p>
+<p><em><strong>MAIN ROOM TABLES:</strong></em></p>
+<p><em><strong>Silver Table Ticket - $155 per person</strong></em></p>
+<p>All General Admission Amenities, plus:</p>
+<p>Bottle Service and mixers at your table</p>
+<p>Appetizer platter at your table</p>
+<p>5 guests receive 1 Vodka and 1 Champagne</p>
+<p>6 to 8 guests receive 2 Vodka and 1 Champagne</p>
+<p>9 to 12 guests receive 3 Vodka and 2 Champagne</p>
+<p>Priority Admission on separate VIP Line</p>
+<p>Gratuity not included</p>
+<p><em><strong>Gold Table Ticket - $175 per person</strong></em></p>
+<p>All General Admission Amenities, plus:</p>
+<p>Bottle Service and mixers at your table</p>
+<p>Appetizer platter at your table</p>
+<p>4 guests receive 1 Vodka and 1 Champagne</p>
+<p>5 to 6 guests receive 2 Vodka and 1 Champagne</p>
+<p>7 to 8 guests receive 3 Vodka and 2 Champagne</p>
+<p>9 to 12 guests receive 4 Vodka and 4 Champagne</p>
+<p>Priority Admission on separate VIP Line</p>
+<p>Gratuity not included</p>
+<p><strong>VIP ROOFTOP TABLES:</strong> (heated and retractable glass roof)</p>
+<p><em><strong>Platinum Table Ticket - $180 per person</strong></em></p>
+<p>All Standing VIP Admission amenities, plus:</p>
+<p>Seating in the ULTRA VIP Rooftop</p>
+<p>Access to the Supper Club and Main Room of The Copacabana</p>
+<p>Bottle Service and mixers at your table</p>
+<p>Appetizer platter at your table</p>
+<p>5 guests receive 1 Vodka and 1 Champagne</p>
+<p>6 to 8 guests receive 2 Vodka and 1 Champagne</p>
+<p>9 to 12 guests receive 3 Vodka and 2 Champagne</p>
+<p>Priority Admission on separate VIP Line</p>
+<p>Gratuity not included</p>
+<p><em><strong>Diamond Table Ticket - $195</strong></em></p>
+<p>All Standing VIP Admission amenities, plus:</p>
+<p>Seating in the ULTRA VIP Rooftop</p>
+<p>Access to the Supper Club and Main Room of The Copacabana</p>
+<p>Bottle Service and mixers at your table</p>
+<p>Appetizer platter at your table</p>
+<p>4 guests receive 1 Vodka and 1 Champagne</p>
+<p>5 to 6 guests receive 2 Vodka and 1 Champagne</p>
+<p>7 to 8 guests receive 3 Vodka and 2 Champagne</p>
+<p>9 to 12 guests receive 4 Vodka and 4 Champagne</p>
+<p>Priority Admission on separate VIP Line</p>
+<p>Gratuity not included</p>
+<p><em><strong>Penthouse Table Ticket - $225 (only 40 will be sold)</strong></em></p>
+<p>All Standing VIP Admission amenities, plus:</p>
+<p>Seating in the PRIVATE PENTHOUSE of the Rooftop</p>
+<p>Access to the Supper Club and Main Room of The Copacabana</p>
+<p>Bottle Service and mixers at your table</p>
+<p>Appetizer platter at your table</p>
+<p>4 guests receive 1 Vodka and 1 Champagne</p>
+<p>5 to 6 guests receive 2 Vodka and 1 Champagne</p>
+<p>7 to 8 guests receive 3 Vodka and 2 Champagne</p>
+<p>9 to 12 guests receive 4 Vodka and 4 Champagne</p>
+<p>Priority Admission on separate VIP Line</p>
+<p>Gratuity not included</p>]]></description>
+                
+                <venue name="copacabana-nightclub" title="Copacabana Nightclub">
+                    <address><![CDATA[268 W. 47th St, New York, NY ]]></address>
+                    <postcode><![CDATA[10036 ]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="nycnewyearseve-com"><![CDATA[NYCNewYearsEve.com]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400_nycnye_copacabana.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400_nycnye_copacabana.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00034952" 
+                           min="1" 
+                           max="10" 
+                           priceFace="175.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (GOLD table ticket - see event description for full details)]]></price>
+                    
+                    
+                    
+                    <price id="00034953" 
+                           min="1" 
+                           max="10" 
+                           priceFace="180.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (PLATINUM ROOFTOP table ticket - see event description for full details)]]></price>
+                    
+                    
+                    
+                    <price id="00034949" 
+                           min="1" 
+                           max="10" 
+                           priceFace="85.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (General Admission with Open Bar)]]></price>
+                    
+                    
+                    
+                    <price id="00034954" 
+                           min="1" 
+                           max="10" 
+                           priceFace="195.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (DIAMOND ROOFTOP table ticket - see event description for full details)]]></price>
+                    
+                    
+                    
+                    <price id="00034950" 
+                           min="1" 
+                           max="10" 
+                           priceFace="115.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (Standing VIP Admission inc Open Bar))]]></price>
+                    
+                    
+                    
+                    <price id="00034951" 
+                           min="1" 
+                           max="10" 
+                           priceFace="155.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (SILVER table ticket - see event description for full details)]]></price>
+                    
+                    
+                    
+                    <price id="00034955" 
+                           min="1" 
+                           max="10" 
+                           priceFace="225.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (PRIVATE PENTHOUSE ROOFTOP table ticket - see event description for full details)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014263">
+            <title><![CDATA[ New Years Eve at Club Eden Downtown ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/new-years-eve-at-club-eden-downtown</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/new-years-eve-at-club-eden-downtown</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-19T18:42:40+00:00</date>
+                    <date type="publish">2011-12-19T17:34:00+00:00</date>
+                    <date type="expires">2011-12-31T23:00:00+00:00</date>
+                    <date type="starts">2012-01-01T01:00:00+00:00</date>
+                    <date type="ends">2012-01-01T09:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">21</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>State of the art sound system featuring world renowned DJs</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<p>New Year&#39;s Eve is upon us in the Big Apple, and everyone&#39;s looking for their destination to celebrate throughout the night and ring in 2012. But while venues across Manhattan claim they have the best to offer in drinks and entertainment, it doesn&#39;t get much better than what Eden Downtown is putting together - The cheapest and longest open bar in NYC!</p>
+<p>One thing you should know about New Year&#39;s in the city is, once you buy your ticket, you want to make sure that you&#39;re getting your money&#39;s worth. From 8PM to 4AM enjoy an open bar that will keep the atmosphere at an all-time high. If you&#39;ve never attended an ever at Eden Downtown in the past, now&#39;s your chance. This is one experience that you definitely wont want to miss. Tell your friends, and act quick, you want to make sure to claim your spot.</p>
+<p><strong>Pricing options</strong></p>
+<p><strong>General Admission</strong><br />
+ Open Bar All Night Long (8pm &ndash; 4am)<br />
+ Hors d&#39;ouevres served all night<br />
+ Champagne toast at midnight<br />
+ Party Favors</p>
+<p><strong>Seated VIP Admission</strong><br />
+ Open Bar All Night Long (8pm - 4am)</p>
+<p>Includes a seating area<br />
+ Hors d&#39;oeuvres served all night<br />
+ Champagne toast at midnight<br />
+ Party Favors<br />
+ Free ALL ACCESS PASS to various other events before &amp; after NYE</p>
+<p><strong>Ultra VIP Admission</strong><br />
+ Open Bar All Night Long (8pm &ndash; 4am)<br />
+ Hors d&#39;ouevres served all night<br />
+ Champagne toast at midnight<br />
+ Party Favors<br />
+ VIP Table (1 bottle of liquor + 1 bottle of champagne for every 5 people)<br />
+ Private Server (All Night Long)</p>
+<p><strong>Platinum VIP Admission</strong><br />
+ Open Bar All Night Long (8pm &ndash; 4am)<br />
+ Hors d&#39;ouevres served all night<br />
+ Champagne toast at midnight<br />
+ Party Favors<br />
+ VIP Table (2 bottle of liquor + 1 bottle of champagne for every 5 people)<br />
+ Private Server (All Night Long)</p>
+<p><strong>After 12:30 Admission</strong><br />
+ Open Bar until 4am<br />
+ State of the art sound system featuring a world-renowned DJ</p>
+<p><strong>After 1:30 Admission</strong><br />
+ Open Bar until 4am<br />
+ State of the art sound system featuring a world-renowned DJ</p>]]></description>
+                
+                <venue name="eden-downtown" title="Eden NYC Downtown">
+                    <address><![CDATA[Eden NYC
+27 Park Place
+New York]]></address>
+                    <postcode><![CDATA[10013]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="nycnewyearseve-com"><![CDATA[NYCNewYearsEve.com]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400_nye_nyc_edendowntown.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400_nye_nyc_edendowntown.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00035007" 
+                           min="1" 
+                           max="10" 
+                           priceFace="40.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (After 1.30am Admission - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00035004" 
+                           min="4" 
+                           max="10" 
+                           priceFace="150.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (ULTRA VIP TABLE Ticket - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00035006" 
+                           min="1" 
+                           max="10" 
+                           priceFace="50.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (After 12.30am admission - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00035003" 
+                           min="1" 
+                           max="10" 
+                           priceFace="125.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (Seated VIP Admission - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00035005" 
+                           min="4" 
+                           max="10" 
+                           priceFace="165.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (PLATINUM VIP TABLE Ticket - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00035002" 
+                           min="1" 
+                           max="10" 
+                           priceFace="65.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (General Admission - see event description for more info)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
+        <event id="00014264">
+            <title><![CDATA[ New Years Eve at Penthouse 760 ]]></title>
+            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/us/2012-01/01/new-years-eve-at-penthouse-760</url>
+            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/us/2012-01/01/new-years-eve-at-penthouse-760</url>
+            
+            
+                <meta>
+                    <status code="4">4</status>
+                    <date type="updated">2011-12-19T18:19:10+00:00</date>
+                    <date type="publish">2011-12-19T18:06:00+00:00</date>
+                    <date type="expires">2012-01-01T00:00:00+00:00</date>
+                    <date type="starts">2012-01-01T01:00:00+00:00</date>
+                    <date type="ends">2012-01-01T09:00:00+00:00</date>
+                </meta>
+            
+            
+                <ageLimit type="over">21</ageLimit>
+                <lineup contentType="text/html"><![CDATA[<p>HipHop, Top40, Pop, Electro Pop, House</p>]]></lineup>
+                <description contentType="text/html"><![CDATA[<div class="FieldWrapper" id="divMainEventDescription">
+ <div class="FieldValue">
+ <div class="FieldWrapper" id="divMainEventDescription">
+ <div class="FieldValue">
+ <p>There&#39;s one important aspect of a New Year&#39;s Eve celebration that&#39;s as highly regarded as who you spend it with - where you spend it. New York City&#39;s known as the premiere destination in the world for New Year&#39;s Eve, and this year won&#39;t be any different. With some of the best bars, lounges and nightclubs in the nation waiting to draw you in, be sure to be selective, and only pick the best of the best. One of the top New Year&#39;s Eve celebrations this year in New York City is at Penthouse 760, and at this Times Square hot spot, it&#39;s all about the view. Located above the infamous Copacabana, you&#39;ll also have access to the main room and supper club with this ticket.</p>
+ <br />
+ <p>It&#39;s the newest rooftop club in the city, and it&#39;s looking to break out on New Year&#39;s as the most sought after destination in the city. Featuring a premium 4-hour open bar (9PM-1AM), buffet stations throughout the entire venue, festive party favors, a midnight champagne toast, and a live broadcast of the New Year&#39;s Eve countdown, it offers more entertainment than any venue in sight. What better place to be a part of such a special celebration than high above it all. This is one experience that will create memories that&#39;ll leave you reminiscing for months at a time.</p>
+ </div>
+ </div>
+ </div>
+</div>
+<div class="Clear">
+ <strong>Pricing Options:</strong></div>
+<div class="Clear">
+ </div>
+<div class="Clear">
+ <strong>General Admission</strong> <strong>includes</strong>:</div>
+<div class="Clear">
+ Party from 8pm to 4am</div>
+<div class="Clear">
+ 4 Hour Premium Open Bar, 9pm - 1am</div>
+<div class="Clear">
+ Buffet stations throughout the venue 9pm - 11pm</div>
+<div class="Clear">
+ Access to The Copacabana New Year&#39;s Eve Party</div>
+<div class="Clear">
+ Includes main room and supper club Receive Admission for 2 venues for the price of 1 ($200 value)</div>
+<div class="Clear">
+ Festive party favors provided</div>
+<div class="Clear">
+ Midnight Champagne Toast Live broadcast of the New Year&rsquo;s Eve countdown</div>
+<div class="Clear">
+ </div>
+<div class="Clear">
+ <strong>PLATINUM VIP TABLE Tickets (min 5 pax) inc:</strong></div>
+<div class="Clear">
+ All General Admission amenities, plus:</div>
+<div class="Clear">
+ Seating in the ULTRA VIP Rooftop Access to the Supper Club and Main Room of The Copacabana</div>
+<div class="Clear">
+ Bottle Service and mixers at your table</div>
+<div class="Clear">
+ Appetizer platter at your table</div>
+<div class="Clear">
+ 5 guests receive 1 Vodka and 1 Champagne</div>
+<div class="Clear">
+ 6 to 8 guests receive 2 Vodka and 1 Champagne</div>
+<div class="Clear">
+ 9 to 12 guests receive 3 Vodka and 2 Champagne</div>
+<div class="Clear">
+ Gratuity not included</div>
+<div class="Clear">
+ </div>
+<div class="Clear">
+ <div class="Clear">
+ <strong>DIAMOND VIP TABLE Tickets (min 4 pax) inc:</strong></div>
+ <div class="Clear">
+ All General Admission amenities, plus:</div>
+ <div class="Clear">
+ Seating in the ULTRA VIP Rooftop Access to the Supper Club and Main Room of The Copacabana</div>
+ <div class="Clear">
+ Bottle Service and mixers at your table</div>
+ <div class="Clear">
+ Appetizer platter at your table</div>
+ <div class="Clear">
+ 4 guests receive 1 Vodka and 1 Champagne</div>
+ <div class="Clear">
+ 5 to 6 guests receive 2 Vodka and 1 Champagne</div>
+ <div class="Clear">
+ 7 to 8 guests receive 3 Vodka and 2 Champagne</div>
+ <div class="Clear">
+ 9 to 12 guests receive 4 Vodka and 4 Champagne</div>
+ <div class="Clear">
+ Gratuity not included</div>
+</div>
+<p><strong>PENTHOUSE VIP TABLES Ticket (min 4 - 40 pax) inc:</strong></p>
+<p>All General Admission amenities, plus:</p>
+<p>Seating in the PRIVATE PENTHOUSE of the Rooftop Access to the Supper Club and Main Room of The Copacabana</p>
+<p>Bottle Service and mixers at your table</p>
+<p>Appetizer platter at your table</p>
+<p>4 guests receive 1 Vodka and 1 Champagne</p>
+<p>5 to 6 guests receive 2 Vodka and 1 Champagne</p>
+<p>7 to 8 guests receive 3 Vodka and 2 Champagne</p>
+<p>9 to 12 guests receive 4 Vodka and 4 Champagne</p>
+<p>Gratuity not included</p>]]></description>
+                
+                <venue name="penthouse-760" title="Penthouse 760">
+                    <address><![CDATA[760 8th Ave
+New York NY 
+]]></address>
+                    <postcode><![CDATA[10036]]></postcode>
+                    <country><![CDATA[US]]></country>
+                </venue>
+                
+                
+                <promoter name="nycnewyearseve-com"><![CDATA[NYCNewYearsEve.com]]></promoter>
+                
+            
+            
+                <images>
+                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
+                    <medium>https://images.clubtickets.com/image/100sq/c/400x400_nyc_nye_penthouse.jpg</medium>
+                    <large>https://images.clubtickets.com/image/200sq/c/400x400_nyc_nye_penthouse.jpg</large>
+                </images>
+            
+            
+                <prices>
+                    
+                    
+                    <price id="00035009" 
+                           min="5" 
+                           max="20" 
+                           priceFace="180.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (PLATINUM VIP TABLE Ticket - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00035008" 
+                           min="1" 
+                           max="10" 
+                           priceFace="115.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[E-Ticket (General Admission - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00035011" 
+                           min="4" 
+                           max="40" 
+                           priceFace="225.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (PENTHOUSE VIP TABLE ticket - see event description for more info)]]></price>
+                    
+                    
+                    
+                    <price id="00035010" 
+                           min="4" 
+                           max="20" 
+                           priceFace="195.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#36;" 
+                           currencyCode="USD" 
+                           currency="3"><![CDATA[VIP (DIAMOND VIP TABLE ticket - see event description for more info)]]></price>
+                    
+                    
+                </prices>
+            
+        </event>
+        
+        
         <event id="00014152">
             <title><![CDATA[ REBEL RAVE ::New Year Event:: Damian Lazarus - Clive Henry - Art Department ]]></title>
             <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/it/2011-12/31/rebel-rave-new-year-event-damian-lazarus-clive-henry-art-department</url>
@@ -478,7 +1458,7 @@ New York]]></address>
             
                 <meta>
                     <status code="4">4</status>
-                    <date type="updated">2011-12-05T16:04:25+00:00</date>
+                    <date type="updated">2011-12-20T11:48:43+00:00</date>
                     <date type="publish">2011-09-26T23:00:00+00:00</date>
                     <date type="expires">2011-12-31T21:00:00+00:00</date>
                     <date type="starts">2011-12-31T22:00:00+00:00</date>
@@ -517,6 +1497,17 @@ New York]]></address>
                 <prices>
                     
                     
+                    <price id="00034992" 
+                           min="1" 
+                           max="10" 
+                           priceFace="65.00" 
+                           priceToPay="0.00" 
+                           currencyChar="&amp;#163;" 
+                           currencyCode="GBP" 
+                           currency="1"><![CDATA[E-Ticket (Deluxe - includes after party)]]></price>
+                    
+                    
+                    
                     <price id="00033934" 
                            min="1" 
                            max="10" 
@@ -532,813 +1523,6 @@ New York]]></address>
                            min="1" 
                            max="10" 
                            priceFace="35.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Early Bird)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00013683">
-            <title><![CDATA[ The Secret Agents' Ball  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/bond-ball-presents-the-secret-spy-soiree-the-kensington-close-hotel-spa</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/bond-ball-presents-the-secret-spy-soiree-the-kensington-close-hotel-spa</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-05T16:00:10+00:00</date>
-                    <date type="publish">2011-09-26T23:00:00+00:00</date>
-                    <date type="expires">2011-12-31T20:00:00+00:00</date>
-                    <date type="starts">2011-12-31T21:00:00+00:00</date>
-                    <date type="ends">2012-01-01T04:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p>Ball Room 1 - We welcome the famous &quot;Black &amp; White Ball&quot;</p>
-<p><strong>Victor Simonelli (NY, USA)/</strong><strong>Nicky Holloway/ </strong><strong>Brandon Block/ </strong><strong>Alex P/ DJ Marie</strong></p>
-<p>Ball Room 2 - We welcome &quot;Dirtyfunk&quot;</p>
-<p><strong>Technical Twins / Danny Julian /</strong><strong>Scott More / Pa Nick House / Harry Marks / Purple Gorilias / DJ Sting / Dan Hill / Kev </strong><strong>Harper</strong></p>
-<p>Ball Room 3 - We welcome &quot;Wildlife: AM&quot;</p>
-<div>
- <p><strong>Colin Dale &amp; Guests</strong></p>
-</div>
-<p>Ball Room 4 - We welcome &quot;I Love New Year&#39;s&quot;</p>
-<p><strong>James McLaughlin &amp; Guests</strong></p>
-<p>The VIP Areas hosted by Alist Fashion</p>
-<div>
- <strong>Live PA&#39;s include Bongo Pete on Percussion / Mikee Base on Guitar / Miles on Sax + a very special secret surprise midnight guest TBA</strong></div>]]></lineup>
-                <description contentType="text/html"><![CDATA[<pre wrap="">
-</pre>
-<p class="western"></p>
-<div>
- <div>
- &ldquo;THE SECRET AGENTS&#39; BALL 2012&quot;</div>
- <div>
-  </div>
- <div>
-  </div>
- <div>
-  </div>
- <div>
- Victor Simonelli (USA), Nicky Holloway, Brandon Block, Alex P &amp; Colin Dale</div>
- <div>
- @ The Kensington Close Hotel &amp; Spa, NYE, 8pm-4am</div>
-<br />
- <div>
-  </div>
- <div>
-  </div>
- <div>
- After a year&rsquo;s rest, the legendary showstopper that has provided endless entertainment for New Year&rsquo;s Eve revellers since its glamorous inauguration in 1997 is returning to Kensington. The Secret Agents Ball is a stunning production with an unsurpassed DJ line up and a renowned atmosphere which always puts emphasis on allure, decadence and music to die for. Best of all, the Kensington Close Hotel and Spa, home of the party for the past 14 years has undergone a &pound;40 million pound refurbishment making it one of the premiere venues in London and the destination to see in 2012.</div>
- <div>
-<br />
-  </div>
- <div>
-  </div>
- <div>
- &ldquo;The Secret Agents Ball&quot;... The Ultimate New Year&rsquo;s Eve Party... Your mission for NYE, should you choose to accept is to party in an exclusive Hotel and enjoy the following:</div>
-<br />
- <div>
-  </div>
- <div>
-  </div>
- <div>
- &bull; Champagne &amp; canap&eacute; reception</div>
- <div>
- &bull; 4 rooms of music for 1500 people in fancy dress</div>
- <div>
- &bull; Top DJs, PA&rsquo;s, Casino, Performers and a very special midnight countdown</div>
- <div>
- &bull; Amazing new sound &amp; light shows with a Function One Sound System</div>
- <div>
- &bull; Extended opening till 4am followed by secret after-party</div>
- <div>
- &bull; Fast-track entry / extra bars and table service to avoid waits</div>
- <div>
- &bull; 4 star hotel rooms available on site, be hassle free of travel this NYE &amp; enjoy a late check-out at 2pm with a complimentary brunch.</div>
- <div>
-  </div>
- <div>
-  </div>
- <div>
-<br />
- There&#39;s only one way to come prepared for The Secrets Agents Ball 2012, think to the spy movies of the past, presents and future, your favourite secret agents or baddies...xXx, Bloefelds, Austin Powers, Nick Furys, Ethan Hunts, T.R Devlins, Jason Bourne&rsquo;s and of course don&rsquo;t forget Mr Kiss Kiss Bang Bang himself. Be as daring or as subtle as you please with the theme, but remember - those in outrageous costume...Always have much more fun!</div>
- <div>
-  </div>
- <div>
-  </div>
- <div>
-<br />
- As the evening sets off, delight in our complimentary champagne and canap&eacute; reception prepared specially by our Michelin chefs and enjoy as the entertainment begins. Make your way to one of our four dance floors where you can dance the night away to music both old and new from House to Funky Vocal Electro and Disco to Club Classics. Flying in from Brooklyn, New York, USA will be the Legendary DJ/Producer Victor Simonelli, with support from original Ibiza Founder Nicky Holloway, London favourites Brandon Block, Alex P &amp; Colin Dale.</div>
- <div>
-  </div>
- <div>
-  </div>
- <div>
-<br />
- In true secret agent style, try your luck at a hand of Black Jack or a Game of Roulette in our very own Casino Royal, where you can bluff your way into the New Year, swap glances with impeccably groomed enemy agents at the table and sip champagne. All this glitz and glamour is likely to go to your head and if previous years are anything to go by, the night will have become part of a New Year&rsquo;s legend by the time the Midnight PA counts in to 2012!</div>
- <div>
- &emsp;</div>
-</div>]]></description>
-                
-                <venue name="kensington-close-hotel-and-spa" title="Kensington Close Hotel and Spa">
-                    <address><![CDATA[The Kensington Close Hotel
-Wrights Lane
-Kensington
-London]]></address>
-                    <postcode><![CDATA[W8 5SP]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/secretagentball-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/secretagentball-400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00033930" 
-                           min="1" 
-                           max="10" 
-                           priceFace="25.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014209">
-            <title><![CDATA[ F R E A K A D E L I K ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/it/2011-12/31/-9733-f-9679-r-9679-e-9679-a-9679-k-9679-a-9679-d-9679-e-9679-l-9679-i-9679-k-973</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/it/2011-12/31/-9733-f-9679-r-9679-e-9679-a-9679-k-9679-a-9679-d-9679-e-9679-l-9679-i-9679-k-973</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-07T13:14:49+00:00</date>
-                    <date type="publish">2011-12-06T17:05:00+00:00</date>
-                    <date type="expires">2011-12-31T13:00:00+00:00</date>
-                    <date type="starts">2011-12-31T21:00:00+00:00</date>
-                    <date type="ends">2012-01-01T11:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p><u><strong>FULL ON STAGE</strong></u></p>
-<p>&#9658; TRISTAN - UK - SPECIAL 4 HOURS LIVE SET (Nano Records)</p>
-<p>&#9658; ANIMATRONICA - IT (Mk Rec)</p>
-<p>&#9658; MARIO BROSS - IT (Mk Rec.)</p>
-<p>&#9658; PULSAR - IT (Otturbatoidi tribe)</p>
-<p>&#9658; METHAPHASE - UK (Veleno Lab.)</p>
-<p><u><strong>PROGRESSIVE STAGE</strong></u></p>
-<p>&#9658; TIME IN MOTION - DK - FIRST TIME IN ITALY - (Iono Music)</p>
-<p>&#9658; SHYISMA - IT (Iono Music)</p>
-<p>&#9658; METROYD - IT (Mk Rec.)</p>
-<p>&#9658; SUBLIMINAL POTION - IT (Mk Rec.)</p>
-<p>&#9658; ERRO - IT (Psy Fly Proj)</p>
-<p>&#9658; DIGITAL IMPULSE - IT (AudioLoad Music)</p>
-<p>&#9658; ALION - IT (Digital Nature Rec.)</p>
-<p>&#9658; SOLARIS PHASE - IT (Mk Rec.)</p>
-<p>&#9658; TRIP - IT (Solarsive Rec.)</p>
-<p>&#9658; FRASCKY - IT (Earthbreaker)</p>
-<p><strong><u>DARK STAGE</u></strong></p>
-<p>&#9658; TRIPPYHIPPIES - H - FIRST TIME IN ITALY - (Psybaba Records)</p>
-<p>&#9658; PEACE-KA - IT (Mind Funk Music)</p>
-<p>&#9658; VIRTUANOISE - IT (Noise Poison)</p>
-<p>&#9658; ASSAULT JUNKIES - IT</p>
-<p>&#9658; INSTINCT WAVE - IT (Indipendent)</p>
-<p><strong><u>FULLON STAGE</u></strong></p>
-<p>&#9658; MARKAYN (Mk Rec.)</p>
-<p>&#9658; IL PREZ (Otturbatoidi tribe)</p>
-<p>&#9658; PULSAR (Otturbatoidi tribe)</p>
-<p>&#9658; MICHEL (Otturbatoidi tribe)</p>
-<p>&#9658; OMEGADELTA (Mk Rec.)</p>
-<p>&#9658; JIMMY 9 (Veleno Lab.)</p>
-<p>&#9658; PSY BOY (Vee Prod.)</p>
-<p>&#9658; CANSAS CITY (Psy Fly Project)</p>
-<p>&#9658; ELECTRICITY (Otturbatoidi Tribe)</p>
-<p>&#9658; OKTOPUSS (Illegal Noise)</p>
-<p>&#9658; ZIGHY (Crush In Goa)</p>
-<p>&#9658; KARMALOGIC (Happy Family)</p>
-<p>&#9658; MAIKY (Mk Rec.)</p>
-<p>&#9658; CISCO (O.W.T. Family)</p>
-<p>&#9658; JOYL (ArTrance Crew)</p>
-<p><strong><u>PROGRESSIVE STAGE:</u></strong></p>
-<p>&#9658; CYRILLO (Psy Fly Project)</p>
-<p>&#9658; TK (Mk Rec.)</p>
-<p>&#9658; JUKAS (Psy Fly Project)</p>
-<p>&#9658; EKTOR (K-Tribe)</p>
-<p>&#9658; FLOYD (Psy Fly Project)</p>
-<p>&#9658; KAOS (Otturbatoidi)</p>
-<p>&#9658; NEMO (Otturbatoidi tribe)</p>
-<p>&#9658; RONNY (Psy Fly Project)</p>
-<p>&#9658; DALLO (Psy Fly Project)</p>
-<p>&#9658; RAVEHEART (Evil Corp)</p>
-<p>&#9658; RUDY (Evil Corp)</p>
-<p>&#9658; MARINO (Electronicexperience)</p>
-<p>&#9658; JAMY (Electronicexperience)</p>
-<p>&#9658; MAHORY (ArTrance Crew)</p>
-<p><strong><u>DARK STAGE:</u></strong></p>
-<p>&#9658; LOVA</p>
-<p>&#9658; PSYLO</p>
-<p>&#9658; KRISTIAN (Freakadelik Crew)</p>
-<p>&#9658; KRIMINALCODE (Freakadelik Crew, O.W.T.)</p>
-<p>&#9658; SHAMANIK PROJECT</p>
-<p>&#9658; POSITRON (Electricmoon Records UK / Solteri Crew)</p>
-<p>&#9658; GROUGE GUITAR MIND</p>
-<p><strong><u>TRANCE STAGE:</u></strong></p>
-<p>&#9658; MANUEL LE SAUX</p>
-<p>&#9658; WILLIAM P (Fraction Records)</p>
-<p>&#9658; IMPOSSIBLE</p>
-<p>&#9658; RIGEL (From MTM)</p>
-<p>&#9658; MICHEL LA VIE feat. SILVIE LANOIR - LIVE - (Queen Of Clubs Records)</p>
-<p>&#9658; B&amp;P</p>
-<p>&#9658; ALEX JOHNSON</p>
-<p>&#9658; NAMBO (From OT - Piramid Power)</p>
-<p>&#9658; WORKINTRANCE</p>
-<p><strong><u>DECO&amp;VISUAL:</u></strong></p>
-<p>&#9658; SHOOM - LT</p>
-<p>&#9658; PSYCHO</p>
-<p>&#9658; PSY FLY PROJECT</p>
-<p>&#9658; OTTURBATOIDI TRIBE</p>
-<p>- - - - -</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<div>
- MK RECORDS, ZOOM CLUB, PSY FLY PROJECT, OTTURBATOIDI TRIBE and ART OF TRANCE presents:</div>
-<div>
-  </div>
-<p>&#9733; F &#9679; R &#9679; E &#9679; A &#9679; K &#9679; A &#9679; D &#9679; E &#9679; L &#9679; I &#9679; K &#9733;</p>
-<br />
-<div>
- ___ 4 STAGE ___</div>
-<div>
- <br />
- 1) &#9556;&#9658; FULL ON<br />
- <br />
- 2) &#9556;&#9658; PROGRESSIVE MINIMAL<br />
- <br />
- 3) &#9556;&#9658; DARK<br />
- <br />
- 4) &#9556;&#9658; TRANCE</div>
-<div>
-  </div>
-<div>
- Saranno 24 ore dedicate al Popolo della Trance Music, 4 stage dove si alterneranno oltre 40 dj della scena Trance internazionale e 20 esibizioni live.</div>
-<div>
-  </div>
-<div>
- Un Capodanno di assoluto interesse internazionale.</div>
-<div>
-  </div>
-<div>
- &#9658;4 STAGE</div>
-<div>
- &#9658;22 LIVE ACTS</div>
-<div>
- &#9658;40 DJ&#39;S SET</div>
-<div>
- &#9658;MARTIN W 8 SOUND SYSTEM 20.000 WATT</div>
-<div>
- &#9658;CLEAR SOUND SOUND SYSTEM 25.000 WATT</div>
-<div>
- &#9658;POSEIDON SOUND SYSTEM 10.000 WATT</div>
-<div>
- &#9658;MEGA FLUO DECORATIONS</div>
-<div>
- &#9658;NEW DECORATIONS AND NEW BACKDROPS</div>
-<div>
- &#9658;LASER SHOW</div>
-<div>
- &#9658;20 MOVING HEAD</div>
-<div>
- &#9658;MEGA SCREEN</div>
-<div>
- &#9658;PSYVIDEO</div>
-<div>
- &#9658;ROBOT LIGHT SHOW</div>
-<div>
- &#9658;NEW LIGHTS</div>
-<div>
- &#9658;SMOKE MACHINE</div>
-<div>
- &#9658;PSY BAR</div>
-<div>
- &#9658;CD SHOP</div>
-<div>
- &#9658;MEDICAL SERVICE</div>
-<div>
- &#9658;FOOD AREA</div>
-<div>
- &#9658;FREE PARKING</div>
-<div>
-  </div>
-<div>
- NAVETTA GRATUITA DALLA STAZIONE DEI TRENI !!!!!!!</div>
-<div>
-  </div>
-<div>
- - - - - -</div>]]></description>
-                
-                <venue name="zoom" title="Zoom">
-                    <address><![CDATA[Via Enrico Mattei, 50]]></address>
-                    <postcode><![CDATA[]]></postcode>
-                    <country><![CDATA[IT]]></country>
-                </venue>
-                
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/freakadelik-31dicembre11.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/freakadelik-31dicembre11.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034877" 
-                           min="1" 
-                           max="10" 
-                           priceFace="3.00" 
-                           priceToPay="20.00" 
-                           currencyChar="&amp;#8364;" 
-                           currencyCode="EUR" 
-                           currency="2"><![CDATA[E-Ticket con ingresso + 2 drinks]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014224">
-            <title><![CDATA[ Empire State of Mind, New Years Eve 2011 ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/empire-state-of-mind-new-years-eve-2011</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/empire-state-of-mind-new-years-eve-2011</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-08T13:16:37+00:00</date>
-                    <date type="publish">2011-12-08T12:44:00+00:00</date>
-                    <date type="expires">2011-12-31T20:00:00+00:00</date>
-                    <date type="starts">2011-12-31T21:00:00+00:00</date>
-                    <date type="ends">2012-01-01T04:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p><strong>Dj Suave </strong>(Xclusive Touch)</p>
-<p><strong>Dj 2 </strong>(Xclusive Touch)</p>
-<p>Mixing a cool blend of Funky House, RnB &amp; Hip-hop (room 1) and House, ol&#39; skool and club classics (room 2)</p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>A cool and trendy party full of fun, style &amp; charisma, this is the New Year event guaranteed to deliver. New York is the theme for the evening, a city known for its food, fashion and most importantly incredible parties!</p>
-<p class="p1">
- On 31st December 2011 Revolution, America Square will transform into a New York paradise with famous landmarks and themed props throughout the venue. Staff will dress as local residents including NYPD officers, NY Yankee pitchers and a host of other costumes. There is a fantastic cheerleading display arranged with pom pom&#39;s and beautiful performers to toast the New Year.</p>
-<p class="p1">
- Be sure to attend early to enjoy our elegant champagne reception between 2100-2145 and for those with the stamina to party late complimentary NY pizza slices will be served at 3am!</p>
-<p class="p1">
- Situated in the iconic America Square building, this stunning vodka cocktail bar can hold over 700 guests across its two rooms! Set beneath the arches of Fenchurch Street Station, Revolution mixes opulent Manhattan design with a twist of Soviet spirit. Each of the two arches has its own unique feeling, from the intimate speakeasy arch that harks back to the days of Prohibition and Moonshine to the imposing entrance arch mixing contemporary design and comfort.</p>
-<p class="p1"></p>
-<p class="p1">
- <strong>- New York Citys Themed Party</strong></p>
-<p class="p1">
- <strong>- 800 capacity</strong></p>
-<p class="p1">
- <strong>- Costumed staff</strong></p>
-<p class="p1">
- <strong>- Cheerleaders</strong></p>
-<p class="p1">
- <strong>- Champagne reception 2100-2145</strong></p>
-<p class="p1">
- <strong>- Complimentary New York Pizza 3AM</strong></p>
-<p class="p2">
- <strong>- 2 separate rooms of music</strong></p>]]></description>
-                
-                <venue name="revolution" title="Revolution">
-                    <address><![CDATA[1 America Square]]></address>
-                    <postcode><![CDATA[ EC3N 2LS]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-                <promoter name="xclusive-touch"><![CDATA[Xclusive Touch]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/empirestateofmind-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/empirestateofmind-400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034900" 
-                           min="1" 
-                           max="10" 
-                           priceFace="30.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014227">
-            <title><![CDATA[ Pink Panther Party NYE 2011 ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/pink-panther-party-nye-2011</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/pink-panther-party-nye-2011</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-08T14:43:38+00:00</date>
-                    <date type="publish">2011-12-08T14:08:00+00:00</date>
-                    <date type="expires">2011-12-31T20:00:00+00:00</date>
-                    <date type="starts">2011-12-31T21:00:00+00:00</date>
-                    <date type="ends">2012-01-01T04:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p><strong>On the decksWest End favourite and Bond resident DJ Simba will feature playing a special New Years set of House, Funky, RnB and Club Classics.</strong></p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>Join us NYE 2012 @ Bond Nightclub for the most original and entertaining party in the City!</p>
-<p class="p1">
- This year Bond has emerged as one of London&rsquo;s hottest clubs and itsNYE showcase will certainly be a spectacular event. The theme is &lsquo;Pink Panther&rsquo;, a night of style and seduction in line with the usual Bond class. The evening will be packed full of attractions including a professional saxophonist, pink panther cupcakes, costume dancers and a fantastic bubble machine to welcome the New Year. Expect plenty of surprises with Giant Panther hand prints welcoming you in the lobby and futuristic projections surrounding the tables throughout the venue.</p>
-<p class="p1">
- The party begins in style with a complimentary champagne reception between 2100-2200 so guests are advised to arrive early. On the decksWest End favourite and Bond resident DJ Simba will feature playing a special New Years set of House, Funky, RnB and Club Classics.</p>
-<p class="p1">
- Fancy a VIP table? Each booking comes with queue jump, waitress service, and a discounted ticket price.</p>
-<p>Bond is a remarkable venue with a futuristic interior design on par with its beautiful clientele. The club is surrounded by computer controlled visual projections and can be tailored to project entire landscapes throughout the club or to personalise each VIP booth with individual themes. By dancing, moving or even putting your hands up in the air, the visuals interact and move with you. It is this attention to detail that makes Bond the perfect destination to welcome the New Year.</p>
-<p><em>-</em><strong> Full Pink Panther Decorations</strong></p>
-<p class="p1">
- <strong>- Live Saxophonist</strong></p>
-<p class="p1">
- <strong>- Pink Panther Cupcakes</strong></p>
-<p class="p1">
- <strong>- Bubble Machine</strong></p>
-<p class="p1">
- <strong>- Dancers</strong></p>
-<p class="p1">
- <strong>- Champagne reception 2100-2200</strong></p>
-<p><strong>-</strong><em><strong> </strong></em><strong>VIP</strong><strong> tables with </strong><em><strong>State of the Art Computer Technology and</strong></em><strong>waitress service</strong></p>]]></description>
-                
-                <venue name="bond" title="Club Bond">
-                    <address><![CDATA[24 Kingly Street
-London]]></address>
-                    <postcode><![CDATA[W1B 5QB]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-                <promoter name="xclusive-touch"><![CDATA[Xclusive Touch]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/bondnye-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/bondnye-400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034905" 
-                           min="1" 
-                           max="10" 
-                           priceFace="40.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00013663">
-            <title><![CDATA[ Bodymove presents NYe Rio Revellion 2011  ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/bodymove-presents-nye-eves-white-gold-rio-carnival-2011</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/bodymove-presents-nye-eves-white-gold-rio-carnival-2011</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-13T15:25:17+00:00</date>
-                    <date type="publish">2011-09-22T23:00:00+00:00</date>
-                    <date type="expires">2011-12-31T18:00:00+00:00</date>
-                    <date type="starts">2011-12-31T20:00:00+00:00</date>
-                    <date type="ends">2012-01-01T14:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<pre wrap="">
-</pre>
-<div>
- <strong>Main Room: </strong></div>
-<ul>
- <li>
- Karizma,</li>
- <li>
- Audiowhores and</li>
-</ul>
-<div>
- <strong>Room 2:</strong></div>
-<ul>
- <li>
- Anderson Noize</li>
- <li>
- Tomasuchy aka Tomas Tesla</li>
- <li>
- Darren Gregory</li>
- <li>
- Justin Time</li>
- <li>
- Digital Mike</li>
- <li>
- Boletz</li>
- <li>
- Zero C</li>
- <li>
- Dani D</li>
-</ul>
-<br />
-<div>
- <strong>Brazilian Big Top in the Garden hosted by Club Popozuda and</strong></div>
-<div>
- <strong>featuring after midnight Live: </strong></div>
-<ul>
- <li>
- The Bumps (Popozuda)</li>
- <li>
- DJ Carioca (Rio de Janeiro)</li>
- <li>
- Rhythms Of The City</li>
- <li>
- Minibloco</li>
- <li>
- plus Percussionist, and Latin Fusion Dancers</li>
-</ul>
-<p><strong>Deep Down:</strong></p>
-<ul>
- <li>
- Rodrgo Sampa</li>
- <li>
- M.A.N.K</li>
- <li>
- JD Sasha</li>
- <li>
- Andre Di Napoli</li>
- <li>
- Jay Tempest</li>
- <li>
- Jonathan Shettart</li>
- <li>
- Jon Stevens</li>
- <li>
- Alysson Costa</li>
- <li>
- D&#39;Vinci</li>
-</ul>
-<div>
- <strong>Apothecary:</strong></div>
-<ul>
- <li>
- Candy Bass Records</li>
- <li>
- Nightlife London</li>
-</ul>]]></lineup>
-                <description contentType="text/html"><![CDATA[<div>
- <strong>BODYMOVE presents the WHITE &amp; GOLD NYE BALL</strong></div>
-<div>
- </div>
-<div>
- featuring a BRAZILIAN BIG TOP with CLUB POPOZUDA and Live Bands,</div>
-<div>
- Rhythms Of The City and Minibloco</div>
-<div>
- </div>
-<div>
- + SPECIAL GUESTS: KARIZMA, ANDERSON NOIZE, AUDIOWHORES</div>
-<div>
- </div>
-<div>
- Saturday December 31st</div>
-<div>
- </div>
-<div>
- Pulling out all the stops production and decor wise, Egg will be transformed into a scene from Rio&rsquo;s exuberant NYE, bathed in white and gold, as Bodymove creates its second magical New Year&rsquo;s Eve party in London.</div>
-<div>
- </div>
-<div>
- Using Rio as inspiration, Bodymove set up a Brazilian Big Top in Egg&rsquo;s heated Garden, hosted by Club Popozuda joined just after midnight by Live bands, Rhythms Of The City and Minibloco plus a troupe of percussionists and latin fusion dancers, central to the whole NYE party.</div>
-<div>
- </div>
-<div>
- </div>
-<p><iframe allowfullscreen="" frameborder="0" height="246" src="http://www.youtube.com/embed/3VGseaNkSmo" width="425"></iframe></p>
-<div>
- </div>
-<div>
- Rio de Janeiro is known the world over as one of the most breathtaking and thrilling places you could possibly imagine celebrating a New Year&#39;s Eve. Everyone dresses to impress in fabulous whites, and the whole city crackles in the infectious electric carnival atmosphere.</div>
-<div>
- </div>
-<div>
- The Big Top fires up to Club Popozuda&rsquo;s bold bootyshaking blend of the finest, freshest music from around the world courtesy of resident DJ The Bumps and special guest, RdJ&rsquo;s DJ Carioca, includes hip hop, reggaeton and dancehall. With live samba, percussionists and dancers, feel the heat as 2012 starts in jumping Brazilian style. Global bootyshaking beats.</div>
-<div>
- </div>
-<div>
- Exclusive mixtapes from Club Popozuda:</div>
-<div>
- </div>
-<div>
- <object height="81" width="100%"><param name="movie" value="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" /><param name="allowscriptaccess" value="always" /><embed allowscriptaccess="always" height="81" src="https://player.soundcloud.com/player.swf?url=http%3A%2F%2Fapi.soundcloud.com%2Ftracks%2F26833384" type="application/x-shockwave-flash" width="100%"></embed></object><a href="http://soundcloud.com/clubpopozuda/mixtape-20-flore">Club Popozuda Mixtape #20 (Flore)</a> by <a href="http://soundcloud.com/clubpopozuda">Club Popozuda</a>
- <div>
- </div>
- <div>
- </div>
- <div>
- As well as the Rio-themed Brazilian Big Top, Bodymove lines up some leading musical talents, leaders in their own different fields, including Karizma, Anderson Noize, Audiowhores and resident decksmith, Femi B.</div>
- <div>
- </div>
- <div>
- Chris &ldquo;Karizma&rdquo; Clayton is self diagnosed as &ldquo;a.d.d. with music,&rdquo; and has always aspired to be a producer who &ldquo;keeps changing and moving on to different things for the hallenge.&rdquo; He released his debut full-length, &lsquo;A Mind of Its Own&rsquo;, for the R2 label, as well as mix CDs for notable house labels. NRK and Soul Heaven. Karizma Remixes have appeared on a brilliant spectrum of labels, including Defected, Yoruba, Sonar Kollektiv, Compost, and Raw Fusion. Karizma is joined by Defected&rsquo;s hot UK duo, Audiowhores, also favourites at Bodymove events and known for their explosive house quaking sounds and ability to</div>
- <div>
- raise the roof. Bodymove resident and Strictly Rhythm producer, Femi B rounds off the Bodymove All Stars in the Main Room.</div>
- <div>
- </div>
- <div>
- Heading up Room 2 is Anderson Noize, who has pioneered the electronic music scence in Brazil, inspired by the explosion of Acid House on the club scene. From running clubs, dj-ing to making amazing CD mixes, Anderson continues to break all the rules and inspire with his emotive electronic sounds that continually top the Beatport charts and dancefloors around the world. Lining up on the decks alongside Anderson Noize is Tomasuchy aka Tomas Tesla, Darren Gregory &amp; Justin Time, Digital Mike, Boletz, Zero C and Dani C. In Egg&rsquo; club within a club The Apothecary, Candy Bass Records and Nightlife London takeover with their own brand of end of year sounds and surprises as Egg and Bodymove celebrate another gripping year of forward thinking clubbing and dance music.</div>
-</div>]]></description>
-                
-                <venue name="egg" title="Egg">
-                    <address><![CDATA[200 York Way, Kings Cross, London]]></address>
-                    <postcode><![CDATA[N7 9AP]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-                <promoter name="bodymove"><![CDATA[Bodymove]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/bodymove-nye-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/bodymove-nye-400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034685" 
-                           min="1" 
-                           max="10" 
-                           priceFace="35.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Standard release)]]></price>
-                    
-                    
-                    
-                    <price id="00033895" 
-                           min="1" 
-                           max="10" 
-                           priceFace="25.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Earlybird release)]]></price>
-                    
-                    
-                    
-                    <price id="00034076" 
-                           min="1" 
-                           max="10" 
-                           priceFace="90.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[VIP (Fast track dedicated entrance, Champagne reception & canapes, Exclusive area until 1am + Entry to After Party)]]></price>
-                    
-                    
-                    
-                    <price id="00033894" 
-                           min="1" 
-                           max="10" 
-                           priceFace="20.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Early early bird release)]]></price>
-                    
-                    
-                </prices>
-            
-        </event>
-        
-        
-        <event id="00014240">
-            <title><![CDATA[ Lost/Cosmic NYE Party ]]></title>
-            <url contentType="text/xml; charset=utf-8">https://xml.ticketlogic.net/v2.0/gb/2011-12/31/lost-cosmic-nye-party</url>
-            <url contentType="text/html; charset=utf-8">http://www.clubtickets.com/gb/2011-12/31/lost-cosmic-nye-party</url>
-            
-            
-                <meta>
-                    <status code="4">4</status>
-                    <date type="updated">2011-12-14T11:29:04+00:00</date>
-                    <date type="publish">2011-12-13T18:02:00+00:00</date>
-                    <date type="expires">2011-12-31T19:00:00+00:00</date>
-                    <date type="starts">2011-12-31T20:00:00+00:00</date>
-                    <date type="ends">2012-01-01T12:00:00+00:00</date>
-                </meta>
-            
-            
-                <ageLimit type="over">18</ageLimit>
-                <lineup contentType="text/html"><![CDATA[<p><strong>JUAN ATKINS (exclusive uk date)</strong></p>
-<p><strong>STEVE BICKNELL</strong></p>
-<p><strong>CHRIS CARRIER</strong></p>
-<p><strong>TOMOKI TAMURA</strong></p>
-<p><strong>TORU </strong></p>
-<p><strong>more t.b.c.</strong></p>]]></lineup>
-                <description contentType="text/html"><![CDATA[<p>Headlining is one of the true originators of techno music, a man as Detroit as they come and one of the Belleville Three: Mr Juan Atkins. Releasing music under his own name as well behind the aliases Cybotron, Model 500 and Infiniti, Juan is responsible for producing many of the timeless Detroit classics that we still love today and that have inspired millions. Djing for 30 years he has developed a knowledge of the that few can match. A LOST veteran, we look forward to have Juan throwing it down for us!</p>
-<br />
-<p>Chris Carrier from France. Chris played for Holic as part of their Robsoul Records showcase and more than impressed. With over 100 production credits under his belt, he&rsquo;s been an underground icon for the past decade. Never chasing the limelight, almost darting around it in all manner of guises and musical styles, Carrier is nevertheless revered today as one of the most prolific and gifted producers on the dance scene today. With 2011 being one of his busiest years for DJ gigs it seems we aren&rsquo;t the only one&rsquo;s he has been impressing.</p>
-<br />
-<p>Steve Bicknell is a veteran DJ and producer of the early UK dance music scene and a musical visionary, using his LOST events as a platform to showcase groundbreaking music. Producing under the moniker LOST for Perfecto and Mute Steve went on to establish Cosmic Records and subsidiaries Clubtracks, Lost Recording and ID, giving voice to productions from producers such as Luke Slater, DJ Rush, Tyree Cooper, DJ Funk,Jay Denham and many more. Lost recording being indicative of the seminal LOST sound. Such was Steve&rsquo;s vision that Lost was first to book latterday luminaries such as Jeff Mills, Richie Hawtin, Dan Bell and Robert Hood. As a truly international DJ, Steve has traveled the world with his unique representation of Acid House, Chicago House, Techno and for more experimental spacebase sets a firm grasp of everything from reggae, to italo, to broken beat.</p>
-<br />
-<p>Tomoki Tamura hails from Osaka, Japan, where he built his steadfast reputation as one of the country&rsquo;s most promising electronic DJs. Resident in London since 2004 he has continued to rock the dance floor throughout the capital, hosting Holic in London alongside a residency at Womb, Japan. Tomoki&#39;s successful mix albums &#39;The Groove Cafe Series&#39; led to his own productions released on Satoshi Tomiie&#39;s Saw Recordings, Germany&#39;s Plastic City and New York&#39;s Nite Grooves amongst others. A true, underground music ambassador.</p>
-<br />
-<p>This marathon warehouse event brought together by LOST and HOLIC starts at 8 and finishes mid-day 1st January, more t.b.c. check the website for updates.</p>
-<p>www.lost.co.uk</p>]]></description>
-                
-                <venue name="secret-east-london-location" title="Secret East London Location">
-                    <address><![CDATA[Secret]]></address>
-                    <postcode><![CDATA[E1]]></postcode>
-                    <country><![CDATA[GB]]></country>
-                </venue>
-                
-                
-                <promoter name="lost"><![CDATA[Lost]]></promoter>
-                
-            
-            
-                <images>
-                    <!-- N.B. Please temporarily cache images on your server, rather than link to our servers. We don't guarantee that image URLs will remain consistent for any length of time. -->
-                    <medium>https://images.clubtickets.com/image/100sq/c/lostnye-400.jpg</medium>
-                    <large>https://images.clubtickets.com/image/200sq/c/lostnye-400.jpg</large>
-                </images>
-            
-            
-                <prices>
-                    
-                    
-                    <price id="00034937" 
-                           min="1" 
-                           max="10" 
-                           priceFace="20.00" 
-                           priceToPay="0.00" 
-                           currencyChar="&amp;#163;" 
-                           currencyCode="GBP" 
-                           currency="1"><![CDATA[E-Ticket (Advance)]]></price>
-                    
-                    
-                    
-                    <price id="00034936" 
-                           min="1" 
-                           max="10" 
-                           priceFace="15.00" 
                            priceToPay="0.00" 
                            currencyChar="&amp;#163;" 
                            currencyCode="GBP" 

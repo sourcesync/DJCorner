@@ -95,6 +95,23 @@ def get_venues( connection, paging ):
 	return retv
 
 #
+# func to get venues details...
+#
+def get_venues_details( connection, paging ):
+        
+	venues = _get_venue_col( connection )
+
+	# iterate over collection...
+	retv = []
+	for venue in venues.find():
+		if venue.has_key("_id"):
+			del venue["_id"]
+		retv.append( venue )
+
+	return retv
+
+
+#
 # func to update venue basic info...
 #
 def update_venue( connection, void, name, latitude, longitude, display_name, city ):
@@ -141,4 +158,10 @@ def delete_venue( connection, oid ):
 #
 if __name__ == "__main__":
 
-	pass	
+	if len(sys.argv)>1 and sys.argv[1]=="clear":
+		print "WARNING: Clearing venues..."
+		clear_all( None )
+
+	vs = get_venues_details( None, None )
+	print vs
+

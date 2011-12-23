@@ -8,7 +8,7 @@
 
 
 
-<ticketlogic version="2.0" session="75CF60F15942E9646051787A7D04845D.COMP1" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
+<ticketlogic version="2.0" session="367628A1335D61799BA17EDD100F9154.COMP1" user="drac@dgnyenterprises.com" xmlns="http://xml.ticketlogic.net/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="https://xml.ticketlogic.net/v2.0/schema ticketlogic.xsd">
     <events title="EventsList">
         
     </events>

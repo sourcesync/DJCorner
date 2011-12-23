@@ -21,6 +21,7 @@ import socket
 import event
 import device
 import followdj
+import dj
 
 class FormPage(resource.Resource):
     def render_GET(self, request):
@@ -59,6 +60,7 @@ class API(jsonrpc.JSONRPC):
 		print "INFO: api: get_events->", location, paging, "city->",city
 		[ events, info ] = event.get_events_details( None, location, paging, city )
 		dct = { "results":events, "status":1, "paging":info }
+		print "INFO: api: get_events: return dct->", dct
 		return dct
         
 	def jsonrpc_get_event(self,location,eoid):
@@ -102,6 +104,17 @@ class API(jsonrpc.JSONRPC):
 		if not status:
 			dct = {'status':0,'msg':'Problem with this operation.'}
 		return self.jsonrpc_get_followdjs( deviceid )
+
+	def jsonrpc_get_djs(self, paging):
+		print "INFO: api: get_djs->", paging
+		status = dj.get_djs_details( None, paging )
+		if not status:
+			dct = {'status':0,'msg':'Problem with this operation.'}
+			return dct	
+		else:
+			dct = {'status':1, 'results':status[0], 'paging':status[1] }
+			print "INFO: server: return dct->", dct
+			return dct	
 
 #a = api.API()
 a = API()

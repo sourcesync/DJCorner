@@ -44,8 +44,21 @@ VENUE_LOCATIONS = { \
 	"Green Valley":[[-27.037492,-48.625445],"Green Valley","Camboriu" ], \
 	"Amsterdam Rai":[[52.34099,4.889646],"Amsterdam Rai","Amsterdam"], \
 	"xoyo":[[51.525714,-0.085745],"Club XoYo","London"], \
-	"secret-east-london-location":[[51.525714,-0.085745],"Secret East London Location", "London" ]
-	}
+	"secret-east-london-location":[[51.525714,-0.085745],"Secret East London Location", "London" ], \
+	"cathouse-at-the-luxor-hotel":[[36.097817,-115.175793],"CatHouse At the Luxor","Las Vegas"], \
+	"highline-ballroom":[[40.744818,-74.005837],"Highline Ballroom", "New York City" ],\
+	"copacabana-nightclub":[[40.761041,-73.987083],"Copacabana NightClub","New York City" ], \
+	"eden-downtown":[[40.767542,-73.98674],"Eden Downtown","New York City" ], \
+	"penthouse-760":[[40.73682,-73.993564],"Penthouse 760","New York City" ], \
+	"Copacabana Beach":[[-22.968549,-43.179789],"Copacabana Beach","Rio de Janeiro"], \
+	"Cafe Curacao":[[-22.968549,-43.179789],"Cafe Curacao", "Guaratuba" ], \
+	"El Jaguel":[[-34.916658,-54.896343],"El Jaguel","Punta del Este" ], \
+	"Music Park":[[-27.472924,-48.489532],"Music Park","Florianopolis"], \
+	"Dubai World Trade Center":[[25.216565,55.279003],"Dubai World Trade Center","Dubai" ], \
+	"PNE Colliseum":[[49.285849,-123.042712],"PNE Colliseum","Vancouver" ], \
+	"The Observatory":[[33.699779,-117.919028],"The Observatory","Santa Ana" ], \
+	"XS":[[36.128233,-115.167001],"XS","Las Vegas" ] \
+}
 
 BUYURL_FIX = { \
 	"4ee891de7289ce1719000000":"http://www.clubtickets.com/gb/2012-01/21/gasp-feat-italoboyz", \
@@ -66,8 +79,31 @@ BUYURL_FIX = { \
 	"4ee123e97289ce13e9000005":"http://www.clubtickets.com/us/2012-01/01/apocalypse-2012-new-years-day-with-boris-victor-calderone-pier-94", \
 	"4ee123e97289ce13e9000006":"http://www.clubtickets.com/us/2011-12/31/super-you-me-new-years-eve-w-laidback-luke-pacha-nyc", \
 	"4ee123e97289ce13e9000007":"http://www.clubtickets.com/us/2011-12/31/super-you-me-nye-w-laidback-luke-pacha-nyc-vip-options", \
-	"4ee123e97289ce13e9000008":"http://www.clubtickets.com/us/2011-12/31/chus-ceballos-new-years-eve-4sixty6" \
-	}
+	"4ee123e97289ce13e9000008":"http://www.clubtickets.com/us/2011-12/31/chus-ceballos-new-years-eve-4sixty6", \
+	"00014229":"http://www.clubtickets.com/gb/2012-01/21/gasp-feat-italoboyz", \
+	"00014259":"http://www.clubtickets.com/gb/2012-01/20/technicolour-v", \
+	"00014242":"http://www.clubtickets.com/us/2011-12/31/cathouse-las-vegas-nye-3rd-annual-drink-till-you-drop-party", \
+	"00013660":"http://www.clubtickets.com/us/2011-12/31/avicii-new-years-eve-2012-pier-94-nyc", \
+	"00014261":"http://www.clubtickets.com/us/2011-12/31/new-year-at-the-highline-ballroom", \
+	"00014243":"http://www.clubtickets.com/us/2011-12/31/copacabana-new-year-s-eve-2012", \
+	"00014263":"http://www.clubtickets.com/us/2011-12/31/new-years-eve-at-club-eden-downtown", \
+	"00014264":"http://www.clubtickets.com/us/2011-12/31/new-years-eve-at-penthouse-760", \
+	"00014152":"http://www.clubtickets.com/it/2011-12/31/rebel-rave-new-year-event-damian-lazarus-clive-henry-art-department", \
+	"00013686":"http://www.clubtickets.com/gb/2011-12/31/space-presents-the-vegas-hotel-nye-2011", \
+	"00014239":"http://www.clubtickets.com/us/2012-02/18/chus-ceballos-present-crash-part-2", \
+	"00014265":"http://www.clubtickets.com/us/2012-02/04/pacha-nyc-presents-chris-liebing", \
+	"00013981":"http://www.clubtickets.com/gb/2012-02/04/shit-party-reunion", \
+	"00014247":"http://www.clubtickets.com/us/2012-01/28/pacha-nyc-presents-sander-von-doorn", \
+	"00014286":"http://www.clubtickets.com/us/2012-01/27/pacha-nyc-presents-cosmic-gate", \
+	"00014285":"http://www.clubtickets.com/us/2012-01/21/pacha-nyc-presents-oscar-g", \
+	"00014238":"http://www.clubtickets.com/us/2012-01/14/chus-ceballos-present-crash-part-1", \
+	"00014284":"http://www.clubtickets.com/us/2012-01/13/pacha-nyc-presents-arty", \
+	"00014158":"http://www.clubtickets.com/gb/2012-01/07/kinky-malinki", \
+	"00014200":"http://www.clubtickets.com/us/2012-01/01/benny-benassi-with-congorock-pacha-nyc", \
+	"djc-Copacabana Beach":"http://www.ticketmaster.com", \
+	"djc-Cafe Curacao":"http://www.cafecuracao.com.br", \
+	"djc-David Guetta":"http://www.ticketmaster.com" \
+}
 
 PF_FIX = { \
 	"4ee891de7289ce1719000000":"'Johnny Fiore;Gabriel amaru;Jamma;Mr Venom;Thomas James;Chris Gee;Franklin", \
@@ -88,7 +124,27 @@ PF_FIX = { \
 	"4ee123e97289ce13e9000005":"Boris;Victor Calderone", \
 	"4ee123e97289ce13e9000006":"Laidback Luke", \
 	"4ee123e97289ce13e9000007":"Laidback Luke", \
-	"4ee123e97289ce13e9000008":"DJ Chus;DJ Ceballos" \
+	"4ee123e97289ce13e9000008":"DJ Chus;DJ Ceballos", \
+	"00014229":"Italoboyz;Johnny Fiore;Gabriel amaru;Jamma;Mr Venom;Thomas James;Chris Gee;Franklin", \
+	"00014259":"Namito;Antonio Vinciguerra;Deegan;Jack Brazzo", \
+	"00014242":"Glenn Morrison;Cazzette;Arty;Avicii;Swanky Tunes", \
+	"00013660":"", \
+	"00014261":"DJ L", \
+	"00014243":"DJ Brinka;DJ Lucio;DJ Yoshi;Christian Jae;Scottie", \
+	"00014263":"", \
+	"00014264":"", \
+	"00014152":"Damian Lazarus;Clive Henry;Art Department", \
+	"00013686":"", \
+	"00014239":"DJ Chus;DJ Ceballos", \
+	"00014265":"Chris Liebing", \
+	"00013981":"Brandon Block;Slipmatt;Miss Divine;Vicky Devine;Alex Ellenger;Dermot C;Jay Moore;Lee John;Marco Loco;Tristan Ingrim;Dan Jolly;Nathan Viva;Matt Carter", \
+	"00014247":"Sander Von Doorn", \
+	"00014286":"Emma Hewitt", \
+	"00014285":"Oscar G", \
+	"00014238":"DJ Chus;DJ Ceballos", \
+	"00014284":"Arty", \
+	"00014158":"Luigi Rocca;Timo Garcia", \
+	"00014200":"BENNY BENASSI;Congorock" \
 	}
 
 
@@ -100,6 +156,7 @@ import event
 from dateutil import parser
 from datetime import datetime
 from pymongo.objectid import ObjectId
+import dj
 
 def fixup_venues():
 	#
@@ -178,19 +235,24 @@ def fixup_events():
 	# Make sure events have proper date format...
 	#
 	events_info = event.get_events_details( None, None, None, None )
-
 	events = events_info[0]
 	#print len(events)
-
 	for evt in events:
 		if ( not fixup_event( evt ) ):
 			print "ERROR: cannot fixup event..."
 			return False
-
 	return True
 
-
-def fixup_event(evt):
+def add_djs(performers):
+	oids = []
+	for pf in performers:
+		pfadd = pf.lower()
+		print "INFO: Adding dj->", pfadd
+		[ status, oid ] = dj.add_dj( None, pfadd )
+		oids.append( oid )
+	return oids	
+	
+def fixup_event(evt, usepfdct):
 
 	# check start date...  
        	if not evt.has_key("startdate"):
@@ -218,6 +280,11 @@ def fixup_event(evt):
                 print "WARNING: INVALID END DATE FORMAT...FIXING..."
                 edstr = dt.strftime( "%Y-%m-%dT%H:%M:%S+00:00" )
 
+	# update dates...
+	eoid = ObjectId( evt["_id"] )
+	print "WARNING: Event in dbase is updating date information", eoid, sdstr, edstr
+	status = event.update_event( None, eoid, None, None, None, None, None, None, sdstr, edstr, None, None, None)
+
         # check city...
         update_city = True
         if (update_city):
@@ -225,10 +292,7 @@ def fixup_event(evt):
                 oid = ObjectId(venueid)
                 vn = venue.get_venue( None, oid )
                 city = vn["city"]
-                print
-                print
-                eoid = ObjectId( evt["_id"] )
-                print "WARNING: Event in dbase is getting city information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
+                print "WARNING: Event in dbase is updating city information", eoid, city
                 status = event.update_event( None, eoid, None, None, None, None, None, None, sdstr, edstr, None, None, city)
                 if not status:
                         print "ERROR: Cannot update city for event"
@@ -239,35 +303,82 @@ def fixup_event(evt):
 
 	# check buyurl...
 	fix_buyurl = False
-	buyurl = evt["buyurl"]
-	if buyurl == "http://www.clubtickets.com":
-		fix_buyurl = True
-		if not BUYURL_FIX.has_key( evt["_id"] ):
-			print "ERROR: Fix info is not present for->", evt["_id"], evt["name"]
+	if not evt.has_key("buyurl"):
+		vid = evt["vendorid"]
+		print BUYURL_FIX[vid]
+		if not BUYURL_FIX.has_key( evt["vendorid"] ):
+			print "ERROR: (NP) Fix buyurl info is not present for->", evt["vendorid"], evt["name"]
 			return False
-	if BUYURL_FIX.has_key( evt["_id"] ):
+	elif evt["buyurl"] == "http://www.clubtickets.com":
+		fix_buyurl = True
+		if not BUYURL_FIX.has_key( evt["vendorid"] ):
+			print "ERROR: Fix buyurl info is not present for->", evt["vendorid"], evt["name"]
+			return False
+	if BUYURL_FIX.has_key( evt["vendorid"] ):
 		fix_buyurl = True
 	if fix_buyurl:	
-		fixurl = BUYURL_FIX[ evt["_id"] ]
+		fixurl = BUYURL_FIX[ evt["vendorid"] ]
                 eoid = ObjectId( evt["_id"] )
-                print "WARNING: Event in dbase is getting buyurl information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
+                print "WARNING: Event in dbase is updating buyurl information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
                 status = event.update_event( None, eoid, None, None, None, None, None, None, None, None, fixurl, None, None)
                 if not status:
                         print "ERROR: Cannot update buyurl for event"
 			return False
 
-	# check performers...
-	fix_performers = False
-	if PF_FIX.has_key( evt["_id"] ):
-		pffix = PF_FIX[ evt["_id"] ]
-		if pffix == "FIXME":
-			print "ERROR: Cannot update performer for event"
+	# get cur val of pf...
+	curpf = evt["pf"]
+	print "CURPF->", curpf, type(curpf), type("")
+	if type(curpf) == type("") or type(curpf)==type(u""): # string
+		if usepfdct: # use lookup value...
+			if not PF_FIX.has_key( evt["vendorid"] ): 
+				print "ERROR: No pf fix dct information for event->", evt["vendorid"]
+				return False 
+			pffix = PF_FIX[ evt["vendorid"] ]
+			if pffix == "FIXME":
+				print "ERROR: Cannot update performer for event, need to update pffix dct"
+				return False
+		else:
+			pffix = curpf
+		# make sure that these performers in the dj collection...
+		djs = pffix.split(";")
+		print "INFO: Adding djs->", djs
+		oids = add_djs( djs )
+		print "INFO: djs oids->", oids
+               	print "WARNING: Event in dbase is updating performer information", pffix
+               	status = event.update_event( None, eoid, None, None, None, None, None, None, None, None, None, oids, None)
+               	if not status:
+                       	print "ERROR: Cannot update performer for event"
 			return False
-                print "WARNING: Event in dbase is getting performer information", city, oid, eoid, type(evt["_id"]), sdstr, edstr
-                status = event.update_event( None, eoid, None, None, None, None, None, None, None, None, None, pffix, None)
-                if not status:
-                        print "ERROR: Cannot update performer for event"
-			return False
-
+	
 	return True
+
+
+def fixup_event_performers():
+	# get all events...
+	events = event.get_events( None, None )
+	# iterate events...
+	for evt in events:
+		# see if there are performers for this event...
+		if evt.has_key("pf"):
+			eoid = evt["_id"]
+			# iterate performers...
+			if evt["pf"] == None: continue
+			djids = evt["pf"]
+			for djid in djids:
+				performer = dj.get_dj( None, djid )
+				print "INFO: performer->", djid, performer
+				# get their events...
+				pfevents = []
+				if performer.has_key("events"):
+					pfevents= performer["events"]
+				# add to it...
+				if not eoid in pfevents:
+					pfevents.append( eoid )
+					print "INFO: adding event to performer events->", djid, eoid, pfevents
+					if not dj.update_dj( None, djid, None, pfevents ):
+						print "ERROR: cannot update dj events->", eoid, djid, pfevents
+				
+if __name__ == "__main__":
+	fixup_event_performers()
+
 

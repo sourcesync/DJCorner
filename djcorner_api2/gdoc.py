@@ -7,7 +7,9 @@ GUSERNAME = "george.williams@gmail.com"
 GPASS	= "gg6shooter"
 
 # default docs...
-DOCS = [ "DJ's Corner" ]
+EVENT_DOCS = [ "Events" ]
+VENUE_DOCS = [ "Venues" ]
+
 
 # default image...
 DEFAULT_EVT_IMG = "static/clubgeneric_small.jpg"
@@ -86,7 +88,7 @@ def download_docs( client, URLS ):
 #
 # Func to update database based on downloaded local doc...
 #
-def sync_to_db( docs ):
+def sync_to_events_db( docs ):
 	for doc in docs:
 		print "INFO: Opening doc->", doc
 		f = open(doc,'r')
@@ -168,7 +170,7 @@ def sync_to_db( docs ):
                 	#print "INFO: event details from db->", evt
 
 	                # Do generic event fixup...
-			if ( not presets.fixup_event( evt ) ):
+			if ( not presets.fixup_event( evt, False ) ):
                         	print "ERROR: cannot fixup event..."
                         	return False
 
@@ -181,26 +183,46 @@ if __name__=="__main__":
 
 	sync_google = True
 	
-	#print sys.argv, len(sys.argv)
 	if ( (len(sys.argv)> 1) and (sys.argv[1]=="nosync")):
 		print "WARNING: gdoc: not syncing to google..."
 		sync_google = False
 
+	#
+	# Venue docs...
+	#
 	if (sync_google):
-		print "INFO: gdoc: getting download urls for->", DOCS
-		[ client, gdoc_urls ] = get_download_urls( DOCS )
+		print "INFO: gdoc: getting download urls for->", VENUE_DOCS
+		[ client, gdoc_urls ] = get_download_urls( VENUE_DOCS )
 
 		print "INFO: gdoc: download urls for->", gdoc_urls
 		local_docs = download_docs( client, gdoc_urls )	
 
 		print "INFO: gdoc: syncing local docs to dbase->", local_docs
 	else:
-		local_docs = dict( [ [a,"%s.txt" % a] for a in DOCS ] )
+		local_docs = dict( [ [a,"%s.txt" % a] for a in VENUE_DOCS ] )
 		print "INFO: gdoc: creating local docs from default->", local_docs
+	#status = sync_to_ven_db( local_docs.values() )
+	#if not status:
+	#print "ERROR: gdoc: problem syncing local files to dbase..."
+	#sys.exit(1)
 
-	status = sync_to_db( local_docs.values() )
-	if not status:
-		print "ERROR: gdoc: problem syncing local files to dbase..."
-		sys.exit(1)
+	#
+	# Event docs...
+	#
+        if (sync_google):
+                print "INFO: gdoc: getting download urls for->", EVENT_DOCS
+                [ client, gdoc_urls ] = get_download_urls( EVENT_DOCS )
+
+                print "INFO: gdoc: download urls for->", gdoc_urls
+                local_docs = download_docs( client, gdoc_urls )
+
+                print "INFO: gdoc: syncing local docs to dbase->", local_docs
+        else:
+                local_docs = dict( [ [a,"%s.txt" % a] for a in EVENT_DOCS ] )
+                print "INFO: gdoc: creating local docs from default->", local_docs
+        status = sync_to_events_db( local_docs.values() )
+        if not status:
+                print "ERROR: gdoc: problem syncing local files to dbase..."
+                sys.exit(1)
 
 	print "INFO: Done"

@@ -15,6 +15,7 @@ from pymongo import Connection
 
 import venue
 import common
+import dj
 
 def _get_connection():
 	
@@ -96,7 +97,7 @@ def get_event_details( connection, location, oid, verbose ):
 		vn = venue.get_venue( connection, venueid )
 
                 # flatten venue information, like venue name, lat, long...
-		print "INFO: event: flattening from venue->", vn["name"], vn["city"]
+		#print "INFO: event: flattening from venue->", vn["name"], vn["city"]
 		event["venueid"] = str(venueid)
                 event["venuename"] = vn["ds"]
                 event["latitude"] = vn["latitude"]
@@ -170,11 +171,10 @@ def get_events_details( connection, location, paging, city ):
 
 		event_details = get_event_details( connection, location, evt["_id"], False )
 	
-		# check date...
+		# HACK: fixup date
 		if ( not event_details.has_key( "eventdate" ) ):
 			print "WARNING: event has no date->", evt["name"]
 			continue
-
 		dtstr = event_details["eventdate" ] 
                 dt = datetime.datetime.strptime(dtstr, "%a %m/%d")
 
@@ -186,20 +186,32 @@ def get_events_details( connection, location, paging, city ):
 		else:
 			dtstr = dtstr + "/12"
 		# HACK...
-		print dtstr
 
                 dt = datetime.datetime.strptime(dtstr, "%a %m/%d/%y")
 		if (dt < datetime.datetime.now() ):
 			print "WARNING: Event has passed.", dtstr, dt, datetime.datetime.now()
 			continue
-	
-		if city and (city!=""):
-			ecity = event_details["city"]
-			#print "CITY->", evt["name"], city, ecity
-			if (ecity == city):
-				events_details.append( event_details )
-		else:
-			events_details.append( event_details )
+
+		# HACK: fixup pf...
+		pfs = evt["pf"]
+		newpfs = ""
+		for pf in pfs:
+			if pf==None:
+				print "WARNING: FIX None entry in event pf field"
+				continue
+			print "INFO: event: get_events_details: pf->", pf, pfs
+			djobj = dj.get_dj( None, pf )
+			newpfs += djobj["name"] + ";"
+		event_details["pf"] = newpfs
+
+                # HACK: fixup city...
+                if city and (city!=""):
+                        ecity = event_details["city"]
+                        if (ecity == city):
+                                events_details.append( event_details )
+                else:
+                        events_details.append( event_details )
+
 
 	# sort it by dist...
 	events_details.sort( _sort_dist )
@@ -271,6 +283,11 @@ def delete_event( connection, oid ):
 #
 if __name__ == "__main__":
 
+	# possibly clear events...
+	if len(sys.argv)>1 and ( sys.argv[1]=="clear" ):
+		print "WARNING: clearing events..."
+		clear_all( None)
+
 	# get connection...
 	conxn = _get_connection()
 
@@ -281,7 +298,7 @@ if __name__ == "__main__":
 	print "INFO: There are %d events" % len(events[0])
 
 	for evt in events[0]:
-		print "INFO: id and name->", evt["_id"], evt["name"]
+		print "INFO: event->", evt["_id"], evt["name"], evt["pf"]
 
 	print "INFO: Done."
 	
