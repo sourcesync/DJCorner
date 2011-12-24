@@ -11,6 +11,7 @@ from pymongo import Connection
 
 import os
 import sys
+import re
 
 import event
 
@@ -148,15 +149,25 @@ def get_djs( connection ):
 #
 # func to get follow dj details...
 #
-def get_djs_details( connection, paging ):
+def get_djs_details( connection, searchrx, paging ):
 
 	# get djs collection...	
 	djs = _get_djs_col( connection )
 
 	# sanitize for web service...
 	pfs = []
-	for dj in djs.find():
-		del dj["_id"]
+
+	# get all, or use regex...	
+	if searchrx == None or searchrx.strip() == "":
+		results = djs.find()
+	else:
+		regex = ".*%s.*" % searchrx
+		results = djs.find( {"name": re.compile(searchrx,re.IGNORECASE) } )
+		
+	for dj in results:
+		dj["id"] = str( dj["_id"] ) # replace id with something serializable...
+		del dj["_id"] # delete old one...
+		del dj["events"] # delete events...
 		pfs.append( dj )
 
 	# deal with paging...
@@ -176,24 +187,32 @@ def get_djs_details( connection, paging ):
 # func to get dj schedule...
 #
 def get_schedule( connection, djid ):
+
+	print "INFO: dj: get_schedule: djid->", djid, type( djid )
 	
 	# get djs collection...	
 	djs = _get_djs_col( connection )
 
 	# get the dj...
 	obj = djs.find_one( { '_id':djid } )
-	if not obj: return None
+	if not obj: 
+		print "WARNING: dj: get_schedule: no dj by that id->", djid, type(djid)
+		return None
 
 	# get events...
 	if ( not obj.has_key("events") ):
+		print "WARNING: dj: get_schedule: dj has no events field->", djid, type(djid), obj
 		return None
 
 	schedule = []
 	eoids = obj["events"]
 
+	print "INFO: dj: get_schedule: eiods->", eoids
+
 	# iterate through events and get the schedule...
 	for eoid in eoids:
 		evt = event.get_event_details( None, None, eoid, False)
+		print "INFO: dj: get_schedule: evt->", evt
 		sched = { "city": evt["city"], 	"eventdate":evt["eventdate"] }
 		schedule.append( sched )
 
@@ -234,7 +253,7 @@ if __name__ == "__main__":
 		schedule = get_schedule( None, djobj["_id"] )
 		print "INFO: dj: schedule->", djobj["name"], schedule
 
-	details = get_djs_details( None, None )
+	details = get_djs_details( None, None, None )
 	print "INFO: dj: get_djs_details->", details
 
 	print "INFO: Done."

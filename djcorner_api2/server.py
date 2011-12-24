@@ -13,6 +13,7 @@ from twisted.web.static import File
 from twisted.web.server import Site
 from twisted.web import resource
 
+import bson
 import base64
 import os
 import json
@@ -105,14 +106,26 @@ class API(jsonrpc.JSONRPC):
 			dct = {'status':0,'msg':'Problem with this operation.'}
 		return self.jsonrpc_get_followdjs( deviceid )
 
-	def jsonrpc_get_djs(self, paging):
-		print "INFO: api: get_djs->", paging
-		status = dj.get_djs_details( None, paging )
+	def jsonrpc_get_djs(self, searchrx, paging):
+		print "INFO: api: get_djs->", searchrx, paging
+		status = dj.get_djs_details( None, searchrx, paging )
 		if not status:
 			dct = {'status':0,'msg':'Problem with this operation.'}
 			return dct	
 		else:
 			dct = {'status':1, 'results':status[0], 'paging':status[1] }
+			print "INFO: server: return dct->", dct
+			return dct	
+	
+	def jsonrpc_get_schedule(self, djid):
+		print "INFO: api: get_schedule->", djid
+		bid = bson.objectid.ObjectId(djid)
+		status = dj.get_schedule( None, bid )
+		if not status:
+			dct = {'status':0,'msg':'Problem with this operation.'}
+			return dct	
+		else:
+			dct = {'status':1, 'results':status }
 			print "INFO: server: return dct->", dct
 			return dct	
 

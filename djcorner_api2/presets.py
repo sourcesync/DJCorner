@@ -367,6 +367,9 @@ def fixup_event_performers():
 			for djid in djids:
 				performer = dj.get_dj( None, djid )
 				print "INFO: performer->", djid, performer
+				if performer==None:
+					print "WARNING: presets: no performer with that id->", djid
+					continue
 				# get their events...
 				pfevents = []
 				if performer.has_key("events"):
@@ -380,5 +383,4 @@ def fixup_event_performers():
 				
 if __name__ == "__main__":
 	fixup_event_performers()
-
 
