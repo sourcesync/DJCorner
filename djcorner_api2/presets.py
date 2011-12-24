@@ -157,6 +157,7 @@ from dateutil import parser
 from datetime import datetime
 from pymongo.objectid import ObjectId
 import dj
+import bson
 
 def fixup_venues():
 	#
@@ -378,9 +379,26 @@ def fixup_event_performers():
 				if not eoid in pfevents:
 					pfevents.append( eoid )
 					print "INFO: adding event to performer events->", djid, eoid, pfevents
-					if not dj.update_dj( None, djid, None, pfevents ):
+					if not dj.update_dj( None, djid, None, None, pfevents ):
 						print "ERROR: cannot update dj events->", eoid, djid, pfevents
-				
+
+def fixup_performers():
+	[pfs,paging] = dj.get_djs_details( None, None, None )
+	for pf in pfs:
+		print pf
+		sid = pf["id"]
+		oid = bson.objectid.ObjectId(sid)
+		
+		if not pf.has_key("pic"):
+			print "INFO: fixing performer pic->", sid, oid
+			status = dj.update_dj( None, oid, None, "", None )
+			
+	
+			
 if __name__ == "__main__":
+
+	# make sure events map to performers...
 	fixup_event_performers()
 
+	# fixup performers...
+	fixup_performers()

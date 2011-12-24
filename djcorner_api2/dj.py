@@ -112,7 +112,7 @@ def add_djs( connection, djs ):
 #
 # func to update dj...
 #
-def update_dj( connection, djid, name, events ):
+def update_dj( connection, djid, name, pic, events ):
 
         # get djs collection...
         djs = _get_djs_col( connection )
@@ -124,6 +124,7 @@ def update_dj( connection, djid, name, events ):
 	# create dct with new fields...	
 	fields = {}
 	if name!=None: fields["name"] = name
+	if pic!=None: fields["pic"] = pic
 	if events!=None: fields["events"] = events
 
         # update...
