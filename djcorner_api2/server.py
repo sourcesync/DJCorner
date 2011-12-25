@@ -65,10 +65,16 @@ class API(jsonrpc.JSONRPC):
 		return dct
         
 	def jsonrpc_get_event(self,location,eoid):
-		print "INFO: api: get_events->", location, eoid
-		events = event.get_event_details( None, location, paging, True )
-		dct = { "results":event, "status":1 }
-		return dct
+		bid = bson.objectid.ObjectId(eoid)
+		print "INFO: api: get_events->", location, eoid, bid
+		evt = event.get_event_details( None, location, bid,True )
+		if not evt:
+			dct = {'status':0,'msg':'Cannot get this event.'}
+			return dct
+		else:
+			fevt = event.fix_event_details(evt)
+			dct = { "results":fevt, "status":1 }
+			return dct
 
 	def jsonrpc_register_device(self,deviceid):
 		print "INFO: api: register_device->", deviceid

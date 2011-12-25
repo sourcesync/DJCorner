@@ -244,7 +244,7 @@ def get_schedule( connection, djid ):
 	for eoid in eoids:
 		evt = event.get_event_details( None, None, eoid, False)
 		print "INFO: dj: get_schedule: evt->", evt
-		sched = { "city": evt["city"], 	"eventdate":evt["eventdate"] }
+		sched = { "eid": evt["id"], "city": evt["city"], "eventdate":evt["eventdate"] }
 		schedule.append( sched )
 
 	return schedule

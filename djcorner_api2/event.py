@@ -81,6 +81,30 @@ def get_event( connection, oid ):
 	event = events.find_one( _evt )
 	return event
 
+
+def fix_event_details(event_details):
+	if (True):
+	        # HACK: fixup pf...
+                pfs = event_details["pf"]
+                newpfs = ""
+                pfids = ""
+                for pf in pfs:
+                        if pf==None:
+                                print "WARNING: FIX None entry in event pf field"
+                                continue
+                        #print "INFO: event: get_events_details: pf->", pf, pfs
+                        djobj = dj.get_dj( None, pf )
+                        pfid = str( djobj["_id"] )
+                        pfids += pfid + ";"
+                        newpfs += djobj["name"] + ";"
+                if newpfs.endswith(";"): newpfs = newpfs[0:-1]
+                if pfids.endswith(";"): pfids = pfids[0:-1]
+
+                event_details["pf"] = newpfs
+                event_details["pfids"] = pfids
+
+	return event_details
+
 #
 # func to get all event info...
 #
@@ -132,6 +156,8 @@ def get_event_details( connection, location, oid, verbose ):
 	event["name"]=ds
 
 	event["_id"] = str(oid)
+	event["id"] = str(oid)
+
 	return event
 
 #
