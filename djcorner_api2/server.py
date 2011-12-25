@@ -117,6 +117,16 @@ class API(jsonrpc.JSONRPC):
 			#print "INFO: server: return dct->", dct
 			return dct	
 	
+	def jsonrpc_get_dj(self, djid):
+		print "INFO: api: get_dj->", djid
+		status = dj.get_dj_details( None, djid )
+		if not status:
+			dct = {'status':0,'msg':'Problem with this operation.'}
+			return dct	
+		else:
+			dct = {'status':1, 'results':status  }
+			return dct	
+	
 	def jsonrpc_get_schedule(self, djid):
 		print "INFO: api: get_schedule->", djid
 		bid = bson.objectid.ObjectId(djid)

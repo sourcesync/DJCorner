@@ -63,8 +63,10 @@ def find_dj( connection, name ):
 # func to get a dj...
 #
 def get_dj( connection, djid ):
+
+	#bid = bson.objectid.ObjectId(djid)
 	
-	print "INFO: dj: get_dj->", djid
+	#print "INFO: dj: get_dj->", djid, bid, type(djid), type(bid)
 
 	djs = _get_djs_col( connection )
 
@@ -155,6 +157,23 @@ def _djssort(a,b):
 	elif (na>nb): return 1
 	else: return 0
 
+#
+# func to get follow dj details...
+#
+def get_dj_details( connection, djid ):
+
+        # get djs collection...
+        djs = _get_djs_col( connection )
+
+	bid = bson.objectid.ObjectId( djid )
+	obj = djs.find_one( { "_id":bid } )
+	if not obj:
+		return False
+	obj["id"] = str( obj["_id"] ) # replace id with something serializable...
+	del obj["_id"] # delete old one...
+	del obj["events"] # delete events...
+	return obj
+	
 #
 # func to get follow dj details...
 #
