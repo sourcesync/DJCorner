@@ -57,7 +57,17 @@ VENUE_LOCATIONS = { \
 	"Dubai World Trade Center":[[25.216565,55.279003],"Dubai World Trade Center","Dubai" ], \
 	"PNE Colliseum":[[49.285849,-123.042712],"PNE Colliseum","Vancouver" ], \
 	"The Observatory":[[33.699779,-117.919028],"The Observatory","Santa Ana" ], \
-	"XS":[[36.128233,-115.167001],"XS","Las Vegas" ] \
+	"XS":[[36.128233,-115.167001],"XS","Las Vegas" ], \
+        "Fontainebleau Pool & Arkadia":[[25.82338,-80.123978],"Fontainebleau","Miami" ], \
+	"JUNO Awards":[[25.912968,-80.204659],"JUNO Awards","Miami"], \
+	"Royal Dublin Society":[[53.339073,-6.228561],"Royal Dublin Socity","Dublin" ], \
+	"Atlantis Hotel":[[26.133402,-80.102863],"Atlantis Hotel","Ft. Lauderdale" ], \
+	"K-Arena":[[25.804837,-80.187836],"K Arena","Miami"], \
+	"Kintex Convention Center":[[37.673767,126.745319],"Kintex Convention Center","South Korea"], \
+	"LAVO":[[36.131879,-115.16942],"Lavo NightClub","Las Vegas"], \
+	"Axis Radius":[[33.505188,-111.922359],"Axis Radius","ScottsDale" ], \
+	"Wet at the W":[[25.802209,-80.127754],"W Hotel","Miami"], \
+	"O2 Academy":[[53.812815,-1.547012],"O2 Academy","Leeds"] \
 }
 
 BUYURL_FIX = { \

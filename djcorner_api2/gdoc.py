@@ -97,6 +97,7 @@ def sync_to_events_db( docs ):
 
 		# first line has fields format...
 		fields = [ a.strip() for a in lines[0].split(",") ]
+		print fields
 	
 		# dct which maps field names into idx...	
 		ifields = dict( zip( fields, range(len(fields))) )	
