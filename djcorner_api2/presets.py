@@ -113,7 +113,10 @@ BUYURL_FIX = { \
 	"djc-Copacabana Beach":"http://www.ticketmaster.com", \
 	"djc-Cafe Curacao":"http://www.cafecuracao.com.br", \
 	"djc-David Guetta":"http://www.ticketmaster.com", \
-	"djc-David Guetta at Copacabana":"http://www.ticketmaster.com" \
+	"djc-David Guetta at Copacabana":"http://www.ticketmaster.com", \
+	"djc-David Guetta at Cafe Curacao":"http://www.ticketmaster.com", \
+	"djc-David Guetta at El Jaguel":"http://www.ticketmaster.com", \
+	"djc-David Guetta at Music Park":"http://www.ticketmaster.com" \
 }
 
 PF_FIX = { \

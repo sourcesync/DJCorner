@@ -165,7 +165,7 @@ def get_events_details( connection, location, paging, city ):
 	events = get_events( connection, paging )
 	events_details = []
 
-	print "INFO: event: get_events_details:  There are %d events." % len(events)
+	#print "INFO: event: get_events_details:  There are %d events." % len(events)
 
 	for evt in events:
 
@@ -200,7 +200,7 @@ def get_events_details( connection, location, paging, city ):
 			if pf==None:
 				print "WARNING: FIX None entry in event pf field"
 				continue
-			print "INFO: event: get_events_details: pf->", pf, pfs
+			#print "INFO: event: get_events_details: pf->", pf, pfs
 			djobj = dj.get_dj( None, pf )
 			pfid = str( djobj["_id"] )
 			pfids += pfid + ";"
