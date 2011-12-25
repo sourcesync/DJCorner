@@ -13,6 +13,7 @@ import os
 import sys
 import re
 
+import bson
 import event
 
 def _get_connection():
@@ -254,6 +255,18 @@ if __name__ == "__main__":
 	if len(sys.argv)>1 and sys.argv[1] == "clear":
 		print "WARNING: Clearing all djs..."
 		clear_all(None)
+	
+	elif  len(sys.argv)>1 and sys.argv[1] == "schedule":
+		bid = bson.objectid.ObjectId(sys.argv[2])
+		djs = get_schedule( None, bid )
+		print djs
+		sys.exit(1)
+
+	elif  len(sys.argv)>1:
+		djs = get_djs_details( None, sys.argv[1], None )
+		print djs
+		sys.exit(1)
+
 
 	djs = get_djs( None )
 

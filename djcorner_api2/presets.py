@@ -112,7 +112,8 @@ BUYURL_FIX = { \
 	"00014200":"http://www.clubtickets.com/us/2012-01/01/benny-benassi-with-congorock-pacha-nyc", \
 	"djc-Copacabana Beach":"http://www.ticketmaster.com", \
 	"djc-Cafe Curacao":"http://www.cafecuracao.com.br", \
-	"djc-David Guetta":"http://www.ticketmaster.com" \
+	"djc-David Guetta":"http://www.ticketmaster.com", \
+	"djc-David Guetta at Copacabana":"http://www.ticketmaster.com" \
 }
 
 PF_FIX = { \

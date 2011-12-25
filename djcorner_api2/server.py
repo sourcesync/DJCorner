@@ -61,7 +61,7 @@ class API(jsonrpc.JSONRPC):
 		print "INFO: api: get_events->", location, paging, "city->",city
 		[ events, info ] = event.get_events_details( None, location, paging, city )
 		dct = { "results":events, "status":1, "paging":info }
-		print "INFO: api: get_events: return dct->", dct
+		#print "INFO: api: get_events: return dct->", dct
 		return dct
         
 	def jsonrpc_get_event(self,location,eoid):
@@ -95,7 +95,7 @@ class API(jsonrpc.JSONRPC):
 	def jsonrpc_get_followdjs(self,deviceid):
 		print "INFO: api: get_followdjs->", deviceid
 		djs = followdj.get_followdjs_details( None, deviceid )	
-		print "INFO: api: got djs->", djs
+		#print "INFO: api: got djs->", djs
 		dct = {'status':1, 'results':djs }
 		return dct
 
@@ -114,7 +114,7 @@ class API(jsonrpc.JSONRPC):
 			return dct	
 		else:
 			dct = {'status':1, 'results':status[0], 'paging':status[1] }
-			print "INFO: server: return dct->", dct
+			#print "INFO: server: return dct->", dct
 			return dct	
 	
 	def jsonrpc_get_schedule(self, djid):
@@ -126,7 +126,7 @@ class API(jsonrpc.JSONRPC):
 			return dct	
 		else:
 			dct = {'status':1, 'results':status }
-			print "INFO: server: return dct->", dct
+			#print "INFO: server: return dct->", dct
 			return dct	
 
 #a = api.API()
