@@ -195,14 +195,21 @@ def get_events_details( connection, location, paging, city ):
 		# HACK: fixup pf...
 		pfs = evt["pf"]
 		newpfs = ""
+		pfids = ""
 		for pf in pfs:
 			if pf==None:
 				print "WARNING: FIX None entry in event pf field"
 				continue
 			print "INFO: event: get_events_details: pf->", pf, pfs
 			djobj = dj.get_dj( None, pf )
+			pfid = str( djobj["_id"] )
+			pfids += pfid + ";"
 			newpfs += djobj["name"] + ";"
+		if newpfs.endswith(";"): newpfs = newpfs[0:-1]
+		if pfids.endswith(";"): pfids = pfids[0:-1]
+
 		event_details["pf"] = newpfs
+		event_details["pfids"] = pfids
 
                 # HACK: fixup city...
                 if city and (city!=""):

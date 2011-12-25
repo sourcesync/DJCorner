@@ -147,6 +147,13 @@ def get_djs( connection ):
 
 	return pfs
 
+def _djssort(a,b):
+	na = a["name"]
+	nb = b["name"]
+	if (na<nb): return -1
+	elif (na>nb): return 1
+	else: return 0
+
 #
 # func to get follow dj details...
 #
@@ -170,6 +177,9 @@ def get_djs_details( connection, searchrx, paging ):
 		del dj["_id"] # delete old one...
 		del dj["events"] # delete events...
 		pfs.append( dj )
+
+	# sort
+	pfs.sort( _djssort )
 
 	# deal with paging...
         if (paging):

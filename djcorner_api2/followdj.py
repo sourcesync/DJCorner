@@ -57,17 +57,19 @@ def _send_notification( deviceid, dj ):
 #
 # func to add follow dj object...
 #
-def add_followdj( connection, deviceid, dj ):
+def add_followdj( connection, deviceid, dj, djid ):
+
+	print "INFO: followdj: add_followdj->", dj, djid
 
 	followdjs = _get_followdjs_col( connection )
 
-	followdj = followdjs.find_one( {'deviceid':deviceid, 'dj':dj } )
+	followdj = followdjs.find_one( {'deviceid':deviceid, 'djid':djid } )
 	if ( followdj != None ):
 		_send_notification( deviceid, dj )
 		return [ False, followdj["_id"] ]
 
 	# create a follow object...
-        followdj = { "deviceid": deviceid , 'dj':dj }
+        followdj = { "deviceid": deviceid , 'djid':djid, 'dj':dj }
 
         # add to collection...
         oid = followdjs.insert( followdj )
@@ -79,10 +81,13 @@ def add_followdj( connection, deviceid, dj ):
 #
 # func to add follow dj object...
 #
-def add_followdjs( connection, deviceid, djs ):
+def add_followdjs( connection, deviceid, djs, djids ):
 
-	for dj in djs:
-		add_followdj( connection, deviceid, dj )
+	for i in range( len(djs) ):	
+	#for dj in djs:
+		dj = djs[i]
+		djid = djids[i]
+		add_followdj( connection, deviceid, dj, djid )
 
 	return True
 
@@ -97,7 +102,12 @@ def get_followdjs_details( connection, deviceid ):
 
 	# sanitize for web service...
 	fdjs = []
-	for fdj in followdjs.find({'deviceid':deviceid}):
+	if deviceid == None:
+		results = followdjs.find()
+	else:
+		results= followdjs.find({'deviceid':deviceid})
+
+	for fdj in results:
 		del fdj["_id"]
 		fdjs.append( fdj )
 
@@ -106,11 +116,11 @@ def get_followdjs_details( connection, deviceid ):
 #
 # func to remove follow dj...
 #
-def remove_followdj( connection, deviceid, dj ):
+def remove_followdj( connection, deviceid, djid ):
 
 	followdjs = _get_followdjs_col( connection )
 
-	follow = followdjs.find_one( {'deviceid':deviceid, 'dj':dj } )
+	follow = followdjs.find_one( {'deviceid':deviceid, 'djid':djid } )
 	if not follow:	
 		return False
 
@@ -124,6 +134,11 @@ def remove_followdj( connection, deviceid, dj ):
 # 
 #
 if __name__ == "__main__":
+
+	if len(sys.argv)>1 and sys.argv[1]=="clear":
+		print "WARNING: Clearing follow djs..."
+		clear_all( None )
+
 
 	fdjs = get_followdjs_details( None, None )
 
