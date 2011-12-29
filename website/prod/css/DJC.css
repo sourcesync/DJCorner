@@ -107,7 +107,7 @@ cursor:pointer;
     padding: 3px 3px 3px 6px;
     position: absolute;
     top: 87px;
-    width: 250px;
+    width: 363px;
 }
 .playerCred{display:inline-block;width:300px;overflow:hidden;}
 .playerControls{float:right;padding:1px 4px 0 0;}
@@ -123,7 +123,7 @@ cursor:pointer;
 
 
 .headerContent{float:right;width:355px;margin-right:10px;}
-.headerButtons {margin-right:30px;}
+.headerButtons img{margin-right:30px;}
 .userCred{float:right;height:20px;margin: 10px 0 17px;}
 .userCred li{border-right:1px solid #444444;float:left;list-style:none;padding:2px 10px;font-size:.875em;}
 .headerSearch, .headerButtons{float:right;text-align:right;}

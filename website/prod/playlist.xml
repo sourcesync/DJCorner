@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<playlist version="1" xmlns="http://xspf.org/ns/0/">
+    <title>Ounage Playlist</title>
+    <creator>Dew</creator>
+    <link>http://www.blup.fr/</link>
+    <info>The Best Playlist</info>
+    <image>covers/0.jpg</image>
+    <trackList>   
+ 
+		  <track>
+          <location>http://www.theuniverseofallthings.com/music/two.mp3</location>
+          <creator>Antonin Dvorak</creator>
+          <album>DJ Tiesto</album>
+          <title>DJ Tiesto</title>
+          <annotation></annotation>
+          <duration>2</duration>
+          <image>covers/2.jpg</image>
+          <info></info>
+          <link>http://fr.wikipedia.org/wiki/Cesaria_Evora</link>
+        </track>
+ <track>
+          <location>http://www.theuniverseofallthings.com/music/three.mp3</location>
+          <creator>Antonin Dvorak1</creator>
+          <album>DJ Tiesto 2</album>
+          <title>DJ Tiesto 2</title>
+          <annotation>1</annotation>
+          <duration>1</duration>
+          <image>covers/2.jpg</image>
+          <info></info>
+          <link>http://fr.wikipedia.org/wiki/Cesaria_Evora</link>
+        </track>
+		       <track>
+          <location>http://www.theuniverseofallthings.com/music/KnightRider.mp3</location>
+          <creator>Antonin Dvorak11</creator>
+          <album>DJ Tiesto11</album>
+          <title>DJ Tiesto11</title>
+          <annotation></annotation>
+          <duration>5</duration>
+          <image>covers/2.jpg</image>
+          <info></info>
+          <link>http://fr.wikipedia.org/wiki/Cesaria_Evora</link>
+        </track>
+    </trackList>
+</playlist>
