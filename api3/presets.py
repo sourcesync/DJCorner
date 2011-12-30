@@ -394,7 +394,7 @@ def fixup_event_performers():
 				if not eoid in pfevents:
 					pfevents.append( eoid )
 					print "INFO: adding event to performer events->", djid, eoid, pfevents
-					if not dj.update_dj( None, djid, None, None, pfevents, None):
+					if not dj.update_dj( None, djid, None, None, pfevents, None, None):
 						print "ERROR: cannot update dj events->", eoid, djid, pfevents
 
 def fixup_performers():
@@ -406,7 +406,7 @@ def fixup_performers():
 		
 		if not pf.has_key("pic"):
 			print "INFO: fixing performer pic->", sid, oid
-			status = dj.update_dj( None, oid, None, "", None, None)
+			status = dj.update_dj( None, oid, None, "", None, None,None)
 			
 	
 			
