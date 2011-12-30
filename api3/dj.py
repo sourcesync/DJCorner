@@ -115,7 +115,7 @@ def add_djs( connection, djs ):
 #
 # func to update dj...
 #
-def update_dj( connection, djid, name, pic, events, related ):
+def update_dj( connection, djid, name, pic, events, related, rating ):
 
         # get djs collection...
         djs = _get_djs_col( connection )
@@ -130,6 +130,7 @@ def update_dj( connection, djid, name, pic, events, related ):
 	if pic!=None: fields["pic"] = pic
 	if events!=None: fields["events"] = events
 	if related!=None: fields["rel"] = related
+	if rating!=None: fields["rating"] = rating
 
         # update...
         uid = djs.update( obj, { '$set':fields } , True )
@@ -375,15 +376,15 @@ if __name__ == "__main__":
 
 	djs = get_djs( None )
 
-	print "INFO: dj: djs->", djs
+	#print "INFO: dj: djs->", djs
 
 	for djobj in djs:
-		print "INFO: dj: ->", djobj
-		schedule = get_schedule( None, djobj["_id"] )
-		print "INFO: dj: schedule->", djobj["name"], schedule
+		print "INFO: dj: ->", djobj["_id"], djobj["name"], djobj["pic"]
+		#schedule = get_schedule( None, djobj["_id"] )
+		#print "INFO: dj: schedule->", djobj["name"], schedule
 
-	details = get_djs_details( None, None, None )
-	print "INFO: dj: get_djs_details->", details
+	#details = get_djs_details( None, None, None )
+	#print "INFO: dj: get_djs_details->", details
 
 	print "INFO: Done."
 

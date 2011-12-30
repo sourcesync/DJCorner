@@ -1,0 +1,51 @@
+Official Name,Alias (if applicable),Hometown City,Hometown Country,Website,Pic,Genre,Soundcloud,Rating,Notes,Check for correct accents and symols
+http://www.djmag.com/top100
+David Guetta,,Paris,France,http://www.davidguetta.com/#/home,http://i1.sndcdn.com/avatars-000003877623-3q950c-crop.jpg?9d0294f,House,http://soundcloud.com/davidguetta,1,NA,NA
+Armin van Buuren,,Leyde,Netherlands,http://www.arminvanbuuren.com/,http://i1.sndcdn.com/avatars-000006594616-f34js3-crop.jpg?9d0294f,Trance,http://soundcloud.com/armin-van-buuren-3,2,no updated tourdates (last date 12/31/2011),NA
+Tiesto,Tijs Michiel Verwest; DJ Tiesto,Breda,Netherlands,http://www.tiesto.com/Tiesto-home,http://d3muaolby2vhr.cloudfront.net/images/assets/icons/Artist-profile.jpg,Trance,NA,3,NA,NA
+Deadmau5,Joel Thomas Zimmerman,Toronto,Canada,http://www.deadmau5.com/,http://www.deadmau5.com/wp-content/uploads/2009/09/MG_0312-290x434.jpg,Progressive House,http://i1.sndcdn.com/avatars-000007415316-3cjbuy-crop.jpg?9d0294f,4,NA,NA
+Above & Beyond,,London,United Kingdom,http://www.aboveandbeyond.nu/,http://i1.sndcdn.com/avatars-000001763050-zh5k7n-crop.jpg?9d0294f,Trance,http://soundcloud.com/aboveandbeyond,5,NA,NA
+Avicii,,Stockholm,Sweden,http://www.avicii.com/,http://farm7.static.flickr.com/6162/6192560732_64f115f44b_b.jpg,House,http://soundcloud.com/aviciiofficial,6,no updated tourdates (last date 12/29/2011),NA
+Afrojack,,,,http://www.afrojack.com/,http://a3.twimg.com/profile_images/1022114477/afro_normal.JPG,Electro House,NA,7,NA,NA
+Dash Berlin,,The Hague,Netherlands,http://dashberlinworld.com/,http://i1.sndcdn.com/avatars-000001797076-y8g0g2-crop.jpg?9d0294f,Trance,http://soundcloud.com/dashberlin,8,NA,NA
+Markus Schulz,,Eschwege,Germany,http://www.markusschulz.com/,http://www.markusschulz.com/newdesign2011/wp-content/uploads/2010/10/markus-schulz.jpg,Trance,NA,9,NA,NA
+Swedish House Mafia,,,,http://www.swedishhousemafia.com/?showhome=1,http://i1.sndcdn.com/avatars-000005350621-7g9xwy-crop.jpg?9d0294f,House,http://soundcloud.com/officialswedishhousemafia,10,NA,NA
+Paul Van Dyk,,Eisenhuettenstadt,Germany,http://www.paulvandyk.com/intro/,http://www.paulvandyk.com/img/pvd.jpg,Trance,NA,11,NA,NA
+Axwell,,Stockholm,Sweden,http://www.axwell.co.uk/,http://i1.sndcdn.com/avatars-000001909085-tmb1ej-crop.jpg?9d0294f,House,http://soundcloud.com/axwellofficial,12,NA,NA
+Gareth Emery,,Manchester,United Kingdom,http://www.garethemery.com/whp/,http://i1.sndcdn.com/avatars-000001546120-misj0z-crop.jpg?9d0294f,Trance,http://soundcloud.com/garethemery,13,NA,NA
+Fedde Le Grand,,Utrecht,Netherlands,http://feddelegrand.com/,http://www.feddelegrand.com/assets/img/feddelegrand/placeholders/biography.jpg,House,NA,14,NA,NA
+ATB,Andre Tanneberger,Freidberg,Germany,http://www.atb-music.com/,http://a4.ec-images.myspacecdn.com/images02/120/f7ae9ca1081f470d97c68d7a94f7b29e/l.jpg,Trance,NA,15,NA,NA
+Sander Van Doorn,Sander Ketelaars,Eindhoven,Netherlands,http://www.sandervandoorn.com/,http://www.sandervandoorn.com/images/made/images/uploads/misc/artist_200_133.png,Trance; House,NA,16,NA,NA
+Headhunterz,,Utrecht,Netherlands,http://www.headhunterz.nl/,http://i1.sndcdn.com/avatars-000004789536-c31j40-crop.jpg?9d0294f,Hard Dance; Hardstyle,http://soundcloud.com/official-headhunterz-page,17,NA,NA
+Ferry Corsten,System F,Rotterdam,Netherlands,,http://i1.sndcdn.com/avatars-000007407762-yy7psm-crop.jpg?9d0294f,Trance,http://soundcloud.com/ferry-corsten,18,NA,NA
+Skrillex,Sonny Moore,Los Angeles,United States,http://www.skrillex.com/,http://i1.sndcdn.com/avatars-000004484270-svbuuq-crop.jpg?9d0294f,Dub Step,http://soundcloud.com/skrillex,19,NA,NA
+Laidback Luke,Lucas Cornelis van Scheppingen,,Netherlands,http://www.laidbackluke.com/,http://i1.sndcdn.com/avatars-000003481153-2htfrg-crop.jpg?9d0294f,House,http://soundcloud.com/laidbackluke,20,NA,NA
+Infected Mushroom,Erez Eisen and Amit Duvdevani,Haifa,Israel,http://www.infected-mushroom.com/,http://www.infected-mushroom.com/images/infected_mushroom_10.jpg,Psychedelic Trance,NA,21,NA,NA
+Aly & Fila,Aly Fathalla and Fadi Wassef Naguib,Cairo,Egypt,http://www.alyandfila.com/,https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash4/302569_10150285814274239_7844139238_7526555_473992_n.jpg,Trance,NA,22,pic might be too big,NA
+Steve Angello,,Los Angeles,United States,http://www.sizerecords.com/,http://i1.sndcdn.com/avatars-000006589766-892r5j-crop.jpg?9d0294f,House,http://soundcloud.com/steveangello,23,NA,NA
+Hardwell,Robbert Hardwell,Breda,Netherlands,http://www.djhardwell.com/,http://i1.sndcdn.com/avatars-000006435415-lwe91y-crop.jpg?9d0294f,NA,http://soundcloud.com/hardwell,24,NA,NA
+Arty,Artem Stolyarov,Engels,Russia,http://riseuppro.ru/,https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash4/300801_232979556744964_111274298915491_676812_4668084_n.jpg,Hard House,NA,25,NA,NA
+Sebastian Ingrosso,,Stockholm,Sweden,https://www.facebook.com/therealingrosso?sk=events,http://i1.sndcdn.com/avatars-000005758478-z2g77r-crop.jpg?9d0294f,House,http://soundcloud.com/sebingrosso,26,NA,NA
+Benny Benassi,,Reggio,Italy,http://www.bennybenassi.com/,http://a8.sphotos.ak.fbcdn.net/photos-ak-snc1/v3752/104/0/109542248992/n109542248992_2596143_4315691.jpg,"House, Electro House, Electro",NA,27,NA,NA
+Daft Punk,Guy-Manuel de Homem-Christo and Thomas Bangalter,Paris,France,http://www.daftalive.com/,https://fbcdn-sphotos-a.akamaihd.net/hphotos-ak-ash4/s720x720/390799_10150450669760673_22476490672_10476130_1170663528_n.jpg,House,NA,28,Pic might be too big,NA
+Kaskade,Ryan Raddon,Chicago,United States,http://kaskademusic.com/,http://i1.sndcdn.com/avatars-000001470605-9a41gx-crop.jpg?5d75100,House,http://soundcloud.com/kaskade,29,NA,NA
+Carl Cox,,,,http://www.carlcox.com/#/home,http://www.beatportal.com/uploads/news/carl-cox2.jpg,NA,NA,30,NA,NA
+Chuckie,,,,http://www.djchuckie.com/,,,,31
+Bob Sinclar,,,,http://www.bobsinclar.com/,,,,32
+Calvin Harris,,,,http://www.calvinharris.co.uk/,,,,33
+Noise Controllers,,,,http://www.noisecontrollers.nl/,,,,34
+W&W,,,,http://www.wandwmusic.com/frame.html,,,,35
+Pete Tha Zouk,,,,http://www.petethazouk.com/,,,,36
+Dada Life,,,,http://www.dadalife.com/,,,,37
+Angerfist,,,,,,,,38
+D-Block & S-Te-Fan,,,,http://www.dbstf.com/,,,,39
+Coone,,,,http://www.coone.be/,,,,40
+Steve Aoki,,,,http://steveaoki.com/,,,,41
+Cosmic Gate,DJ Bossi & Nic Chagall,,,http://www.cosmic-gate.de/,,,,42
+Bobina,Dmitry BOBINA Almazov,,,http://bobina.info/en/index/,,,,43
+Richie Hawtin,,,,http://onecity.richiehawtin.com/,,,,44
+Eric Prydz,,,,http://ericprydz.tv/,,,,45
+DJ Zatox,Zatox,,,http://www.djzatox.com/#home,,,,46
+tyDi,,,,http://www.tydi.com/site/,,,,47
+Orjan Nilsen,,,,http://www.orjannilsen.com/,,,,48
+Andy Moor,,,,http://www.andymoor.com/,,,,49

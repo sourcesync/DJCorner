@@ -8,6 +8,7 @@ GPASS	= "gg6shooter"
 
 # default docs...
 EVENT_DOCS = [ "Events" ]
+DJS_DOCS = [ "DJs" ]
 VENUE_DOCS = [ "Venues" ]
 
 
@@ -25,6 +26,7 @@ import xml.dom.minidom
 import event
 import venue
 import presets
+import dj
 
 #
 # Func to download urls from google doc names...
@@ -84,6 +86,62 @@ def download_docs( client, URLS ):
 		print "INFO: Downloading->%s to->%s" % ( url, local_name )
 		retv = client.Export( url, local_name )
 	return DOCS
+
+#
+# Func to update database based on downloaded local doc...
+#
+def sync_to_djs_db( docs ):
+	for doc in docs:
+		print "INFO: Opening doc->", doc
+		f = open(doc,'r')
+		lines = [ a.strip() for a in f.readlines() ]
+		f.close()
+		
+		# first line has fields format...
+		fields = [ a.strip() for a in lines[0].split(",") ]
+		print "INFO: gdoc: dj doc fields->", fields
+		
+		# dct which maps field names into idx...	
+		ifields = dict( zip( fields, range(len(fields))) )	
+		
+		# iterate over data lines in file...
+		for ln in lines[2:]:
+			vals = ln.split(",")
+			if len(vals) != len(fields):
+				print "WARNING: gdoc: skipping row, data len mismatch->", doc, len(fields), len(vals), fields, vals
+				continue
+
+			# put data into dct...
+			dct = dict( zip( fields, vals ) )
+			print "INFO: data for line->", dct
+
+			# get the dj name...
+			djname = dct["Official Name"]
+
+			# add the dj, if not added...
+			[ status, djid ] = dj.add_dj( None, djname )
+			if ( not status ) and (not djid) :
+				print "ERROR: gdoc: cannot add dj->", djname
+				return False
+
+			# get the dj pic...
+			djpic = dct["Pic"]
+			if djpic and djpic.lower().strip() == "na":
+				djpic = None
+
+			# get the rating...
+			rating = dct["Rating"]
+			if djpic and rating.lower().strip() == "na":
+				rating = None
+
+			# update fields...
+			status = dj.update_dj( None, djid, None, djpic, None, None, rating )
+			if not status:
+				print "ERROR: gdoc: cannot update dj->", djname, djpic, rating
+				return False
+
+	return True
+
 
 #
 # Func to update database based on downloaded local doc...
@@ -187,6 +245,27 @@ if __name__=="__main__":
 	if ( (len(sys.argv)> 1) and (sys.argv[1]=="nosync")):
 		print "WARNING: gdoc: not syncing to google..."
 		sync_google = False
+	
+	#
+	# DJs docs...
+	#
+	if (sync_google):
+		print "INFO: gdoc: getting download urls for->", DJS_DOCS
+		[ client, gdoc_urls ] = get_download_urls( DJS_DOCS )
+
+		print "INFO: gdoc: download urls for->", gdoc_urls
+		local_docs = download_docs( client, gdoc_urls )	
+
+		print "INFO: gdoc: syncing local docs to dbase->", local_docs
+	else:
+		local_docs = dict( [ [a,"%s.txt" % a] for a in DJS_DOCS ] )
+		print "INFO: gdoc: creating local docs from default->", local_docs
+	status = sync_to_djs_db( local_docs.values() )
+	if not status:
+		print "ERROR: gdoc: problem syncing local files to dbase..."
+		sys.exit(1)
+
+	sys.exit(0)
 
 	#
 	# Venue docs...
