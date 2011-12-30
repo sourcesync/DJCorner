@@ -1,7 +1,7 @@
 #
 # Configuration...
 #
-DBNAME = "djcorner2"
+DBNAME = "djcorner3"
 
 #
 # Code...
