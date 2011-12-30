@@ -115,7 +115,7 @@ def add_djs( connection, djs ):
 #
 # func to update dj...
 #
-def update_dj( connection, djid, name, pic, events ):
+def update_dj( connection, djid, name, pic, events, related ):
 
         # get djs collection...
         djs = _get_djs_col( connection )
@@ -129,6 +129,7 @@ def update_dj( connection, djid, name, pic, events ):
 	if name!=None: fields["name"] = name
 	if pic!=None: fields["pic"] = pic
 	if events!=None: fields["events"] = events
+	if related!=None: fields["rel"] = related
 
         # update...
         uid = djs.update( obj, { '$set':fields } , True )
@@ -175,7 +176,7 @@ def get_dj_details( connection, djid ):
 	return obj
 	
 #
-# func to get follow dj details...
+# func to get dj details...
 #
 def get_djs_details( connection, searchrx, paging ):
 
@@ -208,6 +209,7 @@ def get_djs_details( connection, searchrx, paging ):
                 end = paging["end"]
                 arr = pfs[start:end]
                 count = len(arr)
+		if count<(end-start+1): end=total-1
                 info = { "total":total, "count":count, "start":start, "end":end }
                 return [ arr, info ]
         else:
@@ -267,6 +269,77 @@ def remove_dj( connection, name ):
                 return True
 	
 #
+# func to make djs similar...
+#
+def relate_djs( connection, dja, djb ):
+	if type(dja)==type(""):
+		djas = dja
+		dja = bson.objectid.ObjectId(dja)
+	else:
+		djas = str(dja)
+	if type(djb)==type(""):
+		djbs = djb
+		djb = bson.objectid.ObjectId(djb)
+	else:
+		djbs = str(djb)
+
+	# update a...
+	obja = get_dj(connection,dja)
+	if not obja:
+		return False
+	relateda = []
+	if obja.has_key("rel"):
+		relateda = obja["rel"]
+	if not djbs in relateda:
+		relateda.append(djbs)
+	status = update_dj( connection, dja, None, None, None, relateda )
+	if not status:
+		return False
+		
+	# update b...
+	objb = get_dj(connection,djb)
+	if not objb:
+		return False
+	relatedb = []
+	if objb.has_key("rel"):
+		relatedb = objb["rel"]
+	if not djas in relatedb:
+		relatedb.append(djas)
+	status = update_dj( connection, djb, None, None, None, relatedb )
+	if not status:
+		return False
+
+	return True
+
+#
+# func to get similar djs...
+#
+def get_similar_djs( connection, djid ):
+
+	if type(djid)==type(""):
+		djid = bson.objectid.ObjectId(djid)
+
+	obj = get_dj( connection, djid )
+	if not obj:
+		return False
+
+	related = []
+	if obj.has_key("rel"):
+		related = obj["rel"]
+
+	items = []
+	for rel in related:
+		bid = bson.objectid.ObjectId(rel)
+		tobj = get_dj( connection, bid )
+		item = { "name": tobj["name"], "id":rel }
+		items.append(item)
+
+	#items = [ {"name":"yo","id":"4ef692b57289ce1de800003a"}, \
+	#{"name":"yo","id":"4ef692b57289ce1de800003a"}]
+
+	return items	
+
+#
 # 
 #
 if __name__ == "__main__":
@@ -279,6 +352,19 @@ if __name__ == "__main__":
 		bid = bson.objectid.ObjectId(sys.argv[2])
 		djs = get_schedule( None, bid )
 		print djs
+		sys.exit(0)
+	
+	elif  len(sys.argv)>1 and sys.argv[1] == "relate":
+		aid = bson.objectid.ObjectId(sys.argv[2])
+		bid = bson.objectid.ObjectId(sys.argv[3])
+		status = relate_djs( None, aid, bid )
+		print status
+		sys.exit(0)
+	
+	elif  len(sys.argv)>1 and sys.argv[1] == "get":
+		bid = bson.objectid.ObjectId(sys.argv[2])
+		obj = get_dj_details( None, bid )
+		print obj
 		sys.exit(1)
 
 	elif  len(sys.argv)>1:

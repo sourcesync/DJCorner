@@ -61,7 +61,7 @@ class API(jsonrpc.JSONRPC):
 		print "INFO: api: get_events->", location, paging, "city->",city
 		[ events, info ] = event.get_events_details( None, location, paging, city )
 		dct = { "results":events, "status":1, "paging":info }
-		#print "INFO: api: get_events: return dct->", dct
+		print "INFO: api: get_events: return dct->", dct
 		return dct
         
 	def jsonrpc_get_event(self,location,eoid):
@@ -120,7 +120,7 @@ class API(jsonrpc.JSONRPC):
 			return dct	
 		else:
 			dct = {'status':1, 'results':status[0], 'paging':status[1] }
-			#print "INFO: server: return dct->", dct
+			print "INFO: server: return dct->", dct
 			return dct	
 	
 	def jsonrpc_get_dj(self, djid):
@@ -144,6 +144,16 @@ class API(jsonrpc.JSONRPC):
 			dct = {'status':1, 'results':status }
 			#print "INFO: server: return dct->", dct
 			return dct	
+	
+	def jsonrpc_get_similar_djs(self, djid):
+		print "INFO: api: get_similar_djs->", djid
+		status = dj.get_similar_djs( None,  djid )
+		if status == False:
+			dct = {'status':0,'msg':'Problem with this operation.'}
+			return dct	
+		else:
+			dct = {'status':1, 'results':status }
+			return dct
 
 #a = api.API()
 a = API()
