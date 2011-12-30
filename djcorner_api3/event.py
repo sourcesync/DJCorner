@@ -174,13 +174,24 @@ def get_events( connection, paging ):
 
 	return retv
 
-def _sort_dist( a, b ):
+def _sort_by_dist( a, b ):
 	da = a["dist"]
 	#print "a=",da
 	db = b["dist"]
 	#print "db=",db
 	if (da<db):	return -1
 	elif (da>db):	return 1
+	else:	return 0
+
+def _sort_by_date( a, b ):
+	da = a["eventdate"]
+	ta = parser.parse(da)
+	#print "a=",da
+	db = b["eventdate"]
+	tb = parser.parse(db)
+	#print "db=",db
+	if (ta<tb):	return -1
+	elif (ta>tb):	return 1
 	else:	return 0
 
 #
@@ -247,7 +258,7 @@ def get_events_details( connection, location, paging, city ):
 
 
 	# sort it by dist...
-	events_details.sort( _sort_dist )
+	events_details.sort( _sort_by_date )
 
 	# possibly deal with paging...
 	if (paging):

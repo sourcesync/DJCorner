@@ -63,9 +63,9 @@ VENUE_LOCATIONS = { \
 	"Royal Dublin Society":[[53.339073,-6.228561],"Royal Dublin Socity","Dublin" ], \
 	"Atlantis Hotel":[[26.133402,-80.102863],"Atlantis Hotel","Ft. Lauderdale" ], \
 	"K-Arena":[[25.804837,-80.187836],"K Arena","Miami"], \
-	"Kintex Convention Center":[[37.673767,126.745319],"Kintex Convention Center","South Korea"], \
+	"Kintex Convention Center":[[37.673767,126.745319],"Kintex Convention Center","Seoul"], \
 	"LAVO":[[36.131879,-115.16942],"Lavo NightClub","Las Vegas"], \
-	"Axis Radius":[[33.505188,-111.922359],"Axis Radius","ScottsDale" ], \
+	"Axis Radius":[[33.505188,-111.922359],"Axis Radius","Scottsdale" ], \
 	"Wet at the W":[[25.802209,-80.127754],"W Hotel","Miami"], \
 	"O2 Academy":[[53.812815,-1.547012],"O2 Academy","Leeds"] \
 }
@@ -394,7 +394,7 @@ def fixup_event_performers():
 				if not eoid in pfevents:
 					pfevents.append( eoid )
 					print "INFO: adding event to performer events->", djid, eoid, pfevents
-					if not dj.update_dj( None, djid, None, None, pfevents ):
+					if not dj.update_dj( None, djid, None, None, pfevents, None):
 						print "ERROR: cannot update dj events->", eoid, djid, pfevents
 
 def fixup_performers():
@@ -406,7 +406,7 @@ def fixup_performers():
 		
 		if not pf.has_key("pic"):
 			print "INFO: fixing performer pic->", sid, oid
-			status = dj.update_dj( None, oid, None, "", None )
+			status = dj.update_dj( None, oid, None, "", None, None)
 			
 	
 			
