@@ -186,6 +186,7 @@ def fixup_venues():
 	return True
 
 def fixup_venue(v):
+	print "INFO: fixup_venue: args->", v
 
 	# get venue id...
        	void = v["_id"]
