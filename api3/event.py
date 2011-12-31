@@ -1,6 +1,7 @@
-#T
+#
 # Configuration...
 #
+VERBOSE = True
 
 #
 # Program...
@@ -16,6 +17,13 @@ import venue
 import common
 import dj
 import dbglobal
+
+def DBG( *items ):
+        if VERBOSE:
+                for item in items:
+                        print item,
+                print
+
 
 def _get_connection():
 	
@@ -86,6 +94,8 @@ def get_event( connection, oid ):
 # func to get all event info...
 #
 def get_event_details( connection, location, oid, verbose ):
+
+	DBG("INFO: event: oid->", oid)
 
 	event = get_event( connection, oid )
 

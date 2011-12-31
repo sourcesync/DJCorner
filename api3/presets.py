@@ -67,7 +67,11 @@ VENUE_LOCATIONS = { \
 	"LAVO":[[36.131879,-115.16942],"Lavo NightClub","Las Vegas"], \
 	"Axis Radius":[[33.505188,-111.922359],"Axis Radius","Scottsdale" ], \
 	"Wet at the W":[[25.802209,-80.127754],"W Hotel","Miami"], \
-	"O2 Academy":[[53.812815,-1.547012],"O2 Academy","Leeds"] \
+	"O2 Academy":[[53.812815,-1.547012],"O2 Academy","Leeds"], \
+	"Centre Bell":[[45.489712,-73.585138],"Centre Bell","Montreal"], \
+	"Pasay World Trade Center":[[14.55509,120.997109],"Pasay World Trade Center","Pasay"], \
+	"Kowloon":[[22.32213,114.180565],"Kowloon","Hong Kong"], \
+	"Brabanthallen":[[51.712565,5.288887],"Brabanthallen","s-Hertogenbosch"] \
 }
 
 BUYURL_FIX = { \
@@ -386,6 +390,7 @@ def fixup_event_performers():
 				if performer==None:
 					print "WARNING: presets: no performer with that id->", djid
 					continue
+				print "fixup_event_performer->", performer["name"]
 				# get their events...
 				pfevents = []
 				if performer.has_key("events"):
