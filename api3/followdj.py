@@ -1,7 +1,6 @@
 #
 # Configuration...
 #
-DBNAME = "djcorner3"
 
 #
 # Code...
@@ -11,6 +10,7 @@ from pymongo import Connection
 
 import os
 import sys
+import dbglobal
 
 def _get_connection():
 
@@ -26,7 +26,7 @@ def _get_followdjs_col( connection ):
                 connection = Connection()
 
         # dbase...
-        db = connection[DBNAME]
+        db = connection[dbglobal.DBNAME]
 
         # collection...
         followdjs = db['followdjs']

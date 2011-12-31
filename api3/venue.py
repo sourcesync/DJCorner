@@ -1,8 +1,7 @@
 #
 # Configuration...
 #
-
-DBNAME = "djcorner3"
+VERBOSE = True
 
 #
 # Program...
@@ -11,6 +10,14 @@ DBNAME = "djcorner3"
 from pymongo import Connection
 
 import sys
+
+import dbglobal
+
+def DBG( *items ):
+        if VERBOSE:
+                for item in items:
+                        print item,
+                print
 
 def _get_connection():
 	
@@ -26,7 +33,7 @@ def _get_venue_col( connection ):
         	connection = Connection()
 
         # dbase...
-        db = connection[DBNAME] 
+        db = connection[dbglobal.DBNAME] 
 
         # collection...
         venues = db['venues']
@@ -55,7 +62,6 @@ def add_venue( connection, name, vendorid ):
 		# see if there is already this venue by vendorid...
 		venue = venues.find_one( {'vendorid':vendorid} )
 		if ( venue != None ):
-			#print "FOUND VENUE", venue
 			return [ False, venue["_id"] ]
 
         # create an venue...
@@ -67,6 +73,22 @@ def add_venue( connection, name, vendorid ):
         oid = venues.insert( venue )
 
 	return [ True, oid ]
+
+#
+# func to find venue...
+#
+def find_venue( connection, vname ):
+
+        DBG( "INFO: venue: find_venue->", vname )
+
+        vs = _get_venue_col( connection )
+
+        v = vs.find_one( {'name':vname} )
+        if not v:
+                return False
+        else:
+                return v["_id"]
+
 
 #
 # func to get venue...
@@ -159,9 +181,16 @@ def delete_venue( connection, oid ):
 if __name__ == "__main__":
 
 	if len(sys.argv)>1 and sys.argv[1]=="clear":
-		print "WARNING: Clearing venues..."
+		DBG("WARNING: Clearing venues...")
 		clear_all( None )
 
 	vs = get_venues_details( None, None )
-	print vs
+	
+	for v in vs:
+		print "INFO: venue->", v["name"],
+		if v.has_key("city"):
+			print v["city"],
+		print
+		
 
+	print "INFO: Done."

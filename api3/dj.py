@@ -1,8 +1,13 @@
 #
 # Configuration...
 #
-DBNAME = "djcorner3"
+VERBOSE = True
 
+REQUIRED_FIELDS = { 	"name": type("") }
+OPTIONAL_FIELDS = { 	"events": type([]), \
+			"pic": type(""), \
+			"rating": type(1), \
+			"rel": type([]) }
 #
 # Code...
 #
@@ -13,8 +18,15 @@ import os
 import sys
 import re
 
+import dbglobal
 import bson
 import event
+
+def DBG( *items ):
+	if VERBOSE: 
+		for item in items:
+			print item,
+		print
 
 def _get_connection():
 
@@ -30,7 +42,7 @@ def _get_djs_col( connection ):
                 connection = Connection()
 
         # dbase...
-        db = connection[DBNAME]
+        db = connection[dbglobal.DBNAME]
 
         # collection...
         djs = db['djs']
@@ -51,13 +63,15 @@ def clear_all( connection ):
 #
 def find_dj( connection, name ):
 	
-	print "INFO: dj: find_dj->", name
+	DBG( "INFO: dj: find_dj->", name )
 
 	djs = _get_djs_col( connection )
 
 	dj = djs.find_one( {'name':name} )
-
-	return dj
+	if not dj:
+		return False
+	else:
+		return dj["_id"]
 
 #
 # func to get a dj...
@@ -80,10 +94,10 @@ def get_dj( connection, djid ):
 #
 def add_dj( connection, name ):
 
-	print "INFO: dj: add_dj->", name
+	DBG("INFO: dj: add_dj->", name)
 
 	if name==None or name.strip()=="":
-		print "ERROR: Invalid dj name->", name
+		DBG("ERROR: Invalid dj name->", name)
 		return [ False, None ]
 
 	name = name.strip()
@@ -95,7 +109,7 @@ def add_dj( connection, name ):
 		return [ False, dj["_id"] ]
 
 	# create a dj object...
-        dj = { 'name':name }
+        dj = { 'name':name, 'status':0 }
 
         # add to collection...
         oid = djs.insert( dj )
@@ -133,9 +147,43 @@ def update_dj( connection, djid, name, pic, events, related, rating ):
 	if rating!=None: fields["rating"] = rating
 
         # update...
-        uid = djs.update( obj, { '$set':fields } , True )
-        if ( uid ): return False
-        else: return True
+        status = djs.update( obj, { '$set':fields } , True )
+        if ( status ): 
+		DBG("ERROR: dj: update_dj: mongo update failed->", status)
+		return False  # means an error
+
+	return True
+
+#
+# func to link dj event...
+#
+def update_dj_event( connection, djid, eoid ):
+
+	if type(eoid)!=type( bson.objectid.ObjectId() ):
+		DBG( "ERROR: dj: event id not right type")
+		return False
+
+	djobj = get_dj( connection, djid )
+	if not djobj:
+		DBG( "ERROR: dj: no dj by that id->", djid )
+		return False
+
+	events = []
+	if djobj.has_key("events"):
+		events = djobj["events"]
+
+	if eoid in events:
+		DBG( "INFO: dj: event already present" )
+		return True
+
+	events.append(eoid)
+
+	status = update_dj( connection, djid, None, None, events, None, None )
+	if not status:
+		DBG( "ERROR: dj: cannot update events" )
+		return False
+	else:
+		return True
 
 #
 # func to get all djs...
@@ -222,7 +270,7 @@ def get_djs_details( connection, searchrx, paging ):
 #
 def get_schedule( connection, djid ):
 
-	print "INFO: dj: get_schedule: djid->", djid, type( djid )
+	DBG("INFO: dj: get_schedule: djid->", djid, type( djid ) )
 	
 	# get djs collection...	
 	djs = _get_djs_col( connection )
@@ -230,23 +278,24 @@ def get_schedule( connection, djid ):
 	# get the dj...
 	obj = djs.find_one( { '_id':djid } )
 	if not obj: 
-		print "WARNING: dj: get_schedule: no dj by that id->", djid, type(djid)
-		return None
+		DBG("WARNING: dj: get_schedule: no dj by that id->", djid, type(djid))
+		return False
 
 	# get events...
 	if ( not obj.has_key("events") ):
-		print "WARNING: dj: get_schedule: dj has no events field->", djid, type(djid), obj
-		return None
+		DBG("WARNING: dj: get_schedule: dj has no events field->", djid, type(djid), obj)
+		return []
 
 	schedule = []
+
 	eoids = obj["events"]
 
-	print "INFO: dj: get_schedule: eiods->", eoids
+	DBG("INFO: dj: get_schedule: eiods->", eoids)
 
 	# iterate through events and get the schedule...
 	for eoid in eoids:
 		evt = event.get_event_details( None, None, eoid, False)
-		print "INFO: dj: get_schedule: evt->", evt
+		DBG("INFO: dj: get_schedule: evt->", evt)
 		sched = { "eid": evt["id"], "city": evt["city"], "eventdate":evt["eventdate"] }
 		schedule.append( sched )
 
@@ -373,16 +422,14 @@ if __name__ == "__main__":
 		print djs
 		sys.exit(1)
 
-
+	# get raw objs...
 	djs = get_djs( None )
-
-	#print "INFO: dj: djs->", djs
-
 	for djobj in djs:
-		print "INFO: dj: ->", djobj["_id"], djobj["name"], djobj["pic"]
+		print "INFO: dj: ->", djobj["_id"], djobj["name"]
 		#schedule = get_schedule( None, djobj["_id"] )
 		#print "INFO: dj: schedule->", djobj["name"], schedule
 
+	# get objs details...
 	#details = get_djs_details( None, None, None )
 	#print "INFO: dj: get_djs_details->", details
 

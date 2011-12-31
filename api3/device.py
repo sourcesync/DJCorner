@@ -1,7 +1,6 @@
 #
 # Configuration...
 #
-DBNAME = "djcorner3"
 
 #
 # Code...
@@ -10,6 +9,7 @@ DBNAME = "djcorner3"
 from pymongo import Connection
 
 import sys
+import dbglobal
 
 def _get_connection():
 
@@ -25,7 +25,7 @@ def _get_device_col( connection ):
                 connection = Connection()
 
         # dbase...
-        db = connection[DBNAME]
+        db = connection[dbglobal.DBNAME]
 
         # collection...
         devices = db['devices']
