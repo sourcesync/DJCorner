@@ -51,9 +51,10 @@ def _GETVAL( dct, field, required ):
 #
 def _SCRUBTIME( dtstr ):
 	dt = parser.parse( dtstr ) # make sure its a recognizable date format...
+
 	sdstr = dtstr
 	try: # see if its in the format we want...
-		dt = datetime.strptime( dt, "%Y-%m-%dT%H:%M:%S+00:00" )
+		dt = datetime.strptime( sdstr, "%Y-%m-%dT%H:%M:%S+00:00" )
 	except:
 		print "WARNING: gdoc: INVALID DATE FORMAT...FIXING..."
 		sdstr = dt.strftime( "%Y-%m-%dT%H:%M:%S+00:00" )
@@ -136,19 +137,18 @@ def sync_to_ven_db( docs ):
                 ifields = dict( zip( fields, range(len(fields))) )
 
                 # iterate over data lines in file...
-                for ln in lines[2:]:
+                for ln in lines[1:]:
                         vals = ln.split(",")
                         if len(vals) != len(fields):
-                                print "WARNING: gdoc: skipping row, data len mismatch->"
+                                print "WARNING: gdoc: skipping row, data len mismatch->", vals[0]
                                 continue
 			brk = False
 			for val in vals:
-				print "val=",val
 				if val == None or val.strip() == "":
-                                	print "WARNING: gdoc: skipping row, field is None/Empty"
+                                	print "WARNING: gdoc: skipping row, field is None/Empty", vals[0]
 					brk = True
 					break
-			if brk: break
+			if brk: continue
 					
                         # put spreadsheet data into dct...
                         dct = dict( zip( fields, vals ) )
@@ -176,7 +176,7 @@ def sync_to_ven_db( docs ):
 				print "ERROR: gdoc: latlong val required for venue->", vname
 				return False
 			[ lat, lng ] = [ float(a) for a in latlong.split(";") ]
-		
+	
 			# get venue city...	
 			city = _GETVAL( dct, "City", True)
 			if not city:
@@ -184,6 +184,7 @@ def sync_to_ven_db( docs ):
 				return False
 	
                         # update fields...
+			print "INFO: gdoc: update_venue fields->", void, vname, lat, lng, city
                         status = venue.update_venue( None, void, None, lat, lng, None, city )
                         if not status:
                                 print "ERROR: gdoc: cannot update venue->", vname, lat, lng, city
@@ -220,12 +221,11 @@ def sync_to_djs_db( docs ):
 
                         brk = False
                         for val in vals:
-                                print "val=",val
                                 if val == None or val.strip() == "":
                                         print "WARNING: gdoc: skipping row, field is None/Empty"
                                         brk = True
                                         break
-                        if brk: break
+                        if brk: continue
 
 			# put spreadsheet data into dct...
 			dct = dict( zip( fields, vals ) )
@@ -289,12 +289,11 @@ def sync_to_events_db( docs ):
 
                         brk = False
                         for val in vals:
-                                print "val=",val
                                 if val == None or val.strip() == "":
                                         print "WARNING: gdoc: skipping row, field is None/Empty"
                                         brk = True
                                         break
-                        if brk: break
+                        if brk: continue
 
 			# put data into dct...
 			dct = dict( zip( fields, vals ) )
@@ -410,10 +409,11 @@ if __name__=="__main__":
 	else:
 		local_docs = dict( [ [a,"%s.txt" % a] for a in DJS_DOCS ] )
 		print "INFO: gdoc: creating local docs from default->", local_docs
-	status = sync_to_djs_db( local_docs.values() )
-	if not status:
-		print "ERROR: gdoc: problem syncing local files to dbase..."
-		sys.exit(1)
+	if True:
+		status = sync_to_djs_db( local_docs.values() )
+		if not status:
+			print "ERROR: gdoc: problem syncing local files to dbase..."
+			sys.exit(1)
 
 	#
 	# Venue docs...
@@ -429,10 +429,11 @@ if __name__=="__main__":
 	else:
 		local_docs = dict( [ [a,"%s.txt" % a] for a in VENUE_DOCS ] )
 		print "INFO: gdoc: creating local docs from default->", local_docs
-	status = sync_to_ven_db( local_docs.values() )
-	if not status:
-		print "ERROR: gdoc: problem syncing local files to dbase..."
-		sys.exit(1)
+	if True:
+		status = sync_to_ven_db( local_docs.values() )
+		if not status:
+			print "ERROR: gdoc: problem syncing local files to dbase..."
+			sys.exit(1)
 
 	#
 	# Event docs...
@@ -448,9 +449,10 @@ if __name__=="__main__":
         else:
                 local_docs = dict( [ [a,"%s.txt" % a] for a in EVENT_DOCS ] )
                 print "INFO: gdoc: creating local docs from default->", local_docs
-        status = sync_to_events_db( local_docs.values() )
-        if not status:
-                print "ERROR: gdoc: problem syncing local files to dbase..."
-                sys.exit(1)
+        if True:
+		status = sync_to_events_db( local_docs.values() )
+        	if not status:
+                	print "ERROR: gdoc: problem syncing local files to dbase..."
+                	sys.exit(1)
 
 	print "INFO: Done."

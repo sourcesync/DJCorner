@@ -185,12 +185,18 @@ if __name__ == "__main__":
 		clear_all( None )
 
 	vs = get_venues_details( None, None )
+	print vs
 	
 	for v in vs:
 		print "INFO: venue->", v["name"],
 		if v.has_key("city"):
-			print v["city"],
+			print "city=" + v["city"],
+			print
+		if v.has_key("latitude"):
+			print "lat=" + str(v["latitude"]),
+			print
+		if v.has_key("longitude"):
+			print "lat=" + str(v["longitude"]),
+			print
 		print
-		
-
 	print "INFO: Done."

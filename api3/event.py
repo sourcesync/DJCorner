@@ -8,6 +8,7 @@
 import sys
 from dateutil import parser
 import datetime
+from datetime import timedelta
 
 from pymongo import Connection
 
@@ -132,7 +133,7 @@ def get_event_details( connection, location, oid, verbose ):
 	# event date...
 	dtstr = event["eventdate"]
 	dt = parser.parse(dtstr)
-	dtstr = dt.strftime("%m/%d")
+	dtstr = dt.strftime("%m/%d/%y")
 	event["eventdate"] = dtstr
 
 	# event performers...
@@ -203,6 +204,19 @@ def get_events_details( connection, location, paging, city ):
 	events_details = []
 	for evt in events:
 		event_details = get_event_details( connection, location, evt["_id"], False )
+
+		# don't include old events...
+		edt = event_details["eventdate"]
+		dt = parser.parse( edt )
+		#print datetime.datetime.today(), dt, datetime.datetime.today() - dt
+		if (  datetime.datetime.today() - dt ) > timedelta( days=1 ):
+			print "WARNING: event: event already happened"
+			continue
+
+		# filter by city possibly...
+		if city and event_details["city"] != city:
+			continue
+
 		events_details.append( event_details )
 	
 	# sort it by dist...
@@ -275,23 +289,35 @@ def delete_event( connection, oid ):
 # unit test...
 #
 if __name__ == "__main__":
+	validate = False
 
 	# possibly clear events...
 	if len(sys.argv)>1 and ( sys.argv[1]=="clear" ):
 		print "WARNING: clearing events..."
 		clear_all( None)
+	elif len(sys.argv)>1 and ( sys.argv[1]=="validate" ):
+		validate = True
 
 	# get connection...
 	conxn = _get_connection()
 
-	# get all events...
-	events = get_events_details( conxn, None, None, None)
-	print "INFO: event: get_events_details: result->", events
+	loc = None
+	if validate:
+		loc = {'lat':0.1,'lng':0.2}
 
+	# get all events...
+	events = get_events_details( conxn, loc, None, None)
 	print "INFO: There are %d events" % len(events[0])
 
+	# iterate...
 	for evt in events[0]:
-		print "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], evt["eventdate"], evt["city"]
+		print "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], evt["eventdate"], evt["venuename"], evt["city"], evt["dist"], evt["eventdate"]
+		if validate:
+			if evt["dist"] == 0:
+				print "ERROR: event: invalid dist"
+				sys.exit(1)
+	
+	print "INFO: There are %d events" % len(events[0])
 
 	print "INFO: Done."
 	

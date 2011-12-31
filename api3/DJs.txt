@@ -47,9 +47,9 @@ Bobina,Dmitry BOBINA Almazov,Moscow,Russia,http://bobina.info/en/index/,http://i
 Richie Hawtin,Plastikman,Oxfordshire,United Kingdom,http://onecity.richiehawtin.com/,http://partysan.net/wp-content/themes/partisan/phpthumb/phpThumb.php?src=/files/2007/04/2007.04.17-Hawtin-Platikman.jpg&w=141&h=172&zc=T&q=100&blogId=1,Techno,NA,45,NA,NA
 Eric Prydz,NA,London,United Kingdom,http://ericprydz.tv/,http://i1.sndcdn.com/avatars-000001249495-0oisik-crop.jpg?5d75100,House,http://soundcloud.com/eric-prydz,46,NA,NA
 DJ Zatox,Gerardo Roschini; Zatox,NA,Italy,http://www.djzatox.com/#home,http://40.img.v4.skyrock.net/408/djnixis/pics/2977121391_0_3_tmaCnlwv.jpg,Italian Hardstyle,NA,47,NA,NA
-tyDi,Tyson Illingworth,Brisbane,Australia,http://www.tydi.com/site/,http://www.loudnoises.com.au/dl/images/tyDi/155x155/dob/tyDi.jpg.JPG?1315677706,Trance,,48,NA,NA
-Orjan Nilsen,,,,http://www.orjannilsen.com/,,,,49,NA,NA
-Andy Moor,,,,http://www.andymoor.com/,,,,50,NA,NA
+tyDi,Tyson Illingworth,Brisbane,Australia,http://www.tydi.com/site/,http://www.loudnoises.com.au/dl/images/tyDi/155x155/dob/tyDi.jpg.JPG?1315677706,Trance,NA,48,NA,NA
+Orjan Nilsen,NA,Kirkenes,Norway,http://www.orjannilsen.com/,http://userserve-ak.last.fm/serve/126/27487927.jpg,Trance,http://soundcloud.com/orjanmusic,49,NA,NA
+Andy Moor,NA,Stoke-on-Trent,United Kingdom,http://www.andymoor.com/,http://i1.sndcdn.com/avatars-000007218478-tsmnlt-crop.jpg?5d75100,Trance; Progressive Trance,http://soundcloud.com/djandymoor,50,NA,NA
 Erick Morillo,NA,NA,NA,NA,NA,House,NA,NA,NA,NA
 Danny Tenaglia,NA,NA,NA,NA,NA,House,NA,NA,NA,NA
 Kenny Dope,NA,NA,NA,NA,NA,House,NA,NA,NA,NA

@@ -72,8 +72,7 @@ class API(jsonrpc.JSONRPC):
 			dct = {'status':0,'msg':'Cannot get this event.'}
 			return dct
 		else:
-			fevt = event.fix_event_details(evt)
-			dct = { "results":fevt, "status":1 }
+			dct = { "results":evt, "status":1 }
 			return dct
 
 	def jsonrpc_register_device(self,deviceid):
