@@ -253,6 +253,7 @@ def sync_to_djs_db( docs ):
 
 			# get the rating to update, if any...
 			rating = _GETVAL(dct, "Rating", True )
+			if rating != None: rating = int(rating)
 
 			# update fields...
 			status = dj.update_dj( None, djid, None, djpic, None, None, rating )
@@ -377,6 +378,12 @@ def sync_to_events_db( docs ):
                 	if not status:
                         	print "ERROR: gdoc: could not update event"
                         	sys.exit(1)
+
+			# Update event rating (based on performers)...
+			status = event.update_event_rating( None, eoid )
+			if not status:
+				print "ERROR: gdoc: cannot update event rating"
+				sys.exit(1)
 
                 	# Make sure it saved...
                 	evt = event.get_event_details( None, None, eoid, True)

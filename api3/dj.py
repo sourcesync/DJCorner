@@ -229,7 +229,7 @@ def get_dj_details( connection, djid ):
 #
 # func to get dj details...
 #
-def get_djs_details( connection, searchrx, paging ):
+def get_djs_details( connection, searchrx, all, paging ):
 
 	# get djs collection...	
 	djs = _get_djs_col( connection )
@@ -245,10 +245,19 @@ def get_djs_details( connection, searchrx, paging ):
 		results = djs.find( {"name": re.compile(searchrx,re.IGNORECASE) } )
 		
 	for dj in results:
+
 		dj["id"] = str( dj["_id"] ) # replace id with something serializable...
 		del dj["_id"] # delete old one...
 		if dj.has_key("events"): del dj["events"] # delete events...
-		pfs.append( dj )
+
+		if not all: # filter by rating...
+			rating = None
+			if dj.has_key("rating"):
+				rating = dj["rating"]
+			if rating!=None and rating>=0 and rating <= 50:
+				pfs.append( dj )
+		else: # all
+			pfs.append( dj )
 
 	# sort
 	pfs.sort( _djssort )
@@ -420,14 +429,17 @@ if __name__ == "__main__":
 		sys.exit(1)
 
 	elif  len(sys.argv)>1:
-		djs = get_djs_details( None, sys.argv[1], None )
+		djs = get_djs_details( None, sys.argv[1], True, None )
 		print djs
 		sys.exit(1)
 
 	# get raw objs...
 	djs = get_djs( None )
 	for djobj in djs:
-		print "INFO: dj: ->", djobj["_id"], djobj["name"]
+		print "INFO: dj: ->", djobj["_id"], djobj["name"], 
+		if djobj.has_key("rating"):
+			print "rating=" +  djobj["rating"],
+		print
 		#schedule = get_schedule( None, djobj["_id"] )
 		#print "INFO: dj: schedule->", djobj["name"], schedule
 

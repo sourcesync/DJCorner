@@ -57,9 +57,9 @@ parent.putChild("static", staticfiles )
 # API top level resource...
 class API(jsonrpc.JSONRPC):
 
-        def jsonrpc_get_events(self,location,paging,city):
-		print "INFO: api: get_events->", location, paging, "city->",city
-		[ events, info ] = event.get_events_details( None, location, paging, city )
+        def jsonrpc_get_events(self,location,paging,city,all):
+		print "INFO: api: get_events->", location, paging, "city->",city, all
+		[ events, info ] = event.get_events_details( None, location, paging, city, all)
 		dct = { "results":events, "status":1, "paging":info }
 		#print "INFO: api: get_events: return dct->", dct
 		return dct
@@ -111,9 +111,9 @@ class API(jsonrpc.JSONRPC):
 			dct = {'status':0,'msg':'Problem with this operation.'}
 		return self.jsonrpc_get_followdjs( deviceid )
 
-	def jsonrpc_get_djs(self, searchrx, paging):
-		print "INFO: api: get_djs->", searchrx, paging
-		status = dj.get_djs_details( None, searchrx, paging )
+	def jsonrpc_get_djs(self, searchrx, all, paging):
+		print "INFO: api: get_djs->", searchrx, all, paging
+		status = dj.get_djs_details( None, searchrx, all, paging )
 		if not status:
 			dct = {'status':0,'msg':'Problem with this operation.'}
 			return dct	

@@ -12,6 +12,7 @@ import datetime
 from datetime import timedelta
 
 from pymongo import Connection
+import bson
 
 import venue
 import common
@@ -205,7 +206,7 @@ def _sort_by_date( a, b ):
 #
 # func to get events details...
 #
-def get_events_details( connection, location, paging, city ):
+def get_events_details( connection, location, paging, city, all ):
 
 	# get all raw events...	
 	events = get_events( connection, paging )
@@ -218,7 +219,6 @@ def get_events_details( connection, location, paging, city ):
 		# don't include old events...
 		edt = event_details["eventdate"]
 		dt = parser.parse( edt )
-		#print datetime.datetime.today(), dt, datetime.datetime.today() - dt
 		if (  datetime.datetime.today() - dt ) > timedelta( days=1 ):
 			print "WARNING: event: event already happened"
 			continue
@@ -226,6 +226,15 @@ def get_events_details( connection, location, paging, city ):
 		# filter by city possibly...
 		if city and event_details["city"] != city:
 			continue
+
+		if not all: # filter by rating...
+                        rating = None
+                        if evt.has_key("rating"):
+                                rating = evt["rating"]
+                        if rating!=None and rating>=0 and rating <= 50:
+				pass
+			else: #skip this one
+				continue
 
 		events_details.append( event_details )
 	
@@ -271,7 +280,6 @@ def update_event( connection, oid, name, venueid, description, promotor, imgpath
 	if city: fields["city"] = city
 
 	# update...
-	print "SET FIELDS->", fields
 	uid = events.update( event, { '$set':fields } , True )
 
 	if ( uid ):
@@ -279,6 +287,38 @@ def update_event( connection, oid, name, venueid, description, promotor, imgpath
 	else:
 		return True
 
+#
+# func to update event rating...
+#
+def update_event_rating( connection, oid ):
+        
+	evt = get_event( connection, oid )
+	
+	pfids = []
+	if evt.has_key("pfids"):
+		pfids = evt["pfids"]
+
+	evtrating = -1
+	for pfid in pfids:
+		bid = bson.objectid.ObjectId(pfid)
+		djobj = dj.get_dj( connection, bid )
+		rating = None
+		if djobj.has_key("rating"):
+			rating = djobj["rating"]
+		if rating and rating>=0 and rating<=50:
+			if rating> evtrating:
+				evtrating = rating
+	print "EVTRATING->", evtrating
+
+        events = _get_event_col( connection )
+	obj = { "_id":oid }
+	fields = { "rating": evtrating }	
+	uid = events.update( obj, { '$set':fields } , True )
+	if ( uid ):
+		return False
+	else:
+		return True
+	 
 #
 # func to delete event...
 #
@@ -316,12 +356,12 @@ if __name__ == "__main__":
 		loc = {'lat':0.1,'lng':0.2}
 
 	# get all events...
-	events = get_events_details( conxn, loc, None, None)
+	events = get_events_details( conxn, loc, None, None, True)
 	print "INFO: There are %d events" % len(events[0])
 
 	# iterate...
 	for evt in events[0]:
-		print "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], evt["eventdate"], evt["venuename"], evt["city"], evt["dist"], evt["eventdate"]
+		print "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], evt["eventdate"], evt["venuename"], evt["city"], evt["dist"], evt["eventdate"], evt["rating"]
 		if validate:
 			if evt["dist"] == 0:
 				print "ERROR: event: invalid dist"
