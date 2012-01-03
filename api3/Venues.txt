@@ -54,41 +54,41 @@ Ministry of Sound,London,United Kingdom,,NA,NA
 Fabric,London ,United Kingdom,51.519571;-0.102557,NA,NA
 O2 Academy,London,United Kingdom,51.465142;-0.114938,http://www.o2academybrixton.co.uk/,NA
 Sankeys,Manchester,United Kingdom,,NA,NA
-Lizard Lounge,Dallas,United States,32.78492;-96.790433,NA,NA
-Zouk,Dallas,United States,,NA,NA
-Dunes/Axe Lounge,Hamptons,United States,,NA,NA
-Chateau Nightclub,Las Vegas,United States,,NA,NA
-Encore Beach Club,Las Vegas,United States,,NA,NA
-Haze,Las Vegas,United States,,NA,NA
-Krave,Las Vegas,United States,,NA,NA
-LAVO,Las Vegas,United States,36.125005;-115.169198,http://www.lavolv.com/Index.aspx,NA
-Marquee Las Vegas,Las Vegas,United States,,NA,NA
-Surrender,Las Vegas,United States,36.130163;-115.165134,NA,NA
-XS,Las Vegas,United States,36.128233;-115.167001,http://xslasvegas.com/flash2/#/home/?migcatid=xs&migSource=google-paid,NA
-Avalon,Los Angeles,United States,34.102717;-118.327126,NA,NA
-System Nightclub,Long Island City,United States,,NA,NA
-Fontainebleau Pool & Arkadia,Miami,United States,,NA,NA
-Liv,Miami,United States,,NA,NA
-Mansion,Miami,United States,,NA,NA
-Mynt,Miami,United States,,NA,NA
-Set,Miami,United States,25.790562;-80.130935,NA,NA
-Space Miami,Miami,United States,,NA,NA
-Wet at the W Hotel,Miami,United States,25.797609;-80.128146,NA,NA
-Cielo,New York City,United States,,NA,NA
-District 36,New York City,United States,,NA,NA
-Greenhouse,New York City,United States,,NA,NA
-Lavo NYC,New York City,United States,40.763251;-73.97157,NA,NA
-La Zarza,New York City,United States,,NA,NA
-Pacha NYC,New York City,United States,40.766762;-73.997211,NA,NA
-Provocateur,New York City,United States,,NA,NA
-Club Shelter ,New York City,United States,,NA,NA
-Sullivan Room,New York City,United States,40.730348;-73.999915,NA,NA
-Terminal 5,New York City,United States,,NA,NA
-Roseland Ballroom,New York City,United States,,NA,NA
-Webster Hall,New York City,United States,,NA,NA
-Pier 36,New York City,United States,40.710863;-73.982403,NA,NA
-Voyeur,San Diego,United States,32.71334;-117.160022,NA,NA
-The Observatory,Santa Ana,United States,33.699779;-117.919028,http://www.observatoryoc.com/,NA
+Lizard Lounge,Dallas,USA,32.78492;-96.790433,NA,NA
+Zouk,Dallas,USA,,NA,NA
+Dunes/Axe Lounge,Hamptons,USA,,NA,NA
+Chateau Nightclub,Las Vegas,USA,,NA,NA
+Encore Beach Club,Las Vegas,USA,,NA,NA
+Haze,Las Vegas,USA,,NA,NA
+Krave,Las Vegas,USA,,NA,NA
+LAVO,Las Vegas,USA,36.125005;-115.169198,http://www.lavolv.com/Index.aspx,NA
+Marquee Las Vegas,Las Vegas,USA,,NA,NA
+Surrender,Las Vegas,USA,36.130163;-115.165134,NA,NA
+XS,Las Vegas,USA,36.128233;-115.167001,http://xslasvegas.com/flash2/#/home/?migcatid=xs&migSource=google-paid,NA
+Avalon,Los Angeles,USA,34.102717;-118.327126,NA,NA
+System Nightclub,Long Island City,USA,,NA,NA
+Fontainebleau Pool & Arkadia,Miami,USA,,NA,NA
+Liv,Miami,USA,,NA,NA
+Mansion,Miami,USA,,NA,NA
+Mynt,Miami,USA,,NA,NA
+Set,Miami,USA,25.790562;-80.130935,NA,NA
+Space Miami,Miami,USA,,NA,NA
+Wet at the W Hotel,Miami,USA,25.797609;-80.128146,NA,NA
+Cielo,New York City,USA,,NA,NA
+District 36,New York City,USA,,NA,NA
+Greenhouse,New York City,USA,,NA,NA
+Lavo NYC,New York City,USA,40.763251;-73.97157,NA,NA
+La Zarza,New York City,USA,,NA,NA
+Pacha NYC,New York City,USA,40.766762;-73.997211,NA,NA
+Provocateur,New York City,USA,,NA,NA
+Club Shelter ,New York City,USA,,NA,NA
+Sullivan Room,New York City,USA,40.730348;-73.999915,NA,NA
+Terminal 5,New York City,USA,,NA,NA
+Roseland Ballroom,New York City,USA,,NA,NA
+Webster Hall,New York City,USA,,NA,NA
+Pier 36,New York City,USA,40.710863;-73.982403,NA,NA
+Voyeur,San Diego,USA,32.71334;-117.160022,NA,NA
+The Observatory,Santa Ana,USA,33.699779;-117.919028,http://www.observatoryoc.com/,NA
 Centre Bell,NA,NA,,NA,NA
 JUNO Awards,Ottawa,Canada,45.449534;-75.697174,NA,NA
 Jaguel Airport,Punta Del Este,Uruguay,-34.831841;-54.893875,NA,NA
@@ -96,3 +96,10 @@ Arena Anhembi,Sao Paulo,Brazil,-22.829352;-48.444214,NA,NA
 Hangar Centro,Belem,Brazil,-1.406452;-48.456402,NA,NA
 Sporting Club,Vina Del Mar,Chile,-33.014565;-71.540051,NA,NA
 Distoteca Pueblo,Buenos Aires,Argentina,-34.608769;-58.385811,NA,NA
+Beyond Wonderland Festival,San Bernardino,USA,34.114647;-117.288322,NA,NA
+Kings Hall,Belfast,United Kingdom,54.58042;-5.968323,NA,NA
+Ciudad Del Rock Arganda Del Rey,Madrid,Spain,40.268262;-3.402672,NA,NA
+Fluxx,San Diego,USA,32.713066;-117.160778,NA,NA
+Axis Radius,Scottsdale,USA,33.502397;-111.922874,NA,NA
+Royale,Boston,USA,42.351281;-71.065493,NA,NA
+Webster Theatre,Hartford,USA,41.745637;-72.683015,NA,NA
