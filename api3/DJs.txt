@@ -3,7 +3,7 @@ http://www.djmag.com/top100
 David Guetta,NA,Paris,France,http://www.davidguetta.com/#/home,http://i1.sndcdn.com/avatars-000003877623-3q950c-crop.jpg?9d0294f,House,http://soundcloud.com/davidguetta,1,NA,NA
 Armin van Buuren,NA,Leyde,Netherlands,http://www.arminvanbuuren.com/,http://i1.sndcdn.com/avatars-000006594616-f34js3-crop.jpg?9d0294f,Trance,http://soundcloud.com/armin-van-buuren-3,2,no updated tourdates (last date 12/31/2011),NA
 Tiesto,Tijs Michiel Verwest; DJ Tiesto,Breda,Netherlands,http://www.tiesto.com/Tiesto-home,http://d3muaolby2vhr.cloudfront.net/images/assets/icons/Artist-profile.jpg,Trance,NA,3,NA,yes
-Deadmau5,Joel Thomas Zimmerman,Toronto,Canada,http://www.deadmau5.com/,http://www.deadmau5.com/wp-content/uploads/2009/09/MG_0312-290x434.jpg,Progressive House,http://i1.sndcdn.com/avatars-000007415316-3cjbuy-crop.jpg?9d0294f,4,NA,NA
+Deadmau5,Joel Thomas Zimmerman,Toronto,Canada,http://www.deadmau5.com/,http://www.deadmau5.com/wp-content/uploads/2009/09/MG_0312-290x434.jpg,Progressive House,http://soundcloud.com/dj-deadmau5-1,4,NA,NA
 Above & Beyond,NA,London,United Kingdom,http://www.aboveandbeyond.nu/,http://i1.sndcdn.com/avatars-000001763050-zh5k7n-crop.jpg?9d0294f,Trance,http://soundcloud.com/aboveandbeyond,5,NA,NA
 Avicii,NA,Stockholm,Sweden,http://www.avicii.com/,http://farm7.static.flickr.com/6162/6192560732_64f115f44b_b.jpg,House,http://soundcloud.com/aviciiofficial,6,no updated tourdates (last date 12/29/2011),NA
 Afrojack,NA,,,http://www.afrojack.com/,http://a3.twimg.com/profile_images/1022114477/afro_normal.JPG,Electro House,NA,7,NA,NA

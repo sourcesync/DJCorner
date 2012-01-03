@@ -91,3 +91,8 @@ Voyeur,San Diego,United States,32.71334;-117.160022,NA,NA
 The Observatory,Santa Ana,United States,33.699779;-117.919028,http://www.observatoryoc.com/,NA
 Centre Bell,NA,NA,,NA,NA
 JUNO Awards,Ottawa,Canada,45.449534;-75.697174,NA,NA
+Jaguel Airport,Punta Del Este,Uruguay,-34.831841;-54.893875,NA,NA
+Arena Anhembi,Sao Paulo,Brazil,-22.829352;-48.444214,NA,NA
+Hangar Centro,Belem,Brazil,-1.406452;-48.456402,NA,NA
+Sporting Club,Vina Del Mar,Chile,-33.014565;-71.540051,NA,NA
+Distoteca Pueblo,Buenos Aires,Argentina,-34.608769;-58.385811,NA,NA
