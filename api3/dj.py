@@ -17,6 +17,9 @@ from pymongo import Connection
 import os
 import sys
 import re
+from dateutil import parser
+import datetime
+from datetime import timedelta
 
 import dbglobal
 import bson
@@ -306,6 +309,14 @@ def get_schedule( connection, djid ):
 	# iterate through events and get the schedule...
 	for eoid in eoids:
 		evt = event.get_event_details( None, None, eoid, False)
+
+		# don't include old events...
+                edt = evt["eventdate"]
+                dt = parser.parse( edt )
+                if (  datetime.datetime.today() - dt ) > timedelta( days=1 ):
+                        print "WARNING: event: event already happened"
+                        continue
+
 		DBG("INFO: dj: get_schedule: evt->", evt)
 		sched = { "eid": evt["id"], "city": evt["city"], "eventdate":evt["eventdate"] }
 		schedule.append( sched )
