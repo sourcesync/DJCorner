@@ -19,9 +19,11 @@
 @synthesize queue=_queue;
 @synthesize finishOnMainThread=_finishOnMainThread;
 
-static NSString *SERVER = @"localhost:7777";
+//static NSString *SERVER = @"localhost:7777";
 //static NSString *SERVER = @"greendotblade5.cs.nyu.edu:7777";
- 
+ static NSString *SERVER = @"www.theuniverseofallthings.com:7778";
+
+
 -(id) init:(id<DJCAPIServiceDelegate>)del
 {
     self = [ super init ];

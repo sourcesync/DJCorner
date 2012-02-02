@@ -1,0 +1,105 @@
+Venue,City,Country,Latitude; Longitude,Web Site,"Note:  Venues are being extracted from the ""Venues"" Sheet and retain the same order"
+Pacha Buenos Aires,Buenos Aires,Argentina,-34.550221;-58.427782,http://www.pachabuenosaires.com/beta3/,NA
+Club 69,Buenos Aires,Argentina,-34.587315;-58.438599,http://www.club69.com.ar/,NA
+Kika,Buenos Aires,Argentina,-34.552094;-58.45175,http://www.kikaclub.com.ar/main.php,NA
+Orfeo Superdomo,Buenos Aires,Argentina,-31.35986;-64.226981,NA,NA
+Laguna Escondida,Punta del Este,Uruguay,-34.962532;-54.948957,NA,NA
+El Jaguel,Punta del Este,Uruguay,-34.916658;-54.896343,NA,not accurate
+Silo,Leuven,Belgium,51.243005;4.367065,http://www.silo.be/,cool website
+Warung,Camboriu,Brazil,-26.948242;-48.628578,http://www.warungclub.com.br/index1.html,NA
+Garage,Ciauba,Brazil,-15.619958;-56.097897,NA,NA
+Green Valley,Camboriu,Brazil,-27.037492;-48.625445,http://www.greenvalley.art.br/index.php,NA
+Cafe Curacao,Guaratuba,Brazil,-22.968549;-43.179789,http://www.cafecuracao.com.br/,NA
+Music Park,Florianopolis,Brazil,-27.472924;-48.489532,http://www.musicpark.com.br/,cool website; *resource for other club info
+Copacabana Beach,Rio de Janeiro,Brazil,-22.968549;-43.179789,NA,not accurate
+Centre Bell,Montreal,Canada,45.495379;-73.569211,http://centrebell.ca/en/,NA
+Stereo,Montreal,Canada,45.51611;-73.558238,http://www.stereo-nightclub.com/,NA
+Scotiabank Place,Ottawa,Canada,45.295977;-75.926259,http://www.scotiabankplace.com/en/,NA
+The Kool Haus,Toronto,Canada,43.644261;-79.368383,http://theguvernment.com/,NA
+PNE Colliseum,Vancouver,Canada,49.285849;123.042712,http://www.pne.ca/,NA
+Kowloon,Hong Kong,China,22.304135;114.161328,NA,NA
+Pacha Sharm,Sharm El-Sheik,Egypt,27.910073;34.325151,http://www.pachasharm.com/,NA
+Le Queen,Paris,France,48.871705;2.302719,NA,NA
+Berghain,Berlin,Germany,,NA,NA
+Tresor,Berlin,Germany,52.510537;13.418716,NA,NA
+Cavo Paradiso,Mykonos,Greece,,NA,NA
+Paradise Club Mykonos,Mykonos,Greece,,NA,NA
+Paradiso,Amsterdam,Holland,52.36227;4.883943,NA,NA
+Amsterdam Rai,Amsterdam,Holland,52.34099;4.889646,NA,NA
+Jynxxx,Delhi,India,,NA,NA
+Red Square,Goa,India,,NA,NA
+Trilogy,Mumbai,India,,NA,NA
+Royal Dublin Society,Dublin,Ireland,53.327993;-6.228738,http://www.rds.ie/,NA
+Link,Bologna,Italy ,,NA,NA
+Tenax Club,Florence,Italy,,NA,NA
+AgeHa,Tokyo ,Japan,35.64222;139.82531,NA,NA
+Womb ,Tokyo ,Japan,,NA,NA
+Skybar,Beirut,Lebanon,,NA,NA
+Brabanthallen,Den Bosch,Netherlands,51.701356;5.290003,http://www.brabanthallen.nl/,NA
+Pasay World Trade Center,Pasay City,Phillipines,14.550542;120.9874,http://www.wtcmanila.com.ph/Home.html,NA
+Soho Rooms,Moscow,Russia,,NA,NA
+Central Concert Hall,Moscow,Russia,,NA,NA
+Gaudi Club,Moscow,Russia,,NA,NA
+Zouk,Singapore,Singapore,,NA,NA
+Kintex Convention Center,Seoul,South Korea,37.669308;126.745266,http://www.kintex.com/,NA
+Amnesia,Ibiza,Spain,,NA,NA
+Pacha Ibiza,Ibiza,Spain,38.917867;1.444058,NA,NA
+Privilege,Ibiza,Spain,,NA,NA
+Space,Ibiza,Spain,,NA,NA
+Fabrik,Madrid,Spain,40.26493;-3.840789,NA,NA
+K-Arena,Kaohsiung City,Taiwan,22.669605;120.302608,NA,NA
+Dubai World Trade Center,Dubai,United Arab Emirates,25.216565;55.279003,http://www.dwtc.com/,NA
+Atlantis Hotel,Dubai,United Arab Emirates,25.130269;55.117099,http://www.atlantisthepalm.com/,NA
+Ministry of Sound,London,United Kingdom,,NA,NA
+Fabric,London ,United Kingdom,51.519571;-0.102557,NA,NA
+O2 Academy,London,United Kingdom,51.465142;-0.114938,http://www.o2academybrixton.co.uk/,NA
+Sankeys,Manchester,United Kingdom,,NA,NA
+Lizard Lounge,Dallas,USA,32.78492;-96.790433,NA,NA
+Zouk,Dallas,USA,,NA,NA
+Dunes/Axe Lounge,Hamptons,USA,,NA,NA
+Chateau Nightclub,Las Vegas,USA,,NA,NA
+Encore Beach Club,Las Vegas,USA,,NA,NA
+Haze,Las Vegas,USA,,NA,NA
+Krave,Las Vegas,USA,,NA,NA
+LAVO,Las Vegas,USA,36.125005;-115.169198,http://www.lavolv.com/Index.aspx,NA
+Marquee Las Vegas,Las Vegas,USA,,NA,NA
+Surrender,Las Vegas,USA,36.130163;-115.165134,NA,NA
+XS,Las Vegas,USA,36.128233;-115.167001,http://xslasvegas.com/flash2/#/home/?migcatid=xs&migSource=google-paid,NA
+Avalon,Los Angeles,USA,34.102717;-118.327126,NA,NA
+System Nightclub,Long Island City,USA,,NA,NA
+Fontainebleau Pool & Arkadia,Miami,USA,,NA,NA
+Liv,Miami,USA,,NA,NA
+Mansion,Miami,USA,,NA,NA
+Mynt,Miami,USA,,NA,NA
+Set,Miami,USA,25.790562;-80.130935,NA,NA
+Space Miami,Miami,USA,,NA,NA
+Wet at the W Hotel,Miami,USA,25.797609;-80.128146,NA,NA
+Cielo,New York City,USA,,NA,NA
+District 36,New York City,USA,,NA,NA
+Greenhouse,New York City,USA,,NA,NA
+Lavo NYC,New York City,USA,40.763251;-73.97157,NA,NA
+La Zarza,New York City,USA,,NA,NA
+Pacha NYC,New York City,USA,40.766762;-73.997211,NA,NA
+Provocateur,New York City,USA,,NA,NA
+Club Shelter ,New York City,USA,,NA,NA
+Sullivan Room,New York City,USA,40.730348;-73.999915,NA,NA
+Terminal 5,New York City,USA,,NA,NA
+Roseland Ballroom,New York City,USA,,NA,NA
+Webster Hall,New York City,USA,,NA,NA
+Pier 36,New York City,USA,40.710863;-73.982403,NA,NA
+Voyeur,San Diego,USA,32.71334;-117.160022,NA,NA
+The Observatory,Santa Ana,USA,33.699779;-117.919028,http://www.observatoryoc.com/,NA
+Centre Bell,NA,NA,,NA,NA
+JUNO Awards,Ottawa,Canada,45.449534;-75.697174,NA,NA
+Jaguel Airport,Punta Del Este,Uruguay,-34.831841;-54.893875,NA,NA
+Arena Anhembi,Sao Paulo,Brazil,-22.829352;-48.444214,NA,NA
+Hangar Centro,Belem,Brazil,-1.406452;-48.456402,NA,NA
+Sporting Club,Vina Del Mar,Chile,-33.014565;-71.540051,NA,NA
+Distoteca Pueblo,Buenos Aires,Argentina,-34.608769;-58.385811,NA,NA
+Beyond Wonderland Festival,San Bernardino,USA,34.114647;-117.288322,NA,NA
+Kings Hall,Belfast,United Kingdom,54.58042;-5.968323,NA,NA
+Ciudad Del Rock Arganda Del Rey,Madrid,Spain,40.268262;-3.402672,NA,NA
+Fluxx,San Diego,USA,32.713066;-117.160778,NA,NA
+Axis Radius,Scottsdale,USA,33.502397;-111.922874,NA,NA
+Royale,Boston,USA,42.351281;-71.065493,NA,NA
+Webster Theatre,Hartford,USA,41.745637;-72.683015,NA,NA
