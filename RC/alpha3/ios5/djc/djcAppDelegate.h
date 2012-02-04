@@ -21,6 +21,7 @@
 #import "DJSearchView.h"
 #import "ScheduleView.h"
 #import "SimilarDJView.h"
+//#import "feedbackView.h"
 
 @interface djcAppDelegate : NSObject 
     <UIApplicationDelegate, UITabBarControllerDelegate,
@@ -49,8 +50,9 @@
 //@property (nonatomic, retain) DJSearchView *search_by_djs;
 @property (atomic, retain) ScheduleView *dj_schedule_view;
 @property (nonatomic, retain) SimilarDJView *dj_similar_view;
-
-
+//jimmy added
+//@property (nonatomic, retain) feedbackView *feedback_view;
+//end
 //  PUBLIC FUNCS...
 -(void) buyEvent:(NSString *)url;
 -(NSString *) getCurURL;

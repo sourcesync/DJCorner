@@ -14,7 +14,9 @@
 #import "SearchView.h"
 #import "DjView.h"
 #import "SimilarDJView.h"
-
+//jimmy 
+#import "feedbackView.h"
+//end
 @implementation djcAppDelegate
 
 
@@ -34,6 +36,9 @@
 @synthesize search_by_djs=_search_by_djs;
 @synthesize dj_schedule_view=_dj_schedule_view; 
 @synthesize dj_similar_view=_dj_similar_view;
+//jimmy
+//@synthesize feedback_view=_feedback_view;
+//end 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -212,6 +217,18 @@
     self.dj_similar_view.parent = src;
     [ src presentModalViewController:self.dj_similar_view animated:YES ];
 }
+//jimmy
+/*
+-(void) showFeedback:(UIViewController *)src:(DJ *)dj
+{
+    self.feedback_view= [ [ [  feedbackView alloc ] init ] autorelease ]; //ANA
+    //self.dj_feedback_view.djname = dj.name;
+    //self.dj_feedback_view.djid = dj.djid; 
+    self.feedback_view.parent = src;
+    [ src presentModalViewController:self.feedback_view animated:YES ];
+}
+*/
+//end 
 
 
 -(void) showBuyModal:(UIViewController *)src:(Event *)evt

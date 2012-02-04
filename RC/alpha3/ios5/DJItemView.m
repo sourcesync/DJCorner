@@ -24,6 +24,9 @@
 @synthesize api=_api;
 @synthesize getdj=_getdj;
 @synthesize cell_similar=_cell_similar;
+//jimmy
+@synthesize cell_feedback=_cell_feedback;
+//end
 @synthesize back_from=_back_from;
 @synthesize parent=_parent;
 
@@ -140,6 +143,7 @@
     else
     {
         return 4;
+        //return 5;
     }
 }
 
@@ -159,7 +163,7 @@
         
         //  Set title...
         self.label_title.text = name;
-        
+
         //  Set pic...
         //NSURL *url = [ NSURL URLWithString:self.event.pic_path ];
         //NSData *data = [ NSData dataWithContentsOfURL:url ];
@@ -196,7 +200,12 @@
     }
     else if ( section == 4 )
     {
+        //jimmy
+    //    self.cell_feedback.selectionStyle = UITableViewCellSelectionStyleNone;
+      //  return self.cell_feedback;
+
         return nil;
+        //end 
     }
     else if ( section == 5 )
     { 
@@ -296,6 +305,19 @@
     //    [ Utility AlertAPICallFailed ];
     //} 
 }
+
+//jimmy 
+
+-(IBAction) feedbackButtonClicked:(id)sender
+{
+    djcAppDelegate *app = (djcAppDelegate *)
+    [ [ UIApplication sharedApplication ] delegate ];
+    
+    [ app showSimilarDJS:self :self.dj ];
+    
+}
+
+//end
 
 
 #pragma mark - djcapi...

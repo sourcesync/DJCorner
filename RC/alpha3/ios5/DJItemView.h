@@ -23,6 +23,10 @@
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_follow;
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_web_site;
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_similar;
+//jimmy
+@property (nonatomic, retain) IBOutlet UITableViewCell *cell_feedback;
+//end
+
 
 //  RETAIN...
 @property (nonatomic, retain) DJ *dj;
@@ -39,5 +43,8 @@
 -(IBAction) showScheduleClicked:(id)sender;
 -(IBAction) followButtonClicked:(id)sender;
 -(IBAction) similarButtonClicked:(id)sender;
+//jimmy 
+-(IBAction) feedbackButtonClicked:(id)sender;
+//end
 -(IBAction) backButtonClicked:(id)sender;
 @end

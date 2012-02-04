@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		308F36FA14DD17E200369244 /* DjsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 308F36F814DD17E200369244 /* DjsCell.m */; };
 		308F36FB14DD17E200369244 /* DjsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308F36F914DD17E200369244 /* DjsCell.xib */; };
+		86C46F1614DD88AE00F719E6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C46F1514DD88AE00F719E6 /* feedbackView.xib */; };
+		86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C46F1714DD88C800F719E6 /* feedbackView.m */; };
 		B30D5F33147E135B006F3D8A /* djc2.modified.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F32147E135B006F3D8A /* djc2.modified.png */; };
 		B30D5F35147E1560006F3D8A /* djc4.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F34147E1560006F3D8A /* djc4.png */; };
 		B30D5F37147E1D13006F3D8A /* djc5.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F36147E1D13006F3D8A /* djc5.png */; };
@@ -112,6 +114,9 @@
 		308F36F714DD17E200369244 /* DjsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DjsCell.h; sourceTree = "<group>"; };
 		308F36F814DD17E200369244 /* DjsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DjsCell.m; sourceTree = "<group>"; };
 		308F36F914DD17E200369244 /* DjsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DjsCell.xib; sourceTree = "<group>"; };
+		86C46F1414DD888600F719E6 /* feedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackView.h; sourceTree = "<group>"; };
+		86C46F1514DD88AE00F719E6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
+		86C46F1714DD88C800F719E6 /* feedbackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackView.m; sourceTree = "<group>"; };
 		B30D5F32147E135B006F3D8A /* djc2.modified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc2.modified.png; sourceTree = "<group>"; };
 		B30D5F34147E1560006F3D8A /* djc4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc4.png; sourceTree = "<group>"; };
 		B30D5F36147E1D13006F3D8A /* djc5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc5.png; sourceTree = "<group>"; };
@@ -296,6 +301,16 @@
 			name = DjsCell;
 			sourceTree = "<group>";
 		};
+		86C46F1214DD884100F719E6 /* feedback_view */ = {
+			isa = PBXGroup;
+			children = (
+				86C46F1414DD888600F719E6 /* feedbackView.h */,
+				86C46F1714DD88C800F719E6 /* feedbackView.m */,
+				86C46F1514DD88AE00F719E6 /* feedbackView.xib */,
+			);
+			name = feedback_view;
+			sourceTree = "<group>";
+		};
 		B321620E14773B8E00C7EE05 /* splash_view */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +453,7 @@
 				B384A99314761B1A003F0DD6 /* main */,
 				B384A98C14761B1A003F0DD6 /* Frameworks */,
 				B384A98A14761B1A003F0DD6 /* Products */,
+				86C46F1214DD884100F719E6 /* feedback_view */,
 			);
 			sourceTree = "<group>";
 		};
@@ -778,6 +794,7 @@
 				B37031A214A9F15800ABDA9F /* Genericthumb2.png in Resources */,
 				B37031A914AA04E400ABDA9F /* SimilarDJView.xib in Resources */,
 				308F36FB14DD17E200369244 /* DjsCell.xib in Resources */,
+				86C46F1614DD88AE00F719E6 /* feedbackView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -832,6 +849,7 @@
 				B37B6C2C14A532600093BA4D /* ScheduleView.m in Sources */,
 				B37031A814AA04E400ABDA9F /* SimilarDJView.m in Sources */,
 				308F36FA14DD17E200369244 /* DjsCell.m in Sources */,
+				86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
