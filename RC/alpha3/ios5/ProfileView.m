@@ -189,7 +189,7 @@
         self.selectedDJ = djid;
      
         UIActionSheet *popupQuery = [[UIActionSheet alloc] 
-                                 initWithTitle:@"DJs Corner" 
+                                 initWithTitle:@"DJ's Corner" 
                                  delegate:self 
                                  cancelButtonTitle:@"Cancel"
                                  destructiveButtonTitle:nil

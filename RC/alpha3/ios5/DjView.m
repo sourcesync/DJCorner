@@ -325,7 +325,8 @@
             }
             else // also show rating...
             {
-                NSString *str = [ NSString stringWithFormat:@"%@ - #%d",dj.name,dj.rating];
+               // NSString *str = [ NSString stringWithFormat:@"%@ - #%d",dj.name,dj.rating];
+                NSString *str = [ NSString stringWithFormat:@"%@",dj.name];
                 //cell.textLabel.text = str;
                 cell.content.text=str;
             }

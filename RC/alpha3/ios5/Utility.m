@@ -31,7 +31,7 @@ static BOOL low_mem_warned = NO;
     if (!low_mem_warned)
     {
         UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"DJs Corner"
+                          initWithTitle: @"DJ's Corner"
                           message: @"Low Memory"
                           delegate: nil
                           cancelButtonTitle:@"OK"
@@ -46,7 +46,7 @@ static BOOL low_mem_warned = NO;
 + (void) AlertError: (NSString *)msg
 {
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"DJs Corner"
+                          initWithTitle: @"DJ's Corner"
                           message: msg
                           delegate: nil
                           cancelButtonTitle:@"OK"
@@ -59,7 +59,7 @@ static BOOL low_mem_warned = NO;
 + (void) AlertMessageNoInternet
 {
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"DJs Corner"
+                          initWithTitle: @"DJ's Corner"
                           message: @"Cannot Connect To Server"
                           delegate: nil
                           cancelButtonTitle:@"OK"
@@ -72,7 +72,7 @@ static BOOL low_mem_warned = NO;
 + (void) AlertMessage: (NSString *)msg
 {
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"DJs Corner"
+                          initWithTitle: @"DJ's Corner"
                           message: msg
                           delegate: nil
                           cancelButtonTitle:@"OK"
@@ -84,7 +84,7 @@ static BOOL low_mem_warned = NO;
 + (void) AlertAPICallFailed
 {
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"DJs Corner"
+                          initWithTitle: @"DJ's Corner"
                           message: @"API Call Failed."
                           delegate: nil
                           cancelButtonTitle:@"OK"
@@ -97,7 +97,7 @@ static BOOL low_mem_warned = NO;
 + (void) AlertAPICallFailedWithMessage: (NSString *)msg
 {
     UIAlertView *alert = [[UIAlertView alloc]
-                          initWithTitle: @"DJs Corner"
+                          initWithTitle: @"DJ's Corner"
                           message: msg
                           delegate: nil
                           cancelButtonTitle:@"OK"
