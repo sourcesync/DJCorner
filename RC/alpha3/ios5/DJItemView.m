@@ -27,6 +27,7 @@
 @synthesize back_from=_back_from;
 @synthesize parent=_parent;
 
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -90,21 +91,23 @@
     {
         
     
-    if ( self.getdj != nil )
-    {
-        if ( ! [ self.api get_dj:self.getdj ] )
+        if ( self.getdj != nil )
         {
-            [ Utility AlertAPICallFailed ];
+            if ( ! [ self.api get_dj:self.getdj ] )
+            {
+                [ Utility AlertAPICallFailed ];
+            }
         }
-    }
-    else
-    {
-        self.tv.hidden = NO;
-        self.activity.hidden = YES;
-        [ self.tv reloadData ];
-    }
+        else
+        {
+            self.tv.hidden = NO;
+            self.activity.hidden = YES;
+            [ self.tv reloadData ];
+        }
         
     }
+   
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -163,8 +166,14 @@
         //UIImage *img = [ UIImage imageWithData:data ];
         //[ self.pic setImage:img ];
         
-        UIImage *img = [ UIImage imageNamed:@"Genericthumb2.png" ];
+        UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
+        //download image from db
+        UIImage *img=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dj.pic_path]]];
         [ self.image_pic setImage:img ];
+        if(img==nil)
+        {
+            [self.image_pic setImage:imgAll];
+        }
         
         self.cell_title.selectionStyle = UITableViewCellSelectionStyleNone;
         return self.cell_title;
@@ -177,6 +186,7 @@
     else if ( section == 2 )
     {
         self.cell_follow.selectionStyle = UITableViewCellSelectionStyleNone;
+        
         return self.cell_follow;
     }
     else if ( section == 3 )
@@ -224,6 +234,7 @@
     if ( section == 1 )
     {
     }
+    
 }
 
 #pragma mark - button callbacks...
@@ -266,7 +277,7 @@
     {
         [ Utility AlertAPICallFailed ];
     } 
-    
+
     [ arr release ];
     [ arrids release ];
 }
@@ -329,6 +340,7 @@
         [ dj autorelease ];
         dj.name = [ dct objectForKey:@"name" ];
         dj.djid = [ dct objectForKey:@"id" ];
+        dj.pic_path=[dct objectForKey:@"pic"];
         self.dj = dj;
         self.getdj = nil;
         

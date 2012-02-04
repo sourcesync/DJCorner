@@ -255,6 +255,7 @@
     EventCell *cell = (EventCell *)[ self.tv cellForRowAtIndexPath:path ];
     [ cell.activity stopAnimating ];
     [ cell.icon setImage:ufc.img];
+
     [ cell.icon setHidden:NO ];
 }
 

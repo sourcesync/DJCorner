@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		308F36FA14DD17E200369244 /* DjsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 308F36F814DD17E200369244 /* DjsCell.m */; };
+		308F36FB14DD17E200369244 /* DjsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308F36F914DD17E200369244 /* DjsCell.xib */; };
 		B30D5F33147E135B006F3D8A /* djc2.modified.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F32147E135B006F3D8A /* djc2.modified.png */; };
 		B30D5F35147E1560006F3D8A /* djc4.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F34147E1560006F3D8A /* djc4.png */; };
 		B30D5F37147E1D13006F3D8A /* djc5.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F36147E1D13006F3D8A /* djc5.png */; };
@@ -107,6 +109,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		308F36F714DD17E200369244 /* DjsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DjsCell.h; sourceTree = "<group>"; };
+		308F36F814DD17E200369244 /* DjsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DjsCell.m; sourceTree = "<group>"; };
+		308F36F914DD17E200369244 /* DjsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DjsCell.xib; sourceTree = "<group>"; };
 		B30D5F32147E135B006F3D8A /* djc2.modified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc2.modified.png; sourceTree = "<group>"; };
 		B30D5F34147E1560006F3D8A /* djc4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc4.png; sourceTree = "<group>"; };
 		B30D5F36147E1D13006F3D8A /* djc5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc5.png; sourceTree = "<group>"; };
@@ -116,7 +121,7 @@
 		B321621014773BDE00C7EE05 /* SplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
 		B321621114773BDE00C7EE05 /* SplashView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		B321621414773CFD00C7EE05 /* djc2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc2.png; sourceTree = "<group>"; };
-		B3317270149895CD009C67CB /* DJSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; path = DJSelectView.h; sourceTree = "<group>"; };
+		B3317270149895CD009C67CB /* DJSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSelectView.h; sourceTree = "<group>"; };
 		B3317271149895CD009C67CB /* DJSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSelectView.m; sourceTree = "<group>"; };
 		B3317272149895CD009C67CB /* DJSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJSelectView.xib; sourceTree = "<group>"; };
 		B33C829C149036BC00D7AA78 /* EventKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = EventKit.framework; path = System/Library/Frameworks/EventKit.framework; sourceTree = SDKROOT; };
@@ -281,6 +286,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		308F36F014DD15C700369244 /* DjsCell */ = {
+			isa = PBXGroup;
+			children = (
+				308F36F914DD17E200369244 /* DjsCell.xib */,
+				308F36F714DD17E200369244 /* DjsCell.h */,
+				308F36F814DD17E200369244 /* DjsCell.m */,
+			);
+			name = DjsCell;
+			sourceTree = "<group>";
+		};
 		B321620E14773B8E00C7EE05 /* splash_view */ = {
 			isa = PBXGroup;
 			children = (
@@ -345,6 +360,7 @@
 		B37B6C0914A3EDFC0093BA4D /* djs_view */ = {
 			isa = PBXGroup;
 			children = (
+				308F36F014DD15C700369244 /* DjsCell */,
 				B37B6C1014A3F5320093BA4D /* DJSGetter.h */,
 				B37B6C1114A3F5320093BA4D /* DJSGetter.m */,
 				B37B6C0B14A3EE180093BA4D /* DjView.h */,
@@ -761,6 +777,7 @@
 				B37B6C2F14A5D1540093BA4D /* Genericthumb.png in Resources */,
 				B37031A214A9F15800ABDA9F /* Genericthumb2.png in Resources */,
 				B37031A914AA04E400ABDA9F /* SimilarDJView.xib in Resources */,
+				308F36FB14DD17E200369244 /* DjsCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -814,6 +831,7 @@
 				B37B6C2614A496F40093BA4D /* DJSearchView.m in Sources */,
 				B37B6C2C14A532600093BA4D /* ScheduleView.m in Sources */,
 				B37031A814AA04E400ABDA9F /* SimilarDJView.m in Sources */,
+				308F36FA14DD17E200369244 /* DjsCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

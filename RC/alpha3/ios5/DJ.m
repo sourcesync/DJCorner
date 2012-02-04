@@ -54,6 +54,9 @@
         //  djid name...
         dj.djid =  [ item objectForKey:@"id" ];
         
+        //jd pic_path 
+        dj.pic_path=[item objectForKey:@"pic"];
+        
         //  rating...
         NSNumber *_num =  [ item objectForKey:@"rating" ];
         if ( _num )

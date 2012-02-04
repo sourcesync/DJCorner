@@ -10,6 +10,7 @@
 #import "Utility.h"
 #import "DJ.h"
 #import "djcAppDelegate.h"
+#import "DjsCell.h"
 
 @implementation DjView
 
@@ -25,6 +26,8 @@
 @synthesize button_search=_button_search;
 @synthesize segment_dj=_segment_dj;
 @synthesize all_djs=_all_djs;
+@synthesize top50=_top50;
+@synthesize button_AllTop50=_button_AllTop50;
 
 #pragma - funcs...
 
@@ -97,6 +100,7 @@
     
     self.all_djs = NO;
     self.segment_dj.selectedSegmentIndex=1;
+    self.top50=YES;
     [ self.segment_dj addTarget:self action:@selector(segmentDJClicked:) 
                forControlEvents:UIControlEventValueChanged ];
     
@@ -267,30 +271,63 @@
         }
         else
         {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                                     @"djitem_cell"];
-            if (cell == nil) 
+            //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"djitem_cell"];
+            UITableViewCell *tcell=[tableView dequeueReusableCellWithIdentifier:[DjsCell reuseIdentifier]];
+            if (tcell == nil) 
             {
-                cell = [[[ UITableViewCell alloc] init ]  autorelease];
+                tcell = [[[ DjsCell alloc] init ]  autorelease];
             }
-            UIImage *img = [ UIImage imageNamed:@"Genericthumb2.png" ];
-            [ cell.imageView setImage:img ];
+            DjsCell *cell=(DjsCell *)tcell;
+            UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
+            //[ cell.imageView setImage:imgAll ];
+            
+ 
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-            cell.textLabel.textColor = [ UIColor blackColor ];
-            cell.textLabel.font = [ UIFont systemFontOfSize:17 ];
+            //cell.textLabel.textColor = [ UIColor blackColor ];
+            cell.content.textColor=[UIColor blackColor];
+            cell.content.font=[UIFont systemFontOfSize:17];
+            
+            //cell.textLabel.font = [ UIFont systemFontOfSize:17 ];
             //  Get dj object...
             DJ *dj = [ self.getter.djs objectAtIndex:row ];
+            
+            //NSData *data = [ NSData dataWithContentsOfURL:[NSURL URLWithString:dj.pic_path]];
+            //UIImage *img=[UIImage imageWithData:data];
+            
+            //[cell.imageView setImage:img];
+            
+            //float sw=img.size.width/cell.imageView.image.size.width;
+            //float sh=img.size.height/cell.imageView.image.size.height;
+            //cell.imageView.transform=CGAffineTransformMakeScale(sw, sh);
+            NSString *pic=dj.pic_path;
+            
+            if(pic!=nil)
+            {
+                NSNumber *num = [ NSNumber numberWithInteger:row];
+                [self.getter asyncGetPic:pic :num];
+                [cell.activity setHidden:NO];
+                [ cell.activity startAnimating];
+                [ cell.icon setHidden:YES ];
+            }
+            else
+            {
+                [cell.icon setImage:imgAll];
+                [cell.icon setHidden:NO];
+            }
             
             //  Set name...
             if ( self.all_djs )
             {
-                cell.textLabel.text = dj.name;
+                //[cell.imageView setImage:[self.getter.djs g
+                //cell.textLabel.text = dj.name;
+                cell.content.text=dj.name;
             }
             else // also show rating...
             {
                 NSString *str = [ NSString stringWithFormat:@"%@ - #%d",dj.name,dj.rating];
-                cell.textLabel.text = str;
+                //cell.textLabel.text = str;
+                cell.content.text=str;
             }
             return cell;   
         }
@@ -326,6 +363,19 @@
     }
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if((self.getter.djs==nil)||([self.getter.djs count]==0)||
+       ([self.getter.djs count]==[indexPath row]))
+    {
+        return 44;
+    }
+    else
+    {
+        return 75.0f;
+    }
+}
+
 #pragma mark - djs getter delegate...
 
 -(void) got_djs:(NSInteger)start :(NSInteger)end
@@ -341,14 +391,20 @@
     
     if ( !self.getter.got_all )
     {
-        [self.getter getNext];
+        [self.getter  getNext];
     }
 }
 
 -(void) got_pic:(UIImageForCell *)img
 {
+    int row = [ img.idx integerValue ];
+    NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
     
-}
+    DjsCell *cell = (DjsCell *)[ self.tv cellForRowAtIndexPath:path ];
+    [cell.activity setHidden:YES];
+    [ cell.activity stopAnimating ];
+    [ cell.icon setImage:img.img];
+    [ cell.icon setHidden:NO ];}
 
 -(void) failed
 {
@@ -397,6 +453,26 @@
 -(BOOL)textFieldShouldClear:(UITextField*)textField
 {
     return YES;
+}
+
+#pragma mark -top50 or all
+
+-(IBAction)allTop50Clicked:(id)sender
+{
+    if(self.top50==YES)
+    {
+        self.top50=NO;
+        self.all_djs=YES;
+        self.button_AllTop50.title=@"All";
+    }
+    else
+    {
+        self.top50=YES;
+        self.all_djs=NO;
+        self.button_AllTop50.title=@"Top50";
+    }
+    
+    [self refreshClicked:nil];
 }
 
 #pragma mark - segment dj...

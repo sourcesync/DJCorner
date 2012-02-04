@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DJCAPI.h"
 #import "DJSGetter.h"
+#import "DjsCell.h"
 
 @interface DjView : UIViewController
     <UITableViewDataSource, UITableViewDelegate, DJSGetterDelegate, UITextFieldDelegate>
@@ -22,20 +23,24 @@
 @property (nonatomic, retain) IBOutlet UITextField *field_search;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *button_search;
 @property (nonatomic, retain) IBOutlet UISegmentedControl *segment_dj;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_AllTop50;
 
 //  RETAIN...
 @property (nonatomic, retain) NSMutableArray *djs;
 @property (nonatomic, retain) DJSGetter *getter;
 @property (nonatomic, retain) NSString *search;
 
+
 //  ASSIGN...
 @property (assign) BOOL back_from;
 @property (assign) BOOL all_djs;
+@property (assign) BOOL top50;
+
 
 //  PUBLIC FUNCS...
 -(id) init;
 -(IBAction) refreshClicked: (id)sender;
 -(IBAction) backClicked: (id)sender;
 -(IBAction) searchClicked:(id)sender;
-
-@end
+-(IBAction) allTop50Clicked:(id)sender;
+;@end
