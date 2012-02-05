@@ -310,10 +310,10 @@
 
 -(IBAction) feedbackButtonClicked:(id)sender
 {
-   // djcAppDelegate *app = (djcAppDelegate *)
-   // [ [ UIApplication sharedApplication ] delegate ];
+    djcAppDelegate *app = (djcAppDelegate *)
+    [ [ UIApplication sharedApplication ] delegate ];
     
-   // [ app showSimilarDJS:self :self.dj ];
+    [ app showFeedback:self :self.dj ];
     
 }
 

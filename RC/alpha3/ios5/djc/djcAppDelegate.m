@@ -221,7 +221,8 @@
 
 -(void) showFeedback:(UIViewController *)src:(DJ *)dj
 {
-    self.feedback_view= [ [ [  feedbackView alloc ] init ] autorelease ]; //ANA
+    self.feedback_view= [ [ [  feedbackView alloc ] init ] autorelease ]; 
+    //ANA
     //self.dj_feedback_view.djname = dj.name;
     //self.dj_feedback_view.djid = dj.djid; 
     self.feedback_view.parent = src;
