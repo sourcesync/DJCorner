@@ -10,10 +10,13 @@
 #import "feedbackView.h"
 #import "Utility.h"
 #import "djcAppDelegate.h"
+#import <MessageUI/MessageUI.h>
+#import <MessageUI/MFMailComposeViewController.h>
+
 
 @implementation feedbackView
 
-@synthesize activity=_activity;
+//@synthesize activity=_activity;
 @synthesize api=_api;
 @synthesize parent=_parent;
 
@@ -56,7 +59,7 @@
     [ super viewWillAppear:animated];
     
 
-    self.activity.hidden = NO;
+   // self.activity.hidden = NO;
 }
 
 -(void) viewDidAppear:(BOOL)animated
@@ -96,6 +99,42 @@
 }
 
 
+#pragma mark - button callbacks...
+
+
+-(IBAction) submitClicked:(id)sender
+{
+    if ( [self.parent isKindOfClass:[ DJItemView class] ] )
+    {
+        //DJItemView *eview = (DJItemView *)self.parent;
+        //eview.back_from = YES;
+        
+    }
+    //////////////////////////////////////////
+    
+    
+ //   NSString *recipients = @"mailto:cj2000s@gmail.com?subject=Hello from California!";
+   // NSString *body = @"&body=It is raining in sunny California!";
+    
+   // NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
+    //email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSString* urlString = [NSString stringWithFormat:@"mailto://cj2000s@gmail.com"];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    
+    
+    //////////////////////////////////////////
+    UIAlertView *alert = [[UIAlertView alloc] 
+        initWithTitle:@"Feedback" 
+        message:@"Your comment has been submitted"  
+        delegate:self 
+        cancelButtonTitle:@"No" 
+        otherButtonTitles:@"Yes", nil];
+	[alert show];
+	[alert release];
+    
+    [ self dismissModalViewControllerAnimated:YES ];
+}
 
 
 

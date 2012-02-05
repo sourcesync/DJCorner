@@ -66,5 +66,5 @@
 -(void) showSearchDJS:(UIViewController *)src:(NSString *)search;
 -(void) showDJSchedule:(UIViewController *)src:(DJ *)dj;
 -(void) showSimilarDJS:(UIViewController *)src:(DJ *)dj;
-
+-(void) showFeedback:(UIViewController *)src:(DJ *)dj;
 @end

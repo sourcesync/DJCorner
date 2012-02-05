@@ -12,7 +12,7 @@
 < DJCAPIServiceDelegate>
 
 //  IBOUTLET...
-@property (nonatomic,retain) IBOutlet UIActivityIndicatorView *activity;
+//@property (nonatomic,retain) IBOutlet UIActivityIndicatorView *activity;
 
 //  RETAIN...
 @property (nonatomic, retain) DJCAPI *api;
@@ -22,6 +22,7 @@
 -(id) init;
 
 -(IBAction) buttonBackClicked:(id)sender;
+-(IBAction) submitClicked:(id)sender;
 
 @end
 
