@@ -118,12 +118,9 @@
     
    // NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
     //email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-   // NSString* urlString = [NSString stringWithFormat:@"mailto:cj2000s@gmail.com"];
+    NSString* urlString = [NSString stringWithFormat:@"mailto://cj2000s@gmail.com"];
     
-    NSURL *url = [[NSURL alloc] initWithString:
-                  @"mailto:cj2000s@yahoo.com?subject=subject&body=Hi"];
-    [[UIApplication sharedApplication] openURL:url];
-   // [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
     
     
     //////////////////////////////////////////
