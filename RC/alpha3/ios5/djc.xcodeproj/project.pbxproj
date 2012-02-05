@@ -428,6 +428,7 @@
 		B384A97E14761B1A003F0DD6 = {
 			isa = PBXGroup;
 			children = (
+				B321620E14773B8E00C7EE05 /* splash_view */,
 				B386510214AD604B00C48BD3 /* archive */,
 				B37031A414AA047400ABDA9F /* similardjs_view */,
 				B37B6C2814A5324A0093BA4D /* schedule_view */,
@@ -439,7 +440,6 @@
 				B33C829C149036BC00D7AA78 /* EventKit.framework */,
 				B33C829D149036BC00D7AA78 /* EventKitUI.framework */,
 				B352AD641477858100824ED1 /* event_view */,
-				B321620E14773B8E00C7EE05 /* splash_view */,
 				B384AA531476E894003F0DD6 /* buy_view */,
 				B384AA3D147655D8003F0DD6 /* profile_view */,
 				B384AA3614764C8B003F0DD6 /* images */,

@@ -21,9 +21,9 @@
 @synthesize queue=_queue;
 @synthesize finishOnMainThread=_finishOnMainThread;
 
-//static NSString *SERVER = @"localhost:7779";
+static NSString *SERVER = @"localhost:7779";
 //static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
-static NSString *SERVER = @"ec2-23-20-62-113.compute-1.amazonaws.com:7779";
+//static NSString *SERVER = @"ec2-23-20-62-113.compute-1.amazonaws.com:7779";
 
 -(id) init:(id<DJCAPIServiceDelegate>)del
 {

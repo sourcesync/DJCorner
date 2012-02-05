@@ -37,7 +37,7 @@
 @synthesize dj_schedule_view=_dj_schedule_view; 
 @synthesize dj_similar_view=_dj_similar_view;
 //jimmy
-//@synthesize feedback_view=_feedback_view;
+@synthesize feedback_view=_feedback_view;
 //end 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -218,7 +218,7 @@
     [ src presentModalViewController:self.dj_similar_view animated:YES ];
 }
 //jimmy
-/*
+
 -(void) showFeedback:(UIViewController *)src:(DJ *)dj
 {
     self.feedback_view= [ [ [  feedbackView alloc ] init ] autorelease ]; //ANA
@@ -227,7 +227,7 @@
     self.feedback_view.parent = src;
     [ src presentModalViewController:self.feedback_view animated:YES ];
 }
-*/
+
 //end 
 
 

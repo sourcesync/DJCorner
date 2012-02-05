@@ -6,7 +6,7 @@
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
-/*
+
 #import "feedbackView.h"
 #import "Utility.h"
 #import "djcAppDelegate.h"
@@ -46,7 +46,7 @@
 -(void) dealloc
 {
 
-    self.api = nil;
+   self.api = nil;
     self.parent = nil;
     [ super dealloc];
 }
@@ -115,29 +115,10 @@
 
 #pragma mark - djcapi...
 
--(void) got_similar_djs:(NSDictionary *)data
-{
-    NSNumber *_status = [ data objectForKey:@"status" ];
-    NSInteger status = [ _status integerValue ];
-    if ( status>0 )
-    {
-        self.tv.hidden = NO;
-        self.activity.hidden = YES;
-        NSMutableArray *similar = [ data objectForKey:@"results" ];
-        self.similar = similar;
-        [self.tv reloadData];
-    }
-    else
-    {
-        NSString *msg = [ data objectForKey:@"msg" ];
-        [ Utility AlertMessage:msg ];
-    }
-}
-
 -(void) apiLoadingFailed:(NSString *)errMsg
 {
     [ Utility AlertAPICallFailedWithMessage:errMsg ];
 }
 
 
-@end*/
+@end

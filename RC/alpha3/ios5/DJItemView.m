@@ -142,8 +142,8 @@
     }
     else
     {
-        return 4;
-        //return 5;
+        //return 4;
+        return 5;
     }
 }
 
@@ -201,8 +201,8 @@
     else if ( section == 4 )
     {
         //jimmy
-    //    self.cell_feedback.selectionStyle = UITableViewCellSelectionStyleNone;
-      //  return self.cell_feedback;
+       self.cell_feedback.selectionStyle = UITableViewCellSelectionStyleNone;
+        return self.cell_feedback;
 
         return nil;
         //end 
@@ -310,10 +310,10 @@
 
 -(IBAction) feedbackButtonClicked:(id)sender
 {
-    djcAppDelegate *app = (djcAppDelegate *)
-    [ [ UIApplication sharedApplication ] delegate ];
+   // djcAppDelegate *app = (djcAppDelegate *)
+   // [ [ UIApplication sharedApplication ] delegate ];
     
-    [ app showSimilarDJS:self :self.dj ];
+   // [ app showSimilarDJS:self :self.dj ];
     
 }
 
