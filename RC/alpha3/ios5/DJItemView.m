@@ -314,7 +314,16 @@
     [ [ UIApplication sharedApplication ] delegate ];
     
     [ app showFeedback:self :self.dj ];
+   
+/*    
+    NSString *recipients = @"mailto:cj2000s@gmail.com?subject=Feedback!";
+    NSString *body = @"&body=";
     
+    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
+    email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
+ */
 }
 
 //end

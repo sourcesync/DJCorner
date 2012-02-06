@@ -113,14 +113,13 @@
     //////////////////////////////////////////
     
     
- //   NSString *recipients = @"mailto:cj2000s@gmail.com?subject=Hello from California!";
-   // NSString *body = @"&body=It is raining in sunny California!";
+    NSString *recipients = @"mailto:cj2000s@gmail.com?subject=Feedback from DJs Corner!";
+    NSString *body = @"&body=";
     
-   // NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
-    //email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    NSString* urlString = [NSString stringWithFormat:@"mailto://cj2000s@gmail.com"];
+    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
+    email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:urlString]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
     
     
     //////////////////////////////////////////
