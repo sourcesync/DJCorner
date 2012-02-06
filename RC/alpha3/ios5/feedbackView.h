@@ -17,7 +17,6 @@
 //  RETAIN...
 @property (nonatomic, retain) DJCAPI *api;
 @property (nonatomic, retain) UIViewController *parent;
-
 //  PUBLIC FUNCS...
 -(id) init;
 
