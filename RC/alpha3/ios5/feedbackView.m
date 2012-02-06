@@ -19,7 +19,7 @@
 //@synthesize activity=_activity;
 @synthesize api=_api;
 @synthesize parent=_parent;
-
+@synthesize tf=_tf;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -114,10 +114,10 @@
     //////////////////////////////////////////
     
     
-    NSString *recipients = @"mailto:cj2000s@gmail.com?subject=Feedback from DJs Corner!";
+    NSString *recipients = @"mailto:feedback@djscorner.com?subject=Feedback from DJs Corner!";
     NSString *body = @"&body=";
     
-    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
+    NSString *email = [NSString stringWithFormat:@"%@%@%@", recipients, body,self.tf.text];
     email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];

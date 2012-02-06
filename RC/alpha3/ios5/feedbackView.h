@@ -13,10 +13,11 @@
 
 //  IBOUTLET...
 //@property (nonatomic,retain) IBOutlet UIActivityIndicatorView *activity;
-
+@property (nonatomic, retain) IBOutlet UITextView *tf;
 //  RETAIN...
 @property (nonatomic, retain) DJCAPI *api;
 @property (nonatomic, retain) UIViewController *parent;
+
 //  PUBLIC FUNCS...
 -(id) init;
 
