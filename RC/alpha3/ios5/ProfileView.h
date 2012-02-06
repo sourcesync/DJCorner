@@ -1,0 +1,31 @@
+//
+//  ProfileView.h
+//  alpha2
+//
+//  Created by George Williams on 11/18/11.
+//  Copyright 2011 __MyCompanyName__. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "DJCAPI.h"
+
+@interface ProfileView : UIViewController 
+    < UITableViewDelegate, UITableViewDataSource, 
+        DJCAPIServiceDelegate, UIActionSheetDelegate>
+{
+    
+}
+
+//  IBOUTLET...
+@property (nonatomic, retain) IBOutlet UITableView *tv;
+@property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activity;
+
+//  ASSIGN...
+@property (assign) NSInteger selectedIndex;
+
+//  RETAIN...
+@property (nonatomic, retain) DJCAPI *api;
+@property (nonatomic, retain) NSMutableArray *djs;
+@property (nonatomic, retain) NSString *selectedDJ;
+
+@end
