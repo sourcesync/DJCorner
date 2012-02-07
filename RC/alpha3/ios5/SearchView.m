@@ -24,6 +24,7 @@
 @synthesize cities=_cities;
 @synthesize lati=_lati;
 @synthesize longi=_longi;
+@synthesize flags=_flags;
 @synthesize mode=_mode;
 @synthesize location_Manager=_location_Manager;
 @synthesize show_Default_location=_show_Default_location;
@@ -195,6 +196,55 @@
                  @"139.691162",
                  @"-79.381714",
                  nil] autorelease];
+    self.flags=[[[NSMutableArray alloc] 
+                 initWithObjects:@"nl.png",
+                 @"de.png",
+                 @"ie.png",
+                 @"lb.png",
+                 @"de.png",
+                 @"ar.png",
+                 @"br.png",
+                 @"br.png",
+                 @"us.png",
+                 @"in.png",
+                 @"nl.png",
+                 @"ae.png",
+                 @"ie.png",
+                 @"it.png",
+                 @"br.png",
+                 @"in.png",
+                 @"au.png",
+                 @"us.png",
+                 @"hk.png",
+                 @"es.png",
+                 @"es.png",
+                 @"tw.png",
+                 @"us.png",
+                 @"be.png",
+                 @"gb.png",
+                 @"us.png",
+                 @"us.png",
+                 @"es.png",
+                 @"gb.png",
+                 @"us.png",
+                 @"ca.png",
+                 @"ru.png",
+                 @"in.png",
+                 @"gr.png",
+                 @"us.png",
+                 @"fr.png",
+                 @"ph.png",
+                 @"uy.png",
+                 @"br.png",
+                 @"us.png",
+                 @"us.png",
+                 @"us.png",
+                 @"kr.png",
+                 @"eg.png",
+                 @"sg.png",
+                 @"au.png",
+                 @"jp.png",
+                 @"ca.png",nil] autorelease];
     self.show_Default_location=CLLocationCoordinate2DMake(DEFAULT_LAT, DEFAULT_LONG);
     self.location_Manager=[[[CLLocationManager alloc] init] autorelease];
     
@@ -360,7 +410,7 @@
             annotation.name=[NSString stringWithFormat:@"%@",[self.cities objectAtIndex:temp]];
             annotation.coordinate=coordidate;
             annotation.message=nil;
-            annotation.pp=@"ad.png";
+            annotation.pp=[NSString stringWithFormat:@"%@",[self.flags objectAtIndex:i]];
             annotation.type=0;
             [self.mv addAnnotation:annotation];
             

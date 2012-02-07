@@ -32,6 +32,7 @@ enum SearchViewMode
 @property (nonatomic, retain) NSMutableArray *cities;
 @property (nonatomic, retain) NSMutableArray *lati;
 @property (nonatomic, retain) NSMutableArray *longi;
+@property (nonatomic, retain) NSMutableArray *flags;
 @property (nonatomic, retain) CLLocationManager *location_Manager;
 
 //ASSIGN...
