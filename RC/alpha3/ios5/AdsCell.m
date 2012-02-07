@@ -49,19 +49,19 @@
             self.mainView.backgroundColor = [ UIColor redColor ];
             
             //  Configure accessory...
-            //self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
+            self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
             
-            //UIImageView *imageView = [[[UIImageView alloc] initWithImage:
-            //                           [UIImage imageNamed:@"DJscornerarrow"]] autorelease];
-            //self.accessoryView = imageView;
+            UIImageView *imageView = [[[UIImageView alloc] initWithImage:
+                                       [UIImage imageNamed:@"redbull.png"]] autorelease];
+            self.accessoryView = imageView;
             
 #if 0
             //  Configure accessory...
-            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            [button setImage:[UIImage imageNamed:@"DJscornerarrow.png"] forState:UIControlStateNormal];
-            [button addTarget:self action:@selector(someAction:) forControlEvents:UIControlEventTouchUpInside];
+            //UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            //[button setImage:[UIImage imageNamed:@"DJscornerarrow.png"] forState:UIControlStateNormal];
+           // [button addTarget:self action:@selector(someAction:) forControlEvents:UIControlEventTouchUpInside];
             //button.tag = self.indexPath;
-            self.accessoryView = button;
+            //self.accessoryView = button;
 #endif
             
             [self addSubview:self.mainView];

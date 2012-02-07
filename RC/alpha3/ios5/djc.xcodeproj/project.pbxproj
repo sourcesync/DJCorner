@@ -266,6 +266,7 @@
 		307DCEF714E0F377006D720E /* AdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307DCEF514E0F377006D720E /* AdsCell.xib */; };
 		308F36FA14DD17E200369244 /* DjsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 308F36F814DD17E200369244 /* DjsCell.m */; };
 		308F36FB14DD17E200369244 /* DjsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308F36F914DD17E200369244 /* DjsCell.xib */; };
+		869D8E4B14E1306C009E3E31 /* redbull.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D8E4A14E1306C009E3E31 /* redbull.png */; };
 		86C46F1614DD88AE00F719E6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C46F1514DD88AE00F719E6 /* feedbackView.xib */; };
 		86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C46F1714DD88C800F719E6 /* feedbackView.m */; };
 		B30D5F33147E135B006F3D8A /* djc2.modified.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F32147E135B006F3D8A /* djc2.modified.png */; };
@@ -629,6 +630,7 @@
 		308F36F714DD17E200369244 /* DjsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DjsCell.h; sourceTree = "<group>"; };
 		308F36F814DD17E200369244 /* DjsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DjsCell.m; sourceTree = "<group>"; };
 		308F36F914DD17E200369244 /* DjsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DjsCell.xib; sourceTree = "<group>"; };
+		869D8E4A14E1306C009E3E31 /* redbull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbull.png; sourceTree = "<group>"; };
 		86C46F1414DD888600F719E6 /* feedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackView.h; sourceTree = "<group>"; };
 		86C46F1514DD88AE00F719E6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
 		86C46F1714DD88C800F719E6 /* feedbackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackView.m; sourceTree = "<group>"; };
@@ -1417,6 +1419,7 @@
 				307DCDF214E0E71C006D720E /* zw.png */,
 				307DCCEA14E0D344006D720E /* ad.png */,
 				B37031A114A9F15800ABDA9F /* Genericthumb2.png */,
+				869D8E4A14E1306C009E3E31 /* redbull.png */,
 				B37B6C2E14A5D1540093BA4D /* Genericthumb.png */,
 				B364BB6914A1CF4300EB89FE /* Icon.png */,
 				B3A4804C149A0A1100FFECF8 /* Calendaricon.png */,
@@ -1832,6 +1835,7 @@
 				307DCEEF14E0E71D006D720E /* zm.png in Resources */,
 				307DCEF014E0E71D006D720E /* zw.png in Resources */,
 				307DCEF714E0F377006D720E /* AdsCell.xib in Resources */,
+				869D8E4B14E1306C009E3E31 /* redbull.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1946,8 +1950,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "DJ's Corner";
-				PROVISIONING_PROFILE = "48E80A15-B4E8-4C2B-9FD8-C670FD478573";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "48E80A15-B4E8-4C2B-9FD8-C670FD478573";
+				PROVISIONING_PROFILE = "42BA1E68-1CF8-478F-8E5F-455351DFE32F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "42BA1E68-1CF8-478F-8E5F-455351DFE32F";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1956,8 +1960,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hok Leong Chan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hok Leong Chan";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1965,8 +1969,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "DJ's Corner";
-				PROVISIONING_PROFILE = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+				PROVISIONING_PROFILE = "42BA1E68-1CF8-478F-8E5F-455351DFE32F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "42BA1E68-1CF8-478F-8E5F-455351DFE32F";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -1985,8 +1989,8 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "48E80A15-B4E8-4C2B-9FD8-C670FD478573";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "48E80A15-B4E8-4C2B-9FD8-C670FD478573";
+				PROVISIONING_PROFILE = "42BA1E68-1CF8-478F-8E5F-455351DFE32F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "42BA1E68-1CF8-478F-8E5F-455351DFE32F";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1995,8 +1999,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hok Leong Chan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hok Leong Chan";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "djc/djc-Prefix.pch";
@@ -2004,6 +2008,8 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "42BA1E68-1CF8-478F-8E5F-455351DFE32F";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "42BA1E68-1CF8-478F-8E5F-455351DFE32F";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
