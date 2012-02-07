@@ -38,6 +38,7 @@
     app.search_view = self;
     
     self.mv.delegate = self;
+    self.mode=SearchViewList;
     
     [ self.tv setDelegate:self ];
     [ self.tv setDataSource:self ];    
@@ -95,105 +96,104 @@
     
     self.lati=[[[NSMutableArray alloc]
                 initWithObjects:
-                @"52.36",
-                @"52.54",
-                @"44.50",
-                @"33.88",
-                @"52.54",
-                @"-34.60",
-                @"-27.02",
-                @"-15.56",
-                @"-56.09",
-                @"32.81",
-                @"28.64",
-                @"51.70",
-                @"25.30",
-                @"53.35",
-                @"43.77",
-                @"-27.58",
-                @"15.45",
-                @"-28.02",
-                @"26.91",
-                @"22.30",
-                @"38.91",
-                @"23.04",
-                @"36.15",
-                @"50.88",
-                @"51.51",
-                @"40.72",
-                @"34.08",
-                @"40.43",
-                @"53.48",
-                @"25.79",
-                @"45.51",
-                @"56.41",
-                @"19.09",
-                @"37.45",
-                @"40.73",
-                @"48.86",
-                @"14.53",
-                @"-34.96",
-                @"-22.86",
-                @"32.73",
-                @"33.74",
-                @"33.52",
-                @"37.58",
-                @"27.94",
-                @"1.29",
-                @"-33.74",
-                @"35.74",
-                @"43.66",
+                @"52.368263",
+                @"52.547131",
+                @"44.504831",
+                @"33.889521",
+                @"52.547131",
+                @"-34.601846",
+                @"-27.020902",
+                @"-15.564836",
+                @"32.818265",
+                @"28.648394",
+                @"51.700363",
+                @"25.304304",
+                @"53.351781",
+                @"43.773573",
+                @"-27.582546",
+                @"15.456327",
+                @"-28.026531",
+                @"26.914417",
+                @"22.309426",
+                @"38.912274",
+                @"23.043089",
+                @"36.130665",
+                @"50.883326",
+                @"51.516862",
+                @"40.725405",
+                @"34.083375",
+                @"40.436495",
+                @"53.485390",
+                @"25.798037",
+                @"45.518857",
+                @"56.413901",
+                @"19.090022",
+                @"37.458508",
+                @"40.732169",
+                @"48.861327",
+                @"14.539804",
+                @"-34.963763",
+                @"-22.866053",
+                @"32.732996",
+                @"33.749036",
+                @"33.521934",
+                @"37.582133",
+                @"27.943232",
+                @"1.295590",
+                @"-33.963004",
+                @"35.746512",
+                @"43.664891",
                 nil] autorelease];
     
     self.longi=[[[NSMutableArray alloc]
                  initWithObjects:
-                 @"4.90",
-                 @"13.41",
-                 @"11.34",
-                 @"35.49",
-                 @"13.41",
-                 @"-58.37",
-                 @"-48.65",
-                 @"-56.09",
-                 @"-96.76",
-                 @"77.22",
-                 @"5.31",
-                 @"55.31",
-                 @"-6.26",
-                 @"11.25",
-                 @"-48.55",
-                 @"73.97",
-                 @"153.29"
-                 @"-80.11",
-                 @"114.12",
-                 @"1.43",
-                 @"120.66",
-                 @"-115.17",
-                 @"4.70",
-                 @"-0.12",
-                 @"-74.00",
-                 @"-118.24",
-                 @"-3.69",
-                 @"-2.24",
-                 @"-80.22",
-                 @"-73.55",
-                 @"37.22",
-                 @"72.87",
-                 @"25.32",
-                 @"-74.00",
-                 @"2.35",
-                 @"121.00",
-                 @"-54.94",
-                 @"-43.20",
-                 @"-117.15",
-                 @"-117.86",
-                 @"-111.92",
-                 @"126.97",
-                 @"34.36",
-                 @"103.85",
-                 @"151.20",
-                 @"139.69",
-                 @"-79.38",
+                 @"4.901276",
+                 @"13.414307",
+                 @"11.345444",
+                 @"35.495496",
+                 @"13.414307",
+                 @"-58.370361",
+                 @"-48.655701",
+                 @"-56.094818",
+                 @"-96.768265",
+                 @"77.228394",
+                 @"5.315666",
+                 @"55.313416",
+                 @"-6.267014",
+                 @"11.256866",
+                 @"-48.552704",
+                 @"73.977644",
+                 @"153.299103",
+                 @"-80.114064",
+                 @"114.125977",
+                 @"1.432343",
+                 @"120.662842",
+                 @"-115.171738",
+                 @"4.705582",
+                 @"-0.129776",
+                 @"-74.004593",
+                 @"-118.240356",
+                 @"-3.695526",
+                 @"-2.249107",
+                 @"-80.226631",
+                 @"-73.555527",
+                 @"37.221680",
+                 @"72.875748",
+                 @"25.327606",
+                 @"-74.005280",
+                 @"2.352791",
+                 @"121.000929",
+                 @"-54.948979",
+                 @"-43.205109",
+                 @"-117.158203",
+                 @"-117.867680",
+                 @"-111.924891",
+                 @"126.975861",
+                 @"34.365749",
+                 @"103.857880",
+                 @"151.208267",
+                 @"139.691162",
+                 @"-79.381714",
                  nil] autorelease];
     self.show_Default_location=CLLocationCoordinate2DMake(DEFAULT_LAT, DEFAULT_LONG);
     self.location_Manager=[[[CLLocationManager alloc] init] autorelease];
@@ -314,7 +314,7 @@
 {
     if(YES)
     {
-        MKCoordinateSpan span=MKCoordinateSpanMake(0.1, 0.1);
+        MKCoordinateSpan span=MKCoordinateSpanMake(100, 100);
         MKCoordinateRegion region=MKCoordinateRegionMake(self.show_Default_location, span);
         [self.mv setShowsUserLocation:YES];
         [self.mv setRegion:region];
@@ -340,15 +340,31 @@
     
     //create this user's annonation
     SimpleLocation *annonaion=[[SimpleLocation alloc] initWithName];
-    annonaion.name=[NSString stringWithString:@"Francisco"];
+    annonaion.name=[NSString stringWithString:@"All cities"];
     annonaion.message=nil;
     annonaion.coordinate=coordidate;
     annonaion.pp=nil;
     annonaion.type=0;
     [self.mv addAnnotation:annonaion];
-    if(YES)//here is to deal with each city
+    if((self.cities.count!=0)&&(self.longi.count==self.lati.count)&&(self.lati.count!=0))//here is to deal with each city
     {
-        
+        int temp;
+        for(int i=0;i<self.lati.count;i++)
+        {
+            temp=i+1;
+            CLLocationCoordinate2D coordidate;
+            coordidate.latitude=[[NSString stringWithFormat:@"%@",[self.lati objectAtIndex:i]] doubleValue];
+            coordidate.longitude=[[NSString stringWithFormat:@"%@",[self.longi objectAtIndex:i]] doubleValue];   
+            
+            SimpleLocation *annotation=[[SimpleLocation alloc] initWithName];
+            annotation.name=[NSString stringWithFormat:@"%@",[self.cities objectAtIndex:temp]];
+            annotation.coordinate=coordidate;
+            annotation.message=nil;
+            annotation.pp=nil;
+            annotation.type=0;
+            [self.mv addAnnotation:annotation];
+            
+        }
     }
     [self setMapRegion];
 }
@@ -442,7 +458,15 @@
     [alert show];
      */
     djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
-    [app doSearch:self :annotation.name];
+    if([annotation.name isEqualToString:@"All cities"])
+    {
+        [app doSearch:self :nil];
+    }
+    else
+    {
+        [app doSearch:self :annotation.name];
+    }
+    
 }
 
 #pragma mark -searchview mode...
