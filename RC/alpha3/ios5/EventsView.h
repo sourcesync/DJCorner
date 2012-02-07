@@ -12,6 +12,7 @@
 #import "SimpleLocation.h"
 #import "DJCAPI.h"
 #import "EventsGetter.h"
+#import "AdsCell.h"
 
 enum EventViewMode
 {

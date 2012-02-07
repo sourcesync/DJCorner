@@ -11,6 +11,7 @@
 #import "DJ.h"
 #import "djcAppDelegate.h"
 #import "DjsCell.h"
+#import "AdsCell.h"
 
 @implementation DjView
 
@@ -184,11 +185,11 @@
         }
         else if ( end == (count-1) )
         {
-            return count;
+            return count+count/3;
         }
         else
         {
-            return count+1;
+            return count+1+(count+1)/3;
         }
     }
 }
@@ -252,7 +253,22 @@
     {
         NSInteger row = [ indexPath row ];
         
-        if ( row == [ self.getter.djs count] )  // get more button...
+        if(row>0&&((row+1)%4==0))
+        {
+            UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
+            if(ads==nil)
+            {
+                ads=[[[AdsCell alloc] init] autorelease];
+            }
+            
+            AdsCell *cell=(AdsCell *)ads;
+            
+            cell.lb_adsContent.text=@"ads in dj list";
+            
+            return cell;
+        }
+        
+        else if ( row == ([ self.getter.djs count]+self.getter.djs.count/3) )  // get more button...
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -290,7 +306,7 @@
             
             //cell.textLabel.font = [ UIFont systemFontOfSize:17 ];
             //  Get dj object...
-            DJ *dj = [ self.getter.djs objectAtIndex:row ];
+            DJ *dj = [ self.getter.djs objectAtIndex:(row-(row+1)/4) ];
             
             //NSData *data = [ NSData dataWithContentsOfURL:[NSURL URLWithString:dj.pic_path]];
             //UIImage *img=[UIImage imageWithData:data];
@@ -346,21 +362,28 @@
 {
     int row = [ indexPath row ];
     
-    [ tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (row == [self.getter.djs count] )
+    if((row+1)%4==0)
     {
-        [ self.getter getNext ];
+        return;
     }
     else
     {
-        DJ *dj = [ self.getter.djs objectAtIndex:row ];
+        [ tableView deselectRowAtIndexPath:indexPath animated:YES];
         
-        djcAppDelegate *app = 
+        if (row == [self.getter.djs count] )
+        {
+            [ self.getter getNext ];
+        }
+        else
+        {
+            DJ *dj = [ self.getter.djs objectAtIndex:row ];
+            
+            djcAppDelegate *app = 
             ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
-        
-        self.back_from = YES;
-        [ app showDJItemModal:self:dj:nil ];
+            
+            self.back_from = YES;
+            [ app showDJItemModal:self:dj:nil ];
+        }
     }
 }
 

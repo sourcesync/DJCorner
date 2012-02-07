@@ -10,6 +10,7 @@
 #import "DJCAPI.h"
 #import "DJSGetter.h"
 #import "DjsCell.h"
+#import "AdsCell.h"
 
 @interface DjView : UIViewController
     <UITableViewDataSource, UITableViewDelegate, DJSGetterDelegate, UITextFieldDelegate>

@@ -13,6 +13,7 @@
 #import "DJCAPI.h"
 #import "Utility.h"
 #import "djcAppDelegate.h"
+#import "AdsCell.h"
 
 #define DEFAULT_LAT     40.730039
 #define DEFAULT_LONG    -73.994358
@@ -360,7 +361,7 @@
         {
             count += 1;
         }
-        return count;
+        return count+count/3;
     }
 }
 
@@ -410,7 +411,7 @@
     }
     else
     {
-        NSInteger row = [ indexPath row ];
+        NSInteger row = ([ indexPath row ]+indexPath.row/3);
         
         if ( row == [ self.getter.events count] )  // get more button...
         {
@@ -426,6 +427,21 @@
             cell.textLabel.textColor = [ UIColor blackColor ];
             return cell;
         }
+        
+        //add ads....
+        if(row>0&&((row+1)%4==0))
+        {
+            UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
+            
+            if(ads==nil)
+            {
+                ads=[[[AdsCell alloc] init]autorelease ];
+            }
+            
+            AdsCell *cell=(AdsCell *)ads;
+            cell.lb_adsContent.text=@"hello,ads";
+            return cell;
+        }
         else
         {
             UITableViewCell *cl = [tableView dequeueReusableCellWithIdentifier:
@@ -437,7 +453,7 @@
         
             EventCell *cell = (EventCell *)cl;
             int row = [ indexPath row ];
-            Event *event = [ self.getter.events objectAtIndex:row ];
+            Event *event = [ self.getter.events objectAtIndex:(row-(row+1)/4) ];
          
             //  venue name...
             NSString *vname = [NSString stringWithFormat:@"%@, %@",event.venue,event.city];
@@ -513,7 +529,11 @@
     
     [ tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (row == [self.getter.events count] )
+    if((row+1)%4==0)
+    {
+        return;
+    }
+    else if (row == [self.getter.events count] )
     {
         [ self getMore ];
     }

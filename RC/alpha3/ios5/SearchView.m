@@ -11,6 +11,7 @@
 #import "djcAppDelegate.h"
 #import "MapKit/MapKit.h"
 #import "SimpleLocation.h"
+#import "AdsCell.h"
 
 
 #define DEFAULT_LAT     40.730039
@@ -312,25 +313,44 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [ self.cities count ] ;
+    return [ self.cities count ]+(self.cities.count)/3 ;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                             @"search_cell"];
     int row = [ indexPath row ];
-    if (cell == nil) 
+    if(row>0&&((row+1)%4==0))
     {
-        cell = [[[ UITableViewCell alloc] init] autorelease];
+        UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
+        if(ads==nil)
+        {
+            ads=[[[AdsCell alloc] init] autorelease];
+        }
+        
+        AdsCell *cell=(AdsCell *)ads;
+        
+        cell.lb_adsContent.text=@"ads in search list";
+        
+        return cell;
+    }
+    else
+    {
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                                 @"search_cell"];
+        
+        if (cell == nil) 
+        {
+            cell = [[[ UITableViewCell alloc] init] autorelease];
+        }
+        
+        [ cell.textLabel setText: [ self.cities objectAtIndex:(row-(row+1)/4) ] ];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.textLabel.textColor = [ UIColor blackColor ];
+        
+        return cell;
     }
     
-    [ cell.textLabel setText: [ self.cities objectAtIndex:row ] ];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.textLabel.textColor = [ UIColor blackColor ];
-    
-    return cell;
 }
 
 
@@ -345,6 +365,10 @@
     if ( row == 0 )
     {
         [ app doSearch:self:nil];
+    }
+    else if((row+1)%4==0)
+    {
+        return;
     }
     else
     {
