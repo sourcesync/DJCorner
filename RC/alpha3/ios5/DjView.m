@@ -370,19 +370,21 @@
     {
         [ tableView deselectRowAtIndexPath:indexPath animated:YES];
         
-        if (row == [self.getter.djs count] )
+        if (row ==( [self.getter.djs count]+self.getter.djs.count/3) )
         {
             [ self.getter getNext ];
         }
         else
         {
-            DJ *dj = [ self.getter.djs objectAtIndex:row ];
+            
+            DJ *dj = [ self.getter.djs objectAtIndex:(row-(row+1)/4) ];
             
             djcAppDelegate *app = 
             ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
             
             self.back_from = YES;
             [ app showDJItemModal:self:dj:nil ];
+             
         }
     }
 }

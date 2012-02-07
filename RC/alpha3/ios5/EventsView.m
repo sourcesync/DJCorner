@@ -411,22 +411,7 @@
     }
     else
     {
-        NSInteger row = ([ indexPath row ]+indexPath.row/3);
-        
-        if ( row == [ self.getter.events count] )  // get more button...
-        {
-            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                                     @"getmore_cell"];
-            if (cell == nil) 
-            {
-                cell = [[[ UITableViewCell alloc] init] autorelease];
-            }
-            cell.textLabel.textAlignment = UITextAlignmentCenter;
-            cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
-            cell.textLabel.text = @"Get More Events...";
-            cell.textLabel.textColor = [ UIColor blackColor ];
-            return cell;
-        }
+        NSInteger row = ([ indexPath row ]);
         
         //add ads....
         if(row>0&&((row+1)%4==0))
@@ -442,6 +427,22 @@
             cell.lb_adsContent.text=@"hello,ads";
             return cell;
         }
+        else if ( row ==( [ self.getter.events count] +self.getter.events.count/3))  // get more button...
+        {
+            UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                                     @"getmore_cell"];
+            if (cell == nil) 
+            {
+                cell = [[[ UITableViewCell alloc] init] autorelease];
+            }
+            cell.textLabel.textAlignment = UITextAlignmentCenter;
+            cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
+            cell.textLabel.text = @"Get More Events...";
+            cell.textLabel.textColor = [ UIColor blackColor ];
+            return cell;
+        }
+        
+       
         else
         {
             UITableViewCell *cl = [tableView dequeueReusableCellWithIdentifier:
@@ -506,7 +507,7 @@
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
-        ([self.getter.events count]==[indexPath row]))
+        ([self.getter.events count]==([indexPath row]+indexPath.row/3)))
     {
         return 44;
     }
@@ -533,13 +534,13 @@
     {
         return;
     }
-    else if (row == [self.getter.events count] )
+    else if (row == ([self.getter.events count]+self.getter.events.count/3) )
     {
         [ self getMore ];
     }
     else
     {
-        Event *ev = [ self.getter.events objectAtIndex:row ];
+        Event *ev = [ self.getter.events objectAtIndex:(row-(row+1)/4) ];
      
         
         [ self.getter cancel ];
