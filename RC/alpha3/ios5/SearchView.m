@@ -360,7 +360,7 @@
             annotation.name=[NSString stringWithFormat:@"%@",[self.cities objectAtIndex:temp]];
             annotation.coordinate=coordidate;
             annotation.message=nil;
-            annotation.pp=nil;
+            annotation.pp=@"ad.png";
             annotation.type=0;
             [self.mv addAnnotation:annotation];
             
@@ -405,6 +405,13 @@
         {
             annonationView.pinColor = MKPinAnnotationColorGreen;
         }
+        if(location.pp!=nil)
+        {
+            UIImage *flag=[UIImage imageNamed:location.pp] ;
+            float rate=flag.size.height/flag.size.width;
+            UIImage *newFlag=[Utility imageWithImage:flag scaledToSize:CGSizeMake(12.0f/rate,12.0f)];
+            [annonationView setImage:newFlag];
+        }
         
 #if 0
         //
@@ -418,7 +425,7 @@
             [ Utility imageWithImage:avatar scaledToSize:CGSizeMake(32.0f/aspect,32.0f)];
             
             UIImageView *iv = [ [ UIImageView alloc ] initWithImage:smaller ];
-            //[ smaller release ];  // TODO: why does this crash ?!
+            //[ smaller release ];  // TODO: why does this crash ?
             
             annotationView.leftCalloutAccessoryView = iv;
             //[ iv release ];

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		307DCCEB14E0D344006D720E /* ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 307DCCEA14E0D344006D720E /* ad.png */; };
 		308F36FA14DD17E200369244 /* DjsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 308F36F814DD17E200369244 /* DjsCell.m */; };
 		308F36FB14DD17E200369244 /* DjsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308F36F914DD17E200369244 /* DjsCell.xib */; };
 		86C46F1614DD88AE00F719E6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C46F1514DD88AE00F719E6 /* feedbackView.xib */; };
@@ -111,6 +112,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		307DCCEA14E0D344006D720E /* ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad.png; sourceTree = "<group>"; };
 		308F36F714DD17E200369244 /* DjsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DjsCell.h; sourceTree = "<group>"; };
 		308F36F814DD17E200369244 /* DjsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DjsCell.m; sourceTree = "<group>"; };
 		308F36F914DD17E200369244 /* DjsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DjsCell.xib; sourceTree = "<group>"; };
@@ -635,6 +637,7 @@
 		B384AA3614764C8B003F0DD6 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				307DCCEA14E0D344006D720E /* ad.png */,
 				B37031A114A9F15800ABDA9F /* Genericthumb2.png */,
 				B37B6C2E14A5D1540093BA4D /* Genericthumb.png */,
 				B364BB6914A1CF4300EB89FE /* Icon.png */,
@@ -795,6 +798,7 @@
 				B37031A914AA04E400ABDA9F /* SimilarDJView.xib in Resources */,
 				308F36FB14DD17E200369244 /* DjsCell.xib in Resources */,
 				86C46F1614DD88AE00F719E6 /* feedbackView.xib in Resources */,
+				307DCCEB14E0D344006D720E /* ad.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
