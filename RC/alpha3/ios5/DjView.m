@@ -185,11 +185,11 @@
         }
         else if ( end == (count-1) )
         {
-            return count+count/3;
+            return count+1;
         }
         else
         {
-            return count+1+(count+1)/3;
+            return count+1+1;
         }
     }
 }
@@ -253,7 +253,7 @@
     {
         NSInteger row = [ indexPath row ];
         
-        if(row>0&&((row+1)%4==0))
+        if(row==3)
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
             if(ads==nil)
@@ -264,11 +264,13 @@
             AdsCell *cell=(AdsCell *)ads;
             
             cell.lb_adsContent.text=@"ads in dj list";
+            [cell.iv setImage:[UIImage imageNamed:@"redbull.png"]];
+            [cell.iv sizeToFit];
             
             return cell;
         }
         
-        else if ( row == ([ self.getter.djs count]+self.getter.djs.count/3) )  // get more button...
+        else if ( row == ([ self.getter.djs count]+1) )  // get more button...
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -306,7 +308,7 @@
             
             //cell.textLabel.font = [ UIFont systemFontOfSize:17 ];
             //  Get dj object...
-            DJ *dj = [ self.getter.djs objectAtIndex:(row-(row+1)/4) ];
+            DJ *dj = [ self.getter.djs objectAtIndex:(row>3?(row-1):row) ];
             
             //NSData *data = [ NSData dataWithContentsOfURL:[NSURL URLWithString:dj.pic_path]];
             //UIImage *img=[UIImage imageWithData:data];
@@ -362,7 +364,7 @@
 {
     int row = [ indexPath row ];
     
-    if((row+1)%4==0)
+    if(row==3)
     {
         return;
     }
@@ -370,14 +372,14 @@
     {
         [ tableView deselectRowAtIndexPath:indexPath animated:YES];
         
-        if (row ==( [self.getter.djs count]+self.getter.djs.count/3) )
+        if (row ==( [self.getter.djs count]+1) )
         {
             [ self.getter getNext ];
         }
         else
         {
             
-            DJ *dj = [ self.getter.djs objectAtIndex:(row-(row+1)/4) ];
+            DJ *dj = [ self.getter.djs objectAtIndex:(row>3?(row-1):row) ];
             
             djcAppDelegate *app = 
             ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
@@ -392,9 +394,13 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if((self.getter.djs==nil)||([self.getter.djs count]==0)||
-       ([self.getter.djs count]==[indexPath row]))
+       ([self.getter.djs count]==([indexPath row]-1)))
     {
         return 44;
+    }
+    else if(3==[indexPath row])
+    {
+        return 90.0f;
     }
     else
     {

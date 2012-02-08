@@ -361,7 +361,7 @@
         {
             count += 1;
         }
-        return count+count/3;
+        return count+1;
     }
 }
 
@@ -414,7 +414,7 @@
         NSInteger row = ([ indexPath row ]);
         
         //add ads....
-        if(row>0&&((row+1)%4==0))
+        if(row==3)
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
             
@@ -425,9 +425,11 @@
             
             AdsCell *cell=(AdsCell *)ads;
             cell.lb_adsContent.text=@"hello,ads";
+            [cell.iv setImage:[UIImage imageNamed:@"redbull.png"]];
+            [cell.iv sizeToFit];
             return cell;
         }
-        else if ( row ==( [ self.getter.events count] +self.getter.events.count/3))  // get more button...
+        else if ( row ==( [ self.getter.events count] +1))  // get more button...
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -454,7 +456,7 @@
         
             EventCell *cell = (EventCell *)cl;
             int row = [ indexPath row ];
-            Event *event = [ self.getter.events objectAtIndex:(row-(row+1)/4) ];
+            Event *event = [ self.getter.events objectAtIndex:(row>3?(row-1):row) ];
          
             //  venue name...
             NSString *vname = [NSString stringWithFormat:@"%@, %@",event.venue,event.city];
@@ -507,9 +509,13 @@
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
-        ([self.getter.events count]==([indexPath row]+indexPath.row/3)))
+        ([self.getter.events count]==([indexPath row]-1)))
     {
         return 44;
+    }
+    else if(3==[indexPath row])
+    {
+        return 90.0f;
     }
     else
     {
@@ -530,17 +536,17 @@
     
     [ tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if((row+1)%4==0)
+    if(row==3)
     {
         return;
     }
-    else if (row == ([self.getter.events count]+self.getter.events.count/3) )
+    else if (row == ([self.getter.events count]+1) )
     {
         [ self getMore ];
     }
     else
     {
-        Event *ev = [ self.getter.events objectAtIndex:(row-(row+1)/4) ];
+        Event *ev = [ self.getter.events objectAtIndex:(row>3?(row-1):row) ];
      
         
         [ self.getter cancel ];

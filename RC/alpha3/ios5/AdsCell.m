@@ -51,18 +51,19 @@
             //  Configure accessory...
             self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
             
-            UIImageView *imageView = [[[UIImageView alloc] initWithImage:
-                                       [UIImage imageNamed:@"redbull.png"]] autorelease];
-            self.accessoryView = imageView;
+            //UIImageView *imageView = [[[UIImageView alloc] initWithImage:
+            //                           [UIImage imageNamed:@"redbull.png"]] autorelease];
+            //[self.iv setImage:[UIImage imageNamed:@"redbull.png"]];
+            //self.accessoryView = self.iv;
             
-#if 0
+
             //  Configure accessory...
-            //UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            //[button setImage:[UIImage imageNamed:@"DJscornerarrow.png"] forState:UIControlStateNormal];
-           // [button addTarget:self action:@selector(someAction:) forControlEvents:UIControlEventTouchUpInside];
+            UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+            [button setImage:[UIImage imageNamed:@"DJscornerarrow.png"] forState:UIControlStateNormal];
+            [button addTarget:self action:@selector(someAction:) forControlEvents:UIControlEventTouchUpInside];
             //button.tag = self.indexPath;
-            //self.accessoryView = button;
-#endif
+            self.accessoryView = button;
+
             
             [self addSubview:self.mainView];
         }

@@ -313,14 +313,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [ self.cities count ]+(self.cities.count)/3 ;
+    return [ self.cities count ]+1 ;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int row = [ indexPath row ];
-    if(row>0&&((row+1)%4==0))
+    if(row==3)
     {
         UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
         if(ads==nil)
@@ -331,7 +331,8 @@
         AdsCell *cell=(AdsCell *)ads;
         
         cell.lb_adsContent.text=@"ads in search list";
-        
+        [cell.iv setImage:[UIImage imageNamed:@"redbull.png"]];
+        [cell.iv sizeToFit];
         return cell;
     }
     else
@@ -344,7 +345,7 @@
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
         
-        [ cell.textLabel setText: [ self.cities objectAtIndex:(row-(row+1)/4) ] ];
+        [ cell.textLabel setText: [ self.cities objectAtIndex:(row>3?(row-1):row) ] ];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.textColor = [ UIColor blackColor ];
         
@@ -366,7 +367,7 @@
     {
         [ app doSearch:self:nil];
     }
-    else if((row+1)%4==0)
+    else if(row==3)
     {
         return;
     }
@@ -377,11 +378,16 @@
         [ app doSearch:self:city];
     }
 }
-/*
+
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(3==[indexPath row])
+    {
+        return 90.0f;
+    }
+    return 40;
 }
- */
+ 
 
 #pragma map....
 -(void) setMapRegion
