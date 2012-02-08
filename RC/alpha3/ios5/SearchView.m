@@ -320,7 +320,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int row = [ indexPath row ];
-    if(row==3)
+    if(row==ADSPOSITION)
     {
         UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
         if(ads==nil)
@@ -330,7 +330,7 @@
         
         AdsCell *cell=(AdsCell *)ads;
         
-        cell.lb_adsContent.text=@"ads in search list";
+        cell.lb_adsContent.text=@"";
         [cell.iv setImage:[UIImage imageNamed:@"redbull.png"]];
         [cell.iv sizeToFit];
         return cell;
@@ -367,7 +367,7 @@
     {
         [ app doSearch:self:nil];
     }
-    else if(row==3)
+    else if(row==ADSPOSITION)
     {
         return;
     }
@@ -381,7 +381,7 @@
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(3==[indexPath row])
+    if(ADSPOSITION==[indexPath row])
     {
         return 90.0f;
     }

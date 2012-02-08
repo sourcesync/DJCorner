@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">11C74</string>
+		<string key="IBDocument.SystemVersion">11A2061</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1138.23</string>
-		<string key="IBDocument.HIToolboxVersion">567.00</string>
+		<string key="IBDocument.AppKitVersion">1138.1</string>
+		<string key="IBDocument.HIToolboxVersion">566.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">933</string>
@@ -45,7 +45,7 @@
 					<object class="IBUIToolbar" id="1061124580">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{6, 1}, {320, 44}}</string>
+						<string key="NSFrame">{{0, 1}, {326, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="819188062"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -71,7 +71,7 @@
 					<object class="IBUIImageView" id="760410774">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{5, 8}, {180, 30}}</string>
+						<string key="NSFrame">{{6, 8}, {180, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="584348252"/>
 						<int key="IBUIContentMode">1</int>
@@ -349,11 +349,11 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="533351050"/>
-							<reference ref="760410774"/>
 							<reference ref="496512743"/>
 							<reference ref="584348252"/>
 							<reference ref="859182513"/>
 							<reference ref="1061124580"/>
+							<reference ref="760410774"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>

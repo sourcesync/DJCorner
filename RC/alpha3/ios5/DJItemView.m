@@ -28,7 +28,7 @@
 //@synthesize button_follow=_button_follow;
 //@synthesize following=_following;
 //jimmy
-@synthesize cell_feedback=_cell_feedback;
+//@synthesize cell_feedback=_cell_feedback;
 //end
 @synthesize back_from=_back_from;
 @synthesize parent=_parent;
@@ -148,8 +148,8 @@
     }
     else
     {
-        //return 4;
-        return 5;
+        return 4;
+        //return 5;
     }
 }
 
@@ -207,8 +207,8 @@
     else if ( section == 4 )
     {
         //jimmy
-       self.cell_feedback.selectionStyle = UITableViewCellSelectionStyleNone;
-        return self.cell_feedback;
+       //self.cell_feedback.selectionStyle = UITableViewCellSelectionStyleNone;
+       // return self.cell_feedback;
 
         return nil;
         //end 

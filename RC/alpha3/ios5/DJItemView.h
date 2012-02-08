@@ -26,7 +26,7 @@
 
 //@property (nonatomic, retain) IBOutlet UIButton *button_follow;
 //jimmy
-@property (nonatomic, retain) IBOutlet UITableViewCell *cell_feedback;
+//@property (nonatomic, retain) IBOutlet UITableViewCell *cell_feedback;
 //end
 
 

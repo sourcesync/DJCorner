@@ -12,6 +12,8 @@
 #import "DjsCell.h"
 #import "AdsCell.h"
 
+#define ADSPOSITION 4
+
 @interface DjView : UIViewController
     <UITableViewDataSource, UITableViewDelegate, DJSGetterDelegate, UITextFieldDelegate>
 

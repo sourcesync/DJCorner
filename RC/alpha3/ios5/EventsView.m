@@ -414,7 +414,7 @@
         NSInteger row = ([ indexPath row ]);
         
         //add ads....
-        if(row==3)
+        if(row==ADSPOSITION)
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
             
@@ -456,7 +456,7 @@
         
             EventCell *cell = (EventCell *)cl;
             int row = [ indexPath row ];
-            Event *event = [ self.getter.events objectAtIndex:(row>3?(row-1):row) ];
+            Event *event = [ self.getter.events objectAtIndex:(row>ADSPOSITION?(row-1):row) ];
          
             //  venue name...
             NSString *vname = [NSString stringWithFormat:@"%@, %@",event.venue,event.city];
@@ -513,7 +513,7 @@
     {
         return 44;
     }
-    else if(3==[indexPath row])
+    else if(ADSPOSITION==[indexPath row])
     {
         return 90.0f;
     }
@@ -536,7 +536,7 @@
     
     [ tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if(row==3)
+    if(row==ADSPOSITION)
     {
         return;
     }
@@ -546,7 +546,7 @@
     }
     else
     {
-        Event *ev = [ self.getter.events objectAtIndex:(row>3?(row-1):row) ];
+        Event *ev = [ self.getter.events objectAtIndex:(row>ADSPOSITION?(row-1):row) ];
      
         
         [ self.getter cancel ];

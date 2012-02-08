@@ -11,6 +11,8 @@
 #import "SimpleLocation.h"
 #import "AdsCell.h"
 
+#define ADSPOSITION 4
+
 enum SearchViewMode
 {
     SearchViewMap = 0,

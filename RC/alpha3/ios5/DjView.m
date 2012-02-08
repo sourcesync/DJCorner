@@ -253,7 +253,7 @@
     {
         NSInteger row = [ indexPath row ];
         
-        if(row==3)
+        if(row==ADSPOSITION)
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
             if(ads==nil)
@@ -308,7 +308,7 @@
             
             //cell.textLabel.font = [ UIFont systemFontOfSize:17 ];
             //  Get dj object...
-            DJ *dj = [ self.getter.djs objectAtIndex:(row>3?(row-1):row) ];
+            DJ *dj = [ self.getter.djs objectAtIndex:(row>ADSPOSITION?(row-1):row) ];
             
             //NSData *data = [ NSData dataWithContentsOfURL:[NSURL URLWithString:dj.pic_path]];
             //UIImage *img=[UIImage imageWithData:data];
@@ -364,7 +364,7 @@
 {
     int row = [ indexPath row ];
     
-    if(row==3)
+    if(row==ADSPOSITION)
     {
         return;
     }
@@ -379,7 +379,7 @@
         else
         {
             
-            DJ *dj = [ self.getter.djs objectAtIndex:(row>3?(row-1):row) ];
+            DJ *dj = [ self.getter.djs objectAtIndex:(row>ADSPOSITION?(row-1):row) ];
             
             djcAppDelegate *app = 
             ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
@@ -398,7 +398,7 @@
     {
         return 44;
     }
-    else if(3==[indexPath row])
+    else if(ADSPOSITION==[indexPath row])
     {
         return 90.0f;
     }

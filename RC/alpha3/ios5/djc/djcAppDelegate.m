@@ -275,7 +275,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
 - (void)application:(UIApplication *)application 
 didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
 {
-    [ Utility AlertMessage:@"notifications registration failed- using simulator credentials."];
+    //[ Utility AlertMessage:@"notifications registration failed- using simulator credentials."];
     
     //  Remember it...
     self.devtoken = @"SIMULATOR";

@@ -20,6 +20,19 @@
 @synthesize api=_api;
 @synthesize parent=_parent;
 @synthesize tf=_tf;
+@synthesize button_Done=_button_Done;
+
+
+#pragma resignfirstresponse...
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if([self.tf isFirstResponder])
+    {
+        [self.tf resignFirstResponder];
+    }
+    [self resignFirstResponder];
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -76,6 +89,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
+    app.feedback_view=self;
 }
 
 - (void)viewDidUnload
@@ -128,11 +143,12 @@
         initWithTitle:@"Feedback" 
         message:@"Your comment has been submitted"  
         delegate:self 
-        cancelButtonTitle:@"No" 
-        otherButtonTitles:@"Yes", nil];
+        cancelButtonTitle:@"OK" 
+        otherButtonTitles:nil, nil];
 	[alert show];
 	[alert release];
-    
+    [self.tf setText:@""];
+    [self.tf resignFirstResponder];
     [ self dismissModalViewControllerAnimated:YES ];
 }
 
@@ -141,13 +157,9 @@
 #pragma mark - button callbacks...
 
 
--(IBAction) buttonBackClicked:(id)sender
+-(IBAction) buttonDoneClicked:(id)sender
 {
-    if ( [self.parent isKindOfClass:[ DJItemView class] ] )
-    {
-        DJItemView *eview = (DJItemView *)self.parent;
-        eview.back_from = YES;
-    }
+    [self.tf resignFirstResponder];
     
     [ self dismissModalViewControllerAnimated:YES ];
 }

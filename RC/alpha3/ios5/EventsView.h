@@ -14,6 +14,8 @@
 #import "EventsGetter.h"
 #import "AdsCell.h"
 
+#define ADSPOSITION 4
+
 enum EventViewMode
 {
     EventViewMap = 0,
