@@ -14,7 +14,7 @@
 //  IBOUTLET...
 //@property (nonatomic,retain) IBOutlet UIActivityIndicatorView *activity;
 @property (nonatomic, retain) IBOutlet UITextView *tf;
-@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_Done;
+//@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_Done;
 //  RETAIN...
 @property (nonatomic, retain) DJCAPI *api;
 @property (nonatomic, retain) UIViewController *parent;
@@ -22,7 +22,7 @@
 //  PUBLIC FUNCS...
 -(id) init;
 
--(IBAction) buttonDoneClicked:(id)sender;
+//-(IBAction) buttonDoneClicked:(id)sender;
 -(IBAction) submitClicked:(id)sender;
 
 @end

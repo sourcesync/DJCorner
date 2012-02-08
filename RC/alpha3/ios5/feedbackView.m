@@ -20,7 +20,7 @@
 @synthesize api=_api;
 @synthesize parent=_parent;
 @synthesize tf=_tf;
-@synthesize button_Done=_button_Done;
+//@synthesize button_Done=_button_Done;
 
 
 #pragma resignfirstresponse...
