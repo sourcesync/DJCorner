@@ -313,14 +313,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [ self.cities count ]+1 ;
+    return [ self.cities count ]+self.cities.count/(ADSPOSITION+1) ;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int row = [ indexPath row ];
-    if(row==ADSPOSITION)
+    if(row>0&&(row+1)%(ADSPOSITION+1)==0)
     {
         UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
         if(ads==nil)
@@ -345,7 +345,7 @@
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
         
-        [ cell.textLabel setText: [ self.cities objectAtIndex:(row>3?(row-1):row) ] ];
+        [ cell.textLabel setText: [ self.cities objectAtIndex:(row-row/(ADSPOSITION+1)) ] ];
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.textColor = [ UIColor blackColor ];
         
@@ -367,7 +367,7 @@
     {
         [ app doSearch:self:nil];
     }
-    else if(row==ADSPOSITION)
+    else if(row>0&&(row+1)%(ADSPOSITION+1)==0)
     {
         return;
     }
@@ -381,7 +381,7 @@
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if(ADSPOSITION==[indexPath row])
+    if((indexPath.row>0)&&((indexPath.row+1)%(ADSPOSITION+1)==0))
     {
         return 90.0f;
     }

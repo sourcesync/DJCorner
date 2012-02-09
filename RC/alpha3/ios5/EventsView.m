@@ -361,7 +361,7 @@
         {
             count += 1;
         }
-        return count+1;
+        return count+count/(ADSPOSITION+1);
     }
 }
 
@@ -414,7 +414,7 @@
         NSInteger row = ([ indexPath row ]);
         
         //add ads....
-        if(row==ADSPOSITION)
+        if((row>0)&&((row+1)%(ADSPOSITION+1)==0))
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
             
@@ -429,7 +429,7 @@
             [cell.iv sizeToFit];
             return cell;
         }
-        else if ( row ==( [ self.getter.events count] +1))  // get more button...
+        else if ( row ==( [ self.getter.events count] +row/(ADSPOSITION+1)))  // get more button...
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -456,7 +456,7 @@
         
             EventCell *cell = (EventCell *)cl;
             int row = [ indexPath row ];
-            Event *event = [ self.getter.events objectAtIndex:(row>ADSPOSITION?(row-1):row) ];
+            Event *event = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)) ];
          
             //  venue name...
             NSString *vname = [NSString stringWithFormat:@"%@, %@",event.venue,event.city];
@@ -509,11 +509,11 @@
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
-        ([self.getter.events count]==([indexPath row]-1)))
+        ([self.getter.events count]==([indexPath row]-indexPath.row/(ADSPOSITION+1))))
     {
         return 44;
     }
-    else if(ADSPOSITION==[indexPath row])
+    else if(indexPath.row>0&&((indexPath.row+1)%(ADSPOSITION+1)==0))
     {
         return 90.0f;
     }
@@ -536,17 +536,17 @@
     
     [ tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if(row==ADSPOSITION)
+    if(row>0&&((row+1)%(ADSPOSITION+1)==0))
     {
         return;
     }
-    else if (row == ([self.getter.events count]+1) )
+    else if (row == ([self.getter.events count]+self.getter.events.count/(ADSPOSITION+1)) )
     {
         [ self getMore ];
     }
     else
     {
-        Event *ev = [ self.getter.events objectAtIndex:(row>ADSPOSITION?(row-1):row) ];
+        Event *ev = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)) ];
      
         
         [ self.getter cancel ];

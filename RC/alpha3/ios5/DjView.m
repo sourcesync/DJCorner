@@ -185,11 +185,11 @@
         }
         else if ( end == (count-1) )
         {
-            return count+1;
+            return count+count/(ADSPOSITION+1);
         }
         else
         {
-            return count+1+1;
+            return count+1+(count+1)/(ADSPOSITION+1);
         }
     }
 }
@@ -253,7 +253,7 @@
     {
         NSInteger row = [ indexPath row ];
         
-        if(row==ADSPOSITION)
+        if(row>0&&((row+1)%(ADSPOSITION+1)==0))
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
             if(ads==nil)
@@ -270,7 +270,7 @@
             return cell;
         }
         
-        else if ( row == ([ self.getter.djs count]+1) )  // get more button...
+        else if ( row == ([ self.getter.djs count]+row/(ADSPOSITION+1)) )  // get more button...
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -308,7 +308,7 @@
             
             //cell.textLabel.font = [ UIFont systemFontOfSize:17 ];
             //  Get dj object...
-            DJ *dj = [ self.getter.djs objectAtIndex:(row>ADSPOSITION?(row-1):row) ];
+            DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)) ];
             
             //NSData *data = [ NSData dataWithContentsOfURL:[NSURL URLWithString:dj.pic_path]];
             //UIImage *img=[UIImage imageWithData:data];
@@ -364,7 +364,7 @@
 {
     int row = [ indexPath row ];
     
-    if(row==ADSPOSITION)
+    if(row>0&&((row+1)%(ADSPOSITION+1)==0))
     {
         return;
     }
@@ -372,14 +372,14 @@
     {
         [ tableView deselectRowAtIndexPath:indexPath animated:YES];
         
-        if (row ==( [self.getter.djs count]+1) )
+        if (row ==( [self.getter.djs count]+self.getter.djs.count%(ADSPOSITION+1)) )
         {
             [ self.getter getNext ];
         }
         else
         {
             
-            DJ *dj = [ self.getter.djs objectAtIndex:(row>ADSPOSITION?(row-1):row) ];
+            DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)) ];
             
             djcAppDelegate *app = 
             ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
@@ -394,11 +394,11 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if((self.getter.djs==nil)||([self.getter.djs count]==0)||
-       ([self.getter.djs count]==([indexPath row]-1)))
+       ([self.getter.djs count]==([indexPath row]-indexPath.row/(ADSPOSITION+1))))
     {
         return 44;
     }
-    else if(ADSPOSITION==[indexPath row])
+    else if(((indexPath.row+1)%(ADSPOSITION+1)==0)&&indexPath.row>0)
     {
         return 90.0f;
     }
