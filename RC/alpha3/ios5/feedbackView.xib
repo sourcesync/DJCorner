@@ -247,11 +247,11 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="179034"/>
-							<reference ref="946680585"/>
 							<reference ref="499729439"/>
 							<reference ref="581778099"/>
 							<reference ref="535914432"/>
 							<reference ref="903018789"/>
+							<reference ref="946680585"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
