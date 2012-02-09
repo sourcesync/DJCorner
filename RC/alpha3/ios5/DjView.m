@@ -57,6 +57,13 @@
 }
 
 
+#pragma resignfirstresponder
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.field_search resignFirstResponder];
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -386,6 +393,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //if the keyboard appears,resign it
+    [self.field_search resignFirstResponder];
+    
+    
     int row = [ indexPath row ];
     
     if(row>0&&((row+1)%(ADSPOSITION+1)==0))
@@ -500,6 +511,8 @@
 
 -(IBAction) searchClicked:(id)sender
 {
+    [self.field_search resignFirstResponder];
+    
     [ self.field_search resignFirstResponder];
     
     NSString *search = self.field_search.text;
@@ -529,6 +542,8 @@
 
 -(IBAction)allTop50Clicked:(id)sender
 {
+    [self.field_search resignFirstResponder];
+    
     if(self.top50==YES)
     {
         self.top50=NO;
