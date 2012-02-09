@@ -45,7 +45,7 @@
 					<object class="IBUIToolbar" id="1061124580">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{0, 1}, {326, 44}}</string>
+						<string key="NSFrameSize">{326, 44}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="819188062"/>
 						<bool key="IBUIOpaque">NO</bool>
@@ -71,7 +71,7 @@
 					<object class="IBUIImageView" id="760410774">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{6, 8}, {180, 30}}</string>
+						<string key="NSFrame">{{6, 7}, {180, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSNextKeyView" ref="584348252"/>
 						<int key="IBUIContentMode">1</int>
@@ -231,7 +231,7 @@
 				<object class="IBUISegmentedControl" key="IBUICustomView" id="819188062">
 					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">292</int>
-					<string key="NSFrame">{{249, 8}, {65, 30}}</string>
+					<string key="NSFrame">{{6, 8}, {65, 30}}</string>
 					<reference key="NSNextKeyView" ref="760410774"/>
 					<bool key="IBUIOpaque">NO</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -305,19 +305,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">segment_dj</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="819188062"/>
-					</object>
-					<int key="connectionID">49</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">button_AllTop50</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="472191802"/>
 					</object>
 					<int key="connectionID">54</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">segment_dj</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="819188062"/>
+					</object>
+					<int key="connectionID">49</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -352,8 +352,8 @@
 							<reference ref="496512743"/>
 							<reference ref="584348252"/>
 							<reference ref="859182513"/>
-							<reference ref="1061124580"/>
 							<reference ref="760410774"/>
+							<reference ref="1061124580"/>
 						</array>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -437,6 +437,11 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">53</int>
+						<reference key="object" ref="472191802"/>
+						<reference key="parent" ref="1061124580"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">48</int>
 						<reference key="object" ref="911367081"/>
 						<array class="NSMutableArray" key="children">
@@ -448,11 +453,6 @@
 						<int key="objectID">47</int>
 						<reference key="object" ref="819188062"/>
 						<reference key="parent" ref="911367081"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">53</int>
-						<reference key="object" ref="472191802"/>
-						<reference key="parent" ref="1061124580"/>
 					</object>
 				</array>
 			</object>
