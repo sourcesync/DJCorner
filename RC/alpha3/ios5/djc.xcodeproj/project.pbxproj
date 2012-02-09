@@ -266,8 +266,8 @@
 		307DCEF714E0F377006D720E /* AdsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 307DCEF514E0F377006D720E /* AdsCell.xib */; };
 		308F36FA14DD17E200369244 /* DjsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 308F36F814DD17E200369244 /* DjsCell.m */; };
 		308F36FB14DD17E200369244 /* DjsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308F36F914DD17E200369244 /* DjsCell.xib */; };
+		865BE19E14E36DFA004308F6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BE19D14E36DFA004308F6 /* feedbackView.xib */; };
 		869D8E4B14E1306C009E3E31 /* redbull.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D8E4A14E1306C009E3E31 /* redbull.png */; };
-		86C46F1614DD88AE00F719E6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86C46F1514DD88AE00F719E6 /* feedbackView.xib */; };
 		86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C46F1714DD88C800F719E6 /* feedbackView.m */; };
 		B30D5F33147E135B006F3D8A /* djc2.modified.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F32147E135B006F3D8A /* djc2.modified.png */; };
 		B30D5F35147E1560006F3D8A /* djc4.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F34147E1560006F3D8A /* djc4.png */; };
@@ -630,9 +630,9 @@
 		308F36F714DD17E200369244 /* DjsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DjsCell.h; sourceTree = "<group>"; };
 		308F36F814DD17E200369244 /* DjsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DjsCell.m; sourceTree = "<group>"; };
 		308F36F914DD17E200369244 /* DjsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DjsCell.xib; sourceTree = "<group>"; };
+		865BE19D14E36DFA004308F6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
 		869D8E4A14E1306C009E3E31 /* redbull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbull.png; sourceTree = "<group>"; };
 		86C46F1414DD888600F719E6 /* feedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackView.h; sourceTree = "<group>"; };
-		86C46F1514DD88AE00F719E6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
 		86C46F1714DD88C800F719E6 /* feedbackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackView.m; sourceTree = "<group>"; };
 		B30D5F32147E135B006F3D8A /* djc2.modified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc2.modified.png; sourceTree = "<group>"; };
 		B30D5F34147E1560006F3D8A /* djc4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc4.png; sourceTree = "<group>"; };
@@ -832,8 +832,8 @@
 			isa = PBXGroup;
 			children = (
 				86C46F1414DD888600F719E6 /* feedbackView.h */,
+				865BE19D14E36DFA004308F6 /* feedbackView.xib */,
 				86C46F1714DD88C800F719E6 /* feedbackView.m */,
-				86C46F1514DD88AE00F719E6 /* feedbackView.xib */,
 			);
 			name = feedback_view;
 			sourceTree = "<group>";
@@ -1578,7 +1578,6 @@
 				B37031A214A9F15800ABDA9F /* Genericthumb2.png in Resources */,
 				B37031A914AA04E400ABDA9F /* SimilarDJView.xib in Resources */,
 				308F36FB14DD17E200369244 /* DjsCell.xib in Resources */,
-				86C46F1614DD88AE00F719E6 /* feedbackView.xib in Resources */,
 				307DCCEB14E0D344006D720E /* ad.png in Resources */,
 				307DCDF314E0E71C006D720E /* ad.png in Resources */,
 				307DCDF414E0E71C006D720E /* ae.png in Resources */,
@@ -1836,6 +1835,7 @@
 				307DCEF014E0E71D006D720E /* zw.png in Resources */,
 				307DCEF714E0F377006D720E /* AdsCell.xib in Resources */,
 				869D8E4B14E1306C009E3E31 /* redbull.png in Resources */,
+				865BE19E14E36DFA004308F6 /* feedbackView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
