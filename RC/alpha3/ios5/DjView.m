@@ -533,13 +533,13 @@
     {
         self.top50=NO;
         self.all_djs=YES;
-        self.button_AllTop50.title=@"All";
+        self.button_AllTop50.title=@"Top50";
     }
     else
     {
         self.top50=YES;
         self.all_djs=NO;
-        self.button_AllTop50.title=@"Top50";
+        self.button_AllTop50.title=@"All";
     }
     
     [self refreshClicked:nil];
