@@ -29,6 +29,9 @@
 @synthesize all_djs=_all_djs;
 @synthesize top50=_top50;
 @synthesize button_AllTop50=_button_AllTop50;
+@synthesize pics=_pics;
+@synthesize pic=_pic;
+@synthesize picTemp=_picTemp;
 
 #pragma - funcs...
 
@@ -75,6 +78,8 @@
     self.djs = nil;
     self.getter = nil;
     self.search = nil;
+    self.pics=nil;
+    self.pic=nil;
     
     [ super dealloc ];
 }
@@ -98,6 +103,8 @@
     self.field_search.clearButtonMode = UITextFieldViewModeAlways;
     self.field_search.clearsOnBeginEditing = YES;
     self.field_search.returnKeyType = UIReturnKeySearch;
+    
+    self.pics=[[NSMutableDictionary alloc] init];
     
     self.all_djs = NO;
     self.segment_dj.selectedSegmentIndex=1;
@@ -318,15 +325,32 @@
             //float sw=img.size.width/cell.imageView.image.size.width;
             //float sh=img.size.height/cell.imageView.image.size.height;
             //cell.imageView.transform=CGAffineTransformMakeScale(sw, sh);
-            NSString *pic=dj.pic_path;
+            self.pic=dj.pic_path;
             
-            if(pic!=nil)
+            if(self.pic!=nil)
             {
-                NSNumber *num = [ NSNumber numberWithInteger:row];
-                [self.getter asyncGetPic:pic :num];
-                [cell.activity setHidden:NO];
-                [ cell.activity startAnimating];
-                [ cell.icon setHidden:YES ];
+                if(self.top50==YES)
+                {
+                    self.picTemp= [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpictop50",row]];
+                }
+                else
+                {
+                    self.picTemp= [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpicall",row]];
+                }
+                
+                if(self.picTemp!=nil)
+                {
+                    [cell.icon setImage:[UIImage imageWithData:self.picTemp]];
+                    self.picTemp=nil;
+                }
+                else
+                {
+                    NSNumber *num = [ NSNumber numberWithInteger:row];
+                    [self.getter asyncGetPic:self.pic :num];
+                    [cell.activity setHidden:NO];
+                    [ cell.activity startAnimating];
+                    [ cell.icon setHidden:YES ];
+                }
             }
             else
             {
@@ -430,6 +454,20 @@
 -(void) got_pic:(UIImageForCell *)img
 {
     int row = [ img.idx integerValue ];
+    
+    //[self.pics setValue:img.img forKey:[NSString stringWithFormat:@"%dpic",row]];
+    //self.pic=nil;
+    if(self.top50==YES)
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpictop50",row]];
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpicall",row]];
+    }
+    
+    
+    
     NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
     
     DjsCell *cell = (DjsCell *)[ self.tv cellForRowAtIndexPath:path ];

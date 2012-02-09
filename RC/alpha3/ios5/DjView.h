@@ -32,6 +32,9 @@
 @property (nonatomic, retain) NSMutableArray *djs;
 @property (nonatomic, retain) DJSGetter *getter;
 @property (nonatomic, retain) NSString *search;
+@property (nonatomic, retain) NSMutableDictionary *pics;
+@property (nonatomic, retain) NSString *pic;
+@property (nonatomic, retain) NSMutableData *picTemp;
 
 
 //  ASSIGN...

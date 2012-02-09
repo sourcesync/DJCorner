@@ -36,6 +36,7 @@
 @synthesize header=_header;
 @synthesize back_from;
 @synthesize all_djs;
+@synthesize picTemp=_picTemp;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -250,6 +251,8 @@
 -(void) got_pic:(UIImageForCell *)ufc
 {
     int row = [ ufc.idx integerValue ];
+    
+    [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(ufc.img) forKey:[NSString stringWithFormat:@"%dpicinevents",row]];
     
     NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
     
@@ -489,12 +492,23 @@
             NSString *pp = event.pic_path;
         
             if ( pp != nil )
-            {               
-                NSNumber *num = [ NSNumber numberWithInteger:row];
-                [ self.getter asyncGetPic:pp:num];
-            
-                [ cell.activity startAnimating ];
-                [ cell.icon setHidden:YES ];
+            {              
+                self.picTemp=[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpicinevents",row]];
+                if(self.picTemp!=nil)
+                {
+                    [cell.icon setImage:[UIImage imageWithData:self.picTemp]];
+                    [cell.icon setHidden:NO];
+                    self.picTemp=nil;
+                }
+                else
+                {
+                    NSNumber *num = [ NSNumber numberWithInteger:row];
+                    [ self.getter asyncGetPic:pp:num];
+                    
+                    [ cell.activity startAnimating ];
+                    [ cell.icon setHidden:YES ];
+                }
+                
             }
             else
             {
