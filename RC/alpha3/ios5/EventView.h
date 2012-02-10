@@ -54,7 +54,7 @@
 @property (nonatomic, retain) EKCalendar *defaultCalendar;
 @property (nonatomic, retain) NSString *get_eid;
 @property (nonatomic, retain) UIViewController *parent;
-
+@property (nonatomic, retain) NSString *gcount;
 //  ASSIGN...
 @property (nonatomic, assign) BOOL connectionProblem;
 @property (nonatomic, assign) id<EventViewDelegate> delegate;
