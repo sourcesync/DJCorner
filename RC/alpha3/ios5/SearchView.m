@@ -248,11 +248,6 @@
     self.show_Default_location=CLLocationCoordinate2DMake(DEFAULT_LAT, DEFAULT_LONG);
     self.location_Manager=[[[CLLocationManager alloc] init] autorelease];
     
-    for(int i=0;i<self.lati.count;i++)
-    {
-        NSLog(@"%@:%@,%@,%@",[self.cities objectAtIndex:(i+1)],[self.lati objectAtIndex:i],[self.longi objectAtIndex:i],[self.flags objectAtIndex:i]);
-    }
-    
     [self.location_Manager setDelegate:self ];
 }
 
@@ -303,6 +298,10 @@
 - (void)dealloc
 {
     self.cities = nil;
+    self.lati=nil;
+    self.longi=nil;
+    self.location_Manager=nil;
+    
     [super dealloc];
 }
 

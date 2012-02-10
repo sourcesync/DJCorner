@@ -346,7 +346,8 @@
             self.pic=dj.pic_path;
             
             if(self.pic!=nil)
-            {/*
+            {
+                /*
                 if(self.top50==YES)
                 {
                     self.picTemp= [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpictop50",row]];
@@ -481,6 +482,7 @@
     //[self.pics setValue:img.img forKey:[NSString stringWithFormat:@"%dpic",row]];
     //self.pic=nil;
     /*
+    NSAutoreleasePool *pool=[[NSAutoreleasePool alloc] init];
     if(self.top50==YES)
     {
         [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpictop50",row]];
@@ -489,8 +491,10 @@
     {
         [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpicall",row]];
     }
-    */
     
+    [pool drain];
+    
+    */
     
     NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
     
@@ -498,7 +502,8 @@
     [cell.activity setHidden:YES];
     [ cell.activity stopAnimating ];
     [ cell.icon setImage:img.img];
-    [ cell.icon setHidden:NO ];}
+    [ cell.icon setHidden:NO ];
+}
 
 -(void) failed
 {
