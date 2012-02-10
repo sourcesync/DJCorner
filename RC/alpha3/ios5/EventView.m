@@ -476,6 +476,7 @@
 	[self presentModalViewController:addController animated:YES];
 	
 	addController.editViewDelegate = self;
+    [calendarsArray release];
 	[addController release];
 }
 
@@ -573,6 +574,7 @@
 	
 	addController.editViewDelegate = self;
 	[addController release];
+    [calendarsArray2 release];
 }
 
 

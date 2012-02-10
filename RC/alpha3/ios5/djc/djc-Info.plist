@@ -5,15 +5,13 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>DJ&apos;s Corner</string>
-	<key>CFBundleDocumentTypes</key>
-	<array/>
+	<string>DJ's Corner</string>
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string>Icon.png</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.devnullenterprises.djcorner.djscornerappwn</string>
+	<string>com.zixmedia.djcorner</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
@@ -24,8 +22,6 @@
 	<string>1.1</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
-	<key>CFBundleURLTypes</key>
-	<array/>
 	<key>CFBundleVersion</key>
 	<string>1.1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -38,9 +34,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UTExportedTypeDeclarations</key>
-	<array/>
-	<key>UTImportedTypeDeclarations</key>
-	<array/>
 </dict>
 </plist>

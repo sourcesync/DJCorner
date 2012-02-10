@@ -50,10 +50,17 @@
 
 - (void)dealloc
 {
+    
     self.location_manager = nil;
     self.getter = nil;
     self.cur_search = nil;
-    
+    self.picTemp=nil;
+     /*
+    [self.location_manager release];
+    [self.getter release];
+    [self.cur_search release];
+    [self.picTemp release];
+    */
     [super dealloc];
 }
 

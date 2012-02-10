@@ -16,7 +16,7 @@
 @implementation DjView
 
 @synthesize tv=_tv;
-@synthesize djs=_djs;
+//@synthesize djs=_djs;
 @synthesize getter=_getter;
 @synthesize activity=_activity;
 @synthesize button_back=_button_back;
@@ -42,7 +42,7 @@
         [ self.getter finished ];
         self.getter = nil;
     }
-    self.getter = [ [ [ DJSGetter alloc ] init ] autorelease ];
+    self.getter =  [ [ DJSGetter alloc ] init ];
     self.getter.delegate = self;
     NSString *search = self.search;
     self.getter.search = search;
@@ -82,12 +82,21 @@
 
 -(void) dealloc
 {
-    self.djs = nil;
+    
+    //self.djs = nil;
     self.getter = nil;
     self.search = nil;
     self.pics=nil;
     self.pic=nil;
-    
+    self.picTemp =nil;
+     /*
+   // [self.djs release];
+    [self.getter release];
+    [self.search release];
+    [self.pics release];
+    [self.pic release];
+    [self.picTemp release];
+    */
     [ super dealloc ];
 }
 
@@ -140,7 +149,7 @@
     }
     else
     {
-        self.djs = nil;
+        //self.djs = nil;
         [ self.tv setHidden:YES];
         //[ self.activity startAnimating ];
     }
@@ -276,6 +285,7 @@
             }
             
             AdsCell *cell=(AdsCell *)ads;
+            //[cell autorelease];
             
             cell.lb_adsContent.text=@"ads in dj list";
             [cell.iv setImage:[UIImage imageNamed:@"redbull.png"]];
@@ -310,6 +320,7 @@
                 tcell = [[[ DjsCell alloc] init ]  autorelease];
             }
             DjsCell *cell=(DjsCell *)tcell;
+            //[cell autorelease];
             UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
             //[ cell.imageView setImage:imgAll ];
             
@@ -379,6 +390,7 @@
                 //cell.textLabel.text = str;
                 cell.content.text=str;
             }
+            
             return cell;   
         }
     }

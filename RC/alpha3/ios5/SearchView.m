@@ -447,6 +447,7 @@
         }
     }
     [self setMapRegion];
+    [annonaion release];
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation 
