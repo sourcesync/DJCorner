@@ -346,7 +346,7 @@
             self.pic=dj.pic_path;
             
             if(self.pic!=nil)
-            {
+            {/*
                 if(self.top50==YES)
                 {
                     self.picTemp= [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpictop50",row]];
@@ -361,7 +361,7 @@
                     [cell.icon setImage:[UIImage imageWithData:self.picTemp]];
                     self.picTemp=nil;
                 }
-                else
+                else*/
                 {
                     NSNumber *num = [ NSNumber numberWithInteger:row];
                     [self.getter asyncGetPic:self.pic :num];
@@ -480,6 +480,7 @@
     
     //[self.pics setValue:img.img forKey:[NSString stringWithFormat:@"%dpic",row]];
     //self.pic=nil;
+    /*
     if(self.top50==YES)
     {
         [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpictop50",row]];
@@ -488,7 +489,7 @@
     {
         [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpicall",row]];
     }
-    
+    */
     
     
     NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];

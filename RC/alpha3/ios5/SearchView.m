@@ -65,7 +65,7 @@
                    @"Goa",
                    @"Gold Coast",
                    @"Hamptons",
-                   @"Hong Chong",
+                   @"Hong Kong",
                    @"Ibiza",
                    @"Kaohsiung City",
                    @"Las Vegas",
@@ -218,7 +218,6 @@
                  @"us.png",
                  @"hk.png",
                  @"es.png",
-                 @"es.png",
                  @"tw.png",
                  @"us.png",
                  @"be.png",
@@ -248,6 +247,11 @@
                  @"ca.png",nil] autorelease];
     self.show_Default_location=CLLocationCoordinate2DMake(DEFAULT_LAT, DEFAULT_LONG);
     self.location_Manager=[[[CLLocationManager alloc] init] autorelease];
+    
+    for(int i=0;i<self.lati.count;i++)
+    {
+        NSLog(@"%@:%@,%@,%@",[self.cities objectAtIndex:(i+1)],[self.lati objectAtIndex:i],[self.longi objectAtIndex:i],[self.flags objectAtIndex:i]);
+    }
     
     [self.location_Manager setDelegate:self ];
 }

@@ -259,7 +259,7 @@
 {
     int row = [ ufc.idx integerValue ];
     
-    [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(ufc.img) forKey:[NSString stringWithFormat:@"%dpicinevents",row]];
+    //[[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(ufc.img) forKey:[NSString stringWithFormat:@"%dpicinevents",row]];
     
     NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
     
@@ -499,7 +499,8 @@
             NSString *pp = event.pic_path;
         
             if ( pp != nil )
-            {              
+            {     
+                /*
                 self.picTemp=[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpicinevents",row]];
                 if(self.picTemp!=nil)
                 {
@@ -507,7 +508,7 @@
                     [cell.icon setHidden:NO];
                     self.picTemp=nil;
                 }
-                else
+                else*/
                 {
                     NSNumber *num = [ NSNumber numberWithInteger:row];
                     [ self.getter asyncGetPic:pp:num];
