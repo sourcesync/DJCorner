@@ -11,11 +11,12 @@
 #import "DJ.h"
 #import "djcAppDelegate.h"
 #import "DjsCell.h"
+#import "AdsCell.h"
 
 @implementation DjView
 
 @synthesize tv=_tv;
-@synthesize djs=_djs;
+//@synthesize djs=_djs;
 @synthesize getter=_getter;
 @synthesize activity=_activity;
 @synthesize button_back=_button_back;
@@ -28,6 +29,9 @@
 @synthesize all_djs=_all_djs;
 @synthesize top50=_top50;
 @synthesize button_AllTop50=_button_AllTop50;
+@synthesize pics=_pics;
+@synthesize pic=_pic;
+@synthesize picTemp=_picTemp;
 
 #pragma - funcs...
 
@@ -38,7 +42,7 @@
         [ self.getter finished ];
         self.getter = nil;
     }
-    self.getter = [ [ [ DJSGetter alloc ] init ] autorelease ];
+    self.getter =  [ [ DJSGetter alloc ] init ];
     self.getter.delegate = self;
     NSString *search = self.search;
     self.getter.search = search;
@@ -52,6 +56,13 @@
     self.activity.hidden = YES;
 }
 
+
+#pragma resignfirstresponder
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.field_search resignFirstResponder];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -71,10 +82,21 @@
 
 -(void) dealloc
 {
-    self.djs = nil;
+    
+    //self.djs = nil;
     self.getter = nil;
     self.search = nil;
-    
+    self.pics=nil;
+    self.pic=nil;
+    self.picTemp =nil;
+     /*
+   // [self.djs release];
+    [self.getter release];
+    [self.search release];
+    [self.pics release];
+    [self.pic release];
+    [self.picTemp release];
+    */
     [ super dealloc ];
 }
 
@@ -97,6 +119,8 @@
     self.field_search.clearButtonMode = UITextFieldViewModeAlways;
     self.field_search.clearsOnBeginEditing = YES;
     self.field_search.returnKeyType = UIReturnKeySearch;
+    
+    self.pics=[[NSMutableDictionary alloc] init];
     
     self.all_djs = NO;
     self.segment_dj.selectedSegmentIndex=1;
@@ -125,7 +149,7 @@
     }
     else
     {
-        self.djs = nil;
+        //self.djs = nil;
         [ self.tv setHidden:YES];
         //[ self.activity startAnimating ];
     }
@@ -184,11 +208,11 @@
         }
         else if ( end == (count-1) )
         {
-            return count;
+            return count+count/(ADSPOSITION+1);
         }
         else
         {
-            return count+1;
+            return count+1+(count+1)/(ADSPOSITION+1);
         }
     }
 }
@@ -252,7 +276,25 @@
     {
         NSInteger row = [ indexPath row ];
         
-        if ( row == [ self.getter.djs count] )  // get more button...
+        if(row>0&&((row+1)%(ADSPOSITION+1)==0))
+        {
+            UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
+            if(ads==nil)
+            {
+                ads=[[[AdsCell alloc] init] autorelease];
+            }
+            
+            AdsCell *cell=(AdsCell *)ads;
+            //[cell autorelease];
+            
+            cell.lb_adsContent.text=@"ads in dj list";
+            [cell.iv setImage:[UIImage imageNamed:@"redbull.png"]];
+            [cell.iv sizeToFit];
+            
+            return cell;
+        }
+        
+        else if ( row == ([ self.getter.djs count]+row/(ADSPOSITION+1)) )  // get more button...
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -278,6 +320,7 @@
                 tcell = [[[ DjsCell alloc] init ]  autorelease];
             }
             DjsCell *cell=(DjsCell *)tcell;
+            //[cell autorelease];
             UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
             //[ cell.imageView setImage:imgAll ];
             
@@ -290,7 +333,7 @@
             
             //cell.textLabel.font = [ UIFont systemFontOfSize:17 ];
             //  Get dj object...
-            DJ *dj = [ self.getter.djs objectAtIndex:row ];
+            DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)) ];
             
             //NSData *data = [ NSData dataWithContentsOfURL:[NSURL URLWithString:dj.pic_path]];
             //UIImage *img=[UIImage imageWithData:data];
@@ -300,15 +343,33 @@
             //float sw=img.size.width/cell.imageView.image.size.width;
             //float sh=img.size.height/cell.imageView.image.size.height;
             //cell.imageView.transform=CGAffineTransformMakeScale(sw, sh);
-            NSString *pic=dj.pic_path;
+            self.pic=dj.pic_path;
             
-            if(pic!=nil)
+            if(self.pic!=nil)
             {
-                NSNumber *num = [ NSNumber numberWithInteger:row];
-                [self.getter asyncGetPic:pic :num];
-                [cell.activity setHidden:NO];
-                [ cell.activity startAnimating];
-                [ cell.icon setHidden:YES ];
+                /*
+                if(self.top50==YES)
+                {
+                    self.picTemp= [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpictop50",row]];
+                }
+                else
+                {
+                    self.picTemp= [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpicall",row]];
+                }
+                
+                if(self.picTemp!=nil)
+                {
+                    [cell.icon setImage:[UIImage imageWithData:self.picTemp]];
+                    self.picTemp=nil;
+                }
+                else*/
+                {
+                    NSNumber *num = [ NSNumber numberWithInteger:row];
+                    [self.getter asyncGetPic:self.pic :num];
+                    [cell.activity setHidden:NO];
+                    [ cell.activity startAnimating];
+                    [ cell.icon setHidden:YES ];
+                }
             }
             else
             {
@@ -330,6 +391,7 @@
                 //cell.textLabel.text = str;
                 cell.content.text=str;
             }
+            
             return cell;   
         }
     }
@@ -344,32 +406,49 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //if the keyboard appears,resign it
+    [self.field_search resignFirstResponder];
+    
+    
     int row = [ indexPath row ];
     
-    [ tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    if (row == [self.getter.djs count] )
+    if(row>0&&((row+1)%(ADSPOSITION+1)==0))
     {
-        [ self.getter getNext ];
+        return;
     }
     else
     {
-        DJ *dj = [ self.getter.djs objectAtIndex:row ];
+        [ tableView deselectRowAtIndexPath:indexPath animated:YES];
         
-        djcAppDelegate *app = 
+        if (row ==( [self.getter.djs count]+self.getter.djs.count%(ADSPOSITION+1)) )
+        {
+            [ self.getter getNext ];
+        }
+        else
+        {
+            
+            DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)) ];
+            
+            djcAppDelegate *app = 
             ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
-        
-        self.back_from = YES;
-        [ app showDJItemModal:self:dj:nil ];
+            
+            self.back_from = YES;
+            [ app showDJItemModal:self:dj:nil ];
+             
+        }
     }
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if((self.getter.djs==nil)||([self.getter.djs count]==0)||
-       ([self.getter.djs count]==[indexPath row]))
+       ([self.getter.djs count]==([indexPath row]-indexPath.row/(ADSPOSITION+1))))
     {
         return 44;
+    }
+    else if(((indexPath.row+1)%(ADSPOSITION+1)==0)&&indexPath.row>0)
+    {
+        return 90.0f;
     }
     else
     {
@@ -399,13 +478,32 @@
 -(void) got_pic:(UIImageForCell *)img
 {
     int row = [ img.idx integerValue ];
+    
+    //[self.pics setValue:img.img forKey:[NSString stringWithFormat:@"%dpic",row]];
+    //self.pic=nil;
+    /*
+    NSAutoreleasePool *pool=[[NSAutoreleasePool alloc] init];
+    if(self.top50==YES)
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpictop50",row]];
+    }
+    else
+    {
+        [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpicall",row]];
+    }
+    
+    [pool drain];
+    
+    */
+    
     NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
     
     DjsCell *cell = (DjsCell *)[ self.tv cellForRowAtIndexPath:path ];
     [cell.activity setHidden:YES];
     [ cell.activity stopAnimating ];
     [ cell.icon setImage:img.img];
-    [ cell.icon setHidden:NO ];}
+    [ cell.icon setHidden:NO ];
+}
 
 -(void) failed
 {
@@ -431,6 +529,8 @@
 
 -(IBAction) searchClicked:(id)sender
 {
+    [self.field_search resignFirstResponder];
+    
     [ self.field_search resignFirstResponder];
     
     NSString *search = self.field_search.text;
@@ -460,17 +560,19 @@
 
 -(IBAction)allTop50Clicked:(id)sender
 {
+    [self.field_search resignFirstResponder];
+    
     if(self.top50==YES)
     {
         self.top50=NO;
         self.all_djs=YES;
-        self.button_AllTop50.title=@"All";
+        self.button_AllTop50.title=@"Top50";
     }
     else
     {
         self.top50=YES;
         self.all_djs=NO;
-        self.button_AllTop50.title=@"Top50";
+        self.button_AllTop50.title=@"All";
     }
     
     [self refreshClicked:nil];

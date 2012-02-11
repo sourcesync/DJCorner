@@ -10,6 +10,9 @@
 #import "DJCAPI.h"
 #import "DJSGetter.h"
 #import "DjsCell.h"
+#import "AdsCell.h"
+
+#define ADSPOSITION 4
 
 @interface DjView : UIViewController
     <UITableViewDataSource, UITableViewDelegate, DJSGetterDelegate, UITextFieldDelegate>
@@ -26,9 +29,12 @@
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *button_AllTop50;
 
 //  RETAIN...
-@property (nonatomic, retain) NSMutableArray *djs;
+//@property (nonatomic, retain) NSMutableArray *djs;
 @property (nonatomic, retain) DJSGetter *getter;
 @property (nonatomic, retain) NSString *search;
+@property (nonatomic, retain) NSMutableDictionary *pics;
+@property (nonatomic, retain) NSString *pic;
+@property (nonatomic, retain) NSMutableData *picTemp;
 
 
 //  ASSIGN...
@@ -43,4 +49,4 @@
 -(IBAction) backClicked: (id)sender;
 -(IBAction) searchClicked:(id)sender;
 -(IBAction) allTop50Clicked:(id)sender;
-;@end
+@end

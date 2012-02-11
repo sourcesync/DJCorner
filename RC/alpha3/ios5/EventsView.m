@@ -13,6 +13,7 @@
 #import "DJCAPI.h"
 #import "Utility.h"
 #import "djcAppDelegate.h"
+#import "AdsCell.h"
 
 #define DEFAULT_LAT     40.730039
 #define DEFAULT_LONG    -73.994358
@@ -35,6 +36,7 @@
 @synthesize header=_header;
 @synthesize back_from;
 @synthesize all_djs;
+@synthesize picTemp=_picTemp;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -48,10 +50,17 @@
 
 - (void)dealloc
 {
+    
     self.location_manager = nil;
     self.getter = nil;
     self.cur_search = nil;
-    
+    self.picTemp=nil;
+     /*
+    [self.location_manager release];
+    [self.getter release];
+    [self.cur_search release];
+    [self.picTemp release];
+    */
     [super dealloc];
 }
 
@@ -250,6 +259,8 @@
 {
     int row = [ ufc.idx integerValue ];
     
+    //[[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(ufc.img) forKey:[NSString stringWithFormat:@"%dpicinevents",row]];
+    
     NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
     
     EventCell *cell = (EventCell *)[ self.tv cellForRowAtIndexPath:path ];
@@ -360,7 +371,7 @@
         {
             count += 1;
         }
-        return count;
+        return count+count/(ADSPOSITION+1);
     }
 }
 
@@ -410,9 +421,25 @@
     }
     else
     {
-        NSInteger row = [ indexPath row ];
+        NSInteger row = ([ indexPath row ]);
         
-        if ( row == [ self.getter.events count] )  // get more button...
+        //add ads....
+        if((row>0)&&((row+1)%(ADSPOSITION+1)==0))
+        {
+            UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
+            
+            if(ads==nil)
+            {
+                ads=[[[AdsCell alloc] init]autorelease ];
+            }
+            
+            AdsCell *cell=(AdsCell *)ads;
+            cell.lb_adsContent.text=@"hello,ads";
+            [cell.iv setImage:[UIImage imageNamed:@"redbull.png"]];
+            [cell.iv sizeToFit];
+            return cell;
+        }
+        else if ( row ==( [ self.getter.events count] +row/(ADSPOSITION+1)))  // get more button...
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -426,6 +453,8 @@
             cell.textLabel.textColor = [ UIColor blackColor ];
             return cell;
         }
+        
+       
         else
         {
             UITableViewCell *cl = [tableView dequeueReusableCellWithIdentifier:
@@ -437,7 +466,7 @@
         
             EventCell *cell = (EventCell *)cl;
             int row = [ indexPath row ];
-            Event *event = [ self.getter.events objectAtIndex:row ];
+            Event *event = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)) ];
          
             //  venue name...
             NSString *vname = [NSString stringWithFormat:@"%@, %@",event.venue,event.city];
@@ -470,12 +499,24 @@
             NSString *pp = event.pic_path;
         
             if ( pp != nil )
-            {               
-                NSNumber *num = [ NSNumber numberWithInteger:row];
-                [ self.getter asyncGetPic:pp:num];
-            
-                [ cell.activity startAnimating ];
-                [ cell.icon setHidden:YES ];
+            {     
+                /*
+                self.picTemp=[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpicinevents",row]];
+                if(self.picTemp!=nil)
+                {
+                    [cell.icon setImage:[UIImage imageWithData:self.picTemp]];
+                    [cell.icon setHidden:NO];
+                    self.picTemp=nil;
+                }
+                else*/
+                {
+                    NSNumber *num = [ NSNumber numberWithInteger:row];
+                    [ self.getter asyncGetPic:pp:num];
+                    
+                    [ cell.activity startAnimating ];
+                    [ cell.icon setHidden:YES ];
+                }
+                
             }
             else
             {
@@ -490,9 +531,13 @@
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
-        ([self.getter.events count]==[indexPath row]))
+        ([self.getter.events count]==([indexPath row]-indexPath.row/(ADSPOSITION+1))))
     {
         return 44;
+    }
+    else if(indexPath.row>0&&((indexPath.row+1)%(ADSPOSITION+1)==0))
+    {
+        return 90.0f;
     }
     else
     {
@@ -513,13 +558,17 @@
     
     [ tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if (row == [self.getter.events count] )
+    if(row>0&&((row+1)%(ADSPOSITION+1)==0))
+    {
+        return;
+    }
+    else if (row == ([self.getter.events count]+self.getter.events.count/(ADSPOSITION+1)) )
     {
         [ self getMore ];
     }
     else
     {
-        Event *ev = [ self.getter.events objectAtIndex:row ];
+        Event *ev = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)) ];
      
         
         [ self.getter cancel ];

@@ -19,6 +19,19 @@
 //@synthesize activity=_activity;
 @synthesize api=_api;
 @synthesize parent=_parent;
+@synthesize tf=_tf;
+//@synthesize button_Done=_button_Done;
+
+
+#pragma resignfirstresponse...
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if([self.tf isFirstResponder])
+    {
+        [self.tf resignFirstResponder];
+    }
+    [self resignFirstResponder];
+}
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -76,6 +89,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
+    app.feedback_view=self;
 }
 
 - (void)viewDidUnload
@@ -114,10 +129,10 @@
     //////////////////////////////////////////
     
     
-    NSString *recipients = @"mailto:cj2000s@gmail.com?subject=Feedback from DJs Corner!";
+    NSString *recipients = @"mailto:feedback@djscorner.com?subject=Feedback from DJs Corner!";
     NSString *body = @"&body=";
     
-    NSString *email = [NSString stringWithFormat:@"%@%@", recipients, body];
+    NSString *email = [NSString stringWithFormat:@"%@%@%@", recipients, body,self.tf.text];
     email = [email stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:email]];
@@ -128,11 +143,12 @@
         initWithTitle:@"Feedback" 
         message:@"Your comment has been submitted"  
         delegate:self 
-        cancelButtonTitle:@"No" 
-        otherButtonTitles:@"Yes", nil];
+        cancelButtonTitle:@"OK" 
+        otherButtonTitles:nil, nil];
 	[alert show];
 	[alert release];
-    
+    [self.tf setText:@""];
+    [self.tf resignFirstResponder];
     [ self dismissModalViewControllerAnimated:YES ];
 }
 
@@ -141,13 +157,9 @@
 #pragma mark - button callbacks...
 
 
--(IBAction) buttonBackClicked:(id)sender
+-(IBAction) buttonDoneClicked:(id)sender
 {
-    if ( [self.parent isKindOfClass:[ DJItemView class] ] )
-    {
-        DJItemView *eview = (DJItemView *)self.parent;
-        eview.back_from = YES;
-    }
+    [self.tf resignFirstResponder];
     
     [ self dismissModalViewControllerAnimated:YES ];
 }

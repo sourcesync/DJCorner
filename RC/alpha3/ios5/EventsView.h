@@ -12,6 +12,9 @@
 #import "SimpleLocation.h"
 #import "DJCAPI.h"
 #import "EventsGetter.h"
+#import "AdsCell.h"
+
+#define ADSPOSITION 4
 
 enum EventViewMode
 {
@@ -33,6 +36,7 @@ enum EventViewMode
 @property (nonatomic, retain) CLLocationManager *location_manager;
 @property (nonatomic, retain) EventsGetter *getter;
 @property (nonatomic, retain) NSString *cur_search;
+@property (nonatomic, retain) NSMutableData *picTemp;
 
 //  IBOUTLET...
 @property (nonatomic, retain) IBOutlet UITableView *tv;
@@ -50,6 +54,7 @@ enum EventViewMode
 @property (nonatomic, assign) BOOL got_first_events;
 @property (nonatomic, assign) BOOL back_from;
 @property (nonatomic, assign) BOOL all_djs;
+
 
 //  PUBLIC FUNCS...
 -(void) refreshFirstTime:(id)obj;

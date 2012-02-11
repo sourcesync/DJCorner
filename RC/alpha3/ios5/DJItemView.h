@@ -23,8 +23,10 @@
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_follow;
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_web_site;
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_similar;
+
+//@property (nonatomic, retain) IBOutlet UIButton *button_follow;
 //jimmy
-@property (nonatomic, retain) IBOutlet UITableViewCell *cell_feedback;
+//@property (nonatomic, retain) IBOutlet UITableViewCell *cell_feedback;
 //end
 
 
@@ -36,6 +38,7 @@
 
 //  ASSIGN...
 @property (nonatomic, assign) BOOL back_from;
+//@property (nonatomic, assign) BOOL following;
 
 //  PUBLIC FUNC...
 -(id)init;

@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="8.00">
 	<data>
 		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">11C74</string>
+		<string key="IBDocument.SystemVersion">11A2061</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1138.23</string>
-		<string key="IBDocument.HIToolboxVersion">567.00</string>
+		<string key="IBDocument.AppKitVersion">1138.1</string>
+		<string key="IBDocument.HIToolboxVersion">566.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">933</string>
@@ -45,8 +45,9 @@
 					<object class="IBUIToolbar" id="1061124580">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">266</int>
-						<string key="NSFrame">{{6, 1}, {320, 44}}</string>
+						<string key="NSFrameSize">{326, 44}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="819188062"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -60,7 +61,7 @@
 								<int key="IBUISystemItemIdentifier">6</int>
 							</object>
 							<object class="IBUIBarButtonItem" id="472191802">
-								<string key="IBUITitle">Top 50</string>
+								<string key="IBUITitle">All</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 								<float key="IBUIWidth">55</float>
 								<int key="IBUIStyle">1</int>
@@ -71,8 +72,9 @@
 					<object class="IBUIImageView" id="760410774">
 						<reference key="NSNextResponder" ref="191373211"/>
 						<int key="NSvFlags">292</int>
-						<string key="NSFrame">{{5, 8}, {180, 30}}</string>
+						<string key="NSFrame">{{6, 7}, {180, 30}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="584348252"/>
 						<int key="IBUIContentMode">1</int>
 						<bool key="IBUIUserInteractionEnabled">NO</bool>
@@ -87,6 +89,7 @@
 						<int key="NSvFlags">274</int>
 						<string key="NSFrame">{{0, 87}, {320, 324}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="533351050"/>
 						<object class="NSColor" key="IBUIBackgroundColor">
 							<int key="NSColorSpace">3</int>
@@ -107,6 +110,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{144, 211}, {37, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHidesWhenStopped">NO</bool>
@@ -121,6 +125,7 @@
 								<int key="NSvFlags">292</int>
 								<string key="NSFrame">{{57, 7}, {188, 31}}</string>
 								<reference key="NSSuperview" ref="584348252"/>
+								<reference key="NSWindow"/>
 								<reference key="NSNextKeyView" ref="859182513"/>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -157,6 +162,7 @@
 						</array>
 						<string key="NSFrame">{{0, 43}, {320, 44}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="365237611"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
@@ -187,6 +193,7 @@
 						<int key="NSvFlags">292</int>
 						<string key="NSFrame">{{6, 51}, {190, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
 						<reference key="NSNextKeyView" ref="496512743"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
@@ -217,6 +224,7 @@
 				</array>
 				<string key="NSFrame">{{0, 20}, {320, 411}}</string>
 				<reference key="NSSuperview"/>
+				<reference key="NSWindow"/>
 				<reference key="NSNextKeyView" ref="1061124580"/>
 				<object class="NSColor" key="IBUIBackgroundColor">
 					<int key="NSColorSpace">1</int>
@@ -231,7 +239,7 @@
 				<object class="IBUISegmentedControl" key="IBUICustomView" id="819188062">
 					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">292</int>
-					<string key="NSFrame">{{249, 8}, {65, 30}}</string>
+					<string key="NSFrame">{{6, 8}, {65, 30}}</string>
 					<reference key="NSNextKeyView" ref="760410774"/>
 					<bool key="IBUIOpaque">NO</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -305,19 +313,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">segment_dj</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="819188062"/>
-					</object>
-					<int key="connectionID">49</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">button_AllTop50</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="472191802"/>
 					</object>
 					<int key="connectionID">54</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">segment_dj</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="819188062"/>
+					</object>
+					<int key="connectionID">49</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -349,10 +357,10 @@
 						<reference key="object" ref="191373211"/>
 						<array class="NSMutableArray" key="children">
 							<reference ref="533351050"/>
-							<reference ref="760410774"/>
 							<reference ref="496512743"/>
 							<reference ref="584348252"/>
 							<reference ref="859182513"/>
+							<reference ref="760410774"/>
 							<reference ref="1061124580"/>
 						</array>
 						<reference key="parent" ref="0"/>
@@ -437,6 +445,11 @@
 						<reference key="parent" ref="191373211"/>
 					</object>
 					<object class="IBObjectRecord">
+						<int key="objectID">53</int>
+						<reference key="object" ref="472191802"/>
+						<reference key="parent" ref="1061124580"/>
+					</object>
+					<object class="IBObjectRecord">
 						<int key="objectID">48</int>
 						<reference key="object" ref="911367081"/>
 						<array class="NSMutableArray" key="children">
@@ -448,11 +461,6 @@
 						<int key="objectID">47</int>
 						<reference key="object" ref="819188062"/>
 						<reference key="parent" ref="911367081"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">53</int>
-						<reference key="object" ref="472191802"/>
-						<reference key="parent" ref="1061124580"/>
 					</object>
 				</array>
 			</object>
@@ -484,7 +492,86 @@
 			<nil key="sourceID"/>
 			<int key="maxID">55</int>
 		</object>
-		<object class="IBClassDescriber" key="IBDocument.Classes"/>
+		<object class="IBClassDescriber" key="IBDocument.Classes">
+			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
+				<object class="IBPartialClassDescription">
+					<string key="className">DjView</string>
+					<string key="superclassName">UIViewController</string>
+					<dictionary class="NSMutableDictionary" key="actions">
+						<string key="allTop50Clicked:">id</string>
+						<string key="backClicked:">id</string>
+						<string key="refreshClicked:">id</string>
+						<string key="searchClicked:">id</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="actionInfosByName">
+						<object class="IBActionInfo" key="allTop50Clicked:">
+							<string key="name">allTop50Clicked:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="backClicked:">
+							<string key="name">backClicked:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="refreshClicked:">
+							<string key="name">refreshClicked:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+						<object class="IBActionInfo" key="searchClicked:">
+							<string key="name">searchClicked:</string>
+							<string key="candidateClassName">id</string>
+						</object>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="activity">UIActivityIndicatorView</string>
+						<string key="button_AllTop50">UIBarButtonItem</string>
+						<string key="button_back">UIBarButtonItem</string>
+						<string key="button_refresh">UIBarButtonItem</string>
+						<string key="button_search">UIBarButtonItem</string>
+						<string key="field_search">UITextField</string>
+						<string key="segment_dj">UISegmentedControl</string>
+						<string key="tv">UITableView</string>
+					</dictionary>
+					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="activity">
+							<string key="name">activity</string>
+							<string key="candidateClassName">UIActivityIndicatorView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="button_AllTop50">
+							<string key="name">button_AllTop50</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="button_back">
+							<string key="name">button_back</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="button_refresh">
+							<string key="name">button_refresh</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="button_search">
+							<string key="name">button_search</string>
+							<string key="candidateClassName">UIBarButtonItem</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="field_search">
+							<string key="name">field_search</string>
+							<string key="candidateClassName">UITextField</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="segment_dj">
+							<string key="name">segment_dj</string>
+							<string key="candidateClassName">UISegmentedControl</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="tv">
+							<string key="name">tv</string>
+							<string key="candidateClassName">UITableView</string>
+						</object>
+					</dictionary>
+					<object class="IBClassDescriptionSource" key="sourceIdentifier">
+						<string key="majorKey">IBProjectSource</string>
+						<string key="minorKey">./Classes/DjView.h</string>
+					</object>
+				</object>
+			</array>
+		</object>
 		<int key="IBDocument.localizationMode">0</int>
 		<string key="IBDocument.TargetRuntimeIdentifier">IBCocoaTouchFramework</string>
 		<bool key="IBDocument.PluginDeclaredDependenciesTrackSystemTargetVersion">YES</bool>

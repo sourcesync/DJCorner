@@ -40,6 +40,8 @@
 @synthesize get_eid=_get_eid;
 @synthesize parent=_parent;
 @synthesize back_from;
+@synthesize gcount;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -393,6 +395,27 @@
 // specified event store.
 - (void)addEvent:(id)sender
 {
+      gcount = @"0";
+    EKEventStore *eventStore = [[[EKEventStore alloc] init] autorelease]; 
+    NSArray *calendarsArray = [[NSArray alloc] init];
+    calendarsArray = [[eventStore calendars] retain];
+    
+    
+    for (EKCalendar *thisCalendar in calendarsArray) {
+        
+        EKCalendarType type = thisCalendar.type;
+        
+        
+        if (type == EKCalendarTypeExchange) {
+            gcount = @"1";
+        }
+        if (type == EKCalendarTypeCalDAV) {
+            gcount = @"2";
+        }
+  
+    }   
+
+   
 	// When add button is pushed, create an EKEventEditViewController to display the event.
 	EKEventEditViewController *addController = 
     [[EKEventEditViewController alloc] initWithNibName:nil bundle:nil];
@@ -453,7 +476,121 @@
 	[self presentModalViewController:addController animated:YES];
 	
 	addController.editViewDelegate = self;
+    [calendarsArray release];
 	[addController release];
+}
+
+
+- (void)addEvent2:(id)sender
+{
+    
+    EKEventStore *eventStore2 = [[[EKEventStore alloc] init] autorelease]; 
+    NSArray *calendarsArray2 = [[NSArray alloc] init];
+    calendarsArray2 = [[eventStore2 calendars] retain];
+    
+    
+	// When add button is pushed, create an EKEventEditViewController to display the event.
+	EKEventEditViewController *addController = 
+    [[EKEventEditViewController alloc] initWithNibName:nil bundle:nil];
+	
+	// set the addController's event store to the current event store.
+	addController.eventStore = self.eventStore;
+    
+    //  Get event info...
+    NSString *name = self.event.name;
+    NSString *lc = self.event.venue;
+    NSString *sd = self.event.startdate;
+    NSLog(@"%@",sd);
+    NSString *ed = self.event.enddate;
+    NSLog(@"%@",ed);
+    
+    // create an event and prefill some fields...
+    EKEvent *evt = [ EKEvent eventWithEventStore:self.eventStore ];
+    [ evt setTitle:name ];
+    
+    //jimmy add other calendar
+    //[ evt setCalendar:self.defaultCalendar ];
+    
+    NSInteger i2= 0 ;
+    NSInteger cindex2= 0 ;
+    
+    for (EKCalendar *thisCalendar2 in calendarsArray2) {
+        
+        EKCalendarType type = thisCalendar2.type;
+        
+       
+        if (type == EKCalendarTypeExchange) {
+            cindex2 = i2;
+            gcount = @"0";
+        }
+        if (type == EKCalendarTypeCalDAV) {
+            cindex2 = i2;
+            gcount = @"0";
+        }
+        
+        i2++;
+    }   
+    
+    
+    
+    EKCalendar *calendar2 = [calendarsArray2 objectAtIndex:cindex2];
+    [ evt setCalendar:calendar2 ];
+    
+    
+    
+    
+    
+    
+    
+    [ evt setLocation:lc ];
+    EKRecurrenceRule *rule = 
+    [ [ EKRecurrenceRule alloc ] 
+     initRecurrenceWithFrequency:EKRecurrenceFrequencyMonthly interval:1 end:nil ];
+    [ rule autorelease ];
+    [ evt setRecurrenceRule: rule ];
+    NSDateFormatter *fmt = [ [ NSDateFormatter alloc ] init ];
+    [ fmt autorelease ];
+    
+    
+    NSLocale *          enUSPOSIXLocale;
+    enUSPOSIXLocale = [[[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"] autorelease];
+    [ fmt setLocale:enUSPOSIXLocale];
+    [ fmt setDateFormat:@"yyyy'-'MM'-'dd'T'HH':'mm':'ss'+00:00'"];
+    [ fmt setTimeZone:[NSTimeZone timeZoneForSecondsFromGMT:0]];
+    
+    //NSDate *sdt = [fmt dateFromString:sample ];
+    NSDate *sdt = [fmt dateFromString:sd ];
+    [ evt setStartDate:sdt ];
+    
+    //NSDate *edt = [fmt dateFromString:ed ];
+    NSDate *edt = [ sdt dateByAddingTimeInterval:10 ];
+    [ evt setEndDate:edt ];
+    
+    //  Set this as the event to modify...
+    addController.event = evt;
+    
+	// present EventsAddViewController as a modal view controller
+	[self presentModalViewController:addController animated:YES];
+	
+	addController.editViewDelegate = self;
+	[addController release];
+    [calendarsArray2 release];
+}
+
+
+- (void)alertView:(UIAlertView *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex {
+    // the user clicked one of the OK/Cancel buttons
+    if (buttonIndex == 0)
+    {
+        
+        [self addEvent2:self];
+        
+        NSLog(@"ok");
+    }
+    else
+    {
+        NSLog(@"cancel");
+    }
 }
 
 
@@ -479,10 +616,41 @@
 			// and reload table view.
 			// If the new event is being added to the default calendar, then update its 
 			// eventsList.
+            
+            
 			if (self.defaultCalendar ==  thisEvent.calendar) 
             {
 				//[self.eventsList addObject:thisEvent];
 			}
+            
+            
+            if (gcount == @"1"){
+                UIAlertView *alert = [[UIAlertView alloc] 
+                                      initWithTitle:@"Sync Calendar" 
+                                      message:@"Sync with your Exchange calendar?"
+                                      delegate:self 
+                                      cancelButtonTitle:@"Yes" 
+                                      otherButtonTitles:@"No", nil];
+                
+                [alert show];
+                [alert release];
+                gcount=@"0";
+            }
+            if (gcount == @"2"){
+                UIAlertView *alert = [[UIAlertView alloc] 
+                                      initWithTitle:@"Sync Calendar" 
+                                      message:@"Sync with your CalDAV/Google calendar?"
+                                      delegate:self 
+                                      cancelButtonTitle:@"Yes" 
+                                      otherButtonTitles:@"No", nil];
+                
+                [alert show];
+                [alert release];
+                gcount=@"0";
+            }
+            
+            
+			break;
             
 			[controller.eventStore saveEvent:controller.event span:EKSpanThisEvent error:&error];
 			//[self.tableView reloadData];

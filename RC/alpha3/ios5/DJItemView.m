@@ -24,8 +24,11 @@
 @synthesize api=_api;
 @synthesize getdj=_getdj;
 @synthesize cell_similar=_cell_similar;
+
+//@synthesize button_follow=_button_follow;
+//@synthesize following=_following;
 //jimmy
-@synthesize cell_feedback=_cell_feedback;
+//@synthesize cell_feedback=_cell_feedback;
 //end
 @synthesize back_from=_back_from;
 @synthesize parent=_parent;
@@ -43,6 +46,7 @@
 
 -(id)init
 {
+    //self.following=NO;
     return [ self initWithNibName:@"DJItemView" bundle:nil ];
 }
 
@@ -61,6 +65,7 @@
     self.tv.dataSource = self;
     
     self.api = [ [ [ DJCAPI alloc ] init:self ] autorelease ];
+    
 }
 
 - (void)viewDidUnload
@@ -80,6 +85,7 @@
         self.tv.hidden = YES;
         self.activity.hidden = NO;
     }
+    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -142,8 +148,8 @@
     }
     else
     {
-        //return 4;
-        return 5;
+        return 4;
+        //return 5;
     }
 }
 
@@ -201,8 +207,8 @@
     else if ( section == 4 )
     {
         //jimmy
-       self.cell_feedback.selectionStyle = UITableViewCellSelectionStyleNone;
-        return self.cell_feedback;
+       //self.cell_feedback.selectionStyle = UITableViewCellSelectionStyleNone;
+       // return self.cell_feedback;
 
         return nil;
         //end 
@@ -246,6 +252,7 @@
     
 }
 
+
 #pragma mark - button callbacks...
 
 
@@ -281,11 +288,49 @@
     
     [ arr addObject:self.dj.name ];
     [ arrids addObject:self.dj.djid ];
-     
+    
+    //NSString *follow_dj=@"Follow this DJ";
+    //NSString *stop_Follow_dj=@"Stop following";
+   
     if ( ! [ self.api followdjs:tokstr:arr:arrids ] )
     {
         [ Utility AlertAPICallFailed ];
     } 
+    /*
+    
+    if(self.following==NO)
+    {
+        if ( ! [ self.api followdjs:tokstr:arr:arrids ] )
+        {
+            [ Utility AlertAPICallFailed ];
+        } 
+        else
+        {
+            self.button_follow.titleLabel.text=follow_dj;
+            //[self.button_follow.titleLabel setText:follow_dj];
+            self.following=YES;
+        }
+        
+    }
+    else
+    {
+        NSString *djIdtoStop;
+        djIdtoStop=self.dj.djid;
+        if (! [ self.api stop_followdj:tokstr:djIdtoStop ] )
+        {
+            [ Utility AlertAPICallFailed ];
+        }
+        else
+        {
+            self.button_follow.titleLabel.text=stop_Follow_dj;
+            //[self.button_follow.titleLabel setText:stop_Follow_dj];
+            self.following=NO;
+        }
+        
+        [djIdtoStop release];
+        
+    }
+    */
 
     [ arr release ];
     [ arrids release ];
