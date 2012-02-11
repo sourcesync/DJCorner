@@ -20,6 +20,7 @@ package
 	import away3d.primitives.Cube;
 	import away3d.primitives.Plane;
 	import away3d.primitives.Sphere;
+	import away3d.materials.VideoMaterial;
 	
 	import flash.display.Bitmap;
 	import flash.display.BitmapData;
@@ -38,6 +39,7 @@ package
 	import flash.text.TextFormat;
 	import flash.text.TextFormatAlign;
 	import flash.utils.getTimer;
+	import flash.filters.BlurFilter;
 	//import flash.geom.Vector3D;
 	//import CubeJB;
 	//import away3d.materials.
@@ -79,6 +81,12 @@ package
 		private var light:PointLight = null;
 		private var light2:PointLight = null;
 		//gw
+		
+		//video
+		// Video material using a flash streaming video URL
+		//private var videoURL:String = "http://www.tartiflop.com/away3d/FirstSteps/AmIWrong.flv";
+		//var frontMaterial:VideoMaterial = new VideoMaterial({file:videoURL});
+		//private var planeGroup:ObjectContainer3D;
 		
 		public function cubeincube()
 		{
@@ -167,6 +175,19 @@ package
 			//add stats
 			//addChild(new AwayStats(view));
 			//gw
+			
+			//video
+			//var frontPlane:Plane = new Plane({material:frontMaterial, width:100, height:100, segmentsW:2, segmentsH:2, ownCanvas:true});
+			//frontPlane.rotationX = -90;
+			//frontPlane.rotationZ = 180;
+			//frontPlane.z = 50;
+			// Create an object container to group the sides of the cube
+			//planeGroup = new ObjectContainer3D();
+			//view.scene.addChild(planeGroup);
+			//planeGroup.addChild(topPlane);
+			//planeGroup.addChild(leftPlane);
+			//planeGroup.addChild(frontPlane);
+			//frontPlane.filters.push(new BlurFilter(8, 8));
 			
 			this.addEventListener(Event.ENTER_FRAME, onEnterFrame);
 			stage.addEventListener(KeyboardEvent.KEY_DOWN,onKeyDown);
