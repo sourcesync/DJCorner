@@ -1991,8 +1991,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+<<<<<<< HEAD
+				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+=======
 				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+>>>>>>> ed253cde440b765ba4e6a3d8b794601c20ff41f8
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2001,8 +2006,13 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+<<<<<<< HEAD
+				PROVISIONING_PROFILE = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+=======
 				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+>>>>>>> ed253cde440b765ba4e6a3d8b794601c20ff41f8
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
