@@ -1951,8 +1951,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hok Leong Chan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hok Leong Chan";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -1962,8 +1962,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "DJ's Corner";
-				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				PROVISIONING_PROFILE = "75FD609C-FBB0-4B94-8B4F-461D394191F4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "75FD609C-FBB0-4B94-8B4F-461D394191F4";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -1972,8 +1972,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hok Leong Chan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hok Leong Chan";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1981,8 +1981,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "DJ's Corner";
-				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				PROVISIONING_PROFILE = "75FD609C-FBB0-4B94-8B4F-461D394191F4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "75FD609C-FBB0-4B94-8B4F-461D394191F4";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -1991,8 +1991,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hok Leong Chan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hok Leong Chan";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2001,8 +2001,8 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				PROVISIONING_PROFILE = "75FD609C-FBB0-4B94-8B4F-461D394191F4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "75FD609C-FBB0-4B94-8B4F-461D394191F4";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2011,8 +2011,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Hok Leong Chan";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hok Leong Chan";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "djc/djc-Prefix.pch";
@@ -2020,8 +2020,8 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				PROVISIONING_PROFILE = "75FD609C-FBB0-4B94-8B4F-461D394191F4";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "75FD609C-FBB0-4B94-8B4F-461D394191F4";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

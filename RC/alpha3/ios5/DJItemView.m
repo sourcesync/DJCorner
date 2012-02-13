@@ -24,9 +24,11 @@
 @synthesize api=_api;
 @synthesize getdj=_getdj;
 @synthesize cell_similar=_cell_similar;
+@synthesize follow_btn=_follow_btn;
+@synthesize selectedDj=_selectedDj;
 
 //@synthesize button_follow=_button_follow;
-//@synthesize following=_following;
+@synthesize following=_following;
 //jimmy
 //@synthesize cell_feedback=_cell_feedback;
 //end
@@ -46,7 +48,7 @@
 
 -(id)init
 {
-    //self.following=NO;
+    self.following=NO;
     return [ self initWithNibName:@"DJItemView" bundle:nil ];
 }
 
@@ -130,7 +132,8 @@
     self.dj = nil;
     self.api = nil;
     self.getdj = nil;
-    
+    self.selectedDj = nil;
+    [self.following release];
     [ super dealloc ];
 }
 
@@ -289,53 +292,85 @@
     [ arr addObject:self.dj.name ];
     [ arrids addObject:self.dj.djid ];
     
-    //NSString *follow_dj=@"Follow this DJ";
-    //NSString *stop_Follow_dj=@"Stop following";
-   
-    if ( ! [ self.api followdjs:tokstr:arr:arrids ] )
-    {
-        [ Utility AlertAPICallFailed ];
-    } 
-    /*
-    
+      
+
     if(self.following==NO)
     {
+        
+        [self.follow_btn setTitle:@"Stop Following" forState:UIControlStateNormal];
+        self.following=YES;
         if ( ! [ self.api followdjs:tokstr:arr:arrids ] )
         {
             [ Utility AlertAPICallFailed ];
         } 
-        else
-        {
-            self.button_follow.titleLabel.text=follow_dj;
-            //[self.button_follow.titleLabel setText:follow_dj];
-            self.following=YES;
-        }
+        
         
     }
     else
     {
-        NSString *djIdtoStop;
-        djIdtoStop=self.dj.djid;
-        if (! [ self.api stop_followdj:tokstr:djIdtoStop ] )
-        {
-            [ Utility AlertAPICallFailed ];
-        }
-        else
-        {
-            self.button_follow.titleLabel.text=stop_Follow_dj;
-            //[self.button_follow.titleLabel setText:stop_Follow_dj];
-            self.following=NO;
-        }
         
-        [djIdtoStop release];
+        [self.follow_btn setTitle:@"Follow this DJ" forState:UIControlStateNormal];
+        self.following=NO;
+    
+        
+        NSString *djid = self.dj.djid;
+        self.selectedDj = djid;
+          [ [ UIApplication sharedApplication ] delegate ];
+ 
+        
+        if (! [ self.api stop_followdj:tokstr:self.selectedDj ] )
+        {
+           //[ Utility AlertAPICallFailed ];
+        }
+
+        
         
     }
-    */
+
 
     [ arr release ];
     [ arrids release ];
 }
 
+
+-(void) stopped_followdj:(NSDictionary *)data
+{
+    NSNumber *_st = [ data objectForKey:@"status" ];
+    NSInteger st = [ _st integerValue ];
+}
+
+
+-(void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex 
+{
+    if (buttonIndex==0 ) 
+    {
+        djcAppDelegate *app = ( djcAppDelegate *) 
+        [ [ UIApplication sharedApplication ] delegate ];
+        
+        //DJ *dj = [ self.djs objectAtIndex:self.selectedIndex ];
+        NSString *djid = self.selectedDj;
+        [ app showDJItemModal:self:nil:djid ];
+        
+        //if (! [ self.api stop_followdj:app.devtoken:self.selectedDJ ] )
+        //{
+        //    [ Utility AlertAPICallFailed ];
+        // }
+    }
+    else if (buttonIndex==1 ) 
+    {
+        djcAppDelegate *app = ( djcAppDelegate *) 
+        [ [ UIApplication sharedApplication ] delegate ];
+        
+        if (! [ self.api stop_followdj:app.devtoken:self.selectedDj ] )
+        {
+            [ Utility AlertAPICallFailed ];
+        }
+    }
+    else
+    {
+        //actionSheet.release
+    }
+}
 
 -(IBAction) similarButtonClicked:(id)sender
 {
