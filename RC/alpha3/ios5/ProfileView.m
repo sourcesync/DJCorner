@@ -314,10 +314,10 @@
 #pragma mark - buttons clicked
 -(IBAction)upGradeClicked:(id)sender
 {
-    djcAppDelegate *app = 
-    ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
-    
-    [app purchaseManagerStart];
+ //   djcAppDelegate *app = 
+ //   ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
+ //   
+ //   [app purchaseManagerStart];
 }
 
 -(IBAction)contactFeedClicked:(id)sender

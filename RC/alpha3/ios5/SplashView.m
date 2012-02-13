@@ -62,7 +62,7 @@
 -(BOOL) prepAudio
 {
 	NSError *error;
-	NSString *path = [[NSBundle mainBundle] pathForResource:@"MeetMeInSt.Louis1904" ofType:@"mp3"];
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"penguin-original-mix" ofType:@"mp3"];
 	if (![[NSFileManager defaultManager] fileExistsAtPath:path]) return NO;
 	
 	// Initialize the player
