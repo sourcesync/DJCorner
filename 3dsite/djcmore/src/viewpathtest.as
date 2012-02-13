@@ -360,7 +360,7 @@ package
 			
 			//this.icube.z += 1;
 			
-			if ( tween>0.0 ) tween += 0.01;
+			if ( tween>=0.0 ) tween += 0.01;
 			if ( tween>1.0) tween = 0.0;
 			
 			this.objAnim.updateProgress(tween);
