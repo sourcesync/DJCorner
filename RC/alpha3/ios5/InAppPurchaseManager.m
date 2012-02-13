@@ -61,7 +61,7 @@
 #pragma productrequest
 -(void)requestProUpgradeProductData
 {
-    NSSet *productIdenfitires=[NSSet setWithObject:@"com.zixmedia.djcorner"];
+    NSSet *productIdenfitires=[NSSet setWithObject:@"com.zixmedia.djcorner.helloworldzixmediadjcorner"];
     productsRequest=[[SKProductsRequest alloc] initWithProductIdentifiers:productIdenfitires];
     productsRequest.delegate=self;
     [productsRequest start];

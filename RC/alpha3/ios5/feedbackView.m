@@ -158,7 +158,7 @@
     if([self.parent isKindOfClass:[ProfileView class]])
     {
         ProfileView *pView=(ProfileView *)self.parent;
-        //pView.ba
+        pView.back_from=YES;
     }
     [self dismissModalViewControllerAnimated:YES];
 }
