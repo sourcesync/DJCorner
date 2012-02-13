@@ -269,6 +269,10 @@
 		308F36FB14DD17E200369244 /* DjsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308F36F914DD17E200369244 /* DjsCell.xib */; };
 		3090AFF514E8AF9200E99626 /* InAppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3090AFF414E8AF9200E99626 /* InAppPurchaseManager.m */; };
 		3090AFF914E8B49E00E99626 /* SKProductPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3090AFF814E8B49E00E99626 /* SKProductPrice.m */; };
+		3090AFFC14E9111100E99626 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3090AFFB14E9111000E99626 /* AVFoundation.framework */; };
+		3090AFFE14E9111D00E99626 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3090AFFD14E9111D00E99626 /* MediaPlayer.framework */; };
+		3090B00214E9116800E99626 /* DGNYE Logo Final 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3090B00014E9116800E99626 /* DGNYE Logo Final 1.mp4 */; };
+		3090B00314E9116800E99626 /* MeetMeInSt.Louis1904.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3090B00114E9116800E99626 /* MeetMeInSt.Louis1904.mp3 */; };
 		865BE19E14E36DFA004308F6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BE19D14E36DFA004308F6 /* feedbackView.xib */; };
 		869D8E4B14E1306C009E3E31 /* redbull.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D8E4A14E1306C009E3E31 /* redbull.png */; };
 		86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C46F1714DD88C800F719E6 /* feedbackView.m */; };
@@ -638,6 +642,10 @@
 		3090AFF414E8AF9200E99626 /* InAppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseManager.m; sourceTree = "<group>"; };
 		3090AFF714E8B49E00E99626 /* SKProductPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKProductPrice.h; sourceTree = "<group>"; };
 		3090AFF814E8B49E00E99626 /* SKProductPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKProductPrice.m; sourceTree = "<group>"; };
+		3090AFFB14E9111000E99626 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		3090AFFD14E9111D00E99626 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3090B00014E9116800E99626 /* DGNYE Logo Final 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DGNYE Logo Final 1.mp4"; sourceTree = "<group>"; };
+		3090B00114E9116800E99626 /* MeetMeInSt.Louis1904.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MeetMeInSt.Louis1904.mp3; sourceTree = "<group>"; };
 		865BE19D14E36DFA004308F6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
 		869D8E4A14E1306C009E3E31 /* redbull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbull.png; sourceTree = "<group>"; };
 		86C46F1414DD888600F719E6 /* feedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackView.h; sourceTree = "<group>"; };
@@ -798,6 +806,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3090AFFE14E9111D00E99626 /* MediaPlayer.framework in Frameworks */,
+				3090AFFC14E9111100E99626 /* AVFoundation.framework in Frameworks */,
 				30887F7F14E3CCBE00982A70 /* StoreKit.framework in Frameworks */,
 				B33C829E149036BC00D7AA78 /* EventKit.framework in Frameworks */,
 				B33C829F149036BC00D7AA78 /* EventKitUI.framework in Frameworks */,
@@ -846,6 +856,15 @@
 				308F36F814DD17E200369244 /* DjsCell.m */,
 			);
 			name = DjsCell;
+			sourceTree = "<group>";
+		};
+		3090AFFF14E9113800E99626 /* resource */ = {
+			isa = PBXGroup;
+			children = (
+				3090B00014E9116800E99626 /* DGNYE Logo Final 1.mp4 */,
+				3090B00114E9116800E99626 /* MeetMeInSt.Louis1904.mp3 */,
+			);
+			name = resource;
 			sourceTree = "<group>";
 		};
 		86C46F1214DD884100F719E6 /* feedback_view */ = {
@@ -975,6 +994,9 @@
 		B384A97E14761B1A003F0DD6 = {
 			isa = PBXGroup;
 			children = (
+				3090AFFF14E9113800E99626 /* resource */,
+				3090AFFD14E9111D00E99626 /* MediaPlayer.framework */,
+				3090AFFB14E9111000E99626 /* AVFoundation.framework */,
 				30887F7E14E3CCBE00982A70 /* StoreKit.framework */,
 				30887F7614E3C5DE00982A70 /* purchase */,
 				307DCEF214E0F320006D720E /* ads */,
@@ -1858,6 +1880,8 @@
 				307DCEF714E0F377006D720E /* AdsCell.xib in Resources */,
 				869D8E4B14E1306C009E3E31 /* redbull.png in Resources */,
 				865BE19E14E36DFA004308F6 /* feedbackView.xib in Resources */,
+				3090B00214E9116800E99626 /* DGNYE Logo Final 1.mp4 in Resources */,
+				3090B00314E9116800E99626 /* MeetMeInSt.Louis1904.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
