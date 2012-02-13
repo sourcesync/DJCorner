@@ -11,7 +11,7 @@
 #import "DJCAPI.h"
 
 @interface DJItemView : UIViewController
-    <UITableViewDataSource, UITableViewDelegate, DJCAPIServiceDelegate>
+    <UITableViewDataSource, UITableViewDelegate, DJCAPIServiceDelegate,UIActionSheetDelegate>
 
 //  IBOUTLET...
 @property (nonatomic, retain) IBOutlet UITableView *tv;
@@ -36,7 +36,7 @@
 @property (nonatomic, retain) DJCAPI *api;
 @property (nonatomic, retain) NSString *getdj;
 @property (nonatomic, retain) UIViewController *parent;
-
+@property (nonatomic, retain) NSMutableArray *djs;
 @property (nonatomic, retain) NSString *selectedDj;
 
 
@@ -54,4 +54,7 @@
 -(IBAction) feedbackButtonClicked:(id)sender;
 //end
 -(IBAction) backButtonClicked:(id)sender;
+
+
+-(void) check_Followed:(id)sender;
 @end

@@ -9,11 +9,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DJItemView.m"
-         timestampString = "350356593.235937"
+         timestampString = "350808049.042661"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "293"
-         endingLineNumber = "293"
+         startingLineNumber = "305"
+         endingLineNumber = "305"
          landmarkName = "-followButtonClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -23,11 +23,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DJItemView.m"
-         timestampString = "350356593.235937"
+         timestampString = "350808049.042661"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "298"
-         endingLineNumber = "298"
+         startingLineNumber = "310"
+         endingLineNumber = "310"
          landmarkName = "-followButtonClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -37,11 +37,11 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DJItemView.m"
-         timestampString = "350356593.235937"
+         timestampString = "350809611.409867"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "301"
-         endingLineNumber = "301"
+         startingLineNumber = "312"
+         endingLineNumber = "312"
          landmarkName = "-followButtonClicked:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -51,26 +51,12 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "DJItemView.m"
-         timestampString = "350356593.235937"
+         timestampString = "350809611.409867"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "303"
-         endingLineNumber = "303"
-         landmarkName = "-followButtonClicked:"
-         landmarkType = "5">
-      </FileBreakpoint>
-      <FileBreakpoint
-         shouldBeEnabled = "No"
-         ignoreCount = "0"
-         continueAfterRunningActions = "No"
-         isPathRelative = "1"
-         filePath = "DJItemView.m"
-         timestampString = "350356593.235937"
-         startingColumnNumber = "9223372036854775807"
-         endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "337"
-         endingLineNumber = "337"
-         landmarkName = "-followButtonClicked:"
+         startingLineNumber = "369"
+         endingLineNumber = "369"
+         landmarkName = "-stopped_followdj:"
          landmarkType = "5">
       </FileBreakpoint>
    </FileBreakpoints>

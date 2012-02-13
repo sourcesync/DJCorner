@@ -23,9 +23,18 @@
 //  ASSIGN...
 @property (assign) NSInteger selectedIndex;
 
+@property (nonatomic, assign) BOOL back_from;
+
 //  RETAIN...
 @property (nonatomic, retain) DJCAPI *api;
 @property (nonatomic, retain) NSMutableArray *djs;
 @property (nonatomic, retain) NSString *selectedDJ;
+
+
+
+
+//FUN...
+-(IBAction)upGradeClicked:(id)sender;
+-(IBAction)contactFeedClicked:(id)sender;
 
 @end

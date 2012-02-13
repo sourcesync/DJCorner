@@ -38,6 +38,7 @@
 @synthesize dj_similar_view=_dj_similar_view;
 //jimmy
 @synthesize feedback_view=_feedback_view;
+@synthesize purchaseManager=_purchaseManager;
 //end 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -238,6 +239,15 @@
     self.buy_view.event = evt;
     self.buy_view.parent = src;
     [ src presentModalViewController:self.buy_view animated:YES ];
+}
+
+-(void)purchaseManagerStart
+{
+    if(self.purchaseManager==nil)
+    {
+        self.purchaseManager=[[InAppPurchaseManager alloc] init];
+    }
+    [self.purchaseManager requestProUpgradeProductData];
 }
 
 

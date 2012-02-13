@@ -58,13 +58,14 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBUIBarButtonItem" id="1062482580">
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-								<float key="IBUIWidth">255</float>
+								<float key="IBUIWidth">246</float>
 								<reference key="IBUIToolbar" ref="628366141"/>
 								<int key="IBUISystemItemIdentifier">6</int>
 							</object>
 							<object class="IBUIBarButtonItem" id="345341846">
 								<string key="IBUITitle">map</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<float key="IBUIWidth">52</float>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="628366141"/>
 							</object>
@@ -145,6 +146,7 @@
 							<object class="IBUIBarButtonItem" id="111240400">
 								<string key="IBUITitle">Cities</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<float key="IBUIWidth">52</float>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="815415634"/>
 							</object>

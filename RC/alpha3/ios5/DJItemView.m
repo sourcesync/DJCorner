@@ -26,6 +26,7 @@
 @synthesize cell_similar=_cell_similar;
 @synthesize follow_btn=_follow_btn;
 @synthesize selectedDj=_selectedDj;
+@synthesize djs=_djs;
 
 //@synthesize button_follow=_button_follow;
 @synthesize following=_following;
@@ -49,6 +50,7 @@
 -(id)init
 {
     self.following=NO;
+    self.djs=nil;
     return [ self initWithNibName:@"DJItemView" bundle:nil ];
 }
 
@@ -68,6 +70,7 @@
     
     self.api = [ [ [ DJCAPI alloc ] init:self ] autorelease ];
     
+    [self check_Followed:nil];
 }
 
 - (void)viewDidUnload
@@ -87,7 +90,6 @@
         self.tv.hidden = YES;
         self.activity.hidden = NO;
     }
-    
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -117,7 +119,17 @@
         }
         
     }
-   
+   for(NSMutableDictionary *adj in self.djs)
+   {
+       
+       if([[NSString stringWithFormat:@"%@",self.dj.name] isEqualToString:[NSString stringWithFormat:@"%@",[adj valueForKey:@"dj"]]])
+       {
+           //NSLog(@"they are the same");
+           self.following=YES;
+           [self.follow_btn setTitle:@"Stop Following" forState:UIControlStateNormal];
+       }
+
+   }
     
 }
 
@@ -133,7 +145,7 @@
     self.api = nil;
     self.getdj = nil;
     self.selectedDj = nil;
-    [self.following release];
+    
     [ super dealloc ];
 }
 
@@ -296,19 +308,39 @@
 
     if(self.following==NO)
     {
-        
-        [self.follow_btn setTitle:@"Stop Following" forState:UIControlStateNormal];
-        self.following=YES;
         if ( ! [ self.api followdjs:tokstr:arr:arrids ] )
         {
             [ Utility AlertAPICallFailed ];
         } 
+        else
+        {
+            [self.follow_btn setTitle:@"Stop Following" forState:UIControlStateNormal];
+            self.following=YES;
+        }
         
         
     }
     else
     {
+        //UITableViewCell *cell = [ tableView cellForRowAtIndexPath:indexPath ];
+            //NSString *dj = cell.textLabel.text;
+            
+        UIActionSheet *popupQuery = [[UIActionSheet alloc] 
+                                         initWithTitle:@"DJ's Corner" 
+                                         delegate:self 
+                                         cancelButtonTitle:@"Cancel"
+                                         destructiveButtonTitle:nil
+                                         otherButtonTitles:
+                                         @"Stop Following",
+                                         nil];
+        popupQuery.delegate= self;
+        popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
+        [popupQuery showInView:self.view];
+            
+        [popupQuery release];
+            
         
+        /*
         [self.follow_btn setTitle:@"Follow this DJ" forState:UIControlStateNormal];
         self.following=NO;
     
@@ -322,7 +354,7 @@
         {
            //[ Utility AlertAPICallFailed ];
         }
-
+         */
         
         
     }
@@ -335,8 +367,8 @@
 
 -(void) stopped_followdj:(NSDictionary *)data
 {
-    NSNumber *_st = [ data objectForKey:@"status" ];
-    NSInteger st = [ _st integerValue ];
+    //NSNumber *_st = [ data objectForKey:@"status" ];
+    //NSInteger st = [ _st integerValue ];
 }
 
 
@@ -344,26 +376,26 @@
 {
     if (buttonIndex==0 ) 
     {
-        djcAppDelegate *app = ( djcAppDelegate *) 
+        djcAppDelegate *app = (djcAppDelegate *)
+        [ [ UIApplication sharedApplication ] delegate ];
+        NSString *tokstr = app.devtoken;
+        
+        
+        
+        
+        NSString *djid = self.dj.djid;
+        self.selectedDj = djid;
         [ [ UIApplication sharedApplication ] delegate ];
         
-        //DJ *dj = [ self.djs objectAtIndex:self.selectedIndex ];
-        NSString *djid = self.selectedDj;
-        [ app showDJItemModal:self:nil:djid ];
         
-        //if (! [ self.api stop_followdj:app.devtoken:self.selectedDJ ] )
-        //{
-        //    [ Utility AlertAPICallFailed ];
-        // }
-    }
-    else if (buttonIndex==1 ) 
-    {
-        djcAppDelegate *app = ( djcAppDelegate *) 
-        [ [ UIApplication sharedApplication ] delegate ];
-        
-        if (! [ self.api stop_followdj:app.devtoken:self.selectedDj ] )
+        if (! [ self.api stop_followdj:tokstr:self.selectedDj ] )
         {
-            [ Utility AlertAPICallFailed ];
+            //[ Utility AlertAPICallFailed ];
+        }
+        else
+        {
+            [self.follow_btn setTitle:@"Follow this DJ" forState:UIControlStateNormal];
+            self.following=NO;
         }
     }
     else
@@ -458,6 +490,41 @@
         self.tv.hidden = NO;
         self.activity.hidden = YES;
         [ self.tv reloadData ];
+    }
+}
+
+-(void) check_Followed:(id)sender
+{
+    djcAppDelegate *app = ( djcAppDelegate *)
+    [ [ UIApplication sharedApplication ] delegate ];
+    
+    if (! [ self.api get_followdjs:app.devtoken ] )
+    {
+        [ Utility AlertAPICallFailed ];
+    }
+
+}
+
+-(void) got_followdjs:(NSDictionary *)data
+{
+    NSNumber *_st = [ data objectForKey:@"status" ];
+    NSInteger st = [ _st integerValue ];
+   
+    if (st>0 )
+    {
+        self.djs = [ data objectForKey:@"results" ];
+        NSLog(@"fdsafadsfsadfasdfasdfasdfasd%d",self.djs.count);
+        self.tv.hidden = NO;
+        self.activity.hidden = YES;
+        [ self.tv reloadData ];
+    }
+    else
+    {
+        NSString *msg = [ data objectForKey:@"msg" ];
+        [ Utility AlertMessage:msg ];
+        
+        self.tv.hidden = NO;
+        self.activity.hidden = YES;
     }
 }
 

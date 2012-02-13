@@ -267,6 +267,8 @@
 		30887F7F14E3CCBE00982A70 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30887F7E14E3CCBE00982A70 /* StoreKit.framework */; };
 		308F36FA14DD17E200369244 /* DjsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 308F36F814DD17E200369244 /* DjsCell.m */; };
 		308F36FB14DD17E200369244 /* DjsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 308F36F914DD17E200369244 /* DjsCell.xib */; };
+		3090AFF514E8AF9200E99626 /* InAppPurchaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3090AFF414E8AF9200E99626 /* InAppPurchaseManager.m */; };
+		3090AFF914E8B49E00E99626 /* SKProductPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3090AFF814E8B49E00E99626 /* SKProductPrice.m */; };
 		865BE19E14E36DFA004308F6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BE19D14E36DFA004308F6 /* feedbackView.xib */; };
 		869D8E4B14E1306C009E3E31 /* redbull.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D8E4A14E1306C009E3E31 /* redbull.png */; };
 		86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C46F1714DD88C800F719E6 /* feedbackView.m */; };
@@ -632,6 +634,10 @@
 		308F36F714DD17E200369244 /* DjsCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DjsCell.h; sourceTree = "<group>"; };
 		308F36F814DD17E200369244 /* DjsCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DjsCell.m; sourceTree = "<group>"; };
 		308F36F914DD17E200369244 /* DjsCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DjsCell.xib; sourceTree = "<group>"; };
+		3090AFF314E8AF9200E99626 /* InAppPurchaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InAppPurchaseManager.h; sourceTree = "<group>"; };
+		3090AFF414E8AF9200E99626 /* InAppPurchaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InAppPurchaseManager.m; sourceTree = "<group>"; };
+		3090AFF714E8B49E00E99626 /* SKProductPrice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKProductPrice.h; sourceTree = "<group>"; };
+		3090AFF814E8B49E00E99626 /* SKProductPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKProductPrice.m; sourceTree = "<group>"; };
 		865BE19D14E36DFA004308F6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
 		869D8E4A14E1306C009E3E31 /* redbull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbull.png; sourceTree = "<group>"; };
 		86C46F1414DD888600F719E6 /* feedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackView.h; sourceTree = "<group>"; };
@@ -824,6 +830,10 @@
 		30887F7614E3C5DE00982A70 /* purchase */ = {
 			isa = PBXGroup;
 			children = (
+				3090AFF314E8AF9200E99626 /* InAppPurchaseManager.h */,
+				3090AFF414E8AF9200E99626 /* InAppPurchaseManager.m */,
+				3090AFF714E8B49E00E99626 /* SKProductPrice.h */,
+				3090AFF814E8B49E00E99626 /* SKProductPrice.m */,
 			);
 			name = purchase;
 			sourceTree = "<group>";
@@ -1904,6 +1914,8 @@
 				308F36FA14DD17E200369244 /* DjsCell.m in Sources */,
 				86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */,
 				307DCEF614E0F377006D720E /* AdsCell.m in Sources */,
+				3090AFF514E8AF9200E99626 /* InAppPurchaseManager.m in Sources */,
+				3090AFF914E8B49E00E99626 /* SKProductPrice.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

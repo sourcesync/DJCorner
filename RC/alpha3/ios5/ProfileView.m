@@ -18,6 +18,7 @@
 @synthesize activity=_activity;
 @synthesize selectedDJ=_selectedDJ;
 @synthesize selectedIndex=_selectedIndex;
+@synthesize back_from=_back_from;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +28,7 @@
         //self.api = [ [ [ DJCAPI alloc ] init:self ] autorelease ];
         //self.api =  [ [ DJCAPI alloc ] init:self ];
     }
+    self.back_from=NO;
     return self;
 }
 
@@ -35,7 +37,6 @@
     self.api = nil;
     self.djs = nil;
     self.selectedDJ = nil;
-    
     [super dealloc];
 }
 
@@ -66,17 +67,25 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    [super viewDidAppear:animated];
-    
-    djcAppDelegate *app = ( djcAppDelegate *)
-        [ [ UIApplication sharedApplication ] delegate ];
-    
-    if (! [ self.api get_followdjs:app.devtoken ] )
+    if(self.back_from)
     {
-        [ Utility AlertAPICallFailed ];
-        self.tv.hidden = NO;
-        self.activity.hidden = YES;
+        self.back_from=NO;
     }
+    else
+    {
+        [super viewDidAppear:animated];
+        
+        djcAppDelegate *app = ( djcAppDelegate *)
+        [ [ UIApplication sharedApplication ] delegate ];
+        
+        if (! [ self.api get_followdjs:app.devtoken ] )
+        {
+            [ Utility AlertAPICallFailed ];
+            self.tv.hidden = NO;
+            self.activity.hidden = YES;
+        }
+    }
+    
     
 }
 
@@ -87,11 +96,19 @@
 
 -(void) viewWillAppear:(BOOL)animated
 {
-    [ super viewWillAppear:animated ];
+    if(self.back_from)
+    {
+        self.back_from=NO;
+    }
+    else
+    {
+        [ super viewWillAppear:animated ];
+        
+        self.tv.hidden = YES;
+        self.djs = nil;
+        self.activity.hidden = NO;
+    }
     
-    self.tv.hidden = YES;
-    self.djs = nil;
-    self.activity.hidden = NO;
 }
 
 
@@ -292,6 +309,21 @@
     {
         //actionSheet.release
     }
+}
+
+#pragma mark - buttons clicked
+-(IBAction)upGradeClicked:(id)sender
+{
+    djcAppDelegate *app = 
+    ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
+    
+    [app purchaseManagerStart];
+}
+
+-(IBAction)contactFeedClicked:(id)sender
+{
+    djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
+    [app showFeedback:self :nil];
 }
 
 @end

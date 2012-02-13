@@ -22,6 +22,7 @@
 #import "ScheduleView.h"
 #import "SimilarDJView.h"
 #import "feedbackView.h"
+#import "InAppPurchaseManager.h"
 
 @interface djcAppDelegate : NSObject 
     <UIApplicationDelegate, UITabBarControllerDelegate,
@@ -52,6 +53,7 @@
 @property (nonatomic, retain) SimilarDJView *dj_similar_view;
 //jimmy added
 @property (nonatomic, retain) feedbackView *feedback_view;
+@property (nonatomic, retain) InAppPurchaseManager *purchaseManager;
 //end
 //  PUBLIC FUNCS...
 -(void) buyEvent:(NSString *)url;
@@ -67,4 +69,5 @@
 -(void) showDJSchedule:(UIViewController *)src:(DJ *)dj;
 -(void) showSimilarDJS:(UIViewController *)src:(DJ *)dj;
 -(void) showFeedback:(UIViewController *)src:(DJ *)dj;
+-(void) purchaseManagerStart;
 @end
