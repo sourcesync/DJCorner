@@ -135,7 +135,7 @@
 {
     self.cur_city_search = search;
     [ self.events_view refreshEvents:self.cur_city_search:YES ];
-    [ self.tabBarController setSelectedIndex:0 ];
+    [ self.tabBarController setSelectedIndex:1 ];
     [ src dismissModalViewControllerAnimated:YES ];
 }
 
