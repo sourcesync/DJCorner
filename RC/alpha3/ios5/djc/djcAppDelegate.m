@@ -39,6 +39,7 @@
 //jimmy
 @synthesize feedback_view=_feedback_view;
 @synthesize purchaseManager=_purchaseManager;
+@synthesize VIP=_VIP;
 //end 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -48,6 +49,7 @@
     //self.window.rootViewController = self.tabBarController;
     
     self.api = [ [ [ DJCAPI alloc ] init:self] autorelease];
+    self.VIP=1;//1=>no,0=>yes;
     //[ self.api autorelease];
     
     //  Do notification registration...

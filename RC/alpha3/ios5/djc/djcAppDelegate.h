@@ -44,6 +44,7 @@
 @property (atomic, retain) EventsView *events_view;
 @property (atomic, retain) MapitView *mapit_view;
 @property (nonatomic, retain) NSString *devtoken;
+@property (nonatomic, assign) int VIP;
 @property (nonatomic, retain) DJCAPI *api;
 @property (atomic, retain) DJItemView *djitem_view;
 @property (atomic, retain) SearchView *search_by_city_view;

@@ -16,6 +16,7 @@
 
 #define DEFAULT_LAT     40.730039
 #define DEFAULT_LONG    -73.994358
+#define RADIUS  20.000000
 
 @implementation SearchView
 
@@ -27,8 +28,15 @@
 @synthesize longi=_longi;
 @synthesize flags=_flags;
 @synthesize mode=_mode;
+@synthesize status=_status;
 @synthesize location_Manager=_location_Manager;
 @synthesize show_Default_location=_show_Default_location;
+@synthesize eventsAround=_eventsAround;
+@synthesize allEvents=_allEvents;
+@synthesize modeList=_modeList;
+@synthesize dataForTable=_dataForTable;
+@synthesize mapListUpDown=_mapListUpDown;
+@synthesize VIP=_VIP;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -37,10 +45,12 @@
     [super viewDidLoad];
     
     djcAppDelegate *app = (djcAppDelegate *)[ [ UIApplication sharedApplication ] delegate];
+    self.VIP=app.VIP;
     app.search_view = self;
     
     self.mv.delegate = self;
     self.mode=SearchViewList;
+    self.modeList=1;
     
     [ self.tv setDelegate:self ];
     [ self.tv setDataSource:self ];    
@@ -245,10 +255,26 @@
                  @"au.png",
                  @"jp.png",
                  @"ca.png",nil] autorelease];
+    self.allEvents=[[NSMutableDictionary alloc] init];
+    for(int i=0;i<self.lati.count;i++)
+    {
+        NSMutableDictionary *temp=[[[NSMutableDictionary alloc] init] autorelease];
+        [temp setObject:[self.lati objectAtIndex:i] forKey:@"lat"];
+        [temp setObject:[self.longi objectAtIndex:i] forKey:@"longi"];
+        [temp setObject:[self.flags objectAtIndex:i] forKey:@"flag"];
+        [temp setObject:[self.cities objectAtIndex:(i+1)] forKey:@"city"];
+        [self.allEvents setObject:temp forKey:[NSString stringWithFormat:@"%d",i]];
+    }
+    
     self.show_Default_location=CLLocationCoordinate2DMake(DEFAULT_LAT, DEFAULT_LONG);
     self.location_Manager=[[[CLLocationManager alloc] init] autorelease];
     
     [self.location_Manager setDelegate:self ];
+    if(self.dataForTable==nil)
+    {
+        self.dataForTable=[[NSMutableDictionary alloc] init];
+    }
+    self.dataForTable=self.allEvents;
 }
 
 
@@ -301,6 +327,9 @@
     self.lati=nil;
     self.longi=nil;
     self.location_Manager=nil;
+    self.eventsAround=nil;
+    self.allEvents=nil;
+    self.dataForTable=nil;
     
     [super dealloc];
 }
@@ -316,14 +345,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [ self.cities count ]+self.cities.count/(ADSPOSITION+1) ;
+    //return [ self.cities count ]+self.cities.count/(ADSPOSITION+1) ;
+    return  [self.allEvents count]+1+(self.dataForTable.count+1)/(ADSPOSITION+1)*self.modeList*self.VIP;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int row = [ indexPath row ];
-    if(row>0&&(row+1)%(ADSPOSITION+1)==0)
+    if((self.modeList==1&&self.VIP==1)&&row>0&&(row+1)%(ADSPOSITION+1)==0)
     {
         UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
         if(ads==nil)
@@ -348,7 +378,16 @@
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
         
-        [ cell.textLabel setText: [ self.cities objectAtIndex:(row-row/(ADSPOSITION+1)) ] ];
+        //[ cell.textLabel setText: [ self.cities objectAtIndex:(row-row/(ADSPOSITION+1)) ] ];
+        if(row==0)
+        {
+            [cell.textLabel setText:@"All Cities"];
+        }
+        else
+        {
+            [cell.textLabel setText:[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",(row-self.VIP*self.modeList*row/(ADSPOSITION+1))]] valueForKey:@"city"]];
+        }
+        
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.textLabel.textColor = [ UIColor blackColor ];
         
@@ -370,7 +409,7 @@
     {
         [ app doSearch:self:nil];
     }
-    else if(row>0&&(row+1)%(ADSPOSITION+1)==0)
+    else if((self.modeList==1&&self.VIP==1)&&row>0&&(row+1)%(ADSPOSITION+1)==0)
     {
         return;
     }
@@ -384,7 +423,11 @@
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if((indexPath.row>0)&&((indexPath.row+1)%(ADSPOSITION+1)==0))
+    if(self.modeList==0)
+    {
+        return 30;
+    }
+    if((self.modeList==1&&self.VIP)&&(indexPath.row>0)&&((indexPath.row+1)%(ADSPOSITION+1)==0))
     {
         return 90.0f;
     }
@@ -428,22 +471,30 @@
     annonaion.coordinate=coordidate;
     annonaion.pp=nil;
     annonaion.type=0;
+    
+    //NSLog(@"%f%f3ppppppppppppppppppppp",annonaion.coordinate.latitude,annonaion.coordinate.longitude);
+    [self getEventAround:annonaion.coordinate.latitude :annonaion.coordinate.longitude];
+    
     [self.mv addAnnotation:annonaion];
-    if((self.cities.count!=0)&&(self.longi.count==self.lati.count)&&(self.lati.count!=0))//here is to deal with each city
+    //if((self.cities.count!=0)&&(self.longi.count==self.lati.count)&&(self.lati.count!=0))//here is to deal with each city
+    if([self.allEvents count]>0)
     {
         int temp;
-        for(int i=0;i<self.lati.count;i++)
+        //for(int i=0;i<self.lati.count;i++)
+        for(int i=0;i<self.allEvents.count;i++)
         {
             temp=i+1;
             CLLocationCoordinate2D coordidate;
-            coordidate.latitude=[[NSString stringWithFormat:@"%@",[self.lati objectAtIndex:i]] doubleValue];
-            coordidate.longitude=[[NSString stringWithFormat:@"%@",[self.longi objectAtIndex:i]] doubleValue];   
+            //coordidate.latitude=[[NSString stringWithFormat:@"%@",[self.lati objectAtIndex:i]] doubleValue];
+            coordidate.latitude=[[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"lat"]] doubleValue];
+            //coordidate.longitude=[[NSString stringWithFormat:@"%@",[self.longi objectAtIndex:i]] doubleValue];   
+            coordidate.longitude=[[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"longi"]] doubleValue];
             
             SimpleLocation *annotation=[[SimpleLocation alloc] initWithName];
-            annotation.name=[NSString stringWithFormat:@"%@",[self.cities objectAtIndex:temp]];
+            annotation.name=[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"city"]];
             annotation.coordinate=coordidate;
             annotation.message=nil;
-            annotation.pp=[NSString stringWithFormat:@"%@",[self.flags objectAtIndex:i]];
+            annotation.pp=[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"flag"]];
             annotation.type=0;
             [self.mv addAnnotation:annotation];
             
@@ -565,17 +616,31 @@
 -(void) showMap:(id)sender
 {
     self.mv.hidden=NO;
-    self.tv.hidden=YES;
+    self.tv.hidden=NO;
+    self.modeList=0;
+    self.status=Middle;
+    [self reSize];
     self.mode=SearchViewMap;
     self.button_MqpList.title=@"List";
+    self.dataForTable=nil;
+    self.dataForTable=[[NSMutableDictionary alloc] init];
+    self.dataForTable=self.eventsAround;
+    [self.tv performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    [self refreshMap];
 }
 
 -(void) showList:(id)sender
 {
+    self.modeList=1;
+    [self.tv setFrame:CGRectMake(self.tv.frame.origin.x, self.mv.frame.origin.y, self.tv.frame.size.width, 390)];
     self.mv.hidden=YES;
     self.tv.hidden=NO;
     self.mode=SearchViewList;
     self.button_MqpList.title=@"Map";
+    self.dataForTable=nil;
+    self.dataForTable=[[NSMutableDictionary alloc] init];
+    self.dataForTable=self.allEvents;
+    [self.tv performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
 }
 #pragma mark - button callbacks...
 
@@ -597,6 +662,61 @@
     {
         [self showMap:sender];
     }
+}
+
+-(IBAction)showAllmap
+{
+    if(self.status!=Middle)
+    {
+        self.status=Middle;
+    }
+    else
+    {
+        self.status=MapAll;
+    }
+    [self reSize];
+}
+
+-(IBAction)showAlllist
+{
+    if(self.status!=Middle)
+    {
+        self.status=Middle;
+    }
+    else
+    {
+        self.status=ListAll;
+    }
+    [self reSize];
+}
+
+-(void)reSize
+{
+    if(self.status==Middle)
+    {
+        [self.mv setHidden:NO];
+        [self.tv setHidden:NO];
+        [self.tv setFrame:CGRectMake(self.tv.frame.origin.x,( self.mv.frame.origin.y+195+self.mapListUpDown.frame.size.height), self.tv.frame.size.width, (195))];
+        [self.mv setFrame:CGRectMake(self.mv.frame.origin.x, self.mv.frame.origin.y, self.mv.frame.size.width, 195)];
+        [self.mapListUpDown setFrame:CGRectMake(self.mapListUpDown.frame.origin.x, (self.mv.frame.origin.y+195), self.mapListUpDown.frame.size.width, self.mapListUpDown.frame.size.height)];
+    }
+    else if(self.status==MapAll)
+    {
+        [self.mv setHidden:NO];
+        //[self.tv setFrame:CGRectMake(self.tv.frame.origin.x,( self.tv.frame.size.height/2+55), 0, 0)];
+        [self.tv setHidden:YES];
+        [self.mv setFrame:CGRectMake(self.mv.frame.origin.x, self.mv.frame.origin.y, self.mv.frame.size.width, (390-self.mapListUpDown.frame.size.height))];
+        [self.mapListUpDown setFrame:CGRectMake(self.mapListUpDown.frame.origin.x, (self.mv.frame.origin.y+self.mv.frame.size.height), self.mapListUpDown.frame.size.width, self.mapListUpDown.frame.size.height)];
+    }
+    else
+    {
+        [self.tv setHidden:NO];
+        [self.tv setFrame:CGRectMake(self.mv.frame.origin.x,self.mv.frame.origin.y+self.mapListUpDown.frame.size.height, self.tv.frame.size.width, (390-self.mapListUpDown.frame.size.height))];
+        //[self.mv setFrame:CGRectMake(self.mv.frame.origin.x, self.mv.frame.origin.y, 0, 0)];
+        [self.mv setHidden:YES];
+        [self.mapListUpDown setFrame:CGRectMake(self.mv.frame.origin.x, self.mv.frame.origin.y, self.mapListUpDown.frame.size.width, self.mapListUpDown.frame.size.height)];
+    }
+    
 }
 
 #pragma mark - Location Manager delegate...
@@ -625,6 +745,31 @@
                                           otherButtonTitles:nil];
     [alert show];
     [alert release];
+}
+
+-(void)getEventAround:(double)lat :(double)longi
+{
+    if(self.eventsAround==nil)
+    {
+        self.eventsAround=[[NSMutableDictionary alloc] init];
+    }
+    int count=0;
+    for(int i =0;i<self.lati.count;i++)
+    {
+        double latI=[[self.lati objectAtIndex:i] doubleValue];
+        double lonI=[[self.longi objectAtIndex:i] doubleValue];
+        if((latI>(lat-RADIUS))&&(latI<(lat+RADIUS))&&(lonI>(longi-RADIUS))&&(lonI<(longi+RADIUS)))
+        {
+            NSMutableDictionary *temp=[[[NSMutableDictionary alloc] init] autorelease];
+            [temp setObject:[NSString stringWithFormat:@"%f",latI] forKey:@"lat"];
+            [temp setObject:[NSString stringWithFormat:@"%f",lonI] forKey:@"longi"];
+            [temp setObject:[self.flags objectAtIndex:i] forKey:@"flag"];
+            [temp setObject:[self.cities objectAtIndex:(i+1)] forKey:@"city"];
+            [self.eventsAround setObject:temp forKey:[NSString stringWithFormat:@"%d",count++]];
+            //[self.eventsAround setObject:temp forKey:[self.cities objectAtIndex:(i+1)]];
+        }
+    }
+    
 }
 
 

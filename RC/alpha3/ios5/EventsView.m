@@ -37,6 +37,7 @@
 @synthesize back_from;
 @synthesize all_djs;
 @synthesize picTemp=_picTemp;
+@synthesize VIP=_VIP;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -92,6 +93,7 @@
     [super viewDidLoad];
     
     djcAppDelegate *app = (djcAppDelegate *)[ [ UIApplication sharedApplication ] delegate];
+    self.VIP=app.VIP;
     app.events_view = self;
     
     self.mv.delegate = self;
@@ -371,7 +373,7 @@
         {
             count += 1;
         }
-        return count+count/(ADSPOSITION+1);
+        return count+count/(ADSPOSITION+1)*self.VIP;
     }
 }
 
@@ -424,7 +426,7 @@
         NSInteger row = ([ indexPath row ]);
         
         //add ads....
-        if((row>0)&&((row+1)%(ADSPOSITION+1)==0))
+        if((self.VIP==1)&&(row>0)&&((row+1)%(ADSPOSITION+1)==0))
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
             
@@ -439,7 +441,7 @@
             [cell.iv sizeToFit];
             return cell;
         }
-        else if ( row ==( [ self.getter.events count] +row/(ADSPOSITION+1)))  // get more button...
+        else if ( row ==( [ self.getter.events count] +row/(ADSPOSITION+1)*self.VIP))  // get more button...
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -466,7 +468,7 @@
         
             EventCell *cell = (EventCell *)cl;
             int row = [ indexPath row ];
-            Event *event = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)) ];
+            Event *event = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
          
             //  venue name...
             NSString *vname = [NSString stringWithFormat:@"%@, %@",event.venue,event.city];
@@ -531,11 +533,11 @@
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
-        ([self.getter.events count]==([indexPath row]-indexPath.row/(ADSPOSITION+1))))
+        ([self.getter.events count]==([indexPath row]-indexPath.row/(ADSPOSITION+1)*self.VIP)))
     {
         return 44;
     }
-    else if(indexPath.row>0&&((indexPath.row+1)%(ADSPOSITION+1)==0))
+    else if((self.VIP==1)&&indexPath.row>0&&((indexPath.row+1)%(ADSPOSITION+1)==0))
     {
         return 90.0f;
     }
@@ -558,17 +560,17 @@
     
     [ tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if(row>0&&((row+1)%(ADSPOSITION+1)==0))
+    if((self.VIP==1)&&row>0&&((row+1)%(ADSPOSITION+1)==0))
     {
         return;
     }
-    else if (row == ([self.getter.events count]+self.getter.events.count/(ADSPOSITION+1)) )
+    else if (row == ([self.getter.events count]+self.getter.events.count/(ADSPOSITION+1)*self.VIP) )
     {
         [ self getMore ];
     }
     else
     {
-        Event *ev = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)) ];
+        Event *ev = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
      
         
         [ self.getter cancel ];

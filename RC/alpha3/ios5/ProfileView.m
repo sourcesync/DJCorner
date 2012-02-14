@@ -19,6 +19,7 @@
 @synthesize selectedDJ=_selectedDJ;
 @synthesize selectedIndex=_selectedIndex;
 @synthesize back_from=_back_from;
+@synthesize lb_version=_lb_version;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -77,6 +78,14 @@
         
         djcAppDelegate *app = ( djcAppDelegate *)
         [ [ UIApplication sharedApplication ] delegate ];
+        if(app.VIP)
+        {
+            self.lb_version.text=@"free";
+        }
+        else
+        {
+            self.lb_version.text=@"1$";
+        }
         
         if (! [ self.api get_followdjs:app.devtoken ] )
         {
@@ -311,13 +320,35 @@
     }
 }
 
+
+#pragma mark - uialert delegate
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if(buttonIndex==1)
+    {
+        NSLog(@"this is one");
+        djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
+        app.VIP=0;
+        if(app.VIP==0)
+        {
+            self.lb_version.text=@"1$";
+        }
+    }
+}
 #pragma mark - buttons clicked
 -(IBAction)upGradeClicked:(id)sender
 {
- //   djcAppDelegate *app = 
- //   ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
- //   
- //   [app purchaseManagerStart];
+    //djcAppDelegate *app = 
+    //( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
+    
+    //[app purchaseManagerStart];
+    
+    UIAlertView *upgrade=[[UIAlertView alloc] 
+                          initWithTitle:@"UpGrade" 
+                          message:@"you need pay 1$ upgrade to VIP version" 
+                          delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    [upgrade show];
+    [upgrade release];
 }
 
 -(IBAction)contactFeedClicked:(id)sender

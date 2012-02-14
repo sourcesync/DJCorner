@@ -54,6 +54,7 @@ enum EventViewMode
 @property (nonatomic, assign) BOOL got_first_events;
 @property (nonatomic, assign) BOOL back_from;
 @property (nonatomic, assign) BOOL all_djs;
+@property (nonatomic, assign) int VIP;
 
 
 //  PUBLIC FUNCS...

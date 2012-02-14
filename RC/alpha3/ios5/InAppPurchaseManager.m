@@ -61,7 +61,7 @@
 #pragma productrequest
 -(void)requestProUpgradeProductData
 {
-    NSSet *productIdenfitires=[NSSet setWithObject:@"com.zixmedia.djcorner.helloworldzixmediadjcorner"];
+    NSSet *productIdenfitires=[NSSet setWithObject:@"hellozixmediacomeshereagnain"];
     productsRequest=[[SKProductsRequest alloc] initWithProductIdentifiers:productIdenfitires];
     productsRequest.delegate=self;
     [productsRequest start];
@@ -73,6 +73,7 @@
 {
     NSArray *products=response.products;
     proUpgradeProduct=[products count]==1?[[products objectAtIndex:0] retain]:nil;
+    NSLog(@"%d",products.count);
     
     if(proUpgradeProduct)
     {

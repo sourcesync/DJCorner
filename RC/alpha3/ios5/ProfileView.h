@@ -11,7 +11,7 @@
 
 @interface ProfileView : UIViewController 
     < UITableViewDelegate, UITableViewDataSource, 
-        DJCAPIServiceDelegate, UIActionSheetDelegate>
+        DJCAPIServiceDelegate, UIActionSheetDelegate,UIAlertViewDelegate>
 {
     
 }
@@ -19,6 +19,7 @@
 //  IBOUTLET...
 @property (nonatomic, retain) IBOutlet UITableView *tv;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activity;
+@property (nonatomic, retain) IBOutlet UILabel *lb_version;
 
 //  ASSIGN...
 @property (assign) NSInteger selectedIndex;

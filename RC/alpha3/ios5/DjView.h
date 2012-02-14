@@ -41,6 +41,7 @@
 @property (assign) BOOL back_from;
 @property (assign) BOOL all_djs;
 @property (assign) BOOL top50;
+@property (assign) int VIP;
 
 
 //  PUBLIC FUNCS...
