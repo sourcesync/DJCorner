@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="536219" compressedSize="252275">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="1174">
+      <data type="metaData" size="1106"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="535045">
+      <frame name="_IFrameCommTest_mx_managers_SystemManager" size="55263" frame="1"/>
+      <frame name="com_google_code_flexiframe_examples_IFrameCommTest" size="479782" frame="2"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="521723">
+      <abc name="frame2" size="466554" frame="2"/>
+      <abc name="frame1" size="55169" frame="1"/>
+    </actionScript>
+
+    <!-- defineSprite. -->
+    <sprites totalSize="19">
+      <sprite name="_IFrameCommTest_Styles__embed_css_Assets_swf_mx_skins_cursor_BusyCursor_549998783" size="19" frame="2"/>
+    </sprites>
+
+    <!-- defineShape/2/3/4. -->
+    <shapes totalSize="261">
+      <shape size="261" frame="2"/>
+    </shapes>
+
+    <!-- SWF, Pixel Bender, or other miscellaneous embed data. -->
+    <binaryData totalSize="11882">
+      <data name="mx.graphics.shaderClasses.SaturationShader_ShaderClass" size="2298" frame="2"/>
+      <data name="mx.graphics.shaderClasses.HueShader_ShaderClass" size="2268" frame="2"/>
+      <data name="mx.graphics.shaderClasses.SoftLightShader_ShaderClass" size="1920" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityShader_ShaderClass" size="1282" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorShader_ShaderClass" size="1272" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorBurnShader_ShaderClass" size="1144" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorDodgeShader_ShaderClass" size="1074" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ExclusionShader_ShaderClass" size="624" frame="2"/>
+    </binaryData>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="1160">
+      <tag type="symbolClass" size="533" frame="2"/>
+      <tag type="exportAssets" size="478" frame="2"/>
+      <tag type="frameLabel" size="53" frame="2"/>
+      <tag type="symbolClass" size="48" frame="1"/>
+      <tag type="frameLabel" size="44" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+      <tag type="showFrame" size="2" frame="2"/>
+    </frameData>
+  </swf>
+</report>

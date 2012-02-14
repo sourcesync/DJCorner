@@ -6,5 +6,10 @@
 global
 {
 	content-background-color: #871515;
+	font-family: Arial;
+	content-background-alpha: 0.23;
+	horizontalAlign:center;
+	verticalAlign:middle;
+	
 }
 	
