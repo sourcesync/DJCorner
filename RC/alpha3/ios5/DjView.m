@@ -424,7 +424,7 @@
     {
         [ tableView deselectRowAtIndexPath:indexPath animated:YES];
         
-        if ((self.VIP==1)&&(row ==( [self.getter.djs count]+self.getter.djs.count%(ADSPOSITION+1))) )
+        if ((self.VIP==1)&&(row ==( [self.getter.djs count]+self.getter.djs.count%(ADSPOSITION+1)*self.VIP)) )
         {
             [ self.getter getNext ];
         }
