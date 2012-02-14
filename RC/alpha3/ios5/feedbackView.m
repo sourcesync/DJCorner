@@ -12,6 +12,7 @@
 #import "djcAppDelegate.h"
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
+#import "ProfileView.h"
 
 
 @implementation feedbackView
@@ -150,6 +151,16 @@
     [self.tf setText:@""];
     [self.tf resignFirstResponder];
     [ self dismissModalViewControllerAnimated:YES ];
+}
+
+-(IBAction)backClicked:(id)sender
+{
+    if([self.parent isKindOfClass:[ProfileView class]])
+    {
+        ProfileView *pView=(ProfileView *)self.parent;
+        pView.back_from=YES;
+    }
+    [self dismissModalViewControllerAnimated:YES];
 }
 
 

@@ -229,7 +229,7 @@
 		B384AA2C147635C8003F0DD6 /* EventsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventsView.m; sourceTree = "<group>"; };
 		B384AA2E147635E5003F0DD6 /* SearchView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
 		B384AA2F147635E5003F0DD6 /* SearchView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
-		B384AA3114763601003F0DD6 /* djcAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; path = djcAppDelegate.h; sourceTree = "<group>"; };
+		B384AA3114763601003F0DD6 /* djcAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = djcAppDelegate.h; sourceTree = "<group>"; };
 		B384AA3214763601003F0DD6 /* djcAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = djcAppDelegate.m; sourceTree = "<group>"; };
 		B384AA3714764C9F003F0DD6 /* aso_033.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = aso_033.jpg; sourceTree = "<group>"; };
 		B384AA3914765282003F0DD6 /* glossy-3d-blue-orbs2-108.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = "glossy-3d-blue-orbs2-108.ico"; sourceTree = "<group>"; };
@@ -853,8 +853,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -864,8 +864,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = DJsCorner;
-				PROVISIONING_PROFILE = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -874,8 +874,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -883,8 +883,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = DJsCorner;
-				PROVISIONING_PROFILE = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -893,8 +893,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -903,6 +903,8 @@
 				INFOPLIST_FILE = "alpha2/alpha2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -911,8 +913,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "alpha2/alpha2-Prefix.pch";
@@ -920,6 +922,8 @@
 				INFOPLIST_FILE = "alpha2/alpha2-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

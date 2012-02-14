@@ -57,7 +57,9 @@ static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
          andParams:(NSArray *)parameters 
             withID:(NSString *)identificator
 {
+    NSLog(@"execMethod1");
     [self.svc execMethod:methodName andParams:parameters withID:identificator];
+    NSLog(@"execMethod2");
     return YES;
 }
 
@@ -128,7 +130,12 @@ static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
 
 -(BOOL)     stop_followdj:(NSString *)deviceid:(NSString *)dj
 {
+
+    NSLog(@"ssssss1111");
+    NSLog(@"%@",deviceid);
+      NSLog(@"%@",dj);
     NSArray *args = [ NSArray arrayWithObjects:deviceid,dj,nil];
+    NSLog(@"ssssss2222");
     return [self ExecMethod:@"stop_followdj" andParams:args withID:@"5" ];
 }
 

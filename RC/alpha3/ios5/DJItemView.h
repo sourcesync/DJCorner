@@ -11,7 +11,7 @@
 #import "DJCAPI.h"
 
 @interface DJItemView : UIViewController
-    <UITableViewDataSource, UITableViewDelegate, DJCAPIServiceDelegate>
+    <UITableViewDataSource, UITableViewDelegate, DJCAPIServiceDelegate,UIActionSheetDelegate>
 
 //  IBOUTLET...
 @property (nonatomic, retain) IBOutlet UITableView *tv;
@@ -23,6 +23,7 @@
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_follow;
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_web_site;
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_similar;
+@property (nonatomic, retain) IBOutlet UIButton *follow_btn;
 
 //@property (nonatomic, retain) IBOutlet UIButton *button_follow;
 //jimmy
@@ -35,11 +36,14 @@
 @property (nonatomic, retain) DJCAPI *api;
 @property (nonatomic, retain) NSString *getdj;
 @property (nonatomic, retain) UIViewController *parent;
+@property (nonatomic, retain) NSMutableArray *djs;
+@property (nonatomic, retain) NSString *selectedDj;
+
 
 //  ASSIGN...
 @property (nonatomic, assign) BOOL back_from;
-//@property (nonatomic, assign) BOOL following;
 
+@property (nonatomic, assign) BOOL following;
 //  PUBLIC FUNC...
 -(id)init;
 -(IBAction) showWebSiteClicked:(id)sender;
@@ -50,4 +54,7 @@
 -(IBAction) feedbackButtonClicked:(id)sender;
 //end
 -(IBAction) backButtonClicked:(id)sender;
+
+
+-(void) check_Followed:(id)sender;
 @end
