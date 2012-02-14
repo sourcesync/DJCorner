@@ -45,7 +45,7 @@ package {
 		private var videoURL:String = "http://www.tartiflop.com/away3d/FirstSteps/AmIWrong.flv";
 		
 		//[Embed(source="/../assets/DrawTool.swf")]
-		[Embed(source="/../assets/aswingtest.swf")]
+		[Embed(source="/../assets/msxmltest.swf")]
 		private var DrawToolEmbedded:Class;
 		
 		private var scene:Scene3D;
@@ -292,7 +292,7 @@ package {
 			myTimer.addEventListener( TimerEvent.TIMER_COMPLETE, runOnce );
 			myTimer.start();
 			b.visible = false;
-			t.visible = false;
+			if (t) t.visible = false;
 			planeGroup.visible = true;
 			
 			Tweener.addTween( camera, {z:-170, time:1, transition:"linear"});
@@ -341,7 +341,7 @@ package {
 			myTimer.addEventListener( TimerEvent.TIMER_COMPLETE, runOnce );
 			myTimer.start();
 			b.visible = true;
-			t.visible = true;
+			if (t) t.visible = true;
 			planeGroup.visible = false;
 			
 			doRotation = false;

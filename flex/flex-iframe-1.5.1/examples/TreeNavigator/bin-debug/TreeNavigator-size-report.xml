@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<report>
+  <swf size="687589" compressedSize="320096">
+
+    <!-- Header data (SWF attributes, product info, markers, etc.) -->
+    <headerData totalSize="1173">
+      <data type="metaData" size="1105"/>
+      <data type="productInfo" size="28"/>
+      <data type="swfHeader" size="21"/>
+      <data type="fileAttributes" size="6"/>
+      <data type="scriptLimits" size="6"/>
+      <data type="backgroundColor" size="5"/>
+      <data type="endMarker" size="2"/>
+    </headerData>
+
+    <!-- Cumulative frame size summary. -->
+    <frames totalSize="686416">
+      <frame name="_TreeNavigator_mx_managers_SystemManager" size="55223" frame="1"/>
+      <frame name="com_google_code_flexiframe_examples_TreeNavigator" size="631193" frame="2"/>
+    </frames>
+
+    <!-- Actionscript code and constant data. -->
+    <actionScript totalSize="670067">
+      <abc name="frame2" size="614936" frame="2"/>
+      <abc name="frame1" size="55131" frame="1"/>
+    </actionScript>
+
+    <!-- defineSprite. -->
+    <sprites totalSize="257">
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_mx_skins_cursor_DragReject_75907965" size="40" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_mx_skins_cursor_DragLink_1406363870" size="31" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_mx_skins_cursor_DragCopy_1406625865" size="31" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_mx_skins_cursor_DragMove_1406389493" size="22" frame="2"/>
+      <sprite size="19" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_TreeFolderOpen_547617447" size="19" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_TreeNodeIcon_2087147564" size="19" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_TreeFolderClosed_2034603339" size="19" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_TreeDisclosureClosed_573882630" size="19" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_mx_skins_cursor_BusyCursor_549998783" size="19" frame="2"/>
+      <sprite name="_TreeNavigator_Styles__embed_css_Assets_swf_TreeDisclosureOpen_1526076840" size="19" frame="2"/>
+    </sprites>
+
+    <!-- defineShape/2/3/4. -->
+    <shapes totalSize="2153">
+      <shape size="581" frame="2"/>
+      <shape size="306" frame="2"/>
+      <shape size="261" frame="2"/>
+      <shape size="192" frame="2"/>
+      <shape size="177" frame="2"/>
+      <shape size="172" frame="2"/>
+      <shape size="165" frame="2"/>
+      <shape size="136" frame="2"/>
+      <shape size="55" frame="2"/>
+      <shape size="55" frame="2"/>
+      <shape size="53" frame="2"/>
+    </shapes>
+
+    <!-- SWF, Pixel Bender, or other miscellaneous embed data. -->
+    <binaryData totalSize="11882">
+      <data name="mx.graphics.shaderClasses.SaturationShader_ShaderClass" size="2298" frame="2"/>
+      <data name="mx.graphics.shaderClasses.HueShader_ShaderClass" size="2268" frame="2"/>
+      <data name="mx.graphics.shaderClasses.SoftLightShader_ShaderClass" size="1920" frame="2"/>
+      <data name="mx.graphics.shaderClasses.LuminosityShader_ShaderClass" size="1282" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorShader_ShaderClass" size="1272" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorBurnShader_ShaderClass" size="1144" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ColorDodgeShader_ShaderClass" size="1074" frame="2"/>
+      <data name="mx.graphics.shaderClasses.ExclusionShader_ShaderClass" size="624" frame="2"/>
+    </binaryData>
+
+    <!-- Additional frame tags (symbolClass, exportAssets, showFrame, etc). -->
+    <frameData totalSize="2057">
+      <tag type="symbolClass" size="1228" frame="2"/>
+      <tag type="exportAssets" size="683" frame="2"/>
+      <tag type="frameLabel" size="52" frame="2"/>
+      <tag type="symbolClass" size="47" frame="1"/>
+      <tag type="frameLabel" size="43" frame="1"/>
+      <tag type="showFrame" size="2" frame="1"/>
+      <tag type="showFrame" size="2" frame="2"/>
+    </frameData>
+  </swf>
+</report>
