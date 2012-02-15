@@ -197,7 +197,7 @@
     {
         self.window.rootViewController = self.tabBarController;
         
-        [[UIApplication sharedApplication] setStatusBarHidden:NO  animated:NO];
+        [[UIApplication sharedApplication] setStatusBarHidden:NO  withAnimation:NO];
     }
 }
 

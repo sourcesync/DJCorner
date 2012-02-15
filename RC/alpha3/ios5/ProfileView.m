@@ -38,7 +38,7 @@
 
 - (void)dealloc
 {
-    _flag=nil; 
+   
     _btn=nil;
     dele=nil;
     [dele release];

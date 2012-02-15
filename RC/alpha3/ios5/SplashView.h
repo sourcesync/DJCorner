@@ -23,9 +23,7 @@
 
 //  PUBLIC FUNCS...
 -(void) splashDoneMainThread:(id)obj;
--(void) splashDone:(id)obj;
--(id) init;
--(void)playVideo;
+-(void) splashDone:(id)obj; 
 -(void)video_play:(NSString*)filename;
 
 @end

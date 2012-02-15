@@ -86,7 +86,7 @@
 {
     
     //self.djs = nil;
-    self.visiblePath = nil;
+ 
     self.getter = nil;
     self.search = nil;
     self.pics=nil;
@@ -356,6 +356,7 @@
             self.pic=dj.pic_path;
             _visiblePath = tableView.indexPathsForVisibleRows;
             NSLog(@"all row num%d",[_visiblePath count]);
+     
             if(self.pic!=nil)
             {
                 /*
@@ -407,25 +408,25 @@
         }
     }
 }
--(void)loadImagesForOnscreenRows{
-
-    NSArray *array =_visiblePath;
-    NSLog(@"nummmmmmm%d",[array count]);//bad_ext forget free 
-    [array release];
-
-}
+//-(void)loadImagesForOnscreenRows{
+//
+// 
+//    NSLog(@"nummmmmmm%d",[_visiblePath count]);//bad_ext already free neicun(don't should) 
+//     
+//
+//}
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     if (!decelerate)
 	{
-        [self loadImagesForOnscreenRows];
+        //[self loadImagesForOnscreenRows];
     }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-    [self loadImagesForOnscreenRows];
+   // [self loadImagesForOnscreenRows];
 }
 
 /*

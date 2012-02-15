@@ -55,7 +55,7 @@
     
     self.img.backgroundColor = [ UIColor clearColor ];
     
-    [[UIApplication sharedApplication] setStatusBarHidden:YES animated:NO];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:NO];
     
     
 }
