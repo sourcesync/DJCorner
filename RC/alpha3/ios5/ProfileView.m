@@ -338,9 +338,13 @@
 #pragma mark - buttons clicked
 -(IBAction)upGradeClicked:(id)sender
 {
-    //djcAppDelegate *app = 
-    //( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
+    djcAppDelegate *app = 
+    ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
     
+    if(app.VIP==0)
+    {
+        return;
+    }
     //[app purchaseManagerStart];
     
     UIAlertView *upgrade=[[UIAlertView alloc] 
