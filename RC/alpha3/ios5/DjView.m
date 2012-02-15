@@ -350,6 +350,7 @@
             //float sw=img.size.width/cell.imageView.image.size.width;
             //float sh=img.size.height/cell.imageView.image.size.height;
             //cell.imageView.transform=CGAffineTransformMakeScale(sw, sh);
+            
             self.pic=dj.pic_path;
             
             if(self.pic!=nil)

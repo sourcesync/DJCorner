@@ -15,8 +15,7 @@
 @interface SplashView : UIViewController 
 {
     MPMoviePlayerController *theMovie;
-    
-    
+         
 }
 
 //  IBOUTLET...
