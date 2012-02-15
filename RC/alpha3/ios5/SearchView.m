@@ -267,7 +267,7 @@
     }
     
     self.show_Default_location=CLLocationCoordinate2DMake(DEFAULT_LAT, DEFAULT_LONG);
-    self.location_Manager=[[[CLLocationManager alloc] init] autorelease];
+    self.location_Manager=[[CLLocationManager alloc] init];
     
     [self.location_Manager setDelegate:self ];
     if(self.dataForTable==nil)
@@ -289,7 +289,7 @@
 {
     // Releases the view if it doesn't have a superview.
     [super didReceiveMemoryWarning];
-    
+    NSLog(@"fdsfdsfdsfdsfdsfdsfdsfdsfdsfdsfdsfdsfdsfdsfdsfdsfdsfdsf");
     // Release any cached data, images, etc. that aren't in use.
 }
 
@@ -385,7 +385,7 @@
         }
         else
         {
-            [cell.textLabel setText:[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",(row-self.VIP*self.modeList*row/(ADSPOSITION+1))]] valueForKey:@"city"]];
+            [cell.textLabel setText:[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",(row-1-self.VIP*self.modeList*row/(ADSPOSITION+1))]] valueForKey:@"city"]];
         }
         
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;

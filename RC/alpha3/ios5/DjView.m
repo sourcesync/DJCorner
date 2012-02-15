@@ -458,7 +458,7 @@
         else
         {
             
-            DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
+            DJ *dj = [[ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ] autorelease];
             
             djcAppDelegate *app = 
             ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
