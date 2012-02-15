@@ -35,6 +35,7 @@
 @property (nonatomic, retain) NSMutableDictionary *pics;
 @property (nonatomic, retain) NSString *pic;
 @property (nonatomic, retain) NSMutableData *picTemp;
+@property (nonatomic,retain) NSArray *visiblePath;
 
 
 //  ASSIGN...

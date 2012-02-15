@@ -33,6 +33,7 @@
 @synthesize pic=_pic;
 @synthesize picTemp=_picTemp;
 @synthesize VIP=_VIP;
+@synthesize visiblePath=_visiblePath;
 
 #pragma - funcs...
 
@@ -85,6 +86,7 @@
 {
     
     //self.djs = nil;
+    self.visiblePath = nil;
     self.getter = nil;
     self.search = nil;
     self.pics=nil;
@@ -352,7 +354,8 @@
             //cell.imageView.transform=CGAffineTransformMakeScale(sw, sh);
             
             self.pic=dj.pic_path;
-            
+            _visiblePath = tableView.indexPathsForVisibleRows;
+            NSLog(@"all row num%d",[_visiblePath count]);
             if(self.pic!=nil)
             {
                 /*
@@ -403,6 +406,26 @@
             return cell;   
         }
     }
+}
+-(void)loadImagesForOnscreenRows{
+
+    NSArray *array =_visiblePath;
+    NSLog(@"nummmmmmm%d",[array count]);//bad_ext forget free 
+    [array release];
+
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    if (!decelerate)
+	{
+        [self loadImagesForOnscreenRows];
+    }
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    [self loadImagesForOnscreenRows];
 }
 
 /*
@@ -504,7 +527,7 @@
     
     */
     
-    NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
+    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0 ];
     
     DjsCell *cell = (DjsCell *)[ self.tv cellForRowAtIndexPath:path ];
     [cell.activity setHidden:YES];
