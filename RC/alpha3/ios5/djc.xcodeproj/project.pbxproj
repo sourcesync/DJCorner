@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29D73F4E14EB838A00EA41DE /* backgroundmusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 29D73F4D14EB838A00EA41DE /* backgroundmusic.mp3 */; };
+		29D73F5014EB83B700EA41DE /* DGNYE Logo.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 29D73F4F14EB83B700EA41DE /* DGNYE Logo.mp4 */; };
 		29E9441E14EB7DB60060AFEA /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E9441D14EB7DB60060AFEA /* ProfileView.xib */; };
 		307DCCEB14E0D344006D720E /* ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 307DCCEA14E0D344006D720E /* ad.png */; };
 		307DCDF314E0E71C006D720E /* ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 307DCCF514E0E714006D720E /* ad.png */; };
@@ -272,12 +274,9 @@
 		3090AFF914E8B49E00E99626 /* SKProductPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3090AFF814E8B49E00E99626 /* SKProductPrice.m */; };
 		3090AFFC14E9111100E99626 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3090AFFB14E9111000E99626 /* AVFoundation.framework */; };
 		3090AFFE14E9111D00E99626 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3090AFFD14E9111D00E99626 /* MediaPlayer.framework */; };
-		3090B00214E9116800E99626 /* DGNYE Logo Final 1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3090B00014E9116800E99626 /* DGNYE Logo Final 1.mp4 */; };
-		3090B00314E9116800E99626 /* MeetMeInSt.Louis1904.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3090B00114E9116800E99626 /* MeetMeInSt.Louis1904.mp3 */; };
 		865BE19E14E36DFA004308F6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BE19D14E36DFA004308F6 /* feedbackView.xib */; };
 		869D8E4B14E1306C009E3E31 /* redbull.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D8E4A14E1306C009E3E31 /* redbull.png */; };
 		86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C46F1714DD88C800F719E6 /* feedbackView.m */; };
-		86F39A9614E919F700C9064A /* penguin-original-mix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 86F39A9514E919F700C9064A /* penguin-original-mix.mp3 */; };
 		B30D5F33147E135B006F3D8A /* djc2.modified.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F32147E135B006F3D8A /* djc2.modified.png */; };
 		B30D5F35147E1560006F3D8A /* djc4.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F34147E1560006F3D8A /* djc4.png */; };
 		B30D5F37147E1D13006F3D8A /* djc5.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F36147E1D13006F3D8A /* djc5.png */; };
@@ -377,6 +376,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29D73F4D14EB838A00EA41DE /* backgroundmusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = backgroundmusic.mp3; sourceTree = "<group>"; };
+		29D73F4F14EB83B700EA41DE /* DGNYE Logo.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DGNYE Logo.mp4"; sourceTree = "<group>"; };
 		29E9441D14EB7DB60060AFEA /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		307DCCEA14E0D344006D720E /* ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad.png; sourceTree = "<group>"; };
 		307DCCF514E0E714006D720E /* ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad.png; sourceTree = "<group>"; };
@@ -646,13 +647,10 @@
 		3090AFF814E8B49E00E99626 /* SKProductPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKProductPrice.m; sourceTree = "<group>"; };
 		3090AFFB14E9111000E99626 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3090AFFD14E9111D00E99626 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		3090B00014E9116800E99626 /* DGNYE Logo Final 1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DGNYE Logo Final 1.mp4"; sourceTree = "<group>"; };
-		3090B00114E9116800E99626 /* MeetMeInSt.Louis1904.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = MeetMeInSt.Louis1904.mp3; sourceTree = "<group>"; };
 		865BE19D14E36DFA004308F6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
 		869D8E4A14E1306C009E3E31 /* redbull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbull.png; sourceTree = "<group>"; };
 		86C46F1414DD888600F719E6 /* feedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackView.h; sourceTree = "<group>"; };
 		86C46F1714DD88C800F719E6 /* feedbackView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = feedbackView.m; sourceTree = "<group>"; };
-		86F39A9514E919F700C9064A /* penguin-original-mix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "penguin-original-mix.mp3"; sourceTree = "<group>"; };
 		B30D5F32147E135B006F3D8A /* djc2.modified.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc2.modified.png; sourceTree = "<group>"; };
 		B30D5F34147E1560006F3D8A /* djc4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc4.png; sourceTree = "<group>"; };
 		B30D5F36147E1D13006F3D8A /* djc5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc5.png; sourceTree = "<group>"; };
@@ -863,9 +861,8 @@
 		3090AFFF14E9113800E99626 /* resource */ = {
 			isa = PBXGroup;
 			children = (
-				86F39A9514E919F700C9064A /* penguin-original-mix.mp3 */,
-				3090B00014E9116800E99626 /* DGNYE Logo Final 1.mp4 */,
-				3090B00114E9116800E99626 /* MeetMeInSt.Louis1904.mp3 */,
+				29D73F4F14EB83B700EA41DE /* DGNYE Logo.mp4 */,
+				29D73F4D14EB838A00EA41DE /* backgroundmusic.mp3 */,
 			);
 			name = resource;
 			sourceTree = "<group>";
@@ -998,9 +995,6 @@
 			isa = PBXGroup;
 			children = (
 				3090AFFF14E9113800E99626 /* resource */,
-				3090AFFD14E9111D00E99626 /* MediaPlayer.framework */,
-				3090AFFB14E9111000E99626 /* AVFoundation.framework */,
-				30887F7E14E3CCBE00982A70 /* StoreKit.framework */,
 				30887F7614E3C5DE00982A70 /* purchase */,
 				307DCEF214E0F320006D720E /* ads */,
 				B321620E14773B8E00C7EE05 /* splash_view */,
@@ -1012,8 +1006,6 @@
 				B37B6C0914A3EDFC0093BA4D /* djs_view */,
 				B331726E149895A9009C67CB /* djselect_view */,
 				B33C82A31490DBD300D7AA78 /* mapit_view */,
-				B33C829C149036BC00D7AA78 /* EventKit.framework */,
-				B33C829D149036BC00D7AA78 /* EventKitUI.framework */,
 				B352AD641477858100824ED1 /* event_view */,
 				B384AA531476E894003F0DD6 /* buy_view */,
 				B384AA3D147655D8003F0DD6 /* profile_view */,
@@ -1043,6 +1035,11 @@
 		B384A98C14761B1A003F0DD6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B33C829D149036BC00D7AA78 /* EventKitUI.framework */,
+				B33C829C149036BC00D7AA78 /* EventKit.framework */,
+				30887F7E14E3CCBE00982A70 /* StoreKit.framework */,
+				3090AFFB14E9111000E99626 /* AVFoundation.framework */,
+				3090AFFD14E9111D00E99626 /* MediaPlayer.framework */,
 				B384AA1E1476234D003F0DD6 /* SystemConfiguration.framework */,
 				B384AA1C147622E2003F0DD6 /* libz.dylib */,
 				B384AA1B147622CB003F0DD6 /* CoreGraphics.framework */,
@@ -1882,10 +1879,9 @@
 				307DCEF714E0F377006D720E /* AdsCell.xib in Resources */,
 				869D8E4B14E1306C009E3E31 /* redbull.png in Resources */,
 				865BE19E14E36DFA004308F6 /* feedbackView.xib in Resources */,
-				3090B00214E9116800E99626 /* DGNYE Logo Final 1.mp4 in Resources */,
-				3090B00314E9116800E99626 /* MeetMeInSt.Louis1904.mp3 in Resources */,
-				86F39A9614E919F700C9064A /* penguin-original-mix.mp3 in Resources */,
 				29E9441E14EB7DB60060AFEA /* ProfileView.xib in Resources */,
+				29D73F4E14EB838A00EA41DE /* backgroundmusic.mp3 in Resources */,
+				29D73F5014EB83B700EA41DE /* DGNYE Logo.mp4 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2039,7 +2035,7 @@
 				GCC_PREFIX_HEADER = "djc/djc-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "djc/djc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C3042580-871F-4B86-8838-E2FD175A4FCD";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C3042580-871F-4B86-8838-E2FD175A4FCD";
@@ -2058,7 +2054,7 @@
 				GCC_PREFIX_HEADER = "djc/djc-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "djc/djc-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "C3042580-871F-4B86-8838-E2FD175A4FCD";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C3042580-871F-4B86-8838-E2FD175A4FCD";
