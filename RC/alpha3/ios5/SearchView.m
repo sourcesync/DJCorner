@@ -465,43 +465,45 @@
     coordidate.longitude=self.show_Default_location.longitude;
     
     //create this user's annonation
-    SimpleLocation *annonaion=[[SimpleLocation alloc] initWithName];
+    SimpleLocation *annonaion=[[[SimpleLocation alloc] initWithName] autorelease];
     annonaion.name=[NSString stringWithString:@"All cities"];
     annonaion.message=nil;
     annonaion.coordinate=coordidate;
     annonaion.pp=nil;
     annonaion.type=0;
     
-    //NSLog(@"%f%f3ppppppppppppppppppppp",annonaion.coordinate.latitude,annonaion.coordinate.longitude);
-    [self getEventAround:annonaion.coordinate.latitude :annonaion.coordinate.longitude];
+    self.show_Default_location=CLLocationCoordinate2DMake(annonaion.coordinate.latitude, annonaion.coordinate.longitude);
     
     [self.mv addAnnotation:annonaion];
+    
+    //NSLog(@"%f%f3ppppppppppppppppppppp",annonaion.coordinate.latitude,annonaion.coordinate.longitude);
+    
+    
+    
     //if((self.cities.count!=0)&&(self.longi.count==self.lati.count)&&(self.lati.count!=0))//here is to deal with each city
     if([self.allEvents count]>0)
     {
-        int temp;
         //for(int i=0;i<self.lati.count;i++)
         for(int i=0;i<self.allEvents.count;i++)
         {
-            temp=i+1;
-            CLLocationCoordinate2D coordidate;
+            CLLocationCoordinate2D coordidateCity;
             //coordidate.latitude=[[NSString stringWithFormat:@"%@",[self.lati objectAtIndex:i]] doubleValue];
-            coordidate.latitude=[[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"lat"]] doubleValue];
+            coordidateCity.latitude=[[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"lat"]] doubleValue];
             //coordidate.longitude=[[NSString stringWithFormat:@"%@",[self.longi objectAtIndex:i]] doubleValue];   
-            coordidate.longitude=[[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"longi"]] doubleValue];
+            coordidateCity.longitude=[[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"longi"]] doubleValue];
             
-            SimpleLocation *annotation=[[SimpleLocation alloc] initWithName];
-            annotation.name=[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"city"]];
-            annotation.coordinate=coordidate;
-            annotation.message=nil;
-            annotation.pp=[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"flag"]];
-            annotation.type=0;
-            [self.mv addAnnotation:annotation];
+            SimpleLocation *annotationCity=[[[SimpleLocation alloc] initWithName] autorelease];
+            annotationCity.name=[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"city"]];
+            annotationCity.coordinate=coordidateCity;
+            annotationCity.message=nil;
+            annotationCity.pp=[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"flag"]];
+            annotationCity.type=1;
+            [self.mv addAnnotation:annotationCity];
             
         }
     }
     [self setMapRegion];
-    [annonaion release];
+    
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation 
@@ -532,21 +534,19 @@
         //
         //  Customize the pin color...  
         //
-        if (location.type==0)
-        {
-            annonationView.pinColor = MKPinAnnotationColorRed;
-        }
-        else
-        {
-            annonationView.pinColor = MKPinAnnotationColorGreen;
-        }
-        if(location.pp!=nil)
+
+        if(location.type!=0&&location.pp!=nil)
         {
             UIImage *flag=[UIImage imageNamed:location.pp] ;
             float rate=flag.size.height/flag.size.width;
             UIImage *newFlag=[Utility imageWithImage:flag scaledToSize:CGSizeMake(12.0f/rate,12.0f)];
             [annonationView setImage:newFlag];
         }
+        else
+        {
+            annonationView.pinColor = MKPinAnnotationColorRed;
+        }
+        
         
 #if 0
         //
@@ -615,6 +615,7 @@
 
 -(void) showMap:(id)sender
 {
+    [self getEventAround:self.show_Default_location.latitude :self.show_Default_location.longitude];
     self.mv.hidden=NO;
     self.tv.hidden=NO;
     self.modeList=0;
