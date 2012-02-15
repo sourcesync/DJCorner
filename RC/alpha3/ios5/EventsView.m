@@ -137,6 +137,10 @@
 {
     [super viewWillAppear:animated];
     
+    djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.VIP=app.VIP;
+    [self.tv performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    
     if ( self.back_from )
     {
         

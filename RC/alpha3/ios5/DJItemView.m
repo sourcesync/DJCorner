@@ -513,7 +513,7 @@
     if (st>0 )
     {
         self.djs = [ data objectForKey:@"results" ];
-        NSLog(@"fdsafadsfsadfasdfasdfasdfasd%d",self.djs.count);
+        
         self.tv.hidden = NO;
         self.activity.hidden = YES;
         [ self.tv reloadData ];

@@ -147,6 +147,10 @@
 {
     [ super viewWillAppear:animated ];
     
+    djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
+    self.VIP=app.VIP;
+    [self.tv performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    
     if (self.back_from) 
     {
         return;
@@ -162,7 +166,6 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [ super viewDidAppear:animated];
- 
     if (self.back_from)
     {
         self.back_from = NO;
