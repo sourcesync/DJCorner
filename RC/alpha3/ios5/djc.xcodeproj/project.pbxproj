@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29E9441E14EB7DB60060AFEA /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29E9441D14EB7DB60060AFEA /* ProfileView.xib */; };
 		307DCCEB14E0D344006D720E /* ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 307DCCEA14E0D344006D720E /* ad.png */; };
 		307DCDF314E0E71C006D720E /* ad.png in Resources */ = {isa = PBXBuildFile; fileRef = 307DCCF514E0E714006D720E /* ad.png */; };
 		307DCDF414E0E71C006D720E /* ae.png in Resources */ = {isa = PBXBuildFile; fileRef = 307DCCF614E0E714006D720E /* ae.png */; };
@@ -357,7 +358,6 @@
 		B384AA3A14765282003F0DD6 /* glossy-3d-blue-orbs2-108.ico in Resources */ = {isa = PBXBuildFile; fileRef = B384AA3914765282003F0DD6 /* glossy-3d-blue-orbs2-108.ico */; };
 		B384AA3C147652D6003F0DD6 /* glossy_3d_blue_orbs2_108.png in Resources */ = {isa = PBXBuildFile; fileRef = B384AA3B147652D6003F0DD6 /* glossy_3d_blue_orbs2_108.png */; };
 		B384AA41147655F2003F0DD6 /* ProfileView.m in Sources */ = {isa = PBXBuildFile; fileRef = B384AA3F147655F2003F0DD6 /* ProfileView.m */; };
-		B384AA42147655F2003F0DD6 /* ProfileView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B384AA40147655F2003F0DD6 /* ProfileView.xib */; };
 		B384AA4414765885003F0DD6 /* tb_gear.png in Resources */ = {isa = PBXBuildFile; fileRef = B384AA4314765885003F0DD6 /* tb_gear.png */; };
 		B384AA46147658EC003F0DD6 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = B384AA45147658EC003F0DD6 /* star.png */; };
 		B384AA4814765920003F0DD6 /* star.ico in Resources */ = {isa = PBXBuildFile; fileRef = B384AA471476591F003F0DD6 /* star.ico */; };
@@ -377,6 +377,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		29E9441D14EB7DB60060AFEA /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		307DCCEA14E0D344006D720E /* ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad.png; sourceTree = "<group>"; };
 		307DCCF514E0E714006D720E /* ad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ad.png; sourceTree = "<group>"; };
 		307DCCF614E0E714006D720E /* ae.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ae.png; sourceTree = "<group>"; };
@@ -781,7 +782,6 @@
 		B384AA3B147652D6003F0DD6 /* glossy_3d_blue_orbs2_108.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = glossy_3d_blue_orbs2_108.png; sourceTree = "<group>"; };
 		B384AA3E147655F2003F0DD6 /* ProfileView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfileView.h; sourceTree = "<group>"; };
 		B384AA3F147655F2003F0DD6 /* ProfileView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfileView.m; sourceTree = "<group>"; };
-		B384AA40147655F2003F0DD6 /* ProfileView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileView.xib; sourceTree = "<group>"; };
 		B384AA4314765885003F0DD6 /* tb_gear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tb_gear.png; sourceTree = "<group>"; };
 		B384AA45147658EC003F0DD6 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 		B384AA471476591F003F0DD6 /* star.ico */ = {isa = PBXFileReference; lastKnownFileType = image.ico; path = star.ico; sourceTree = "<group>"; };
@@ -1498,7 +1498,7 @@
 			children = (
 				B384AA3E147655F2003F0DD6 /* ProfileView.h */,
 				B384AA3F147655F2003F0DD6 /* ProfileView.m */,
-				B384AA40147655F2003F0DD6 /* ProfileView.xib */,
+				29E9441D14EB7DB60060AFEA /* ProfileView.xib */,
 			);
 			name = profile_view;
 			sourceTree = "<group>";
@@ -1590,7 +1590,6 @@
 				B384AA3814764C9F003F0DD6 /* aso_033.jpg in Resources */,
 				B384AA3A14765282003F0DD6 /* glossy-3d-blue-orbs2-108.ico in Resources */,
 				B384AA3C147652D6003F0DD6 /* glossy_3d_blue_orbs2_108.png in Resources */,
-				B384AA42147655F2003F0DD6 /* ProfileView.xib in Resources */,
 				B384AA4414765885003F0DD6 /* tb_gear.png in Resources */,
 				B384AA46147658EC003F0DD6 /* star.png in Resources */,
 				B384AA4814765920003F0DD6 /* star.ico in Resources */,
@@ -1886,6 +1885,7 @@
 				3090B00214E9116800E99626 /* DGNYE Logo Final 1.mp4 in Resources */,
 				3090B00314E9116800E99626 /* MeetMeInSt.Louis1904.mp3 in Resources */,
 				86F39A9614E919F700C9064A /* penguin-original-mix.mp3 in Resources */,
+				29E9441E14EB7DB60060AFEA /* ProfileView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

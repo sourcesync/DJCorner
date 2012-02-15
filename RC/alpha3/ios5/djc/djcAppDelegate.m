@@ -40,6 +40,7 @@
 @synthesize feedback_view=_feedback_view;
 @synthesize purchaseManager=_purchaseManager;
 @synthesize VIP=_VIP;
+@synthesize player=_player;
 //end 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -58,9 +59,15 @@
     
     SplashView *splash = [ [ SplashView alloc ] init ];
     self.window.rootViewController = splash;
-    [ splash release ];
+    [splash release ];
     
     [self.window makeKeyAndVisible];
+    sleep(5);
+    [self prepAudio]; 
+	// Start playback
+	[self.player play];
+    
+    
     return YES;
 }
 
@@ -106,25 +113,25 @@
 - (void)dealloc
 {
     self.api = nil;
-    
+    [_player release];
     [_window release];
     [_tabBarController release];
     [super dealloc];
 }
 
 /*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
-{
-}
-*/
+ // Optional UITabBarControllerDelegate method.
+ - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
+ {
+ }
+ */
 
 /*
-// Optional UITabBarControllerDelegate method.
-- (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
-{
-}
-*/
+ // Optional UITabBarControllerDelegate method.
+ - (void)tabBarController:(UITabBarController *)tabBarController didEndCustomizingViewControllers:(NSArray *)viewControllers changed:(BOOL)changed
+ {
+ }
+ */
 
 #pragma mark - public funcs...
 
@@ -149,7 +156,36 @@
     self.mapit_view.parent = src;
     [ src presentModalViewController:self.mapit_view animated:YES ];
 }
- 
+
+-(BOOL) prepAudio
+{
+    
+	NSError *error;
+	NSString *path = [[NSBundle mainBundle] pathForResource:@"backgroundmusic" ofType:@"mp3"];
+	if (![[NSFileManager defaultManager] fileExistsAtPath:path])
+    {
+        return NO; 
+    }
+	//Initialize the player
+	self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:&error];
+	self.player.delegate = self;
+    player.numberOfLoops = -1;  
+	if (!self.player)
+	{
+		NSLog(@"Error: %@", [error localizedDescription]);
+		return NO;
+	} 
+	[self.player prepareToPlay];
+    
+    return YES;
+}
+
+- (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+	// just keep playing
+	[self.player play];
+}
+
 -(NSString *) getCurURL
 {
     return self.cur_url;
@@ -273,7 +309,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     
 #if 0
     NSString *dispstr = \
-        [ NSString stringWithFormat:@"Notifications registration success ->%@<-.", tokstr ];
+    [ NSString stringWithFormat:@"Notifications registration success ->%@<-.", tokstr ];
     [ Utility AlertMessage:dispstr];
 #endif
     
@@ -281,7 +317,7 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     {
         [ Utility AlertMessage:@"Failed to register device with server." ];
     }
-
+    
 }
 
 - (void)application:(UIApplication *)application 

@@ -8,20 +8,20 @@
 
 #import <UIKit/UIKit.h>
 #import <MediaPlayer/MPMoviePlayerController.h>
-#import <AVFoundation/AVFoundation.h>
 
 
 
-@interface SplashView : UIViewController<AVAudioPlayerDelegate> 
+
+@interface SplashView : UIViewController 
 {
     MPMoviePlayerController *theMovie;
     
-    AVAudioPlayer *player; 
+    
 }
 
 //  IBOUTLET...
 @property (nonatomic, retain) IBOutlet UIImageView *img;
-@property (retain) AVAudioPlayer *player;
+
 //  PUBLIC FUNCS...
 -(void) splashDoneMainThread:(id)obj;
 -(void) splashDone:(id)obj;

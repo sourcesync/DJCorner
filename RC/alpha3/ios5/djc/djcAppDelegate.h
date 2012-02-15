@@ -23,12 +23,14 @@
 #import "SimilarDJView.h"
 #import "feedbackView.h"
 #import "InAppPurchaseManager.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface djcAppDelegate : NSObject 
-    <UIApplicationDelegate, UITabBarControllerDelegate,
-    EventViewDelegate, DJCAPIServiceDelegate>
+<UIApplicationDelegate, UITabBarControllerDelegate,
+EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 {
-
+    AVAudioPlayer *player; 
+    
 }
 
 //  IBOUTLET...
@@ -36,6 +38,7 @@
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
 //  RETAIN...
+@property (retain) AVAudioPlayer *player;
 @property (nonatomic, retain) NSString *cur_url;
 @property (atomic, retain) EventView *event_view;
 @property (atomic, retain) BuyView *buy_view;
@@ -71,4 +74,5 @@
 -(void) showSimilarDJS:(UIViewController *)src:(DJ *)dj;
 -(void) showFeedback:(UIViewController *)src:(DJ *)dj;
 -(void) purchaseManagerStart;
+-(BOOL)prepAudio;
 @end
