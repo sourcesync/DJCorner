@@ -20,6 +20,9 @@
 @synthesize selectedIndex=_selectedIndex;
 @synthesize back_from=_back_from;
 @synthesize lb_version=_lb_version;
+@synthesize dele=_dele;
+@synthesize flags=_flag;
+@synthesize btn=_btn;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -35,6 +38,10 @@
 
 - (void)dealloc
 {
+    _flag=nil; 
+    _btn=nil;
+    dele=nil;
+    [dele release];
     self.api = nil;
     self.djs = nil;
     self.selectedDJ = nil;
@@ -51,7 +58,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.flags=YES;
     self.api =  [ [ [ DJCAPI alloc ] init:self ] autorelease ];
     
     self.tv.dataSource = self;
@@ -213,14 +220,14 @@
         NSMutableDictionary *dct = [ self.djs objectAtIndex: row ];
         NSString *djid = [ dct objectForKey:@"djid" ];
         self.selectedDJ = djid;
-     
+        
         UIActionSheet *popupQuery = [[UIActionSheet alloc] 
-                                 initWithTitle:@"DJ's Corner" 
-                                 delegate:self 
-                                 cancelButtonTitle:@"Cancel"
-                                 destructiveButtonTitle:nil
-                                 otherButtonTitles:
-                                 @"Go To DJ Page", @"Stop Following",
+                                     initWithTitle:@"DJ's Corner" 
+                                     delegate:self 
+                                     cancelButtonTitle:@"Cancel"
+                                     destructiveButtonTitle:nil
+                                     otherButtonTitles:
+                                     @"Go To DJ Page", @"Stop Following",
                                      nil];
         popupQuery.delegate= self;
         popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
@@ -293,7 +300,7 @@
     if (buttonIndex==0 ) 
     {
         djcAppDelegate *app = ( djcAppDelegate *) 
-            [ [ UIApplication sharedApplication ] delegate ];
+        [ [ UIApplication sharedApplication ] delegate ];
         
         //DJ *dj = [ self.djs objectAtIndex:self.selectedIndex ];
         NSString *djid = self.selectedDJ;
@@ -359,6 +366,28 @@
 {
     djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
     [app showFeedback:self :nil];
+}
+-(IBAction)stopMusic:(id)sender{
+    
+    
+    djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate]; 
+    if(self.flags==YES)
+    { 
+        [self.btn setTitle:@"Play Music" forState:UIControlStateNormal];
+        [[app player] pause];
+        self.flags=NO;
+    }
+    else
+    {
+        self.flags=YES;
+        [self.btn setTitle:@"Stop Music" forState:UIControlStateNormal];
+        [[app player] play];
+        
+    }
+    
+    
+    
+    
 }
 
 @end
