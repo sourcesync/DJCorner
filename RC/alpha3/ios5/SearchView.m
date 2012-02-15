@@ -476,28 +476,25 @@
     
     [self.mv addAnnotation:annonaion];
     
-    //NSLog(@"%f%f3ppppppppppppppppppppp",annonaion.coordinate.latitude,annonaion.coordinate.longitude);
-    
-    
     
     //if((self.cities.count!=0)&&(self.longi.count==self.lati.count)&&(self.lati.count!=0))//here is to deal with each city
-    if([self.allEvents count]>0)
+    if([self.eventsAround count]>0)
     {
         //for(int i=0;i<self.lati.count;i++)
-        for(int i=0;i<self.allEvents.count;i++)
+        for(int i=0;i<self.eventsAround.count;i++)
         {
             CLLocationCoordinate2D coordidateCity;
             //coordidate.latitude=[[NSString stringWithFormat:@"%@",[self.lati objectAtIndex:i]] doubleValue];
-            coordidateCity.latitude=[[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"lat"]] doubleValue];
+            coordidateCity.latitude=[[NSString stringWithFormat:@"%@",[[self.eventsAround valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"lat"]] doubleValue];
             //coordidate.longitude=[[NSString stringWithFormat:@"%@",[self.longi objectAtIndex:i]] doubleValue];   
-            coordidateCity.longitude=[[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"longi"]] doubleValue];
+            coordidateCity.longitude=[[NSString stringWithFormat:@"%@",[[self.eventsAround valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"longi"]] doubleValue];
             
             SimpleLocation *annotationCity=[[[SimpleLocation alloc] initWithName] autorelease];
-            annotationCity.name=[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"city"]];
+            annotationCity.name=[NSString stringWithFormat:@"%@",[[self.eventsAround valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"city"]];
             annotationCity.coordinate=coordidateCity;
             annotationCity.message=nil;
-            annotationCity.pp=[NSString stringWithFormat:@"%@",[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"flag"]];
-            annotationCity.type=1;
+            annotationCity.pp=[NSString stringWithFormat:@"%@",[[self.eventsAround valueForKey:[NSString stringWithFormat:@"%d",i]] valueForKey:@"flag"]];
+            annotationCity.type=0;
             [self.mv addAnnotation:annotationCity];
             
         }
@@ -535,17 +532,23 @@
         //  Customize the pin color...  
         //
 
-        if(location.type!=0&&location.pp!=nil)
+        if(location.type==0)
+        {
+            annonationView.pinColor=MKPinAnnotationColorRed;
+        }
+        else
+        {
+            annonationView.pinColor = MKPinAnnotationColorGreen;
+        }
+        
+        if(location.pp!=nil)
         {
             UIImage *flag=[UIImage imageNamed:location.pp] ;
             float rate=flag.size.height/flag.size.width;
             UIImage *newFlag=[Utility imageWithImage:flag scaledToSize:CGSizeMake(12.0f/rate,12.0f)];
             [annonationView setImage:newFlag];
         }
-        else
-        {
-            annonationView.pinColor = MKPinAnnotationColorRed;
-        }
+        
         
         
 #if 0
