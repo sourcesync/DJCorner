@@ -220,6 +220,7 @@
     self.djitem_view.getdj = getdj;
     self.djitem_view.parent = src;
     [ src presentModalViewController:self.djitem_view animated:YES ];
+    [src release];
 }
 
 
