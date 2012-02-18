@@ -57,9 +57,9 @@ static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
          andParams:(NSArray *)parameters 
             withID:(NSString *)identificator
 {
-    NSLog(@"execMethod1");
+    //NSLog(@"execMethod1");
     [self.svc execMethod:methodName andParams:parameters withID:identificator];
-    NSLog(@"execMethod2");
+    //NSLog(@"execMethod2");
     return YES;
 }
 
@@ -354,10 +354,15 @@ static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
     //  Get image from cache, or synchronous download (in invocation thread)...
     UIImage *img = [ self downloadImage:url_string ];
     
+    
     //  Stuff image into object for callback...
     UIImageForCell *data = [ [ [ UIImageForCell alloc ] init ] autorelease ]; 
     data.idx = idx; 
     data.img = img;
+    if (img==nil)
+    {
+        data.status = 1;
+    }
     
     //  Invoke delegate callback in main thread...
     [ self performSelectorOnMainThread:@selector(call_got_pic:)

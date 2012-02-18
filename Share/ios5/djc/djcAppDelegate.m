@@ -40,7 +40,9 @@
 @synthesize feedback_view=_feedback_view;
 @synthesize purchaseManager=_purchaseManager;
 @synthesize VIP=_VIP;
+#ifdef INTRO
 @synthesize player=_player;
+#endif
 //end 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -51,22 +53,25 @@
     
     self.api = [ [ [ DJCAPI alloc ] init:self] autorelease];
     self.VIP=1;//1=>no,0=>yes;
-    //[ self.api autorelease];
     
     //  Do notification registration...
     [[UIApplication sharedApplication]  registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
     
+    //  Create splash view and make it root...
     SplashView *splash = [ [ SplashView alloc ] init ];
     self.window.rootViewController = splash;
     [splash release ];
     
+    //  Show the UI...
     [self.window makeKeyAndVisible];
+    
+#if INTRO
     sleep(5);
     [self prepAudio]; 
 	// Start playback
 	[self.player play];
-    
+#endif
     
     return YES;
 }
@@ -113,18 +118,21 @@
 - (void)dealloc
 {
     self.api = nil;
+#ifdef INTRO
     [_player release];
+#endif
     [_window release];
     [_tabBarController release];
     [super dealloc];
 }
 
-/*
+
  // Optional UITabBarControllerDelegate method.
  - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
  {
+     NSLog(@"tab!");
  }
- */
+ 
 
 /*
  // Optional UITabBarControllerDelegate method.
@@ -157,6 +165,7 @@
     [ src presentModalViewController:self.mapit_view animated:YES ];
 }
 
+#ifdef INTRO
 -(BOOL) prepAudio
 {
     
@@ -179,12 +188,15 @@
     
     return YES;
 }
+#endif
 
+#ifdef INTRO
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
 {
 	// just keep playing
 	[self.player play];
 }
+#endif
 
 -(NSString *) getCurURL
 {
@@ -193,9 +205,11 @@
 
 -(void) splashDone
 {
+    //  Set tab bar controller as root view now...
     if ( self.window.rootViewController != self.tabBarController )
     {
         self.window.rootViewController = self.tabBarController;
+        self.tabBarController.delegate = self;
         
         [[UIApplication sharedApplication] setStatusBarHidden:NO  withAnimation:NO];
     }
@@ -204,7 +218,10 @@
 
 -(void) showEventModal:(UIViewController *)src:(Event *)evt:(NSString*)get_eid;
 {
-    self.event_view = [ [ [ EventView alloc ] init ] autorelease ]; //ANA
+    if (self.event_view == nil )
+    {
+        self.event_view = [ [ [ EventView alloc ] init ] autorelease ]; //ANA
+    }
     //self.event_view.delegate = self;
     self.event_view.event = evt;
     self.event_view.get_eid = get_eid;
@@ -215,7 +232,10 @@
 
 -(void) showDJItemModal:(UIViewController *)src:(DJ *)dj:(NSString *)getdj
 {
-    self.djitem_view = [ [ [  DJItemView alloc ] init ] autorelease ]; //ANA
+    if (self.djitem_view == nil )
+    {
+        self.djitem_view = [ [ [  DJItemView alloc ] init ] autorelease ]; //ANA
+    }
     self.djitem_view.dj = dj;
     self.djitem_view.getdj = getdj;
     self.djitem_view.parent = src;
@@ -288,6 +308,21 @@
     [self.purchaseManager requestProUpgradeProductData];
 }
 
+-(void) prepModals
+{
+    //  Stash an event view modal form...
+    if (self.event_view == nil )
+    {
+        self.event_view = [ [ [ EventView alloc ] init ] autorelease ]; //ANA
+    }
+    
+    //  Stash a djitem view modal form...
+    if (self.djitem_view == nil )
+    {
+        self.djitem_view = [ [ [  DJItemView alloc ] init ] autorelease ]; //ANA
+    }
+}
+
 
 #pragma mark - eventview delegate stuff...
 
@@ -339,6 +374,16 @@ didReceiveRemoteNotification:(NSDictionary *)userInfo
 {
     //[ Utility AlertMessage:@"got notification"];
     
+}
+
+- (void)applicationDidReceiveMemoryWarning:(UIApplication *)application
+{
+    [ Utility AlertLowMemory ];
+    
+    //  Release any stashed modal forms...
+    //  TODO: don't release any forms for which we are currently viewing !
+    self.event_view = nil;
+    self.djitem_view = nil;
 }
 
 #pragma mark - api...

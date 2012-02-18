@@ -23,6 +23,11 @@
 
 } 
 
+//  RETAIN... 
+@property (nonatomic, retain) NSMutableArray *events;
+@property (nonatomic, retain) DJCAPI *api;
+@property (nonatomic, retain) NSString *cur_city_search;
+@property (nonatomic, retain) NSMutableDictionary *picdic;
 
 //  ASSIGN...
 @property (nonatomic, assign) id<EventsGetterDelegate> delegate;
@@ -35,17 +40,15 @@
 @property (nonatomic, assign) BOOL all_djs;
 @property (nonatomic, assign) BOOL got_all;
 
-//  RETAIN... 
-@property (nonatomic, retain) NSMutableArray *events;
-@property (nonatomic, retain) DJCAPI *api;
-@property (nonatomic, retain) NSString *cur_city_search;
 
 //  PUBLIC FUNCS...
 -(id)   init;
 -(void) getNext; 
 -(void) cancel;
--(void) asyncGetPic:pp:num;
+-(UIImage *) getCachePic:(NSNumber *)idx;
+-(void) asyncGetPic:(NSString *)path:(NSNumber *)idx;
 -(void) finished;
+-(void) removeCache;
 
 @end
  

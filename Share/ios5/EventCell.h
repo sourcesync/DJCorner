@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define MATCHVIEWCELL_HEIGHT 65
-#define EXTRA 10
+#define EVENTCELL_HEIGHT 75 //65
+//#define EXTRA 10
 
 @interface EventCell : UITableViewCell 
 {

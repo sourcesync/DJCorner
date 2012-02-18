@@ -36,26 +36,26 @@
             withID:(NSString*)identificator {
 
 	//RPC
-    NSLog(@"json exec1");
+    //NSLog(@"json exec1");
 	NSMutableDictionary* reqDict = [NSMutableDictionary dictionary];
 	[reqDict setObject:methodName forKey:@"method"];
 	[reqDict setObject:parameters forKey:@"params"];
 	[reqDict setObject:identificator forKey:@"id"];
-	NSLog(@"json exec2");
+	//NSLog(@"json exec2");
 	//RPC JSON
 	NSString* reqString = [NSString stringWithString:[reqDict JSONRepresentation]];
 	
 	//Request
 	NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:url];
 	NSData* requestData = [NSData dataWithBytes:[reqString UTF8String] length:[reqString length]];
-	NSLog(@"json exec3");
+	//NSLog(@"json exec3");
 	//prepare http body
 	[request setHTTPMethod: @"POST"];
 	[request setValue:[NSString stringWithFormat:@"%d", [requestData length]] forHTTPHeaderField:@"Content-Length"];
 	[request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
 	[request setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 	[request setHTTPBody: requestData];
-		NSLog(@"json exec4");
+    //NSLog(@"json exec4");
 	if (urlConnection != nil) {
 		[urlConnection release];
 		urlConnection = nil;
@@ -66,7 +66,7 @@
 	
 	UIApplication* app = [UIApplication sharedApplication];
 	app.networkActivityIndicatorVisible = YES;
-    NSLog(@"json exec5");
+    //NSLog(@"json exec5");
 }
 
 
@@ -121,13 +121,13 @@
 #pragma mark NSURLConnection delegate
 
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
-	NSLog(@"Did receive response: %@", response);
+	//NSLog(@"Did receive response: %@", response);
 	
 	[webData release];
-    NSLog(@"connection11");
+    //NSLog(@"connection11");
 	
 	webData = [[NSMutableData alloc] init];
-    NSLog(@"connection12");
+    //NSLog(@"connection12");
 	
 }
 

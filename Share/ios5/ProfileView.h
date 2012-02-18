@@ -47,6 +47,9 @@ DJCAPIServiceDelegate, UIActionSheetDelegate,UIAlertViewDelegate>
 //FUN...
 -(IBAction)upGradeClicked:(id)sender;
 -(IBAction)contactFeedClicked:(id)sender;
+
+#ifdef INTRO
 -(IBAction)stopMusic:(id)sender;
+#endif
 
 @end

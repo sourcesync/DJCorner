@@ -432,9 +432,9 @@
     NSString *name = self.event.name;
     NSString *lc = self.event.venue;
     NSString *sd = self.event.startdate;
-    NSLog(@"%@",sd);
+    //NSLog(@"%@",sd);
     NSString *ed = self.event.enddate;
-    NSLog(@"%@",ed);
+    //NSLog(@"%@",ed);
 
     // create an event and prefill some fields...
     EKEvent *evt = [ EKEvent eventWithEventStore:self.eventStore ];

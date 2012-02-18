@@ -42,7 +42,7 @@
             
             //  Configure size of frame...
             CGRect frame;
-            frame = CGRectMake(0, 0, 320, MATCHVIEWCELL_HEIGHT-21);
+            frame = CGRectMake(0, 0, 320, DJCELL_HEIGHT- 21 ); //MATCHVIEWCELL_HEIGHT-21);
             self.mainView.frame = frame; 
             self.mainView.backgroundColor = [ UIColor whiteColor ];
             
@@ -99,6 +99,6 @@
 // Cell's default height.
 + (CGFloat)height
 {
-    return MATCHVIEWCELL_HEIGHT + EXTRA;
+    return DJCELL_HEIGHT; // + EXTRA;
 }
 @end

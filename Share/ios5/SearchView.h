@@ -11,7 +11,9 @@
 #import "SimpleLocation.h"
 #import "AdsCell.h"
 
+#ifdef ADS
 #define ADSPOSITION 4
+#endif
 
 enum SearchViewMode
 {

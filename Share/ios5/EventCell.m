@@ -49,7 +49,7 @@
             
             //  Configure size of frame...
             CGRect frame;
-            frame = CGRectMake(0, 0, 320, MATCHVIEWCELL_HEIGHT-21);
+            frame = CGRectMake(0, 0, 320, EVENTCELL_HEIGHT-21);
             self.content.frame = frame; 
             self.content.backgroundColor = [ UIColor whiteColor ];
             
@@ -106,7 +106,7 @@
 // Cell's default height.
 + (CGFloat)height
 {
-    return MATCHVIEWCELL_HEIGHT + EXTRA;
+    return EVENTCELL_HEIGHT; //+ EXTRA;
 }
 
 

@@ -29,8 +29,9 @@
 <UIApplicationDelegate, UITabBarControllerDelegate,
 EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 {
+#ifdef INTRO
     AVAudioPlayer *player; 
-    
+#endif
 }
 
 //  IBOUTLET...
@@ -38,7 +39,9 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
 
 //  RETAIN...
+#ifdef INTRO
 @property (retain) AVAudioPlayer *player;
+#endif
 @property (nonatomic, retain) NSString *cur_url;
 @property (atomic, retain) EventView *event_view;
 @property (atomic, retain) BuyView *buy_view;
@@ -59,6 +62,8 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 @property (nonatomic, retain) feedbackView *feedback_view;
 @property (nonatomic, retain) InAppPurchaseManager *purchaseManager;
 //end
+
+
 //  PUBLIC FUNCS...
 -(void) buyEvent:(NSString *)url;
 -(NSString *) getCurURL;
@@ -74,5 +79,9 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 -(void) showSimilarDJS:(UIViewController *)src:(DJ *)dj;
 -(void) showFeedback:(UIViewController *)src:(DJ *)dj;
 -(void) purchaseManagerStart;
+-(void) prepModals;
+
+#ifdef INTRO
 -(BOOL)prepAudio;
+#endif
 @end

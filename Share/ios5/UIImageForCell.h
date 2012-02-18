@@ -17,4 +17,6 @@
 @property (nonatomic, retain) UIImage   *img;
 @property (nonatomic, retain) NSNumber  *idx;
 
+@property (nonatomic, assign) int status;
+
 @end

@@ -102,8 +102,6 @@
     }
     else
     {
-        
-    
         if ( self.getdj != nil )
         {
             if ( ! [ self.api get_dj:self.getdj ] )
@@ -193,7 +191,8 @@
         
         UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
         //download image from db
-        UIImage *img=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dj.pic_path]]];
+        UIImage *img=
+            [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:self.dj.pic_path]]];
         [ self.image_pic setImage:img ];
         if(img==nil)
         {

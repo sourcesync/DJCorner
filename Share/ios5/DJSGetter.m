@@ -29,12 +29,12 @@
 @synthesize end=_end;
 @synthesize all_djs=_all_djs;
 @synthesize got_all;
+@synthesize picdic=_picdic;
 
 -(id) init 
 {
     self = [ super init ];
     self.api = [ [ [ DJCAPI alloc ] init:self ] autorelease];
-    //self.api = [ [ DJCAPI alloc ] init:self ];
     self.djs = nil;
     self.total_to_get = 0;
     self.first_time = YES;
@@ -44,8 +44,15 @@
     self.end = 0;
     self.all_djs = YES;
     self.got_all = NO;
+    self.picdic = [ [ [ NSMutableDictionary alloc ] initWithCapacity:0 ] autorelease ];
     return self;
 } 
+
+-(void) removeCache
+{
+    self.picdic = nil;
+    self.picdic = [ [ [ NSMutableDictionary alloc ] initWithCapacity:0 ] autorelease ];
+}
 
 -(NSMutableDictionary *) getPagingDct:(NSInteger)start:(NSInteger)end
 {
@@ -67,9 +74,41 @@
     return loc;
 }
 
--(void) asyncGetPic:path:num
+-(UIImage *) getCachePic:(NSNumber *)idx
 {
-    [ self.api asyncGetPic:path :num ];
+    NSObject *obj = [self.picdic objectForKey:idx ];
+    if ( [ obj isKindOfClass:[UIImage class] ] )
+    {
+        return (UIImage *)obj;
+    }
+    else
+    {
+        return nil;
+    }
+} 
+
+-(void) asyncGetPic:(NSString *)path:(NSNumber *)idx
+{
+    NSObject *obj = [self.picdic objectForKey:idx ];
+    if ( [ obj isKindOfClass:[UIImage class] ] )
+    {
+        //done...
+        //NSLog(@"asyncgetpic done %@", idx);
+        return;
+    }
+    else if ( [ obj isKindOfClass:[NSString class]] )
+    {
+        //pending...
+        //NSLog(@"asyncgetpic pending %@", idx);
+        return;
+    }
+    else
+    {
+        //NSLog(@"asyncgetpic getting %@", idx);
+        [ self.picdic setObject:path forKey:idx ];
+        [ self.api asyncGetPic:path :idx];
+        return;
+    }
 }
 
 -(void) getNext
@@ -135,7 +174,7 @@
     [ self.api cancelAsyncPicDownloads ];
     self.call_in_progress = NO;
     
-    //  TODO: probably should wait until calls are flushed...
+    //  TODO: probably should spin wait until calls are flushed/actually canceled...
 }
 
 -(void) finished
@@ -150,6 +189,8 @@
     self.api = nil;
     self.search = nil;
     self.djs = nil;
+    self.picdic = nil;
+    self.delegate = nil;
     
     [ super dealloc ];
 }
@@ -215,6 +256,14 @@
 {
     if (self.delegate!=nil)
     {
+        if ( ufc.status == 0 )
+        {
+            [ self.picdic setObject:ufc.img forKey:ufc.idx ];
+        }
+        else
+        {
+            NSLog(@"error img download");
+        }
         [self.delegate got_pic:ufc ];
     }
 }

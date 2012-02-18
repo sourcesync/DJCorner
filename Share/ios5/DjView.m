@@ -13,10 +13,11 @@
 #import "DjsCell.h"
 #import "AdsCell.h"
 
+//#define GET_PIC_ASYNC
+
 @implementation DjView
 
 @synthesize tv=_tv;
-//@synthesize djs=_djs;
 @synthesize getter=_getter;
 @synthesize activity=_activity;
 @synthesize button_back=_button_back;
@@ -29,11 +30,8 @@
 @synthesize all_djs=_all_djs;
 @synthesize top50=_top50;
 @synthesize button_AllTop50=_button_AllTop50;
-@synthesize pics=_pics;
-@synthesize pic=_pic;
-@synthesize picTemp=_picTemp;
 @synthesize VIP=_VIP;
-@synthesize visiblePath=_visiblePath;
+@synthesize scrolling=_scrolling;
 
 #pragma - funcs...
 
@@ -44,7 +42,7 @@
         [ self.getter finished ];
         self.getter = nil;
     }
-    self.getter =  [ [ DJSGetter alloc ] init ];
+    self.getter =  [ [ [ DJSGetter alloc ] init ] autorelease ];
     self.getter.delegate = self;
     NSString *search = self.search;
     self.getter.search = search;
@@ -56,6 +54,11 @@
     [ self.tv reloadData ];
     self.tv.hidden = NO;
     self.activity.hidden = YES;
+    
+    if ( !self.scrolling )
+    {
+        [ self loadImagesForOnscreenRows ];
+    }
 }
 
 
@@ -84,28 +87,20 @@
 
 -(void) dealloc
 {
-    
-    //self.djs = nil;
- 
     self.getter = nil;
     self.search = nil;
-    self.pics=nil;
-    self.pic=nil;
-    self.picTemp =nil;
-     /*
-   // [self.djs release];
-    [self.getter release];
-    [self.search release];
-    [self.pics release];
-    [self.pic release];
-    [self.picTemp release];
-    */
     [ super dealloc ];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    [ Utility AlertLowMemory ];
+    
+    //  Reduce getter footprint...
+    [ self.getter cancel];
+    [ self.getter removeCache ];
 }
 
 #pragma mark - View lifecycle
@@ -126,8 +121,6 @@
     self.field_search.clearsOnBeginEditing = YES;
     self.field_search.returnKeyType = UIReturnKeySearch;
     
-    self.pics=[[NSMutableDictionary alloc] init];
-    
     self.all_djs = NO;
     self.segment_dj.selectedSegmentIndex=1;
     self.top50=YES;
@@ -142,6 +135,7 @@
 {
 	[super viewWillDisappear:animated];
     
+    
     [ self.getter cancel];
 }
 
@@ -151,7 +145,8 @@
     
     djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.VIP=app.VIP;
-    [self.tv performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    
+    //[self.tv performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     
     if (self.back_from) 
     {
@@ -159,15 +154,15 @@
     }
     else
     {
-        //self.djs = nil;
         [ self.tv setHidden:YES];
-        //[ self.activity startAnimating ];
     }
 }
 
 -(void)viewDidAppear:(BOOL)animated
 {
     [ super viewDidAppear:animated];
+    
+    
     if (self.back_from)
     {
         self.back_from = NO;
@@ -180,7 +175,11 @@
         self.field_search.text = @"";
         [ self newGetter ];
         [ self.getter getNext ];
+        
     }
+    
+    self.scrolling = NO; // TODO: why do i need this when return to the tab?...
+    
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
@@ -217,11 +216,19 @@
         }
         else if ( end == (count-1) )
         {
+#ifdef ADS
             return count+count/(ADSPOSITION+1)*self.VIP;
+#else
+            return count;
+#endif
         }
         else
         {
+#ifdef ADS
             return count+1+(count+1)/(ADSPOSITION+1)*self.VIP;
+#else
+            return count + 1;
+#endif
         }
     }
 }
@@ -285,6 +292,7 @@
     {
         NSInteger row = [ indexPath row ];
         
+#ifdef ADS
         if((self.VIP==1)&&row>0&&((row+1)%(ADSPOSITION+1)==0))
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
@@ -302,8 +310,10 @@
             
             return cell;
         }
-        
         else if ( row == ([ self.getter.djs count]+row/(ADSPOSITION+1)*self.VIP) )  // get more button...
+#else
+        if ( row == ([ self.getter.djs count] ) )
+#endif
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -322,111 +332,140 @@
         }
         else
         {
-            //UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"djitem_cell"];
+            //  Get/create the cell...
             UITableViewCell *tcell=[tableView dequeueReusableCellWithIdentifier:[DjsCell reuseIdentifier]];
             if (tcell == nil) 
             {
-                tcell = [[[ DjsCell alloc] init ]  autorelease];
+                tcell = [[[ DjsCell alloc] init ] autorelease];
             }
             DjsCell *cell=(DjsCell *)tcell;
-            //[cell autorelease];
-            UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
-            //[ cell.imageView setImage:imgAll ];
-            
- 
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.selectionStyle = UITableViewCellSelectionStyleBlue;
-            //cell.textLabel.textColor = [ UIColor blackColor ];
+            cell.textLabel.textColor = [ UIColor blackColor ];
             cell.content.textColor=[UIColor blackColor];
             cell.content.font=[UIFont systemFontOfSize:17];
-            
-            //cell.textLabel.font = [ UIFont systemFontOfSize:17 ];
-            //  Get dj object...
+                        
+            //  Get dj info object...
+#ifdef ADS
             DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
+#else
+            DJ *dj = [ self.getter.djs objectAtIndex:row ];
+#endif
+            //  Set dj text...
+            NSString *str = [ NSString stringWithFormat:@"%@",dj.name];
+            //cell.textLabel.text = str;
+            cell.content.text=str;
             
-            //NSData *data = [ NSData dataWithContentsOfURL:[NSURL URLWithString:dj.pic_path]];
-            //UIImage *img=[UIImage imageWithData:data];
-            
-            //[cell.imageView setImage:img];
-            
-            //float sw=img.size.width/cell.imageView.image.size.width;
-            //float sh=img.size.height/cell.imageView.image.size.height;
-            //cell.imageView.transform=CGAffineTransformMakeScale(sw, sh);
-            
-            self.pic=dj.pic_path;
-            _visiblePath = tableView.indexPathsForVisibleRows;
-            NSLog(@"all row num%d",[_visiblePath count]);
-     
-            if(self.pic!=nil)
+            //  Get dj pic or use default?...
+            cell.icon.image = nil; // Clear reused image just in case...
+            if ( dj.pic_path )
             {
-                /*
-                if(self.top50==YES)
-                {
-                    self.picTemp= [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpictop50",row]];
-                }
-                else
-                {
-                    self.picTemp= [[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpicall",row]];
-                }
-                
-                if(self.picTemp!=nil)
-                {
-                    [cell.icon setImage:[UIImage imageWithData:self.picTemp]];
-                    self.picTemp=nil;
-                }
-                else*/
-                {
-                    NSNumber *num = [ NSNumber numberWithInteger:row];
-                    [self.getter asyncGetPic:self.pic :num];
-                    [cell.activity setHidden:NO];
-                    [ cell.activity startAnimating];
-                    [ cell.icon setHidden:YES ];
-                }
+                //NSLog(@"%@", dj.pic_path);
+                [ self loadImageForRow:cell:indexPath ];
             }
             else
             {
-                [cell.icon setImage:imgAll];
-                [cell.icon setHidden:NO];
-            }
-            
-            //  Set name...
-            if ( self.all_djs )
-            {
-                //[cell.imageView setImage:[self.getter.djs g
-                //cell.textLabel.text = dj.name;
-                cell.content.text=dj.name;
-            }
-            else // also show rating...
-            {
-               // NSString *str = [ NSString stringWithFormat:@"%@ - #%d",dj.name,dj.rating];
-                NSString *str = [ NSString stringWithFormat:@"%@",dj.name];
-                //cell.textLabel.text = str;
-                cell.content.text=str;
+                UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
+                cell.icon.image = imgAll;
             }
             
             return cell;   
         }
     }
 }
-//-(void)loadImagesForOnscreenRows{
-//
-// 
-//    NSLog(@"nummmmmmm%d",[_visiblePath count]);//bad_ext already free neicun(don't should) 
-//     
-//
-//}
+
+-(void)loadImageForRow: (DjsCell *)tcell: (NSIndexPath *)path
+{
+    int row = [ path row ];
+    NSNumber *idx = [ NSNumber numberWithInt:row ];
+    
+    //  If type DJcell...
+    if ( [ tcell isKindOfClass: [ DjsCell class ] ] )
+    {
+        DjsCell *djc = (DjsCell *)tcell;
+        
+        //  See if its in cache...
+        UIImage *img = [ self.getter getCachePic:idx ];
+        if (img)
+        {
+            DjsCell *djc = (DjsCell *)tcell;
+            djc.icon.image = img;
+            [djc.activity setHidden:YES];
+            [djc.icon setHidden:NO];
+        }
+        //  Else launch async loading if not scrolling...
+        else if (! self.scrolling )
+        {
+            int row = [ path row ];
+            
+            //NSLog(@"async get pic! %d", row);
+            //  Get info for this cell...
+#ifdef ADS
+            DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
+#else
+            DJ *dj = [ self.getter.djs objectAtIndex:row ];
+#endif
+            
+            //NSLog(@"after djinfo %@ %@", dj.pic_path, idx);
+            
+            if ( dj.pic_path )
+            {
+#if 1
+                //  Launch the getter...
+                [ self.getter asyncGetPic:dj.pic_path:idx ];
+#endif
+                [djc.activity setHidden:NO];
+                [djc.activity startAnimating];
+                [djc.icon setHidden:YES ];
+            }
+        }
+    }
+}
+
+-(void)loadImagesForOnscreenRows
+{
+    //  Get all visible cell paths...
+    NSArray *paths = [ self.tv indexPathsForVisibleRows ];
+    for ( int i=0; i< [paths count];i++)
+    {
+        //  Get path for cell...
+        NSIndexPath *path = [ paths objectAtIndex:i ];
+        
+        UITableViewCell *cell = [ self.tv cellForRowAtIndexPath:path ];
+        
+        if ( [ cell isKindOfClass:[ DjsCell class ] ] )
+        {
+            DjsCell *dcell = (DjsCell *)cell;
+            
+            [ self loadImageForRow:dcell:path ];
+        }
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if (!self.tv.hidden)
+    {
+        self.scrolling = YES;
+        //NSLog(@"scroll start");
+    }
+}
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
-    if (!decelerate)
-	{
-        //[self loadImagesForOnscreenRows];
-    }
+    self.scrolling = NO;
+    //NSLog(@"scroll stop thread=%d", [ NSThread isMainThread]);
+    
+    [self loadImagesForOnscreenRows];
+    
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
-   // [self loadImagesForOnscreenRows];
+    self.scrolling = NO;
+    //NSLog(@"decel stop=%d", [ NSThread isMainThread]);
+    
+   [self loadImagesForOnscreenRows];
 }
 
 /*
@@ -441,26 +480,33 @@
     //if the keyboard appears,resign it
     [self.field_search resignFirstResponder];
     
-    
     int row = [ indexPath row ];
     
+#ifdef ADS
     if((self.VIP==1)&&row>0&&((row+1)%(ADSPOSITION+1)==0))
     {
         return;
     }
     else
+#endif
     {
         [ tableView deselectRowAtIndexPath:indexPath animated:YES];
         
+#ifdef ADS
         if ((self.VIP==1)&&(row ==( [self.getter.djs count]+self.getter.djs.count%(ADSPOSITION+1)*self.VIP)) )
+#else
+        if ( row ==( [self.getter.djs count] ) )
+#endif
         {
             [ self.getter getNext ];
         }
         else
         {
-            
+#ifdef ADS
             DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
-            
+#else
+            DJ *dj = [ self.getter.djs objectAtIndex:row ];
+#endif
             djcAppDelegate *app = 
             ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
             
@@ -473,6 +519,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+#ifdef ADS
     if((self.getter.djs==nil)||([self.getter.djs count]==0)||
        ([self.getter.djs count]==([indexPath row]-indexPath.row/(ADSPOSITION+1)*self.VIP)))
     {
@@ -484,14 +531,25 @@
     }
     else
     {
+        return [ DjsCell height ];
+    }
+#else
+    if((self.getter.djs==nil)||([self.getter.djs count]==0))   
+    {
+        return 44;
+    }
+    else
+    {
         return 75.0f;
     }
+#endif
 }
 
 #pragma mark - djs getter delegate...
 
 -(void) got_djs:(NSInteger)start :(NSInteger)end
 {
+    //  Stop the activity indicator...
     if (!self.activity.hidden)
     {
         self.activity.hidden = YES;
@@ -499,8 +557,10 @@
         self.tv.hidden = NO;
     }
     
+    //  Got more, so tell the view...
     [ self updateViews ];
     
+    //  Keep getting until we got all...
     if ( !self.getter.got_all )
     {
         [self.getter  getNext];
@@ -509,32 +569,31 @@
 
 -(void) got_pic:(UIImageForCell *)img
 {
-    int row = [ img.idx integerValue ];
-    
-    //[self.pics setValue:img.img forKey:[NSString stringWithFormat:@"%dpic",row]];
-    //self.pic=nil;
-    /*
-    NSAutoreleasePool *pool=[[NSAutoreleasePool alloc] init];
-    if(self.top50==YES)
+    //  Update the image only if not scrolling...
+    if ( !self.scrolling )
     {
-        [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpictop50",row]];
+        //  If image is valid update the related cell...
+        if (img.status==0)
+        {
+            //  Get the row index...
+            int row = [ img.idx integerValue ];
+    
+            //  Path for this row...
+            NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
+    
+            //  Get the cell for this row...
+            UITableViewCell *tcell = [ self.tv cellForRowAtIndexPath:path ];
+            DjsCell *cell = (DjsCell *)tcell;
+    
+            //  Set image...
+            cell.icon.hidden = NO;
+            [ cell.icon setImage:img.img ];
+    
+            //  Turn off loading anim...
+            [ cell.activity stopAnimating ];
+            cell.activity.hidden = YES;
+        }
     }
-    else
-    {
-        [[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(img.img) forKey:[NSString stringWithFormat:@"%dpicall",row]];
-    }
-    
-    [pool drain];
-    
-    */
-    
-    NSIndexPath *path = [NSIndexPath indexPathForRow:row inSection:0 ];
-    
-    DjsCell *cell = (DjsCell *)[ self.tv cellForRowAtIndexPath:path ];
-    [cell.activity setHidden:YES];
-    [ cell.activity stopAnimating ];
-    [ cell.icon setImage:img.img];
-    [ cell.icon setHidden:NO ];
 }
 
 -(void) failed
@@ -546,9 +605,12 @@
 
 -(IBAction) refreshClicked: (id)sender
 {
-    self.tv.hidden = YES;
-    self.activity.hidden = NO;
     [ self newGetter ];
+    
+    self.activity.hidden = NO;
+    [ self.tv reloadData ];
+    self.tv.hidden = YES;
+    
     [ self.getter getNext ];
 }
 
@@ -606,6 +668,8 @@
         self.all_djs=NO;
         self.button_AllTop50.title=@"All";
     }
+    
+    
     
     [self refreshClicked:nil];
 }

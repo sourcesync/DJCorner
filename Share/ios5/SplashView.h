@@ -10,12 +10,11 @@
 #import <MediaPlayer/MPMoviePlayerController.h>
 
 
-
-
 @interface SplashView : UIViewController 
 {
+#ifdef INTRO
     MPMoviePlayerController *theMovie;
-         
+#endif
 }
 
 //  IBOUTLET...
@@ -24,7 +23,10 @@
 //  PUBLIC FUNCS...
 -(void) splashDoneMainThread:(id)obj;
 -(void) splashDone:(id)obj; 
+
+#ifdef INTRO
 -(void)video_play:(NSString*)filename;
+#endif
 
 @end
 

@@ -57,10 +57,18 @@
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:NO];
     
-    
 }
 
+-(void)viewDidAppear:(BOOL)animated
+{
+    [ super viewDidAppear:animated ];
+    
+    //  Do some deferred app loading...
+    djcAppDelegate * app = ( djcAppDelegate *)[ [ UIApplication sharedApplication ] delegate ];
+    [ app prepModals ];
+}
 
+#ifdef INTRO
 -(void)playMovieAtURL:(NSURL*)theURL
 {
     theMovie= [[MPMoviePlayerController alloc] initWithContentURL:theURL];
@@ -81,7 +89,9 @@
         [theMovie play];
     }
 }
+#endif
 
+#ifdef INTRO
 // When the movie is done,release the controller.
 - (void)myMovieFinishedCallback:(NSNotification*)aNotification
 {
@@ -89,20 +99,26 @@
     [[NSNotificationCenter defaultCenter] removeObserver:self
                                                     name:MPMoviePlayerPlaybackDidFinishNotification
                                                   object:theMovie];
-    NSLog(@"finished");  
+    //NSLog(@"finished");  
     [theMovie release];
     [ self performSelectorOnMainThread:@selector(splashDone:)
                             withObject:self 
                          waitUntilDone:NO ];
 } 
+#endif
+
+#ifdef INTRO
+yoyoyoy o  455
 // play video
 - (void)video_play:(NSString*)filename
 {
     NSString* file = [[NSBundle mainBundle] pathForResource:filename ofType:@"mp4"];
     NSURL* url = [NSURL fileURLWithPath:file];
-    NSLog(@"Playing URL: %@", url);
+    //NSLog(@"Playing URL: %@", url);
     [self playMovieAtURL:url];
 }
+#endif
+
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -125,8 +141,11 @@
 
 -(void) splashDoneMainThread:(id)obj
 {
+#ifdef INTRO
     [self video_play:@"DGNYE Logo"];
+#endif
     
+    [ self splashDone:self ];
 }
 
 -(void) splashDone:(id)obj

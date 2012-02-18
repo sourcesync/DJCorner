@@ -11,8 +11,12 @@
 
 @implementation UIImageForCell
 
+// RETAIN...
 @synthesize img=_img;
 @synthesize idx=_idx;
+
+//  ASSIGN..
+@synthesize status;
 
 -(void) dealloc
 {

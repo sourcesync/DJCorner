@@ -345,14 +345,19 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#ifdef ADS
     //return [ self.cities count ]+self.cities.count/(ADSPOSITION+1) ;
     return  [self.allEvents count]+1+(self.dataForTable.count+1)/(ADSPOSITION+1)*self.modeList*self.VIP;
+#else
+    return  [self.allEvents count];
+#endif
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     int row = [ indexPath row ];
+#ifdef ADS
     if((self.modeList==1&&self.VIP==1)&&row>0&&(row+1)%(ADSPOSITION+1)==0)
     {
         UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
@@ -369,6 +374,7 @@
         return cell;
     }
     else
+#endif
     {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                  @"search_cell"];
@@ -385,7 +391,14 @@
         }
         else
         {
-            [cell.textLabel setText:[[self.dataForTable valueForKey:[NSString stringWithFormat:@"%d",(row-1-self.VIP*self.modeList*row/(ADSPOSITION+1))]] valueForKey:@"city"]];
+#ifdef ADS
+            [cell.textLabel setText:[[self.dataForTable valueForKey:
+                [NSString stringWithFormat:@"%d",
+                 (row-1-self.VIP*self.modeList*row/(ADSPOSITION+1))]] valueForKey:@"city"]];
+#else
+            [cell.textLabel setText:[[self.dataForTable valueForKey:
+                                      [NSString stringWithFormat:@"%d", row]] valueForKey:@"city"]];
+#endif
         }
         
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
@@ -409,10 +422,12 @@
     {
         [ app doSearch:self:nil];
     }
+#ifdef ADS
     else if((self.modeList==1&&self.VIP==1)&&row>0&&(row+1)%(ADSPOSITION+1)==0)
     {
         return;
     }
+#endif
     else
     {
         UITableViewCell *cell = [ self.tv cellForRowAtIndexPath:indexPath ];
@@ -427,10 +442,12 @@
     {
         return 30;
     }
+#ifdef ADS
     if((self.modeList==1&&self.VIP)&&(indexPath.row>0)&&((indexPath.row+1)%(ADSPOSITION+1)==0))
     {
         return 90.0f;
     }
+#endif
     return 40;
 }
  

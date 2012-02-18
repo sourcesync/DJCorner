@@ -36,8 +36,8 @@
 @synthesize header=_header;
 @synthesize back_from;
 @synthesize all_djs;
-@synthesize picTemp=_picTemp;
 @synthesize VIP=_VIP;
+@synthesize scrolling=_scrolling;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -55,19 +55,16 @@
     self.location_manager = nil;
     self.getter = nil;
     self.cur_search = nil;
-    self.picTemp=nil;
-     /*
-    [self.location_manager release];
-    [self.getter release];
-    [self.cur_search release];
-    [self.picTemp release];
-    */
+    
     [super dealloc];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+    
+    [ self.getter cancel];
+    [ self.getter removeCache ];
 }
 
 #pragma mark - View lifecycle...
@@ -139,7 +136,8 @@
     
     djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
     self.VIP=app.VIP;
-    [self.tv performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
+    [self.tv 
+        performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     
     if ( self.back_from )
     {
@@ -197,6 +195,8 @@
             [ self.activity stopAnimating ];
         }
     }
+    
+    self.scrolling = NO;
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -232,8 +232,7 @@
     self.activity.hidden = YES;
     [ self.activity stopAnimating ];
     
-    [ Utility AlertMessage:@"API call failed."];
-    //[ Utility AlertAPICallFailedWithMessage:errMsg ];    
+    [ Utility AlertMessage:@"API call failed."];    
     [ self updateViews ];
 }
 
@@ -261,19 +260,33 @@
     }
 }
 
--(void) got_pic:(UIImageForCell *)ufc
+-(void) got_pic:(UIImageForCell *)img
 {
-    int row = [ ufc.idx integerValue ];
-    
-    //[[NSUserDefaults standardUserDefaults] setObject:UIImagePNGRepresentation(ufc.img) forKey:[NSString stringWithFormat:@"%dpicinevents",row]];
-    
-    NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
-    
-    EventCell *cell = (EventCell *)[ self.tv cellForRowAtIndexPath:path ];
-    [ cell.activity stopAnimating ];
-    [ cell.icon setImage:ufc.img];
-
-    [ cell.icon setHidden:NO ];
+    //  Update the image only if not scrolling...
+    if ( !self.scrolling )
+    {
+        //  If image is valid update the related cell...
+        if (img.status==0)
+        {
+            //  Get the row index...
+            int row = [ img.idx integerValue ];
+            
+            //  Path for this row...
+            NSIndexPath *path = [ NSIndexPath indexPathForRow:row inSection:0 ];
+            
+            //  Get the cell for this row...
+            UITableViewCell *tcell = [ self.tv cellForRowAtIndexPath:path ];
+            EventCell *cell = (EventCell *)tcell;
+            
+            //  Set image...
+            cell.icon.hidden = NO;
+            [ cell.icon setImage:img.img ];
+            
+            //  Turn off loading anim...
+            [ cell.activity stopAnimating ];
+            cell.activity.hidden = YES;
+        }
+    }
 }
 
 #pragma mark - assorted funcs...
@@ -311,11 +324,14 @@
 
 -(void) updateViews
 {
-    
-    
     //  refresh the views...
     [ self.tv reloadData ];
     [ self refreshMap ];
+    
+    if ( !self.scrolling )
+    {
+        [ self loadImagesForOnscreenRows ];
+    }
 }
 
 -(void) clearEvents
@@ -343,11 +359,105 @@
     self.mode = EventViewList;
     self.buttonMapList.title = @"map";
 }
-
+ 
 -(void) getMore
 {
     [ self.getter getNext ];
 }
+
+-(void)loadImageForRow: (EventCell *)tcell: (NSIndexPath *)path
+{
+    int row = [ path row ];
+    NSNumber *idx = [ NSNumber numberWithInt:row ];
+    
+    //  If type DJcell...
+    if ( [ tcell isKindOfClass: [ EventCell class ] ] )
+    {
+        EventCell *evc = (EventCell *)tcell;
+        
+        //  See if its in cache...
+        UIImage *img = [ self.getter getCachePic:idx ];
+        if (img)
+        {
+            evc.icon.image = img;
+            [evc.activity setHidden:YES];
+            [evc.icon setHidden:NO];
+        }
+        //  Else launch async loading if not scrolling...
+        else if (! self.scrolling )
+        {
+            int row = [ path row ];
+            
+            //NSLog(@"async get pic! %d", row);
+            //  Get info for this cell...
+#ifdef ADS
+            Event *ev = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
+#else
+            Event *ev = [ self.getter.events objectAtIndex:row ];
+#endif
+            
+            //NSLog(@"after evinfo %@ %@", ev.pic_path, idx);
+            
+            if (ev.pic_path )
+            {
+#if 1
+                //  Launch the getter...
+                [ self.getter asyncGetPic:ev.pic_path:idx ];
+#endif
+                [evc.activity setHidden:NO];
+                [evc.activity startAnimating];
+                [evc.icon setHidden:YES ];
+            }
+        }
+    }
+}
+
+-(void)loadImagesForOnscreenRows
+{
+    //  Get all visible cell paths...
+    NSArray *paths = [ self.tv indexPathsForVisibleRows ];
+    for ( int i=0; i< [paths count];i++)
+    {
+        //  Get path for cell...
+        NSIndexPath *path = [ paths objectAtIndex:i ];
+        
+        UITableViewCell *cell = [ self.tv cellForRowAtIndexPath:path ];
+        
+        if ( [ cell isKindOfClass:[ EventCell class ] ] )
+        {
+            EventCell *ecell = (EventCell *)cell;
+            
+            [ self loadImageForRow:ecell:path ];
+        }
+    }
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    if ( !self.tv.hidden )
+    {
+        self.scrolling = YES;
+        //NSLog(@"scroll start");
+    }
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
+{
+    self.scrolling = NO;
+    //NSLog(@"scroll stop thread=%d", [ NSThread isMainThread]);
+    
+    [self loadImagesForOnscreenRows];
+    
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    self.scrolling = NO;
+    //NSLog(@"decel stop=%d", [ NSThread isMainThread]);
+    
+    [self loadImagesForOnscreenRows];
+}
+
 
 #pragma mark - table view delegate stuff...
 
@@ -377,7 +487,11 @@
         {
             count += 1;
         }
+#ifdef ADS
         return count+count/(ADSPOSITION+1)*self.VIP;
+#else
+        return count;
+#endif
     }
 }
 
@@ -429,6 +543,7 @@
     {
         NSInteger row = ([ indexPath row ]);
         
+#ifdef ADS
         //add ads....
         if((self.VIP==1)&&(row>0)&&((row+1)%(ADSPOSITION+1)==0))
         {
@@ -446,6 +561,9 @@
             return cell;
         }
         else if ( row ==( [ self.getter.events count] +row/(ADSPOSITION+1)*self.VIP))  // get more button...
+#else
+        if ( row ==( [ self.getter.events count] ) ) // get more button...
+#endif
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
                                      @"getmore_cell"];
@@ -471,8 +589,14 @@
             }
         
             EventCell *cell = (EventCell *)cl;
+            
+            
             int row = [ indexPath row ];
+#ifdef ADS
             Event *event = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
+#else
+            Event *event = [ self.getter.events objectAtIndex:row ];
+#endif
          
             //  venue name...
             NSString *vname = [NSString stringWithFormat:@"%@, %@",event.venue,event.city];
@@ -500,34 +624,20 @@
             //  distance...
             NSString *dstr = [ NSString stringWithFormat:@"%.1f mi",event.distance ];
             cell.distance.text = dstr;
-        
-            //  Initiate getting the pic...
-            NSString *pp = event.pic_path;
-        
-            if ( pp != nil )
-            {     
-                /*
-                self.picTemp=[[NSUserDefaults standardUserDefaults] objectForKey:[NSString stringWithFormat:@"%dpicinevents",row]];
-                if(self.picTemp!=nil)
-                {
-                    [cell.icon setImage:[UIImage imageWithData:self.picTemp]];
-                    [cell.icon setHidden:NO];
-                    self.picTemp=nil;
-                }
-                else*/
-                {
-                    NSNumber *num = [ NSNumber numberWithInteger:row];
-                    [ self.getter asyncGetPic:pp:num];
-                    
-                    [ cell.activity startAnimating ];
-                    [ cell.icon setHidden:YES ];
-                }
-                
+            
+            //  Get dj pic or use default?...
+            cell.icon.image = nil; // clear reused image just in case...
+            if ( event.pic_path )
+            {
+                //NSLog(@"%@", event.pic_path);
+                [ self loadImageForRow:cell:indexPath ];
             }
             else
             {
-                [ cell.icon setHidden:YES ];
+                UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
+                cell.icon.image = imgAll;
             }
+
         
             return cell;   
         }
@@ -536,6 +646,7 @@
 
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+#ifdef ADS
     if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
         ([self.getter.events count]==([indexPath row]-indexPath.row/(ADSPOSITION+1)*self.VIP)))
     {
@@ -549,6 +660,17 @@
     {
         return 75.0f;
     }
+#else
+    if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
+        ([self.getter.events count]==([indexPath row])) )
+    {
+        return 44;
+    }
+    else
+    {
+        return 75.0f;
+    }
+#endif
 }
 
 #if 0
@@ -564,19 +686,25 @@
     
     [ tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+#ifdef ADS
     if((self.VIP==1)&&row>0&&((row+1)%(ADSPOSITION+1)==0))
     {
         return;
     }
     else if (row == ([self.getter.events count]+self.getter.events.count/(ADSPOSITION+1)*self.VIP) )
+#else
+       if (row == ([self.getter.events count]))
+#endif
     {
         [ self getMore ];
     }
     else
     {
+#ifdef ADS
         Event *ev = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
-     
-        
+#else
+        Event *ev = [ self.getter.events objectAtIndex:row ];
+#endif
         [ self.getter cancel ];
         
         djcAppDelegate *app = 

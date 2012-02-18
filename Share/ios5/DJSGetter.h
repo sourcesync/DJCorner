@@ -24,6 +24,12 @@
 } 
 
 
+//  RETAIN... 
+@property (nonatomic, retain) NSMutableArray *djs;
+@property (nonatomic, retain) DJCAPI *api;
+@property (nonatomic, retain) NSString *search;
+@property (nonatomic, retain) NSMutableDictionary *picdic;
+
 //  ASSIGN...
 @property (nonatomic, assign) id<DJSGetterDelegate> delegate;
 @property (nonatomic, assign) NSInteger total_to_get;
@@ -32,13 +38,6 @@
 @property (nonatomic, assign) double latitude;
 @property (nonatomic, assign) double longitude;
 @property (nonatomic, assign) BOOL connectionProblem;
-
-//  RETAIN... 
-@property (nonatomic, retain) NSMutableArray *djs;
-@property (nonatomic, retain) DJCAPI *api;
-@property (nonatomic, retain) NSString *search;
-
-//  ASSIGN...
 @property (assign) NSInteger end;
 @property (assign) BOOL all_djs;
 @property (assign) BOOL got_all;
@@ -47,8 +46,10 @@
 -(id)   init;
 -(void) getNext; 
 -(void) cancel;
--(void) asyncGetPic:pp:num;
+-(void) asyncGetPic:(NSString *)pp:(NSNumber *)idx;
 -(void) finished;
+-(UIImage *) getCachePic:(NSNumber *)num;
+-(void) removeCache;
 
 @end
  

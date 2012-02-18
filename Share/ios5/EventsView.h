@@ -13,8 +13,11 @@
 #import "DJCAPI.h"
 #import "EventsGetter.h"
 #import "AdsCell.h"
+#import "EventCell.h"
 
+#ifdef ADS
 #define ADSPOSITION 4
+#endif
 
 enum EventViewMode
 {
@@ -31,12 +34,10 @@ enum EventViewMode
 
 }
 
-
 //  RETAIN...
 @property (nonatomic, retain) CLLocationManager *location_manager;
 @property (nonatomic, retain) EventsGetter *getter;
 @property (nonatomic, retain) NSString *cur_search;
-@property (nonatomic, retain) NSMutableData *picTemp;
 
 //  IBOUTLET...
 @property (nonatomic, retain) IBOutlet UITableView *tv;
@@ -55,6 +56,7 @@ enum EventViewMode
 @property (nonatomic, assign) BOOL back_from;
 @property (nonatomic, assign) BOOL all_djs;
 @property (nonatomic, assign) int VIP;
+@property (nonatomic, assign) BOOL scrolling;
 
 
 //  PUBLIC FUNCS...
@@ -70,5 +72,7 @@ enum EventViewMode
 -(IBAction)searchClicked:(id)sender;
 -(IBAction)buttonMapListClicked:(id)sender;
 -(IBAction)segmentDJClicked:(id)sender;
+-(void)loadImageForRow: (EventCell *)tcell: (NSIndexPath *)path;
+-(void)loadImagesForOnscreenRows;
 
 @end

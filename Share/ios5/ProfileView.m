@@ -333,7 +333,7 @@
 {
     if(buttonIndex==1)
     {
-        NSLog(@"this is one");
+        //NSLog(@"this is one");
         djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
         app.VIP=0;
         if(app.VIP==0)
@@ -367,6 +367,8 @@
     djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
     [app showFeedback:self :nil];
 }
+
+#ifdef INTRO
 -(IBAction)stopMusic:(id)sender{
     
     
@@ -384,10 +386,7 @@
         [[app player] play];
         
     }
-    
-    
-    
-    
 }
+#endif
 
 @end

@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-#define MATCHVIEWCELL_HEIGHT 65
-#define EXTRA 10
+#define DJCELL_HEIGHT 75
+//#define EXTRA 10
 
 @interface DjsCell : UITableViewCell
 
