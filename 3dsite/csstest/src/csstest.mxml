@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:flexiframe="http://code.google.com/p/flex-iframe/"
+			   minWidth="955" minHeight="600" backgroundColor="#D42F2F">
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	 
+<fx:Style> 
+	@namespace s "library://ns.adobe.com/flex/spark";
+	.sampleStyle 
+	{   
+		font-family:CenturyGothic, helvetica, verdana, sans-serif; 
+		margin:0 0 2px 0; 
+		font-weight:normal;
+		color:#ffffff;
+		text-shadow: 1px 2px 1px #000000;
+		border-radius: 8px; 
+		
+		padding:10px;
+		margin-top:20px;
+		min-height:350px;
+		background:#655555;
+	}  	
+	
+	.contentWrap
+	{
+		-webkit-border-radius: 8px;
+		-moz-border-radius: 8px;
+		border-radius: 8px; 
+		padding:10px;
+		margin-top:20px;
+		min-height:350px;	
+	}
+	
+	.grid01
+	{
+		background-color:#655555;
+		font-size:.725em;
+		border-collapse:collapse;
+		width:100%;
+	}
+</fx:Style>
+ 
+	
+	<mx:Button id="myButton" label="Click Me" styleName="sampleStyle"  color="#655555" />
+	<mx:Text x="51" y="46" width="98" height="47" styleName="sampleStyle" text="yoyoyo"/>
+	<s:Panel title="yoyoyo" x="42" y="77" width="234" height="200" styleName="sampleStyle">
+	</s:Panel>
+	<s:DataGrid x="344" y="77" width="331" height="176" contentBackgroundColor="#655555"
+				requestedRowCount="4" styleName="grid01">
+		<s:columns>
+			<s:ArrayList>
+				<s:GridColumn dataField="dataField1" headerText="Column 1"></s:GridColumn>
+				<s:GridColumn dataField="dataField2" headerText="Column 2"></s:GridColumn>
+				<s:GridColumn dataField="dataField3" headerText="Column 3"></s:GridColumn>
+			</s:ArrayList>
+		</s:columns>
+		<s:typicalItem>
+			<fx:Object dataField1="Sample Data" dataField2="Sample Data" dataField3="Sample Data"></fx:Object>
+		</s:typicalItem>
+		<s:ArrayList>
+			<fx:Object dataField1="data1" dataField2="data1" dataField3="data1"></fx:Object>
+			<fx:Object dataField1="data2" dataField2="data2" dataField3="data2"></fx:Object>
+			<fx:Object dataField1="data3" dataField2="data3" dataField3="data3"></fx:Object>
+			<fx:Object dataField1="data4" dataField2="data4" dataField3="data4"></fx:Object>
+		</s:ArrayList>
+	</s:DataGrid>
+	
+	<fx:Script><![CDATA[
+		private var iFrameHTMLContent:String = "<html><body><h1>yo</h1></body></html>";
+	]]>
+	</fx:Script>
+	
+	<!-- Example project presentation -->
+	<!--
+	<mx:ApplicationControlBar dock="true">
+		<mx:Text selectable="false">
+			<mx:htmlText><![CDATA[<font color="#000000" size="12"><b>Flex-IFrame - Simple html example</b><br>This example shows how to embed a simple Html page in a Flex application.</font>]]></mx:htmlText>
+		</mx:Text>
+	</mx:ApplicationControlBar>
+	-->
+	
+	<!--
+	<mx:ApplicationControlBar dock="true" width="500">
+		<mx:Text selectable="false" width="500">
+			<mx:htmlText><![CDATA[
+				<h1>Video and DJ Title</h1>
+				<span>This is text</span>
+				<ul class="videoTiles">
+				<li><img src="http://www.google.com" class="tile"> <br />
+				Video/DJ Title <br />
+				<img src="images/starSmallRated.png" width="10" height="8"> <img src="http://ohmboy.com/test/djc/images/starSmallRated.png" width="10" height="8"> <img src="http://ohmboy.com/test/djc/images/starSmallRated.png" width="10" height="8"> <img src="http://ohmboy.com/test/djc/images/starSmallRated.png" width="10" height="8"> <img src="http://ohmboy.com/test/djc/images/starSmallUnrated.png" width="10" height="8">
+				</li>
+				</ul>
+			]]></mx:htmlText>
+		</mx:Text>
+	</mx:ApplicationControlBar>
+	-->
+	
+	<!--
+	<mx:Panel title="A simple Html page embedded with the 'source' property"
+			  width="80%"
+			  height="80%">
+		
+		<flexiframe:IFrame id="iFrameBySource"
+						   width="100%"
+						   height="100%"
+						   source="http://www.theuniverseofallthings.com"/>
+	</mx:Panel>
+	-->
+	
+	<!-- Example using the 'content' property -->
+	<!--
+	<mx:Panel title="A simple Html page embedded with the 'content' property"
+			  width="80%"
+			  height="80%">
+		
+		<flexiframe:IFrame id="iFrameByContent"
+						   width="100%"
+						   height="100%"
+						   content="{iFrameHTMLContent}"/>
+	</mx:Panel>
+	-->
+	
+</s:Application> 

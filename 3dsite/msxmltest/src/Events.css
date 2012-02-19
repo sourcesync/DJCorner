@@ -1,0 +1,16 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+Events
+{
+	background: blue;
+	bff: yo;
+	arrowButtonWidth: 40;
+	cornerRadius: 10;
+	fontSize: "14";
+	fontWeight: "bold";
+	leading: 0;
+	paddingLeft: 10;
+	paddingRight: 10;
+}

@@ -1,0 +1,15 @@
+/* CSS file */
+@namespace s "library://ns.adobe.com/flex/spark";
+@namespace mx "library://ns.adobe.com/flex/mx";
+
+
+global
+{
+	content-background-color: #871515;
+	font-family: Arial;
+	content-background-alpha: 0.23;
+	horizontalAlign:center;
+	verticalAlign:middle;
+	
+}
+	
