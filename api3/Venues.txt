@@ -89,7 +89,6 @@ Webster Hall,New York City,USA,,NA,NA
 Pier 36,New York City,USA,40.710863;-73.982403,NA,NA
 Voyeur,San Diego,USA,32.71334;-117.160022,NA,NA
 The Observatory,Santa Ana,USA,33.699779;-117.919028,http://www.observatoryoc.com/,NA
-Centre Bell,NA,NA,,NA,NA
 JUNO Awards,Ottawa,Canada,45.449534;-75.697174,NA,NA
 Jaguel Airport,Punta Del Este,Uruguay,-34.831841;-54.893875,NA,NA
 Arena Anhembi,Sao Paulo,Brazil,-22.829352;-48.444214,NA,NA
