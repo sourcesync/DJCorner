@@ -17,7 +17,7 @@
 }
  
 
-@property (nonatomic,retain) IBOutlet UIView        *content;
+@property (nonatomic,retain) IBOutlet UIView        *mainView;
 @property (nonatomic,retain) IBOutlet UILabel       *event;
 @property (nonatomic,retain) IBOutlet UILabel       *distance;
 @property (nonatomic,retain) IBOutlet UILabel       *venue;

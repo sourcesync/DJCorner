@@ -277,6 +277,9 @@
 		B30D5F39147E1E75006F3D8A /* djc6.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F38147E1E75006F3D8A /* djc6.png */; };
 		B321621214773BDE00C7EE05 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = B321621014773BDE00C7EE05 /* SplashView.m */; };
 		B321621314773BDE00C7EE05 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B321621114773BDE00C7EE05 /* SplashView.xib */; };
+		B324D30714EF6E4D000BF33A /* EventModalParms.m in Sources */ = {isa = PBXBuildFile; fileRef = B324D30614EF6E4D000BF33A /* EventModalParms.m */; };
+		B324D30C14F0DEFE000BF33A /* EventSearchLocationBased.m in Sources */ = {isa = PBXBuildFile; fileRef = B324D30A14F0DEFE000BF33A /* EventSearchLocationBased.m */; };
+		B324D30D14F0DEFE000BF33A /* EventSearchLocationBased.xib in Resources */ = {isa = PBXBuildFile; fileRef = B324D30B14F0DEFE000BF33A /* EventSearchLocationBased.xib */; };
 		B3317273149895CD009C67CB /* DJSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = B3317271149895CD009C67CB /* DJSelectView.m */; };
 		B3317274149895CD009C67CB /* DJSelectView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3317272149895CD009C67CB /* DJSelectView.xib */; };
 		B33C829E149036BC00D7AA78 /* EventKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33C829C149036BC00D7AA78 /* EventKit.framework */; };
@@ -650,6 +653,11 @@
 		B321621014773BDE00C7EE05 /* SplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
 		B321621114773BDE00C7EE05 /* SplashView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashView.xib; sourceTree = "<group>"; };
 		B321621414773CFD00C7EE05 /* djc2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc2.png; sourceTree = "<group>"; };
+		B324D30514EF6E4D000BF33A /* EventModalParms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventModalParms.h; sourceTree = "<group>"; };
+		B324D30614EF6E4D000BF33A /* EventModalParms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventModalParms.m; sourceTree = "<group>"; };
+		B324D30914F0DEFE000BF33A /* EventSearchLocationBased.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventSearchLocationBased.h; sourceTree = "<group>"; };
+		B324D30A14F0DEFE000BF33A /* EventSearchLocationBased.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventSearchLocationBased.m; sourceTree = "<group>"; };
+		B324D30B14F0DEFE000BF33A /* EventSearchLocationBased.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventSearchLocationBased.xib; sourceTree = "<group>"; };
 		B3317270149895CD009C67CB /* DJSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJSelectView.h; sourceTree = "<group>"; };
 		B3317271149895CD009C67CB /* DJSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJSelectView.m; sourceTree = "<group>"; };
 		B3317272149895CD009C67CB /* DJSelectView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DJSelectView.xib; sourceTree = "<group>"; };
@@ -877,6 +885,41 @@
 			name = splash_view;
 			sourceTree = "<group>";
 		};
+		B324D30214EF542A000BF33A /* CTL_event */ = {
+			isa = PBXGroup;
+			children = (
+				B352AD641477858100824ED1 /* event_view */,
+			);
+			name = CTL_event;
+			sourceTree = "<group>";
+		};
+		B324D30414EF54A3000BF33A /* MAIN */ = {
+			isa = PBXGroup;
+			children = (
+				B384A99314761B1A003F0DD6 /* main */,
+			);
+			name = MAIN;
+			sourceTree = "<group>";
+		};
+		B324D30814F04F81000BF33A /* CTL_eventsearch */ = {
+			isa = PBXGroup;
+			children = (
+				B324D30914F0DEFE000BF33A /* EventSearchLocationBased.h */,
+				B324D30A14F0DEFE000BF33A /* EventSearchLocationBased.m */,
+				B324D30B14F0DEFE000BF33A /* EventSearchLocationBased.xib */,
+			);
+			name = CTL_eventsearch;
+			sourceTree = "<group>";
+		};
+		B324D30E14F0F3DE000BF33A /* SIMPLE_LOCATION */ = {
+			isa = PBXGroup;
+			children = (
+				B384A9EF14761FB9003F0DD6 /* SimpleLocation.h */,
+				B384A9F014761FB9003F0DD6 /* SimpleLocation.m */,
+			);
+			name = SIMPLE_LOCATION;
+			sourceTree = "<group>";
+		};
 		B331726E149895A9009C67CB /* djselect_view */ = {
 			isa = PBXGroup;
 			children = (
@@ -900,7 +943,6 @@
 		B352AD641477858100824ED1 /* event_view */ = {
 			isa = PBXGroup;
 			children = (
-				B3F3C13E147C7D8300C4D210 /* BuyCell */,
 				B352AD661477859200824ED1 /* EventView.h */,
 				B352AD671477859200824ED1 /* EventView.m */,
 				B352AD681477859200824ED1 /* EventView.xib */,
@@ -908,17 +950,18 @@
 			name = event_view;
 			sourceTree = "<group>";
 		};
-		B3571FBD14EF128700780B97 /* DLG_dj */ = {
+		B3571FBD14EF128700780B97 /* CTL_dj */ = {
 			isa = PBXGroup;
 			children = (
 				B37B6C1614A4676D0093BA4D /* djitem_view */,
 			);
-			name = DLG_dj;
+			name = CTL_dj;
 			sourceTree = "<group>";
 		};
 		B3571FBE14EF13AD00780B97 /* CELLS */ = {
 			isa = PBXGroup;
 			children = (
+				B3F3C13E147C7D8300C4D210 /* BuyCell */,
 				B384AA20147631C2003F0DD6 /* EventCell */,
 				307DCEF214E0F320006D720E /* AdsCell */,
 				308F36F014DD15C700369244 /* DjsCell */,
@@ -1042,12 +1085,16 @@
 		B384A97E14761B1A003F0DD6 = {
 			isa = PBXGroup;
 			children = (
+				B324D30414EF54A3000BF33A /* MAIN */,
 				B3571FC314EF3ADD00780B97 /* SPLASH */,
 				B3EAB79414EDEDD00055428D /* TAB_djs */,
 				B3571FBF14EF147400780B97 /* TAB_events */,
-				B3571FBD14EF128700780B97 /* DLG_dj */,
+				B3571FBD14EF128700780B97 /* CTL_dj */,
+				B324D30214EF542A000BF33A /* CTL_event */,
+				B324D30814F04F81000BF33A /* CTL_eventsearch */,
 				B3571FC014EF2BF400780B97 /* GETTERS */,
 				B3571FBE14EF13AD00780B97 /* CELLS */,
+				B324D30E14F0F3DE000BF33A /* SIMPLE_LOCATION */,
 				30887F7614E3C5DE00982A70 /* purchase */,
 				B386510214AD604B00C48BD3 /* archive */,
 				B37031A414AA047400ABDA9F /* similardjs_view */,
@@ -1055,7 +1102,6 @@
 				B37B6C2214A496DB0093BA4D /* djsearch_view */,
 				B331726E149895A9009C67CB /* djselect_view */,
 				B33C82A31490DBD300D7AA78 /* mapit_view */,
-				B352AD641477858100824ED1 /* event_view */,
 				B384AA531476E894003F0DD6 /* buy_view */,
 				B384AA3D147655D8003F0DD6 /* profile_view */,
 				B384AA3614764C8B003F0DD6 /* images */,
@@ -1065,7 +1111,6 @@
 				B384A9B914761C7B003F0DD6 /* api */,
 				B384A9B514761C59003F0DD6 /* utility */,
 				B384A9B414761BF6003F0DD6 /* search_by_city_view */,
-				B384A99314761B1A003F0DD6 /* main */,
 				3090AFFF14E9113800E99626 /* resource */,
 				B384A98C14761B1A003F0DD6 /* Frameworks */,
 				B384A98A14761B1A003F0DD6 /* Products */,
@@ -1112,6 +1157,8 @@
 				B384AA3214763601003F0DD6 /* djcAppDelegate.m */,
 				B384A99F14761B1A003F0DD6 /* MainWindow.xib */,
 				B384A99414761B1A003F0DD6 /* Supporting Files */,
+				B324D30514EF6E4D000BF33A /* EventModalParms.h */,
+				B324D30614EF6E4D000BF33A /* EventModalParms.m */,
 			);
 			name = main;
 			path = djc;
@@ -1134,8 +1181,6 @@
 				B384AA2B147635C8003F0DD6 /* EventsView.h */,
 				B384AA2C147635C8003F0DD6 /* EventsView.m */,
 				B384A9A814761B1A003F0DD6 /* EventsViews.xib */,
-				B384A9EF14761FB9003F0DD6 /* SimpleLocation.h */,
-				B384A9F014761FB9003F0DD6 /* SimpleLocation.m */,
 			);
 			name = events_view;
 			sourceTree = "<group>";
@@ -1926,6 +1971,7 @@
 				29E9441E14EB7DB60060AFEA /* ProfileView.xib in Resources */,
 				29D73F4E14EB838A00EA41DE /* backgroundmusic.mp3 in Resources */,
 				29D73F5014EB83B700EA41DE /* DGNYE Logo.mp4 in Resources */,
+				B324D30D14F0DEFE000BF33A /* EventSearchLocationBased.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1984,6 +2030,8 @@
 				307DCEF614E0F377006D720E /* AdsCell.m in Sources */,
 				3090AFF514E8AF9200E99626 /* InAppPurchaseManager.m in Sources */,
 				3090AFF914E8B49E00E99626 /* SKProductPrice.m in Sources */,
+				B324D30714EF6E4D000BF33A /* EventModalParms.m in Sources */,
+				B324D30C14F0DEFE000BF33A /* EventSearchLocationBased.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

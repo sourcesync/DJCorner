@@ -12,8 +12,9 @@
 #import "DjsCell.h"
 #import "AdsCell.h"
 
-#ifdef ADS
-yoyo 555
+#define DJS_ADS
+
+#ifdef DJS_ADS
 #define ADSPOSITION 4
 #endif
 
@@ -41,6 +42,7 @@ yoyo 555
 @property (assign) BOOL top50;
 @property (assign) int VIP;
 @property (assign) BOOL scrolling;
+@property (assign) BOOL refresh;
 
 
 //  PUBLIC FUNCS...

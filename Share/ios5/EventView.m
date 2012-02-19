@@ -133,10 +133,13 @@
         if ( self.get_eid != nil )
         {
             NSMutableDictionary *loc = [ [[NSMutableDictionary alloc] initWithCapacity:0 ] autorelease ];
+            
+            /*
             if ( ! [self.api get_event:loc :self.get_eid ] )
             {
                 [ Utility AlertAPICallFailed ];
             }
+             */
         }
         else
         {

@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#define MATCHVIEWCELL_HEIGHT 65
-#define EXTRA 10
+#define ADCELL_HEIGHT 90
+//#define EXTRA 10
 
 @interface AdsCell : UITableViewCell
 

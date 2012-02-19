@@ -32,6 +32,7 @@
 @synthesize button_AllTop50=_button_AllTop50;
 @synthesize VIP=_VIP;
 @synthesize scrolling=_scrolling;
+@synthesize refresh=_refresh;
 
 #pragma - funcs...
 
@@ -75,6 +76,7 @@
     if (self) 
     {
         self.search = @"";
+        self.refresh = YES;
     }
     return self;
 }
@@ -128,6 +130,8 @@
                forControlEvents:UIControlEventValueChanged ];
     
     [ self newGetter ];
+    
+    self.refresh = YES;
 
 }
 
@@ -154,7 +158,17 @@
     }
     else
     {
-        [ self.tv setHidden:YES];
+        if (self.refresh)
+        {
+            [ self.tv setHidden:YES];
+        
+            self.activity.hidden = NO;
+            [ self.activity startAnimating ];
+        }
+        else
+        {
+            [ self.tv setHidden:NO];
+        }
     }
 }
 
@@ -170,12 +184,15 @@
     }
     else
     {
-        // Clear any previous search context...
-        self.search = @"";
-        self.field_search.text = @"";
-        [ self newGetter ];
-        [ self.getter getNext ];
-        
+        if (self.refresh)
+        {
+            // Clear any previous search context...
+            self.search = @"";
+            self.field_search.text = @"";
+            [ self newGetter ];
+            [ self.getter getNext ];
+            self.refresh = NO;
+        }
     }
     
     self.scrolling = NO; // TODO: why do i need this when return to the tab?...
@@ -216,7 +233,7 @@
         }
         else if ( end == (count-1) )
         {
-#ifdef ADS
+#ifdef DJS_ADS
             return count+count/(ADSPOSITION+1)*self.VIP;
 #else
             return count;
@@ -224,7 +241,7 @@
         }
         else
         {
-#ifdef ADS
+#ifdef DJS_ADS
             return count+1+(count+1)/(ADSPOSITION+1)*self.VIP;
 #else
             return count + 1;
@@ -262,7 +279,7 @@
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
         [ cell.imageView setImage:nil ];
-        cell.textLabel.text = @"Please Wait...";
+        cell.textLabel.text = @""; //@"Please Wait...";
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -292,7 +309,7 @@
     {
         NSInteger row = [ indexPath row ];
         
-#ifdef ADS
+#ifdef DJS_ADS
         if((self.VIP==1)&&row>0&&((row+1)%(ADSPOSITION+1)==0))
         {
             UITableViewCell *ads=[tableView dequeueReusableCellWithIdentifier:[AdsCell reuseIdentifier]];
@@ -346,7 +363,7 @@
             cell.content.font=[UIFont systemFontOfSize:17];
                         
             //  Get dj info object...
-#ifdef ADS
+#ifdef DJS_ADS
             DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
 #else
             DJ *dj = [ self.getter.djs objectAtIndex:row ];
@@ -400,7 +417,7 @@
             
             //NSLog(@"async get pic! %d", row);
             //  Get info for this cell...
-#ifdef ADS
+#ifdef DJS_ADS
             DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
 #else
             DJ *dj = [ self.getter.djs objectAtIndex:row ];
@@ -410,10 +427,8 @@
             
             if ( dj.pic_path )
             {
-#if 1
                 //  Launch the getter...
                 [ self.getter asyncGetPic:dj.pic_path:idx ];
-#endif
                 [djc.activity setHidden:NO];
                 [djc.activity startAnimating];
                 [djc.icon setHidden:YES ];
@@ -482,7 +497,7 @@
     
     int row = [ indexPath row ];
     
-#ifdef ADS
+#ifdef DJ_ADS
     if((self.VIP==1)&&row>0&&((row+1)%(ADSPOSITION+1)==0))
     {
         return;
@@ -492,7 +507,7 @@
     {
         [ tableView deselectRowAtIndexPath:indexPath animated:YES];
         
-#ifdef ADS
+#ifdef DJS_ADS
         if ((self.VIP==1)&&(row ==( [self.getter.djs count]+self.getter.djs.count%(ADSPOSITION+1)*self.VIP)) )
 #else
         if ( row ==( [self.getter.djs count] ) )
@@ -502,7 +517,7 @@
         }
         else
         {
-#ifdef ADS
+#ifdef DJS_ADS
             DJ *dj = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
 #else
             DJ *dj = [ self.getter.djs objectAtIndex:row ];
@@ -519,7 +534,7 @@
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-#ifdef ADS
+#ifdef DJS_ADS
     if((self.getter.djs==nil)||([self.getter.djs count]==0)||
        ([self.getter.djs count]==([indexPath row]-indexPath.row/(ADSPOSITION+1)*self.VIP)))
     {
@@ -527,7 +542,7 @@
     }
     else if((self.VIP==1)&&((indexPath.row+1)%(ADSPOSITION+1)==0)&&indexPath.row>0)
     {
-        return 90.0f;
+        return [ AdsCell height ];
     }
     else
     {

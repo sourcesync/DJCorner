@@ -23,6 +23,7 @@
 #import "SimilarDJView.h"
 #import "feedbackView.h"
 #import "InAppPurchaseManager.h"
+#import "EventSearchLocationBased.h"
 #import <AVFoundation/AVFoundation.h>
 
 @interface djcAppDelegate : NSObject 
@@ -58,6 +59,8 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 //@property (nonatomic, retain) DJSearchView *search_by_djs;
 @property (atomic, retain) ScheduleView *dj_schedule_view;
 @property (nonatomic, retain) SimilarDJView *dj_similar_view;
+@property (nonatomic, retain) EventSearchLocationBased *events_lbe;
+
 //jimmy added
 @property (nonatomic, retain) feedbackView *feedback_view;
 @property (nonatomic, retain) InAppPurchaseManager *purchaseManager;
@@ -78,6 +81,7 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 -(void) showDJSchedule:(UIViewController *)src:(DJ *)dj;
 -(void) showSimilarDJS:(UIViewController *)src:(DJ *)dj;
 -(void) showFeedback:(UIViewController *)src:(DJ *)dj;
+-(void) showSearchLocationBased:(UIViewController *)src;
 -(void) purchaseManagerStart;
 -(void) prepModals;
 

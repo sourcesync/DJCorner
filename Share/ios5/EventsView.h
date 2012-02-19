@@ -15,14 +15,17 @@
 #import "AdsCell.h"
 #import "EventCell.h"
 
-#ifdef ADS
+#define EVENTS_ADS
+
+#ifdef EVENTS_ADS
 #define ADSPOSITION 4
 #endif
 
 enum EventViewMode
 {
-    EventViewMap = 0,
-    EventViewList
+    EventViewMapOnly = 0,
+    EventViewListOnly,
+    EventViewListMap
 };
 
 
@@ -57,6 +60,7 @@ enum EventViewMode
 @property (nonatomic, assign) BOOL all_djs;
 @property (nonatomic, assign) int VIP;
 @property (nonatomic, assign) BOOL scrolling;
+@property (nonatomic, assign) BOOL refresh;
 
 
 //  PUBLIC FUNCS...

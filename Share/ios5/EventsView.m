@@ -38,6 +38,7 @@
 @synthesize all_djs;
 @synthesize VIP=_VIP;
 @synthesize scrolling=_scrolling;
+@synthesize refresh=_refresh;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -111,18 +112,22 @@
     //  table view init...
     [self.tv setDelegate:self ];
     [self.tv setDataSource:self ];
+    self.tv.rowHeight = [ EventCell height ];
     
-    //  refresh views...
-    [ self updateViews ];
     
     //  start in list mode...
     [ self showList ];
     
     
+    //  refresh views...
+    [ self updateViews ];
+    
     self.all_djs = NO;
     self.segmentDJ.selectedSegmentIndex=1;
     [ self.segmentDJ addTarget:self action:@selector(segmentDJClicked:) 
                forControlEvents:UIControlEventValueChanged ];
+    
+    self.refresh = YES;
 }
 
 - (void)viewDidUnload
@@ -141,33 +146,40 @@
     
     if ( self.back_from )
     {
-        
+        self.tv.hidden = NO;
     }
     else
     {
-        //  this will clear the previous views...
-        [ self clearEvents ];
-    
-        //  make sure we have current gps location...
-        self.got_first_location = NO;
-        [ self.location_manager startUpdatingLocation];
-        [ self.location_manager startMonitoringSignificantLocationChanges];
-    
-        //  config views...
-        self.tv.hidden = YES;
-        self.mv.hidden = YES;
-        self.activity.hidden = NO;
-        [ self.activity startAnimating ];
-    
-        //  config header...
-        NSString *txt = @"Events:";
-        if (self.cur_search!=nil)
+        if (self.refresh)
         {
-            txt = [ NSString stringWithFormat:@"Events In %@", self.cur_search ];
-        }
-        [ self.header setText:txt ];
+            //  this will clear the previous views...
+            [ self clearEvents ];
     
-        [ self showList ];
+            //  make sure we have current gps location...
+            self.got_first_location = NO;
+            [ self.location_manager startUpdatingLocation];
+            [ self.location_manager startMonitoringSignificantLocationChanges];
+    
+            //  config views...
+            self.tv.hidden = YES;
+            self.mv.hidden = YES;
+            self.activity.hidden = NO;
+            [ self.activity startAnimating ];
+    
+            //  config header...
+            NSString *txt = @"Events:";
+            if (self.cur_search!=nil)
+            {
+                txt = [ NSString stringWithFormat:@"Events In %@", self.cur_search ];
+            }
+            [ self.header setText:txt ];
+    
+            [ self showList ];
+        }
+        else
+        {
+            [ self.tv setHidden:NO];
+        }
     }
 }
 
@@ -181,18 +193,23 @@
     }
     else
     {
-        if (!self.got_first_events)
+        if (self.refresh)
         {
-            //  Schedule a default refresh in the future,
-            //  in case location manager fails...
-            [self performSelector:@selector(refreshFirstTime:) withObject:self afterDelay:3 ];
-        }
-        else
-        {
-            if (self.mode == EventViewMap ) [ self showMap ];
-            else [ self showList ];
-            self.activity.hidden = YES;
-            [ self.activity stopAnimating ];
+            if (!self.got_first_events)
+            {
+                //  Schedule a default refresh in the future,
+                //  in case location manager fails...
+                [self performSelector:@selector(refreshFirstTime:) 
+                           withObject:self afterDelay:3 ];
+            }
+            else
+            {
+                if (self.mode == EventViewMapOnly ) [ self showMap ];
+                else [ self showList ];
+                self.activity.hidden = YES;
+                [ self.activity stopAnimating ];
+            }
+            self.refresh = NO;
         }
     }
     
@@ -202,6 +219,8 @@
 - (void)viewWillDisappear:(BOOL)animated
 {
 	[super viewWillDisappear:animated];
+    
+    self.tv.hidden = YES;
     
     [ self.getter cancel ];
 }
@@ -227,7 +246,7 @@
 
 -(void) failed
 {
-    if (self.mode == EventViewMap ) [ self showMap ];
+    if (self.mode == EventViewMapOnly ) [ self showMap ];
     else [ self showList ];
     self.activity.hidden = YES;
     [ self.activity stopAnimating ];
@@ -244,7 +263,7 @@
         self.activity.hidden = YES;
         [ self.activity stopAnimating ];
         
-        if (self.mode == EventViewMap ) [ self showMap ];
+        if (self.mode == EventViewMapOnly ) [ self showMap ];
         else [ self showList ];
     }
     
@@ -308,7 +327,7 @@
     self.mv.hidden = YES;
     self.activity.hidden = NO;
     [ self.activity startAnimating ];
-    self.mode = EventViewList;
+    self.mode = EventViewListOnly;
     
     [self newGetter:cur_search ];
     
@@ -347,8 +366,9 @@
 -(void) showMap
 {
     self.mv.hidden = NO;
+    self.mv.frame = CGRectMake(0, 87, 320, 324);
     self.tv.hidden = YES;
-    self.mode = EventViewMap; 
+    self.mode = EventViewMapOnly; 
     self.buttonMapList.title = @"list"; 
 }
 
@@ -356,8 +376,24 @@
 {
     self.mv.hidden = YES;
     self.tv.hidden = NO;
-    self.mode = EventViewList;
+    self.tv.frame = CGRectMake(0, 87, 320, 324);
+    self.mode = EventViewListOnly;
+    self.buttonMapList.title = @"list/map";
+    
+    [ self.tv reloadData ];
+
+}
+
+-(void) showMapList
+{
+    self.mv.hidden = NO;
+    self.tv.hidden = NO;
+    self.mv.frame = CGRectMake(0, 87, 320, 170);
+    self.tv.frame = CGRectMake(0, 257, 320, 154);
+    self.mode = EventViewListMap;
     self.buttonMapList.title = @"map";
+    
+    [ self.tv reloadData ];
 }
  
 -(void) getMore
@@ -390,8 +426,8 @@
             
             //NSLog(@"async get pic! %d", row);
             //  Get info for this cell...
-#ifdef ADS
-            Event *ev = [ self.getter.djs objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
+#ifdef EVENTS_ADS
+            Event *ev = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
 #else
             Event *ev = [ self.getter.events objectAtIndex:row ];
 #endif
@@ -400,10 +436,8 @@
             
             if (ev.pic_path )
             {
-#if 1
                 //  Launch the getter...
                 [ self.getter asyncGetPic:ev.pic_path:idx ];
-#endif
                 [evc.activity setHidden:NO];
                 [evc.activity startAnimating];
                 [evc.icon setHidden:YES ];
@@ -437,25 +471,27 @@
     if ( !self.tv.hidden )
     {
         self.scrolling = YES;
-        //NSLog(@"scroll start");
     }
 }
 
 - (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate
 {
     self.scrolling = NO;
-    //NSLog(@"scroll stop thread=%d", [ NSThread isMainThread]);
     
-    [self loadImagesForOnscreenRows];
-    
+    if ( self.mode == EventViewListOnly )
+    {
+        [self loadImagesForOnscreenRows];
+    }
 }
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     self.scrolling = NO;
-    //NSLog(@"decel stop=%d", [ NSThread isMainThread]);
     
-    [self loadImagesForOnscreenRows];
+    if ( self.mode == EventViewListOnly )
+    {
+        [self loadImagesForOnscreenRows];
+    }
 }
 
 
@@ -487,15 +523,24 @@
         {
             count += 1;
         }
-#ifdef ADS
-        return count+count/(ADSPOSITION+1)*self.VIP;
+        
+        if ( self.mode == EventViewListMap )
+        {
+            return count;
+        }
+        else
+        {
+#ifdef EVENTS_ADS
+            return count+count/(ADSPOSITION+1)*self.VIP;
 #else
-        return count;
+            return count;
 #endif
+        }
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (UITableViewCell *) cellForRowAtIndexPath_ListOnly:(UITableView *)tableView:(NSIndexPath *)indexPath
 {
     if ( self.getter.connectionProblem )
     {
@@ -519,7 +564,7 @@
         {
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
-        cell.textLabel.text = @"Please Wait...";
+        cell.textLabel.text = @""; //@"Please Wait...";
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -543,7 +588,7 @@
     {
         NSInteger row = ([ indexPath row ]);
         
-#ifdef ADS
+#ifdef EVENTS_ADS
         //add ads....
         if((self.VIP==1)&&(row>0)&&((row+1)%(ADSPOSITION+1)==0))
         {
@@ -589,10 +634,14 @@
             }
         
             EventCell *cell = (EventCell *)cl;
-            
+            cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+            cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+            cell.textLabel.textColor = [ UIColor blackColor ];
+            //cell.content.textColor=[UIColor blackColor];
+            //cell.content.font=[UIFont systemFontOfSize:17];
             
             int row = [ indexPath row ];
-#ifdef ADS
+#ifdef EVENTS_ADS
             Event *event = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
 #else
             Event *event = [ self.getter.events objectAtIndex:row ];
@@ -644,34 +693,82 @@
     }
 }
 
+
+-(UITableViewCell *) cellForRowAtIndexPath_MapList:(UITableView *)tableView:(NSIndexPath *)indexPath
+{
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
+                             @"maplist_cell"];
+    if (cell == nil) 
+    {
+        cell = [[[ UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"maplist_cell" ] autorelease];
+    }
+    
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleBlue;
+    cell.textLabel.textColor = [ UIColor blackColor ];
+    
+    int row = [ indexPath row ];
+    
+    Event *event = [ self.getter.events objectAtIndex:row ];
+
+    cell.textLabel.text = event.name;
+    
+    return cell;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (self.mode == EventViewListOnly )
+    {
+        return [ self cellForRowAtIndexPath_ListOnly:self.tv:indexPath ];
+    }
+    else if (self.mode == EventViewListMap )
+    {
+        return [ self cellForRowAtIndexPath_MapList:self.tv:indexPath ];
+    }
+    else
+    {
+        return nil;
+    }
+}
+
 - (CGFloat)tableView:(UITableView*)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-#ifdef ADS
-    if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
+    if ( self.mode == EventViewListMap )
+    {
+        return 44.0;
+    }
+    else
+    {
+#ifdef EVENTS_ADS
+        if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
         ([self.getter.events count]==([indexPath row]-indexPath.row/(ADSPOSITION+1)*self.VIP)))
-    {
-        return 44;
-    }
-    else if((self.VIP==1)&&indexPath.row>0&&((indexPath.row+1)%(ADSPOSITION+1)==0))
-    {
-        return 90.0f;
-    }
-    else
-    {
-        return 75.0f;
-    }
+        {
+            return 44;
+        }
+        else if((self.VIP==1)&&indexPath.row>0&&((indexPath.row+1)%(ADSPOSITION+1)==0))
+        {
+            return 90.0f;
+        }
+        else
+        {
+            return 75.0f;
+        }
 #else
-    if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
+        if ( (self.getter.events ==nil)||([self.getter.events count]==0)||
         ([self.getter.events count]==([indexPath row])) )
-    {
-        return 44;
-    }
-    else
-    {
-        return 75.0f;
-    }
+        {
+            return 44;
+        }
+        else
+        {
+            return [ EventCell height ];
+        }
 #endif
+    }
 }
+
+
 
 #if 0
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
@@ -686,7 +783,10 @@
     
     [ tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-#ifdef ADS
+    //[ Utility AlertMessage:@"yo" ];
+    //return;
+    
+#ifdef EVENTS_ADS
     if((self.VIP==1)&&row>0&&((row+1)%(ADSPOSITION+1)==0))
     {
         return;
@@ -700,7 +800,7 @@
     }
     else
     {
-#ifdef ADS
+#ifdef EVENTS_ADS
         Event *ev = [ self.getter.events objectAtIndex:(row-row/(ADSPOSITION+1)*self.VIP) ];
 #else
         Event *ev = [ self.getter.events objectAtIndex:row ];
@@ -935,13 +1035,19 @@
     
     djcAppDelegate *app = 
         ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
-    [ app showSearchByCity:self ];
+    //[ app showSearchByCity:self ];
+    
+    [ app showSearchLocationBased:self ];
 }
 
 
 -(IBAction)buttonMapListClicked:(id)sender
 {
-    if (self.mode == EventViewMap )
+    if (self.mode == EventViewListOnly )
+    {
+        [ self showMapList ];
+    }
+    else if ( self.mode == EventViewMapOnly )
     {
         [ self showList ];
     }

@@ -14,6 +14,8 @@
 #import "SearchView.h"
 #import "DjView.h"
 #import "SimilarDJView.h"
+#import "EventModalParms.h"
+
 //jimmy 
 #import "feedbackView.h"
 //end
@@ -36,6 +38,8 @@
 @synthesize search_by_djs=_search_by_djs;
 @synthesize dj_schedule_view=_dj_schedule_view; 
 @synthesize dj_similar_view=_dj_similar_view;
+@synthesize events_lbe=_events_lbe;
+
 //jimmy
 @synthesize feedback_view=_feedback_view;
 @synthesize purchaseManager=_purchaseManager;
@@ -216,8 +220,13 @@
 }
 
 
--(void) showEventModal:(UIViewController *)src:(Event *)evt:(NSString*)get_eid;
+-(void) _showEventModal:(NSObject *)obj
 {
+    EventModalParms *parms = (EventModalParms *)obj;
+    Event *evt = (Event *)parms.data;
+    UIViewController *src = parms.src;
+    NSString *get_eid = (NSString *)parms.oid;
+    
     if (self.event_view == nil )
     {
         self.event_view = [ [ [ EventView alloc ] init ] autorelease ]; //ANA
@@ -227,11 +236,28 @@
     self.event_view.get_eid = get_eid;
     self.event_view.parent = src;
     [ src presentModalViewController:self.event_view animated:YES ];
+    
+    [ obj release ];
 }
 
 
--(void) showDJItemModal:(UIViewController *)src:(DJ *)dj:(NSString *)getdj
+-(void) showEventModal:(UIViewController *)src:(Event *)evt:(NSString*)get_eid;
+{    
+    EventModalParms *parms = [ [ EventModalParms alloc ] init];
+    parms.src = src;
+    parms.data = evt;
+    parms.oid = get_eid;
+    [ self performSelector:@selector(_showEventModal:) withObject:parms afterDelay:0.0];
+    
+}
+
+-(void) _showDJItemModal:(NSObject *)obj
 {
+    EventModalParms *parms = (EventModalParms *)obj;
+    DJ *dj = (DJ *)parms.data;
+    UIViewController *src = parms.src;
+    NSString *getdj = (NSString *)parms.oid;
+    
     if (self.djitem_view == nil )
     {
         self.djitem_view = [ [ [  DJItemView alloc ] init ] autorelease ]; //ANA
@@ -240,14 +266,34 @@
     self.djitem_view.getdj = getdj;
     self.djitem_view.parent = src;
     [ src presentModalViewController:self.djitem_view animated:YES ];
-    [src release];
+    
+    [ obj release ];
 }
 
+
+-(void) showDJItemModal:(UIViewController *)src:(DJ *)dj:(NSString *)getdj
+{
+    EventModalParms *parms = [ [ EventModalParms alloc ] init];
+    parms.src = src;
+    parms.data = dj;
+    parms.oid = getdj;
+    [ self performSelector:@selector(_showDJItemModal:) withObject:parms afterDelay:0.0];
+}
 
 -(void) showSearchByCity:(UIViewController *)src
 {
     self.search_by_city_view = [ [ [  SearchView alloc ] init ] autorelease ]; //ANA
     [ src presentModalViewController:self.search_by_city_view animated:YES ];
+}
+
+
+-(void) showSearchLocationBased:(UIViewController *)src
+{
+    if (self.events_lbe==nil)
+    {
+        self.events_lbe = [ [ [ EventSearchLocationBased alloc ] init ] autorelease ];
+    }
+    [ src presentModalViewController:self.events_lbe animated:YES ];
 }
 
 

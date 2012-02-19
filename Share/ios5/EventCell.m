@@ -12,7 +12,7 @@
 @implementation EventCell
 
 
-@synthesize content=_content;
+@synthesize mainView=_mainView;
 @synthesize event=_event;
 @synthesize distance=_distance;
 @synthesize icon=_icon;
@@ -42,17 +42,20 @@
         if (nibName) 
         {
             // load from nib...
-            [[NSBundle mainBundle] loadNibNamed:nibName
-                                          owner:self
-                                        options:nil];
-            NSAssert(self.content != nil, @"NIB file loaded but content property not set.");
+            [[NSBundle mainBundle] loadNibNamed:nibName owner:self options:nil];
+            
+            NSAssert(self.mainView != nil, @"NIB file loaded but content property not set.");
             
             //  Configure size of frame...
             CGRect frame;
-            frame = CGRectMake(0, 0, 320, EVENTCELL_HEIGHT-21);
-            self.content.frame = frame; 
-            self.content.backgroundColor = [ UIColor whiteColor ];
+            frame = CGRectMake(0, 0, 320, EVENTCELL_HEIGHT ); //MATCHVIEWCELL_HEIGHT-21);
+            self.frame = frame;
             
+            
+            self.mainView.frame = frame; 
+            self.mainView.backgroundColor = [ UIColor whiteColor ];
+            
+            self.selectedBackgroundView.frame = frame;
             //  Configure accessory...
             //self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
             
@@ -69,7 +72,7 @@
             self.accessoryView = button;
 #endif
             
-            [self addSubview:self.content];
+            [self addSubview:self.mainView];
         }
     }
     return self; 
@@ -100,15 +103,13 @@
 // Reuse identifier of this custom cell.
 + (NSString *)reuseIdentifier
 {
-    return @"EventCell";
+    return @"eventitem_cell";
 }
 
 // Cell's default height.
 + (CGFloat)height
 {
-    return EVENTCELL_HEIGHT; //+ EXTRA;
+    return EVENTCELL_HEIGHT; // + EXTRA;
 }
-
-
 
 @end

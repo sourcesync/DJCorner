@@ -44,7 +44,9 @@
             
             //  Configure size of frame...
             CGRect frame;
-            frame = CGRectMake(0, 0, 320, MATCHVIEWCELL_HEIGHT-21);
+            frame = CGRectMake(0, 0, 320, ADCELL_HEIGHT ); //-21);
+            self.frame = frame;
+            
             self.mainView.frame = frame; 
             self.mainView.backgroundColor = [ UIColor redColor ];
             
@@ -56,14 +58,16 @@
             //[self.iv setImage:[UIImage imageNamed:@"redbull.png"]];
             //self.accessoryView = self.iv;
             
-
+            self.selectedBackgroundView.frame = frame;
+            
+#if 0
             //  Configure accessory...
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
             [button setImage:[UIImage imageNamed:@"DJscornerarrow.png"] forState:UIControlStateNormal];
             [button addTarget:self action:@selector(someAction:) forControlEvents:UIControlEventTouchUpInside];
             //button.tag = self.indexPath;
             self.accessoryView = button;
-
+#endif
             
             [self addSubview:self.mainView];
         }
@@ -102,6 +106,6 @@
 // Cell's default height.
 + (CGFloat)height
 {
-    return MATCHVIEWCELL_HEIGHT + EXTRA;
+    return ADCELL_HEIGHT;
 }
 @end

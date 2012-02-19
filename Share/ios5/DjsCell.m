@@ -42,10 +42,13 @@
             
             //  Configure size of frame...
             CGRect frame;
-            frame = CGRectMake(0, 0, 320, DJCELL_HEIGHT- 21 ); //MATCHVIEWCELL_HEIGHT-21);
+            frame = CGRectMake(0, 0, 320, DJCELL_HEIGHT ); //MATCHVIEWCELL_HEIGHT-21);
+            self.frame = frame;
+            
             self.mainView.frame = frame; 
             self.mainView.backgroundColor = [ UIColor whiteColor ];
             
+            self.selectedBackgroundView.frame = frame;
             //  Configure accessory...
             //self.accessoryType = UITableViewCellAccessoryDetailDisclosureButton;
             
