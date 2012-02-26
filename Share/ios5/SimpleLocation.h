@@ -24,5 +24,6 @@
 @property (nonatomic, assign) BOOL contact;
 
 - (id)initWithName;
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 
 @end 

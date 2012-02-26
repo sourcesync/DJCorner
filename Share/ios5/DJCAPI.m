@@ -10,6 +10,7 @@
 #import "JSONRPCService.h"
 #import "JSON.h"
 #import "Utility.h"
+#import "djcAppDelegate.h"
 
 //#import "ASIHTTPRequest.h"
 //#import "ASIDownloadCache.h"
@@ -21,16 +22,23 @@
 @synthesize queue=_queue;
 @synthesize finishOnMainThread=_finishOnMainThread;
 
-//static NSString *SERVER = @"localhost:7779";
-static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
+static NSString *TEST_SERVER = @"localhost:7779";
+static NSString *PROD_SERVER = @"www.theuniverseofallthings.com:7779";
 //static NSString *SERVER = @"ec2-23-20-62-113.compute-1.amazonaws.com:7779";
+
+
++ (NSString *) SERVER
+{
+    //djcAppDelegate *app = (djcAppDelegate  *)[ [ UIApplication sharedApplication ] delegate ];
+    return TEST_SERVER;
+}
 
 -(id) init:(id<DJCAPIServiceDelegate>)del
 {
     self = [ super init ];
     if (self) 
     {
-        NSString *urlstr = [ NSString stringWithFormat:@"http://%@/api",SERVER ];
+        NSString *urlstr = [ NSString stringWithFormat:@"http://%@/api",[ DJCAPI SERVER] ];
         NSURL *url = [ NSURL URLWithString:urlstr ];
         _svc = [[JSONRPCService alloc] initWithURL:url];
         _svc.delegate = self;
@@ -95,10 +103,13 @@ static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
     
 }
 
--(BOOL) get_events:(NSDictionary *)location:(NSDictionary *)paging:(NSString *)city:(BOOL)all
+-(BOOL) get_events:(NSDictionary *)location:(NSDictionary *)paging:
+    (NSString *)city:(BOOL)all:(int)sort_criteria
 {
     NSNumber *_all = [ NSNumber numberWithBool:all ];
-    NSArray *args = [ NSArray arrayWithObjects:location,paging,city,_all,nil];
+    NSNumber *_sort_criteria = [ NSNumber numberWithInt:sort_criteria ];
+    
+    NSArray *args = [ NSArray arrayWithObjects:location,paging,city,_all,_sort_criteria,nil];
     return [self ExecMethod:@"get_events" andParams:args withID:@"0" ];
 }
 
@@ -163,6 +174,13 @@ static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
 {
     NSArray *args = [ NSArray arrayWithObjects:djid,nil];
     return [self ExecMethod:@"get_similar_djs" andParams:args withID:@"9" ];
+}
+
+
+-(BOOL)     get_cities
+{
+    NSArray *args = nil; //[ NSArray arrayWithObjects:djid,nil];
+    return [self ExecMethod:@"get_cities" andParams:args withID:@"10" ];
 }
 
 #pragma mark - jsonrpc service delegate
@@ -248,6 +266,11 @@ static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
                 [ self.delegate got_similar_djs :arg ];
                 break;
             }
+            case (GET_CITIES):
+            {
+                [ self.delegate got_cities :arg ];
+                break;
+            }
             default: 
             {
                 //[ Utility AlertError:@"Invalid Method ID" ];
@@ -282,7 +305,9 @@ static NSString *SERVER = @"www.theuniverseofallthings.com:7779";
     }
     else
     {
-        NSString *fpath = [ NSString stringWithFormat:@"http://%@/%@", SERVER, url_string ];
+        NSString *fpath = [ NSString stringWithFormat:@"http://%@/%@", 
+                           [ DJCAPI SERVER], 
+                           url_string ];
         url = [ NSURL URLWithString:fpath ];
     }
                            

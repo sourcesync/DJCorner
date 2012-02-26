@@ -29,6 +29,7 @@
 @synthesize all_djs=_all_djs;
 @synthesize got_all=_got_all;
 @synthesize picdic=_picdic;
+@synthesize sort_criteria=_sort_criteria;
 
 -(id) init 
 {
@@ -42,6 +43,7 @@
     self.all_djs = YES;
     self.got_all = NO;
     self.picdic = [ [ [ NSMutableDictionary alloc ] initWithCapacity:0 ] autorelease ];
+    self.sort_criteria = 0;
     return self;
 } 
 
@@ -157,7 +159,7 @@
         }
         BOOL all_djs = self.all_djs;
         
-        if ( ! [ self.api get_events:loc :paging :city:all_djs ] )        
+        if ( ! [ self.api get_events:loc :paging :city:all_djs: self.sort_criteria ] )        
         {
             self.call_in_progress = NO;
             

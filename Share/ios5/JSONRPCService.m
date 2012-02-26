@@ -30,6 +30,25 @@
 	return self;
 }
 
+//george
+
+-(void) setWithURL:(NSURL*)serviceURL user:(NSString*)user pass:(NSString*)pass 
+{
+    [ url release ];
+    url = [serviceURL retain];
+    [ username release ];
+    username = [user retain];
+    [ password release ];
+    password = [pass retain];
+}
+
+
+-(void) setWithURL:(NSURL*)serviceURL 
+{
+	return [self setWithURL:serviceURL user:nil pass:nil];
+}
+
+//george
 
 -(void) execMethod:(NSString*)methodName 
          andParams:(NSArray*)parameters 

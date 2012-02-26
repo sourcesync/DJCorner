@@ -14,31 +14,38 @@
 #import "Utility.h"
 #import "djcAppDelegate.h"
 #import "AdsCell.h"
+#import "MapEventCell.h"
 
 #define DEFAULT_LAT     40.730039
 #define DEFAULT_LONG    -73.994358
 
 @implementation EventsView
 
+//  RETAIN...
 @synthesize tv=_tv;
 @synthesize mv=_mv;
 @synthesize location_manager=_location_manager;
-@synthesize my_last_location=_my_last_location;
 @synthesize segmentDJ=_segmentDJ;
 @synthesize tb=_tb;
-@synthesize mode=_mode;
 @synthesize buttonMapList=_buttonMapList;
-@synthesize got_first_location=_got_first_location;
-@synthesize got_first_events=_got_first_events;
 @synthesize getter=_getter;
 @synthesize activity=_activity;
 @synthesize cur_search=_cur_search;
 @synthesize header=_header;
 @synthesize back_from;
+@synthesize longPressGesture;
+@synthesize me_annotation;
+
+//  ASSIGN...
 @synthesize all_djs;
+@synthesize mode=_mode;
+@synthesize got_first_location=_got_first_location;
+@synthesize got_first_events=_got_first_events;
+@synthesize my_last_location=_my_last_location;
 @synthesize VIP=_VIP;
 @synthesize scrolling=_scrolling;
 @synthesize refresh=_refresh;
+@synthesize sort_criteria=_sort_criteria;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -70,7 +77,7 @@
 
 #pragma mark - View lifecycle...
 
-- (void) newGetter:(NSString *)cur_search;
+- (void) newGetter:(NSString *)cur_search
 {
     if (self.getter!=nil)
     {
@@ -79,6 +86,7 @@
     }
     self.getter = [ [ [ EventsGetter alloc ] init ] autorelease ]; //ANA
     
+    self.getter.sort_criteria = self.sort_criteria;
     self.getter.cur_city_search = cur_search;
     self.getter.delegate = self;
     self.getter.latitude = self.my_last_location.latitude;
@@ -106,7 +114,6 @@
     
     //  location manager init...
     self.location_manager = [ [[ CLLocationManager alloc ] init] autorelease];
-    
     [ self.location_manager setDelegate:self ];
     
     //  table view init...
@@ -114,10 +121,19 @@
     [self.tv setDataSource:self ];
     self.tv.rowHeight = [ EventCell height ];
     
+    //  map view init...
+    
+#if 0
+    //  gesture init...
+    longPressGesture = [ [[UILongPressGestureRecognizer alloc] 
+                          initWithTarget:self 
+                        action:@selector(handleLongPressGesture:)] autorelease ];
+    [self.mv addGestureRecognizer:longPressGesture];
+    //[longPressGesture release];
+#endif
     
     //  start in list mode...
     [ self showList ];
-    
     
     //  refresh views...
     [ self updateViews ];
@@ -330,7 +346,6 @@
     self.mode = EventViewListOnly;
     
     [self newGetter:cur_search ];
-    
     [self.getter getNext ]; 
     
     NSString *txt = @"Events:";
@@ -393,7 +408,11 @@
     self.mode = EventViewListMap;
     self.buttonMapList.title = @"map";
     
-    [ self.tv reloadData ];
+    self.sort_criteria = 1;
+    //[self newGetter:self.cur_search ];
+    //[self.getter getNext ]; 
+    
+    //[ self.tv reloadData ];
 }
  
 -(void) getMore
@@ -696,13 +715,14 @@
 
 -(UITableViewCell *) cellForRowAtIndexPath_MapList:(UITableView *)tableView:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
-                             @"maplist_cell"];
-    if (cell == nil) 
+    UITableViewCell *cl = [tableView dequeueReusableCellWithIdentifier:
+                           [ MapEventCell reuseIdentifier ]];
+    if (cl == nil) 
     {
-        cell = [[[ UITableViewCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:@"maplist_cell" ] autorelease];
+        cl = [[[ MapEventCell alloc] init] autorelease];
     }
     
+    MapEventCell *cell = (MapEventCell *)cl;
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleBlue;
     cell.textLabel.textColor = [ UIColor blackColor ];
@@ -711,7 +731,10 @@
     
     Event *event = [ self.getter.events objectAtIndex:row ];
 
-    cell.textLabel.text = event.name;
+    UIImage *img = [ UIImage imageNamed:@"ad" ];
+    cell.icon.image = img;
+    cell.icon.contentMode = UIViewContentModeScaleAspectFit;
+    cell.lbl.text = event.name;
     
     return cell;
 }
@@ -833,6 +856,41 @@
     
 }
 
+#pragma mark - gesture delegate stuff...
+
+
+-(void)handleLongPressGesture:(UIGestureRecognizer*)sender 
+{
+    
+    // This is important if you only want to receive one tap and hold event
+    if (sender.state == UIGestureRecognizerStateEnded)
+    {
+        //[self.mv removeGestureRecognizer:sender];
+    }
+    else
+    {
+#if 1
+        // Here we get the CGPoint for the touch and convert it to latitude and longitude coordinates to display on the map
+        CGPoint point = [sender locationInView:self.mv];
+        CLLocationCoordinate2D locCoord = 
+        [self.mv convertPoint:point toCoordinateFromView:self.mv];
+        // Then all you have to do is create the annotation and add it to the map
+        // YourAnnotation *dropPin = [[YourAnnotation alloc] init];
+        if (self.me_annotation)
+        {
+            self.me_annotation.coordinate = locCoord;
+        }
+        
+        //dropPin.latitude = [NSNumber numberWithDouble:locCoord.latitude];
+        //dropPin.longitude = [NSNumber numberWithDouble:locCoord.longitude];
+        //[self.mv addAnnotation:dropPin];
+        //[dropPin release];
+#endif
+        
+    }
+}
+
+
 #pragma mark - map/location delegate stuff...
 
 -(void)setMapRegion
@@ -902,14 +960,17 @@
     coordinate.longitude = self.my_last_location.longitude;
     
     //  Create this user's annotation...
-    SimpleLocation *annotation = [ [ SimpleLocation alloc ] initWithName ];
-    annotation.name = [ NSString stringWithString:@"You are here." ];
-    annotation.message = nil;
-    annotation.coordinate = coordinate;
-    annotation.pp = nil;
-    annotation.type=0;
-    [ annotation autorelease ];
-    [ self.mv addAnnotation:annotation];
+    if ( self.me_annotation == nil )
+    {
+        self.me_annotation = [ [ [ SimpleLocation alloc ] initWithName ] autorelease ];
+    }
+    
+    self.me_annotation.name = [ NSString stringWithString:@"You are here." ];
+    self.me_annotation.message = nil;
+    self.me_annotation.coordinate = coordinate;
+    self.me_annotation.pp = nil;
+    self.me_annotation.type=0;
+    [ self.mv addAnnotation:self.me_annotation];
     
     //  Add the events if any...
     if (self.getter.events!=nil)
@@ -944,7 +1005,12 @@
     
 }
 
-
+#if 0
+- (void)mapView:(MKMapView *)mapView didSelectAnnotationView:(MKAnnotationView *)view
+{
+    //[ self.mv deselectAnnotation:view.annotation animated:NO ];
+}
+#endif
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id <MKAnnotation>)annotation 
 {
@@ -971,6 +1037,8 @@
         }
         annotationView.enabled = YES;
         annotationView.canShowCallout = YES;
+        //annotationView.draggable = YES;
+        
         
         //
         //  Customize the pin color...  

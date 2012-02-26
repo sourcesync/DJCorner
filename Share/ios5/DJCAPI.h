@@ -21,7 +21,8 @@ enum API_IDS
     GET_DJS,
     GET_SCHEDULE,
     GET_DJ,
-    GET_SIMILAR_DJS
+    GET_SIMILAR_DJS,
+    GET_CITIES
 };
 
 @protocol DJCAPIServiceDelegate
@@ -38,6 +39,7 @@ enum API_IDS
 @optional -(void) got_schedule:(NSDictionary *)data; //7
 @optional -(void) got_dj:(NSDictionary *)data; //8
 @optional -(void) got_similar_djs:(NSDictionary *)data; //9
+@optional -(void) got_cities:(NSDictionary *)data; //10
 
 @optional -(void) got_pic:(UIImageForCell *)ufc;
 @end
@@ -54,7 +56,8 @@ enum API_IDS
 
 //  PUBLIC FUNCS...
 -(id)       init:(id<DJCAPIServiceDelegate>)del;
--(BOOL)     get_events:(NSDictionary *)location:(NSDictionary *)paging:(NSString *)city:(BOOL)all;
+-(BOOL)     get_events:(NSDictionary *)location:(NSDictionary *)paging:
+    (NSString *)city:(BOOL)all:(int)sort_criteria;
 -(BOOL)     get_event:(NSDictionary *)location:(NSString *)eoid;
 -(BOOL)     register_device:(NSString *)tokstr;
 -(BOOL)     followdjs:(NSString *)deviceid:(NSMutableArray *)djs:(NSMutableArray *)djids;
@@ -64,6 +67,7 @@ enum API_IDS
 -(BOOL)     get_schedule:(NSString *)djid;
 -(BOOL)     get_dj:(NSString *)djid;
 -(BOOL)     get_similar_djs:(NSString *)djid;
+-(BOOL)     get_cities;
 
 - (void)    asyncDownloadImage: (NSString *)url_string: (NSNumber *)idx;
 - (void)    asyncGetPic: (NSString *)name: (NSNumber *)idx;

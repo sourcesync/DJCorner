@@ -275,6 +275,8 @@
 		B30D5F35147E1560006F3D8A /* djc4.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F34147E1560006F3D8A /* djc4.png */; };
 		B30D5F37147E1D13006F3D8A /* djc5.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F36147E1D13006F3D8A /* djc5.png */; };
 		B30D5F39147E1E75006F3D8A /* djc6.png in Resources */ = {isa = PBXBuildFile; fileRef = B30D5F38147E1E75006F3D8A /* djc6.png */; };
+		B314151D14F4E16200A8FC3A /* MapEventCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B314151C14F4E16200A8FC3A /* MapEventCell.m */; };
+		B314151F14F4E19400A8FC3A /* MapEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B314151E14F4E19400A8FC3A /* MapEventCell.xib */; };
 		B321621214773BDE00C7EE05 /* SplashView.m in Sources */ = {isa = PBXBuildFile; fileRef = B321621014773BDE00C7EE05 /* SplashView.m */; };
 		B321621314773BDE00C7EE05 /* SplashView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B321621114773BDE00C7EE05 /* SplashView.xib */; };
 		B324D30714EF6E4D000BF33A /* EventModalParms.m in Sources */ = {isa = PBXBuildFile; fileRef = B324D30614EF6E4D000BF33A /* EventModalParms.m */; };
@@ -648,6 +650,9 @@
 		B30D5F34147E1560006F3D8A /* djc4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc4.png; sourceTree = "<group>"; };
 		B30D5F36147E1D13006F3D8A /* djc5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc5.png; sourceTree = "<group>"; };
 		B30D5F38147E1E75006F3D8A /* djc6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc6.png; sourceTree = "<group>"; };
+		B314151B14F4E16200A8FC3A /* MapEventCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapEventCell.h; sourceTree = "<group>"; };
+		B314151C14F4E16200A8FC3A /* MapEventCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapEventCell.m; sourceTree = "<group>"; };
+		B314151E14F4E19400A8FC3A /* MapEventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapEventCell.xib; sourceTree = "<group>"; };
 		B321620B14773B7700C7EE05 /* djc1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = djc1.png; sourceTree = "<group>"; };
 		B321620F14773BDE00C7EE05 /* SplashView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SplashView.h; sourceTree = "<group>"; };
 		B321621014773BDE00C7EE05 /* SplashView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SplashView.m; sourceTree = "<group>"; };
@@ -875,6 +880,43 @@
 			name = feedback_view;
 			sourceTree = "<group>";
 		};
+		B314151214F3485200A8FC3A /* API */ = {
+			isa = PBXGroup;
+			children = (
+				B384A9C814761D32003F0DD6 /* ASI */,
+				B384A9F61476201E003F0DD6 /* JSONRPC */,
+				B384A9B914761C7B003F0DD6 /* api */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		B314151414F3488400A8FC3A /* OBJECTS */ = {
+			isa = PBXGroup;
+			children = (
+				B384A9EB14761EB0003F0DD6 /* data */,
+			);
+			name = OBJECTS;
+			sourceTree = "<group>";
+		};
+		B314151514F348A500A8FC3A /* REZ */ = {
+			isa = PBXGroup;
+			children = (
+				3090AFFF14E9113800E99626 /* resource */,
+				B384AA3614764C8B003F0DD6 /* images */,
+			);
+			name = REZ;
+			sourceTree = "<group>";
+		};
+		B314151A14F4E13700A8FC3A /* MapEventCell */ = {
+			isa = PBXGroup;
+			children = (
+				B314151B14F4E16200A8FC3A /* MapEventCell.h */,
+				B314151C14F4E16200A8FC3A /* MapEventCell.m */,
+				B314151E14F4E19400A8FC3A /* MapEventCell.xib */,
+			);
+			name = MapEventCell;
+			sourceTree = "<group>";
+		};
 		B321620E14773B8E00C7EE05 /* splash_view */ = {
 			isa = PBXGroup;
 			children = (
@@ -961,6 +1003,7 @@
 		B3571FBE14EF13AD00780B97 /* CELLS */ = {
 			isa = PBXGroup;
 			children = (
+				B314151A14F4E13700A8FC3A /* MapEventCell */,
 				B3F3C13E147C7D8300C4D210 /* BuyCell */,
 				B384AA20147631C2003F0DD6 /* EventCell */,
 				307DCEF214E0F320006D720E /* AdsCell */,
@@ -1085,6 +1128,9 @@
 		B384A97E14761B1A003F0DD6 = {
 			isa = PBXGroup;
 			children = (
+				B314151514F348A500A8FC3A /* REZ */,
+				B314151414F3488400A8FC3A /* OBJECTS */,
+				B314151214F3485200A8FC3A /* API */,
 				B324D30414EF54A3000BF33A /* MAIN */,
 				B3571FC314EF3ADD00780B97 /* SPLASH */,
 				B3EAB79414EDEDD00055428D /* TAB_djs */,
@@ -1104,14 +1150,8 @@
 				B33C82A31490DBD300D7AA78 /* mapit_view */,
 				B384AA531476E894003F0DD6 /* buy_view */,
 				B384AA3D147655D8003F0DD6 /* profile_view */,
-				B384AA3614764C8B003F0DD6 /* images */,
-				B384A9F61476201E003F0DD6 /* JSONRPC */,
-				B384A9EB14761EB0003F0DD6 /* data */,
-				B384A9C814761D32003F0DD6 /* ASI */,
-				B384A9B914761C7B003F0DD6 /* api */,
 				B384A9B514761C59003F0DD6 /* utility */,
 				B384A9B414761BF6003F0DD6 /* search_by_city_view */,
-				3090AFFF14E9113800E99626 /* resource */,
 				B384A98C14761B1A003F0DD6 /* Frameworks */,
 				B384A98A14761B1A003F0DD6 /* Products */,
 				86C46F1214DD884100F719E6 /* feedback_view */,
@@ -1972,6 +2012,7 @@
 				29D73F4E14EB838A00EA41DE /* backgroundmusic.mp3 in Resources */,
 				29D73F5014EB83B700EA41DE /* DGNYE Logo.mp4 in Resources */,
 				B324D30D14F0DEFE000BF33A /* EventSearchLocationBased.xib in Resources */,
+				B314151F14F4E19400A8FC3A /* MapEventCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2032,6 +2073,7 @@
 				3090AFF914E8B49E00E99626 /* SKProductPrice.m in Sources */,
 				B324D30714EF6E4D000BF33A /* EventModalParms.m in Sources */,
 				B324D30C14F0DEFE000BF33A /* EventSearchLocationBased.m in Sources */,
+				B314151D14F4E16200A8FC3A /* MapEventCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

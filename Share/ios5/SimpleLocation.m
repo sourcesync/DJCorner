@@ -37,6 +37,11 @@
     return _message;
 }
 
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate
+{
+    
+}
+
 - (void)dealloc
 {
     [_name release];

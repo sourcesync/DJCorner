@@ -8,6 +8,22 @@
 
 #import <Foundation/Foundation.h>
 
-@interface MapEventCell : NSObject
+#define MAPEVENTCELL_HEIGHT 25 //65
+
+@interface MapEventCell : UITableViewCell
+
+
+@property (nonatomic,retain) IBOutlet UIView        *mainView;
+@property (nonatomic,retain) IBOutlet UIImageView   *icon;
+@property (nonatomic,retain) IBOutlet UILabel       *lbl;
+
+//  PUBLIC FUNCS
+- (id) init;
+
++ (NSString *)  nibName;
++ (NSString *)  reuseIdentifier;
++ (CGFloat)     height;
+
+
 
 @end

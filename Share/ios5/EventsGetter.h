@@ -39,6 +39,7 @@
 @property (nonatomic, assign) BOOL connectionProblem;
 @property (nonatomic, assign) BOOL all_djs;
 @property (nonatomic, assign) BOOL got_all;
+@property (nonatomic, assign) int sort_criteria;
 
 
 //  PUBLIC FUNCS...

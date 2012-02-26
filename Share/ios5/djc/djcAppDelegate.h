@@ -44,28 +44,26 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 @property (retain) AVAudioPlayer *player;
 #endif
 @property (nonatomic, retain) NSString *cur_url;
-@property (atomic, retain) EventView *event_view;
-@property (atomic, retain) BuyView *buy_view;
+@property (atomic,    retain) EventView *event_view;
+@property (atomic,    retain) BuyView *buy_view;
 @property (nonatomic, retain) NSString *cur_city_search;
 @property (atomic, retain) SearchView *search_view;
 @property (atomic, retain) EventsView *events_view;
 @property (atomic, retain) MapitView *mapit_view;
 @property (nonatomic, retain) NSString *devtoken;
-@property (nonatomic, assign) int VIP;
 @property (nonatomic, retain) DJCAPI *api;
 @property (atomic, retain) DJItemView *djitem_view;
 @property (atomic, retain) SearchView *search_by_city_view;
 @property (atomic, retain) DjView *search_by_djs;
-//@property (nonatomic, retain) DJSearchView *search_by_djs;
 @property (atomic, retain) ScheduleView *dj_schedule_view;
 @property (nonatomic, retain) SimilarDJView *dj_similar_view;
 @property (nonatomic, retain) EventSearchLocationBased *events_lbe;
-
-//jimmy added
 @property (nonatomic, retain) feedbackView *feedback_view;
 @property (nonatomic, retain) InAppPurchaseManager *purchaseManager;
-//end
 
+//  ASSIGN...
+@property (nonatomic, assign) int VIP;
+@property (nonatomic, assign) BOOL is_simulator;
 
 //  PUBLIC FUNCS...
 -(void) buyEvent:(NSString *)url;

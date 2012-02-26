@@ -7,21 +7,18 @@
 //
 
 #import "djcAppDelegate.h"
-
 #import "SplashView.h"
 #import "EventView.h"
 #import "Utility.h"
 #import "SearchView.h"
 #import "DjView.h"
 #import "SimilarDJView.h"
-#import "EventModalParms.h"
-
-//jimmy 
+#import "EventModalParms.h" 
 #import "feedbackView.h"
-//end
+
 @implementation djcAppDelegate
 
-
+//  RETAIN...
 @synthesize window=_window;
 @synthesize tabBarController=_tabBarController;
 @synthesize cur_url=_cur_url;
@@ -39,11 +36,13 @@
 @synthesize dj_schedule_view=_dj_schedule_view; 
 @synthesize dj_similar_view=_dj_similar_view;
 @synthesize events_lbe=_events_lbe;
-
-//jimmy
 @synthesize feedback_view=_feedback_view;
 @synthesize purchaseManager=_purchaseManager;
+
+//  ASSIGN...
 @synthesize VIP=_VIP;
+@synthesize is_simulator=_is_simulator;
+
 #ifdef INTRO
 @synthesize player=_player;
 #endif
@@ -55,7 +54,7 @@
     // Add the tab bar controller's current view as a subview of the window
     //self.window.rootViewController = self.tabBarController;
     
-    self.api = [ [ [ DJCAPI alloc ] init:self] autorelease];
+    
     self.VIP=1;//1=>no,0=>yes;
     
     //  Do notification registration...
@@ -134,7 +133,7 @@
  // Optional UITabBarControllerDelegate method.
  - (void)tabBarController:(UITabBarController *)tabBarController didSelectViewController:(UIViewController *)viewController
  {
-     NSLog(@"tab!");
+     //NSLog(@"tab!");
  }
  
 
@@ -248,7 +247,6 @@
     parms.data = evt;
     parms.oid = get_eid;
     [ self performSelector:@selector(_showEventModal:) withObject:parms afterDelay:0.0];
-    
 }
 
 -(void) _showDJItemModal:(NSObject *)obj
@@ -370,7 +368,6 @@
     }
 }
 
-
 #pragma mark - eventview delegate stuff...
 
 -(void) eventViewDone
@@ -389,12 +386,18 @@ didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken
     //  Remember it...
     self.devtoken = tokstr;
     
+    self.is_simulator = NO;
+    
 #if 0
     NSString *dispstr = \
     [ NSString stringWithFormat:@"Notifications registration success ->%@<-.", tokstr ];
     [ Utility AlertMessage:dispstr];
 #endif
     
+    if ( self.api == nil )
+    {
+        self.api = [ [ [ DJCAPI alloc ] init:self] autorelease];
+    }
     if ( ! [ self.api register_device:tokstr ] )
     {
         [ Utility AlertMessage:@"Failed to register device with server." ];
@@ -410,6 +413,12 @@ didFailToRegisterForRemoteNotificationsWithError:(NSError *)error
     //  Remember it...
     self.devtoken = @"SIMULATOR";
     
+    self.is_simulator = YES;
+    
+    if ( self.api == nil )
+    {
+        self.api = [ [ [ DJCAPI alloc ] init:self] autorelease];
+    }
     if ( ! [ self.api register_device:self.devtoken ] )
     {
         [ Utility AlertMessage:@"Failed to register device with server." ];

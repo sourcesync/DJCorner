@@ -160,8 +160,9 @@
         
         if(location.pp!=nil)
         {
-            UIImage *flag=[UIImage imageNamed:location.pp] ;
-            float rate=flag.size.height/flag.size.width;
+            //UIImage *flag=[UIImage imageNamed:location.pp] ;
+            
+            //float rate=flag.size.height/flag.size.width;
             //UIImage *newFlag=[Utility imageWithImage:flag scaledToSize:CGSizeMake(12.0f/rate,12.0f)];
             //[annonationView setImage:newFlag];
         }

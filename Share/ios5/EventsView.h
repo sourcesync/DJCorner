@@ -41,6 +41,8 @@ enum EventViewMode
 @property (nonatomic, retain) CLLocationManager *location_manager;
 @property (nonatomic, retain) EventsGetter *getter;
 @property (nonatomic, retain) NSString *cur_search;
+@property (nonatomic, retain) UILongPressGestureRecognizer *longPressGesture;
+@property (nonatomic, retain) SimpleLocation *me_annotation;
 
 //  IBOUTLET...
 @property (nonatomic, retain) IBOutlet UITableView *tv;
@@ -50,6 +52,7 @@ enum EventViewMode
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonMapList;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activity;
 @property (nonatomic, retain) IBOutlet UILabel *header;
+
 
 //  ASSIGN...
 @property (nonatomic, assign) CLLocationCoordinate2D my_last_location;
@@ -61,6 +64,7 @@ enum EventViewMode
 @property (nonatomic, assign) int VIP;
 @property (nonatomic, assign) BOOL scrolling;
 @property (nonatomic, assign) BOOL refresh;
+@property (nonatomic, assign) int sort_criteria;
 
 
 //  PUBLIC FUNCS...

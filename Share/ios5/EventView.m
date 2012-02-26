@@ -132,7 +132,8 @@
     {
         if ( self.get_eid != nil )
         {
-            NSMutableDictionary *loc = [ [[NSMutableDictionary alloc] initWithCapacity:0 ] autorelease ];
+            //NSMutableDictionary *loc = 
+            //[ [[NSMutableDictionary alloc] initWithCapacity:0 ] autorelease ];
             
             /*
             if ( ! [self.api get_event:loc :self.get_eid ] )
@@ -436,7 +437,7 @@
     NSString *lc = self.event.venue;
     NSString *sd = self.event.startdate;
     //NSLog(@"%@",sd);
-    NSString *ed = self.event.enddate;
+    //NSString *ed = self.event.enddate;
     //NSLog(@"%@",ed);
 
     // create an event and prefill some fields...
