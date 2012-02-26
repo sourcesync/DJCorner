@@ -2,12 +2,16 @@
 # Config...
 #
 
+# TO SYNC THIS SHEET, you must republish the sheet in google docs and restore from None...
 DJ_LIST = None # "https://spreadsheets.google.com/feeds/cells/0AuRz1oxD7nNEdHdxVUlMUzg5bWoyX05uc0lCdm9pRWc/od7/public/basic"
 
+# TO SYNC THIS SHEET, you must republish the sheet in google docs and restore from None...
 DJ_SCHEDULE = "https://spreadsheets.google.com/feeds/cells/0AuRz1oxD7nNEdHdxVUlMUzg5bWoyX05uc0lCdm9pRWc/od4/public/basic"
 
+# TO SYNC THIS SHEET, you must republish the sheet in google docs and restore from None...
 CLUB_LIST = None #"https://spreadsheets.google.com/feeds/cells/0AuRz1oxD7nNEdHdxVUlMUzg5bWoyX05uc0lCdm9pRWc/od5/public/basic"
 
+# TODO: Code not done here yet...
 CLUB_SCHEDULE = None # "https://spreadsheets.google.com/feeds/cells/0AuRz1oxD7nNEdHdxVUlMUzg5bWoyX05uc0lCdm9pRWc/oda/public/basic"
 
 #
