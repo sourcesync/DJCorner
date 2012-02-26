@@ -92,7 +92,7 @@ class JSONRPC(resource.Resource, BaseSubhandler):
         functionPath = parsed.get("method")
         args = parsed.get('params')
         id = parsed.get('id')
-	print "JSONRPC DBG: id=",id
+	#print "JSONRPC DBG: id=",id
         version = parsed.get('jsonrpc')
         if version:
             version = int(float(version))
@@ -123,14 +123,14 @@ class JSONRPC(resource.Resource, BaseSubhandler):
         try:
 	    #gw
             #s = jsonrpclib.dumps(result, version=version)
-	    print "JSONRPC DBG: sending id=", id
+	    #print "JSONRPC DBG: sending id=", id
             s = jsonrpclib.dumps(result, version=version, id=id )
 	    #gw
         except:
             f = jsonrpclib.Fault(self.FAILURE, "can't serialize output")
 	    #gw
             #s = jsonrpclib.dumps(f, version=version)
-	    print "JSONRPC DBG: sending id=", id
+	    #print "JSONRPC DBG: sending id=", id
             s = jsonrpclib.dumps(f, version=version, id=id )
 	    #gw
         request.setHeader("content-length", str(len(s)))

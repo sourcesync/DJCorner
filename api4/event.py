@@ -3,6 +3,8 @@
 #
 VERBOSE = True
 
+FAR = 999999
+
 #
 # Program...
 #
@@ -90,13 +92,21 @@ def get_event( connection, oid ):
 	event = events.find_one( _evt )
 	return event
 
+#
+# func to get performer names from ids...
+#
+def _get_performers( connection, pfids ):
+	pfs = []	
+	for pfid in pfids:
+		info = dj.get_dj( connection, bson.objectid.ObjectId(pfid) ) 
+		if info:
+			pfs.append( info["name"] )
+	return pfs
 
 #
 # func to get all event info...
 #
 def get_event_details( connection, location, oid, verbose ):
-
-	DBG("INFO: event: oid->", oid)
 
 	event = get_event( connection, oid )
 
@@ -107,12 +117,12 @@ def get_event_details( connection, location, oid, verbose ):
 		venueid = event["venueid"]
 		vn = venue.get_venue( connection, venueid )
 		if not vn:
-			print "WARNING: venue no longer exists, removing link"
-			event["dist"] = 0
+			#DBG( "WARNING: venue no longer exists..." )
+			event["dist"] = FAR
 
 		elif not vn or not vn.has_key("name"):
-			print "WARNING: venue no longer exists, removing link"
-			event["dist"] = 0
+			#DBG( "WARNING: venue no longer exists..." )
+			event["dist"] = FAR
 		
 		else:	
 			#
@@ -145,17 +155,18 @@ def get_event_details( connection, location, oid, verbose ):
 				dist = 	common.get_distance( latitude, longitude, location["lat"], location["lng"] )
 				event["dist"] = dist
 			else:
-				event["dist"] = 0
+				#DBG( "WARNING: venue has no lat/long->", vn["name"] )
+				event["dist"] = FAR
 
 		# remove venueid...
 		del event["venueid"]
 
 	else: # no venueid
-		event["dist"] = 0
+		#DBG( "WARNING: event has no venueid" )
+		event["dist"] = FAR
 
 	# event date...
 	dtstr = event["eventdate"]
-	print dtstr
 	dt = parser.parse(dtstr)
 	dtstr = dt.strftime("%m/%d/%y")
 	event["eventdate"] = dtstr
@@ -168,6 +179,7 @@ def get_event_details( connection, location, oid, verbose ):
 		pfids = event["pfids"]
 		pfids = [ str(a) for a in pfids ] # make sure its serializable...
 		event["pfids"] = pfids
+		event["pf"] = _get_performers( connection, pfids )
 	
 	# fix up description...
 	if (not verbose) and event.has_key("description"):
@@ -231,23 +243,27 @@ def get_events_details( connection, location, paging, city, all, sort_criteria )
 
 		# don't include old events...
 		edt = event_details["eventdate"]
-		print "DATE->", edt
 		dt = parser.parse( edt )
 		if (  datetime.datetime.today() - dt ) > timedelta( days=1 ):
-			print "WARNING: event: event already happened"
+			#DBG( "WARNING: event: event already happened")
 			continue
 
 		# filter by city possibly...
 		if city and event_details["city"] != city:
+			#DBG( "WARNING: event: city filter failed" )
 			continue
-
-		if not all: # filter by rating...
+		
+		# TODO: return this code !!!
+		if not all and False: # filter by rating...
                         rating = None
                         if evt.has_key("rating"):
                                 rating = evt["rating"]
+				if type(rating)==type(""):
+					rating = float(rating)
                         if rating!=None and rating>=0 and rating <= 50:
 				pass
 			else: #skip this one
+				DBG( "WARNING: event: rating filter failed" )
 				continue
 
 		events_details.append( event_details )
@@ -266,6 +282,7 @@ def get_events_details( connection, location, paging, city, all, sort_criteria )
 		arr = events_details[start:end]
 		count = len(arr)
 		info = { "total":total, "count":count, "start":start, "end":end }
+		DBG( "INFO: event: get_events_details->", str(info) )
 		return [ arr, info ]
 	else:		
 		return [ events_details, {} ]
@@ -366,7 +383,7 @@ if __name__ == "__main__":
 
 	# possibly clear events...
 	if len(sys.argv)>1 and ( sys.argv[1]=="clear" ):
-		print "WARNING: clearing events..."
+		DBG( "WARNING: clearing events..." )
 		clear_all( None)
 		sys.exit(0)
 
@@ -384,7 +401,7 @@ if __name__ == "__main__":
 
 	# get all events...
 	events = get_events_details( conxn, loc, None, None, True, 0 )
-	print "INFO: There are %d events" % len(events[0])
+	DBG( "INFO: There are %d events" % len(events[0]) )
 
 	# iterate...
 	for evt in events[0]:
@@ -397,14 +414,14 @@ if __name__ == "__main__":
 		if evt.has_key("city"):
 			cty = evt["city"]
 
-		print "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], \
-			evt["eventdate"], venuename, cty, evt["dist"], evt["eventdate"]
+		DBG( "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], \
+			evt["eventdate"], venuename, cty, evt["dist"], evt["eventdate"] )
 		if validate:
 			if evt["dist"] == 0:
-				print "ERROR: event: invalid dist"
+				DBG( "ERROR: event: invalid dist" )
 				sys.exit(1)
 	
-	print "INFO: There are %d events" % len(events[0])
+	DBG( "INFO: There are %d events" % len(events[0]) )
 
-	print "INFO: Done."
+	DBG( "INFO: Done." )
 	

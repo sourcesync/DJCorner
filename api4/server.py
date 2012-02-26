@@ -1,3 +1,13 @@
+#
+# Configuration... 
+#
+VERBOSE = True
+
+
+#
+# Program...
+#
+
 from txjsonrpc.web import jsonrpc
 from twisted.web import server
 from twisted.internet import reactor
@@ -25,8 +35,11 @@ import followdj
 import dj
 import city
 
-def DBG(a):
-	print a
+def DBG( *items ):
+        if VERBOSE:
+                for item in items:
+                        print item,
+                print
 
 class FormPage(resource.Resource):
     def render_GET(self, request):
@@ -69,13 +82,14 @@ class API(jsonrpc.JSONRPC):
 
 		# format return payload as dct...
 		dct = { "results":events, "status":1, "paging":info }
-		#print "INFO: api: get_events: return dct->", dct
 
 		return dct
         
 	def jsonrpc_get_event(self,location,eoid):
+
 		bid = bson.objectid.ObjectId(eoid)
-		print "INFO: api: get_events->", location, eoid, bid
+		DBG( "INFO: api: get_events->", location, eoid, bid )
+
 		evt = event.get_event_details( None, location, bid,True )
 		if not evt:
 			dct = {'status':0,'msg':'Cannot get this event.'}
@@ -85,16 +99,21 @@ class API(jsonrpc.JSONRPC):
 			return dct
 
 	def jsonrpc_register_device(self,deviceid):
-		print "INFO: api: register_device->", deviceid
+
+		DBG( "INFO: api: register_device->", deviceid )
 		[ status, oid ] = device.add_device( None, deviceid )
+
 		if status:
 			dct = { 'status':1 }
 		else:
 			dct = { 'status':0 }
+
 		return dct
 
 	def jsonrpc_followdjs(self,deviceid,djs,djids):
-		print "INFO: api: followdj->", deviceid, djs, djids
+
+		DBG( "INFO: api: followdj->", deviceid, djs, djids )
+
 		status = followdj.add_followdjs( None, deviceid, djs, djids )
 		if not status:
 			return { 'status':0, 'msg':'Operation failed' }
@@ -107,32 +126,40 @@ class API(jsonrpc.JSONRPC):
 		return dct
 
 	def jsonrpc_get_followdjs(self,deviceid):
-		print "INFO: api: get_followdjs->", deviceid
+
+		DBG( "INFO: api: get_followdjs->", deviceid )
+
 		djs = followdj.get_followdjs_details( None, deviceid )	
-		#print "INFO: api: got djs->", djs
+
 		dct = {'status':1, 'results':djs }
 		return dct
 
 	def jsonrpc_stop_followdj(self,deviceid,dj):
-		print "INFO: api: stop_followdj->", deviceid, dj
+
+		DBG( "INFO: api: stop_followdj->", deviceid, dj )
+
 		status = followdj.remove_followdj( None, deviceid, dj )
 		if not status:
 			dct = {'status':0,'msg':'Problem with this operation.'}
+
 		return self.jsonrpc_get_followdjs( deviceid )
 
 	def jsonrpc_get_djs(self, searchrx, all, paging):
-		print "INFO: api: get_djs->", searchrx, all, paging
+
+		DBG( "INFO: api: get_djs->", searchrx, all, paging )
+
 		status = dj.get_djs_details( None, searchrx, all, paging )
 		if not status:
 			dct = {'status':0,'msg':'Problem with this operation.'}
 			return dct	
 		else:
 			dct = {'status':1, 'results':status[0], 'paging':status[1] }
-			print "INFO: server: return dct->", dct
 			return dct	
 	
 	def jsonrpc_get_dj(self, djid):
-		print "INFO: api: get_dj->", djid
+
+		DBG( "INFO: api: get_dj->", djid )
+
 		status = dj.get_dj_details( None, djid )
 		if not status:
 			dct = {'status':0,'msg':'Problem with this operation.'}
@@ -142,7 +169,9 @@ class API(jsonrpc.JSONRPC):
 			return dct	
 	
 	def jsonrpc_get_schedule(self, djid):
-		print "INFO: api: get_schedule->", djid
+		
+		DBG( "INFO: api: get_schedule->", djid )
+
 		bid = bson.objectid.ObjectId(djid)
 		status = dj.get_schedule( None, bid )
 		if status == False:
@@ -150,11 +179,12 @@ class API(jsonrpc.JSONRPC):
 			return dct	
 		else:
 			dct = {'status':1, 'results':status }
-			#print "INFO: server: return dct->", dct
 			return dct	
 	
 	def jsonrpc_get_similar_djs(self, djid):
-		print "INFO: api: get_similar_djs->", djid
+
+		DBG( "INFO: api: get_similar_djs->", djid )
+
 		status = dj.get_similar_djs( None,  djid )
 		if status == False:
 			dct = {'status':0,'msg':'Problem with this operation.'}
@@ -164,7 +194,9 @@ class API(jsonrpc.JSONRPC):
 			return dct
 
 	def jsonrpc_get_cities(self):
-		print "INFO: api: get_cities->"
+
+		DBG( "INFO: api: get_cities->" )
+
 		status = city.get_cities_details( None, None, None )
 		if status == False:
 			dct = {'status':0,'msg':'Problem with this operation.'}
@@ -173,7 +205,6 @@ class API(jsonrpc.JSONRPC):
 			dct = {'status':1, 'results':status }
 			return dct
 
-#a = api.API()
 a = API()
 parent.putChild("api", a)
 
