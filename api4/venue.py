@@ -11,6 +11,8 @@ from pymongo import Connection
 
 import sys
 
+import bson
+
 import dbglobal
 
 def DBG( *items ):
@@ -127,6 +129,7 @@ def get_venues_details( connection, paging ):
 	retv = []
 	for venue in venues.find():
 		if venue.has_key("_id"):
+			venue["id"] = str(venue["_id"])
 			del venue["_id"]
 		retv.append( venue )
 
@@ -136,7 +139,10 @@ def get_venues_details( connection, paging ):
 #
 # func to update venue basic info...
 #
-def update_venue( connection, void, name, latitude, longitude, display_name, city ):
+def update_venue( connection=None, void=None, name=None, latitude=None, longitude=None, display_name=None, city=None, address=None, website=None, phone=None ):
+
+	if (void==None):
+		return False
 	
         venues = _get_venue_col( connection )
 
@@ -150,6 +156,9 @@ def update_venue( connection, void, name, latitude, longitude, display_name, cit
 	if longitude: fields["longitude"] = longitude
 	if display_name: fields["ds"] = display_name
 	if city: fields["city"] = city
+	if address: fields["address"] = address
+	if phone: fields["phone"] = phone
+	if website: fields["website"] = website
 
 	# update...
 	uid = venues.update( venue, { '$set':fields } , True )
@@ -184,19 +193,29 @@ if __name__ == "__main__":
 		DBG("WARNING: Clearing venues...")
 		clear_all( None )
 
-	vs = get_venues_details( None, None )
-	print vs
+	elif len(sys.argv)>1 and sys.argv[1]=="delete":
+		DBG("WARNING: Delete venue with id->%s<-" % sys.argv[2] )
+
+		void = bson.objectid.ObjectId( sys.argv[2] )
+		retv = delete_venue( None, void )
+		if not retv:
+			DBG("ERROR: Could not delete venue")
+
+	else:
+		vs = get_venues_details( None, None )
+		print vs
 	
-	for v in vs:
-		print "INFO: venue->", v["name"],
-		if v.has_key("city"):
-			print "city=" + v["city"],
+		for v in vs:
+			print "INFO: venue->", v["id"], v["name"],
+			if v.has_key("city"):
+				print "city=" + v["city"],
 			print
-		if v.has_key("latitude"):
-			print "lat=" + str(v["latitude"]),
+			if v.has_key("latitude"):
+				print "lat=" + str(v["latitude"]),
+				print
+			if v.has_key("longitude"):
+				print "lat=" + str(v["longitude"]),
+				print
 			print
-		if v.has_key("longitude"):
-			print "lat=" + str(v["longitude"]),
-			print
-		print
+	
 	print "INFO: Done."

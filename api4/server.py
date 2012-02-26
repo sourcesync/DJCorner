@@ -23,6 +23,10 @@ import event
 import device
 import followdj
 import dj
+import city
+
+def DBG(a):
+	print a
 
 class FormPage(resource.Resource):
     def render_GET(self, request):
@@ -57,11 +61,16 @@ parent.putChild("static", staticfiles )
 # API top level resource...
 class API(jsonrpc.JSONRPC):
 
-        def jsonrpc_get_events(self,location,paging,city,all):
-		print "INFO: api: get_events->", location, paging, "city->",city, all
-		[ events, info ] = event.get_events_details( None, location, paging, city, all)
+        def jsonrpc_get_events(self,location,paging,city,all,sc):
+		print "INFO: api: get_events->", location, paging, "city->",city, all, sc
+
+		# get events...
+		[ events, info ] = event.get_events_details( None, location, paging, city, all, sc)
+
+		# format return payload as dct...
 		dct = { "results":events, "status":1, "paging":info }
 		#print "INFO: api: get_events: return dct->", dct
+
 		return dct
         
 	def jsonrpc_get_event(self,location,eoid):
@@ -147,6 +156,16 @@ class API(jsonrpc.JSONRPC):
 	def jsonrpc_get_similar_djs(self, djid):
 		print "INFO: api: get_similar_djs->", djid
 		status = dj.get_similar_djs( None,  djid )
+		if status == False:
+			dct = {'status':0,'msg':'Problem with this operation.'}
+			return dct	
+		else:
+			dct = {'status':1, 'results':status }
+			return dct
+
+	def jsonrpc_get_cities(self):
+		print "INFO: api: get_cities->"
+		status = city.get_cities_details( None, None, None )
 		if status == False:
 			dct = {'status':0,'msg':'Problem with this operation.'}
 			return dct	

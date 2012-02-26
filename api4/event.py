@@ -106,50 +106,63 @@ def get_event_details( connection, location, oid, verbose ):
 		# get the linked venue...
 		venueid = event["venueid"]
 		vn = venue.get_venue( connection, venueid )
-
-		#
-                # flatten venue information, like venue name, lat, long...
-		#
-
-		# venue name...
-		ds = vn["name"]
-		if vn.has_key("ds"):
-			ds = vn["ds"]	
-                event["venuename"] = ds
-	
-		# venue lat...	
-		lat = 0
-		if vn.has_key("latitude"):
-			lat = vn["latitude"]	
-              	event["latitude"] = lat
-	
-		# venue long...
-		lng = 0
-		if vn.has_key("longitude"):
-			lng = vn["longitude"]	
-              	event["longitude"] = lng
-
-		# compute dist for this event...	
-		if location and vn.has_key("latitude") and vn.has_key("longitude"):
-			latitude = vn["latitude"]
-			longitude = vn["longitude"]
-			dist = 	common.get_distance( latitude, longitude, location["lat"], location["lng"] )
-			event["dist"] = dist
-		else:
+		if not vn:
+			print "WARNING: venue no longer exists, removing link"
 			event["dist"] = 0
+
+		elif not vn or not vn.has_key("name"):
+			print "WARNING: venue no longer exists, removing link"
+			event["dist"] = 0
+		
+		else:	
+			#
+                	# flatten venue information, like venue name, lat, long...
+			#
+
+			# venue name...
+
+			ds = vn["name"]
+			if vn.has_key("ds"):
+				ds = vn["ds"]	
+                	event["venuename"] = ds
+	
+			# venue lat...	
+			lat = 0
+			if vn.has_key("latitude"):
+				lat = vn["latitude"]	
+              		event["latitude"] = lat
+	
+			# venue long...
+			lng = 0
+			if vn.has_key("longitude"):
+				lng = vn["longitude"]	
+              		event["longitude"] = lng
+
+			# compute dist for this event...	
+			if location and vn.has_key("latitude") and vn.has_key("longitude"):
+				latitude = vn["latitude"]
+				longitude = vn["longitude"]
+				dist = 	common.get_distance( latitude, longitude, location["lat"], location["lng"] )
+				event["dist"] = dist
+			else:
+				event["dist"] = 0
 
 		# remove venueid...
 		del event["venueid"]
 
+	else: # no venueid
+		event["dist"] = 0
+
 	# event date...
 	dtstr = event["eventdate"]
+	print dtstr
 	dt = parser.parse(dtstr)
 	dtstr = dt.strftime("%m/%d/%y")
 	event["eventdate"] = dtstr
 
 	# event performers...
-	if not event.has_key("pf"):
-		event["pf"] = []
+	event["pf"] = []
+	if not event.has_key("pfids"):
 		event["pfids"] = []
 	else:
 		pfids = event["pfids"]
@@ -172,7 +185,7 @@ def get_event_details( connection, location, oid, verbose ):
 #
 # func to get events...
 #
-def get_events( connection, paging ):
+def get_events( connection ):
 	
         events = _get_event_col( connection )
 
@@ -206,10 +219,10 @@ def _sort_by_date( a, b ):
 #
 # func to get events details...
 #
-def get_events_details( connection, location, paging, city, all ):
+def get_events_details( connection, location, paging, city, all, sort_criteria ):
 
 	# get all raw events...	
-	events = get_events( connection, paging )
+	events = get_events( connection )
 
 	# get events details...
 	events_details = []
@@ -218,6 +231,7 @@ def get_events_details( connection, location, paging, city, all ):
 
 		# don't include old events...
 		edt = event_details["eventdate"]
+		print "DATE->", edt
 		dt = parser.parse( edt )
 		if (  datetime.datetime.today() - dt ) > timedelta( days=1 ):
 			print "WARNING: event: event already happened"
@@ -237,9 +251,12 @@ def get_events_details( connection, location, paging, city, all ):
 				continue
 
 		events_details.append( event_details )
-	
-	# sort it by dist...
-	events_details.sort( _sort_by_date )
+
+	if (sort_criteria==0):	# def date...
+		# sort it by dist...
+		events_details.sort( _sort_by_date )
+	elif (sort_criteria==1): # dist...
+		events_details.sort( _sort_by_dist )
 
 	# possibly deal with paging...
 	if (paging):
@@ -256,8 +273,12 @@ def get_events_details( connection, location, paging, city, all ):
 #
 # func to update event basic info...
 #
-def update_event( connection, oid, name, venueid, description, promotor, imgpath, eventDate, startDate, endDate, buyurl, performers,pfids, city):
-	
+def update_event( connection=None, oid=None, name=None, venueid=None, description=None, promotor=None, \
+	imgpath=None, eventDate=None, startDate=None, endDate=None, buyurl=None, performers=None, pfids=None, city=None, thumbpath=None ):
+
+	if (oid==None):
+		raise Exception("Event: update_event: invalid objectid")
+
         events = _get_event_col( connection )
 
 	# create the event object...
@@ -270,14 +291,17 @@ def update_event( connection, oid, name, venueid, description, promotor, imgpath
 	if description!=None: fields["description"] = description
 	if promotor: fields["promotor"] = promotor
 	if imgpath: fields["imgpath"] = imgpath
-
-	if eventDate: fields["eventdate"] = eventDate
+	if eventDate:
+		dt = parser.parse(eventDate)
+        	dtstr = dt.strftime("%m/%d/%y") 
+		fields["eventdate"] = eventDate
 	if startDate: fields["startdate"] = startDate
 	if endDate: fields["enddate"] = endDate
 	if buyurl: fields["buyurl" ]=buyurl
-	if performers: fields["pf"] = performers
-	if performers: fields["pfids"] = pfids
+	#if performers: fields["pf"] = performers
+	if pfids: fields["pfids"] = pfids
 	if city: fields["city"] = city
+	if thumbpath: fields["thumbpath"] = thumbpath
 
 	# update...
 	uid = events.update( event, { '$set':fields } , True )
@@ -308,7 +332,6 @@ def update_event_rating( connection, oid ):
 		if rating and rating>=0 and rating<=50:
 			if rating> evtrating:
 				evtrating = rating
-	print "EVTRATING->", evtrating
 
         events = _get_event_col( connection )
 	obj = { "_id":oid }
@@ -345,23 +368,37 @@ if __name__ == "__main__":
 	if len(sys.argv)>1 and ( sys.argv[1]=="clear" ):
 		print "WARNING: clearing events..."
 		clear_all( None)
+		sys.exit(0)
+
+	# possibly also validate event...
 	elif len(sys.argv)>1 and ( sys.argv[1]=="validate" ):
 		validate = True
 
 	# get connection...
 	conxn = _get_connection()
 
+	# simulate a device gps...
 	loc = None
 	if validate:
 		loc = {'lat':0.1,'lng':0.2}
 
 	# get all events...
-	events = get_events_details( conxn, loc, None, None, True)
+	events = get_events_details( conxn, loc, None, None, True, 0 )
 	print "INFO: There are %d events" % len(events[0])
 
 	# iterate...
 	for evt in events[0]:
-		print "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], evt["eventdate"], evt["venuename"], evt["city"], evt["dist"], evt["eventdate"], evt["rating"]
+
+		venuename = None
+		if evt.has_key("venuename"):
+			venuename = evt["venuename"]
+		
+		cty = None
+		if evt.has_key("city"):
+			cty = evt["city"]
+
+		print "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], \
+			evt["eventdate"], venuename, cty, evt["dist"], evt["eventdate"]
 		if validate:
 			if evt["dist"] == 0:
 				print "ERROR: event: invalid dist"

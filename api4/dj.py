@@ -132,7 +132,11 @@ def add_djs( connection, djs ):
 #
 # func to update dj...
 #
-def update_dj( connection, djid, name, pic, events, related, rating ):
+def update_dj( connection=None, djid=None, name=None, pic=None, events=None, related=None, rating=None ):
+
+	if djid==None:
+		DBG("ERROR: dj: Invalid djid")
+		return False
 
         # get djs collection...
         djs = _get_djs_col( connection )
@@ -449,14 +453,10 @@ if __name__ == "__main__":
 	for djobj in djs:
 		print "INFO: dj: ->", djobj["_id"], djobj["name"], 
 		if djobj.has_key("rating"):
-			print "rating=" +  djobj["rating"],
+			print "rating=" +  str(djobj["rating"]),
 		print
 		#schedule = get_schedule( None, djobj["_id"] )
 		#print "INFO: dj: schedule->", djobj["name"], schedule
-
-	# get objs details...
-	#details = get_djs_details( None, None, None )
-	#print "INFO: dj: get_djs_details->", details
 
 	print "INFO: Done."
 
