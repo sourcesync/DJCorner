@@ -1,0 +1,279 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B314153114FAE8E100A8FC3A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B314153014FAE8E100A8FC3A /* UIKit.framework */; };
+		B314153314FAE8E100A8FC3A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B314153214FAE8E100A8FC3A /* Foundation.framework */; };
+		B314153514FAE8E100A8FC3A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B314153414FAE8E100A8FC3A /* CoreGraphics.framework */; };
+		B314153B14FAE8E100A8FC3A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B314153914FAE8E100A8FC3A /* InfoPlist.strings */; };
+		B314153D14FAE8E100A8FC3A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B314153C14FAE8E100A8FC3A /* main.m */; };
+		B314154114FAE8E100A8FC3A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B314154014FAE8E100A8FC3A /* AppDelegate.m */; };
+		B314154414FAE8E100A8FC3A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B314154314FAE8E100A8FC3A /* ViewController.m */; };
+		B314154714FAE8E100A8FC3A /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B314154514FAE8E100A8FC3A /* ViewController.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		B314152C14FAE8E100A8FC3A /* DJSCornerIntro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DJSCornerIntro.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B314153014FAE8E100A8FC3A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B314153214FAE8E100A8FC3A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		B314153414FAE8E100A8FC3A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		B314153814FAE8E100A8FC3A /* DJSCornerIntro-Info.plist */ = {isa = PBXFileReference; path = "DJSCornerIntro-Info.plist"; sourceTree = "<group>"; };
+		B314153A14FAE8E100A8FC3A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		B314153C14FAE8E100A8FC3A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B314153E14FAE8E100A8FC3A /* DJSCornerIntro-Prefix.pch */ = {isa = PBXFileReference; path = "DJSCornerIntro-Prefix.pch"; sourceTree = "<group>"; };
+		B314153F14FAE8E100A8FC3A /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		B314154014FAE8E100A8FC3A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B314154214FAE8E100A8FC3A /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		B314154314FAE8E100A8FC3A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B314154614FAE8E100A8FC3A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B314152914FAE8E100A8FC3A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B314153114FAE8E100A8FC3A /* UIKit.framework in Frameworks */,
+				B314153314FAE8E100A8FC3A /* Foundation.framework in Frameworks */,
+				B314153514FAE8E100A8FC3A /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B314152114FAE8E100A8FC3A = {
+			isa = PBXGroup;
+			children = (
+				B314153614FAE8E100A8FC3A /* DJSCornerIntro */,
+				B314152F14FAE8E100A8FC3A /* Frameworks */,
+				B314152D14FAE8E100A8FC3A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B314152D14FAE8E100A8FC3A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B314152C14FAE8E100A8FC3A /* DJSCornerIntro.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B314152F14FAE8E100A8FC3A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B314153014FAE8E100A8FC3A /* UIKit.framework */,
+				B314153214FAE8E100A8FC3A /* Foundation.framework */,
+				B314153414FAE8E100A8FC3A /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B314153614FAE8E100A8FC3A /* DJSCornerIntro */ = {
+			isa = PBXGroup;
+			children = (
+				B314153F14FAE8E100A8FC3A /* AppDelegate.h */,
+				B314154014FAE8E100A8FC3A /* AppDelegate.m */,
+				B314154214FAE8E100A8FC3A /* ViewController.h */,
+				B314154314FAE8E100A8FC3A /* ViewController.m */,
+				B314154514FAE8E100A8FC3A /* ViewController.xib */,
+				B314153714FAE8E100A8FC3A /* Supporting Files */,
+			);
+			path = DJSCornerIntro;
+			sourceTree = "<group>";
+		};
+		B314153714FAE8E100A8FC3A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B314153814FAE8E100A8FC3A /* DJSCornerIntro-Info.plist */,
+				B314153914FAE8E100A8FC3A /* InfoPlist.strings */,
+				B314153C14FAE8E100A8FC3A /* main.m */,
+				B314153E14FAE8E100A8FC3A /* DJSCornerIntro-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B314152B14FAE8E100A8FC3A /* DJSCornerIntro */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B314154A14FAE8E100A8FC3A /* Build configuration list for PBXNativeTarget "DJSCornerIntro" */;
+			buildPhases = (
+				B314152814FAE8E100A8FC3A /* Sources */,
+				B314152914FAE8E100A8FC3A /* Frameworks */,
+				B314152A14FAE8E100A8FC3A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DJSCornerIntro;
+			productName = DJSCornerIntro;
+			productReference = B314152C14FAE8E100A8FC3A /* DJSCornerIntro.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B314152314FAE8E100A8FC3A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
+			buildConfigurationList = B314152614FAE8E100A8FC3A /* Build configuration list for PBXProject "DJSCornerIntro" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B314152114FAE8E100A8FC3A;
+			productRefGroup = B314152D14FAE8E100A8FC3A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B314152B14FAE8E100A8FC3A /* DJSCornerIntro */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B314152A14FAE8E100A8FC3A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B314153B14FAE8E100A8FC3A /* InfoPlist.strings in Resources */,
+				B314154714FAE8E100A8FC3A /* ViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B314152814FAE8E100A8FC3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B314153D14FAE8E100A8FC3A /* main.m in Sources */,
+				B314154114FAE8E100A8FC3A /* AppDelegate.m in Sources */,
+				B314154414FAE8E100A8FC3A /* ViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B314153914FAE8E100A8FC3A /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B314153A14FAE8E100A8FC3A /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		B314154514FAE8E100A8FC3A /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B314154614FAE8E100A8FC3A /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B314154814FAE8E100A8FC3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B314154914FAE8E100A8FC3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B314154B14FAE8E100A8FC3A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DJSCornerIntro/DJSCornerIntro-Prefix.pch";
+				INFOPLIST_FILE = "DJSCornerIntro/DJSCornerIntro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		B314154C14FAE8E100A8FC3A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "DJSCornerIntro/DJSCornerIntro-Prefix.pch";
+				INFOPLIST_FILE = "DJSCornerIntro/DJSCornerIntro-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B314152614FAE8E100A8FC3A /* Build configuration list for PBXProject "DJSCornerIntro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B314154814FAE8E100A8FC3A /* Debug */,
+				B314154914FAE8E100A8FC3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B314154A14FAE8E100A8FC3A /* Build configuration list for PBXNativeTarget "DJSCornerIntro" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B314154B14FAE8E100A8FC3A /* Debug */,
+				B314154C14FAE8E100A8FC3A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B314152314FAE8E100A8FC3A /* Project object */;
+}

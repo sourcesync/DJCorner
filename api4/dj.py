@@ -178,6 +178,7 @@ def update_dj_event( connection, djid, eoid ):
 	events = []
 	if djobj.has_key("events"):
 		events = djobj["events"]
+		print "DJEVENTS->", djobj["name"], events
 
 	if eoid in events:
 		DBG( "INFO: dj: event already present" )
@@ -252,18 +253,31 @@ def get_djs_details( connection, searchrx, all, paging ):
 		results = djs.find( {"name": re.compile(searchrx,re.IGNORECASE) } )
 		
 	for dj in results:
-
+		
+		# deal with the id...
 		dj["id"] = str( dj["_id"] ) # replace id with something serializable...
 		del dj["_id"] # delete old one...
-		if dj.has_key("events"): del dj["events"] # delete events...
 
-		if not all: # filter by rating...
+		# deal with events...
+		if dj.has_key("events"):
+			dj["events"] = [ str(a) for a in dj["events"] ]
+		else:
+			dj["events"] = []
+
+		# get upcoming date...
+		dj["upcoming"] = "No upcoming events"
+		upcoming = get_upcoming( connection, bson.objectid.ObjectId( dj["id"] ) )
+		if upcoming:
+			dj["upcoming"] = "Next Event: %s %s" % ( upcoming["city"], upcoming["eventdate"] )
+	
+		# possibly filter by dj rating...	
+		if not all:  # use rating...
 			rating = None
 			if dj.has_key("rating"):
 				rating = dj["rating"]
 			if rating!=None and rating>=0 and rating <= 50:
 				pfs.append( dj )
-		else: # all
+		else: # no, return all...
 			pfs.append( dj )
 
 	# sort
@@ -282,7 +296,20 @@ def get_djs_details( connection, searchrx, all, paging ):
         else:
                 return [ pfs, {} ]
 
+#
+# func to get upcoming date...
+#
+def get_upcoming( connection, djid ):
 
+	schedule = get_schedule( connection, djid )
+	if schedule == False:
+		DBG("WARNING: Could not get dj schedule")
+		return None
+	elif len(schedule)==0:
+		return []
+	else:
+		return schedule[0]
+	
 #
 # func to get dj schedule...
 #
@@ -294,7 +321,7 @@ def get_schedule( connection, djid ):
 	djs = _get_djs_col( connection )
 
 	# get the dj...
-	obj = djs.find_one( { '_id':djid } )
+	obj = djs.find_one( { '_id': bson.objectid.ObjectId(djid) } )
 	if not obj: 
 		DBG("WARNING: dj: get_schedule: no dj by that id->", djid, type(djid))
 		return False
@@ -312,17 +339,20 @@ def get_schedule( connection, djid ):
 
 	# iterate through events and get the schedule...
 	for eoid in eoids:
-		evt = event.get_event_details( None, None, eoid, False)
+		evt = event.get_event_details( connection, None, eoid, False)
 
 		# don't include old events...
                 edt = evt["eventdate"]
                 dt = parser.parse( edt )
                 if (  datetime.datetime.today() - dt ) > timedelta( days=1 ):
-                        print "WARNING: event: event already happened"
+                        DBG( "WARNING: event: event already happened" )
                         continue
 
 		DBG("INFO: dj: get_schedule: evt->", evt)
-		sched = { "eid": evt["id"], "city": evt["city"], "eventdate":evt["eventdate"] }
+		city = None
+		if evt.has_key("city"):
+			city = evt["city"]
+		sched = { "eid": evt["id"], "city": city, "eventdate":evt["eventdate"] }
 		schedule.append( sched )
 
 	return schedule
@@ -448,15 +478,15 @@ if __name__ == "__main__":
 		print djs
 		sys.exit(1)
 
-	# get raw objs...
-	djs = get_djs( None )
+	info = get_djs_details( None, None, True, None )
+	djs = info[0]
 	for djobj in djs:
-		print "INFO: dj: ->", djobj["_id"], djobj["name"], 
+		print "INFO: dj: ->", djobj["id"], djobj["name"], djobj["events"]
 		if djobj.has_key("rating"):
 			print "rating=" +  str(djobj["rating"]),
 		print
-		#schedule = get_schedule( None, djobj["_id"] )
-		#print "INFO: dj: schedule->", djobj["name"], schedule
+		schedule = get_schedule( None, djobj["id"] )
+		print "INFO: dj: schedule->", djobj["name"], schedule
 
 	print "INFO: Done."
 

@@ -375,6 +375,32 @@ def delete_event( connection, oid ):
 	else:	
 		return True
 
+def sync_events_to_djs( connection= None ):
+
+	# get raw event objects...
+	evts = get_events( connection )
+
+	# iterate events...
+	for evt in evts:
+		
+		print "INFO: event: sync_events_to_djs: event->", evt["_id"], evt["name"]
+	
+		# get pfids...
+		pfids = evt["pfids"]
+
+		# iterate performers...
+		for pfid in pfids:
+		
+			print "INFO: event: sync_events_to_djs: event->", pfid
+			
+			info = dj.get_dj( connection, pfid )
+			if info:
+				retv = dj.update_dj_event( connection, pfid, evt["_id"] )
+				if not retv:
+					DBG("ERROR: event: sync_events_to_djs: cannot update event to dj->", pfid, evt["_id"] )
+
+	return True
+
 #
 # unit test...
 #
@@ -385,6 +411,12 @@ if __name__ == "__main__":
 	if len(sys.argv)>1 and ( sys.argv[1]=="clear" ):
 		DBG( "WARNING: clearing events..." )
 		clear_all( None)
+		sys.exit(0)
+
+	# sync event to dj...
+	if (len(sys.argv)>1) and ( sys.argv[1]=="sync_to_djs"):
+		DBG( "WARNING: syncing to dj..." )
+		sync_events_to_djs( None )
 		sys.exit(0)
 
 	# possibly also validate event...
