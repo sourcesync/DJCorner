@@ -25,6 +25,7 @@ enum play_state
 @property (assign) BOOL tapped;
 @property (assign) int counter;
 @property (assign) enum play_state state;
+@property (assign) BOOL in_app;
 
 @property (retain) AVAudioPlayer *player;
 
@@ -38,6 +39,7 @@ enum play_state
 
 - (void) playIntro;
 
+-(void) gotoapp;
 
 -(void) prepVideo;
 

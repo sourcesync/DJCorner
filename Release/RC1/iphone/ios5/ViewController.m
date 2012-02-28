@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "AppDelegate.h"
+#import "djcAppDelegate.h"
 
 @implementation ViewController
 
@@ -16,7 +16,18 @@
 @synthesize player=_player;
 @synthesize counter=_counter;
 @synthesize state=_state;
+@synthesize in_app=_in_app;
 
+
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) 
+    {
+        // Custom initialization
+    }
+    return self;
+} 
 
 - (void)didReceiveMemoryWarning
 {
@@ -35,7 +46,9 @@
     
     self.fmv.hidden = YES;
     
-    self.view.backgroundColor = [ UIColor whiteColor ];
+    [ self gotoapp ];
+    
+    //self.view.backgroundColor = [ UIColor whiteColor ];
     [ [ UIApplication sharedApplication ] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
     [ [ UIApplication sharedApplication ] setStatusBarHidden:NO ];
     
@@ -62,7 +75,16 @@
     }
 }
 
-
+-(void) gotoapp
+{ 
+    if (!self.in_app)
+    {
+        self.in_app = YES;
+        djcAppDelegate *app = (djcAppDelegate *)
+        [ [ UIApplication sharedApplication ] delegate ];
+        [ app splashDone ];
+    }
+}
 
 -(void) playAudio
 {
@@ -90,7 +112,8 @@
         return NO; 
     }
 	//Initialize the player
-	self.player = [[AVAudioPlayer alloc] initWithContentsOfURL:[NSURL fileURLWithPath:path] error:&error];
+	self.player = [[AVAudioPlayer alloc] 
+                   initWithContentsOfURL:[NSURL fileURLWithPath:path] error:&error];
 	//self.player.delegate = self;
     self.player.numberOfLoops = -1;  
 	if (!self.player)
@@ -114,7 +137,7 @@
         
         self.fmv.hidden = YES;
         
-        self.view.backgroundColor = [ UIColor whiteColor ];
+        [ self gotoapp ];
         [ [ UIApplication sharedApplication ] setStatusBarStyle:UIStatusBarStyleDefault animated:YES];
         [ [ UIApplication sharedApplication ] setStatusBarHidden:NO ];
     }
