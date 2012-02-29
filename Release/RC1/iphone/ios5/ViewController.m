@@ -127,6 +127,7 @@
     return YES;
 }
 
+
 - (void) fadeOut
 {    
     if ( self.state ==  PLAYING )

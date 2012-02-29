@@ -12,6 +12,7 @@
 #import "MapKit/MapKit.h"
 #import "SimpleLocation.h"
 #import "AdsCell.h"
+#import "LocalizedManager.h"
 
 
 #define DEFAULT_LAT     40.730039
@@ -37,6 +38,11 @@
 @synthesize dataForTable=_dataForTable;
 @synthesize mapListUpDown=_mapListUpDown;
 @synthesize VIP=_VIP;
+//leve
+@synthesize button_Back;
+@synthesize lb_search_by_city;
+@synthesize button_map;
+@synthesize button_list;
 
 
 // Implement viewDidLoad to do additional setup after loading the view, typically from a nib.
@@ -275,6 +281,13 @@
         self.dataForTable=[[NSMutableDictionary alloc] init];
     }
     self.dataForTable=self.allEvents;
+    
+    //leve
+    self.button_MqpList.title=[LocalizedManager localizedString:@"map"];
+    self.button_Back.title=[LocalizedManager localizedString:@"back"];
+    self.lb_search_by_city.text=[LocalizedManager localizedString:@"searchbycity"];
+    self.button_list.title=[LocalizedManager localizedString:@"list"];
+    self.button_map.title=[LocalizedManager localizedString:@"map"];
 }
 
 
@@ -315,8 +328,12 @@
     [ self.tv reloadData ];
     [self.location_Manager startUpdatingLocation];
     [self.location_Manager startMonitoringSignificantLocationChanges];
-
-
+    //leve
+    self.button_MqpList.title=[LocalizedManager localizedString:@"map"];
+    self.button_Back.title=[LocalizedManager localizedString:@"back"];
+    self.lb_search_by_city.text=[LocalizedManager localizedString:@"searchbycity"];
+    self.button_list.title=[LocalizedManager localizedString:@"list"];
+    self.button_map.title=[LocalizedManager localizedString:@"map"];
 }
 
 
@@ -330,6 +347,12 @@
     self.eventsAround=nil;
     self.allEvents=nil;
     self.dataForTable=nil;
+    
+    //leve
+    [button_Back release];
+    [lb_search_by_city release];
+    [button_map release];
+    [button_list release];
     
     [super dealloc];
 }
@@ -642,7 +665,7 @@
     self.status=Middle;
     [self reSize];
     self.mode=SearchViewMap;
-    self.button_MqpList.title=@"List";
+    self.button_MqpList.title=[LocalizedManager localizedString:@"list"];
     self.dataForTable=nil;
     self.dataForTable=[[NSMutableDictionary alloc] init];
     self.dataForTable=self.eventsAround;
@@ -657,7 +680,7 @@
     self.mv.hidden=YES;
     self.tv.hidden=NO;
     self.mode=SearchViewList;
-    self.button_MqpList.title=@"Map";
+    self.button_MqpList.title=[LocalizedManager localizedString:@"map"];
     self.dataForTable=nil;
     self.dataForTable=[[NSMutableDictionary alloc] init];
     self.dataForTable=self.allEvents;
@@ -759,10 +782,10 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Service Disabled" 
-                                                    message:@"To re-enable, please go to Settings and turn on Location Service for this app." 
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[LocalizedManager localizedString:@"location_prompt"] 
+                                                    message:[LocalizedManager localizedString:@"turn_on_location_serve"]
                                                    delegate:nil 
-                                          cancelButtonTitle:@"OK" 
+                                          cancelButtonTitle:[LocalizedManager localizedString:@"cancel"] 
                                           otherButtonTitles:nil];
     [alert show];
     [alert release];

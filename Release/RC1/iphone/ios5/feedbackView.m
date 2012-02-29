@@ -13,6 +13,7 @@
 #import <MessageUI/MessageUI.h>
 #import <MessageUI/MFMailComposeViewController.h>
 #import "ProfileView.h"
+#import "LocalizedManager.h"
 
 
 @implementation feedbackView
@@ -22,6 +23,11 @@
 @synthesize parent=_parent;
 @synthesize tf=_tf;
 //@synthesize button_Done=_button_Done;
+
+//leve
+@synthesize button_back;
+@synthesize bt_submit;
+@synthesize lb_feedback;
 
 
 #pragma resignfirstresponse...
@@ -66,6 +72,12 @@
 
    self.api = nil;
     self.parent = nil;
+    
+    //leve
+    [lb_feedback release];
+    [button_back release];
+    [bt_submit release];
+    
     [ super dealloc];
 }
 
@@ -92,6 +104,11 @@
     [super viewDidLoad];
     djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate];
     app.feedback_view=self;
+    
+    //leve
+    self.button_back.title=[LocalizedManager localizedString:@"back"];
+    self.lb_feedback.text=[LocalizedManager localizedString:@"feedback"];
+    [self.bt_submit setTitle:[LocalizedManager localizedString:@"submit"] forState:UIControlStateNormal];
 }
 
 - (void)viewDidUnload
@@ -141,11 +158,11 @@
     
     //////////////////////////////////////////
     UIAlertView *alert = [[UIAlertView alloc] 
-        initWithTitle:@"Feedback" 
-        message:@"Your comment has been submitted"  
-        delegate:self 
-        cancelButtonTitle:@"OK" 
-        otherButtonTitles:nil, nil];
+                          initWithTitle:[LocalizedManager localizedString:@"title"] 
+                          message:[LocalizedManager localizedString:@"message"]   
+                          delegate:self 
+                          cancelButtonTitle:[LocalizedManager localizedString:@"cancel"] 
+                          otherButtonTitles:nil, nil];
 	[alert show];
 	[alert release];
     [self.tf setText:@""];

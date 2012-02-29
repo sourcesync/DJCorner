@@ -9,6 +9,7 @@
 #import "DJItemView.h"
 #import "djcAppDelegate.h"
 #import "Utility.h"
+#import "LocalizedManager.h"
 
 @implementation DJItemView
 
@@ -24,9 +25,20 @@
 @synthesize api=_api;
 @synthesize getdj=_getdj;
 @synthesize cell_similar=_cell_similar;
-@synthesize follow_btn=_follow_btn;
+//@synthesize follow_btn=_follow_btn;
 @synthesize selectedDj=_selectedDj;
 @synthesize djs=_djs;
+
+//leve
+@synthesize button_back;
+@synthesize bt_showFirst;
+@synthesize bt_showSecond;
+@synthesize bt_showThird;
+@synthesize follow_btn;
+@synthesize lb_web_site;
+@synthesize lb_upcoming_events;
+@synthesize lb_notification;
+@synthesize lb_similiar;
 
 //@synthesize button_follow=_button_follow;
 @synthesize following=_following;
@@ -71,6 +83,17 @@
     self.api = [ [ [ DJCAPI alloc ] init:self ] autorelease ];
     
     [self check_Followed:nil];
+    
+    //leve
+    self.button_back.title=[LocalizedManager localizedString:@"back"];
+    [self.bt_showSecond setTitle:[LocalizedManager localizedString:@"show"] forState:UIControlStateNormal];
+    [self.bt_showThird setTitle:[LocalizedManager localizedString:@"show"] forState:UIControlStateNormal];
+    [self.bt_showFirst setTitle:[LocalizedManager localizedString:@"show"] forState:UIControlStateNormal];
+    [self.follow_btn setTitle:[LocalizedManager localizedString:@"follow_this_dj"] forState:UIControlStateNormal];
+    self.lb_notification.text=[LocalizedManager localizedString:@"notification"];
+    self.lb_upcoming_events.text=[LocalizedManager localizedString:@"upcoming_events"];
+    self.lb_web_site.text=[LocalizedManager localizedString:@"dj_web_site"];
+    self.lb_similiar.text=[LocalizedManager localizedString:@"similiar"];
 }
 
 - (void)viewDidUnload
@@ -90,6 +113,18 @@
         self.tv.hidden = YES;
         self.activity.hidden = NO;
     }
+    
+    //leve
+    self.button_back.title=[LocalizedManager localizedString:@"back"];
+    [self.bt_showSecond setTitle:[LocalizedManager localizedString:@"show"] forState:UIControlStateNormal];
+    [self.bt_showThird setTitle:[LocalizedManager localizedString:@"show"] forState:UIControlStateNormal];
+    [self.bt_showFirst setTitle:[LocalizedManager localizedString:@"show"] forState:UIControlStateNormal];
+    [self.follow_btn setTitle:[LocalizedManager localizedString:@"follow_this_dj"] forState:UIControlStateNormal];
+    self.lb_notification.text=[LocalizedManager localizedString:@"notification"];
+    self.lb_upcoming_events.text=[LocalizedManager localizedString:@"upcoming_events"];
+    self.lb_web_site.text=[LocalizedManager localizedString:@"dj_web_site"];
+    self.lb_similiar.text=[LocalizedManager localizedString:@"similiar"];
+
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -124,7 +159,7 @@
        {
            //NSLog(@"they are the same");
            self.following=YES;
-           [self.follow_btn setTitle:@"Stop Following" forState:UIControlStateNormal];
+           [self.follow_btn setTitle:[LocalizedManager localizedString:@"stop_follow_this_dj"] forState:UIControlStateNormal];
        }
 
    }
@@ -143,6 +178,16 @@
     self.api = nil;
     self.getdj = nil;
     self.selectedDj = nil;
+    
+    //leve
+    [button_back release];
+    [bt_showFirst release];
+    [bt_showSecond release];
+    [bt_showThird release];
+    [lb_web_site release];
+    [lb_upcoming_events release];
+    [lb_notification release];
+    [lb_similiar release];
     
     [ super dealloc ];
 }
@@ -313,7 +358,7 @@
         } 
         else
         {
-            [self.follow_btn setTitle:@"Stop Following" forState:UIControlStateNormal];
+            [self.follow_btn setTitle:[LocalizedManager localizedString:@"stop_follow_this_dj"] forState:UIControlStateNormal];
             self.following=YES;
         }
         
@@ -325,13 +370,13 @@
             //NSString *dj = cell.textLabel.text;
             
         UIActionSheet *popupQuery = [[UIActionSheet alloc] 
-                                         initWithTitle:@"DJ's Corner" 
-                                         delegate:self 
-                                         cancelButtonTitle:@"Cancel"
-                                         destructiveButtonTitle:nil
-                                         otherButtonTitles:
-                                         @"Stop Following",
-                                         nil];
+                                     initWithTitle:[LocalizedManager localizedString:@"djitemtitle"] 
+                                     delegate:self 
+                                     cancelButtonTitle:[LocalizedManager localizedString:@"djitemcancel"]
+                                     destructiveButtonTitle:nil
+                                     otherButtonTitles:
+                                     [LocalizedManager localizedString:@"djitemstop"],
+                                     nil];
         popupQuery.delegate= self;
         popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
         [popupQuery showInView:self.view];
@@ -393,7 +438,7 @@
         }
         else
         {
-            [self.follow_btn setTitle:@"Follow this DJ" forState:UIControlStateNormal];
+            [self.follow_btn setTitle:[LocalizedManager localizedString:@"follow_this_dj"] forState:UIControlStateNormal];
             self.following=NO;
         }
     }

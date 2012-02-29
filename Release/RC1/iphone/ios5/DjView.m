@@ -12,6 +12,7 @@
 #import "djcAppDelegate.h"
 #import "DjsCell.h"
 #import "AdsCell.h"
+#import "LocalizedManager.h"
 
 //#define GET_PIC_ASYNC
 
@@ -134,6 +135,10 @@
     [ self newGetter ];
     
     self.refresh = YES;
+    
+    //leve
+    self.button_AllTop50.title=[LocalizedManager localizedString:@"all"];
+    self.button_search.title=[LocalizedManager localizedString:@"search"];
 
 }
 
@@ -175,6 +180,10 @@
             [ self.tv setHidden:NO];
         }
     }
+    
+    self.button_AllTop50.title=[LocalizedManager localizedString:@"all"];
+    self.button_search.title=[LocalizedManager localizedString:@"search"];
+    NSLog(@"%@",[LocalizedManager selectedLanguage]);
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -278,7 +287,7 @@
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
         [ cell.imageView setImage:nil ];
-        cell.textLabel.text = @"Connection Problem...";
+        cell.textLabel.text = [LocalizedManager localizedString:@"connection_problem"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -296,6 +305,7 @@
         }
         [ cell.imageView setImage:nil ];
         cell.textLabel.text = @""; //@"Please Wait...";
+        //cell.textLabel.text = [LocalizedManager localizedString:@"wait"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -313,7 +323,7 @@
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
         [ cell.imageView setImage:nil ];
-        cell.textLabel.text = @"No DJs Match...";
+        cell.textLabel.text = [LocalizedManager localizedString:@"no_djs_match"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -357,7 +367,7 @@
             [ cell.imageView setImage:nil ];
             cell.textLabel.textAlignment = UITextAlignmentCenter;
             cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
-            cell.textLabel.text = @"Getting More DJs.  Please Wait..";
+            cell.textLabel.text = [LocalizedManager localizedString:@"get_more_djs"];
             cell.textLabel.textColor = [ UIColor blackColor ];
             cell.selectionStyle = UITableViewCellSelectionStyleBlue;
             cell.accessoryType = UITableViewCellAccessoryNone;
@@ -705,13 +715,13 @@
     {
         self.top50=NO;
         self.all_djs=YES;
-        self.button_AllTop50.title=@"Top50";
+        self.button_AllTop50.title=[LocalizedManager localizedString:@"top50"];
     }
     else
     {
         self.top50=YES;
         self.all_djs=NO;
-        self.button_AllTop50.title=@"All";
+        self.button_AllTop50.title=[LocalizedManager localizedString:@"all"];
     }
     
     

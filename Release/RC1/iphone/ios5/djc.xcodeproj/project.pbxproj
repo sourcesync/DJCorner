@@ -266,6 +266,10 @@
 		3090AFF914E8B49E00E99626 /* SKProductPrice.m in Sources */ = {isa = PBXBuildFile; fileRef = 3090AFF814E8B49E00E99626 /* SKProductPrice.m */; };
 		3090AFFC14E9111100E99626 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3090AFFB14E9111000E99626 /* AVFoundation.framework */; };
 		3090AFFE14E9111D00E99626 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3090AFFD14E9111D00E99626 /* MediaPlayer.framework */; };
+		3091E29814FDF6DF006026E7 /* LanguageChange.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3091E29314FDF6DF006026E7 /* LanguageChange.xib */; };
+		3091E29914FDF6DF006026E7 /* LocalizedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091E29514FDF6DF006026E7 /* LocalizedManager.m */; };
+		3091E29A14FDF6DF006026E7 /* LanguageChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 3091E29714FDF6DF006026E7 /* LanguageChange.m */; };
+		30C5DB7414FDFADF009D2A79 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 30C5DB7214FDFADF009D2A79 /* Localizable.strings */; };
 		865BE19E14E36DFA004308F6 /* feedbackView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 865BE19D14E36DFA004308F6 /* feedbackView.xib */; };
 		869D8E4B14E1306C009E3E31 /* redbull.png in Resources */ = {isa = PBXBuildFile; fileRef = 869D8E4A14E1306C009E3E31 /* redbull.png */; };
 		86C46F1814DD88C800F719E6 /* feedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = 86C46F1714DD88C800F719E6 /* feedbackView.m */; };
@@ -649,6 +653,16 @@
 		3090AFF814E8B49E00E99626 /* SKProductPrice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKProductPrice.m; sourceTree = "<group>"; };
 		3090AFFB14E9111000E99626 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		3090AFFD14E9111D00E99626 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		3091E29314FDF6DF006026E7 /* LanguageChange.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LanguageChange.xib; sourceTree = "<group>"; };
+		3091E29414FDF6DF006026E7 /* LocalizedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalizedManager.h; sourceTree = "<group>"; };
+		3091E29514FDF6DF006026E7 /* LocalizedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedManager.m; sourceTree = "<group>"; };
+		3091E29614FDF6DF006026E7 /* LanguageChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageChange.h; sourceTree = "<group>"; };
+		3091E29714FDF6DF006026E7 /* LanguageChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageChange.m; sourceTree = "<group>"; };
+		3091E29C14FDF929006026E7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = /Users/zixengineer/Documents/DJCornerGIT/Release/RC1/iphone/ios5/djc/es.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
+		3091E2A014FDF931006026E7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/zixengineer/Documents/DJCornerGIT/Release/RC1/iphone/ios5/djc/zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		30C5DB7314FDFADF009D2A79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		30DE938314FDFB3300F03375 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		30DE938414FDFB3300F03375 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		865BE19D14E36DFA004308F6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
 		869D8E4A14E1306C009E3E31 /* redbull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbull.png; sourceTree = "<group>"; };
 		86C46F1414DD888600F719E6 /* feedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackView.h; sourceTree = "<group>"; };
@@ -893,6 +907,18 @@
 				B3C5654E14FC828B0064D6BF /* introvideo.mov */,
 			);
 			name = media;
+			sourceTree = "<group>";
+		};
+		3091E29014FDF691006026E7 /* Localization */ = {
+			isa = PBXGroup;
+			children = (
+				3091E29414FDF6DF006026E7 /* LocalizedManager.h */,
+				3091E29514FDF6DF006026E7 /* LocalizedManager.m */,
+				3091E29614FDF6DF006026E7 /* LanguageChange.h */,
+				3091E29714FDF6DF006026E7 /* LanguageChange.m */,
+				3091E29314FDF6DF006026E7 /* LanguageChange.xib */,
+			);
+			name = Localization;
 			sourceTree = "<group>";
 		};
 		86C46F1214DD884100F719E6 /* CTL_feedbck */ = {
@@ -1161,6 +1187,7 @@
 		B384A97E14761B1A003F0DD6 = {
 			isa = PBXGroup;
 			children = (
+				3091E29014FDF691006026E7 /* Localization */,
 				B3C5654014FC82350064D6BF /* INTRO */,
 				B314151514F348A500A8FC3A /* REZ */,
 				B314151414F3488400A8FC3A /* OBJECTS */,
@@ -1241,6 +1268,7 @@
 				B384A99514761B1A003F0DD6 /* djc-Info.plist */,
 				B384A99614761B1A003F0DD6 /* InfoPlist.strings */,
 				B384A99914761B1A003F0DD6 /* djc-Prefix.pch */,
+				30C5DB7214FDFADF009D2A79 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -1791,6 +1819,8 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				es,
+				"zh-Hans",
 			);
 			mainGroup = B384A97E14761B1A003F0DD6;
 			productRefGroup = B384A98A14761B1A003F0DD6 /* Products */;
@@ -2105,6 +2135,8 @@
 				B3C5654F14FC828B0064D6BF /* introaudio.mp3 in Resources */,
 				B3C5655014FC828B0064D6BF /* introvideo.mov in Resources */,
 				B3C5655C14FC84150064D6BF /* ViewController.xib in Resources */,
+				3091E29814FDF6DF006026E7 /* LanguageChange.xib in Resources */,
+				30C5DB7414FDFADF009D2A79 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2172,16 +2204,30 @@
 				B3C5654C14FC824D0064D6BF /* PlayerView.m in Sources */,
 				B3C5655314FC82C10064D6BF /* ViewController.m in Sources */,
 				B3C5655614FC82E00064D6BF /* AVPlayerDemoPlaybackView.m in Sources */,
+				3091E29914FDF6DF006026E7 /* LocalizedManager.m in Sources */,
+				3091E29A14FDF6DF006026E7 /* LanguageChange.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		30C5DB7214FDFADF009D2A79 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				30C5DB7314FDFADF009D2A79 /* en */,
+				30DE938314FDFB3300F03375 /* es */,
+				30DE938414FDFB3300F03375 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		B384A99614761B1A003F0DD6 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B384A99714761B1A003F0DD6 /* en */,
+				3091E29C14FDF929006026E7 /* es */,
+				3091E2A014FDF931006026E7 /* zh-Hans */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2219,8 +2265,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hok Leong Chan";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hok Leong Chan";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -2230,8 +2276,8 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				PRODUCT_NAME = "DJ's Corner";
-				PROVISIONING_PROFILE = "C3042580-871F-4B86-8838-E2FD175A4FCD";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C3042580-871F-4B86-8838-E2FD175A4FCD";
+				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -2240,8 +2286,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				CODE_SIGN_IDENTITY = "iPhone Distribution: Hok Leong Chan";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Hok Leong Chan";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -2249,8 +2295,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				PRODUCT_NAME = "DJ's Corner";
-				PROVISIONING_PROFILE = "C3042580-871F-4B86-8838-E2FD175A4FCD";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "C3042580-871F-4B86-8838-E2FD175A4FCD";
+				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				SDKROOT = iphoneos;
 			};
 			name = Release;
@@ -2259,8 +2305,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2269,8 +2315,8 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2279,8 +2325,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "djc/djc-Prefix.pch";
@@ -2288,8 +2334,8 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};

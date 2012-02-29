@@ -9,6 +9,7 @@
 #import "EventView.h"
 #import "Utility.h"
 #import "djcAppDelegate.h"
+#import "LocalizedManager.h"
 
 @implementation EventView
 
@@ -41,6 +42,9 @@
 @synthesize parent=_parent;
 @synthesize back_from;
 @synthesize gcount;
+//leve
+@synthesize bt_map;
+@synthesize lb_web_ticket;
 
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
@@ -70,6 +74,10 @@
     self.get_eid = nil;
     self.parent = nil;
     
+    //leve
+    [bt_map release];
+    [lb_web_ticket release];
+    
     [super dealloc];
 }
 
@@ -93,6 +101,13 @@
 	
 	// Get the default calendar from store.
 	self.defaultCalendar = [self.eventStore defaultCalendarForNewEvents];
+    
+    //leve
+    self.button_back.title=[LocalizedManager localizedString:@"back"];
+    [self.button_buy_now setTitle:[LocalizedManager localizedString:@"tickets"] forState:UIControlStateNormal];
+    [self.bt_map setTitle:[LocalizedManager localizedString:@"map_it"] forState:UIControlStateNormal];
+    [self.button_save setTitle:[LocalizedManager localizedString:@"save_date"] forState:UIControlStateNormal];
+    self.lb_web_ticket.text=[LocalizedManager localizedString:@"web_site"];
 }
 
 - (void)viewDidUnload
@@ -118,6 +133,13 @@
         [ self.tv setHidden:YES];
         [ self.activity startAnimating ];
     }
+    
+    //leve
+    self.button_back.title=[LocalizedManager localizedString:@"back"];
+    [self.button_buy_now setTitle:[LocalizedManager localizedString:@"tickets"] forState:UIControlStateNormal];
+    [self.bt_map setTitle:[LocalizedManager localizedString:@"map_it"] forState:UIControlStateNormal];
+    [self.button_save setTitle:[LocalizedManager localizedString:@"save_date"] forState:UIControlStateNormal];
+    self.lb_web_ticket.text=[LocalizedManager localizedString:@"web_site"];
 }
 
 -(void)viewDidAppear:(BOOL)animated

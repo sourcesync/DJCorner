@@ -59,6 +59,10 @@ enum EventGetMode
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activity;
 @property (nonatomic, retain) IBOutlet UILabel *header;
 
+//leve
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *buttonCity;
+@property (nonatomic, retain) IBOutlet UILabel *lb_events;
+
 
 //  ASSIGN...
 @property (nonatomic, assign) CLLocationCoordinate2D my_last_location;

@@ -40,6 +40,10 @@ enum MapListShowMode
 @property (nonatomic, retain) IBOutlet MKMapView *mv;
 @property (nonatomic, retain) IBOutlet UIToolbar *mapListUpDown;
 @property (nonatomic, retain) IBOutlet UIBarButtonItem *button_MqpList;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_Back;
+@property (nonatomic, retain) IBOutlet UILabel *lb_search_by_city;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_map;
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_list;
 
 //  RETAIN...
 @property (nonatomic, retain) NSMutableArray *cities;

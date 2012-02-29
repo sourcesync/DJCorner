@@ -9,7 +9,8 @@
 #import "SimilarDJView.h"
 #import "Utility.h"
 #import "djcAppDelegate.h"
-
+//leve
+#import "LocalizedManager.h"
 @implementation SimilarDJView
 
 @synthesize tv=_tv;
@@ -19,6 +20,9 @@
 @synthesize activity=_activity;
 @synthesize api=_api;
 @synthesize parent=_parent;
+//leve
+@synthesize button_back;
+@synthesize lb_similar;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -54,6 +58,10 @@
     self.similar = nil;
     self.parent = nil;
     
+    //leve
+    [button_back release];
+    [lb_similar release];
+    
     [ super dealloc];
 }
 
@@ -73,6 +81,10 @@
     {
         [ Utility AlertAPICallFailed ];
     }
+    
+    //leve
+    self.button_back.title=[LocalizedManager localizedString:@"back"];
+    self.lb_similar.text=[LocalizedManager localizedString:@"similar_dj"];
 }
 
 - (void)viewDidLoad
@@ -148,7 +160,7 @@
         {
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
-        cell.textLabel.text = @"Please Wait...";
+        cell.textLabel.text=[LocalizedManager localizedString:@"wait"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -162,7 +174,7 @@
         {
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
-        cell.textLabel.text = @"No Similar DJs...";
+        cell.textLabel.text = [LocalizedManager localizedString:@"no_similar_dj"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];

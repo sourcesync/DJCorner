@@ -15,6 +15,8 @@
 #import "SimilarDJView.h"
 #import "EventModalParms.h" 
 #import "feedbackView.h"
+//leve
+#import "LocalizedManager.h"
 
 #define NEW_INTRO
 
@@ -46,6 +48,11 @@
 @synthesize VIP=_VIP;
 @synthesize is_simulator=_is_simulator;
 
+//leve
+@synthesize tb_events;
+@synthesize tb_venue;
+@synthesize tb_profile;
+
 #ifdef INTRO
 @synthesize player=_player;
 #endif
@@ -64,6 +71,11 @@
     //  Do notification registration...
     [[UIApplication sharedApplication]  registerForRemoteNotificationTypes:
      (UIRemoteNotificationTypeBadge | UIRemoteNotificationTypeSound | UIRemoteNotificationTypeAlert)];
+    
+    //leve
+    self.tb_events.title=[LocalizedManager localizedString:@"events"];
+    self.tb_venue.title=[LocalizedManager localizedString:@"venue"];
+    self.tb_profile.title=[LocalizedManager localizedString:@"profile"];
     
 #ifdef SPLASH
     //  Create splash view and make it root...
@@ -138,6 +150,11 @@
 #endif
     [_window release];
     [_tabBarController release];
+    
+    //leve
+    [tb_profile release];
+    [tb_events release];
+    [tb_venue release];
     [super dealloc];
 }
 
@@ -204,6 +221,14 @@
     return YES;
 }
 #endif
+
+//leve
+- (void)localization
+{
+    self.tb_events.title=[LocalizedManager localizedString:@"events"];
+    self.tb_venue.title=[LocalizedManager localizedString:@"venue"];
+    self.tb_profile.title=[LocalizedManager localizedString:@"profile"];
+}
 
 #ifdef INTRO
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag

@@ -9,6 +9,9 @@
 #import "ScheduleView.h"
 #import "Utility.h"
 #import "djcAppDelegate.h"
+
+//leve
+#import "LocalizedManager.h"
  
 @implementation ScheduleView 
 
@@ -21,6 +24,8 @@
 @synthesize label_title=_label_title;
 @synthesize parent=_parent;
 @synthesize back_from=_back_from;
+//leve
+@synthesize button_back;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:nibBundleOrNil
 {
@@ -61,9 +66,10 @@
         self.tv.hidden = YES;
         self.activity.hidden = NO;
     
-        NSString *title = [ NSString stringWithFormat:@"Schedule for %@", self.djname ];
+        NSString *title = [ NSString stringWithFormat:@"%@ %@",[LocalizedManager localizedString:@"Schedule_for"], self.djname ];
         self.label_title.text = title;
     }
+    self.button_back.title=[LocalizedManager localizedString:@"back"];
 }
 
 
@@ -91,6 +97,9 @@
     self.tv.delegate = self;
     self.tv.dataSource = self;
     
+    //leve
+    self.button_back.title=[LocalizedManager localizedString:@"back"];
+    
 }
 
 - (void)viewDidUnload
@@ -113,6 +122,9 @@
     self.schedule = nil;
     self.api = nil;
     self.parent = nil;
+    
+    //leve
+    [button_back release];
     
     [ super dealloc ];
 }
@@ -169,7 +181,7 @@
         {
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
-        cell.textLabel.text = @"Please Wait...";
+        cell.textLabel.text = [LocalizedManager localizedString:@"wait"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -183,7 +195,7 @@
         {
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
-        cell.textLabel.text = @"Schedule Not Available...";
+        cell.textLabel.text = [LocalizedManager localizedString:@"schedule_not_available"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];

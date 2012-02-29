@@ -11,6 +11,7 @@
 #import "ASIHTTPRequest.h"
 #import "ASIDownloadCache.h"
 #import "DJCAPI.h"
+#import "LocalizedManager.h"
 
 @implementation Utility
 
@@ -85,7 +86,7 @@ static BOOL low_mem_warned = NO;
 {
     UIAlertView *alert = [[UIAlertView alloc]
                           initWithTitle: @"DJ's Corner"
-                          message: @"API Call Failed."
+                          message: [LocalizedManager localizedString:@"api_called_fail"]
                           delegate: nil
                           cancelButtonTitle:@"OK"
                           otherButtonTitles:nil];

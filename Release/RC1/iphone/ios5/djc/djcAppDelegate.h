@@ -39,6 +39,10 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 //  IBOUTLET...
 @property (nonatomic, retain) IBOutlet UIWindow *window;
 @property (nonatomic, retain) IBOutlet UITabBarController *tabBarController;
+//leve
+@property (nonatomic, retain) IBOutlet UITabBarItem * tb_events;
+@property (nonatomic, retain) IBOutlet UITabBarItem * tb_venue;
+@property (nonatomic, retain) IBOutlet UITabBarItem * tb_profile;
 
 //  RETAIN...
 #ifdef INTRO
@@ -89,4 +93,7 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 #ifdef INTRO
 -(BOOL)prepAudio;
 #endif
+
+//leve
+-(void) localization;
 @end

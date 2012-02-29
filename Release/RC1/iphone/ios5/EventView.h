@@ -46,6 +46,10 @@
 @property (nonatomic,retain) IBOutlet UIButton *button_follow;
 @property (nonatomic,retain) IBOutlet DJSelectView *follow_view;
 
+//leve
+@property (nonatomic,retain) IBOutlet UIButton *bt_map;
+@property (nonatomic,retain) IBOutlet UILabel *lb_web_ticket;
+
 //  RETAIN...
 @property (nonatomic, retain) DJCAPI *api;
 @property (nonatomic, retain) Event *event;

@@ -25,6 +25,16 @@
 @property (nonatomic, retain) IBOutlet UITableViewCell *cell_similar;
 @property (nonatomic, retain) IBOutlet UIButton *follow_btn;
 
+//leve
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_back;
+@property (nonatomic, retain) IBOutlet UIButton *bt_showFirst;
+@property (nonatomic, retain) IBOutlet UIButton *bt_showSecond;
+@property (nonatomic, retain) IBOutlet UIButton *bt_showThird;
+@property (nonatomic, retain) IBOutlet UILabel *lb_upcoming_events;
+@property (nonatomic, retain) IBOutlet UILabel *lb_web_site;
+@property (nonatomic, retain) IBOutlet UILabel *lb_notification;
+@property (nonatomic, retain) IBOutlet UILabel *lb_similiar;
+
 //@property (nonatomic, retain) IBOutlet UIButton *button_follow;
 //jimmy
 //@property (nonatomic, retain) IBOutlet UITableViewCell *cell_feedback;

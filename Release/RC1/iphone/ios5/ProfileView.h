@@ -30,6 +30,15 @@ DJCAPIServiceDelegate, UIActionSheetDelegate,UIAlertViewDelegate>
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activity;
 @property (nonatomic, retain) IBOutlet UILabel *lb_version;
 @property(nonatomic,retain) IBOutlet djcAppDelegate *dele;
+
+//leve
+@property (nonatomic, retain) IBOutlet UILabel *lb_profile;
+@property (nonatomic, retain) IBOutlet UILabel *lb_account;
+@property (nonatomic, retain) IBOutlet UILabel *lb_djs_following;
+@property (nonatomic, retain) IBOutlet UIButton *bt_upgrade;
+@property (nonatomic, retain) IBOutlet UIButton *bt_contact_feedback;
+@property (nonatomic, retain) IBOutlet UIButton *bt_change_language;
+
 //  ASSIGN...
 @property (assign) NSInteger selectedIndex;
 
@@ -51,5 +60,8 @@ DJCAPIServiceDelegate, UIActionSheetDelegate,UIAlertViewDelegate>
 #ifdef INTRO
 -(IBAction)stopMusic:(id)sender;
 #endif
+
+//leve
+-(IBAction)localization:(id)sender;
 
 @end

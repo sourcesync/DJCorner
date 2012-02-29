@@ -16,6 +16,8 @@
 @property (nonatomic, retain) IBOutlet UITableView *tv;
 @property (nonatomic, retain) IBOutlet UIActivityIndicatorView *activity;
 @property (nonatomic, retain) IBOutlet UILabel *label_title;
+//leve
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_back;
 //@property (nonatomic, retain) IBOutlet 
 
 //  RETAIN...

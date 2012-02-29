@@ -15,6 +15,7 @@
 #import "djcAppDelegate.h"
 #import "AdsCell.h"
 #import "MapEventCell.h"
+#import "LocalizedManager.h"
 
 #define DEFAULT_LAT     40.730039
 #define DEFAULT_LONG    -73.994358
@@ -30,6 +31,9 @@
 @synthesize activity=_activity;
 @synthesize header=_header;
 @synthesize back_from;
+//leve
+@synthesize buttonCity;
+@synthesize lb_events;
 
 //  RETAIN...
 @synthesize location_manager=_location_manager;
@@ -68,6 +72,10 @@
     self.cur_search = nil;
     self.longPressGesture = nil;
     self.me_annotation = nil;
+    
+    //leve
+    [lb_events release];
+    [buttonCity release];
     
     [super dealloc];
 }
@@ -126,6 +134,11 @@
     [self.tv setDelegate:self ];
     [self.tv setDataSource:self ];
     self.tv.rowHeight = [ EventCell height ];
+    
+    //leve
+    self.buttonMapList.title=[LocalizedManager localizedString:@"map"];
+    self.buttonCity.title=[LocalizedManager localizedString:@"city"];
+    self.lb_events.text=[LocalizedManager localizedString:@"event"];
     
     //  map view init...
     
@@ -189,7 +202,7 @@
             [ self.activity startAnimating ];
     
             //  config header...
-            NSString *txt = @"Events:";
+            NSString *txt = [LocalizedManager localizedString:@"event"];
             if (self.cur_search!=nil)
             {
                 txt = [ NSString stringWithFormat:@"Events In %@", self.cur_search ];
@@ -203,6 +216,12 @@
             [ self.tv setHidden:NO];
         }
     }
+    
+    //leve
+    self.buttonMapList.title=[LocalizedManager localizedString:@"map"];
+    self.buttonCity.title=[LocalizedManager localizedString:@"city"];
+    self.lb_events.text=[LocalizedManager localizedString:@"event"];
+    NSLog(@"%@",[LocalizedManager selectedLanguage]);
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -287,7 +306,7 @@
     self.activity.hidden = YES;
     [ self.activity stopAnimating ];
     
-    [ Utility AlertMessage:@"API call failed."];    
+    [ Utility AlertMessage:[LocalizedManager localizedString:@"api_called_fail"]];   
     [ self updateViews ];
 }
 
@@ -412,7 +431,7 @@
     self.mv.frame = CGRectMake(0, 87, 320, 324);
     self.tv.hidden = YES;
     self.mode = EventViewMapOnly; 
-    self.buttonMapList.title = @"list"; 
+    self.buttonMapList.title = [LocalizedManager localizedString:@"map"];
 }
 
 -(void) showList
@@ -422,7 +441,7 @@
     self.tv.frame = CGRectMake(0, 87, 320, 324);
     self.mode = EventViewListOnly;
     self.buttonMapList.title = @"list/map";
-    
+    //self.buttonMapList.title = [LocalizedManager localizedString:@"map"];
     [ self.tv reloadData ];
 
 }
@@ -593,7 +612,7 @@
         {
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
-        cell.textLabel.text = @"Connection Problem...";
+        cell.textLabel.text = [LocalizedManager localizedString:@"connection_problem"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -609,6 +628,7 @@
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
         cell.textLabel.text = @""; //@"Please Wait...";
+        //cell.textLabel.text = [LocalizedManager localizedString:@"wait"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -623,7 +643,7 @@
         {
             cell = [[[ UITableViewCell alloc] init] autorelease];
         }
-        cell.textLabel.text = @"No Events...";
+        cell.textLabel.text = [LocalizedManager localizedString:@"no_event"];
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
@@ -665,7 +685,7 @@
             }
             cell.textLabel.textAlignment = UITextAlignmentCenter;
             cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
-            cell.textLabel.text = @"Getting More Events.  Please Wait...";
+            cell.textLabel.text = [LocalizedManager localizedString:@"get_more_event"];
             cell.textLabel.textColor = [ UIColor blackColor ];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
@@ -995,7 +1015,7 @@
         self.me_annotation = [ [ [ SimpleLocation alloc ] initWithName ] autorelease ];
     }
     
-    self.me_annotation.name = [ NSString stringWithString:@"You are here." ];
+    self.me_annotation.name = [ NSString stringWithString:[LocalizedManager localizedString:@"your_location"] ];
     self.me_annotation.message = nil;
     self.me_annotation.coordinate = coordinate;
     self.me_annotation.pp = nil;
@@ -1225,10 +1245,10 @@
 
 - (void)locationManager:(CLLocationManager *)manager didFailWithError:(NSError *)error
 {
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Location Service Disabled" 
-                                                    message:@"To re-enable, please go to Settings and turn on Location Service for this app." 
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:[LocalizedManager localizedString:@"location_prompt"] 
+                                                    message:[LocalizedManager localizedString:@"turn_on_location_serve"]
                                                    delegate:nil 
-                                          cancelButtonTitle:@"OK" 
+                                          cancelButtonTitle:[LocalizedManager localizedString:@"cancel"] 
                                           otherButtonTitles:nil];
     [alert show];
     [alert release];

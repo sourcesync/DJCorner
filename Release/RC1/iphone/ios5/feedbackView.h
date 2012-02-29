@@ -15,6 +15,11 @@
 //@property (nonatomic,retain) IBOutlet UIActivityIndicatorView *activity;
 @property (nonatomic, retain) IBOutlet UITextView *tf;
 //@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_Done;
+
+//leve
+@property (nonatomic, retain) IBOutlet UIBarButtonItem *button_back;
+@property (nonatomic, retain) IBOutlet UILabel *lb_feedback;
+@property (nonatomic, retain) IBOutlet UIButton *bt_submit;
 //  RETAIN...
 @property (nonatomic, retain) DJCAPI *api;
 @property (nonatomic, retain) UIViewController *parent;

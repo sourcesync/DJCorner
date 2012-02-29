@@ -10,6 +10,10 @@
 #import "utility.h"
 #import "djcAppDelegate.h"
 
+//leve
+#import "LocalizedManager.h"
+#import "LanguageChange.h"
+
 @implementation ProfileView
 
 @synthesize tv=_tv;
@@ -19,10 +23,19 @@
 @synthesize selectedDJ=_selectedDJ;
 @synthesize selectedIndex=_selectedIndex;
 @synthesize back_from=_back_from;
-@synthesize lb_version=_lb_version;
+//@synthesize lb_version=_lb_version;
 @synthesize dele=_dele;
 @synthesize flags=_flag;
 @synthesize btn=_btn;
+
+//leve
+@synthesize lb_version;
+@synthesize lb_account;
+@synthesize lb_profile;
+@synthesize lb_djs_following;
+@synthesize bt_upgrade;
+@synthesize bt_contact_feedback;
+@synthesize bt_change_language;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -45,6 +58,16 @@
     self.api = nil;
     self.djs = nil;
     self.selectedDJ = nil;
+    
+    //leve
+    [lb_profile release];
+    //[lb_account
+    [lb_djs_following release];
+    [lb_account release];
+    [bt_upgrade release];
+    [bt_contact_feedback release];
+    [lb_version release];
+    [bt_change_language release];
     [super dealloc];
 }
 
@@ -65,6 +88,16 @@
     self.tv.delegate = self;
     
     [ self.tv reloadData ];
+    
+    //leve
+    self.lb_account.text=[LocalizedManager localizedString:@"account_version"];
+    self.lb_djs_following.text=[LocalizedManager localizedString:@"djs_u_following"];
+    self.lb_profile.text=[LocalizedManager localizedString:@"user_profile"];
+    self.lb_version.text=[LocalizedManager localizedString:@"free"];
+    [self.btn setTitle:[LocalizedManager localizedString:@"stop_music"] forState:UIControlStateNormal];
+    [self.bt_contact_feedback setTitle:[LocalizedManager localizedString:@"contact_feedback"] forState:UIControlStateNormal];
+    [self.bt_upgrade setTitle:[LocalizedManager localizedString:@"upgrade"] forState:UIControlStateNormal];
+    [self.bt_change_language setTitle:[LocalizedManager localizedString:@"change_language"] forState:UIControlStateNormal];
     
 }
 
@@ -87,7 +120,7 @@
         [ [ UIApplication sharedApplication ] delegate ];
         if(app.VIP)
         {
-            self.lb_version.text=@"free";
+            self.lb_version.text=[LocalizedManager localizedString:@"free"];
         }
         else
         {
@@ -124,6 +157,17 @@
         self.djs = nil;
         self.activity.hidden = NO;
     }
+    
+    //leve
+    self.lb_account.text=[LocalizedManager localizedString:@"account_version"];
+    self.lb_djs_following.text=[LocalizedManager localizedString:@"djs_u_following"];
+    self.lb_profile.text=[LocalizedManager localizedString:@"user_profile"];
+    self.lb_version.text=[LocalizedManager localizedString:@"free"];
+    [self.btn setTitle:[LocalizedManager localizedString:@"stop_music"] forState:UIControlStateNormal];
+    [self.bt_contact_feedback setTitle:[LocalizedManager localizedString:@"contact_feedback"] forState:UIControlStateNormal];
+    [self.bt_upgrade setTitle:[LocalizedManager localizedString:@"upgrade"] forState:UIControlStateNormal];
+    [self.bt_change_language setTitle:[LocalizedManager localizedString:@"change_language"] forState:UIControlStateNormal];
+    NSLog(@"%@",[LocalizedManager selectedLanguage]);
     
 }
 
@@ -165,7 +209,7 @@
     
     if ( self.djs == nil )
     {
-        cell.textLabel.text = @"Please Wait...";
+        cell.textLabel.text = [LocalizedManager localizedString:@"wait"];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17.0f ];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -174,7 +218,7 @@
     }
     else if ( [ self.djs count ] == 0 )
     {
-        cell.textLabel.text = @"You are not following any DJs.";
+        cell.textLabel.text = [LocalizedManager localizedString:@"you_are_not_following"];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17.0f ];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -224,10 +268,10 @@
         UIActionSheet *popupQuery = [[UIActionSheet alloc] 
                                      initWithTitle:@"DJ's Corner" 
                                      delegate:self 
-                                     cancelButtonTitle:@"Cancel"
+                                     cancelButtonTitle:[LocalizedManager localizedString:@"upgrade_cancel"]
                                      destructiveButtonTitle:nil
                                      otherButtonTitles:
-                                     @"Go To DJ Page", @"Stop Following",
+                                     [LocalizedManager localizedString:@"go_dj_page"],[LocalizedManager localizedString:@"try_stop_following"],
                                      nil];
         popupQuery.delegate= self;
         popupQuery.actionSheetStyle = UIActionSheetStyleBlackOpaque;
@@ -355,9 +399,9 @@
     //[app purchaseManagerStart];
     
     UIAlertView *upgrade=[[UIAlertView alloc] 
-                          initWithTitle:@"UpGrade" 
-                          message:@"you need pay 1$ upgrade to VIP version" 
-                          delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+                          initWithTitle:[LocalizedManager localizedString:@"upgrade"] 
+                          message:[LocalizedManager localizedString:@"upgrade_msg"] 
+                          delegate:self cancelButtonTitle:[LocalizedManager localizedString:@"upgrade_cancel"] otherButtonTitles:[LocalizedManager localizedString:@"upgrade_ok"], nil];
     [upgrade show];
     [upgrade release];
 }
@@ -375,18 +419,24 @@
     djcAppDelegate *app=(djcAppDelegate *)[[UIApplication sharedApplication] delegate]; 
     if(self.flags==YES)
     { 
-        [self.btn setTitle:@"Play Music" forState:UIControlStateNormal];
+        [self.btn setTitle:[LocalizedManager localizedString:@"play_music"] forState:UIControlStateNormal];
         [[app player] pause];
         self.flags=NO;
     }
     else
     {
         self.flags=YES;
-        [self.btn setTitle:@"Stop Music" forState:UIControlStateNormal];
+        [self.btn setTitle:[LocalizedManager localizedString:@"stop_music"] forState:UIControlStateNormal];
         [[app player] play];
         
     }
 }
 #endif
+
+-(IBAction)localization:(id)sender
+{
+    LanguageChange *lang=[[[LanguageChange alloc] init] autorelease];
+    [self presentModalViewController:lang animated:YES];
+}
 
 @end

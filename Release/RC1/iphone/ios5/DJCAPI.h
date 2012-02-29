@@ -53,6 +53,7 @@ enum API_IDS
 
 //  ASSIGN...
 @property (nonatomic, assign) BOOL finishOnMainThread;
+//@property (nonatomic, assign) int Now;
 
 //  PUBLIC FUNCS...
 -(id)       init:(id<DJCAPIServiceDelegate>)del;

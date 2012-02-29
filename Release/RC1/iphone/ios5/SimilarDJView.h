@@ -15,6 +15,9 @@
 //  IBOUTLET...
 @property (nonatomic,retain) IBOutlet UITableView *tv;
 @property (nonatomic,retain) IBOutlet UIActivityIndicatorView *activity;
+//leve
+@property (nonatomic,retain) IBOutlet UIBarButtonItem *button_back;
+@property (nonatomic,retain) IBOutlet UILabel *lb_similar;
 
 //  RETAIN...
 @property (nonatomic, retain) NSString *djid;

@@ -2,10 +2,10 @@
 <archive type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="7.10">
 	<data>
 		<int key="IBDocument.SystemTarget">1280</int>
-		<string key="IBDocument.SystemVersion">10K549</string>
+		<string key="IBDocument.SystemVersion">11A2061</string>
 		<string key="IBDocument.InterfaceBuilderVersion">1938</string>
-		<string key="IBDocument.AppKitVersion">1038.36</string>
-		<string key="IBDocument.HIToolboxVersion">461.00</string>
+		<string key="IBDocument.AppKitVersion">1138.1</string>
+		<string key="IBDocument.HIToolboxVersion">566.00</string>
 		<object class="NSMutableDictionary" key="IBDocument.PluginVersions">
 			<string key="NS.key.0">com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 			<string key="NS.object.0">933</string>
@@ -113,7 +113,7 @@
 						<string key="NSFrame">{{10, 147}, {190, 24}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="54535004"/>
+						<reference key="NSNextKeyView" ref="178989769"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClipsSubviews">YES</bool>
 						<int key="IBUIContentMode">7</int>
@@ -304,6 +304,29 @@
 						<reference key="IBUIFontDescription" ref="879727988"/>
 						<reference key="IBUIFont" ref="619787077"/>
 					</object>
+					<object class="IBUIButton" id="178989769">
+						<reference key="NSNextResponder" ref="191373211"/>
+						<int key="NSvFlags">292</int>
+						<string key="NSFrame">{{198, 148}, {105, 24}}</string>
+						<reference key="NSSuperview" ref="191373211"/>
+						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView" ref="54535004"/>
+						<string key="NSReuseIdentifierKey">_NS:225</string>
+						<bool key="IBUIOpaque">NO</bool>
+						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+						<int key="IBUIContentHorizontalAlignment">0</int>
+						<int key="IBUIContentVerticalAlignment">0</int>
+						<int key="IBUIButtonType">1</int>
+						<string key="IBUINormalTitle">Localization</string>
+						<reference key="IBUIHighlightedTitleColor" ref="204954743"/>
+						<object class="NSColor" key="IBUINormalTitleColor">
+							<int key="NSColorSpace">1</int>
+							<bytes key="NSRGB">MC4xOTYwNzg0MzQ2IDAuMzA5ODAzOTMyOSAwLjUyMTU2ODY1NgA</bytes>
+						</object>
+						<reference key="IBUINormalTitleShadowColor" ref="338809230"/>
+						<reference key="IBUIFontDescription" ref="879727988"/>
+						<reference key="IBUIFont" ref="619787077"/>
+					</object>
 				</object>
 				<string key="NSFrame">{{0, 20}, {320, 411}}</string>
 				<reference key="NSSuperview"/>
@@ -347,19 +370,67 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchOutletConnection" key="connection">
-						<string key="label">lb_version</string>
-						<reference key="source" ref="372490531"/>
-						<reference key="destination" ref="631440021"/>
-					</object>
-					<int key="connectionID">22</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBCocoaTouchOutletConnection" key="connection">
 						<string key="label">btn</string>
 						<reference key="source" ref="372490531"/>
 						<reference key="destination" ref="122226328"/>
 					</object>
 					<int key="connectionID">27</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">bt_change_language</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="178989769"/>
+					</object>
+					<int key="connectionID">31</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">bt_upgrade</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="1072799262"/>
+					</object>
+					<int key="connectionID">32</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">bt_contact_feedback</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="240960863"/>
+					</object>
+					<int key="connectionID">33</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lb_djs_following</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="415215287"/>
+					</object>
+					<int key="connectionID">34</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lb_profile</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="218156393"/>
+					</object>
+					<int key="connectionID">35</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lb_account</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="625105209"/>
+					</object>
+					<int key="connectionID">36</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchOutletConnection" key="connection">
+						<string key="label">lb_version</string>
+						<reference key="source" ref="372490531"/>
+						<reference key="destination" ref="631440021"/>
+					</object>
+					<int key="connectionID">37</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBCocoaTouchEventConnection" key="connection">
@@ -387,6 +458,15 @@
 						<int key="IBEventType">7</int>
 					</object>
 					<int key="connectionID">28</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBCocoaTouchEventConnection" key="connection">
+						<string key="label">localization:</string>
+						<reference key="source" ref="178989769"/>
+						<reference key="destination" ref="372490531"/>
+						<int key="IBEventType">7</int>
+					</object>
+					<int key="connectionID">30</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -417,6 +497,7 @@
 							<reference ref="1072799262"/>
 							<reference ref="122226328"/>
 							<reference ref="240960863"/>
+							<reference ref="178989769"/>
 						</object>
 						<reference key="parent" ref="0"/>
 					</object>
@@ -497,6 +578,11 @@
 						<reference key="object" ref="122226328"/>
 						<reference key="parent" ref="191373211"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">29</int>
+						<reference key="object" ref="178989769"/>
+						<reference key="parent" ref="191373211"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -516,6 +602,7 @@
 					<string>18.IBPluginDependency</string>
 					<string>20.IBPluginDependency</string>
 					<string>23.IBPluginDependency</string>
+					<string>29.IBPluginDependency</string>
 					<string>5.IBPluginDependency</string>
 					<string>7.IBPluginDependency</string>
 					<string>8.IBPluginDependency</string>
@@ -526,6 +613,7 @@
 					<string>ProfileView</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>UIResponder</string>
+					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
 					<string>com.apple.InterfaceBuilder.IBCocoaTouchPlugin</string>
@@ -554,7 +642,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">28</int>
+			<int key="maxID">37</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -567,11 +655,13 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>contactFeedClicked:</string>
+							<string>localization:</string>
 							<string>stopMusic:</string>
 							<string>upGradeClicked:</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -582,6 +672,7 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>contactFeedClicked:</string>
+							<string>localization:</string>
 							<string>stopMusic:</string>
 							<string>upGradeClicked:</string>
 						</object>
@@ -589,6 +680,10 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<object class="IBActionInfo">
 								<string key="name">contactFeedClicked:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">localization:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
@@ -606,8 +701,14 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>activity</string>
+							<string>bt_change_language</string>
+							<string>bt_contact_feedback</string>
+							<string>bt_upgrade</string>
 							<string>btn</string>
 							<string>dele</string>
+							<string>lb_account</string>
+							<string>lb_djs_following</string>
+							<string>lb_profile</string>
 							<string>lb_version</string>
 							<string>tv</string>
 						</object>
@@ -615,7 +716,13 @@
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UIActivityIndicatorView</string>
 							<string>UIButton</string>
+							<string>UIButton</string>
+							<string>UIButton</string>
+							<string>UIButton</string>
 							<string>djcAppDelegate</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
+							<string>UILabel</string>
 							<string>UILabel</string>
 							<string>UITableView</string>
 						</object>
@@ -625,8 +732,14 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>activity</string>
+							<string>bt_change_language</string>
+							<string>bt_contact_feedback</string>
+							<string>bt_upgrade</string>
 							<string>btn</string>
 							<string>dele</string>
+							<string>lb_account</string>
+							<string>lb_djs_following</string>
+							<string>lb_profile</string>
 							<string>lb_version</string>
 							<string>tv</string>
 						</object>
@@ -637,12 +750,36 @@
 								<string key="candidateClassName">UIActivityIndicatorView</string>
 							</object>
 							<object class="IBToOneOutletInfo">
+								<string key="name">bt_change_language</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">bt_contact_feedback</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">bt_upgrade</string>
+								<string key="candidateClassName">UIButton</string>
+							</object>
+							<object class="IBToOneOutletInfo">
 								<string key="name">btn</string>
 								<string key="candidateClassName">UIButton</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">dele</string>
 								<string key="candidateClassName">djcAppDelegate</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lb_account</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lb_djs_following</string>
+								<string key="candidateClassName">UILabel</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">lb_profile</string>
+								<string key="candidateClassName">UILabel</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">lb_version</string>
@@ -667,11 +804,17 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>tabBarController</string>
+							<string>tb_events</string>
+							<string>tb_profile</string>
+							<string>tb_venue</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>UITabBarController</string>
+							<string>UITabBarItem</string>
+							<string>UITabBarItem</string>
+							<string>UITabBarItem</string>
 							<string>UIWindow</string>
 						</object>
 					</object>
@@ -680,6 +823,9 @@
 						<object class="NSArray" key="dict.sortedKeys">
 							<bool key="EncodedWithXMLCoder">YES</bool>
 							<string>tabBarController</string>
+							<string>tb_events</string>
+							<string>tb_profile</string>
+							<string>tb_venue</string>
 							<string>window</string>
 						</object>
 						<object class="NSMutableArray" key="dict.values">
@@ -687,6 +833,18 @@
 							<object class="IBToOneOutletInfo">
 								<string key="name">tabBarController</string>
 								<string key="candidateClassName">UITabBarController</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">tb_events</string>
+								<string key="candidateClassName">UITabBarItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">tb_profile</string>
+								<string key="candidateClassName">UITabBarItem</string>
+							</object>
+							<object class="IBToOneOutletInfo">
+								<string key="name">tb_venue</string>
+								<string key="candidateClassName">UITabBarItem</string>
 							</object>
 							<object class="IBToOneOutletInfo">
 								<string key="name">window</string>
