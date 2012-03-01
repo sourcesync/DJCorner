@@ -21,9 +21,9 @@
 @synthesize svc=_svc;
 @synthesize queue=_queue;
 @synthesize finishOnMainThread=_finishOnMainThread;
-//@synthesize Now;
+@synthesize Now;
 
-static NSString *TEST_SERVER = @"localhost:7779";
+static NSString *TEST_SERVER = @"192.168.1.106:7779";
 //static NSString *PROD_SERVER = @"www.theuniverseofallthings.com:7779";
 //static NSString *SERVER = @"ec2-23-20-62-113.compute-1.amazonaws.com:7779";
 
@@ -107,7 +107,7 @@ static NSString *TEST_SERVER = @"localhost:7779";
 -(BOOL) get_events:(NSDictionary *)location:(NSDictionary *)paging:
     (NSString *)city:(BOOL)all:(int)sort_criteria
 {
-    //self.Now=0;
+    self.Now=0;
     NSNumber *_all = [ NSNumber numberWithBool:all ];
     NSNumber *_sort_criteria = [ NSNumber numberWithInt:sort_criteria ];
     
@@ -117,21 +117,21 @@ static NSString *TEST_SERVER = @"localhost:7779";
 
 -(BOOL)     get_event:(NSDictionary *)location:(NSString *)eoid
 {
-    //self.Now=1;
+    self.Now=1;
     NSArray *args = [ NSArray arrayWithObjects:location,eoid,nil];
     return [self ExecMethod:@"get_event" andParams:args withID:@"1" ];
 }
 
 -(BOOL)     register_device:(NSString *)tokstr
 {
-    //self.Now=2;
+    self.Now=2;
     NSArray *args = [ NSArray arrayWithObjects:tokstr,nil];
     return [self ExecMethod:@"register_device" andParams:args withID:@"2" ];
 }
 
 -(BOOL)     followdjs:(NSString *)deviceid:(NSMutableArray *)djs:(NSMutableArray *)djids
 {
-    //self.Now=3;
+    self.Now=3;
     NSArray *args = [ NSArray arrayWithObjects:deviceid,djs,djids,nil];
     return [self ExecMethod:@"followdjs" andParams:args withID:@"3" ];
 }
@@ -139,7 +139,7 @@ static NSString *TEST_SERVER = @"localhost:7779";
 
 -(BOOL)     get_followdjs:(NSString *)deviceid
 {
-    //self.Now=4;
+    self.Now=4;
     NSArray *args = [ NSArray arrayWithObjects:deviceid,nil];
     return [self ExecMethod:@"get_followdjs" andParams:args withID:@"4" ];
 }
@@ -147,7 +147,7 @@ static NSString *TEST_SERVER = @"localhost:7779";
 
 -(BOOL)     stop_followdj:(NSString *)deviceid:(NSString *)dj
 {
-    //self.Now=5;
+    self.Now=5;
 
     NSLog(@"ssssss1111");
     NSLog(@"%@",deviceid);
@@ -159,7 +159,7 @@ static NSString *TEST_SERVER = @"localhost:7779";
 
 -(BOOL)     get_djs:(NSString *)searchrx:(BOOL)all:(NSDictionary *)paging
 {
-    //self.Now=6;
+    self.Now=6;
     NSNumber *_all = [ NSNumber numberWithBool:all];
     NSArray *args = [ NSArray arrayWithObjects:searchrx,_all,paging,nil];
     return [self ExecMethod:@"get_djs" andParams:args withID:@"6" ];
@@ -167,14 +167,14 @@ static NSString *TEST_SERVER = @"localhost:7779";
 
 -(BOOL)     get_schedule:(NSString *)djid
 {
-    //self.Now=7;
+    self.Now=7;
     NSArray *args = [ NSArray arrayWithObjects:djid,nil];
     return [self ExecMethod:@"get_schedule" andParams:args withID:@"7" ];
 }
 
 -(BOOL)     get_dj:(NSString *)djid
 {
-    //self.Now=8;
+    self.Now=8;
     NSArray *args = [ NSArray arrayWithObjects:djid,nil];
     return [self ExecMethod:@"get_dj" andParams:args withID:@"8" ];
 }
@@ -182,7 +182,7 @@ static NSString *TEST_SERVER = @"localhost:7779";
 
 -(BOOL)     get_similar_djs:(NSString *)djid
 {
-    //self.Now=9;
+    self.Now=9;
     NSArray *args = [ NSArray arrayWithObjects:djid,nil];
     return [self ExecMethod:@"get_similar_djs" andParams:args withID:@"9" ];
 }
@@ -190,7 +190,7 @@ static NSString *TEST_SERVER = @"localhost:7779";
 
 -(BOOL)     get_cities
 {
-    //self.Now=10;;
+    self.Now=10;;
     NSArray *args = nil; //[ NSArray arrayWithObjects:djid,nil];
     return [self ExecMethod:@"get_cities" andParams:args withID:@"10" ];
 }
@@ -223,8 +223,8 @@ static NSString *TEST_SERVER = @"localhost:7779";
         //
         //  The delegate callback to call is based on rpc id...
         //
-        //NSInteger method_id =self.Now;
-        NSInteger method_id = [ rpcid integerValue ];
+        NSInteger method_id =self.Now;
+        //NSInteger method_id = [ rpcid integerValue ];
         switch (method_id)
         {
                 

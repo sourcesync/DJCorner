@@ -139,7 +139,6 @@
     //leve
     self.button_AllTop50.title=[LocalizedManager localizedString:@"all"];
     self.button_search.title=[LocalizedManager localizedString:@"search"];
-
 }
 
 -(void)viewWillDisappear:(BOOL)animated
@@ -180,10 +179,10 @@
             [ self.tv setHidden:NO];
         }
     }
-    
+    [self.tv reloadData];
     self.button_AllTop50.title=[LocalizedManager localizedString:@"all"];
     self.button_search.title=[LocalizedManager localizedString:@"search"];
-    NSLog(@"%@",[LocalizedManager selectedLanguage]);
+;
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -400,7 +399,22 @@
             //cell.textLabel.text = str;
             cell.content.text=str;
             
-            if (dj.upcoming) cell.upcoming.text = dj.upcoming;
+            //if (dj.upcoming) cell.upcoming.text = dj.upcoming;
+            
+            
+            if([dj.upcoming hasPrefix:@"No upcoming events"])
+            {
+                NSMutableString *temp=[[NSMutableString alloc] initWithString:dj.upcoming];
+                [temp replaceOccurrencesOfString:@"No upcoming events" withString:[LocalizedManager localizedString:@"no_upcoming_events"] options:NSAnchoredSearch range:NSMakeRange(0, temp.length)];
+                cell.upcoming.text=[NSString stringWithFormat:@"%@",temp];
+            }
+            else if([dj.upcoming hasPrefix:@"Next Event"])
+            {
+                NSMutableString *temp=[[NSMutableString alloc] initWithString:dj.upcoming];
+                [temp replaceOccurrencesOfString:@"Next Event" withString:[LocalizedManager localizedString:@"next_event"] options:NSAnchoredSearch range:NSMakeRange(0, temp.length)];
+                cell.upcoming.text=[NSString stringWithFormat:@"%@",temp];
+            }
+            
             
             //  Get dj pic or use default?...
             cell.icon.image = nil; // Clear reused image just in case...
@@ -414,7 +428,6 @@
                 UIImage *imgAll = [ UIImage imageNamed:@"Genericthumb2.png" ];
                 cell.icon.image = imgAll;
             }
-            
             return cell;   
         }
     }

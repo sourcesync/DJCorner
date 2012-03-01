@@ -21,5 +21,6 @@
 
 -(IBAction)languageCancel:(id)sender;
 -(IBAction)languageFinish:(id)sender;
+-(NSInteger)getSelectedRow:(NSArray *)arrayLang selected:(NSString *)selectedLang;
 
 @end

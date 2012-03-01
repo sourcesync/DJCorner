@@ -1,10 +1,10 @@
 /* 
-  Localizable.strings
-  djc
-
-  Created by Zix Engineer on 29/2/12.
-  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
-*/
+ Localizable.strings
+ djc
+ 
+ Created by Zix Engineer on 29/2/12.
+ Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+ */
 //public 
 
 "wait"="请稍候...";
@@ -22,7 +22,11 @@
 
 "no_djs_match"="没有相符合的ＤＪ...";
 
-"get_more_djs"="获取更多ＤＪ...";
+"get_more_djs"="请稍候，获取更多ＤＪ...";
+
+"no_upcoming_events"="没有活动计划";
+
+"next_event"="下一个活动";
 
 
 
@@ -80,6 +84,8 @@
 "go_dj_page"="前往ＤＪ内容页面";
 
 "try_stop_following"="放弃跟随";
+
+"lang_change"="转换";
 
 
 
@@ -141,7 +147,7 @@
 
 "no_event"="没有活动...";
 
-"get_more_event"="获取更多活动...";
+"get_more_event"="请稍候，获取更多活动...";
 
 "your_location"="您在这里.";
 

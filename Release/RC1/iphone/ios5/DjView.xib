@@ -48,7 +48,7 @@
 						<string key="NSFrameSize">{326, 44}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
-						<reference key="NSNextKeyView" ref="819188062"/>
+						<reference key="NSNextKeyView" ref="760410774"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<bool key="IBUIClearsContextBeforeDrawing">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
@@ -111,6 +111,7 @@
 						<string key="NSFrame">{{144, 211}, {37, 37}}</string>
 						<reference key="NSSuperview" ref="191373211"/>
 						<reference key="NSWindow"/>
+						<reference key="NSNextKeyView"/>
 						<bool key="IBUIOpaque">NO</bool>
 						<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 						<bool key="IBUIHidesWhenStopped">NO</bool>
@@ -183,6 +184,7 @@
 							<object class="IBUIBarButtonItem" id="27455761">
 								<string key="IBUITitle">Search</string>
 								<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
+								<float key="IBUIWidth">59</float>
 								<int key="IBUIStyle">1</int>
 								<reference key="IBUIToolbar" ref="584348252"/>
 							</object>
@@ -240,7 +242,6 @@
 					<nil key="NSNextResponder"/>
 					<int key="NSvFlags">292</int>
 					<string key="NSFrame">{{6, 8}, {65, 30}}</string>
-					<reference key="NSNextKeyView" ref="760410774"/>
 					<bool key="IBUIOpaque">NO</bool>
 					<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 					<int key="IBSegmentControlStyle">2</int>
