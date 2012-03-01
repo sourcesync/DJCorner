@@ -38,6 +38,8 @@ DJCAPIServiceDelegate, UIActionSheetDelegate,UIAlertViewDelegate>
 @property (nonatomic, retain) IBOutlet UIButton *bt_upgrade;
 @property (nonatomic, retain) IBOutlet UIButton *bt_contact_feedback;
 @property (nonatomic, retain) IBOutlet UIButton *bt_change_language;
+@property (nonatomic, retain) IBOutlet UILabel *lb_langauge;
+@property (nonatomic, retain) IBOutlet UILabel *lb_lang_now;
 
 //  ASSIGN...
 @property (assign) NSInteger selectedIndex;

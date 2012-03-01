@@ -180,10 +180,10 @@
             [ self.tv setHidden:NO];
         }
     }
-    
+    [self.tv reloadData];
     self.button_AllTop50.title=[LocalizedManager localizedString:@"all"];
     self.button_search.title=[LocalizedManager localizedString:@"search"];
-    NSLog(@"%@",[LocalizedManager selectedLanguage]);
+;
 }
 
 -(void)viewDidAppear:(BOOL)animated

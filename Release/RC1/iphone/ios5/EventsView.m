@@ -221,7 +221,6 @@
     self.buttonMapList.title=[LocalizedManager localizedString:@"map"];
     self.buttonCity.title=[LocalizedManager localizedString:@"city"];
     self.lb_events.text=[LocalizedManager localizedString:@"event"];
-    NSLog(@"%@",[LocalizedManager selectedLanguage]);
 }
 
 - (void)viewDidAppear:(BOOL)animated

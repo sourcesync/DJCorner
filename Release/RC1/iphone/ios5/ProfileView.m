@@ -36,6 +36,8 @@
 @synthesize bt_upgrade;
 @synthesize bt_contact_feedback;
 @synthesize bt_change_language;
+@synthesize lb_lang_now;
+@synthesize lb_langauge;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -68,6 +70,8 @@
     [bt_contact_feedback release];
     [lb_version release];
     [bt_change_language release];
+    [lb_langauge release];
+    [lb_lang_now release];
     [super dealloc];
 }
 
@@ -97,7 +101,9 @@
     [self.btn setTitle:[LocalizedManager localizedString:@"stop_music"] forState:UIControlStateNormal];
     [self.bt_contact_feedback setTitle:[LocalizedManager localizedString:@"contact_feedback"] forState:UIControlStateNormal];
     [self.bt_upgrade setTitle:[LocalizedManager localizedString:@"upgrade"] forState:UIControlStateNormal];
-    [self.bt_change_language setTitle:[LocalizedManager localizedString:@"change_language"] forState:UIControlStateNormal];
+    [self.bt_change_language setTitle:[LocalizedManager localizedString:@"lang_change"] forState:UIControlStateNormal];
+    self.lb_langauge.text= [LocalizedManager localizedString:@"ll_language"];
+    self.lb_lang_now.text=[LocalizedManager localizedString:[LocalizedManager selectedLanguage]];
     
 }
 
@@ -166,9 +172,9 @@
     [self.btn setTitle:[LocalizedManager localizedString:@"stop_music"] forState:UIControlStateNormal];
     [self.bt_contact_feedback setTitle:[LocalizedManager localizedString:@"contact_feedback"] forState:UIControlStateNormal];
     [self.bt_upgrade setTitle:[LocalizedManager localizedString:@"upgrade"] forState:UIControlStateNormal];
-    [self.bt_change_language setTitle:[LocalizedManager localizedString:@"change_language"] forState:UIControlStateNormal];
-    NSLog(@"%@",[LocalizedManager selectedLanguage]);
-    
+    [self.bt_change_language setTitle:[LocalizedManager localizedString:@"lang_change"] forState:UIControlStateNormal];
+    self.lb_langauge.text= [LocalizedManager localizedString:@"ll_language"];
+    self.lb_lang_now.text=[LocalizedManager localizedString:[LocalizedManager selectedLanguage]];
 }
 
 

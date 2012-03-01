@@ -58,9 +58,6 @@
         [self.languages setObject:temp forKey:[NSString stringWithFormat:@"%d",i]];
 
     }
-
-    [langAllArray release];
-    [langArray release];
     
     lb_langCurrent.text=[LocalizedManager localizedString:[LocalizedManager selectedLanguage]];
     [super viewDidLoad];
@@ -70,6 +67,25 @@
     self.button_done.title=[LocalizedManager localizedString:@"ll_done"];
     self.button_cancel.title=[LocalizedManager localizedString:@"ll_cancel"];
     // Do any additional setup after loading the view from its nib.
+    [self.tv selectRowAtIndexPath:[NSIndexPath indexPathForRow:[self getSelectedRow:langArray selected:[LocalizedManager selectedLanguage]] inSection:0] animated:NO scrollPosition:0];
+    
+    [langAllArray release];
+    [langArray release];
+}
+
+-(NSInteger)getSelectedRow:(NSArray *)arrayLang selected:(NSString *)selectedLang
+{
+    if(arrayLang!=nil)
+    {
+        for(int i=0;i<arrayLang.count;i++)
+        {
+            if([[NSString stringWithFormat:@"%@",[arrayLang objectAtIndex:i]] isEqualToString:selectedLang])
+            {
+                return i;
+            }
+        }
+    }
+    return 0;
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -174,7 +190,7 @@
     [app localization];
     //[[UIApplication sharedApplication] performSelector:@selector(terminateWithSuccess)]; 
     [self dismissModalViewControllerAnimated:YES];
-    NSLog(@"%@",[LocalizedManager selectedLanguage]);
+    //NSLog(@"%@",[LocalizedManager selectedLanguage]);
 }
 
 -(void)dealloc
