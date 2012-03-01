@@ -13,6 +13,7 @@ from dateutil import parser
 import datetime
 from datetime import timedelta
 
+import pymongo
 from pymongo import Connection
 import bson
 
@@ -197,12 +198,13 @@ def get_event_details( connection, location, oid, verbose ):
 #
 # func to get events...
 #
-def get_events( connection ):
+def get_events( connection= None ):
 	
         events = _get_event_col( connection )
 
 	# iterate over collection...
 	retv = []
+
 	for event in events.find():
 		retv.append( event )
 
@@ -233,8 +235,16 @@ def _sort_by_date( a, b ):
 #
 def get_events_details( connection, location, paging, city, all, sort_criteria ):
 
-	# get all raw events...	
-	events = get_events( connection )
+	events = _get_event_col( connection )
+
+	# create cursor...
+	now = datetime.datetime.utcnow()
+	matches = events.find({"dti":{"$gt":now}}).sort("dti", pymongo.ASCENDING)
+	total = matches.count()
+	if (paging):
+		events = matches[ paging["start"]: paging["end"] ]
+	else:
+		events = matches
 
 	# get events details...
 	events_details = []
@@ -242,47 +252,44 @@ def get_events_details( connection, location, paging, city, all, sort_criteria )
 		event_details = get_event_details( connection, location, evt["_id"], False )
 
 		# don't include old events...
-		edt = event_details["eventdate"]
-		dt = parser.parse( edt )
-		if (  datetime.datetime.today() - dt ) > timedelta( days=1 ):
-			#DBG( "WARNING: event: event already happened")
-			continue
+		#edt = event_details["eventdate"]
+		#dt = parser.parse( edt )
+		#if (  datetime.datetime.today() - dt ) > timedelta( days=1 ):
+		#	continue
 
 		# filter by city possibly...
-		if city and event_details["city"] != city:
-			#DBG( "WARNING: event: city filter failed" )
-			continue
+		#if city and event_details["city"] != city:
+		#continue
 		
 		# TODO: return this code !!!
-		if not all and False: # filter by rating...
-                        rating = None
-                        if evt.has_key("rating"):
-                                rating = evt["rating"]
-				if type(rating)==type(""):
-					rating = float(rating)
-                        if rating!=None and rating>=0 and rating <= 50:
-				pass
-			else: #skip this one
-				DBG( "WARNING: event: rating filter failed" )
-				continue
+		#if not all and False: # filter by rating...
+                #       rating = None
+                #        if evt.has_key("rating"):
+                #                rating = evt["rating"]
+		#	if type(rating)==type(""):
+		#		rating = float(rating)
+                #       if rating!=None and rating>=0 and rating <= 50:
+		#		pass
+		#	else: #skip this one
+		#		DBG( "WARNING: event: rating filter failed" )
+		#	continue
 
 		events_details.append( event_details )
 
-	if (sort_criteria==0):	# def date...
-		# sort it by dist...
-		events_details.sort( _sort_by_date )
-	elif (sort_criteria==1): # dist...
-		events_details.sort( _sort_by_dist )
+	#if (sort_criteria==0):	# def date...
+	## sort it by dist...
+	#events_details.sort( _sort_by_date )
+	#elif (sort_criteria==1): # dist...
+	#events_details.sort( _sort_by_dist )
 
 	# possibly deal with paging...
 	if (paging):
-		total = len( events_details )
 		start = paging["start"]
 		end = paging["end"]
-		arr = events_details[start:end]
+		arr = events_details
 		count = len(arr)
 		info = { "total":total, "count":count, "start":start, "end":end }
-		DBG( "INFO: event: get_events_details->", str(info) )
+		DBG( "INFO: event: get_events_details, paing info to return->", str(info) )
 		return [ arr, info ]
 	else:		
 		return [ events_details, {} ]
@@ -402,9 +409,44 @@ def sync_events_to_djs( connection= None ):
 	return True
 
 #
+# Func to create/update the date index...
+#
+def create_date_index_field( connection = None, force = False ):
+	
+	DBG("INFO: Getting all items")
+
+	evts = get_events( connection )
+
+	for evt in evts:
+		if evt.has_key( "dti" ) and not force:
+			continue
+
+		dtstr = evt["eventdate"]
+		dt = parser.parse(dtstr)				
+
+        	# create fields dct...
+        	fields = {}
+		fields['dti'] = dt
+	
+        	# update...
+		DBG("INFO: Creating date index field for->", evt["_id"])
+
+		events = _get_event_col ( connection )
+		uevt = {"_id":evt["_id"]}
+        	uid = events.update( uevt, { '$set':fields } , True )
+        	if ( uid ):
+			DBG("ERROR: Cannot update date index field for object->", evt["_id"], str(uid) )
+                	return False
+
+	# Make sure the column is indexed...
+	print events.ensure_index("dti")
+	
+#
 # unit test...
 #
 if __name__ == "__main__":
+
+	global VERBOSE
 	validate = False
 
 	# possibly clear events...
@@ -422,6 +464,12 @@ if __name__ == "__main__":
 	# possibly also validate event...
 	elif len(sys.argv)>1 and ( sys.argv[1]=="validate" ):
 		validate = True
+
+	# create date index...
+	elif len(sys.argv)>1 and (sys.argv[1]=="date_index"):
+		VERBOSE = True
+		create_date_index_field(None,True)	
+		sys.exit(0)	
 
 	# get connection...
 	conxn = _get_connection()
@@ -447,7 +495,8 @@ if __name__ == "__main__":
 			cty = evt["city"]
 
 		DBG( "INFO: event->", evt["id"], evt["name"], evt["pf"], evt["pfids"], \
-			evt["eventdate"], venuename, cty, evt["dist"], evt["eventdate"] )
+			evt["eventdate"], venuename, cty, evt["dist"], evt["eventdate"], \
+			evt["dti"] )
 		if validate:
 			if evt["dist"] == 0:
 				DBG( "ERROR: event: invalid dist" )

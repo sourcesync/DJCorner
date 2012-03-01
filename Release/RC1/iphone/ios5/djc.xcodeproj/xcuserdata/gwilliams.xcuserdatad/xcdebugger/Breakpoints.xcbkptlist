@@ -84,7 +84,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "198"
          endingLineNumber = "198"
-         landmarkName = "-prepAudio"
+         landmarkName = "-mapIt:::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -280,7 +280,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1126"
          endingLineNumber = "1126"
-         landmarkName = "-toolbarRefresh:"
+         landmarkName = "-mapView:viewForAnnotation:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -294,7 +294,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "88"
          endingLineNumber = "88"
-         landmarkName = "-newGetter:"
+         landmarkName = "-didReceiveMemoryWarning"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -350,7 +350,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "502"
          endingLineNumber = "502"
-         landmarkName = "-scrollViewDidEndDecelerating:"
+         landmarkName = "-scrollViewDidEndDragging:willDecelerate:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -364,8 +364,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "621"
          endingLineNumber = "621"
-         landmarkName = "-got_pic:"
-         landmarkType = "5">
+         landmarkName = "@implementation DjView"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -434,7 +434,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "462"
          endingLineNumber = "462"
-         landmarkName = "-loadImagesForOnscreenRows"
+         landmarkName = "-loadImageForRow::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -532,8 +532,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "234"
          endingLineNumber = "234"
-         landmarkName = "-tableView:numberOfRowsInSection:"
-         landmarkType = "5">
+         landmarkName = "@implementation DjView"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -574,7 +574,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "655"
          endingLineNumber = "655"
-         landmarkName = "-refreshClicked:"
+         landmarkName = "-failed"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -602,7 +602,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "79"
          endingLineNumber = "79"
-         landmarkName = "-didReceiveMemoryWarning"
+         landmarkName = "-dealloc"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -616,7 +616,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "449"
          endingLineNumber = "449"
-         landmarkName = "-loadImageForRow::"
+         landmarkName = "-showMapList"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -630,7 +630,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "334"
          endingLineNumber = "334"
-         landmarkName = "-got_pic:"
+         landmarkName = "-got_events::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -644,7 +644,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "331"
          endingLineNumber = "331"
-         landmarkName = "-got_pic:"
+         landmarkName = "-got_events::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -672,7 +672,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "182"
          endingLineNumber = "182"
-         landmarkName = "-viewDidAppear:"
+         landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -700,7 +700,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "590"
          endingLineNumber = "590"
-         landmarkName = "-got_djs::"
+         landmarkName = "-tableView:heightForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -714,7 +714,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "241"
          endingLineNumber = "241"
-         landmarkName = "-_showEventModal:"
+         landmarkName = "-getCurURL"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -742,7 +742,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "370"
          endingLineNumber = "370"
-         landmarkName = "-prepModals"
+         landmarkName = "-showFeedback::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -770,7 +770,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "272"
          endingLineNumber = "272"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkName = "-tableView:numberOfRowsInSection:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -784,7 +784,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "142"
          endingLineNumber = "142"
-         landmarkName = "-viewWillDisappear:"
+         landmarkName = "-viewDidLoad"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -798,7 +798,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "153"
          endingLineNumber = "153"
-         landmarkName = "-viewWillAppear:"
+         landmarkName = "-viewWillDisappear:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -882,7 +882,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "236"
          endingLineNumber = "236"
-         landmarkName = "-_showEventModal:"
+         landmarkName = "-audioPlayerDidFinishPlaying:successfully:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -896,8 +896,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "257"
          endingLineNumber = "257"
-         landmarkName = "-showEventModal:::"
-         landmarkType = "5">
+         landmarkName = "@implementation djcAppDelegate"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -978,7 +978,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1150"
          endingLineNumber = "1150"
-         landmarkName = "-buttonMapListClicked:"
+         landmarkName = "-searchClicked:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -992,7 +992,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "550"
          endingLineNumber = "550"
-         landmarkName = "-tableView:numberOfRowsInSection:"
+         landmarkName = "-scrollViewDidEndDecelerating:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1006,7 +1006,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "774"
          endingLineNumber = "774"
-         landmarkName = "-tableView:cellForRowAtIndexPath:"
+         landmarkName = "-cellForRowAtIndexPath_MapList::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1020,7 +1020,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "790"
          endingLineNumber = "790"
-         landmarkName = "-tableView:heightForRowAtIndexPath:"
+         landmarkName = "-cellForRowAtIndexPath_MapList::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1034,7 +1034,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "423"
          endingLineNumber = "423"
-         landmarkName = "-showList"
+         landmarkName = "-clearEvents"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1048,7 +1048,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "426"
          endingLineNumber = "426"
-         landmarkName = "-showList"
+         landmarkName = "-clearEvents"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1062,7 +1062,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "545"
          endingLineNumber = "545"
-         landmarkName = "-numberOfSectionsInTableView:"
+         landmarkName = "-scrollViewDidEndDragging:willDecelerate:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1076,7 +1076,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "588"
          endingLineNumber = "588"
-         landmarkName = "-cellForRowAtIndexPath_ListOnly::"
+         landmarkName = "-tableView:numberOfRowsInSection:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1104,7 +1104,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "401"
          endingLineNumber = "401"
-         landmarkName = "-application:didRegisterForRemoteNotificationsWithDeviceToken:"
+         landmarkName = "-prepModals"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1118,7 +1118,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "428"
          endingLineNumber = "428"
-         landmarkName = "-application:didFailToRegisterForRemoteNotificationsWithError:"
+         landmarkName = "-application:didRegisterForRemoteNotificationsWithDeviceToken:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1160,7 +1160,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1047"
          endingLineNumber = "1047"
-         landmarkName = "-mapView:viewForAnnotation:"
+         landmarkName = "-refreshMap"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1174,7 +1174,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1049"
          endingLineNumber = "1049"
-         landmarkName = "-mapView:viewForAnnotation:"
+         landmarkName = "-refreshMap"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1202,7 +1202,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1041"
          endingLineNumber = "1041"
-         landmarkName = "-mapView:didSelectAnnotationView:"
+         landmarkName = "-refreshMap"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1216,7 +1216,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "896"
          endingLineNumber = "896"
-         landmarkName = "-handleLongPressGesture:"
+         landmarkName = "-tableView:accessoryButtonTappedForRowWithIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1230,7 +1230,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "904"
          endingLineNumber = "904"
-         landmarkName = "-handleLongPressGesture:"
+         landmarkName = "-tableView:accessoryButtonTappedForRowWithIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1244,7 +1244,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "993"
          endingLineNumber = "993"
-         landmarkName = "-refreshMap"
+         landmarkName = "-setMapRegion"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1258,7 +1258,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "905"
          endingLineNumber = "905"
-         landmarkName = "-handleLongPressGesture:"
+         landmarkName = "-tableView:accessoryButtonTappedForRowWithIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1272,7 +1272,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "748"
          endingLineNumber = "748"
-         landmarkName = "-cellForRowAtIndexPath_MapList::"
+         landmarkName = "-cellForRowAtIndexPath_ListOnly::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1286,8 +1286,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "764"
          endingLineNumber = "764"
-         landmarkName = "-cellForRowAtIndexPath_MapList::"
-         landmarkType = "5">
+         landmarkName = "@implementation EventsView"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1314,7 +1314,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1212"
          endingLineNumber = "1212"
-         landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
+         landmarkName = "-segmentDJClicked:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1328,7 +1328,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "1215"
          endingLineNumber = "1215"
-         landmarkName = "-locationManager:didUpdateToLocation:fromLocation:"
+         landmarkName = "-segmentDJClicked:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1342,7 +1342,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "982"
          endingLineNumber = "982"
-         landmarkName = "-refreshMap"
+         landmarkName = "-setMapRegion"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1440,11 +1440,11 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "587"
          endingLineNumber = "587"
-         landmarkName = "-got_djs::"
+         landmarkName = "-tableView:heightForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
@@ -1458,7 +1458,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
@@ -1468,8 +1468,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "55"
          endingLineNumber = "55"
-         landmarkName = "-initWithNibName:bundle:"
-         landmarkType = "5">
+         landmarkName = "get_mode"
+         landmarkType = "19">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1510,8 +1510,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "60"
          endingLineNumber = "60"
-         landmarkName = "-application:didFinishLaunchingWithOptions:"
-         landmarkType = "5">
+         landmarkName = "@implementation djcAppDelegate"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
