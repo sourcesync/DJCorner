@@ -658,11 +658,7 @@
 		3091E29514FDF6DF006026E7 /* LocalizedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalizedManager.m; sourceTree = "<group>"; };
 		3091E29614FDF6DF006026E7 /* LanguageChange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LanguageChange.h; sourceTree = "<group>"; };
 		3091E29714FDF6DF006026E7 /* LanguageChange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LanguageChange.m; sourceTree = "<group>"; };
-		3091E29C14FDF929006026E7 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = /Users/zixengineer/Documents/DJCornerGIT/Release/RC1/iphone/ios5/djc/es.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
-		3091E2A014FDF931006026E7 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/zixengineer/Documents/DJCornerGIT/Release/RC1/iphone/ios5/djc/zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
 		30C5DB7314FDFADF009D2A79 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		30DE938314FDFB3300F03375 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
-		30DE938414FDFB3300F03375 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		865BE19D14E36DFA004308F6 /* feedbackView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = feedbackView.xib; sourceTree = "<group>"; };
 		869D8E4A14E1306C009E3E31 /* redbull.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = redbull.png; sourceTree = "<group>"; };
 		86C46F1414DD888600F719E6 /* feedbackView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = feedbackView.h; sourceTree = "<group>"; };
@@ -841,6 +837,16 @@
 		B3F3C13F147C7DB100C4D210 /* BuyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuyCell.h; sourceTree = "<group>"; };
 		B3F3C140147C7DB100C4D210 /* BuyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuyCell.m; sourceTree = "<group>"; };
 		B3F3C142147C7E7F00C4D210 /* BuyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BuyCell.xib; sourceTree = "<group>"; };
+		B3FC03D614FF14E000A7AC1D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "/Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/zh-Hans.lproj/SearchView.xib"; sourceTree = "<absolute>"; };
+		B3FC03D714FF14E000A7AC1D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "/Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/zh-Hans.lproj/MainWindow.xib"; sourceTree = "<absolute>"; };
+		B3FC03D814FF14E000A7AC1D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "/Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/zh-Hans.lproj/EventsViews.xib"; sourceTree = "<absolute>"; };
+		B3FC03D914FF14E000A7AC1D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/zh-Hans.lproj/Localizable.strings"; sourceTree = "<absolute>"; };
+		B3FC03DA14FF14E000A7AC1D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "/Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<absolute>"; };
+		B3FC96C814FF15C200FBE6A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = /Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/es.lproj/EventsViews.xib; sourceTree = "<absolute>"; };
+		B3FC96C914FF15C200FBE6A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = /Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/es.lproj/Localizable.strings; sourceTree = "<absolute>"; };
+		B3FC96CA14FF15C200FBE6A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = /Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/es.lproj/InfoPlist.strings; sourceTree = "<absolute>"; };
+		B3FC96CB14FF15C200FBE6A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = /Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/es.lproj/MainWindow.xib; sourceTree = "<absolute>"; };
+		B3FC96CC14FF15C200FBE6A9 /* es */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = es; path = /Users/gwilliams/Projects/DJCorner/sourcecontrol/Release/RC1/iphone/ios5/djc/es.lproj/SearchView.xib; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -2216,8 +2222,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				30C5DB7314FDFADF009D2A79 /* en */,
-				30DE938314FDFB3300F03375 /* es */,
-				30DE938414FDFB3300F03375 /* zh-Hans */,
+				B3FC03D914FF14E000A7AC1D /* zh-Hans */,
+				B3FC96C914FF15C200FBE6A9 /* es */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -2226,8 +2232,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				B384A99714761B1A003F0DD6 /* en */,
-				3091E29C14FDF929006026E7 /* es */,
-				3091E2A014FDF931006026E7 /* zh-Hans */,
+				B3FC03DA14FF14E000A7AC1D /* zh-Hans */,
+				B3FC96CA14FF15C200FBE6A9 /* es */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -2236,6 +2242,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				B384A9A014761B1A003F0DD6 /* en */,
+				B3FC03D714FF14E000A7AC1D /* zh-Hans */,
+				B3FC96CB14FF15C200FBE6A9 /* es */,
 			);
 			name = MainWindow.xib;
 			sourceTree = "<group>";
@@ -2244,6 +2252,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				B384A9A914761B1A003F0DD6 /* en */,
+				B3FC03D814FF14E000A7AC1D /* zh-Hans */,
+				B3FC96C814FF15C200FBE6A9 /* es */,
 			);
 			name = EventsViews.xib;
 			path = djc;
@@ -2253,6 +2263,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				B384A9AC14761B1A003F0DD6 /* en */,
+				B3FC03D614FF14E000A7AC1D /* zh-Hans */,
+				B3FC96CC14FF15C200FBE6A9 /* es */,
 			);
 			name = SearchView.xib;
 			path = djc;
@@ -2305,8 +2317,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -2315,8 +2327,8 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				PROVISIONING_PROFILE = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -2325,8 +2337,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Hok Leong Chan (85EJWN9FXW)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: George Williams";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: George Williams";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "djc/djc-Prefix.pch";
@@ -2334,8 +2346,8 @@
 				INFOPLIST_FILE = "djc/djc-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "B4D174E9-2538-4DB7-B01B-140D05AD79AA";
+				PROVISIONING_PROFILE = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "AC2744BC-9913-411A-9EF9-D9FB477E0DF8";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
