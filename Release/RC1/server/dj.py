@@ -12,6 +12,7 @@ OPTIONAL_FIELDS = { 	"events": type([]), \
 # Code...
 #
 
+import pymongo
 from pymongo import Connection
 
 import os
@@ -239,19 +240,30 @@ def get_dj_details( connection, djid ):
 #
 def get_djs_details( connection, searchrx, all, paging ):
 
-	# get djs collection...	
-	djs = _get_djs_col( connection )
+        djs = _get_djs_col( connection )
+
+        # create cursor...
+	if searchrx == None or searchrx.strip() == "":
+		if not all:
+        		matches = djs.find({"rating":{"$gte": 0,"$lte":50} }).sort("name", pymongo.ASCENDING)
+		else:
+        		matches = djs.find().sort("name", pymongo.ASCENDING)
+	else:
+		if not all:
+			matches = djs.find( {"rating":{"$gte":0,"$lte":50}, "name": re.compile(searchrx,re.IGNORECASE) } )
+		else:
+			matches = djs.find( { "name": re.compile(searchrx,re.IGNORECASE) } )
+        total = matches.count()
+
+	# deal w possible paging...
+        if (paging):
+                results = matches[ paging["start"]: paging["end"] ]
+        else:
+                results = matches
 
 	# sanitize for web service...
 	pfs = []
 
-	# get all, or use regex...	
-	if searchrx == None or searchrx.strip() == "":
-		results = djs.find()
-	else:
-		regex = ".*%s.*" % searchrx
-		results = djs.find( {"name": re.compile(searchrx,re.IGNORECASE) } )
-		
 	for dj in results:
 		
 		# deal with the id...
@@ -271,27 +283,28 @@ def get_djs_details( connection, searchrx, all, paging ):
 			dj["upcoming"] = "Next Event: %s %s" % ( upcoming["city"], upcoming["eventdate"] )
 	
 		# possibly filter by dj rating...	
-		if not all:  # use rating...
-			rating = None
-			if dj.has_key("rating"):
-				rating = dj["rating"]
-			if rating!=None and rating>=0 and rating <= 50:
-				pfs.append( dj )
-		else: # no, return all...
-			pfs.append( dj )
+		#if not all:  # use rating...
+		#	rating = None
+		# if dj.has_key("rating"):
+		#rating = dj["rating"]
+		# if rating!=None and rating>=0 and rating <= 50:
+		#		pfs.append( dj )
+		#else: # no, return all...
+			
+		pfs.append( dj )
 
 	# sort
-	pfs.sort( _djssort )
+	#pfs.sort( _djssort )
 
 	# deal with paging...
         if (paging):
-                total = len( pfs )
                 start = paging["start"]
                 end = paging["end"]
-                arr = pfs[start:end]
+                arr = pfs # pfs[start:end]
                 count = len(arr)
 		if count<(end-start+1): end=total-1
                 info = { "total":total, "count":count, "start":start, "end":end }
+		print info
                 return [ arr, info ]
         else:
                 return [ pfs, {} ]
@@ -446,6 +459,26 @@ def get_similar_djs( connection, djid ):
 	return items	
 
 #
+# Func to create/update the name index...
+#
+def create_name_index_field( connection = None, force = False ):
+
+	djs = _get_djs_col( connection )
+
+        # Make sure the column is indexed...
+        print djs.ensure_index("name")
+
+#
+# Func to create/update the rating index...
+#
+def create_rating_index_field( connection = None, force = False ):
+	
+	djs = _get_djs_col( connection )
+
+        # Make sure the column is indexed...
+        print djs.ensure_index("rating")
+
+#
 # 
 #
 if __name__ == "__main__":
@@ -472,6 +505,11 @@ if __name__ == "__main__":
 		obj = get_dj_details( None, bid )
 		print obj
 		sys.exit(1)
+
+	elif len(sys.argv)>1 and sys.argv[1] == "index":
+		VERBOSE = True
+		create_name_index_field()
+		create_rating_index_field()
 
 	elif  len(sys.argv)>1:
 		djs = get_djs_details( None, sys.argv[1], True, None )
