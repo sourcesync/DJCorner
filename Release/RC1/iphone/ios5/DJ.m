@@ -69,7 +69,6 @@
         //  upcoming
         NSString *upcoming = [item objectForKey:@"upcoming"];
         dj.upcoming = upcoming;
-        
 #if 0
         //  event date...
         NSString *edate = [ item objectForKey:@"eventdate"];
