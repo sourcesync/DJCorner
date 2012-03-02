@@ -22,7 +22,7 @@
 
 "no_djs_match"="没有相符合的ＤＪ...";
 
-"get_more_djs"="请稍候，获取更多ＤＪ...";
+"get_more_djs"="请稍候，正在获取更多ＤＪ...";
 
 "no_upcoming_events"="没有活动计划";
 
@@ -87,6 +87,8 @@
 
 "lang_change"="转换";
 
+"p_language"="语言:";
+
 
 
 
@@ -147,7 +149,7 @@
 
 "no_event"="没有活动...";
 
-"get_more_event"="请稍候，获取更多活动...";
+"get_more_event"="请稍候，正在获取更多活动...";
 
 "your_location"="您在这里.";
 

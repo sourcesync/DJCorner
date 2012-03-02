@@ -25,7 +25,7 @@
 
 "no_djs_match"="No DJs Match...";
 
-"get_more_djs"="Please wait.Get More DJs...";
+"get_more_djs"="Please wait.Getting More DJs...";
 
 "no_upcoming_events"="No upcoming events";
 
@@ -91,6 +91,7 @@
 
 "lang_change"="Change";
 
+"p_language"="Language:";
 
 
 //feedback
@@ -154,7 +155,7 @@
 
 "no_event"="No Events...";
 
-"get_more_event"="Please wait.Get More Events...";
+"get_more_event"="Please wait.Getting More Events...";
 
 "your_location"="You are here.";
 

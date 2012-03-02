@@ -102,7 +102,7 @@
     [self.bt_contact_feedback setTitle:[LocalizedManager localizedString:@"contact_feedback"] forState:UIControlStateNormal];
     [self.bt_upgrade setTitle:[LocalizedManager localizedString:@"upgrade"] forState:UIControlStateNormal];
     [self.bt_change_language setTitle:[LocalizedManager localizedString:@"lang_change"] forState:UIControlStateNormal];
-    self.lb_langauge.text= [LocalizedManager localizedString:@"ll_language"];
+    self.lb_langauge.text= [LocalizedManager localizedString:@"p_language"];
     self.lb_lang_now.text=[LocalizedManager localizedString:[LocalizedManager selectedLanguage]];
     
 }
@@ -173,7 +173,7 @@
     [self.bt_contact_feedback setTitle:[LocalizedManager localizedString:@"contact_feedback"] forState:UIControlStateNormal];
     [self.bt_upgrade setTitle:[LocalizedManager localizedString:@"upgrade"] forState:UIControlStateNormal];
     [self.bt_change_language setTitle:[LocalizedManager localizedString:@"lang_change"] forState:UIControlStateNormal];
-    self.lb_langauge.text= [LocalizedManager localizedString:@"ll_language"];
+    self.lb_langauge.text= [LocalizedManager localizedString:@"p_language"];
     self.lb_lang_now.text=[LocalizedManager localizedString:[LocalizedManager selectedLanguage]];
 }
 
