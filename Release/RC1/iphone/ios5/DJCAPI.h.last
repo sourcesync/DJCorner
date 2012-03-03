@@ -22,8 +22,7 @@ enum API_IDS
     GET_SCHEDULE,
     GET_DJ,
     GET_SIMILAR_DJS,
-    GET_CITIES,
-    GET_VENUES
+    GET_CITIES
 };
 
 @protocol DJCAPIServiceDelegate
@@ -41,8 +40,6 @@ enum API_IDS
 @optional -(void) got_dj:(NSDictionary *)data; //8
 @optional -(void) got_similar_djs:(NSDictionary *)data; //9
 @optional -(void) got_cities:(NSDictionary *)data; //10
-@optional -(void) got_venues:(NSDictionary *)data; //11
-
 
 @optional -(void) got_pic:(UIImageForCell *)ufc;
 @end
@@ -56,7 +53,7 @@ enum API_IDS
 
 //  ASSIGN...
 @property (nonatomic, assign) BOOL finishOnMainThread;
-//@property (nonatomic, assign) int Now;
+@property (nonatomic, assign) int Now;
 
 //  PUBLIC FUNCS...
 -(id)       init:(id<DJCAPIServiceDelegate>)del;
@@ -72,7 +69,6 @@ enum API_IDS
 -(BOOL)     get_dj:(NSString *)djid;
 -(BOOL)     get_similar_djs:(NSString *)djid;
 -(BOOL)     get_cities;
--(BOOL)     get_venues:(NSString *)searchrx:(NSDictionary *)paging;
 
 - (void)    asyncDownloadImage: (NSString *)url_string: (NSNumber *)idx;
 - (void)    asyncGetPic: (NSString *)name: (NSNumber *)idx;

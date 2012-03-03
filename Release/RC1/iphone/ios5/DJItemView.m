@@ -333,6 +333,9 @@
         eview.back_from = YES;
     }
     
+    djcAppDelegate * app = ( djcAppDelegate *) [ [ UIApplication sharedApplication ] delegate ];
+    [ app doneDJItemModal ];
+    
     [ self dismissModalViewControllerAnimated:YES ];
 }
 

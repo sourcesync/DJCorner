@@ -154,15 +154,13 @@
     {
         if ( self.get_eid != nil )
         {
-            //NSMutableDictionary *loc = 
-            //[ [[NSMutableDictionary alloc] initWithCapacity:0 ] autorelease ];
+            NSMutableDictionary *loc = 
+            [ [[NSMutableDictionary alloc] initWithCapacity:0 ] autorelease ];
             
-            /*
             if ( ! [self.api get_event:loc :self.get_eid ] )
             {
                 [ Utility AlertAPICallFailed ];
             }
-             */
         }
         else
         {
@@ -377,6 +375,11 @@
         ScheduleView *eview = (ScheduleView *)self.parent;
         eview.back_from = YES;
     }
+    
+    djcAppDelegate *app = 
+        (djcAppDelegate *)[[ UIApplication sharedApplication] delegate ];
+    [ app doneEventModal ];
+    
     [ self dismissModalViewControllerAnimated:YES ];
 }
 

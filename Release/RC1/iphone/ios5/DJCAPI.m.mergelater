@@ -23,16 +23,16 @@
 @synthesize finishOnMainThread=_finishOnMainThread;
 //@synthesize Now;
 
-static NSString *TEST_SERVER = @"localhost:7800";
-static NSString *PROD_SERVER = @"www.theuniverseofallthings.com:7800";
+static NSString *TEST_SERVER = @"localhost:7779";
+static NSString *PROD_SERVER = @"www.theuniverseofallthings.com:7779";
 //static NSString *SERVER = @"ec2-23-20-62-113.compute-1.amazonaws.com:7779";
 
 
 + (NSString *) SERVER
 {
     //djcAppDelegate *app = (djcAppDelegate  *)[ [ UIApplication sharedApplication ] delegate ];
-    return TEST_SERVER;
-    //return PROD_SERVER;
+    //return TEST_SERVER;
+    return PROD_SERVER;
 }
 
 -(id) init:(id<DJCAPIServiceDelegate>)del
@@ -196,15 +196,6 @@ static NSString *PROD_SERVER = @"www.theuniverseofallthings.com:7800";
     return [self ExecMethod:@"get_cities" andParams:args withID:@"10" ];
 }
 
-
--(BOOL)     get_venues:(NSString *)searchrx:(NSDictionary *)paging
-{
-    //self.Now=10;;
-    //NSArray *args = nil; //[ NSArray arrayWithObjects:djid,nil];
-    NSArray *args = [ NSArray arrayWithObjects:searchrx,paging,nil];
-    return [self ExecMethod:@"get_venues" andParams:args withID:@"11" ];
-}
-
 #pragma mark - jsonrpc service delegate
 
 //
@@ -293,10 +284,6 @@ static NSString *PROD_SERVER = @"www.theuniverseofallthings.com:7800";
                 [ self.delegate got_cities :arg ];
                 break;
             }
-            case (GET_VENUES):
-            {
-                [ self.delegate got_venues :arg ];
-            }  
             default: 
             {
                 //[ Utility AlertError:@"Invalid Method ID" ];

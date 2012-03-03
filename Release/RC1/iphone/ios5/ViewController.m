@@ -89,7 +89,7 @@
 -(void) playAudio
 {
     [self.player play ];
-    [self.player setVolume:0.5];
+    [self.player setVolume:0.1];
 }
 
 

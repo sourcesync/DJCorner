@@ -395,6 +395,9 @@
 #pragma mark - buttons clicked
 -(IBAction)upGradeClicked:(id)sender
 {
+    [ Utility AlertMessage:@"Feature not yet implemented" ];
+    
+#if 0
     djcAppDelegate *app = 
     ( djcAppDelegate *)[ [ UIApplication sharedApplication] delegate];
     
@@ -410,6 +413,8 @@
                           delegate:self cancelButtonTitle:[LocalizedManager localizedString:@"upgrade_cancel"] otherButtonTitles:[LocalizedManager localizedString:@"upgrade_ok"], nil];
     [upgrade show];
     [upgrade release];
+#endif
+    
 }
 
 -(IBAction)contactFeedClicked:(id)sender
