@@ -26,8 +26,6 @@
 #import "EventSearchLocationBased.h"
 #import <AVFoundation/AVFoundation.h>
 #import "ViewController.h"
-#import "VenuesView.h"
-//#import "VenueItemView.h"
 
 @interface djcAppDelegate : NSObject 
 <UIApplicationDelegate, UITabBarControllerDelegate,
@@ -62,7 +60,6 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 @property (nonatomic, retain) NSString *devtoken;
 @property (nonatomic, retain) DJCAPI *api;
 @property (atomic, retain) DJItemView *djitem_view;
-//@property (atomic, retain) VenueItemView *venue_view;
 @property (atomic, retain) SearchView *search_by_city_view;
 @property (atomic, retain) DjView *search_by_djs;
 @property (atomic, retain) ScheduleView *dj_schedule_view;
@@ -71,12 +68,11 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 @property (nonatomic, retain) feedbackView *feedback_view;
 @property (nonatomic, retain) InAppPurchaseManager *purchaseManager;
 
-//  ASSIGN...
+//  ASSIGN... 
 @property (nonatomic, assign) int VIP;
 @property (nonatomic, assign) BOOL is_simulator;
 @property (nonatomic, assign) BOOL showing_event_modal;
 @property (nonatomic, assign) BOOL showing_dj_modal;
-@property (nonatomic, assign) BOOL showing_venue_modal;
 
 //  PUBLIC FUNCS...
 -(void) buyEvent:(NSString *)url;
@@ -97,8 +93,6 @@ EventViewDelegate, DJCAPIServiceDelegate,AVAudioPlayerDelegate>
 -(void) prepModals;
 -(void) doneEventModal;
 -(void) doneDJItemModal;
-//-(void) showVenueModal:(UIViewController *)src:(Venue *)venue:(NSString*)get_eid;
-//-(void) doneVenueModal;
 
 #ifdef INTRO
 -(BOOL)prepAudio;

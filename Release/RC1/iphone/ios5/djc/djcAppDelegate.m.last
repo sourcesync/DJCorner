@@ -12,7 +12,6 @@
 #import "Utility.h"
 #import "SearchView.h"
 #import "DjView.h"
-//#import "VenueItemView.h"
 #import "SimilarDJView.h"
 #import "EventModalParms.h" 
 #import "feedbackView.h"
@@ -44,14 +43,12 @@
 @synthesize feedback_view=_feedback_view;
 @synthesize purchaseManager=_purchaseManager;
 @synthesize viewController=_viewController;
-//@synthesize venue_view=_venue_view;
 
 //  ASSIGN...
 @synthesize VIP=_VIP;
 @synthesize is_simulator=_is_simulator;
-@synthesize showing_event_modal=_showing_event_modal;
 @synthesize showing_dj_modal=_showing_dj_modal;
-@synthesize showing_venue_modal=_showing_venue_modal;
+@synthesize showing_event_modal=_showing_event_modal;
 
 //leve
 @synthesize tb_events;
@@ -261,52 +258,6 @@
 }
 
 
-#if 0
--(void) _showVenueModal:(NSObject *)obj
-{
-    EventModalParms *parms = (EventModalParms *)obj;
-    Venue *venue = (Venue *)parms.data;
-    UIViewController *src = parms.src;
-    NSString *get_eid = (NSString *)parms.oid;
-    
-    if (self.venue_view == nil )
-    {
-        self.venue_view = [ [ [ VenueItemView alloc ] init ] autorelease ]; //ANA
-    }
-    //self.event_view.delegate = self;
-    self.venue_view.venue = venue;
-    self.venue_view.getv = get_eid;
-    self.venue_view.parent = src;
-    
-    self.showing_venue_modal = YES;
-    [ src presentModalViewController:self.venue_view animated:YES ];
-    
-    [ obj release ];
-}
-
-
--(void) showVenueModal:(UIViewController *)src:(Venue *)venue:(NSString*)get_eid;
-{    
-    if ( self.showing_venue_modal )
-    {
-        [ Utility AlertMessage:@"Too many nested controls.  Please go back." ];
-    }
-    else
-    {
-        EventModalParms *parms = [ [ EventModalParms alloc ] init];
-        parms.src = src;
-        parms.data = venue;
-        parms.oid = get_eid;
-        [ self performSelector:@selector(_showVenueModal:) withObject:parms afterDelay:0.0];
-    }
-}
-
--(void) doneVenueModal
-{
-    self.showing_venue_modal = NO;
-}
-#endif
-
 -(void) _showEventModal:(NSObject *)obj
 {
     EventModalParms *parms = (EventModalParms *)obj;
@@ -322,8 +273,6 @@
     self.event_view.event = evt;
     self.event_view.get_eid = get_eid;
     self.event_view.parent = src;
-    
-    self.showing_event_modal = YES;
     [ src presentModalViewController:self.event_view animated:YES ];
     
     [ obj release ];
@@ -346,6 +295,7 @@
     }
 }
 
+
 -(void) doneEventModal
 {
     self.showing_event_modal = NO;
@@ -365,7 +315,6 @@
     self.djitem_view.dj = dj;
     self.djitem_view.getdj = getdj;
     self.djitem_view.parent = src;
-    self.showing_dj_modal = YES;
     [ src presentModalViewController:self.djitem_view animated:YES ];
     
     [ obj release ];
@@ -380,14 +329,13 @@
     }
     else
     {
-        EventModalParms *parms = [ [ EventModalParms alloc ] init];
-        parms.src = src;
-        parms.data = dj;
-        parms.oid = getdj;
-        [ self performSelector:@selector(_showDJItemModal:) withObject:parms afterDelay:0.0];
+    EventModalParms *parms = [ [ EventModalParms alloc ] init];
+    parms.src = src;
+    parms.data = dj;
+    parms.oid = getdj;
+    [ self performSelector:@selector(_showDJItemModal:) withObject:parms afterDelay:0.0];
     }
 }
-
 
 -(void) doneDJItemModal
 {
