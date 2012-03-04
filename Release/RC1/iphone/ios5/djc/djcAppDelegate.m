@@ -454,10 +454,15 @@
 
 -(void) showBuyModal:(UIViewController *)src:(Event *)evt
 {
+    [ Utility AlertMessage:@"Temporarily disabled" ];
+    
+#if 0
     self.buy_view = [ [ [ BuyView alloc ] init ] autorelease ]; //ANA
     self.buy_view.event = evt;
     self.buy_view.parent = src;
     [ src presentModalViewController:self.buy_view animated:YES ];
+#endif
+    
 }
 
 -(void)purchaseManagerStart

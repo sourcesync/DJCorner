@@ -1,0 +1,94 @@
+Metadata-Version: 1.0
+Name: txJSON-RPC
+Version: 0.3
+Summary: Code for creatig Twisted JSON-RPC servers and clients.
+Home-page: http://launchpad.net/txjsonrpc
+Author: Duncan McGreggor
+Author-email: oubiwann@adytum.us
+License: BSD, GPL
+Description: 
+        
+        ============
+        Introduction
+        ============
+        
+        txJSON-RPC allows you to create async Python JSON-RPC servers and clients
+        either over HTTP or directly on TCP with the Netstring protocol. txJSON-RPC is
+        written in Twisted.
+        
+        ========
+        Features
+        ========
+        
+        * Asynchronous JSON-RPC server and client code.
+        
+        * Support for HTTP and TCP (Netstring) JSON-RPC.
+        
+        * A jsonrpclib similar to the one for XLM-RPC offered by the Python standard
+          library.
+        
+        
+        
+        
+        
+        
+        
+        
+        ====
+        TODO
+        ====
+        
+        Known Issues
+        ------------
+        
+        * txJSON-RPC doesn't yet support the proposed v2.0 JSON-RPC protocol.
+        
+        JSON-RPC All
+        ------------
+        
+        JSON-RPC over TCP
+        -----------------
+        
+        * add version support in proxy constructor and callRemote method
+        
+        * add unit tests for proxy's use of version in constructor as well as
+          callRemote
+        
+        * pull out anything that has to do with setting the payload (e.g.,
+          method/params dict) and put it in jsonrpclib
+        
+        * clean up error checking, now that errors are going in the payload under the
+          "error" key.
+        
+        
+        JSON-RPC over HTTP (web2)
+        --------------------------
+        
+        * add a client example
+        
+        * update 
+        
+        
+        JSON-RPC over HTTP (web)
+        ------------------------
+        
+        * add unit tests for proxy's use of version in constructor as well as
+          callRemote
+        
+        
+        jsonrpclib
+        ----------
+        
+        * return results in simpljson dicts with possible keeys of "result" or "error"
+        
+        * use simplesjon's hook for creating appropriate JS objects from hints in the
+          results
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python

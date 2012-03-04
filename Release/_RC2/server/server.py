@@ -34,6 +34,7 @@ import device
 import followdj
 import dj
 import city
+import venue
 
 def DBG( *items ):
         if VERBOSE:
@@ -204,6 +205,32 @@ class API(jsonrpc.JSONRPC):
 		else:
 			dct = {'status':1, 'results':status }
 			return dct
+
+        def jsonrpc_get_venues(self, searchrx, paging):
+
+                DBG( "INFO: api: get_venues->", searchrx, paging )
+
+                status = venue.get_venues_details( None, searchrx, paging )
+                if not status:
+                        dct = {'status':0,'msg':'Problem with this operation.'}
+                        return dct
+                else:
+                        dct = {'status':1, 'results':status[0], 'paging':status[1] }
+                        return dct
+
+        def jsonrpc_get_venue(self, vid):
+
+                DBG( "INFO: api: get_venue->", vid )
+
+                status = venue.get_venue_details( None, vid )
+                if not status:
+                        dct = {'status':0,'msg':'Problem with this operation.'}
+                        return dct
+                else:
+                        dct = {'status':1, 'results':status  }
+                        return dct
+
+
 
 a = API()
 parent.putChild("api", a)

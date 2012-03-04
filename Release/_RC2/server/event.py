@@ -389,7 +389,10 @@ def sync_events_to_djs( connection= None ):
 
 	# iterate events...
 	for evt in evts:
-		
+			
+		if not evt.has_key("name"):
+			continue
+	
 		print "INFO: event: sync_events_to_djs: event->", evt["_id"], evt["name"]
 	
 		# get pfids...

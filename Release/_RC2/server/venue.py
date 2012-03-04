@@ -10,7 +10,9 @@ VERBOSE = True
 from pymongo import Connection
 
 import sys
+import re
 
+import pymongo
 import bson
 
 import dbglobal
@@ -121,19 +123,40 @@ def get_venues( connection, paging ):
 #
 # func to get venues details...
 #
-def get_venues_details( connection, paging ):
+def get_venues_details( connection, searchrx, paging ):
         
 	venues = _get_venue_col( connection )
 
-	# iterate over collection...
-	retv = []
-	for venue in venues.find():
-		if venue.has_key("_id"):
-			venue["id"] = str(venue["_id"])
-			del venue["_id"]
-		retv.append( venue )
+	# create cursor...
+	if searchrx == None or searchrx.strip() == "":
+		matches = venues.find().sort("name", pymongo.ASCENDING)
+	else:
+		matches = venues.find( { "name": re.compile(searchrx,re.IGNORECASE) } )
+	total = matches.count()
 
-	return retv
+	# deal w possible paging...
+	if (paging):
+		results = matches[ paging["start"]: paging["end"] ]
+	else:
+		results = matches
+
+	retv = []
+	for res in results:
+		res["id"] = str(res["_id"])
+		del res["_id"]
+		retv.append( res )
+
+        # deal with paging...
+        if (paging):
+                start = paging["start"]
+                end = paging["end"]
+                arr = retv
+                count = len(arr)
+                if count<(end-start+1): end=total-1
+                info = { "total":total, "count":count, "start":start, "end":end }
+                return [ arr, info ]
+        else:
+                return [ retv, {} ]
 
 
 #
@@ -184,6 +207,17 @@ def delete_venue( connection, oid ):
 	else:	
 		return True
 
+
+#
+# Func to create/update the name index...
+#
+def create_name_index_field( connection = None, force = False ):
+
+        venues = _get_venue_col( connection )
+
+        # Make sure the column is indexed...
+        print venues.ensure_index("name")
+
 #
 # unit test...
 #
@@ -192,6 +226,10 @@ if __name__ == "__main__":
 	if len(sys.argv)>1 and sys.argv[1]=="clear":
 		DBG("WARNING: Clearing venues...")
 		clear_all( None )
+
+        elif len(sys.argv)>1 and sys.argv[1] == "index":
+                VERBOSE = True
+                create_name_index_field()
 
 	elif len(sys.argv)>1 and sys.argv[1]=="delete":
 		DBG("WARNING: Delete venue with id->%s<-" % sys.argv[2] )
@@ -202,10 +240,10 @@ if __name__ == "__main__":
 			DBG("ERROR: Could not delete venue")
 
 	else:
-		vs = get_venues_details( None, None )
-		print vs
+		vs = get_venues_details( None, None, None )
+		venues = vs[0]
 	
-		for v in vs:
+		for v in venues:
 			print "INFO: venue->", v["id"], v["name"],
 			if v.has_key("city"):
 				print "city=" + v["city"],

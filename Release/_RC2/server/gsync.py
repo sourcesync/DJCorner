@@ -15,13 +15,19 @@ DJ_LIST =  { \
 DJ_SCHEDULE = { \
 	"file":"DJ_SCHEDULE.txt", \
 	"url":"https://spreadsheets.google.com/feeds/cells/0AuRz1oxD7nNEdDZhNzVRUEptX3J1MlpPVXBFRmpRVnc/od4/public/basic", \
-	"min":316, \
+	"min":2, \
 	"max":1045, \
 	"dct":{ "eventname":"B","djs":"A","venuename":"C","website":"D","eventdate":"F","purchase":"I","pic":"J","city":"K","country":"L" } \
 	}
 
 # TO SYNC THIS SHEET, you must republish the sheet in google docs and restore from None...
-CLUB_LIST = [ "CLUB_LIST.txt", "https://spreadsheets.google.com/feeds/cells/0AuRz1oxD7nNEdDZhNzVRUEptX3J1MlpPVXBFRmpRVnc/od5/public/basic" ]
+CLUB_LIST = { \
+	"file":"CLUB_LIST.txt", \
+	"url":"https://spreadsheets.google.com/feeds/cells/0AuRz1oxD7nNEdDZhNzVRUEptX3J1MlpPVXBFRmpRVnc/od5/public/basic", \
+	"min":2 , \
+	"max":66, \
+	"dct": { "name": "C", "city":"B", "country":"C", "website":"F", "address":"G", "phone":"H", "latlong":"I" } \
+	}
 
 # TODO: Code not done here yet...
 CLUB_SCHEDULE = [ "CLUB_SCHEDULE.txt",  "https://spreadsheets.google.com/feeds/cells/0AuRz1oxD7nNEdHdxVUlMUzg5bWoyX05uc0lCdm9pRWc/oda/public/basic"]
@@ -106,7 +112,7 @@ if DJ_LIST and False:
 # PARSE DJ SCHEDULE...
 #
 
-if DJ_SCHEDULE:
+if True and DJ_SCHEDULE:
 
         if os.path.exists( DJ_SCHEDULE["file"] ):
                 f = open( DJ_SCHEDULE["file"] )
@@ -213,101 +219,70 @@ if DJ_SCHEDULE:
 # PARSE CLUB LIST...
 #
 
-if CLUB_LIST:
+if CLUB_LIST and False:
 
-        if os.path.exists( CLUB_LIST[0] ):
-                f = open( CLUB_LIST[0] )
+        if os.path.exists( CLUB_LIST["file"] ):
+                f = open( CLUB_LIST["file"] )
                 st = f.read()
                 f.close()
 
         # try the url...
         else:
                 # get the contents of sheet...
-                f = urllib.urlopen( CLUB_LIST[1] )
+                f = urllib.urlopen( CLUB_LIST["url"] )
                 st = f.read()
-		f = open (CLUB_LIST[0])
+		f = open (CLUB_LIST["file"],"w")
                 f.write(st)
                 f.flush()
                 f.close()
+	print st
 
         parent = parseString( st )
         printx( 0, parent )
 	
         # parse it...
-        num_empty_consec = 0
         root = etree.fromstring(st)
-        print dir(root), root.tag
 
-	matches = root.xpath("/d:feed/d:entry/d:title/text()" , namespaces={"d":"http://www.w3.org/2005/Atom"})
-	if not matches:
-		print "ERROR: invalid feed content"
-		sys.exit(1)
-	print matches
-
-	matches = root.xpath("/d:feed/d:entry/d:title[ text() = 'A2' ]/../d:content/text()" , namespaces={"d":"http://www.w3.org/2005/Atom"})
-	if not matches:
-		print "ERROR: invalid feed/entry/title content"
-		sys.exit(1)
-
-        num_empty_consec = 0
-        idx = 2
-        max = 67
+        idx = CLUB_LIST["min"]
         while True:
-                firstcol = True
-                finish = False
-                uppers = [ chr(ii) for ii in range( ord('A'), ord('K')+1 ) ]
-		data = { "venuename":None, "address":None, "phone":None, "lat":None, "lng":None, "website":None, "city": None, "country":None }
-                for upper in uppers:
-                        rc = upper + str(idx)
-                        print "trying ", rc
+
+		dct = CLUB_LIST["dct"]
+                vals = {}
+                for item in dct.keys():
+                        col = dct[item]
+                        vals[item] = None
+                        rc = col + str(idx)
                         matches = root.xpath("/d:feed/d:entry/d:title[ text() = '%s' ]/../d:content/text()" % rc , namespaces={"d":"http://www.w3.org/2005/Atom"})
-                        if len(matches)==0:
-                                if firstcol:
-                                        break
-                        else:
-                                print rc,matches
-				if upper == "A": # country
-					data["country"] = matches[0]
-				elif upper == "B": # city
-					data["city"] = matches[0]
-				elif upper == "C": # venue name
-					data["venuename"] = matches[0]
-				elif upper == "F": # web site
-					url = matches[0]
-					if url.startswith("http:"):	
-						data["website"] = url
-				elif upper == "G": # address
-					data["address"] = matches[0]
-				elif upper == "H": # phone 
-					data["phone"] = matches[0]
-				elif upper == "I": # lat/long
-					print matches[0]
-					entry = matches[0].strip()
-					try:
-						lat, lng = [a.strip() for a in entry.split(",")]
-						data["lat"] = float(lat)
-						data["lng"] = float(lng)
-					except:
-						print "WARNING: Could not convert cell to lat/long"	
-                        firstcol = False
+                        if len(matches)>0:
+                                vals[item] = matches[0]
+                print "INFO: CLUBLIST INFO->", idx, vals
+		
+		data = vals
+		if data["latlong"] and len( data["latlong"].split(",") )==2:
+			lat, lng = [a.strip() for a in data["latlong"].split(",")]
+			data["lat"] = float(lat)
+			data["lng"] = float(lng)
+		else:
+			data["lat"] = 0
+			data["lng"] = 0
 
 		# add the venue...
-		if data["venuename"] and data["venuename"].strip()!= "":
+		if data["name"] and data["name"].strip()!= "":
 
-			print "TRYING TO ADD VENUE->", data["venuename"]
+			print "TRYING TO ADD VENUE->", data["name"]
 
-			status, void = venue.add_venue( None, data["venuename"], data["venuename"] + "-googledoc" )
+			status, void = venue.add_venue( None, data["name"], data["name"] + "-googledoc" )
 			if not status and not void:
 				print "ERROR: Cannot add venue"
 				sys.exit(1)
-			status = venue.update_venue( void=void, display_name=data["venuename"], \
+			status = venue.update_venue( void=void, display_name=data["name"], \
 				address=data["address"], phone=data["phone"], latitude=data["lat"], longitude=data["lng"] )
 			if not status:
 				print "ERROR: Cannot update venue"
 				sys.exit(1)
 
                 idx += 1
-                if idx > max:
+                if idx > CLUB_LIST["max"]:
                         break
 
 

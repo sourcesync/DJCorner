@@ -917,6 +917,14 @@
 			name = MapEventCell;
 			sourceTree = "<group>";
 		};
+		B314152014FA1FF000A8FC3A /* CTL_dj_schedule */ = {
+			isa = PBXGroup;
+			children = (
+				B37B6C2814A5324A0093BA4D /* schedule_view */,
+			);
+			name = CTL_dj_schedule;
+			sourceTree = "<group>";
+		};
 		B321620E14773B8E00C7EE05 /* splash_view */ = {
 			isa = PBXGroup;
 			children = (
@@ -1138,13 +1146,13 @@
 				B3571FBD14EF128700780B97 /* CTL_dj */,
 				B324D30214EF542A000BF33A /* CTL_event */,
 				B324D30814F04F81000BF33A /* CTL_eventsearch */,
+				B314152014FA1FF000A8FC3A /* CTL_dj_schedule */,
 				B3571FC014EF2BF400780B97 /* GETTERS */,
 				B3571FBE14EF13AD00780B97 /* CELLS */,
 				B324D30E14F0F3DE000BF33A /* SIMPLE_LOCATION */,
 				30887F7614E3C5DE00982A70 /* purchase */,
 				B386510214AD604B00C48BD3 /* archive */,
 				B37031A414AA047400ABDA9F /* similardjs_view */,
-				B37B6C2814A5324A0093BA4D /* schedule_view */,
 				B37B6C2214A496DB0093BA4D /* djsearch_view */,
 				B331726E149895A9009C67CB /* djselect_view */,
 				B33C82A31490DBD300D7AA78 /* mapit_view */,

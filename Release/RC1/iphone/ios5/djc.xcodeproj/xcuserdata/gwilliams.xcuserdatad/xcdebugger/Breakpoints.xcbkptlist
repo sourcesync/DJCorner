@@ -350,7 +350,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "502"
          endingLineNumber = "502"
-         landmarkName = "-scrollViewDidEndDragging:willDecelerate:"
+         landmarkName = "-scrollViewDidScroll:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -364,8 +364,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "621"
          endingLineNumber = "621"
-         landmarkName = "@implementation DjView"
-         landmarkType = "3">
+         landmarkName = "-got_djs::"
+         landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -448,7 +448,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "476"
          endingLineNumber = "476"
-         landmarkName = "-loadImagesForOnscreenRows"
+         landmarkName = "-loadImageForRow::"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -574,7 +574,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "655"
          endingLineNumber = "655"
-         landmarkName = "-failed"
+         landmarkName = "-got_pic:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -588,7 +588,7 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "604"
          endingLineNumber = "604"
-         landmarkName = "-got_djs::"
+         landmarkName = "-tableView:heightForRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
@@ -1020,8 +1020,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "790"
          endingLineNumber = "790"
-         landmarkName = "-cellForRowAtIndexPath_MapList::"
-         landmarkType = "5">
+         landmarkName = "@implementation EventsView"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1048,8 +1048,8 @@
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "426"
          endingLineNumber = "426"
-         landmarkName = "-clearEvents"
-         landmarkType = "5">
+         landmarkName = "@implementation EventsView"
+         landmarkType = "3">
       </FileBreakpoint>
       <FileBreakpoint
          shouldBeEnabled = "No"
@@ -1094,7 +1094,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"
@@ -1113,7 +1113,7 @@
          continueAfterRunningActions = "No"
          isPathRelative = "1"
          filePath = "djc/djcAppDelegate.m"
-         timestampString = "352441976.442497"
+         timestampString = "352448461.467169"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
          startingLineNumber = "456"
@@ -1136,7 +1136,7 @@
          landmarkType = "5">
       </FileBreakpoint>
       <FileBreakpoint
-         shouldBeEnabled = "Yes"
+         shouldBeEnabled = "No"
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          isPathRelative = "1"

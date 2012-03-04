@@ -23,16 +23,16 @@
 @synthesize finishOnMainThread=_finishOnMainThread;
 //@synthesize Now;
 
-static NSString *TEST_SERVER = @"localhost:7800";
-static NSString *PROD_SERVER = @"www.theuniverseofallthings.com:7800";
+//static NSString *TEST_SERVER = @"localhost:7779";
+static NSString *PROD_SERVER = @"www.theuniverseofallthings.com:7779";
 //static NSString *SERVER = @"ec2-23-20-62-113.compute-1.amazonaws.com:7779";
 
 
 + (NSString *) SERVER
 {
     //djcAppDelegate *app = (djcAppDelegate  *)[ [ UIApplication sharedApplication ] delegate ];
-    return TEST_SERVER;
-    //return PROD_SERVER;
+    //return TEST_SERVER;
+    return PROD_SERVER;
 }
 
 -(id) init:(id<DJCAPIServiceDelegate>)del

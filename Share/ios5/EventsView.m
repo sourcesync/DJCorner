@@ -21,20 +21,22 @@
 
 @implementation EventsView
 
-//  RETAIN...
+//  IBOUTLET...
 @synthesize tv=_tv;
 @synthesize mv=_mv;
-@synthesize location_manager=_location_manager;
 @synthesize segmentDJ=_segmentDJ;
 @synthesize tb=_tb;
 @synthesize buttonMapList=_buttonMapList;
-@synthesize getter=_getter;
 @synthesize activity=_activity;
-@synthesize cur_search=_cur_search;
 @synthesize header=_header;
 @synthesize back_from;
+
+//  RETAIN...
+@synthesize location_manager=_location_manager;
 @synthesize longPressGesture;
 @synthesize me_annotation;
+@synthesize cur_search=_cur_search;
+@synthesize getter=_getter;
 
 //  ASSIGN...
 @synthesize all_djs;
@@ -46,6 +48,7 @@
 @synthesize scrolling=_scrolling;
 @synthesize refresh=_refresh;
 @synthesize sort_criteria=_sort_criteria;
+@synthesize get_mode=_get_mode;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -63,6 +66,8 @@
     self.location_manager = nil;
     self.getter = nil;
     self.cur_search = nil;
+    self.longPressGesture = nil;
+    self.me_annotation = nil;
     
     [super dealloc];
 }
@@ -92,6 +97,7 @@
     self.getter.latitude = self.my_last_location.latitude;
     self.getter.longitude = self.my_last_location.longitude;
     self.getter.all_djs = self.all_djs;
+    self.get_mode = EventGetPaused;
 }
 
 - (void)viewDidLoad
@@ -227,6 +233,14 @@
             }
             self.refresh = NO;
         }
+        else // possibly continue paused actions...
+        {
+            if ( self.getter && ( self.get_mode == EventGetPaused ) )
+            {
+                self.get_mode = EventGetGetting;
+                [ self.getter getNext ];
+            }
+        }
     }
     
     self.scrolling = NO;
@@ -238,7 +252,11 @@
     
     self.tv.hidden = YES;
     
-    [ self.getter cancel ];
+    if (self.get_mode != EventGetDone )
+    {
+        self.get_mode = EventGetPaused;
+        [ self.getter cancel ];
+    }
 }
 
 - (void)viewDidDisappear:(BOOL)animated
@@ -262,6 +280,8 @@
 
 -(void) failed
 {
+    self.get_mode = EventGetPaused;
+    
     if (self.mode == EventViewMapOnly ) [ self showMap ];
     else [ self showList ];
     self.activity.hidden = YES;
@@ -273,6 +293,8 @@
 
 -(void) got_events:(NSInteger)start:(NSInteger)end
 {
+    self.get_mode = EventGetPaused;
+    
     if (!self.activity.hidden)
     {
         // stop activity indicator if running...
@@ -291,7 +313,12 @@
     //  continue to get more...
     if (!self.getter.got_all)
     {
+        self.get_mode = EventGetGetting;
         [ self.getter getNext ];
+    }
+    else
+    {
+        self.get_mode = EventGetDone;
     }
 }
 
@@ -346,6 +373,7 @@
     self.mode = EventViewListOnly;
     
     [self newGetter:cur_search ];
+    self.get_mode = EventGetGetting;
     [self.getter getNext ]; 
     
     NSString *txt = @"Events:";
@@ -407,16 +435,12 @@
     self.tv.frame = CGRectMake(0, 257, 320, 154);
     self.mode = EventViewListMap;
     self.buttonMapList.title = @"map";
-    
     self.sort_criteria = 1;
-    //[self newGetter:self.cur_search ];
-    //[self.getter getNext ]; 
-    
-    //[ self.tv reloadData ];
 }
  
 -(void) getMore
 {
+    self.get_mode = EventGetGetting;
     [ self.getter getNext ];
 }
 
@@ -573,6 +597,7 @@
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;
     }
     else if ( self.getter.events == nil )
@@ -587,6 +612,7 @@
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;   
     }
     else if ( [ self.getter.events count ] == 0 )
@@ -601,6 +627,7 @@
         cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
         cell.textLabel.textAlignment = UITextAlignmentCenter;
         cell.textLabel.textColor = [ UIColor blackColor ];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
         return cell;     
     }
     else
@@ -622,11 +649,12 @@
             cell.lb_adsContent.text=@"hello,ads";
             [cell.iv setImage:[UIImage imageNamed:@"redbull.png"]];
             [cell.iv sizeToFit];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
         else if ( row ==( [ self.getter.events count] +row/(ADSPOSITION+1)*self.VIP))  // get more button...
 #else
-        if ( row ==( [ self.getter.events count] ) ) // get more button...
+        if ( row ==( [ self.getter.events count] ) ) // getting more button...
 #endif
         {
             UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:
@@ -637,8 +665,9 @@
             }
             cell.textLabel.textAlignment = UITextAlignmentCenter;
             cell.textLabel.font = [ UIFont boldSystemFontOfSize:17 ];
-            cell.textLabel.text = @"Get More Events...";
+            cell.textLabel.text = @"Getting More Events.  Please Wait...";
             cell.textLabel.textColor = [ UIColor blackColor ];
+            cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }
         
@@ -656,6 +685,7 @@
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
             cell.selectionStyle = UITableViewCellSelectionStyleBlue;
             cell.textLabel.textColor = [ UIColor blackColor ];
+            cell.selectionStyle = UITableViewCellSelectionStyleBlue;
             //cell.content.textColor=[UIColor blackColor];
             //cell.content.font=[UIFont systemFontOfSize:17];
             
