@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<s:Application xmlns:fx="http://ns.adobe.com/mxml/2009"
+			   xmlns:s="library://ns.adobe.com/flex/spark"
+			   xmlns:mx="library://ns.adobe.com/flex/mx"
+			   xmlns:flexiframe="http://code.google.com/p/flex-iframe/"
+			   maxHeight="2000" maxWidth="2000"
+			   width="100%" height="100%"
+			   minWidth="1" minHeight="1" 
+			   applicationComplete="init();"
+			   backgroundColor="#FF0000" 
+			   preloaderChromeColor="#CCCCCC"
+			   resize="resizeHandler(event);" 
+			   >
+	<fx:Style source="msxmltest.css"/>
+	<fx:Style source="more.css"/>
+	<fx:Declarations>
+		<!-- Place non-visual elements (e.g., services, value objects) here -->
+	</fx:Declarations>
+	<!-- <fx:Script source="test.as" /> -->
+
+	<s:Panel id="tpanel" width="200" height="200" styleName="TestStyle" >
+		<s:TextArea id="ta">
+			<fx:Script>
+				<![CDATA[
+					
+				]]>
+			</fx:Script>
+		</s:TextArea>
+		<s:Image x="0" y="0" width="40" height="40" source="@Embed('../assets/djc_alpha.png')"/>
+	</s:Panel>
+	
+	<s:Group id="msmain" width="100%" height="100%" minWidth="1" minHeight="1" styleName="TestStyle" > 
+		<s:Group id="mschild" width="1000" height="600" >
+			
+			
+			<mx:Panel title="A simple Html page embedded with the 'source' property"
+					  width="20%"
+					  height="20%">
+				
+				<flexiframe:IFrame id="iFrameBySource"
+								   width="100%"
+								   height="100%"
+								   source="http://www.theuniverseofallthings.com"/>
+			</mx:Panel>
+			<!--
+	<s:Panel id="msmain" width="100%" height="100%">
+		
+	<s:Panel id="mschild" width="1000" height="600">
+			-->
+		
+		
+	<fx:Script>
+		<![CDATA[
+			
+			import mx.events.ResizeEvent;
+			
+			
+			private var a:mixed = null;
+			
+			private function resizeHandler(event:ResizeEvent):void
+			{ 
+				if (!stage) return;
+				 
+				
+				//msmain.titleDisplay = null;
+				
+				trace("this " + this.id + " " +this.width, " " + this.height);
+				
+				var mww:int=msmain.width;
+				var mhh:int=msmain.height;
+				
+				trace("main " + mww + " " + mhh);
+				
+				var cww:int = mschild.width;
+				var chh:int = mschild.height;
+				
+				var xx:int=mww/2 - cww/2;
+				var yy:int=mhh/2 - chh/2;
+			
+				trace("move " + xx + " " + yy);
+				mschild.x = xx;
+				mschild.y = yy;
+				
+				/*
+				
+				trace("height:" + stage.height); 
+				trace("height:" + stage.width); 
+				
+				// center the view to the middle of the stage
+				var ssw:int = stage.stageWidth;
+				var ssh:int = stage.stageHeight;
+				
+				// center the view to the middle of the stage
+				var sw:int = stage.width;
+				var sh:int = stage.height;
+				
+				var x:int = this.x;
+				var y:int = this.y;
+				*/
+				//this.a.rsz(event, ssw, ssh );
+				
+				/*
+				
+				var tw:int = this.a.width;
+				var th:int = this.a.height;
+				
+				// relocate the 2d page
+				var x:int = w/2 - tw/2;
+				var y:int = h/2 - th/2;
+				
+				//this.a.x = x;
+				//this.a.y = y;
+				*/
+			} 
+			
+			import mx.containers.HBox;
+			import mx.containers.VBox;
+			import mx.core.UIComponent; 
+			private var bgColor:uint = 0xFFCC00; 
+			private var hbox:HBox = null;
+			
+			private var ref : UIComponent = null;
+			
+			private function none():void
+			{
+				
+				trace( "none parent=" + this.parent );
+			}
+			
+			private function init():void
+			{
+				ref = new UIComponent();
+				
+				trace( "init parent=" + this.parent + " " + this.nestLevel);
+				
+				if (this.nestLevel>2) return;
+				
+				/*
+				var st:DisplayObject = this.stage;
+				 // creating a UI compoent Object 
+				var circle1 : Sprite = new Sprite(); 
+				circle1.graphics.beginFill(bgColor); 	
+				circle1.graphics.drawCircle( 40, 40, 40 ); 
+				circle1.buttonMode = true; 
+				//addChild( ref ); // add UI component to mxml base container 
+				//ref.addChild( circle1 );// adding sprite to UIcompoent 
+				*/
+				
+				this.addElement( ref );
+				
+				//var a:away36 = new away36();
+				var b:mixed = new mixed();	
+				this.a = b;
+				ref.addChild( this.a );
+				
+				
+				//ref.x = 300;
+				//ref.y = 700;
+			}
+
+		]]>
+	</fx:Script>
+			
+	<!--
+	<s:Image x="227" y="277" width="313" height="213" source="@Embed('../assets/djc_alpha.png')"/>
+			-->
+		<s:Image x="182" y="59" source="@Embed('../assets/videoDummy.jpg')"/>
+	
+	
+	</s:Group>	
+	</s:Group>
+		
+	
+	
+</s:Application>

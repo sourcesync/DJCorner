@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>msxmltest</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.adobe.flexbuilder.project.flexbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.adobe.flexbuilder.project.flexnature</nature>
+		<nature>com.adobe.flexbuilder.project.actionscriptnature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>[source path] AsWing-src</name>
+			<type>2</type>
+			<location>/Users/gwilliams/Packages/aswing/AsWing/src</location>
+		</link>
+		<link>
+			<name>[source path] away3d_3_6_0-src</name>
+			<type>2</type>
+			<location>/Users/gwilliams/Projects/DJCorner/away3d/3.6/away3d_3_6_0/src</location>
+		</link>
+		<link>
+			<name>[source path] tweener-src</name>
+			<type>2</type>
+			<location>/Users/gwilliams/Packages/tweener/src</location>
+		</link>
+	</linkedResources>
+</projectDescription>
