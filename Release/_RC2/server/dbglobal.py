@@ -1,5 +1,0 @@
-#
-# Configuration...
-#
-DBNAME = "rc2"
-
